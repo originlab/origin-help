@@ -1,0 +1,110 @@
+﻿<h1 class="firstHeading">グループ化散布図</h1><p class='urlname' style='display: none'>GroupedScatter-IndexedData</p><a  class="image"><img alt="Grouped Scatter Indexed Data.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Indexed_Data.png" width="520"  /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_.22plot_gscatter.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">plot_gscatter ダイアログボックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>入力データとして最低1つのY列を選択します。さらに、1つ以上の列がグループ情報である必要があります。
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。 
+</p>
+<ul><li>メニューの<b>作図 &gt; カテゴリカル：グループ化散布図</b> メニュー</li></ul>
+<p><br />
+または
+<br />
+</p>
+<ul><li><b>2Dグラフギャラリー</b>ツールバーの<a  class="image"><img alt="Button Grouped Scatter-Indexed Data.png" src="../images/Grouped_Scatter_Index_Data/Button_Grouped_Scatter-Indexed_Data.png" width="23"  /></a>ボタンをクリックします。
+<dl><dd><a  class="image"><img alt="Grouped Scatter Index Data Button From Toolbar.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Index_Data_Button_From_Toolbar.png" width="310"  /></a></dd></dl></li></ul>
+<p><b>plot_gscatter</b>ダイアログが開きます。
+</p>
+<dl><dd><a  class="image"><img alt="Plot grouped scatter dialog box.png" src="../images/Grouped_Scatter_Index_Data/Plot_grouped_scatter_dialog_box.png" width="567"  /></a></dd></dl>
+<p>開いたダイアログで、入力データ範囲を選択します。最低でも1つのグループ列を追加し、必要に応じてページ/区分を分割する列を選択し、フィット曲線を追加し、プロットデータとグラフを配置する場所を決定します。<b>プレビュー</b>または<b>OK</b>をクリックして作図し、ダイアログを閉じます。 
+</p>
+<h3><a name="The_.22plot_gscatter.22_dialog_box"></a><span class="mw-headline">plot_gscatter ダイアログボックス</span></h3>
+<table class="dialogcontroltable">
+<tr>
+<th>データ列
+</th>
+<td>この欄は、<a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="ユーザーガイド：入力データの指定">入力データを指定する</a>のに使用します。
+</td></tr>
+<tr>
+<th>グループ列
+</th>
+<td>グループ化列としてカテゴリ列を選択
+</td></tr>
+<tr>
+<th> グラフ配置
+</th>
+<td>
+<ul><li> <b>複数データ</b>：複数入力データの配置方法を選択します。 
+<ul><li> <b>同じグラフ上で重ね合わせ</b>: 選択した入力データを、同じグラフレイヤ上に重なり合ったプロットとしてプロットします。</li>
+<li> <b>同じグラフ内でレイヤを分ける</b>：選択された入力データを同じグラフページ上の別々のレイヤに個別にプロットします。</li>
+<li> <b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</li></ul></li></ul>
+<ul><li> <b>パネルの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</li>
+<li> <b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにグループ化棒グラフを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。 </li></ul>
+</td></tr>
+<tr>
+<th> Xを共有/Yを共有
+</th>
+<td> チェックを付けると、グラフとレイヤ間でX/Yスケールを共有します。
+</td></tr>
+<tr>
+<th> プロットタイプ
+</th>
+<td> プロットタイプ、散布図、線、または線+シンボルを指定します。
+</td></tr>
+<tr>
+<th> 積み上げ
+</th>
+<td> 複数の入力変数を同じグラフに重ね合わせる場合に、棒を積み上げるかどうかを指定します。<b>並列</b>、<b>積み上げ</b>、または<b>100%積み上げ</b>から選択できます。このオプションは、プロットタイプが散布図である場合は使用できません。
+</td></tr>
+<tr>
+<th> グラフテンプレート
+</th>
+<td> 必要に応じてユーザテンプレートを指定します。デフォルトでは、自動チェックボックスがオンになっており、組み込みテンプレートGBOXが使用されています。
+</td></tr>
+<tr>
+<th> フィット
+</th>
+<td> このブランチを使用して、参照線を使用してフィット曲線またはバンドを作成します。ここでは多項式フィットのみが利用可能です。
+<ul><li> <b>多項式次数</b>:多項式関数の次数を指定します。</li>
+<li> <b>ラベル</b>:フィット曲線のラベルを指定します。<b>方程式</b>、<b>ピアソンのR</b>、<b>R二乗 (COD)</b>を選択できます。</li>
+<li> <b>信頼帯</b>: グラフに信頼帯を表示するかどうかを指定します。</li>
+<li> <b>推定帯</b>: グラフ上に推定帯を表示するかどうかを指定します。</li>
+<li> <b>信頼楕円(平均)</b>: グラフ上に平均値に基づく信頼楕円を表示するかどうかを指定します。</li>
+<li> <b>信頼楕円(予測)</b>: グラフ上に信頼楕円を表示するかどうかを指定します。</li></ul>
+</td></tr>
+<tr>
+<th>出力データ
+</th>
+<td><a href="../../UserGuide/UserGuide/Output_Results.html" title="ユーザガイド：出力結果">計算したデータの出力</a>先を指定します。
+</td></tr>
+<tr>
+<th>グラフ出力
+</th>
+<td>結果グラフを出力するシートを指定します。
+</td></tr></table>
+<table class="note">
+<tr>
+<td><b>Note:</b> グループ化範囲はデフォルトではアルファベット順でソートされます。変更する場合は、ワークシートの列を選択し、右クリックしてカテゴリとして設定します。設定したら、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>カテゴリー</b>タブ</a>でリストの順序を変更できる。
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>SCATTER.OPTU（Originのプログラムフォルダにインストールされています）
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<ul><li> <b>Yを共有</b>を選択すると、同じグラフの複数のレイヤでは、左側のレイヤの同じ行にY軸のみが表示されます。<b>Xを共有</b>を選択すると、同じグラフの複数のレイヤでは、下部レイヤの同じ列に下のX軸のみが表示されます。 </li>
+<li> 複数の入力データに対して同じグラフに複数のパネルがある場合、<b>パネルの分割</b>オプションで列を選択すると、各変数を異なる行に配置し、各パネル因子の組み合わせを異なる列に配置します。変数またはパネル因子のみが存在する場合は、レイヤをceil(sqrt(N))で折り返します。Nはレイヤの数です。</li></ul>
+
+
+
+
+    

@@ -1,0 +1,605 @@
+﻿<h1 class="firstHeading">Mehrere Dateien als OPX packen</h1>
+
+  <p class='urlname' style='display: none'>FileShare-Pack-OPX</p>
+
+  <p>Wenn Sie Ihre Origin-Arbeitsdateien mit anderen Anwendern teilen möchten, empfehlen wir die Verwendung des Hilfsmittels Packdateien verwalten. Wie Zip-Dateien packt das Hilfsmittel Packdateien verwalten alle Ihre Dateien in eine einzelne Datei, um Sie an andere Anwender zu senden. Packdateien verwalten bietet aber noch andere Vorteile. Der Hauptvorteil dieses Hilfsmittels ist, dass es anderen Anwendern ermöglicht, die Dateien in dem Paket zu installieren, indem das Paket einfach per Drag&amp;Drop in den Arbeitsbereich von Origin gezogen wird. Pakete können auch eingerichtet werden, um <a href="../../UserGuide/UserGuide/Apps.html" title="UserGuide:Apps">Apps</a>, Schaltflächengruppen und Symbolleisten zu erstellen und LabTalk-Skripts vor und nach der Installation auszuführen. Pakete können ganz einfach wieder im Dialog <b>Packdateien verwalten</b> deinstalliert werden.</p>
+
+  <p>Öffnen Sie den Dialog Packdateien verwalten durch Auswahl von <b>Packdateien verwalten</b> im Menü <b>Hilfsmittel</b>.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Packaging Multiple Files as an OPX File-1.png" src="../images/Packaging_Multiple_Files_as_OPX/Packaging_Multiple_Files_as_an_OPX_File-1.png" width="534"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1">
+        <a href="#Dialog_box"><span class="tocnumber">1</span> <span class="toctext">Dialog</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-2"><a href="#Menu"><span class="tocnumber">1.1</span> <span class="toctext">Menü</span></a></li>
+
+          <li class="toclevel-2 tocsection-3"><a href="#Tree_View"><span class="tocnumber">1.2</span> <span class="toctext">Baumansicht</span></a></li>
+
+          <li class="toclevel-2 tocsection-4"><a href="#Buttons"><span class="tocnumber">1.3</span> <span class="toctext">Schaltflächen</span></a></li>
+
+          <li class="toclevel-2 tocsection-5"><a href="#File_List"><span class="tocnumber">1.4</span> <span class="toctext">Dateiliste</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-6"><a href="#Creating_A_New_Package"><span class="tocnumber">2</span> <span class="toctext">Ein neues Paket erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-7"><a href="#Creating_a_New_App"><span class="tocnumber">3</span> <span class="toctext">Eine neue App erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-8"><a href="#Extracting_Files_From_A_Package"><span class="tocnumber">4</span> <span class="toctext">Dateien aus einem Paket extrahieren</span></a></li>
+
+      <li class="toclevel-1 tocsection-9"><a href="#Installing_A_Package"><span class="tocnumber">5</span> <span class="toctext">Ein Paket installieren</span></a></li>
+
+      <li class="toclevel-1 tocsection-10"><a href="#Uninstall_a_package"><span class="tocnumber">6</span> <span class="toctext">Ein Paket deinstallieren</span></a></li>
+
+      <li class="toclevel-1 tocsection-11"><a href="#OriginC"><span class="tocnumber">7</span> <span class="toctext">Origin C</span></a></li>
+
+      <li class="toclevel-1 tocsection-12"><a href="#Updating_Origin_C_Files"><span class="tocnumber">8</span> <span class="toctext">Aktualisieren von Origin C-Dateien</span></a></li>
+
+      <li class="toclevel-1 tocsection-13">
+        <a href="#Command_to_create_OPX_file"><span class="tocnumber">9</span> <span class="toctext">Befehl zum Erstellen von OPX-Dateien</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-14"><a href="#Origin_C"><span class="tocnumber">9,1</span> <span class="toctext">Origin C</span></a></li>
+
+          <li class="toclevel-2 tocsection-15"><a href="#LabTalk"><span class="tocnumber">9,2</span> <span class="toctext">LabTalk</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Dialog_box"></a><span class="mw-headline">Dialog</span></h2>
+
+  <h3><a name="Menu"></a><span class="mw-headline">Menü</span></h3>
+
+  <p>Der Dialog <b>Packdateien verwalten</b> verfügt über ein Menü <b>Datei</b> und ein Menü <b>Hilfsmittel</b>.</p>
+
+  <p>Das Menü <b>Datei</b> enthält die folgenden Elemente:</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Neu</th>
+
+      <td>
+        <p>Erstellt ein neues Paket. Dadurch wird ein aktuelles Paket, sollte es offen sein, geschlossen. Wenn das aktuelle Paket geändert, aber nicht gespeichert wurde, werden Sie aufgefordert, die Änderungen zu speichern oder zu verwerfen oder das Erstellen eines neuen Pakets abzubrechen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Öffnen...</th>
+
+      <td>
+        <p>Öffnet eine vorhandene Packdatei. Dadurch wird ein aktuelles Paket, sollte es offen sein, geschlossen. Wenn das aktuelle Paket geändert, aber nicht gespeichert wurde, werden Sie aufgefordert, die Änderungen zu speichern oder zu verwerfen oder das Erstellen eines neuen Pakets abzubrechen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Speichern</th>
+
+      <td>
+        <p>Speichert das aktuelle Paket mit dem aktuellen Dateinamen. Wenn das Paket neu ist und noch keinen Dateinamen hat, werden Sie aufgefordert, einen Dateinamen zu vergeben.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Speichern unter...</th>
+
+      <td>
+        <p>Speichern Sie das aktuelle Paket mit Hilfe eines neuen Dateinamens.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Schließen</th>
+
+      <td>
+        <p>Der Dialog wird geschlossen. Wurden an dem aktuellen Paket Änderungen vorgenommen und nicht gespeichert, werden Sie aufgefordert, die Änderungen zu speichern oder zu verwerfen oder das Schließen des Dialogs abzubrechen.</p>
+      </td>
+    </tr>
+  </table>
+
+  <p>Das Menü <b>Hilfsmittel</b> enthält die folgenden Elemente:</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Installierte Pakete durchsuchen...</th>
+
+      <td>
+        <p>Dieses Element öffnet den Dialog <b>Installierte Pakete</b>, das alle momentan installierten Pakete anzeigt. Sie können die Packinformationen wie Name, Version und Beschreibung durchsuchen und das ausgewählte Paket Auf Wunsch öffnen/deinstallieren.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ein Paket extrahieren</th>
+
+      <td>
+        <p>Das Extrahieren eines Pakets unterscheidet sich von der Installation eines Pakets. Das Extrahieren eines Pakets wird verwendet, wenn Sie nur die Dateien aus dem Paket haben möchten. Die Vorher- und Nachher-Skripts werden nicht ausgeführt. Sie werden auch aufgefordert, den Zielordner zu wählen. Dies kann jeder beliebige Ordner sein. Der Zielordner muss kein Anwender- oder Systemordner von Origin sein.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ein Paket installieren...</th>
+
+      <td>
+        <p>Ein Dateidialog fordert Sie auf, eine Packdatei auszuwählen. Nachdem Sie eine Packdatei gewählt und auf <b>Öffnen</b> geklickt haben, wird das Paket installiert.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ein Paket deinstallieren...</th>
+
+      <td>
+        <p>Dieses Element zeigt Ihnen den Dialog "Installierte Pakete". Wählen Sie einfach die Pakete aus, die Sie deinstallieren möchten, und klicken Sie auf die Schaltfläche <b>Deinstallieren</b>.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h3><a name="Tree_View"></a><span class="mw-headline">Baumansicht</span></h3>
+
+  <p>In der Baumansicht können die Paketeinstellungen bearbeitet werden.</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Paket</th>
+
+      <td>
+        <ul>
+          <li>Name
+
+            <dl>
+              <dd>Der Name des Moduls Der Name sollte für jede herausgebrachte Version der gleiche bleiben.</dd>
+
+              <dd>Während der Installation wird der Modulname mit den Namen der bereits installierten Pakete verglichen. Wenn eine Übereinstimmung gefunden wurde, wird der Anwender informiert, dass das Paket bereits installiert ist. Der Anwender hat die Option, fortzufahren oder die Installation abzubrechen.</dd>
+            </dl>
+          </li>
+
+          <li>Beschreibung
+
+            <dl>
+              <dd>Eine Beschreibung des Moduls oder Paketinhalts</dd>
+            </dl>
+          </li>
+
+          <li>Version
+
+            <dl>
+              <dd>Die Version des Moduls in dem Paket</dd>
+            </dl>
+          </li>
+
+          <li>Autor
+
+            <dl>
+              <dd>Ersteller des Moduls in dem Paket</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Erforderliche Origin-Version</th>
+
+      <td>
+        <p>Die erforderliche Version von Origin zum Verwenden des Moduls in dem Paket Die Version kann bis hin zur Service-Release-Version festgelegt werden. Sie können zum Beispiel "9.32" eingeben, um darauf hinzuweisen, dass die Packdatei V2016 SR2 oder höher erfordert.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Erforderliches OriginPro</th>
+
+      <td>
+        <p>Aktivieren Sie dieses Kontrollkästchen, um das Modul, das im Paket nur in der OriginPro-Version enthalten ist, zu beschränken.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Apps</th>
+
+      <td>
+        <ul>
+          <li>Symbol
+
+            <dl>
+              <dd>Das in der <a href="../../UserGuide/UserGuide/Apps.html#The_Apps_Gallery" title="UserGuide:Apps">Apps-Galerie</a> als App-Symbol zu verwendende bmp-Bild</dd>
+            </dl>
+          </li>
+
+          <li>Symbolleistensymbol
+
+            <dl>
+              <dd>Das in der App-Symbolleiste zu verwendende bmp-Bild</dd>
+            </dl>
+          </li>
+
+          <li>Skript starten
+
+            <dl>
+              <dd>Das LabTalk-Skript, das beim Start der App ausgeführt wird</dd>
+            </dl>
+          </li>
+
+          <li>Nach Fenster aktivieren
+
+            <dl>
+              <dd>Sie können die Verfügbarkeit der Schaltfläche für Instanzen einschränken, wenn ein Fenster aktiv ist, das aus einer speziellen Vorlage erstellt wurde, oder wenn ein spezieller Fenstertyp aktiv ist.</dd>
+            </dl>
+          </li>
+
+          <li>Nach LabTalk-Ausdruck aktivieren
+
+            <dl>
+              <dd>Außerdem können Sie die Verfügbarkeit der Schaltfläche basierend auf dem Wert einer angegebenen Variablen einschränken. Weitere Einzelheiten finden Sie <a href="../../UserGuide/UserGuide/The_Button_Settings_Dialog_Box.html#The_Context_Group" title="UserGuide:The Button Settings Dialog Box">hier</a>.</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Symbolleiste</th>
+
+      <td>
+        <ul>
+          <li>Datei Schaltflächengruppe
+
+            <dl>
+              <dd>Wenn das Paket eine Schaltflächengruppendatei enthält und Sie die Schaltflächengruppe während der Paketinstallation zu Origins anwenderdefinierten Schaltflächengruppen hinzufügen möchten, geben Sie die Datei hier an.</dd>
+
+              <dd>Der einfachste Weg, dieses Feld festzulegen, besteht darin, zuerst die Schaltflächengruppe zum Paket hinzuzufügen. Sobald sie hinzugefügt wurden, können Sie sie in der Liste der Dateien auswählen und dann auf die Schaltfläche "Symbolleiste setzen" klicken.</dd>
+            </dl>
+          </li>
+
+          <li>Symbolleiste erzeugen
+
+            <dl>
+              <dd>Diese Option bestimmt, ob während der Paketinstallation aus der Schaltflächengruppe eine Symbolleiste erzeugt wird.</dd>
+
+              <dd>Aktivieren Sie das Kontrollkästchen, um eine Symbolleiste zu erstellen.</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>LabTalk-Skript</th>
+
+      <td>
+        <ul>
+          <li>Vor der Installation
+
+            <dl>
+              <dd>Der hier eingegebene LabTalk-Code wird ausgeführt, bevor das Paket installiert ist. Wenn ein LabTalk-Befehlsfehler auftritt, wird die Installation abgebrochen. Wenn Ihr Skript-Code eine Prüfung durchgeführt hat mit dem Ergebnis, dass die Installation nicht fortgeführt werden sollte, können Sie einen Befehlsfehler mit 'break 1;' erzwingen oder OPXERR auf einen Wert setzen, der nicht Null ist.</dd>
+            </dl>
+          </li>
+
+          <li>Nach der Installation
+
+            <dl>
+              <dd>Der hier eingegebene LabTalk-Code wird ausgeführt, nachdem das Paket installiert ist.</dd>
+            </dl>
+          </li>
+
+          <li>Vor dem Deinstallieren
+
+            <dl>
+              <dd>Der hier eingegebene LabTalk-Code wird ausgeführt, bevor die Dateien, die installiert wurden, deinstalliert/entfernt werden. Verwenden Sie diese Option, um jegliche Änderungen, die Sie an den Skripten Vor der Installation und Nach der Installation vorgenommen haben, rückgängig zu machen. Wenn Ihr Skript-Code eine Prüfung durchgeführt hat mit dem Ergebnis, dass die Deinstallation nicht fortgeführt werden sollte, können Sie einen Befehlsfehler mit 'break 1;' erzwingen oder OPXERR auf einen Wert setzen, der nicht Null ist.</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>C- und CPP-Dateien verschlüsseln</th>
+
+      <td>
+        <p>Aktivieren Sie dieses Kontrollkästchen, um C- und CPP-Dateien in diesem Paket ggf. zu verschlüsseln.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Quellpfad</th>
+
+      <td>
+        <p>Dieses Feld zeigt den Quellpfad für alle gepackten Dateien. Alle Dateien, die dem Paket hinzugefügt werden, müssen aus demselben Quellpfad stammen. Der Quellpfad wird festgelegt, wenn Sie Ihren ersten Ordner oder Ihre erste Datei hinzufügen.</p>
+
+        <dl>
+          <dd>
+            <ul>
+              <li>Wenn Ihr erster Ordner oder Ihre erste Datei aus dem Apps-Ordner oder einem seiner Unterordner stammt, wird der Quellpfad im Origin-Programmpfad eingerichtet.</li>
+
+              <li>Wenn Ihr erster Ordner oder die erste Datei aus dem Anwenderdateiordner oder einem seiner Unterordner stammt, wird der Quellpfad für den Anwenderdateiordner eingerichtet.</li>
+
+              <li>Sollte Ihr erster Ordner oder Ihre erste Datei weder aus dem Apps-Ordner noch dem Anwenderdateiordner stammen, dann wird der Quellpfad auf den Pfad des Ordners oben, auf den hinzugefügten Ordner oder auf den Pfad des Ordners, der die hinzugefügte Datei beinhaltet, gesetzt.</li>
+            </ul>
+          </dd>
+
+          <dd>Sollte sich der Speicherort der Dateien ändern, können Sie den Quellpfad manuell bearbeiten. Sobald Sie die Einstellung des Quellpfads auf den neuen Speicherort hin ändern, können Sie die Schaltfläche zum <b>erneuten Packen der Dateien</b> verwenden, um geänderte Dateien in dem Paket zu aktualisieren. Durch die Möglichkeit, den Quellpfad zu ändern, können Sie auch Pakete neu packen, die auf anderen Computern erzeugt wurden.</dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <h3><a name="Buttons"></a><span class="mw-headline">Schaltflächen</span></h3>
+
+  <p>Unter der Baumansicht befinden sich sechs Schaltflächen.</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Dateien neu packen</th>
+
+      <td>
+        <p>Klicken Sie auf diese Schaltfläche, um alle Dateien, die dem Paket hinzugefügt wurden, neu zu packen. Diese Schaltfläche ist nützlich, wenn Sie eine Datei ändern und die Dateiänderungen in dem Paket aufnehmen möchten. Anstatt die Datei zu entfernen und sie erneut hinzuzufügen, können Sie einfach auf diese Schaltfläche klicken und alle neuen Änderungen an Ihren Dateien werden in das Paket gepackt.</p>
+
+        <p>Diese Schaltfläche ist deaktiviert, bis das Paket mindestens eine Datei enthält.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Symbolleiste festlegen</th>
+
+      <td>
+        <p>Klicken Sie auf diese Schaltfläche, um die Einstellung der Schaltfläche Gruppendatei im Zweig Symbolleiste der Baumansicht festzulegen.</p>
+
+        <p>Diese Schaltfläche wird deaktiviert, bis eine einzelne Datei in der Dateiliste ausgewählt ist.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ordner hinzufügen...</th>
+
+      <td>
+        <p>Klicken Sie auf diese Schaltfläche, um einen Ordner und alle Dateien und Unterordner, die sich in dem gewählten Ordner befinden, hinzuzufügen.</p>
+
+        <p>Das Quellpfadfeld in der Baumansicht wird beim Hinzufügen des ersten Ordners oder der ersten Datei zu dem Paket festgelegt. Weitere Informationen finden Sie unter Quellpfad.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Dateien hinzufügen...</th>
+
+      <td>
+        <p>Klicken Sie auf diese Schaltfläche, um Dateien zum Paket hinzuzufügen. Ein Dialog zum "Hinzufügen von Dateien zum Paket" wird aufgerufen.</p>
+
+        <p>Das Quellpfadfeld in der Baumansicht wird beim Hinzufügen des ersten Ordners oder der ersten Datei zu dem Paket festgelegt. Weitere Informationen finden Sie unter Quellpfad.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Dateien entfernen</th>
+
+      <td>
+        <p>Klicken Sie auf diese Schaltfläche, um alle ausgewählten Dateien aus dem Paket zu entfernen.</p>
+
+        <p>Diese Schaltfläche wird deaktiviert, bis Sie eine oder mehrere Dateien in der Dateiliste ausgewählt haben.</p>
+      </td>
+    </tr>
+  </table>
+
+  <p>Die Schaltfläche rechts außen wird verwendet, um die Dateiliste zu zeigen und zu verbergen.</p>
+
+  <h3><a name="File_List"></a><span class="mw-headline">Dateiliste</span></h3>
+
+  <p>Die Dateiliste zeigt alle Dateien, die aktuell im Paket sind. Die Gesamtanzahl der Dateien in der Liste wird links von den sechs Schaltflächen oben gezeigt. Die Anzahl der Dateien in der Liste und die Anzahl der ausgewählten Dateien ändern den Status der Schaltflächen wie oben beschrieben.</p>
+
+  <h2><a name="Creating_A_New_Package"></a><span class="mw-headline">Ein neues Paket erstellen</span></h2>
+
+  <p><b>Erstellen eines neuen Pakets durch Hinzufügen von Dateien:</b></p>
+
+  <ol>
+    <li>Geben Sie die Informationen zu Ihrem Modul im Zweig <b>Paket</b> ein.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>Dateien hinzufügen</b>, um den Dialog <b>Dateien zum Paket hinzufügen</b> zu öffnen.</li>
+
+    <li>Wählen Sie Ihre Dateien und klicken Sie dann auf die Schaltfläche <b>Öffnen</b> oder drücken Sie auf die Taste <b>Enter</b>.</li>
+
+    <li>Wählen Sie <b>Speichern</b> oder <b>Speichern unter</b> im Menü <b>Datei</b>, um das Paket in eine OPX-Datei zu schreiben.</li>
+  </ol>
+
+  <p><b>Um eine neue gepackte Datei durch Hinzufügen von Ordnern zu erstellen:</b></p>
+
+  <p>Wenn alle Dateien, die Sie in ein Paket packen möchten, sich in demselben Ordner befinden, ist es praktischer, die Schaltfläche <b>Ordner hinzufügen</b> zu verwenden. Auf diese Weise werden der Ordner und alles in dem Ordner, einschließlich der Unterordner und ihr Inhalt, dem Paket hinzugefügt. Die Ordnerstruktur wird in dem Paket übermittelt und neu erstellt, wenn das Paket bei einem anderen Anwender installiert wird.</p>
+
+  <ol>
+    <li>Geben Sie die Informationen zu Ihrem Modul im Zweig <b>Paket</b> ein.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>Ordner hinzufügen</b>, um den Dialog <b>Ordner auswählen</b> zu öffnen.</li>
+
+    <li>Wählen Sie Ihren Ordner und klicken Sie dann auf die Schaltfläche <b>Öffnen</b>.</li>
+
+    <li>Wählen Sie <b>Speichern</b> oder <b>Speichern unter</b> im Menü <b>Datei</b>, um das Paket in eine OPX-Datei zu schreiben.</li>
+  </ol>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweis:</b>
+
+        <p>Das Packen von Schaltflächengruppen erfordert, dass sich alle Hilfedateien im Origin-Ordner oder in einem Unterordner des Origin-Ordners befinden. Es wird sehr empfohlen, dass Ihr Modul, wenn möglich, alle Dateien in einem Unterordner behält, um die Organisation der Module zu bewahren und Durcheinander zu vermeiden, entweder im Apps-Ordner oder im Anwenderdateiordner.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Creating_a_New_App"></a><span class="mw-headline">Eine neue App erstellen</span></h2>
+
+  <p>Um ein neues Paket für eine <a href="../../UserGuide/UserGuide/Apps.html" title="UserGuide:Apps">App</a> zu erstellen, können Sie den Schritten in <a class="external text" href="../../Tutorial/Tutorial/The_Code_Builder_Workspace.html#Create_an_App_Using_Apps_folder_in_Workspace">diesem Tutorial</a> folgen.</p>
+
+  <h2><a name="Extracting_Files_From_A_Package"></a><span class="mw-headline">Dateien aus einem Paket extrahieren</span></h2>
+
+  <p>Sie können die Dateien aus einem vorhandenen Paket mit Hilfe des <b>Paketmanagers</b> extrahieren.</p>
+
+  <ol>
+    <li>Wählen Sie <b>Ein Paket extrahieren</b> im Menü <b>Datei</b>.</li>
+
+    <li>Wählen Sie im Dialog <b>Öffnen</b> Ihre OPX-Datei und klicken Sie auf die Schaltfläche <b>Öffnen</b>.</li>
+
+    <li>Wählen Sie im Dialog <b>Zielordner auswählen</b> Ihren Zielordner und klicken Sie auf die Schaltfläche <b>OK</b>.</li>
+  </ol>
+
+  <p>Alle Dateien werden in den Zielordner extrahiert. Wenn das Paket Unterordnerinformationen enthält, dann werden alle Unterordner erstellt und Dateien so in die Unterordner extrahiert, wie sie dem Paket hinzugefügt wurden.</p>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweis:</b>
+
+        <p>Das Extrahieren der Dateien aus einem Paket ist nicht das Gleiche wie das Installieren eines Pakets. Beim Extrahieren von Dateien aus einem Paket werden die Schaltflächengruppen und Symbolleisten nicht erstellt und LabTalk-Skripts werden nicht ausgeführt. Symbolleisteninformationen und LabTalk-Skripts werden nur verwendet, wenn das Paket installiert oder deinstalliert wird.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Installing_A_Package"></a><span class="mw-headline">Ein Paket installieren</span></h2>
+
+  <p><b>Installieren eines Pakets mit dem Paketmanager</b></p>
+
+  <ol>
+    <li>Wählen Sie <b>Ein Paket installieren</b> im Menü <b>Hilfsmittel</b>.</li>
+
+    <li>Wählen Sie im Dialog <b>Öffnen</b> Ihre OPX-Datei und klicken Sie auf die Schaltfläche <b>Öffnen</b> oder drücken Sie auf die Taste <b>Enter</b>.</li>
+  </ol>
+
+  <p>Das Paket wird installiert.</p>
+
+  <p><br>
+  <b>Installieren eines Pakets mit Drag&amp;Drop</b></p>
+
+  <ol>
+    <li>Ziehen Sie Ihre OPX-Datei und legen Sie sie im Arbeitsbereich von Origin ab.</li>
+  </ol>
+
+  <p>Das Paket wird installiert.</p>
+
+  <p><br>
+  <b>Installieren eines Pakets mit dem Gruppenordner</b></p>
+
+  <p>Wenn Sie eine Concurrent-Netzwerklizenz verwenden, können Sie Ihr Paket bei allen Clients installieren, indem Sie es in Ihrem Gruppenordner ablegen.</p>
+
+  <p>Bitte lesen Sie unter <a href="../../UserGuide/UserGuide/Group_Folder_Manager.html" title="UserGuide:Group Folder Manager">Gruppenordnermanager</a> nach, wie das funktioniert.</p>
+
+  <p><br>
+  <b>Stille Installation</b></p>
+
+  <p>Eine stille Installation ist das automatische Durchführen einer Installation mit der geringsten Beteiligung des Anwenders. Sie ist sehr nützlich, wenn ein Installationsvorgang so viele Rollout-Nachrichten enthält, dass es den Anwender viel Zeit kosten würde, jede Nachricht zu beantworten, so dass die Installation enorm verlangsamt würde.</p>
+
+  <p>Zum Erstellen einer OPX-Datei, die still installiert werden kann, müssen Sie die folgenden Einstellungen vornehmen:</p>
+
+  <ul>
+    <li>Setzen Sie die Einstellung <b>LabTalk-Skript &gt; Vor der Installation</b> auf leer oder auf ein beliebiges Skript, das keine Anwenderbefehlsaufforderung hervorruft.</li>
+
+    <li>Setzen Sie die Einstellung <b>LabTalk-Skript &gt; Nach der Installation</b> auf ein beliebiges Skript, dass keine Anwenderbefehlsaufforderung hervorruft, gefolgt von zwei zusätzlichen Befehlen:</li>
+  </ul>
+  <pre class="lt" style="font-family:monospace;">
+doc <span style="color: #000080;">-</span>s; exit;
+</pre>
+
+  <p>Nachdem die notwendigen Änderungen am OPX gemacht wurden, ist es jetzt möglich, Origin zu starten, das OPX zu installieren und Origin zu verlassen, ohne manuell eingreifen zu müssen. Die folgende Befehlszeile zeigt, wie die stille Installation des OPX durchgeführt wird.</p>
+  <pre class="lt" style="font-family:monospace;">
+Origin64.<span style="color: #000080;">exe</span> <span style="color: #000080;">-</span>h <span style="color: #000080;">-</span>R <span style="color: #ff00ff;">"instOPX OPXFileName.opx"</span>
+</pre>
+
+  <p>Die oben stehende Befehlszeile muss bearbeitet werden, um den Dateinamen Ihres OPX zu verwenden.</p>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweis:</b>
+
+        <ol>
+          <li>Das Installieren eines Pakets ist nicht das Gleiche wie das Extrahieren von Dateien aus einem Paket. Wenn Sie ein Paket installieren, werden Schaltflächengruppen und Symbolleisten erstellt und LabTalk-Skripts ausgeführt, wenn sie in den Feldern von Symbolleiste und LabTalk-Skript festgelegt sind. Symbolleisteninformationen und LabTalk-Skripts werden ignoriert, wenn Dateien aus einem Paket extrahiert werden.</li>
+
+          <li>Bei der Installation eines Pakets prüft Origin zunächst, ob das Paket bereits installiert ist. Sollte es bereits installiert sein, informiert Origin den Anwender, dass das Paket installiert ist, und fragt, ob die Installation fortgesetzt werden soll. Wenn der Anwender mit der Installation fortfahren möchte, deinstalliert Origin zuerst die vorherige Installation und fährt dann mit der Installation des aktuellen Pakets fort.</li>
+
+          <li>Beim Installieren einer App werden alle Vorlagen (*.otw,*otm,*otp etc.) und Fitfunktionsdateien (*. FDF), die in diesem Paket enthalten sind, installiert. Sie werden in den Ordner dieser App kopiert. Beim Deinstallieren dieser App werden auch alle diese Vorlagen mit deinstalliert.</li>
+        </ol>
+
+        <dl>
+          <dd>Für jedes Paket, das installiert wird, kopiert Origin das Paket ohne die gepackten Dateien in eine Paketlistendatei. Die Paketlistendatei ist eine OPXList.xml und wird im App-Ordner gespeichert.</dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Uninstall_a_package"></a><span class="mw-headline">Ein Paket deinstallieren...</span></h2>
+
+  <p>Sie können ein bereits installiertes Paket mit Hilfe von <b>Packdateien verwalten</b> deinstallieren.</p>
+
+  <ol>
+    <li>Wählen Sie <b>Ein Paket deinstallieren…</b> oder <b>Installierte Pakete durchsuchen…</b> im Menü <b>Hilfsmittel</b>.</li>
+
+    <li>Wählen Sie im Dialog <b>Installierte Pakete</b> eines der aufgeführten Pakete und klicken Sie auf die Schaltfläche <b>Deinstallieren</b>.</li>
+  </ol>
+
+  <p>Das Paket wird auf Ihrem Computer deinstalliert.</p>
+
+  <h2><a name="OriginC"></a><span class="mw-headline">Origin C</span></h2>
+
+  <p>Der Dialog <b>Packdateien verwalten</b> wird mit OriginC-Code in OriginC\OriginLab\XMLPackage.c gehandhabt.</p>
+
+  <p>Die Datei XMLPackage.c ruft eine Sammlung von aus Origin exportierten Funktionen zum Arbeiten mit Paketen auf. Die folgenden Funktionen werden in oUtils.h deklariert und aus Origins okUtil80.dll exportiert:</p>
+
+  <ul>
+    <li>okutil_create_package_tree</li>
+
+    <li>okutil_create_package_file</li>
+
+    <li>okutil_install_package_file</li>
+
+    <li>okutil_uninstall_package_file</li>
+
+    <li>okutil_get_installed_package_names</li>
+
+    <li>okutil_add_folder_to_package</li>
+
+    <li>okutil_add_files_to_package</li>
+
+    <li>okutil_remove_files_from_package</li>
+
+    <li>okutil_get_packed_file_names</li>
+
+    <li>okutil_repack_files</li>
+  </ul>
+
+  <p>Sie finden den Wiedergabetyp der Funktion und das Argument, das von jeder Funktion akzeptiert wird, in OriginCs oUtils.h.</p>
+
+  <h2><a name="Updating_Origin_C_Files"></a><span class="mw-headline">Aktualisieren von Origin C-Dateien</span></h2>
+
+  <p>Jede Origin C-Datei erzeugt bei der Kompilierung eine entsprechende .OCB-Datei in Ihrem Anwenderdateiordner. Die .OCB-Datei verhindert, dass Sie Ihren Origin C-Quellcode jedes Mal neu kompilieren müssen, wenn der Quellcode ausgeführt wird. Wenn Sie Origin C-Dateien mit Hilfe eines Origin-Pakets verteilen, möchten Sie sicher sein, dass Ihre geänderte Origin C-Datei neu kompiliert wird, wenn ein Anwender Ihr aktualisiertes Paket installiert. Mit anderen Worten, Sie wollen die .OCB-Datei löschen, die auf dem Computer des Anwenders erstellt wurde, als eine ältere Version Ihres Pakets installiert wurde. Sie können die .OCB-Dateien mit Hilfe des Befehls Löschen von LabTalk mit der OCB-Option Ihres Skripts <b>Nach der Installation</b> Ihres Pakets löschen.</p>
+
+  <p>Eine detaillierte Beschreibung dazu finden Sie unter <a class="external text" href="../../LabTalk/LabTalk/Updating_an_Existing_Origin_C_File.html">Eine existierende Origin C-Datei aktualisieren</a>.</p>
+
+  <h2><a name="Command_to_create_OPX_file"></a><span class="mw-headline">Befehl zum Erstellen von OPX-Dateien</span></h2>
+
+  <p>Erstellen Sie aus ini-Einstellungen eine OPX-Datei, ohne dem Dialog Packdateien verwalten zu öffnen. Dies ist nützlich, wenn Anwender Origin von der Befehlszeile oder einer Windows-BAT-Datei aus ausführen.</p>
+
+  <h3><a name="Origin_C"></a><span class="mw-headline">Origin C</span></h3>
+  <pre class="oc" style="font-family:monospace;">
+<span style="color: #0000ff;">#include</span> <span style="color: #000080;">&lt;</span>Origin.<span style="color: #000000;">h</span><span style="color: #000080;">&gt;</span> <span style="color: #0000ff;">#include</span> <span style="color: #000080;">&lt;</span>..<span style="color: #000040;">/</span>OriginLab<span style="color: #000040;">/</span>OPXFile.<span style="color: #000000;">h</span><span style="color: #000080;">&gt;</span> <span style="color: #0000ff;">int</span> test_ini_to_opx<span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span> OPXFile opx; <span style="color: #0000ff;">int</span> err <span style="color: #000080;">=</span> opx.<span style="color: #000000;">InitFromIni</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">"opx_IEVer.ini"</span><span style="color: #000000;">)</span>; <span style="color: #0000ff;">if</span><span style="color: #000000;">(</span> err <span style="color: #000080;">==</span> <span style="color: #0000dd;">0</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span> <span style="color: #0000ff;">if</span><span style="color: #000000;">(</span> <span style="color: #000040;">!</span>opx.<span style="color: #000000;">Save</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">printf</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">"Failed saving.<span style="color: #666666; font-weight: bold;">\n</span>"</span><span style="color: #000000;">)</span>; <span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">printf</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">"InitFromIni error %d<span style="color: #666666; font-weight: bold;">\n</span>"</span>, err<span style="color: #000000;">)</span>; <span style="color: #0000ff;">return</span> <span style="color: #0000dd;">0</span>; <span style="color: #000000;">}</span>
+</pre>
+
+  <h3><a name="LabTalk"></a><span class="mw-headline">LabTalk</span></h3>
+  <pre class="lt" style="font-family:monospace;">
+mkOPX ini<span style="color: #000000;">:</span><span style="color: #000080;">=</span><span style="color: #ff00ff;">"C:\Users\jacqueline\Documents\OriginLab\User Files\opx_IEVer.ini"</span> app<span style="color: #000000;">:</span><span style="color: #000080;">=</span>Custom_IEVer opx<span style="color: #000000;">:</span><span style="color: #000080;">=</span>H<span style="color: #000000;">:</span>\CustomIEVer.<span style="color: #000080;">opx</span>;
+</pre>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweis:</b>
+
+        <p>Diese Methode erfordert eine .ini-Quelldatei, die alle Einstellungen des Dialogs Packdateien verwalten enthält. Siehe unten z. B. die Datei opx_IEVer.ini:</p>
+      </td>
+    </tr>
+  </table>
+  <pre class="lt" style="font-family:monospace;">
+<span style="color: #000000;">[</span>Package<span style="color: #000000;">]</span> Name<span style="color: #000080;">=</span>IEVer Description<span style="color: #000080;">=</span>Show IE version detected by Origin Version<span style="color: #000080;">=</span><span style="color: #0000dd;">1.0</span> Author<span style="color: #000080;">=</span>OriginLab <span style="color: #000000;">[</span>Origin<span style="color: #000000;">]</span> Version<span style="color: #000080;">=</span><span style="color: #0000dd;">9.4</span> Pro<span style="color: #000080;">=</span><span style="color: #0000dd;">0</span> <span style="color: #000000;">[</span>App<span style="color: #000000;">]</span> Icon<span style="color: #000080;">=</span>AppIcon.<span style="color: #000080;">png</span> ToolbarIcon<span style="color: #000080;">=</span> LaunchScript<span style="color: #000080;">=</span>run.<span style="color: #000080;">section</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">"%@AIEVer\IEVer.ogs"</span>,main<span style="color: #000000;">)</span>; <span style="color: #000000;">[</span>AppEnable<span style="color: #000000;">]</span> Always<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Graph<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Workbook<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Matrixbook<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Image<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Excel<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> Layout<span style="color: #000080;">=</span><span style="color: #0000dd;">1</span> LabTalkExp<span style="color: #000080;">=</span> <span style="color: #000000;">[</span>Toolbar<span style="color: #000000;">]</span> ButtonGroupFile<span style="color: #000080;">=</span> Create<span style="color: #000080;">=</span><span style="color: #0000dd;">0</span> <span style="color: #000000;">[</span>LabTalk<span style="color: #000000;">]</span> BeforeInstall<span style="color: #000080;">=</span> AfterInstall<span style="color: #000080;">=</span> BeforeUninstall<span style="color: #000080;">=</span> <span style="color: #000000;">[</span>Files<span style="color: #000000;">]</span> EncryptC<span style="color: #000080;">=</span><span style="color: #0000dd;">0</span> SourcePath<span style="color: #000080;">=</span>C<span style="color: #000000;">:</span>\Users\eparent\AppData\Local\OriginLab\Apps\IEVer\ OPXFile<span style="color: #000080;">=</span>IEVer1.<span style="color: #000080;">opx</span>
+</pre>

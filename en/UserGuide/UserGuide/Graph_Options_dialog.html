@@ -1,0 +1,152 @@
+<h1 class="firstHeading">9.8 Using Graph Options dialog to set graph default</h1><p class='urlname' style='display: none'>Graph-Options-Set-Graph-Default</p>
+<p><br />
+Besides using <a href="../../UserGuide/UserGuide/Theme_Organizer.html" title="UserGuide:Theme Organizer"><b>Theme Organizer</b></a> to apply the styles/formats to the graphs globally, you can also use <b>Graph Options</b> dialog to change the default format/styles of the graphs. 
+</p><p><span class='headerInParagraph'>To open the '''Graph Options''' dialog, </span>
+</p>
+<ul><li> Choose <b>Preferences: Graph Options</b> on main menu.</li></ul>
+<p><a  class="image"><img alt="Graph Options dialog 01.png" src="../images/Graph_Options_dialog/750px-Graph_Options_dialog_01.png?v=98740" width="750"   /></a>
+</p><p><b>Note:</b> By default, some default settings have been pre-shipped with a global system theme.  You can see some options showing as <b>Auto</b>. Once a setting has been changed in Graph Options dialog, it will have higher priority than the system default theme, and will be applied to system built-in templates, but not for user templates.
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Graph_Options_dialog/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>In this dialog, there are several checkboxes, which have 3 states:
+</p>
+<dl><dd><a  class="image"><img alt="GraphOptions CheckboxStatus.png" src="../images/Graph_Options_dialog/GraphOptions_CheckboxStatus.png?v=98042" width="283"  /></a></dd></dl>
+<ul><li> <b>Checked</b>: Turn this setting on as default.</li>
+<li> <b>Unchecked</b>: Turn this setting off.</li>
+<li> <b>Black Square Inside</b>: Set this option to <b>Auto</b>, which means using whatever is in the system theme or specified template.</li></ul>
+</td></tr></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Settings_in_Different_Tabs"><span class="tocnumber">1</span> <span class="toctext">Settings in Different Tabs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Axis"><span class="tocnumber">1.1</span> <span class="toctext">Axis</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Line_Thickness"><span class="tocnumber">1.1.1</span> <span class="toctext">Line Thickness</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Ticks"><span class="tocnumber">1.1.2</span> <span class="toctext">Ticks</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Gridlines"><span class="tocnumber">1.1.3</span> <span class="toctext">Gridlines</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Rotate_Tick_Labels_if_Overlapping"><span class="tocnumber">1.1.4</span> <span class="toctext">Rotate Tick Labels if Overlapping</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Show_Layer_Frame"><span class="tocnumber">1.1.5</span> <span class="toctext">Show Layer Frame</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Show_Arrow_at_End"><span class="tocnumber">1.1.6</span> <span class="toctext">Show Arrow at End</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#X_Axis_Rescale_Margin.28.25.29"><span class="tocnumber">1.1.7</span> <span class="toctext">X Axis Rescale Margin(%)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Fonts"><span class="tocnumber">1.2</span> <span class="toctext">Fonts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Font"><span class="tocnumber">1.2.1</span> <span class="toctext">Font</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Specific_Objects"><span class="tocnumber">1.2.2</span> <span class="toctext">Specific Objects</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Layout"><span class="tocnumber">1.3</span> <span class="toctext">Layout</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Graph_Size"><span class="tocnumber">1.3.1</span> <span class="toctext">Graph Size</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Fix_Scale_Factor_.3D_1"><span class="tocnumber">1.3.2</span> <span class="toctext">Fix Scale Factor = 1</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Gap_Between_Layers.28.25.29"><span class="tocnumber">1.3.3</span> <span class="toctext">Gap Between Layers(%)</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Page_Margin.28.25.29"><span class="tocnumber">1.3.4</span> <span class="toctext">Page Margin(%)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Legend"><span class="tocnumber">1.4</span> <span class="toctext">Legend</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Position"><span class="tocnumber">1.4.1</span> <span class="toctext">Position</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Show_Legend_Only_for_Multiple_Entries"><span class="tocnumber">1.4.2</span> <span class="toctext">Show Legend Only for Multiple Entries</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Show_Legend_Outside_of_Layer_for_Single_Block"><span class="tocnumber">1.4.3</span> <span class="toctext">Show Legend Outside of Layer for Single Block</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Direction"><span class="tocnumber">1.4.4</span> <span class="toctext">Direction</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Show_Frame"><span class="tocnumber">1.4.5</span> <span class="toctext">Show Frame</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Save_and_Load_Settings_Buttons"><span class="tocnumber">2</span> <span class="toctext">Save and Load Settings Buttons</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Buttons_at_Bottom"><span class="tocnumber">3</span> <span class="toctext">Buttons at Bottom</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Apply_to"><span class="tocnumber">3.1</span> <span class="toctext">Apply to</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Reset"><span class="tocnumber">3.2</span> <span class="toctext">Reset</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Settings_in_Different_Tabs"></a><span class="mw-headline">Settings in Different Tabs</span></h2>
+<h3><a name="Axis"></a><span class="mw-headline">Axis</span></h3>
+<h4><a name="Line_Thickness"></a><span class="mw-headline">Line Thickness</span></h4>
+<p>Change the line thickness for the axies. 
+</p>
+<h4><a name="Ticks"></a><span class="mw-headline">Ticks</span></h4>
+<p>Change the tick direction, the length of the major ticks and minor ticks. This option is only for 2D Cartesian graph layers. 
+</p>
+<h4><a name="Gridlines"></a><span class="mw-headline">Gridlines</span></h4>
+<p>Specify whether show gradlines for major ticks and minor ticks and the line styles for the gridlines on major ticks and minor ticks seperately.
+</p>
+<h4><a name="Rotate_Tick_Labels_if_Overlapping"></a><span class="mw-headline">Rotate Tick Labels if Overlapping</span></h4>
+<p>Specify whether rotate the tick labels if labels are overlapped. And enter a angle value to rotate the tick labels. 
+</p><p>Type a positive number in this text box to rotate labels counterclockwise, and a negative number to rotate labels clockwise.
+</p>
+<h4><a name="Show_Layer_Frame"></a><span class="mw-headline">Show Layer Frame</span></h4>
+<p>Specify whether show the layer frame for current layer. This option is only for 2D Cartesian graph layers. 
+</p>
+<h4><a name="Show_Arrow_at_End"></a><span class="mw-headline">Show Arrow at End</span></h4>
+<p>Specify whether show arrow at the end of the axes. You can choose an arrow style from the following drop-down list and set the arrow size.
+</p><p>This option is diabled by default, enabled when the option <b>Show Layer Frame</b> is unchecked.
+</p>
+<h4><a name="X_Axis_Rescale_Margin.28.25.29"></a><span class="mw-headline">X Axis Rescale Margin(%)</span></h4>
+<p>This option can be used to specify whether to add padding to minimum and maximum values during X axis rescaling. This option is similar to the option <a href="../../UserGuide/UserGuide/Scale_2.html#Rescale_Margin.28.25.29" title="UserGuide:Scale 2"><b>Rescale Margin(%)</b></a> in <b>Scale</b> tab of <b>Axis</b> dialog.
+</p>
+<h3><a name="Fonts"></a><span class="mw-headline">Fonts</span></h3>
+<p>The options in this tab are used to control the font and boldness for different text objects on the graph. The settings will affect both the existing objects and default style of adding new objects. 
+</p>
+<h4><a name="Font"></a><span class="mw-headline">Font</span></h4>
+<p>Change the font of all objects in the graph, including the graph tables.
+</p>
+<h4><a name="Specific_Objects"></a><span class="mw-headline">Specific Objects</span></h4>
+<p>You can change the font and boldness of Tick Labels, Axis Title, Legend, Data Labels, Layer Title, Page Title, Text Objects, Annotaion, Reference Line Labels and Layer Labels.
+</p>
+<h3><a name="Layout"></a><span class="mw-headline">Layout</span></h3>
+<h4><a name="Graph_Size"></a><span class="mw-headline">Graph Size</span></h4>
+<p>Specify the graph size. The size options have the same effect as the size settings under <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Print_Dimensions_Tab.html#Dimensions" title="UserGuide:The (Plot Details) Print Dimensions Tab">the <b>Dimensions</b> group</a> in the <b>Print/Dimensions</b> tab of <b>Plot Details</b> dialog.
+</p>
+<h4><a name="Fix_Scale_Factor_.3D_1"></a><span class="mw-headline">Fix Scale Factor = 1</span></h4>
+<p>Specify whether fix the scale factor to 1. 
+</p><p>You can refer to the option <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Size_Speed_Tab.html#Scale_Elements_Group" title="UserGuide:The (Plot Details) Size Speed Tab"><b>Fixed Factor</b> in <b>Size</b> tab of <b>Plot Details</b> dialog</a> to learn what the sacle factor is.
+</p>
+<h4><a name="Gap_Between_Layers.28.25.29"></a><span class="mw-headline">Gap Between Layers(%)</span></h4>
+<p>When there are many layers in the graph, you can use this option to specify the gap betwen the layers. The unit of this option is&#160;% of page size. 
+</p>
+<h4><a name="Page_Margin.28.25.29"></a><span class="mw-headline">Page Margin(%)</span></h4>
+<p>Specify the margin for the whole graph. The unit of this option is&#160;% of page size. 
+</p><p>By default, the page margin has been set to 3% and there will be an addtional margin for top margin in case you want to add page title or layer title.
+</p>
+<h3><a name="Legend"></a><span class="mw-headline">Legend</span></h3>
+<h4><a name="Position"></a><span class="mw-headline">Position</span></h4>
+<p>Specify where to position the legend.
+</p>
+<h4><a name="Show_Legend_Only_for_Multiple_Entries"></a><span class="mw-headline">Show Legend Only for Multiple Entries</span></h4>
+<p>Show the legend only when the number of curves in current layer is greater than 1. If there is only one dataset in current layer, no legend will show for current layer.
+</p>
+<h4><a name="Show_Legend_Outside_of_Layer_for_Single_Block"></a><span class="mw-headline">Show Legend Outside of Layer for Single Block</span></h4>
+<p>Specify whether show the legend outside of the layer for each graph layer. Uncheck this check box will show legend within the layer frame at specified position.
+</p>
+<h4><a name="Direction"></a><span class="mw-headline">Direction</span></h4>
+<p>Specify how to arrange the legend entries, horizontally or vertically.
+</p>
+<h4><a name="Show_Frame"></a><span class="mw-headline">Show Frame</span></h4>
+<p>Specify whether show a frame for the legend. If the frame was shown, you can change the frame border color, border width, and fill color within the frame.
+</p>
+<h2><a name="Save_and_Load_Settings_Buttons"></a><span class="mw-headline">Save and Load Settings Buttons</span></h2>
+<p>At the top-right corner of dialog, there are two buttons: <b>Save Settings as</b> button <a  class="image"><img alt="Button Save Settings as.png" src="../images/Graph_Options_dialog/Button_Save_Settings_as.png?v=98353" width="16"  /></a> and <b>Load Settings</b> button <a  class="image"><img alt="Button Load Settings.png" src="../images/Graph_Options_dialog/Button_Load_Settings.png?v=98356" width="14"  /></a>
+</p><p><a  class="image"><img alt="Buttons Save and Load Settings.png" src="../images/Graph_Options_dialog/Buttons_Save_and_Load_Settings.png?v=98355" width="511"  /></a>
+</p>
+<ul><li> Clicking <b>Save Settings as…</b> button will popup a dialog--<b>Save</b>--which has 4 check boxes with the tab names. By default, all these boxes have been selected. You can enter a file name at the bottom. If you unchecked any check box, the settings of this  corresponding tab will not be saved to the theme file; if you load this pre-saved theme file later, the controls in that tab will be set to be <i>Auto</i>.</li>
+<li> Clicking <b>Load Settings</b> button will popup a fly-out list which list the theme files(.oth files) under <i>\User Files Folder\Themes\Graph Options</i> folder, in alphabetical order. Maximum number of theme files listed here is 10, and you also can choose <b>More...</b> item to open the file browser to choose other theme file. By default, <i>\User Files Folder\Themes\Graph Options</i> folder will be opened.</li></ul>
+<h2><a name="Buttons_at_Bottom"></a><span class="mw-headline">Buttons at Bottom</span></h2>
+<h3><a name="Apply_to"></a><span class="mw-headline">Apply to</span></h3>
+<p><a  class="image"><img alt="Graph Options dialog 02.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_02.png?v=98222" width="339"  /></a>
+</p><p>Choose the target graphs to apply the format/style settings. <b>Active Graph</b> is only availiable when the active window is a graph window.
+</p>
+<h3><a name="Reset"></a><span class="mw-headline">Reset</span></h3>
+<p><a  class="image"><img alt="Graph Options dialog 03.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_03.png?v=98220" width="264"  /></a>
+</p>
+<ul><li> <b>Reset All to Default</b>: Reset the options in all tabs current tab to roll back to default settings in system default theme.</li>
+<li> <b>Reset This Tab to Default</b>: Reset the options in current tab to roll back to default settings in system default theme.</li>
+<li> <b>Reset All to Classic</b>: Reset all options in dialog to roll back to the classic format seetings which are default settings in the older versions before 2025b.</li>
+<li> <b>Clear All</b>:Clear all settings.</li></ul>
+
+

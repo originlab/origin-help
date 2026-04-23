@@ -1,0 +1,702 @@
+﻿<h1 class="firstHeading">Mit Datei verbinden</h1>
+
+  <p class='urlname' style='display: none'>Connect-to-File</p>
+
+  <p>Datenkonnektoren stellen eine Verbindung zwischen einem/r Origin-Arbeitsblatt/-Matrix und einer Datendatei auf Ihrem PC oder einem lokalen Netzwerk dar. Es werden viele gängige Dateitypen unterstützt.</p>
+
+  <p>Eine Zusammenfassung der Schlüsselunterschiede zwischen Konnektoren und älteren Importmethoden lesen Sie bitte <a class="external text" href="../../QuickHelp/QuickHelp/Data_Connector_Difference_Import_From_File.html"><b>FAQ-1020 Gibt es einen Unterschied zwischen Verbinden und Importieren?</b></a>.</p>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Connecting_to_File/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p><font color="blue"><b>Neue Diagrammtypen mit dem Menü Neu hinzufügen hinzufügen</b></font></p>
+
+        <p>Sie können Konnektoren für zusätzliche Dateitypen hinzufügen, indem Sie den Befehl <b>Neu hinzufügen</b> unten im Menü <b>Daten: Mit Datei verbinden</b> wählen. Dadurch wird das App-Center geöffnet, um nur die nicht installierten Konnektoren zu zeigen. Klicken Sie auf das Symbol <b>Download and Install</b>, um die Konnektor-App auf Ihrem PC zu installieren.</p>
+
+        <p>Alternativ gehen Sie zum <a class="external text" href="https://www.originlab.com/Fileexchange/index.aspx?t=App&amp;c=000001&amp;v2=NULL&amp;o=UpdateOnDESC" target="_blank">Origin-Dateiaustausch</a> auf der OriginLab-Webseite und wählen einen Konnektor aus der Liste aus. Klicken Sie auf der Seite App auf die Schaltfläche <b>Download File</b>. Wenn der Download beendet ist, ziehen Sie die Datei auf den Origin-Arbeitsbereich. Die Dokumentation zur App können Sie im Abschnitt <b>Description</b> der Seite einsehen.</p>
+
+        <p><font color="blue"><b>Menü Mit Datei verbinden benutzerdefiniert anpassen</b></font></p>
+
+        <p>Sie können das Menü <b>Daten: Mit Datei verbinden</b> benutzerdefiniert anpassen, indem Sie <b>Daten: Mit Datei verbinden: Benutzerdefiniert anpassen ...</b> wählen.</p>
+
+        <p><a class="image"><img alt="Menu Customization.png" src="../images/Connecting_to_File/Menu_Customization.png" width="286"></a></p><br>
+        <br>
+
+        <p>Alle installierten Datenkonnektoren werden hier aufgeführt. Sie können die Kontrollkästchen verwenden, um zu entscheiden, welche sie im Menü <b>Daten: Mit Datei verbinden</b> zeigen.</p>
+      </td>
+    </tr>
+  </table>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Adding_a_Connector_to_the_Book"><span class="tocnumber">1</span> <span class="toctext">Einen Konnektor zur Mappe hinzufügen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2">
+        <a href="#Text.2FCSV_Connector"><span class="tocnumber">2</span> <span class="toctext">Text-/CSV-Konnektor</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-3"><a href="#Extract_variable_from_data_cells"><span class="tocnumber">2.1</span> <span class="toctext">Variable aus Datenzellen extrahieren</span></a></li>
+
+          <li class="toclevel-2 tocsection-4"><a href="#Data_Block_Markers"><span class="tocnumber">2.2</span> <span class="toctext">Datenblockmarkierer</span></a></li>
+
+          <li class="toclevel-2 tocsection-5"><a href="#Customize_File_Extensions"><span class="tocnumber">2.3</span> <span class="toctext">Dateierweiterungen benutzerdefiniert anpassen</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-6"><a href="#Excel"><span class="tocnumber">3</span> <span class="toctext">Excel</span></a></li>
+
+      <li class="toclevel-1 tocsection-7"><a href="#JSON.2FXML"><span class="tocnumber">4</span> <span class="toctext">JSON/XML</span></a></li>
+
+      <li class="toclevel-1 tocsection-8"><a href="#MATLAB"><span class="tocnumber">5</span> <span class="toctext">MATLAB</span></a></li>
+
+      <li class="toclevel-1 tocsection-9">
+        <a href="#HDF"><span class="tocnumber">6</span> <span class="toctext">HDF</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-10"><a href="#Tips_for_HDF_Import"><span class="tocnumber">6.1</span> <span class="toctext">Tipps für HDF-Import</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-11"><a href="#TDMS"><span class="tocnumber">7</span> <span class="toctext">TDMS</span></a></li>
+
+      <li class="toclevel-1 tocsection-12"><a href="#N42"><span class="tocnumber">8</span> <span class="toctext">N42</span></a></li>
+
+      <li class="toclevel-1 tocsection-13"><a href="#NetCDF"><span class="tocnumber">9</span> <span class="toctext">NetCDF</span></a></li>
+
+      <li class="toclevel-1 tocsection-14"><a href="#Minitab"><span class="tocnumber">10</span> <span class="toctext">Minitab</span></a></li>
+
+      <li class="toclevel-1 tocsection-15"><a href="#Shapefile"><span class="tocnumber">11</span> <span class="toctext">Shapefile</span></a></li>
+
+      <li class="toclevel-1 tocsection-16"><a href="#Origin_File"><span class="tocnumber">12</span> <span class="toctext">Origin-Datei</span></a></li>
+
+      <li class="toclevel-1 tocsection-17"><a href="#HTML_Table"><span class="tocnumber">13</span> <span class="toctext">HTML-Tabelle</span></a></li>
+
+      <li class="toclevel-1 tocsection-18"><a href="#Google_Sheet"><span class="tocnumber">14</span> <span class="toctext">Google Sheet</span></a></li>
+
+      <li class="toclevel-1 tocsection-19"><a href="#Connect_Multiple_Files"><span class="tocnumber">15</span> <span class="toctext">Mit mehreren Dateien verbinden</span></a></li>
+
+      <li class="toclevel-1 tocsection-20"><a href="#Import_a_File_with_Filter"><span class="tocnumber">16</span> <span class="toctext">Eine Datei mit Filter importieren</span></a></li>
+
+      <li class="toclevel-1 tocsection-21"><a href="#Clone_Import"><span class="tocnumber">17</span> <span class="toctext">Import klonen</span></a></li>
+
+      <li class="toclevel-1 tocsection-22"><a href="#Connect_Files_by_Appending_Rows_to_Current_Sheet"><span class="tocnumber">18</span> <span class="toctext">Dateien verbinden durch Anhängen von Zeilen an das aktuelle Blatt</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Adding_a_Connector_to_the_Book"></a><span class="mw-headline">Einen Konnektor zur Mappe hinzufügen</span></h2>
+
+  <p>Um einen Datenkonnektor zur Mappe hinzuzufügen und Daten zu importieren:</p>
+
+  <ol>
+    <li>Wählen Sie bei aktivem/r Arbeitsblatt/Matrix <b>Daten: Mit Datei verbinden: <i>Datentyp</i></b>.</li>
+
+    <li>Wählen Sie eine gewünschte Datendatei im Dialog <b>Öffnen</b> .</li>
+  </ol>
+
+  <p><br>
+  Der zum Konnektor zugehörige Dialog wird geöffnet, in dem Sie Ihre Importoptionen konfigurieren können.</p>
+
+  <dl>
+    <dd>
+      <ul>
+        <li>Für mehrseitige Dateien wie MS Excel oder MATLAB wählen Sie ein Anfangsblatt für den Import (z. B. <b>Excel-Blatt</b>). Beim Import wird ein minimierbarer <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator"><b>Datennavigator</b></a> zur Mappe hinzugefügt, der Ihnen Zugriff auf die restlichen Blätter der Datei gewährt.</li>
+
+        <li>Der Name der verbundenen Datei wird als der <a href="../../UserGuide/UserGuide/Origin_Child_Window_Naming_Conventions.html" title="UserGuide:Origin Child Window Naming Conventions"><b>Langname</b></a> hinzugefügt (gilt nicht für CSV- oder Origin-Dateien).</li>
+      </ul>
+
+      <dl>
+        <dd><a class="image"><img alt="DC Rename book on import.png" src="../images/Connecting_to_File/DC_Rename_book_on_import.png" width="568"></a></dd>
+      </dl>
+
+      <ul>
+        <li>Beim Verbinden von Matrixmappen mit Dateien werden der <a href="../../UserGuide/UserGuide/Viewing_and_Profiling_Matrix_Data.html" title="UserGuide:Viewing and Profiling Matrix Data"><b>Bildmodus</b> und die <b>Schieber/Miniaturbilder</b></a> automatisch aktiviert, wenn die Anzahl der importierten Matrizen den Wert der Systemvariablen <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#M"><b>@MSS</b></a> überschreitet (Standard = 10). Dies gitl nicht für Origin-Dateien. Eine Anleitung, wie Sie den Wert einer Systemvariablen ändern, finden Sie in <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">dieser FAQ</a>.</li>
+      </ul>
+    </dd>
+  </dl>
+
+  <h2><a name="Text.2FCSV_Connector"></a><span class="mw-headline">Text-/CSV-Konnektor</span></h2>
+
+  <p>Verwenden Sie den Text-/CSV-Konnektor, um Textdateien, wie CSV, TXT und ASC zu importieren.</p>
+
+  <ul>
+    <li>Der Dialog <b>Importoptionen</b> wird nicht standardmäßig geöffnet, da die Standardeinstellungen Dateien in den meisten Fällen korrekt importieren können. Um den Dialog <b>Importoptionen</b> zu öffnen, aktivieren Sie das Kontrollkästchen <b>Optionendialog zeigen</b> im Dialog <b>CSV-Konnektor</b>.</li>
+
+    <li>Bestimmen Sie automatisch die <b>Hauptheaderzeilen</b> oder deaktivieren Sie das Kontrollkästchen und legen Sie die Haupt- und Subheader manuell fest, einschließlich Langname, Einheiten und Kommentare. <b>Hinweis</b>: Ein blauer Hinweis zeigt die Anzahl der auomatisch erkannten Hauptheaderzeilen an.</li>
+
+    <li>Wenn Hauptheaderzeilen erkannt oder manuell festgelegt werden, zeigt der Importdialog eine Auswahlliste <b>Dateiheader speichern in</b> mit Optionen zum Speichern des Dateiheaders im <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows"><b>Bereich der Arbeitsblattbeschriftung</b></a> oder im <a href="../../UserGuide/UserGuide/The_Workbook_Organizer.html" title="UserGuide:The Workbook Organizer"><b>Mappenorganizer</b></a>.
+
+      <table class="simple">
+        <tr>
+          <th>CSV-Importoptionen</th>
+
+          <th>CSV-Importoptionen, Hauptheaderzeilen</th>
+        </tr>
+
+        <tr>
+          <td align="center"><a class="image"><img alt="Csv import option dlg.png" src="../images/Connecting_to_File/Csv_import_option_dlg.png" width="372"></a></td>
+
+          <td align="center"><a class="image"><img alt="Csv import option dlg-Organizer.png" src="../images/Connecting_to_File/Csv_import_option_dlg-Organizer.png" width="376"></a></td>
+        </tr>
+      </table>
+    </li>
+
+    <li>Wenn die importierte Datei (zum Beispiel einige *.pil-Dateien) eine Trennlinie beinhaltet, um den Header von den Daten zu trennen, so etwas wie "&gt;END OF HEADER", dann deaktivieren Sie <b>Auto</b> neben <b>Hauptheaderzeilen</b>, geben Sie 0 unter <b>Hauptheaderzeilen</b> ein, aktivieren Sie das Kontrollkästchen <b>Hauptheader endet mit</b> und geben Sie den definierten Trennungstext im Kombinationsfeld ein. <a class="image"><img alt="CSV end of header lines.png" src="../images/Connecting_to_File/CSV_end_of_header_lines.png" width="569"></a></li>
+
+    <li>Sie können entweder die <b>Ersten 50 Zeilen als Vorschau importieren</b> <i>oder</i> <a href="../../UserGuide/Category/Partial_Importing_and_Re_Importing.html#Partial_Import" title="Category:Partial Importing and Re Importing">teilweise Importieren</a>.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>Weitere Optionen</b> (links von <b>OK</b>) für weitere Optionen:
+
+      <ul>
+        <li><b>Sparklines hinzufügen</b>: <a class="external text" href="../../QuickHelp/QuickHelp/What_is_a_Sparkline_and_how_do_I_customize_it.html">Sparklines</a> werden bei Import aktiviert. Um Sparklines beim Import zu deaktivieren, setzen Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#H.2CI.2CJ.2CK"><b>@IMPS</b> = <i>0</i></a>.</li>
+
+        <li><b>Umbenennen mit Hilfe des Dateinamens</b>: Nur CSV. Optionen für <b>Blatt</b> und <b>Mappenlangname</b>.</li>
+
+        <li><b>Als Standard festlegen</b>: Nur CSV: Schaltflächen zum Festlegen der Einstellungen für <b>Sparklines</b> und <b>Umbenennen mit Hilfe des Dateinamens</b> und <b>LabTalk-Skripte nach Import</b> als Standard.</li>
+
+        <li><b>LabTalk-Skript nach Import</b>: Skript für die Nachverarbeitung der Daten beim Import ausführen. Beachten Sie, dass die Skripte auch als Standardeinstellungen gespeichert werden, wenn Sie auf die Schaltfläche <b>Als Standard festlegen</b> klicken.</li>
+      </ul>
+
+      <dl>
+        <dd><a class="image"><img alt="CSV post import lt scripts.png" src="../images/Connecting_to_File/CSV_post_import_lt_scripts.png" width="556"></a></dd>
+      </dl>
+
+      <table class="noborder">
+        <tr>
+          <td style="vertical-align:top" width="60"><img src="../images/Connecting_to_File/Tip_icon.png" width="57" border="0" alt=""></td>
+
+          <td>
+            <p><b>LabTalk-Skript nach Import</b> kann verwendet werden, um eine Variable aus den Datenzellen () anstatt aus den Headerzeilen zu extrahieren. Im <a href="#Extract_variable_from_data_cells">nächsten Abschnitt</a> finden Sie dazu ein Beispiel.</p>
+          </td>
+        </tr>
+      </table>
+    </li>
+
+    <li>Sie können das gesamte Arbeitsblatt nach einer ausgewählten Spalte sortieren (Rechtsklick und Auswahl von <b>Worksheet sortieren</b>), nachdem Sie Daten über den <b>CSV-Datenkonnektor</b> importiert haben.</li>
+
+    <li>Wenn Sie mehrere CSV-Dateien in dasselbe Arbeitsblatt importieren und sie nach Zeilen anhängen möchten, können Sie die LabTalk-Skripte dafür verwenden. Bitte lesen Sie den Abschnitt zu "EX2" auf <a class="external text" href="../../LabTalk/Category/Wks.DC_(object).html#Examples">dieser LabTalk-Dokumentseite</a>.</li>
+  </ul>
+
+  <h3><a name="Extract_variable_from_data_cells"></a><span class="mw-headline">Variable aus Datenzellen extrahieren</span></h3>
+
+  <p>Um Informationen aus einer Datenzelle zu extrahieren und sie in einer Arbeitsblattvariable zu speichern, können Sie den Dialog <b>LabTalk-Skript nach Import</b> verwenden.</p>
+
+  <p>Im folgenden Beispiel enthält die erste Spalte das Versuchsdatum, und wir möchten es in eine benutzerdefinierte Variable extrahieren. Wir können die untenstehenden <b>LabTalk-Skripte nach Import</b> ausführen, um eine Zeichenkettenvariable "MDate" auf Blattebene hinzuzufügen und ihr den ersten Zellenwert zuzuweisen.</p>
+  <pre class="lt" style="font-family:monospace;">
+page.<span style="color: #000080;">info</span>.<span style="color: #000080;">add</span><span style="color: #000000;">(</span>user<span style="color: #000000;">)</span>; page.<span style="color: #000080;">info</span>.<span style="color: #000080;">user</span>.<span style="color: #000080;">addsection</span><span style="color: #000000;">(</span>variables<span style="color: #000000;">)</span>; string str1<span style="color: #000080;">=</span>left<span style="color: #000000;">(</span>col<span style="color: #000000;">(</span>A<span style="color: #000000;">)</span><span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span><span style="color: #000080;">$</span>, <span style="color: #0000dd;">10</span><span style="color: #000000;">)</span><span style="color: #000080;">$</span>; page.<span style="color: #000080;">info</span>.<span style="color: #000080;">user</span>.<span style="color: #000080;">variables</span>.<span style="color: #000080;">addstring</span><span style="color: #000000;">(</span>MDate, <span style="color: #ff00ff;">"%(str1$)"</span><span style="color: #000000;">)</span>; del col<span style="color: #000000;">(</span>A<span style="color: #000000;">)</span>;
+</pre>
+
+  <p>Nach dem Import können Sie diese Variable, "MDate", im Mappenorganizer überprüfen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Extract variable from data cells via Post Import LT Script.png" src="../images/Connecting_to_File/Extract_variable_from_data_cells_via_Post_Import_LT_Script.png" width="651"></a></dd>
+  </dl>
+
+  <h3><a name="Data_Block_Markers"></a><span class="mw-headline">Datenblockmarkierer</span></h3>
+
+  <p>Falls Ihre Datei eine Mischung aus Daten und Nicht-Daten darstellt, können Sie diejenigen Zeichen definieren, die Datenblöcke darstellen:</p>
+
+  <ul>
+    <li>Verwenden Sie das Feld <b>Anfang</b>, um die Abfolge der Zeichen zu definieren, die den Anfang Ihrer Daten markieren. Falls diese Zeichenabfolge Abschnittsnotation verwendet (d. h., sie ist in eckigen Klammern eingeschlossen, wie <i>[Data]</i>), dann sollte <b>Ende</b> leer bleiben.</li>
+
+    <li>Wenn Sie Abschnittsnotation verwenden, stellen Sie sicher, dass <b>Hauptheaderzeilen</b> = <i>Auto</i>.</li>
+
+    <li>Unterstützung für das Sternchen ("*") als Platzhalter (z. B. sucht "-*" nach einem Strich mit einer Zeichenkette beliebiger Länge).</li>
+
+    <li>Wenn eine leere Zeile das Ende des Datenblocks markiert, können Sie das <b>Ende</b> = <i>&lt;leer&gt;</i> festlegen.</li>
+  </ul>
+
+  <p><a class="image"><img alt="OriginHelp Data Block Marker.png" src="../images/Connecting_to_File/900px-OriginHelp_Data_Block_Marker.png" width="900"></a></p>
+
+  <h3><a name="Customize_File_Extensions"></a><span class="mw-headline">Dateierweiterungen benutzerdefiniert anpassen</span></h3>
+
+  <p>Sie können die Einstellungen der Dateierweiterung im CSV-Konnetor benutzerdefiniert anpassen und zwar in der Auswahlliste <b>Dateityp</b> im Dateibrowser, wenn Sie den Konnektor öffnen.</p>
+
+  <p>Um Dateierweiterungen benutzerdefiniert anzupassen:</p>
+
+  <ol>
+    <li>Aktivieren Sie die Registerkarte Konnektoren in der Apps-Galarie, die sich auf der rechten Seite des Origin-Arbeitsbereichs befindet.</li>
+
+    <li>Klicken Sie mit der rechten Maustaste auf den CSV-Datenkonnektor und wählen Sie <b>Dateierweiterungen benutzerdefiniert anpassen</b>.</li>
+  </ol>
+
+  <p><a class="image"><img alt="CSV Data Connector Customize File Extensions.png" src="../images/Connecting_to_File/CSV_Data_Connector_Customize_File_Extensions.png" width="657"></a></p>
+
+  <ol>
+    <li>Erweiterungen werden <i>";"</i> getrennt.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>Zurücksetzen</b>, um die Systemstandardeinstellungen der Dateierweiterungen wiederherzustellen.</li>
+
+    <li>Sie können auch die Dateierweiterung in der Datei <i>Origin.ini</i> bearbeiten.
+
+      <ul>
+        <li>Wählen Sie <b>Hilfe: Ordner öffnen: Anwenderdateiordner</b>. Suchen Sie im aufgerufenen Anwenderdateiordner die Datei <i>Origin.ini</i>.</li>
+
+        <li>Öffnen Sie die Datei <i>Origin.ini</i> in einem Texteditor, z. B. Notepad. Finden Sie den Abschnitt <b>[DCFileGroup]</b>. Fügen Sie Ihre benutzerdefinierten Einstellungen der Dateierweiterung (mit Konnektorname als Key) unter diesem Abschnitt ein.<br>
+          Wenn dem gefolgt wird, ändert sich z. B. die Standarddateierweiterung des CSV-Datenkonnektors in "Alle Dateien (*.*)".
+          <pre class="lt" style="font-family:monospace;">
+<span style="color: #000000;">[</span>DCFileGroup<span style="color: #000000;">]</span> CSV Connector<span style="color: #000080;">=</span><span style="color: #000080;">*</span>.<span style="color: #000080;">*</span>
+</pre>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2><a name="Excel"></a><span class="mw-headline">Excel</span></h2>
+
+  <p>Informationen zum Excel-Konnektor finden Sie unter <a href="../../UserGuide/UserGuide/Importing_from_Excel.html" title="UserGuide:Importing from Excel">Aus Excel importieren</a>.</p>
+
+  <h2><a name="JSON.2FXML"></a><span class="mw-headline">JSON/XML</span></h2>
+
+  <p>Der Dialog <b>Datenkonnektor-Browser</b> wird geöffnet.</p>
+
+  <p><a class="image"><img alt="JSON DC dialog.png" src="../images/Connecting_to_File/JSON_DC_dialog.png" width="394"></a></p>
+
+  <p>Das obere Feld lädt die Struktur der importierten Datei.</p>
+
+  <ol>
+    <li>Klicken Sie auf einen Zweig, um die Metadaten im rechten Bedienfeld anzuzeigen.</li>
+
+    <li>Wählen Sie den gewünschten Zweig und klicken Sie auf den unten weisenden Pfeil, um ihn zum unteren Feld hinzuzufügen.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>OK</b>, um ausgewählte Daten zu verbinden und zu importieren.</li>
+
+    <li>Wenn Ihre Datei mehrere Arrays enthält, verwenden Sie <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator">den <b>Datennavigator</b></a>, um zusätzliche Daten nach Bedarf zu verbinden.</li>
+  </ol>
+
+  <p><br>
+  <i><b>Tipps:</b></i></p>
+
+  <ul>
+    <li>Wenn eine Verbindung zu <b>MATLAB</b>-, <b>JSON</b>- und <b>NetCDF</b>-Dateien hergestellt wird -- entweder lokale Dateien oder <a href="../../UserGuide/UserGuide/Connecting_to_Web.html" title="UserGuide:Connecting to Web">Webdateien</a> -- werden <a class="external text" href="../../QuickHelp/QuickHelp/Add_Worksheet_Comment_and_Name.html">benutzerdefinierte Blattnamen</a> beibehalten, wenn die Verbindung zu Ihrer Datendatei erneut hergestellt wird (<b>Import</b> oder <b>Alle Mappen importieren</b> im Menü des Datenkonnektors <a class="image"><img alt="Dadta connector icon connect.png" src="../images/Connecting_to_File/Dadta_connector_icon_connect.png" width="16"></a>). Dies gilt nur für Dateitypen, die ein Baumframework verwenden und NICHT für andere Dateitypen wie Excel oder Text/CSV.</li>
+
+    <li>Die Metadaten aus der importierten JSON-/XML-/Preship-XML-Datei werden im <a href="../../UserGuide/UserGuide/The_Workbook_Organizer.html" title="UserGuide:The Workbook Organizer">Arbeitsmappenorganizer</a> gespeichert. Um die Metadaten anzuzeigen, klicken Sie auf die Schaltfläche <b>˅</b> links unten vom Arbeitsblatt, um den Bedienfeld des Organizers einzublenden. Um die Metadaten in die Beschriftungszeilen des Arbeitsblatts einzufügen, klicken Sie mit der rechten Maustaste auf den gewünschten Baumknoten im Organizer und wählen Sie <b>Knotenpfad kopieren</b>. Gehen Sie dann zur Spaltenbeschriftungszelle, klicken Sie mit der rechten Maustaste und wählen Sie <b>Link einfügen</b>.</li>
+  </ul>
+
+  <h2><a name="MATLAB"></a><span class="mw-headline">MATLAB</span></h2>
+
+  <p>Der Dialog <b>Datenkonnektor-Browser</b> wird geöffnet.</p>
+
+  <p><a class="image"><img alt="MATLAB DC dialog.png" src="../images/Connecting_to_File/MATLAB_DC_dialog.png" width="493"></a></p>
+
+  <p>Das obere Bedienfeld listet alle Variablen in der Importdatei in Baumform auf. Es gibt eine Spalte rechts von jeder Variablen, die darauf verweist, wo jede Variable importiert werden kann. Die Optionen schließen Arbeitsblatt, Matrixblatt oder beides ein.</p>
+
+  <ol>
+    <li>Wählen Sie den gewünschten Zweig und klicken Sie auf den unten weisenden Pfeil, um ihn zum unteren Feld hinzuzufügen.</li>
+
+    <li>Wenn eine Arbeitsmappe aktiv ist und die Datei entweder in eine Matrix importiert werden muss, wird ein Dialog aufgerufen, in dem Sie wählen können:
+
+      <dl>
+        <dd>
+          <a class="image"><img alt="NetCDF rmatrix.png" src="../images/Connecting_to_File/NetCDF_rmatrix.png" width="276"></a>
+
+          <ul>
+            <li><b>Eine neue Matrixmappe verwenden</b> - Dies ist der direkteste Weg.</li>
+
+            <li><b>Eine eingebettete Matrixmappe verwenden</b> - Diese Option importiert Daten in eine Matrix. Diese Matrix ist jedoch als Blatt in eine Arbeitsmappe eingebettet.</li>
+
+            <li><b>Arbeitsblattspalten (kann langsam sein)</b> - Diese Option importiert jeden Zeitrahmen der Matrix in mehrere Spalten, so dass sie ein Arbeitsblatt mit vielen Spalten erstellen und dadurch bei großen Datensätzen eine langsame Verarbeitungszeit verursachen kann.</li>
+          </ul>
+        </dd>
+      </dl>
+    </li>
+
+    <li>Wählen Sie die gewünschte Option und klicken Sie auf <b>OK</b>, um die Daten zu importieren.</li>
+
+    <li>Wenn Ihre Datei mehrere Arrays enthält, verwenden Sie <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator">den <b>Datennavigator</b></a>, um zusätzliche Daten nach Bedarf zu verbinden.</li>
+  </ol>
+
+  <h2><a name="HDF"></a><span class="mw-headline">HDF</span></h2>
+
+  <p>Der HDF-Konnektor kann verwendet werden, um HDF5- (.h5, .he5, .hdf5) oder mat-Dateien der MATLAB-Version 7.3 zu importieren, die lokal oder im <a href="../../UserGuide/UserGuide/Connecting_to_Web.html" title="UserGuide:Connecting to Web">Web</a> gespeichert sind. Weitere Informationen finden Sie auf <a class="external text" href="https://www.originlab.com/FileExchange/details.aspx?fid=535" target="_blank">dieser Seite des OriginLab-Dateiaustauschs</a>.</p>
+
+  <p>Beachten Sie, wenn Sie eine Verbindung zu einer Datei herstellen, dass sich der <b>Browser des Datenkonnektors</b> öffnet, der alle Variablen in der Datei als einen Baum auflistet. Es gibt eine Spalte rechts von jeder Variablen, die darauf verweist, wo jede Variable importiert werden kann. Optionen umfassen <b>Arbeitsblatt</b>, <b>Matrixblatt</b> oder <i>beides</i>, wie im folgenden Diagramm gezeigt.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Data Connector Browser H5.png" src="../images/Connecting_to_File/Data_Connector_Browser_H5.png" width="727"></a></dd>
+  </dl>
+
+  <p>Sie können zu jedem Knoten in der Datei direkt eine Verbindung herstellen. Wenn ein Arbeitsblatt aktiv ist und die Variable mit <b>Matrix</b> gekennzeichnet ist, werden Sie aufgefordert, den Knoten in eine Matrixmappe zu importieren. Sie können sich jedoch dafür entscheiden, die Matrixdaten in eine Arbeitsmappe zu importieren, und Origin wird <a href="../../UserGuide/UserGuide/Adding_Existing_Graphs_Matrixs_as_Sheets.html" title="UserGuide:Adding Existing Graphs Matrixs as Sheets">den Knoten automatisch als ein Matrixblatt zur aktiven Arbeitsmappe hinzufügen</a>.</p>
+
+  <p>Wenn Sie eine Verbindung zum Hauptverzeichnis der Datei herstellen, wird der <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator"><b>Datennavigator</b></a> geöffnet, der Ihnen die Möglichkeit bietet, selektiv eine Verbindung zu einzelnen Knoten herzustellen. Wie erwähnt, werden Daten in das Blatt importiert, wenn sie mit dem aktiven Blatt kompatibel sind. Wenn ein anderer Blatttyp erforderlich ist, wird er zur aktiven Mappe hinzugefügt.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Data Navigator Add Matrixsheet.png" src="../images/Connecting_to_File/Data_Navigator_Add_Matrixsheet.png" width="664"></a></dd>
+  </dl>
+
+  <h3><a name="Tips_for_HDF_Import"></a><span class="mw-headline">Tipps für HDF-Import</span></h3>
+
+  <ul>
+    <li>Wie bei anderen komplex strukturierten Dateien (inkl. NetCDF) gibt es ein <b>Navigator</b>feld im Kontextmenü. Der HDF-Konnektor enthält einen einmaligen Eintrag -- <b>Pfad kopieren</b> -, der für diejenigen interessant sein könnte, die den Datenimport programmieren. Da das Kopieren eines Pfads tief in einer komplexen Baumstruktur schwierig sein kann, können Sie auf den Eintrag und <b>Pfad kopieren</b> klicken.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="OH HDF5 shortcut menu copy path.png" src="../images/Connecting_to_File/OH_HDF5_shortcut_menu_copy_path.png" width="494"></a></dd>
+  </dl>
+
+  <ul>
+    <li>Beim Programmieren des Imports mit dem HDF-Konnektor können Sie den Datenimport signifikant beschleunigen, indem Sie das Bedienfeld des <b>Navigators</b> nicht zeigen. Sie können dies tun, indem Sie ein Argument ("1") hinzufügen, wenn Sie den Konnektor hinzufügen.</li>
+  </ul>
+  <pre class="lt" style="font-family:monospace;">
+wbk.<span style="color: #000080;">dc</span>.<span style="color: #000080;">add</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">"HDF"</span>, <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span>;
+</pre>
+
+  <h2><a name="TDMS"></a><span class="mw-headline">TDMS</span></h2>
+
+  <p>Origins <b>TDMS-Konnektor</b> kann verwendet werden, um Daten aus .tdm- und .tdms-Dateien zu importieren.</p>
+
+  <p><br>
+  <i><b>Um eine TDMS-Datei zu importieren:</b></i></p>
+
+  <ol>
+    <li>Öffnen Sie eine neue Arbeitsmappe und wählen Sie <b>Daten: Mit Datei verbinden: TDMS</b>. Wählen Sie eine Datei und klicken auf <b>Öffnen</b>.</li>
+
+    <li>Klicken Sie im <b>Datenkonnektor-Browser</b> doppelt auf einen Knoten oder wählen Sie ihn im Browser aus und klicken Sie auf die Schaltfläche <b>Zu importierende Daten auswählen</b>. Der Knoten wird zum unteren Bedienfeld hinzugefügt. Beachten Sie, dass Sie die Verbindungszeichenkette modifizieren können, um einen <a href="../../UserGuide/Category/Partial_Importing_and_Re_Importing.html#Partial_Import_by_TDMS_Connector" title="Category:Partial Importing and Re Importing">partiellen Import</a> durchzuführen.</li>
+
+    <li>Klicken Sie zum Importieren der Daten auf <b>OK</b>.</li>
+  </ol>
+
+  <p>Wenn Sie sich entschieden haben, alle Knoten zu importieren (durch Auswahl von <i>TDMS</i> oben im Browser), wird jeder Kanal in ein separates Blatt importiert, das den Namen des jeweiligen Kanals hat. Metadaten werden zu jeder Spalte (<b>Langname</b>, <b>Einheiten</b> etc. hinzugefügt, einschließlich eine Anwenderparameterzeile mit der Beschriftung <i>node_source_attributes</i>). Blätter werden nach dem Kanal benannt und der Dateiname wird als <b>Langname</b> der Mappe hinzugefügt. Wenn Sie sich entscheiden, <b>Alle Gruppen in das gleiche Arbeitsblatt zu importieren</b>, werden die Attribute im Bereich der <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows">Spaltenbeschriftungszeilen</a> gespeicert, aber der Blattname wird nicht geändert.</p>
+
+  <p><br>
+  <i><b>Eventuell interessante Themen:</b></i></p>
+
+  <ul>
+    <li><a href="../../UserGuide/Category/Partial_Importing_and_Re_Importing.html#Partial_Import_by_TDMS_Connector" title="Category:Partial Importing and Re Importing">Partieller Import</a></li>
+
+    <li><a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">LabTalk-Zugriff auf Daten der Spaltenbeschriftungszeile</a></li>
+  </ul>
+
+  <h2><a name="N42"></a><span class="mw-headline">N42</span></h2>
+
+  <p>Origins <b>N42-Konnektor</b> wird verwendet, um Daten, die durch verschiedene Strahlungsinstrumente erzeugt wurden, zu importieren.</p>
+
+  <p><br>
+  <i><b>Um eine N42-Datei zu importieren:</b></i></p>
+
+  <ol>
+    <li>Öffnen Sie eine neue Arbeitsmappe und wählen Sie <b>Daten: Mit Datei verbinden: N42</b>. Wählen Sie eine Datei und klicken auf <b>Öffnen</b>.</li>
+  </ol>
+
+  <h2><a name="NetCDF"></a><span class="mw-headline">NetCDF</span></h2>
+
+  <p>Die NetCDF-Datei ist ein selbstbeschreibendes, skalierbares Format zum Speichern von Variablenarrays. Entwickelt als ein flexibles Format für den Austausch von wissenschaftlichen Daten, ist es leicht an geografische Untersuchungen anpassbar und findet häufig Verwendung im Bereich der Atmosphären- und Klimawissenschaften. Seit Version <b>2021b</b> wurde Origins NetCDF-Konnektor verbessert, um mit den Datensatztypen umzugehen, die in Studien mit geografischem Schwerpunkt verwendet werden.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Help connect netCDF import ch 1.png" src="../images/Connecting_to_File/Help_connect_netCDF_import_ch_1.png" width="800"></a></dd>
+  </dl>
+
+  <p>Zusätzlich zu solchen Funktionen, wie dem <a href="../../UserGuide/Category/Partial_Importing_and_Re_Importing.html#Partial_Import_by_NetCDF_Connector" title="Category:Partial Importing and Re Importing">partiellen Import</a> (einen Datenbereich festlegen, ablesen/überspringen oder mitteln), der Längengradkonvertierung, der Spiegelung des Breitengrads und dem Festlegen eines Unterbereichs nach Längen- und Breitengrad und der Option zum Transformieren von Matrixwerten beim Import, finden Anwender diese Hilfsmittel nützlich:</p>
+
+  <ul>
+    <li>Import in Origin-Matrixblatt mit der Option, das <a class="external text" href="../../GettingStarted/OriginLab/Matrix_Book_Matrix_Sheet_Matrix_Objects.html#Image_Thumbnails_and_Image_Slider"><b>Miniaturbild</b> des Objekts anzuzeigen oder mit einem <b>Schieber</b> durch Objekte zu scrollen</a>.</li>
+
+    <li>Feld <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator"><b>Datennavigation</b></a> für importierte Matrix mit Zugriff auf Metadaten der Datei</li>
+
+    <li>Hilfsmittel zum Analysieren und Bearbeiten von Matrixdaten: <a class="external text" href="../../GettingStarted/OriginLab/Matrix_Book_Matrix_Sheet_Matrix_Objects.html#Manipulation_of_Matrix_Data"><b>Pixelextraktion</b>, <b>lineare Anpassung</b>, <b>deskriptive Statistik</b>, <b>Subtraktion</b>, <b>Transponieren</b> etc.</a></li>
+
+    <li>Hilfsmittel zum Extrahieren von Unterbereichen aus der Matrix: <a class="external text" href="../../GettingStarted/OriginLab/Matrix_Book_Matrix_Sheet_Matrix_Objects.html#Manipulation_of_Matrix_Data"><b>Pixelextraktion</b>, <b>Als XYZ extrahieren</b>, <b>Beschneiden</b>, <b>ROI exportieren</b> etc.</a></li>
+
+    <li><a class="external text" href="../../UserGuide/UserGuide/Image_Plot.html"><b>Bilddiagramme</b></a>, die Standard- oder benutzerdefinierte Farbpaletten verwenden. Paletten können jetzt per <a class="external text" href="../../QuickHelp/QuickHelp/Can_I_use_external_color_palette_files_to_apply_color_to_contour_plots_and_other.html">Drag&amp;Drop</a> zu Origin hinzugefügt werden.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Help connect netCDF import ch 2.png" src="../images/Connecting_to_File/Help_connect_netCDF_import_ch_2.png" width="796"></a></dd>
+  </dl>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Connecting_to_File/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Beim Arbeiten mit Kartendaten aktivieren Sie ein Bilddiagramm, klicken auf das Menü <b>Einfügen</b> und fügen Kartengrenzen für die kontinentalen USA bzw. der Welt ein.</p>
+      </td>
+    </tr>
+  </table>
+
+  <p><br>
+  <i><b>Um eine lokale .nc-Datei zu importieren:</b></i></p>
+
+  <ol>
+    <li>Wählen Sie bei aktiver Arbeitsmappe oder Matrixmappe im Menü <b>Daten: Mit Datei verbinden</b>.</li>
+
+    <li>Fahren Sie unten mit dem <i><b>Datenkonnektor-Browser</b></i> fort.</li>
+  </ol>
+
+  <p><br>
+  <i><b>Um im Web gespeicherte .nc-Daten durch Festlegen einer URL zu importieren:</b></i></p>
+
+  <ol>
+    <li>Wählen Sie bei aktiver Arbeitsmappe oder Matrixmappe im Menü <b>Daten: Mit Web verbinden</b>.</li>
+
+    <li>Setzen Sie im aufgerufenen Dialog den <b>Dateityp</b> auf <i>NetCDF</i> (optional) und (a) klicken Sie entweder auf <b>Zuletzt verwendete URLs</b> und wählen Sie eine .nc-Datei aus der Liste oder (b) geben Sie direkt eine <b>URL</b> in das Textfeld ein (z. B. <i>https://psl.noaa.gov/thredds/fileServer/Datasets/cpc_us_precip/precip.V1.0.1948.nc</i>). Klicken Sie dann auf <b>OK</b>.</li>
+
+    <li>Fahren Sie unten mit dem <i><b>Datenkonnektor-Browser</b></i> fort.</li>
+  </ol>
+
+  <p><br>
+  <i><b>Browser für Datenkonnektoren:</b></i></p>
+
+  <ol>
+    <li>Wählen Sie die mehrdimensionale Variable (z. B. <i>time * lat * lon</i>), die Sie importieren möchten, und klicken Sie auf die Schaltfläche <b>Zu importierende Daten auswählen</b>. Die Daten werden zum unteren Bedienfeld hinzugefügt. Wenn eine Arbeitsmappe aktiv ist und die Datei eine Matrixmappe erforderlich macht, werden Sie gefragt, ob Sie (a) eine neue Matrixmappe öffnen, (b) eine Matrixmappe in der aktiven Arbeitsmappe einbetten oder (c) Daten in die Arbeitsblattspalten importieren möchten. Üblicherweise sollten eindimensionale Variablen in Arbeitsmappen importiert werden, während mehrdimensionale Variablen in Matrixmappen importiert werden.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>Importoptionen</b> (das "Stift"symbol) und wählen Sie Ihre Optionen. Hier können Sie einen partiellen Import festlegen, den Längengrad konvertieren, Ihre Matrix vertikal spiegeln oder Daten mit Hilfe einer Formel transformieren.
+
+      <dl>
+        <dd><a class="image"><img alt="OH netcdf import options.png" src="../images/Connecting_to_File/OH_netcdf_import_options.png" width="779"></a></dd>
+      </dl>
+    </li>
+
+    <li>Klicken Sie auf <b>OK</b>, um die Importoptionen zu schließen, und klicken Sie erneut auf <b>OK</b>, um den Browser zu schließen und Ihre Daten zu importieren. Große Dateien benötigen etwas Zeit für den Import. Wenn die Datei importiert ist, wird ein Browserbedienfeld zur linken Seite der Matrix hinzugefügt. Beachten Sie den Schieber oben im Matrixfenster zum Anzeigen einzelner Matrixobjekte.</li>
+  </ol>
+
+  <dl>
+    <dd>
+      <dl>
+        <dd><a class="image"><img alt="OH matrix slider after import.png" src="../images/Connecting_to_File/OH_matrix_slider_after_import.png" width="799"></a></dd>
+      </dl>
+    </dd>
+  </dl>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Connecting_to_File/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Wenn eine Datei importiert ist, können Sie Änderungen an den <b>Importoptionen</b> vornehmen, indem Sie auf das Symbol <b>Konnektor</b> klicken und <b>Optionen</b> wählen.</p>
+
+        <dl>
+          <dd>
+            <dl>
+              <dd><a class="image"><img alt="Help connect netCDF import ch 3.png" src="../images/Connecting_to_File/Help_connect_netCDF_import_ch_3.png" width="465"></a></dd>
+            </dl>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Minitab"></a><span class="mw-headline">Minitab</span></h2>
+
+  <ul>
+    <li>Um eine Verbindung zu einer lokalen Datei herzustellen, klicken Sie auf <b>Daten: Mit Datei verbinden: Minitab</b>.</li>
+
+    <li>Auf dem Browserdialog zum Auswählen des/der zu importierenden Blatt/Blätter gibt es ein Kontrollkästchen <b>Importoptionen</b>, über das Sie die Analyseergebnisse in der Datei importieren können. Falls es aktiviert ist, werden die Analyseausgaben in ein hierarchisches Arbeitsblatt "OutputsHier“ importiert. Die Minitab-Ausgaben werden in einer Baumstruktur organisiert mit Blattnamen als Knoten. Werden diese erweitert, werden die Analyseergebnisse in der Tabelle aufgelistet.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="UG Minitab Connector browser.png" src="../images/Connecting_to_File/UG_Minitab_Connector_browser.png" width="534"></a></dd>
+  </dl>
+
+  <h2><a name="Shapefile"></a><span class="mw-headline">Shapefile</span></h2>
+
+  <ul>
+    <li>Um eine Verbindung zu einer lokalen Datei herzustellen, klicken Sie auf <b>Daten: Mit Datei verbinden: Shapefile</b>. Um eine Verbindung zu Webdaten herzustellen, wählen Sie <b>Daten: Mit Web verbinden</b> und geben Sie die URL ein.</li>
+
+    <li>Der Shapefile-Konnektor öffnet einen einfachen Dialog <b>Importoptionen</b>. Sie können das Kontrollkästchen <b>Attribute laden</b> aktivieren, um die Attribute für jedes Shape zu importieren. Die Attribute befinden sich in einer .dbf-Datei mit dem gleichen Namen wie die .shp-Datei. Sie wid im gleichen Ordner gespeichert. Das Kontrollkästchen <b>In WGS84 konvertieren</b> wandelt Shapefiles mit Distanzen in Metern in das WGS-System mit Längen- und Breitengrad um.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="UG shapeifle options wgs84.png" src="../images/Connecting_to_File/UG_shapeifle_options_wgs84.png" width="278"></a></dd>
+  </dl>
+
+  <ul>
+    <li>Nach dem Import sehen Sie mindestens 3 Spalten im Arbeitsblatt: <i>X</i>, <i>Y</i> und <i>Feature ID</i>. Die <i>X</i>- und <i>Y</i>-Koordinaten werden durch fehlende Werte getrennt, um unterschiedliche Segmente darzustellen. Mehrere Segmente können eine <i>Feature ID</i> teilen.</li>
+  </ul>
+
+  <p>Weitere Informationen siehe die Seite <a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=610" target="_blank"><b>Shapefile Connection</b></a> im Dateiaustausch.</p>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Connecting_to_File/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Siehe unter <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Fill_Area_Under_Curve" title="UserGuide:The (Plot Details) Line Tab"><b>Füllfläche unter Kurve</b> &gt; <b>Formen nach Ausrichtung füllen</b></a> Informationen zum Füllen von Shapefile-Polygonen.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Origin_File"></a><span class="mw-headline">Origin-Datei</span></h2>
+
+  <p>Der <b>Origin-Konnektor</b> importiert die Daten aus einem der Datei eines Origin-Projekts (opj(u)) oder einer Arbeitsmappe (ogw(u)). Dies erlaubt Ihnen, die Origin-Dateien als ein Daten-Repository zu verwenden.</p>
+
+  <p>Beim Verbinden mit Daten in einer Origin-Datei -- ob eine Projektdatei oder eine mehrseitige Arbeitsmappe -- wird der <b>Browser des Datenkonnektors</b> geöffnet. Hier können Sie die Daten selektiv auswählen, die Sie importieren möchten. Wenn Sie einen Konnektor zur Arbeitsmappe hinzugefügt haben, können Sie andere Arbeitsblätter nach Bedarf importieren, indem Sie mit der rechten Maustaste in den <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator"><b>Datennavigator</b></a> klicken und <b>Blatt/Blätter hinzufügen und verbinden</b> wählen.</p>
+
+  <p>Außerdem unterstützt der Origin-Konnektor seit Origin 2020 eine SQL-ähnliche <a href="../../UserGuide/UserGuide/Examples_of_using_SQL_query_condition_in_Origin_Connector.html" title="UserGuide:Examples of using SQL query condition in Origin Connector"><b>Abfragesprache</b></a> zum Suchen und Extrahieren der gewünschten Daten in und aus Ihren Origin-Dateien.</p>
+
+  <p><a class="image"><img alt="Project DC dialog.png" src="../images/Connecting_to_File/Project_DC_dialog.png" width="487"></a></p>
+
+  <ol>
+    <li>Klicken Sie im Dialog <b>Auswählen</b> auf die Schaltfläche <b>Abfrage auswählen</b> <a class="image"><img alt="Select Query button.png" src="../images/Connecting_to_File/Select_Query_button.png" width="44"></a>, um den Dialog <b>Abfrage auswählen</b> zu öffnen.</li>
+
+    <li>Geben Sie die Abfragezeichenketten im Bearbeitungsfeld ein, zum Beispiel um im gesamten Projekt zu suchen und alle Spalten mit dem angegebenen Langnamen und der Diagrammzuordnung herauszuziehen.</li>
+
+    <li>Durch Klicken auf <b>OK</b> wird die Abfrage zum unteren Bedienfeld hinzugefügt. Klicken Sie auf <b>OK</b>, um Spalten zu importieren, die der Bedingung einer neuen Arbeitsmappe entsprechen.</li>
+
+    <li>Zusätzlich zu den Abfragemöglichkeiten können Sie <a href="../../UserGuide/UserGuide/Data_Navigator.html" title="UserGuide:Data Navigator">den <b>Datennavigator</b></a> verwenden, um eine Verbindung zu zusätzlichen Blättern im Origin-Projekt nach Bedarf herzustellen.</li>
+  </ol>
+
+  <h2><a name="HTML_Table"></a><span class="mw-headline">HTML-Tabelle</span></h2>
+
+  <p>Der Dialog <b>Datenkonnektor-Browser</b> wird geöffnet.</p>
+
+  <p><a class="image"><img alt="Json DC dialog.png" src="../images/Connecting_to_File/Json_DC_dialog.png" width="379"></a></p>
+
+  <p>Das obere Feld lädt alle Tabellen auf der Webseite. Wählen Sie die gewünschte Tabelle und klicken Sie auf den unten weisenden Pfeil, um sie zum unteren Feld hinzuzufügen. Klicken Sie zum Importieren auf die Schaltfläche <b>OK</b>.</p>
+
+  <h2><a name="Google_Sheet"></a><span class="mw-headline">Google Sheet</span></h2>
+
+  <p>Es gibt mehrere Möglichkeiten, ein Google Sheet zu importieren:</p>
+
+  <ul>
+    <li>Klicken Sie auf das Symbol der <a class="external text" href="https://www.originlab.com/FileExchange/details.aspx?fid=1026" target="_blank">App Google Sheet</a> <a class="image"><img alt="Google Sheet app icon.png" src="../images/Connecting_to_File/Google_Sheet_app_icon.png" width="31"></a> auf der Registerkarte <b>App-Galerie</b> &gt; Konnektoren. Ein Dialog fragt Sie, ob Sie die Datei über eine Google-Sheet-URL öffnen möchten oder nicht.</li>
+  </ul>
+
+  <dl>
+    <dd>
+      <ul>
+        <li>Klicken Sie auf <b>Ja</b>, um den <a href="../../UserGuide/UserGuide/Connecting_to_Web.html#Basic_operation" title="UserGuide:Connecting to Web">Dialog <b>Mit Web verbinden</b></a> zu öffnen und geben Sie einen Freigabelink für das Google Sheet ein.</li>
+
+        <li>Wählen Sie <b>Nein</b>, um den Browser von Google Drive zu öffnen und ein Google Sheet auszuwählen.</li>
+      </ul>
+    </dd>
+  </dl>
+
+  <ul>
+    <li>Wählen Sie im Menü <b>Daten: Mit Datei verbinden: Google Sheet</b>, um ein Google Sheet im Browser von Google Drive auszuwählen.</li>
+
+    <li>Wählen Sie im Menü <a href="../../UserGuide/UserGuide/Connecting_to_Cloud.html#Connecting_to_the_Files_on_Cloud" title="UserGuide:Connecting to Cloud"><b>Daten: Über Cloud verbinden</b></a> oder klicken Sie auf die Schaltfläche <b>Über Cloud öffnen</b> <a class="image"><img alt="Button Open From Cloud.png" src="../images/Connecting_to_File/Button_Open_From_Cloud.png" width="21"></a> auf der Symbolleiste <b>Standard</b>, um ein Google Sheet im Browser von Google Drive auszuwählen.</li>
+  </ul>
+
+  <h2><a name="Connect_Multiple_Files"></a><span class="mw-headline">Mit mehreren Dateien verbinden</span></h2>
+
+  <p>Verwenden Sie dieses Menü, um eine Verbindung zu mehreren Dateien mit identischem Dateityp und identischer Dateistruktur herzustellen.</p>
+
+  <ol>
+    <li>Wählen Sie bei aktiver Arbeitsmappe oder Matrixmappe im Menü <b>Daten: Mit mehreren Dateien verbinden</b>. Der Dialog <a class="external text" href="../../XFunction/X-Function/Files2dc.html">files2dc</a> wird geöffnet.</li>
+  </ol>
+
+  <dl>
+    <dd><a class="image"><img alt="DC connect multiple files files2dc.png" src="../images/Connecting_to_File/DC_connect_multiple_files_files2dc.png" width="410"></a></dd>
+  </dl>
+
+  <ul>
+    <li><b>Gleiche Mappe</b> ist für den Konnektortyp verfügbar, der das Importieren von mehreren Dateien in die gleiche Arbeitsmappe unterstützt, zum Beispiel der CSV-Konnektor. Das Aktivieren dieses Kontrollkästchens bedeutet, dass die Mappe den Namen der ersten Datei erhält. Wenn die Dateien in separate Mappen importiert werden, erhält jede Mappe den Dateinamen.</li>
+
+    <li>Bei CSV-Dateien
+
+      <ul>
+        <li>Wenn Sie aus der Auswahlliste <b>An gleiches Blatt anhängen</b> auswählen, können Sie wählen, ob jede Datei in ein separates Blatt importiert werden soll (<b>Kein</b>), alle Dateien in das gleiche Blatt importiert werden sollen, anhängend als Zeilen (<b>Als neue Zeilen</b>) oder Spalten (<b>Als neue Spalte</b>).</li>
+
+        <li>wenn <b>An gleiches Blatt anhängen</b> = <b>Als neue Zeile</b> ausgewählt ist, können Sie <b>Dateiname einfügen</b> aktivieren, um eine Spalte am Anfang einzufügen und die Infos des Dateinamen zu speichern. Legen Sie die Optionen <b>Option für Dateiname</b> und <b>Teil des Dateinamens extrahieren</b> unten fest, um zu bestimmen, welche Informationen Sie aus dem Dateinamen extrahieren möchten.</li>
+
+        <li>Wenn <b>An gleiches Blatt anhängen</b> = <b>Als neue Zeile</b>/<b>Als neue Spalte</b> ausgewählt ist, können Sie in der Auswahlliste <b>Option für Dateiname</b> auswählen, welche Informationen Sie aus dem Namen extrahieren möchten: <b>Nur Dateiname</b>, sowohl <b>Name und Erweiterung</b> oder <b>Partieller Dateiname</b>, und legen Sie dann fest, welcher Teil des Namens im Bearbeitungsfeld <b>Teil des Dateinamens extrahieren</b> extrahiert werden soll.<br>
+        Weiterhin können Sie den Langnamen der Dateinamensspalte festlegen (für <b>Als neue Zeile</b>) oder den Beschriftungszeilenheader (für <b>Als neue Spalte</b>) im Bearbeitungsfeld <b>Beschriftung mit partiellem Dateinamen</b>.</li>
+      </ul>
+    </li>
+
+    <li>Aktivieren Sie das Kontrollkästchen <b>Dialog für erste Datei öffnen</b>, um die Importeinstellungen vor dem Dateiimport anzupassen.</li>
+
+    <li>Verwenden Sie das Kombinationsfeld <b>Spaltenzuordnung setzen</b>, um die <a href="../../UserGuide/UserGuide/Set_Column_Designation.html#Column_Designation_Symbols" title="UserGuide:Set Column Designation">Spaltenzuordnungen</a> des Arbeitsblatt beim Import festzulegen. Beachten Sie, dass die wiederholten Muster (Muster in Klammern wird wiederholt) und Muster mit führenden und abschließenden Zuweisungssymbolen unterstützt werden.</li>
+
+    <li>Bei einem Import von <b>Dateien in festgelegtem Ordner</b> in die <b>Gleiche Mappe</b> und aktiviertem <b>Automatisch importieren: Bei Änderung des Ordners</b> scannt Origin den Ordner, um alle Datendateien erneut zu importieren, wenn Sie im <b>Quell</b>ordner später Dateisen hinzufügen, entfernen oder aktualisieren.<br>
+    In diesem Fall wird die Verbindung standardmäßig als relativer Pfad gespeichert, wenn Sie das Arbeitsprojekt speichern.<br>
+    <a class="image"><img alt="Auto Import on Folder Change Multiple Files.png" src="../images/Connecting_to_File/Auto_Import_on_Folder_Change_Multiple_Files.png" width="882"></a></li>
+
+    <li>Wenn Sie <b>Datenkonnktor</b> = <b>Importfilter</b> wählen, lesen Sie den nächsten Abschnitt.</li>
+  </ul>
+
+  <h2><a name="Import_a_File_with_Filter"></a><span class="mw-headline">Eine Datei mit Filter importieren</span></h2>
+
+  <p>Mit dieser Option können Sie Datenkonnektoren mit einer <a href="../../UserGuide/UserGuide/Import_Wizard_Basics.html#Creating_and_saving_data_import_instructions_using_the_Import_Wizard" title="UserGuide:Import Wizard Basics">Importfilterdatei (*.OIF)</a> verwenden, die Sie mit dem <b>Importassistenten</b> erstellt haben.</p>
+
+  <p><i><b>Beim Verbinden mit einer einzelnen Datei</b></i>:</p>
+
+  <ol>
+    <li>Wählen Sie bei aktivem/r Arbeitsblatt/Matrix <b>Daten: Mit Datei verbinden: Importfilter</b>.</li>
+
+    <li>Wählen Sie eine gewünschte Datendatei im geöffneten Browser.</li>
+
+    <li>Wählen Sie im Dialog <b>Filter auswählen</b> den gewünschten Filter. Klicken Sie zum Importieren auf <b>OK</b>.</li>
+  </ol>
+
+  <dl>
+    <dd><a class="image"><img alt="Select filter dialog.png" src="../images/Connecting_to_File/Select_filter_dialog.png" width="366"></a></dd>
+  </dl>
+
+  <p><br>
+  <i><b>Beim Verbinden mit mehreren Dateien</b></i>:</p>
+
+  <ol>
+    <li>Wählen Sie <b>Daten: Mit mehreren Dateien verbinden</b> oder klicken Sie auf die Schaltfläche <b>Mit mehreren Dateien verbinden</b> <a class="image"><img alt="Button connect multiple files.png" src="../images/Connecting_to_File/Button_connect_multiple_files.png" width="25"></a> auf der Symbolleiste Import.</li>
+
+    <li>Setzen Sie <b>Datenkonnektor</b> = <b>Importfilter</b>.</li>
+
+    <li>Wählen Sie Dateien aus und entscheiden Sie, ob Sie sie in die gleiche Mappe oder getrennte Mappen importiert haben möchten. Klicken Sie dann auf <b>OK</b>.</li>
+  </ol>
+
+  <p>Wenn Sie diese Option wählen, gibt es kein Kontrollkästchen <b>Dialog öffnen</b>... im Dialog <a class="external text" href="../../XFunction/X-Function/Files2dc.html">files2dc</a>. Stattdessen wird der Dialog Importfilter aufgerufen, in dem Sie zu Ihrer Importfilterdatei navigieren und sie auswählen können.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="DC connect multiple files importFilter.png" src="../images/Connecting_to_File/DC_connect_multiple_files_importFilter.png" width="715"></a></dd>
+  </dl>
+
+  <p><br>
+  <i><b>Neues Blatt öffnen</b></i>:</p>
+
+  <p>Wie beim <b>Importassistenten</b> unterstützt der Konnektor des Importfilters das <a href="../../UserGuide/UserGuide/Import_Wizard_Data_Selection_Page_(ASCII_Binary).html#Non-Numeric_Data_in_a_Numeric_Field_Controls_.28ASCII_Only.29" title="UserGuide:Import Wizard Data Selection Page (ASCII Binary)">Öffnen neuer Blätter</a>, wenn nicht-numerische Daten sich in einem numerischen Feld befinden.</p>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweise:</b>
+
+        <p>Sie können die Einstellungen der Dateierweiterung des Importfilterkonnektors benutzerdefiniert anpassen, indem Sie mit der rechten Maustaste auf dieses Konnektorsymbol in der Apps-Galerie klicken und <b>Dateierweiterungen benutzerdefiniert anpassen</b> im Kontextmenü auswählen. Weitere Einzelheiten finden Sie in <a href="../../UserGuide/UserGuide/Connecting_to_File.html#Customize_File_Extensions" title="UserGuide:Connecting to File">diesem Abschnitt zum CSV-Konnektor</a>.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Clone_Import"></a><span class="mw-headline">Import klonen</span></h2>
+
+  <p>Dies ist ein weiterer Weg, um eine Verbindung zu mehreren Dateien herzustellen. Dies ist jedoch viel mehr als ein einfacher Importmechanismus für mehrere Dateien. Der wahre Wert des "Klonens" liegt im schnellen Duplizieren von Grafik- und Analyseoperationen, die auf die Prototypdatei sowie weitere Dateien des gleichen Typs und der gleichen Struktur durchgeführt werden. Wenn Sie einen Prototyp haben, ist das Klonen kinderleicht:</p>
+
+  <ol>
+    <li>Importieren Sie Ihre Prototypdatendatei über <b>Daten: Mit Datei verbinden</b> und führen Sie dann die gewünschten Grafik- und Analyseoperationen durch.</li>
+
+    <li>Wählen Sie bei aktiver, die Daten enthaltener Arbeitsmappe oder Matrixmappe im Menü <b>Daten: Import klonen</b>; oder klicken Sie auf die Schaltfläche <b>Import klonen</b> <a class="image"><img alt="Button clone import.png" src="../images/Connecting_to_File/Button_clone_import.png" width="25"></a> auf der Symbolleiste <b>Import</b>.</li>
+
+    <li>Wählen Sie die Dateien und klicken Sie auf <b>OK</b>.</li>
+  </ol>
+
+  <p><br>
+  Siehe weitere Informationen im Tutorial <a class="external text" href="../../Tutorial/Tutorial/Importing_Multiple_Files_into_Workbooks_Cloned_from_Active_Workbook.html">"Mehrere Dateien in Arbeitsmappen importieren, die auf Grundlage der aktiven Arbeitsmappe geklont wurden"</a>.</p>
+
+  <h2><a name="Connect_Files_by_Appending_Rows_to_Current_Sheet"></a><span class="mw-headline">Dateien verbinden durch Anhängen von Zeilen an das aktuelle Blatt</span></h2>
+
+  <p>Diese Methode des Verbindens von mehreren Dateien wird seit Version 2021 nur von Text/CSV unterstützt. Dateien müssen nacheinander angehängt werden und werden durch Anhängen von Zeilen an das aktuelle Arbeitsblatt importiert.</p>
+
+  <ol>
+    <li>Verwenden Sie den <b>Text-/CSV-</b>Konnektor zum Importieren einer Datei in das Arbeitsblatt. Stellen Sie sicher, einen <b>Datenblockmarkierer</b> festzulegen, wenn Ihre Datei einen verwendet.</li>
+
+    <li>Öffnen Sie bei aktivem Arbeitsblatt das <a class="external text" href="../../GettingStarted/OriginLab/The_Origin_Interface.html#The_Command_Window_and_Script_Window">Skriptfenster</a> (<b>Fenster: Skriptfenster</b>), geben Sie Folgendes ein und drücken Sie Enter.
+
+      <dl>
+        <dd>
+          <pre class="lt" style="font-family:monospace;">
+wks.<span style="color: #000080;">dc</span>.<span style="color: #000080;">flags</span><span style="color: #000080;">=</span><span style="color: #0000dd;">256</span>
+</pre>
+        </dd>
+      </dl>
+    </li>
+
+    <li>Kehren Sie zum aktiven Arbeitsblatt zurück und klicken Sie auf das grüne Symbol des Datenkonnektors <a class="image"><img alt="Dadta connector icon connect.png" src="../images/Connecting_to_File/Dadta_connector_icon_connect.png" width="16"></a>.</li>
+
+    <li>Wählen Sie <b>Datenquelle</b>, setzen Sie den <b>Dateipfad</b> auf die Datei, die Sie anhängen möchten, und klicken Sie auf <b>OK</b>.</li>
+
+    <li>Wählen Sie die Verbindungsoptionen aus, einschließlich <b>Datenblockmarkierer</b>, und klicken Sie dann auf <b>OK</b>, um die Datei durch Anhängen der Daten an das aktuelle Arbeitsblatt als neue Zeilen zu importieren.</li>
+  </ol>

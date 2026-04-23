@@ -1,0 +1,111 @@
+﻿<h1 class="firstHeading">度数グラフ</h1>
+<p class='urlname' style='display: none'>Frequency-Chart</p>
+<dl>
+<dd><a class="image"><img alt="Frequency Chart 01.png" src="../images/Frequency_Chart/Frequency_Chart_01.png" width="787" /></a></dd>
+</dl>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_.22plot_frequency.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">plot_frequency ダイアログボックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>少なくとも1列を選択してユニーク値をカウントし、縦棒/横棒/円/ドーナツ/サンバーストプロットを作成します。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メニューから<span class="menu">作図＞棒、円、面積：度数グラフ</span>を選択します。すると<b>plot_frequency</b>ダイアログが開きます。</p>
+<h3><a name="The_.22plot_frequency.22_dialog_box" id="The_.22plot_frequency.22_dialog_box"></a><span class="mw-headline">plot_frequency ダイアログボックス</span></h3>
+<p><a class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png" width="800" /></a></p>
+<table class="dialogcontroltable">
+<tr>
+<th>入力</th>
+<td>度数グラフを計算・描画するための元データ列を1つ以上選択します。</td>
+</tr>
+<tr>
+<th>度数</th>
+<td>任意で1列または複数列を頻度データとして選択します。
+<p><b>複数データ</b>が<b>グラフを分ける</b>に設定されている場合、複数の列を頻度データとして選択できます。列数は入力列の数と同じ、または1でも構いません。</p>
+<ul>
+<li>1列だけ選択した場合、すべての入力列がこの列を頻度データとして使用します。</li>
+<li>複数列を選択した場合、それぞれの入力列が順番に対応する頻度列を使用します。Y値は入力カテゴリごとの頻度データの合計になります。</li>
+</ul>
+<p><b>複数データ</b>が<b>同じグラフ内での入れ子カウント</b>に設定されている場合、1列のみ選択可能です。</p>
+</td>
+</tr>
+<tr>
+<th>複数データ</th>
+<td>複数のデータ列をどのようにプロとするかを指定します。
+<ul>
+<li><b>グラフを分ける</b>: 複数の入力列を別々のグラフとして描画します。</li>
+<li><b>同じグラフ内での入れ子カウント</b>: 最後の入力列に基づいて入れ子のカウントを行い、同じグラフに描画します。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>パネルの分割</th>
+<td>このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値ごとに度数グラフを表示します。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。
+<p>複数列を選択した場合は、上部に1行のパネル情報ラベルが表示され、バナー文字列にはすべての要素がカンマで区切られて表示されます。ただし、<b>複数データ</b> = <b>同じグラフ内での入れ子カウント</b>の場合、このオプションは非表示になります。</p>
+</td>
+</tr>
+<tr>
+<th>ページの分割</th>
+<td>チェックボックスをオンにすると、別のグループ化列により入力データをページ単位で分割できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。</td>
+</tr>
+<tr>
+<th>プロットタイプ</th>
+<td>元データの度数をどのようなタイプのグラフで表現するかを選択します。
+<ul>
+<li><b>縦棒</b></li>
+<li><b>横棒</b></li>
+<li><b>円</b></li>
+<li><b>ドーナツ</b>: 複数の入力列があり、<b>複数データ</b>が<b>グラフを分ける</b>の場合のみ使用できます。</li>
+<li><b>サンバースト</b>: 複数の入力列があり、<b>複数データ</b>が<b>同じグラフ内での入れ子カウント</b>の場合のみ使用できます。</li>
+<li><b>穴付きサンバースト</b>: 複数の入力列があり、<b>複数データ</b>が<b>同じグラフ内での入れ子カウント</b>の場合のみ使用できます。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Yを共有</th>
+<td>複数の<b>入力</b>データ列を選択し、<b>複数データ</b>を<b>グラフを分ける</b>に設定している場合に表示されます。複数のグラフ間でY軸スケールを共有するために使用します。</td>
+</tr>
+<tr>
+<th>積み上げ</th>
+<td>複数の入力データがあり、複数データが同じグラフ内での入れ子カウントに設定されていて、プロットタイプが縦棒または横棒の場合に使用可能です。
+<p>入れ子のカウントを縦棒/横棒としてプロットする方法を指定します。カウントを縦棒/横棒として表示する方法として以下の3つから選択します。</p>
+<ul>
+<li>並列</li>
+<li>積み上げ（最終列）</li>
+<li>100% 積み上げ（最終列）</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>グラフテンプレート</th>
+<td>各グラフタイプの作成に使用するデフォルトテンプレートを指定します。<b>自動</b>ボックスのチェックを外すことで、ユーザ定義テンプレートを選択することも可能です。</td>
+</tr>
+<tr>
+<th>プロットデータ出力</th>
+<td>描画データを出力するシートを指定します。</td>
+</tr>
+<tr>
+<th>グラフ出力</th>
+<td>作成されたグラフを出力するシートを指定します。</td>
+</tr>
+</table>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>column.otpu<br />
+bar.otpu<br />
+Pie2D.otpu<br />
+Doughnut.otpu<br />
+（Origin のプログラムフォルダにインストールされています）</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>カテゴリ列に欠損値が含まれている場合は、<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C">システム変数<b>@CATS</b></a>を使用してそれらを除外することができます。</p>

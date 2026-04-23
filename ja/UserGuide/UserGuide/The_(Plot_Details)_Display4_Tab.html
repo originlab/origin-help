@@ -1,0 +1,75 @@
+﻿<h1 class="firstHeading">（作図の詳細）ヒートマップの表示タブ</h1><p class='urlname' style='display: none'>PD-Dialog-Display4-Tab</p>
+<p>このタブを使用して、ワークシートデータまたは行列データから作図されたヒートマップ/極ヒートマップ図の塗りつぶし色、表示スタイル、X/Y座標、X/Y方向のセル間隔を制御できます。
+</p>
+<table class="noborder">
+<tr>
+<td> <div style="text-align: center;">
+<p><b>ヒートマップ</b>
+</p>
+</div>                                    
+</td>
+<td> <div style="text-align: center;">
+<p><b>極座標ヒートマップ</b>
+</p>
+</div>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="PD Display Tab for Heatmap.png" src="../images/The_(Plot_Details)_Display4_Tab/400px-PD_Display_Tab_for_Heatmap.png" width="400"   /></a>
+</td>
+<td> <a  class="image"><img alt="PD Display Tab for PolarHeatmap.png" src="../images/The_(Plot_Details)_Display4_Tab/400px-PD_Display_Tab_for_PolarHeatmap.png" width="400"   /></a>
+</td></tr></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Fill_Color"><span class="tocnumber">1</span> <span class="toctext">塗り色</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Fill_Display"><span class="tocnumber">2</span> <span class="toctext">表示塗りつぶし</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Gap_between_Cells"><span class="tocnumber">3</span><span class="toctext">セル間の間隔(%)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#XY_Coordinates_Mapping_on_Matrix"><span class="tocnumber">4</span> <span class="toctext">行列上のXY座標をマッピング</span></a></li>
+</ul>
+</div>
+<h2><a name="Fill_Color"></a><span class="mw-headline">塗り色</span></h2>
+<p>セルの塗り色を指定します。カラーオプションは、<b>インデックス</b>、<b>RGB直接</b>、<b>マップ</b>の3つです。
+</p><p><a  class="image"><img alt="PD Display Tab for Heatmap FillColor.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_FillColor.png" width="439"  /></a>
+</p><p>デフォルトでは<b>Map:Mat(#):<i></i>&quot;###&quot;<i></i></b>が選択されており、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Color_Map_Contours_Tab.html" title="ユーザガイド:(作図の詳細) 『カラーマップ』タブ">カラーマップタブ</a>で、塗りつぶしの色やセルの境界線などをコントロールできます。
+</p><p><b>インデックス</b>または<b>RGB直接</b>を選択した場合、 <b>カラーマップ</b>タブは表示されませんが、境界線と透明度コントロールが表示され、塗りつぶしたセルの境界線と透明度をカスタマイズできます。 
+</p><p><a  class="image"><img alt="PD Display Tab for Heatmap Border.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Border.png" width="430"  /></a>
+</p>
+<h2><a name="Fill_Display"></a><span class="mw-headline">表示塗りつぶし</span></h2>
+<p><b>四角</b>、<b>上三角</b>、<b>対角線のない上三角</b>、<b>下三角</b>、 <b>対角線のない下三角</b>の5つから選択します。この設定は極座標ヒートマップでは使用できません。
+</p>
+<table class="note">
+<tr>
+<td><b>Note:</b>
+<p>ヒートマップのXおよびYが<b>N*N</b>でない場合、<b>上三角</b>、<b>対角線のない上三角</b>、<b>下三角</b>、<b>対角線のない下三角</b>の4つの表示方法は使用できません。
+</p>
+</td></tr></table>
+<h2><a name="Gap_between_Cells"></a><span class="mw-headline">セル間の間隔</span></h2>
+<p>このコントロールグループを使用して、セル間の間隔を調整できます。この設定は極座標ヒートマップでは使用できません。
+</p><p>X方向またはY方向の各セル（最後のセルを除く）の後に間隔を追加できるほか、任意の N個ごと、N番目のセルの後、列またはラベル行で指定されたセルの後に間隔を追加することも可能です。
+</p><p><a  class="image"><img alt="PD Display Tab for Heatmap Gap.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Gap.png" width="608"  /></a>
+</p><p>ドロップダウンリストの下の選択がどのように機能するかについては、以下の例を参照してください。
+</p><p><a  class="image"><img alt="PD Display Tab for Heatmap Gap Examples.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Gap_Examples.png" width="808"  /></a>
+</p><p><b>X方向</b>および<b>Y方向</b>のスライダーは、それぞれの方向におけるセル間ギャップの幅を0～100のスケールで調整するために使用します。Y方向のスライダーの後ろにある<b>自動</b>チェックボックスをオンにすると、Y方向のギャップがX方向と同じ値に自動設定されます。 
+</p>
+<ul><li> <i>すべてのセルの後に間隔を表示する場合</i>：
+<ul><li>間隔が片方向のみ（XまたはY）にある場合：
+<dl><dd><b>0</b>にすると、セル間にその方向の間隔がないことを意味し、<b>100</b>にするとセルがその方向の線として表示されます。</dd></dl></li>
+<li>間隔が両方向にある場合：
+<dl><dd>間隔値の計算方法は上記とは異なります。セルの値はXとYの両方向で独立せず、 <i><b>100% セル値=(セル幅+セル高さ)/2</b></i>です。</dd>
+<dd>例えば、<i>X方向のセル間の間隔 = 30</i>、<i>Y方向のセル間の間隔 = 50</i>にした場合、
+X方向の実際の間隔値は、(セル幅+セル高さ)/2*30%
+Y方向の実際の間隔値は、(セル幅+セル高さ)/2*50%</dd></dl></li></ul></li>
+<li> <i>特定のセルの後のみに間隔を表示する場合（全セルではない場合）：</i> 
+<dl><dd>このときの間隔の単位はデータスケールに対する%です。たとえば、X方向に3つのギャップがあり、X軸のスケール範囲が1～200である場合、間隔を5%に設定すると、各間隔のサイズは (200-1+1)*5%/(3+1)=2.5 となり、X軸スケール上で2.5の幅となります。</dd></dl></li></ul>
+<h2><a name="XY_Coordinates_Mapping_on_Matrix"></a><span class="mw-headline">行列上のXY座標をマッピング</span></h2>
+<p>このオプションはNetCDFデータをプロットしたヒートマップで使用され、経度と緯度を設定します。
+</p>
+<ul><li> X/Y座標</li></ul>
+<p>行列からのX/Y座標の設定をサポートします。 
+</p>
+<ul><li> 方向</li></ul>
+<p><b>任意</b>、<b>時計回り</b>、<b>反時計回り</b>から方向を指定します。
+</p>
+
+
+
+    

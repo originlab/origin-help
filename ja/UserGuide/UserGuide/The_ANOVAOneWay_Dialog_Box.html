@@ -1,0 +1,294 @@
+﻿<h1 class="firstHeading">一元配置分散分析ダイアログボックス</h1><p class='urlname' style='display: none'>OneWayANOVA-Dialog</p>
+<p><br />
+</p><p>このダイアログは、一元配置分散分析を実行するために使用します。このダイアログを開くには、メニューから<b><b>統計：ANOVA：一元配置</b></b>と選択します。
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">入力</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Descriptive_Statistics"><span class="tocnumber">3.1</span> <span class="toctext">記述統計</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Significance_Level"><span class="tocnumber">3.2</span> <span class="toctext">有意水準</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">平均比較</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">等分散性の検定</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">検出力解析</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">プロット</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<ul><li> <a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="カテゴリ:一元、二元、三元配置の分散分析">はじめに:一元、二元、三元配置の分散分析</a></li>
+<li> <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム: 一元配置の分散分析</a></li>
+<li> <a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html" title="ユーザーガイド:ANOVAの結果の解釈">ANOVAの結果の解釈</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/One_Way_ANOVA.html">チュートリアル: 一元配置分散分析の実行</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>再計算</b>
+</th>
+<td>
+<p>分析結果の再計算の設定を変更します。
+</p>
+<ul><li><b>なし</b> </li>
+<li><b>自動</b> </li>
+<li><b>手動</b>  </li></ul>
+<p>詳細情報は、 <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">分析結果の再計算</a>をご覧下さい。
+</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
+<p>入力データの形式として、<b><b>インデックス</b></b>または<b><b>素データ値</b></b>を指定します。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>インデックス
+</th>
+<td>このモードでは、1つの列に因子変数のレベルが含まれ、対応する応答データは別の列に含まれます。
+<p><b>因子</b>
+</p>
+<dl><dd>因子列を指定します。因子列がテキスト列の場合、カテゴリー列に設定されます。</dd></dl>
+<p><b>データ</b>
+</p>
+<dl><dd>応答データの列を指定します。 </dd></dl>
+<p><a  class="image"><img alt="Mini bulb.png" src="../images/The_ANOVAOneWay_Dialog_Box/Mini_bulb.png" width="24"  /></a>：結果プロットで因子のテキスト値の代わりに数値を表示する場合は、因子列の<a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">列の属性</a>を<b>グループ</b>に設定してください。
+</p>
+</td></tr>
+<tr>
+<th>素データ値
+</th>
+<td>このモードでは、各因子変数のレベルからの応答データが別々の列に格納されます。
+<p><b>因子</b>
+</p>
+<dl><dd><b> 名前</b>
+<dl><dd>因子名を入力します。</dd></dl></dd></dl>
+<dl><dd><b>レベルの数</b>
+<dl><dd>デフォルトは2です。</dd></dl></dd></dl>
+<dl><dd><dl><dd>レベルの数を指定します。各レベルには独自の<b>レベル<i>i</i></b>コントロールがあります。システム変数 <b>@AML</b> を使用して、ANOVAでサポートされる最大レベル数（デフォルトは25）を制御できます。最大レベル数は、コマンドウィンドウで<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#A"><b>@AML</b></a>に新しい値を割り当てることによって変更できます。</dd></dl></dd></dl>
+<dl><dd><b>レベル<i>i</i> 名</b>
+<dl><dd>デフォルト = 因子<i>i</i>レベル<i>i</i>。</dd></dl></dd></dl>
+<dl><dd><dl><dd>レベル名を指定します。自動の場合、<b>ロングネーム</b>を使用します。</dd></dl></dd></dl>
+<p><b>データ</b>
+</p>
+<dl><dd><b>レベル<i>i</i></b>
+<dl><dd>各レベルのデータ列を指定します。データ選択コントロール<a  class="image"><img alt="Analysis dialog data selection controls.png" src="../images/The_ANOVAOneWay_Dialog_Box/Analysis_dialog_data_selection_controls.png" width="43"  /></a>を使用して、各レベルのデータを選択します。もしくは、<b>データ</b>の右側にある参照ボタン<a  class="image"><img alt="ANOVA inpurt data browse.png" src="../images/The_ANOVAOneWay_Dialog_Box/ANOVA_inpurt_data_browse.png" width="35"  /></a>をクリックして、<b>ワークシートから選択</b>するか、<b>列を選択</b>をクリックして列ブラウザを開き、列を選択できます。</dd></dl></dd></dl>
+</td></tr></table>
+<h3><a name="Descriptive_Statistics"></a><span class="mw-headline">記述統計</span></h3>
+<p>出力レポートに記述統計の結果を含めるかどうかを選択します。
+</p>
+<h3><a name="Significance_Level"></a><span class="mw-headline">有意水準</span></h3>
+<p>一元配置分散分析の有意水準を指定します。
+</p>
+<h2><a name="Means_Comparison"></a><span class="mw-headline">平均比較</span></h2>
+<p>後処理のペアワイズ平均比較の方法を選択します： 
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>有意水準
+</th>
+<td>ペアワイズ平均比較の有意水準を指定します。
+</td></tr>
+<tr>
+<th>Tukey
+</th>
+<td rowspan="7">
+<p>ペアワイズ平均比較のための異なる方法です。
+（詳細は<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a>を参照してください）
+</p>
+</td></tr>
+<tr>
+<th>Bonferroni
+</th></tr>
+<tr>
+<th>Dunn-Sidak
+</th></tr>
+<tr>
+<th>Fisher LSD
+</th></tr>
+<tr>
+<th>Scheffe
+</th></tr>
+<tr>
+<th>Holm-Bonferroni
+</th></tr>
+<tr>
+<th>Holm-Sidak
+</th></tr>
+<tr>
+<th>グループ文字表
+</th>
+<td>文字による平均値の差を示した。同じ文字は有意差がないことを意味し、異なる文字は2つのグループ間の有意差を意味します。
+</td></tr></table>
+<h2><a name="Tests_for_Equal_Variance"></a><span class="mw-headline">等分散性の検定</span></h2>
+<p>分散の均等性を検定するための方法を選択します。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>有意水準
+</th>
+<td>等分散性の検定における有意水準を指定します。
+</td></tr>
+<tr>
+<th>Levene | |
+</th>
+<td rowspan="3">
+<p>等分散性を検定するための異なる方法の一つです。
+</p><p>（詳細は<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a>を参照してください）
+</p>
+</td></tr>
+<tr>
+<th>Levene ()^2
+</th></tr>
+<tr>
+<th>Brown-Forsythe
+</th></tr>
+</table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
+<p><a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Power_Analysis" title="ユーザガイド:一元配置分散分析アルゴリズム">検出力解析</a>の実行を選択します。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>実際の検出力
+</th>
+<td>実際の検出力テストを実行するかどうかを指定します。
+</td></tr>
+<tr>
+<th>仮説の検出力
+</th>
+<td>仮説の検出力テストを実行するかどうかを指定します。
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td>仮定の検出力テストの有意水準を指定します。
+</td></tr>
+<tr>
+<th>仮説のサンプルサイズ
+</th>
+<td>仮定のサンプルサイズを指定します。各エントリをスペースで区切って入力します。
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>グラフ配置
+</th>
+<td>
+<p><b>グラフを縦列に配置</b>
+</p>
+<dl><dd>出力グラフを配置する列の数を指定します。</dd></dl>
+<p><b>グラフ中に同じ形式のプロットを配列</b> 
+</p>
+<dl><dd>1つのグラフウィンドウに同じタイプのすべてのデータプロットを追加できるようにします。</dd></dl>
+</td></tr>
+<tr>
+<th>レポート表
+</th>
+<td>レポートワークシート表の出力場所を指定します。
+<p><b>ブック</b>
+</p>
+<dl><dd>目的のワークブックを指定します。出力ブックは<b><b>ブック名</b></b>にあります。</dd></dl>
+<dl><dd><ul><li>&lt;<b>なし</b>&gt;: レポートワークシート表を出力しません（<b><b>ブック名</b></b>ボックスは空で読み取り専用です）。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>自動</b>&gt;: 初期入力データ選択の場所（入力データ範囲は異なるブックからのものである場合もあります）。入力データがOriginワークブックにない場合、Originは自動的に適合するOriginワークブックを選択します(通常は新しいワークブックを作成)。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>ソース</b>&gt;: ソースデータのワークブックです。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>新規</b>&gt;: 新しいワークブックです。</li></ul></dd></dl>
+<dl><dd><ul><li><b>&lt;既存のもの&gt;</b>:指定した既存のワークブック</li></ul></dd></dl>
+<p><b>シート</b>
+</p>
+<dl><dd>出力先ワークシートです（常に&lt;<b>新規</b>&gt;で名前は<b>SheetName</b>）。</dd></dl>
+<p><b>結果ログ</b>
+</p>
+<dl><dd>結果ログにレポートを出力するかどうかを指定します。</dd></dl>
+<p><b>スクリプトウィンドウ</b>
+</p>
+<dl><dd>スクリプトウィンドウにレポートを出力するかどうかを指定します。</dd></dl>
+<p><b>ノートウィンドウ</b>
+</p>
+<dl><dd>このドロップダウンリストを使って目的のノートウィンドウを指定します。</dd></dl>
+<dl><dd><ul><li><b>&lt;なし&gt;</b>: どのノートウィンドウにも出力しません。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>新規</b>&gt;:新しいノートウィンドウに出力します。ここに<b>ノートウィンドウ</b>の名前を入力します。</li></ul></dd></dl>
+</td></tr>
+<tr>
+<th>プロットデータ
+</th>
+<td>プロットのデータの出力先を指定します（プロットするには、下の<b><b>プロット</b></b>オプションを選択する必要があります。）。
+<p><b>ブック</b>
+</p>
+<dl><dd>プロットデータを出力するワークブックを指定します。</dd></dl>
+<dl><dd><ul><li>&lt;<b>自動</b>&gt;: <b><b>ブック名</b></b>を&lt;<b>なし</b>&gt;にしていなければ、レポート表ブックの設定に従います。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>ソース</b>&gt;: ソースデータのワークブックです。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>レポート</b>&gt;: レポートワークブックです。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>新規</b>&gt;: 新しいワークブックです。</li></ul></dd></dl>
+<dl><dd><ul><li><b>&lt;既存のもの&gt;</b>:指定した既存のワークブック</li></ul></dd></dl>
+<p><b>シート</b>
+</p>
+<dl><dd>出力先ワークシートです（常に&lt;<b>新規</b>&gt;で名前は<b>SheetName</b>）。</dd></dl>
+</td></tr>
+<tr>
+<th>オプショナルなレポートテーブル
+</th>
+<td>レポートワークシートに追加のテーブルを含めるかどうかを指定します。
+<p><b>ノート</b>
+</p>
+<dl><dd>ノート表</dd></dl>
+<p><b>入力データ</b>
+</p>
+<dl><dd>入力データのテーブル</dd></dl>
+<p><b>マスクされたデータ</b>
+</p>
+<dl><dd>マスクデータのテーブル</dd></dl>
+<p><b>欠損データ</b>
+</p>
+<dl><dd>欠損データのテーブル</dd></dl>
+</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">プロット</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>横棒グラフ
+</th>
+<td rowspan="4">
+<p>レポートシートにプロットを生成するかどうかを指定します。
+</p><p><b>Notes:</b><b>因子</b>列が<b>カテゴリーとして設定</b>されている場合、出力グラフは<b>因子</b>列の<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>（列プロパティ）カテゴリー</b>タブ</a>でカスタマイズされたカテゴリ順に従ってプロットされます。
+</p>
+</td></tr>
+<tr>
+<th>ボックスチャート
+</th></tr>
+<tr>
+<th>平均値プロット (SD をエラーバー表示)
+</th></tr>
+<tr>
+<th>平均値プロット (SE をエラーバー表示)
+</th></tr>
+<tr>
+<th>平均比較プロット
+</th>
+<td>これは、事後対比較が実行されたときにのみ利用可能です（<b><b>平均比較</b></b>ツリーで制御）。
+<p>選択したすべてのメソッドについて、平均比較プロットを出力するかどうかを指定します。
+</p>
+</td></tr>
+<tr>
+<th>残差プロット
+</th>
+<td>残差プロットは、分散分析の仮定が満たされているかどうかを確認するために使用されます。つまり、残差が正規分布しているか、分散が一定かを確認します。ここでは、Originは以下の4種類のプロットを表示します：
+<ul><li>行の順序</li>
+<li>ヒストグラム </li>
+<li>フィットY</li>
+<li>正規確率</li></ul>
+</td></tr></table>
+
+
+
+
+
+
+
+    

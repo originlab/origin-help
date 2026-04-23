@@ -1,0 +1,252 @@
+﻿<h1 class="firstHeading">分析テンプレート</h1>
+<p class="urlname" style="display: none;">Analysis-Templates</p>
+<p><br />
+</p>
+<div style="text-align: left; direction: ltr; margin-left: 1em;">
+	<p><a class="image"><img alt="Video Image.png" src="../images/Analysis_Templates/Video_Image.png" 
+							 width="33" border="0" /></a> 関連する動画はこちら：<a 
+	 class="external text" href="http://www.originlab.com/Index.aspx?go=Support/VideoTutorials&amp;ss=chm&amp;pid=1171" 
+	 target="_blank">分析テンプレートの作成</a> </p>
+</div>
+<div id="toc" class="toc">
+	<div id="toctitle">
+		<h2>目次</h2>
+	</div>
+	<ul>
+		<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span 
+		 class="tocnumber">1</span> <span class="toctext">はじめに</span></a> 
+		 
+		<ul>
+			<li class="toclevel-2 tocsection-2"><a href="#Saving_Analysis_Operations_into_a_Template"><span 
+			 class="tocnumber">1.1</span> <span class="toctext">分析操作をテンプレートに保存</span></a></li>
+			<li class="toclevel-2 tocsection-3"><a href="#Using_Saved_Template_to_Handle_Repetitive_Tasks"><span 
+			 class="tocnumber">1.2</span> <span class="toctext">保存したテンプレートを使って、繰り返し処理</span></a></li>
+			<li class="toclevel-2 tocsection-4"><a href="#Use_Active_Workbook_as_Template_to_Handle_Repetitive_Tasks"><span 
+			 class="tocnumber">1.3</span> <span class="toctext">繰り返し処理のテンプレートとしてアクティブワークブックを使う</span></a></li>
+			<li class="toclevel-2 tocsection-5"><a href="#Reporting_Batch_Analyzed_Results"><span 
+			 class="tocnumber">1.4</span> <span class="toctext">バッチ分析結果をレポート</span></a> 
+			 
+			<ul>
+				<li class="toclevel-3 tocsection-6"><a href="#Create_a_custom_summary_report_sheet"><span 
+				 class="tocnumber">1.4.1</span> <span class="toctext">カスタムサマリーレポートシートを作成</span></a></li>
+				<li class="toclevel-3 tocsection-7"><a href="#To_output_batch_analysis_results_to_Word_template"><span 
+				 class="tocnumber">1.4.2</span> <span class="toctext">バッチ分析結果をWordテンプレートに出力する場合</span></a></li>
+			</ul></li>
+		</ul></li>
+		<li class="toclevel-1 tocsection-8"><a href="#Example"><span class="tocnumber">2</span> 
+		 <span class="toctext">サンプル</span></a></li>
+		<li class="toclevel-1 tocsection-9"><a href="#Other_Materials"><span 
+		 class="tocnumber">3</span> <span class="toctext">その他</span></a></li>
+	</ul>
+</div>
+<h2><a name="Introduction"></a><span class="mw-headline">はじめに</span></h2>
+<p>Originのワークブックは、データ、メタデータ、計算式、スクリプト、分析結果(グラフおよび行列を含む)を保存できます。複雑な情報を保持する機能と、Originの分析機能の<a 
+	 href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" 
+	 title="ユーザガイド：分析結果の再計算">再計算</a>を組み合わせることで、<b>分析テンプレート</b>を作成することができます。 
+ </p>
+<p>分析テンプレートのコンセプトは、OTW(U)ファイルとしてワークブックテンプレートを保存（<b>ファイル：テンプレートの新規保存</b>）するとき<i>すべて</i>のデータが失われるという点で、Originの<a 
+	 href="../../UserGuide/UserGuide/What_is_Saved_with_the_Workbook_Template.html" 
+	 title="ユーザガイド：ワークブックテンプレートに保存される属性">ワークブックテンプレート</a>のコンセプトとは異なります。一方で、いくつかの操作を実行し、分析テンプレートをOGW(U)ファイルとして保存（<b>ファイル：ワークブックを分析テンプレートとして保存</b>）すると、ブックには列とシートの数、列の属性と順序、フォーマットとスタイルオプションといった情報だけでなく、 
+ 実行した分析の種類と生成する出力の種類に関する情報もOTW(U)ファイルに保存します。適切なデータを与えると、分析テンプレートはデータを処理し、自動的にワークシートデータ、行列、テーブルとグラフを組み合わせた分析レポートシートの形式で出力します。解析テンプレートは、Originの<a 
+	 class="external text" href="../../UserGuide/UserGuide/Batch_Processing.html">バッチ処理</a>に不可欠なアイテムとなります。 
+ </p>
+<dl>
+	<dd><dl>
+		<dd><a class="image"><img alt="Product Page BatchProcessing 04.png" 
+									 src="../images/Analysis_Templates/Product_Page_BatchProcessing_04.png" 
+									 width="702" border="0" /></a></dd>
+	</dl></dd>
+</dl>
+<h3><a name="Saving_Analysis_Operations_into_a_Template"></a><span class="mw-headline">分析操作をテンプレートに保存</span></h3>
+<p>すべての分析操作が1つのワークブックに統合されている場合は、<b>ファイル：ワークブックを分析テンプレートとして保存</b>を選択して、ワークブックを分析テンプレート（*.OGW(U)ファイル）として保存できます。このOGW(U)ファイルをOriginに直接ドラッグして、開くことも可能です。関連するデーが全て消去されていますが、解析操作は緑色の鍵で表示されている通りに保存されています。 
+ </p>
+<ul>
+	解析操作が行列ブックや独立したグラフウィンドウにも関連付けられている場合は、 
+	<li>これらの<a href="../../UserGuide/UserGuide/Adding_Existing_Graphs_Matrixs_as_Sheets.html" 
+				 title="ユーザガイド：既存のグラフ/行列をシートとして追加">行列ブック/グラフウィンドウを新しいシートとしてソースブックに追加</a>し（Origin 
+	 2018b以降で可能）、ブックを分析テンプレートとして保存します。 </li>
+	<li>プロジェクト全体を分析テンプレートとして保存できます。保存されたプロジェクトは、新しいデータを追加する「テンプレート」になります。現在のプロジェクトをテンプレートとして保存するには、<b>ファイル: 
+	 現在のプロジェクトのクローンを作成</b>をクリックします。これにより、現在のプロジェクトファイルの全ウィンドウや操作を残したまま、インポートデータを消去して複製 
+	 します。プロジェクトファイルを開いた後変更されている場合は、クローン作成する前に、操作とグラフの編集内容をプロジェクトファイルに保存するように求められます。新しい<b>UNTITLED.opju</b>が作成され、複製後すぐに開きます。</li>
+</ul>
+<h3><a name="Using_Saved_Template_to_Handle_Repetitive_Tasks"></a><span 
+	 class="mw-headline">保存したテンプレートを使って、繰り返し処理</span></h3>
+<p>保存したテンプレートを使って別のデータセットを処理したいだけの場合、「ワークブックのテンプレート」は、「プロジェクトのテンプレート」と同じように機能します。いずれも、新規データをテンプレートにインポートして、グラフと結果に関連する全ての分析を更新します。 
+ </p>
+<p>「ワークブックのテンプレート」を利用するメリットは、 バッチ処理ダイアログを使用できる点です。この機能は、ボタン<a class="image"><img 
+	 alt="Button Batch Processing.png" src="../images/Analysis_Templates/Button_Batch_Processing.png" 
+	 width="23" border="0" /></a>をクリックするか、メニューから<b>ファイル:バッチ処理</b>を選択し、複数ファイルまたはデータセットを自動で処理できます。 
+ </p>
+<h3><a name="Use_Active_Workbook_as_Template_to_Handle_Repetitive_Tasks"></a><span 
+	 class="mw-headline">繰り返し処理のテンプレートとしてアクティブワークブックを使う</span></h3>
+<p>1つのワークブック内でデータの1つを解析する場合、アクティブなワークブックからクローン化したワークブックにインポートして、全てのファイルで簡単に同じ解析ができます。この機能を使用する際は、各ファイルタイプのインポートダイアログで<b>テンプレート名</b>を<i>&lt;クローン&gt;</i>に設定します。 
+ </p>
+<dl>
+	<dd><dl>
+		<dd><a class="image"><img alt="Analysis Template clone worksheet.png" 
+									 src="../images/Analysis_Templates/Analysis_Template_clone_worksheet.png" 
+									 width="723" border="0" /></a></dd>
+	</dl></dd>
+</dl>
+<h3><a name="Reporting_Batch_Analyzed_Results"></a><span class="mw-headline">バッチ分析結果をレポート</span></h3>
+<p>分析結果をまとめてレポートするには、 </p>
+<ul>
+	<li>表、グラフ、ロゴなどの外部の画像など、分析テンプレートを分析処理した出力要素のすべてのリンクを含む<a class="external text" 
+															 href="../../Tutorial/Tutorial/Creating_a_Custom_Report_Sheet.html">カスタムレポートシート</a>を作成します。<br />
+	<i>あるいは、 </i></li>
+	<li>分析テンプレートから得られた結果を事前カスタマイズしたWordテンプレートに直接出力することで、レポート用にWordまたはPDFファイルを作成することが可能です。 
+	 </li>
+</ul>
+<h4><a name="Create_a_custom_summary_report_sheet"></a><span class="mw-headline">カスタムサマリーレポートシートを作成</span></h4>
+<p>解析結果を手動でコピーしてサマリーシートに<a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" 
+							 title="ユーザガイド:ワークシートデータのコピーと貼り付け">リンクとして貼り付け</a>する操作に加えて、Origin 
+ 2025ではインタラクティブで使いやすいツールにより、分析テンプレートにサマリーシートをすばやく追加できるようになりました。 </p>
+<p><span class="headerInParagraph">このツールを開くには</span> </p>
+<ul>
+	<li>解析操作を実行し、関連するシートをすべて1つのワークブックに集め、任意のワークシートタブを右クリックして<b>バッチ解析の要約シートを追加</b>を選択します。</li>
+</ul>
+<p><a class="image"><img alt="Add Summary Sheet for Batch Analysis.gif" 
+						 src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis.gif" 
+						 width="908" border="0" /></a> </p>
+<ul>
+	<li><b>サマリーシートの作成</b>ダイアログが開いた状態で、通常のワークシート(ラベル行とデータ領域の両方)または階層レポートシート内の任意のセルをクリックします。するとセルの内容がコピーされ、ダイアログの値列に<a 
+	 href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" 
+	 title="ユーザガイド:ワークシートデータのコピーと貼り付け">リンクとして貼り付け</a>されます。クリックしたセルがレポートシートのセルの場合、対応するテーブルのヘッダがラベル列にリンクとして自動で貼り付けられます。複数のヘッダ行を持つテーブルの場合、各行は分離されたラベル列として抽出されます。</li>
+	<li>自動抽出されたラベルの他に、(1)ラベル列内をダブルクリックしてラベルテキストを手動で入力、(2)<a class="image"><img 
+	 alt="Create Summary Sheet Copy label from worksheet button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Copy_label_from_worksheet_button.png" 
+	 width="28" border="0" /></a>ボタンを使用してワークシートにあるラベルセルをインタラクティブに選択してコピーできます。</li>
+	<li>レポートワークシートの埋め込みグラフや、シートとして追加されたグラフ、フローティンググラフといった各種グラフについても、クリックして選択できます。</li>
+	<li>連続するセルの場合は、ドラッグで選択し、一度に追加できます。</li>
+</ul>
+<p><a class="image"><img alt="Add Summary Sheet for Batch Analysis contiguous selection.gif" 
+						 src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis_contiguous_selection.gif" 
+						 width="876" border="0" /></a> </p>
+<ul>
+	<li>テーブルの上部にあるボタンを使用して、新しい行の挿入、既存の行の削除、行の並べ替えができます。</li>
+</ul>
+<table class="simple" style="border: 2px solid #ffffff;">
+	<tr>
+		<td><p><a class="image"><img alt="Add Summary Sheet for Batch Analysis.png" 
+									 src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis.png" 
+									 width="527" border="0" /></a> </p></td>
+		<td><table class="simple">
+			<tr>
+				<th><p style="text-align: center;"><a class="image"><img 
+				 alt="Create Summary Sheet Insert button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Insert_button.png" 
+				 width="28" border="0" /></a> </p></th>
+				<td>選択した行の上に新しい行を挿入します。 </td>
+			</tr>
+			<tr>
+				<th><p style="text-align: center;"><a class="image"><img 
+				 alt="Create Summary Sheet Delete button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Delete_button.png" 
+				 width="28" border="0" /></a> </p></th>
+				<td>選択した行を削除します。 </td>
+			</tr>
+			<tr>
+				<th><a class="image"><img alt="Create Summary Sheet Move to top button.png" 
+											 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_top_button.png" 
+											 width="28" border="0" /><img 
+				 alt="Create Summary Sheet Move up button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_up_button.png" 
+				 width="28" border="0" /></a><br />
+				<a class="image"><img alt="Create Summary Sheet Move down button.png" 
+										 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_down_button.png" 
+										 width="28" border="0" /><img alt="Create Summary Sheet Move to bottom button.png" 
+				 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_bottom_button.png" 
+				 width="28" border="0" /></a> </th>
+				<td>行を並べ替えます。 
+				<p><a class="image"><img alt="Create Summary Sheet Move to top button.png" 
+										 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_top_button.png" 
+										 width="28" border="0" /></a>/<a 
+				 class="image"><img alt="Create Summary Sheet Move to bottom button.png" 
+									 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_bottom_button.png" 
+									 width="28" border="0" /></a>選択した行を一番上/一番下に移動;<br />
+				<a class="image"><img alt="Create Summary Sheet Move up button.png" 
+										 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_up_button.png" 
+										 width="28" border="0" /></a>/<a 
+				 class="image"><img alt="Create Summary Sheet Move down button.png" 
+									 src="../images/Analysis_Templates/Create_Summary_Sheet_Move_down_button.png" 
+									 width="28" border="0" /></a>:選択した行を上/下に移動 
+				 </p></td>
+			</tr>
+			<tr>
+				<th><p style="text-align: center;"><a class="image"><img 
+				 alt="Create Summary Sheet Copy label from worksheet button.png" 
+				 src="../images/Analysis_Templates/Create_Summary_Sheet_Copy_label_from_worksheet_button.png" 
+				 width="28" border="0" /></a> </p></th>
+				<td>ワークシートからラベルをコピーするには、このボタンをクリックします。このボタンをクリックすることでラベル選択モードになり、ワークシートのラベルセルを選択できます。すると、選択部分をコピーしてラベル列へのリンクとして貼り付けできます。 
+				 
+				<p>値列をクリックすると、ラベル選択モードがのままになります。 </p></td>
+			</tr>
+			<tr>
+				<th>サマリーシートのテーブルを入れ替え </th>
+				<td>このチェックボックスにチェックを付けると、<b>値</b>がサマリーシートの各列に出力され、<b>ラベル</b>は列ラベル行に出力されます(最初のラベル列をロングネームに、残りをユーザ定義パラメータに出力)。 
+				 </td>
+			</tr>
+			<tr>
+				<th><p style="text-align: center;">出力シート </p></th>
+				<td><b>出力シート</b>として既存のワークシートが選択されている場合、バッチ処理の結果は、最後の空でない列(テーブルを入れ替えにチェックが付いている場合)に追加されるか、最後の空でない行(テーブルを入れ替えにチェックがついていない場合)に追加されます。&amp;emsp; 
+				 </td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<ul>
+	<li>すでにサマリーシートを作成していて、後から値を追加する場合、<b>バッチ解析の要約シートを追加</b>で新しいシートを作成するのではなく、既存のサマリーシートに新しいアイテムを追加でき、<b>出力ワークシート</b>はデフォルトで<i>概要</i>に設定されます。</li>
+</ul>
+<h4><a name="To_output_batch_analysis_results_to_Word_template"></a><span 
+	 class="mw-headline">バッチ分析結果をWordテンプレートに出力する場合</span></h4>
+<p>あらかじめブックマークされたセルを持つWordテンプレートを準備する必要があります。ブックマークは、<b>ファイル:分析テンプレートにWordブックマークを追加する</b>を選択して<a 
+	 href="../../UserGuide/UserGuide/Add_Word_Bookmarks_to_Analysis_Template_Dialog.html" 
+	 title="ユーザガイド：分析テンプレートダイアログにWordブックマークを追加">分析テンプレートにWordブックマークを追加</a>ダイアログを開くことで、<i><b>ブックマーク</b></i>という名前の特別なワークシートの分析テンプレートに追加することができます。 
+ </p>
+<p>Wordブックマークを介して分析結果をWordテンプレートに渡すには、分析テンプレートから結果をコピーし、Wordブックマークが追加されている対応セルへのリンクとして貼り付ける必要があります。完了したら、現在の分析テンプレートを再保存し、Wordテンプレートと一緒に使用することで、バッチ処理の結果をWordまたはPDFファイルに直接エクスポートできます。 
+ </p>
+<h2><a name="Example"></a><span class="mw-headline">サンプル</span></h2>
+<p>次の簡単な例で分析テンプレートについて説明します。 </p>
+<ol>
+	<li>新しいOriginプロジェクトを開き、<b>単一ASCIIのインポート</b>ボタンを<a class="image"><img 
+	 alt="Button Import Single ASCII.png" src="../images/Analysis_Templates/Button_Import_Single_ASCII.png" 
+	 width="23" border="0" /></a>クリックして、\Samples\Curve Fitting\Linear Fit.datを開きます。 
+	 アクティブワークシートウィンドウにファイルがインポートされます。 シートの名前は<b>Linear Fit</b>になります。</li>
+	<li>列<b>B</b>から<b>D</b>までを選択し、メニューから<b>解析：フィット：線形フィット</b>を選択して、<b>線形フィット</b>ダイアログボックスを開きます。</li>
+	<li><b>再計算</b> を <b>自動</b>に設定します。</li>
+	<li>初期設定のまま、<b>OK</b> をクリックして線形フィットを実行します。 表示されたメッセージには「いいえ」をクリックします。</li>
+	<li><b>Linear Fit</b>ワークシート列の右側の灰色の領域で右クリックし、ショートカットメニューから<b>ワークシートのクリア</b>を選択します。<b>OK</b>をクリックして、すべてのデータを削除します。 
+	 これによりLinear Fitデータに依存するすべての出力データがクリアされます（FitLinear1およびFitLinearCurve1シートをクリックすると確認できます）。この時点では、<b>分析テンプレート</b>はまだ保存されていません（タイトルなしのOriginプロジェクトファイルで作業していたにすぎません）。 
+	 必要に応じて、次の2つの保存オプションから選択します。 
+	<ul>
+		<li>最小化された分析テンプレート（最小の機能単位であれば）を保存したい場合、および入力と出力のすべてをワークブック自体に含めることができる場合は、Origin<b>ウィンドウ</b>ファイルとして保存できます。 
+		 <b>ファイル：ウィンドウの新規保存</b> (<b>テンプレートの新規保存</b>ではなく)を選択し、ワークブックを<b>OGW(U)</b>ファイルとして保存します。 
+		 </li>
+		<li>分析テンプレートを、より複雑なプロジェクト（例えばワークブックとは別のグラフ、行列、またはレイアウトウィンドウを含むプロジェクト）に保存する場合は、ワークブックを<b>プロジェクト</b>ファイルの一部として保存することができます。(<b>ファイル：プロジェクトの新規保存</b>）。 
+		 ただし、上記のようにワークブックを<b>OGW(U)</b>として保存した場合は、<b>ファイル：開く</b>メニューを使って、いつでもOriginプロジェクトファイルに追加できます。</li>
+	</ul></li>
+	<li>保存するためのオプションを選択したら、<b>単一ASCIIインポート</b>ボタン<a class="image"><img 
+	 alt="Button Import Single ASCII.png" src="../images/Analysis_Templates/Button_Import_Single_ASCII.png" 
+	 width="23" border="0" /></a>をクリックして、\Samples\Curve Fitting\Linear 
+	 Fit.datを再インポートすることで分析テンプレートの動作を確認できます。 ファイルがアクティブワークシートにインポートされ、フィットが実行されて、<b>FitLinear</b> 
+	 および <b>FittedValues</b>ワークシートに結果が出力されます。 </li>
+</ol>
+<table class="note">
+	<tr>
+		<td><p><b>アドバンスドユーザ向けの注意:</b>分析テンプレートプロシージャがユーザ定義のXファンクションによって実行され、テンプレートを<b>OGW(U)</b>ファイルとして保存してから他のユーザと共有する場合、Xファンクションを作成時に<b>オブジェクトで保存</b>チェックボックス（<b>Xファンクションビルダ</b>&gt;<b>ツリービュー</b>）にチェックを付ける必要があります。 
+		 </p></td>
+	</tr>
+</table>
+<h2><a name="Other_Materials"></a><span class="mw-headline">その他</span></h2>
+<table class="noborder">
+	<tr>
+		<td style="vertical-align: top;" width="60"><img src="../images/Analysis_Templates/Tutorial_icon.png" 
+														 alt="" width="57" 
+														 border="0" /> 
+		 </td>
+		<td><p>「<a class="external text" href="../../Tutorial/Tutorial/Importing_Multiple_Files_into_Workbooks_Cloned_from_Active_Workbook.html">アクティブなワークブックからクローン化したワークブックに、複数ファイルをインポートする</a>」チュートリアルでは、分析テンプレートとして現在のワークブックを使って、複数ファイルをバッチ処理する操作方法を説明しています。 
+		 </p>
+		<p>「<a class="external text" href="../../Tutorial/Tutorial/Creating_and_Using_Analysis_Templates.html">分析テンプレートの作成と使用</a>」のチュートリアルで、分析テンプレート使用のクイックスタートを提供しています。 
+		 </p>
+		<p>「<a class="external text" href="../../Tutorial/Tutorial/Batch_Processing_with_Word_Template_for_Reporting.html">レポート用Wordテンプレートでのバッチ処理</a>」のチュートリアルでは、Wordテンプレートと分析テンプレートを使って、Word/PDFレポートを作成する方法を、ステップごとに説明しています。 
+		 </p>
+		<p><br />
+		</p></td>
+	</tr>
+</table>

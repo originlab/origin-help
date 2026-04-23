@@ -1,0 +1,63 @@
+﻿<h1 class="firstHeading">Diagramm mit doppeltem X und benutzerdefinierter Formel</h1>
+
+  <p class='urlname' style='display: none'>DoubleX-CustomFormula</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Double X Custom Formula 01.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_01.png" width="700"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+
+  <p>Wählen Sie mindestens XY-Spalten aus, um ein Diagramm mit doppeltem X zu erstellen, wobei die zweite X-Achse funktional auf die erste abgebildet wird.</p>
+
+  <p>Ideal zum Anzeigen von Daten in verschiedenen Einheiten, wie Temperatur (°C/°F/K), Wellenlänge und Wellenanzahl.</p>
+
+  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+
+  <p>Wählen Sie die gewünschten Daten aus.</p>
+
+  <p>Wählen Sie <span class="menu">Zeichnen &gt; Mehrere Felder, mehrere Achsen: Doppeltes X mit benutzerdefinierter Formel</span> im Hauptmenü.</p>
+
+  <p>Es wird ein Dialog angezeigt, mit dem Sie die sekundäre Achse festlegen können:</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Double X Custom Formula 02.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_02.png" width="380"></a></dd>
+  </dl>
+
+  <p>Es gibt zwei Methoden, um auf funktional auf die doppelten X-Achsen abzubilden: <b>Unabhängige Hilfsstriche</b> und <b>Hilfsstriche teilen</b>.</p>
+
+  <ul>
+    <li>
+      <b>Unabhängige Hilfsstriche</b>: Das Auswählen dieses Typs ermöglicht Ihnen, die <b>Direkte Formel</b> und <b>Inverse Formel</b> einzugeben, um die sekundäre X-Achse in einem anderen Layer ohne Y-Achse darzustellen. Die Hilfsstrichsposition wird durch die sekundäre Achse selbst entschieden. Sie können festlegen, ob diese beiden Layer den Y-Bereich teilen.
+
+      <dl>
+        <dd>Weitere Einzelheiten finden Sie unter dem Skalierungstyp <b>Benutzerdefinierte Formel</b> auf der <a href="../../UserGuide/UserGuide/Scale_2.html#Type" title="UserGuide:Scale 2">Registerkarte <b>Skalierung</b> im Dialog <b>Achsen</b></a>.</dd>
+      </dl>
+    </li>
+
+    <li><b>Hilfsstriche teilen</b>: Wählen Sie diesen Typ, um die geteilten Hilfsstriche auf der sekundären X-Achse des aktuellen Layers zu zeigen. Die Hilfsstrichsbeschriftungen werden durch die von Ihnen eingegebene Formel entschieden.</li>
+  </ul>
+
+  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+
+  <p>dxcform.otpu (im Origin-Programmordner installiert)</p>
+
+  <h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+
+  <p>Dieses Diagramm enthält zwei Layer, wenn Sie <b>Funktional abgebildet - unabhängige Hilfsstriche</b> als <b>Typ Doppeltes X</b> auswählen. Die sekundäre X-Achse wird zum zweiten Layer hinzugefügt. Wenn Sie <b>Funktional abgebildet - Hilfsstriche teilen</b> ausgewählt haben, wird nur ein Layer mit unterer und oberer X-Achse gezeichnet, die die Hilfsstrichsposition teilen und verschiedene Hilfsstrichsbeschriftungen je nach festgelegter Formel zeigen.</p>

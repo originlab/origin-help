@@ -1,0 +1,62 @@
+<h1 class="firstHeading">17.1.5 Graphical Summary</h1><p class='urlname' style='display: none'>Graphical-Summary</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Performing_Graphical_Summary"><span class="tocnumber">2</span> <span class="toctext">Performing Graphical Summary</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">3</span> <span class="toctext">Dialog Controls</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Introduction"></a><span class="mw-headline">Introduction</span></h2>
+<p>This tool can be used to create the graphical summary report of the input data with grouping information. The report contains histogram plots, box charts, confidence intervals plots and result tables with statistical information.
+</p><p><a  class="image"><img alt="Graphical Summary.png" src="../images/Graphical_Summary/800px-Graphical_Summary.png?v=98738" width="800"   /></a>
+</p>
+<h2><a name="Performing_Graphical_Summary"></a><span class="mw-headline">Performing Graphical Summary</span></h2>
+<ul><li> Select the input data columns which you want perfrom basic statistics analysis on.</li>
+<li> Choose <b>Statistics &gt; Descriptive Statistics: Graphical Summary</b> menu to open the tool.
+<dl><dd><a  class="image"><img alt="Graphical Summary 01.png" src="../images/Graphical_Summary/Graphical_Summary_01.png?v=98693" width="417"  /></a></dd></dl></li>
+<li> Select grouping column(s) for <b>Group(s)</b> option, enter a value in Confidence Level(%) box and select a desired arrangement under <b>Graph Arrangement</b> list.</li>
+<li> Click OK to perfrom descriptive statistics and create the graphs.</li></ul>
+<h2><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Input
+</th>
+<td>Choose the input column(s).
+</td></tr>
+<tr>
+<th>Groups
+</th>
+<td>Choose grouping column(s) to divide the input data into multiple groups.
+</td></tr>
+<tr>
+<th>Confidence Interval(%)
+</th>
+<td>Specify conf. level of confidence interval
+</td></tr>
+<tr>
+<th>Graph Arrangement
+</th>
+<td>Specify how to arrange the statistical graphs.
+<ul><li> <b>Separate Graphs</b>: Each variable for each group will be plotted into a separate graph. Each graph includes a histogram with distribution curve, a confidence intervals plot and a probability plot, with three result tables "Description Statistics", "##% Confidence Intervals" and "Normality Test". The graph title shows the variable and group information.</li>
+<li> <b>Per Variable</b>: Each Variable will be plotted into a separate graph. The groups will be plotted into different veritical panels. Each graph includes histograms with distribution curve, box charts with outliers, confidence intervals plots,  and a table summarizing the results by row, showing statistics for each group.</li>
+<li> <b>Per Group</b>: Each group will be plotted into a separate graph. The variables will be plotted into different veritical panels. Each graph includes histograms with distribution curve, box charts with outliers, confidence intervals plots,  and a table summarizing the results by row, showing statistics for each variable.</li>
+<li> <b>All in One</b>:All variables and all groups will be plotted into one graph.  Each subset(<i>Group</i>*<i>Variable</i>) will be plotted into different veritical panels. This graph includes histograms with distribution curve, box charts with outliers, confidence intervals plots,  and a table summarizing the results by row, showing statistics for each subset.</li></ul>
+</td></tr>
+<tr>
+<th>Output Plot Data
+</th>
+<td>Specify where to output the plot data.
+</td></tr>
+<tr>
+<th>Output Graphs
+</th>
+<td>Specify where to output the result graphs.
+</td></tr></table>
+
+
+
+
+
+

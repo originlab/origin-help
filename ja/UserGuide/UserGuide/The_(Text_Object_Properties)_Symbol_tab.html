@@ -1,0 +1,115 @@
+﻿<h1 class="firstHeading">(テキストオブジェクトプロパティ)シンボルタブ</h1><p class='urlname' style='display: none'>TextOb-Prop-Symbol-tab</p>
+<dl><dd><a  class="image"><img alt="Annotation Legend Symbol Tab.png" src="../images/The_(Text_Object_Properties)_Symbol_tab/Annotation_Legend_Symbol_Tab.png" width="643"  /></a></dd></dl>
+<p><br />
+グラフの凡例は単に特殊なテキストオブジェクトです。テキストオブジェクトがグラフ凡例の場合、テキストオブジェクトプロパティダイアログボックスに<b>シンボル</b>タブが追加されます。 
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Symbol.2BLine_Style"><span class="tocnumber">1</span> <span class="toctext">線+シンボルのスタイル</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Symbol_Shape"><span class="tocnumber">2</span> <span class="toctext">シンボルの形状</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Symbol-Line_Gap_.28.25Symbol_Size.29"><span class="tocnumber">3</span> <span class="toctext">シンボルと線の間隔 (シンボルサイズの%)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Scale_Factors.28.25.2C_100_means_original_size.29"><span class="tocnumber">4</span> <span class="toctext">スケールファクター(%, 100は元のサイズ)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Apply_to"><span class="tocnumber">5</span> <span class="toctext">適用先</span></a></li>
+</ul>
+</div>
+<h2><a name="Symbol.2BLine_Style"></a><span class="mw-headline">線+シンボルのスタイル</span></h2>
+<p>線+シンボルグラフで、凡例内の線とシンボルの形式を決定するためにこの設定を使用します。折れ線グラフ、散布図、列/棒グラフの場合、この設定は凡例表示には影響しません。
+</p>
+<h2><a name="Symbol_Shape"></a><span class="mw-headline">シンボルの形状</span></h2>
+<p>この設定を使用して、凡例ボックスにシンボルを表示する方法を決定します。 
+</p>
+<dl><dd><a  class="image"><img alt="Legend SymbolTab Shape.png" src="../images/The_(Text_Object_Properties)_Symbol_tab/Legend_SymbolTab_Shape.png" width="249"  /></a></dd></dl>
+<ul><li> <b>自動</b>：プロットスタイルに従ってシンボル形状を表示します。デフォルトでチェックが付いています。</li>
+<li> <b>正方形</b>：シンボルを「正方形」として表示します。デフォルトのサイズは15で、<b>スケールファクター</b>グループの<a href="#Scale_Factors.28.25.2C_100_means_original_size.29">散布図シンボルサイズオプション</a>を使用してスケール係数を変更できます。</li>
+<li> <b>円</b>：シンボルを「円」として表示します。デフォルトのサイズは15で、<b>スケールファクター</b>グループの<a href="#Scale_Factors.28.25.2C_100_means_original_size.29">散布図シンボルサイズオプション</a>を使用してスケール係数を変更できます。</li></ul>
+<p><br />
+<b>Note:</b> 
+</p>
+<ul><li> 折れ線プロットと線 + シンボルプロットでは、「正方形」と「円」は両方とも実線で、プロットラインによって色付けされます。線 + シンボルでは、<b>シンボルの形状</b>が<b>自動</b>に設定されていない場合、 <b>線線+シンボルのスタイル</b>コントロールは効果がありません。 </li>
+<li> 散布図の場合、「正方形」と「円」は両方とも実線で、プロットのシンボル色または境界色で色付けされます。 </li>
+<li> 棒グラフ、円グラフ、ボックスチャートなどの塗りつぶしパターンを持つプロットでは、「正方形」と「円」の両方が開いており、境界の太さと境界色はプロットのパターン境界と同じであり、塗り色はプロットのパターン色に従います。</li></ul>
+<dl><dd><a  class="image"><img alt="Legend SymbolTab Shape Example.png" src="../images/The_(Text_Object_Properties)_Symbol_tab/700px-Legend_SymbolTab_Shape_Example.png" width="700"   /></a></dd></dl>
+<h2><a name="Symbol-Line_Gap_.28.25Symbol_Size.29"></a><span class="mw-headline">シンボルと線の間隔 (シンボルサイズの%)</span></h2>
+<p>線+シンボルグラフに適用されます。凡例エントリの線とシンボルの間に間隔を追加します。これを有効にするには、<b>作図の詳細</b>ダイアログボックスの<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html" title="ユーザガイド:(作図の詳細)グラフの線タブ"><b>グラフの線</b>タブ</a>で<b>シンボル都の隙間</b>が有効になっている<i>必要があります。</i>
+</p>
+<h2><a name="Scale_Factors.28.25.2C_100_means_original_size.29"></a><span class="mw-headline">スケールファクター(%, 100は元のサイズ)</span></h2>
+<p>これらのコンボボックスでは、ドロップダウンリストから数字を選択するか、直接値を入力できます。アクティブデータセットの標識をオンにして、シンボルブロックの最大幅と高さを表示できることに注意してください (<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Legends_Titles_Tab.html#Indicate_Active_Dataset" title="ユーザガイド：(作図の詳細) 「凡例/タイトル」タブ">グラフページレベルの作図の詳細で</a>または、凡例を右クリックして<b>凡例:アクティブデータセットの標識</b>を選択)。
+</p>
+<dl><dd><dl><dd><a  class="image"><img alt="Data plot legend components3.png" src="../images/The_(Text_Object_Properties)_Symbol_tab/Data_plot_legend_components3.png" width="472"  /></a></dd></dl></dd></dl>
+<table class="dialogcontroltable">
+<tr>
+<th>散布図のシンボルサイズ
+</th>
+<td>
+<ul><li> このボックスは100より大きい数を取ります。 </li>
+<li> シンボルのサイズは凡例のテキストサイズ(<b>テキスト</b>タブ)によって制御されます。フォントサイズを大きくすると、より大きなシンボルサイズを使用できるようになります。 </li>
+<li> 線+シンボルプロットと散布図に適用されます。</li></ul>
+</td></tr>
+<tr>
+<th>線の太さ
+</th>
+<td>
+<ul><li> このボックスは100より大きい数を取ります。 </li>
+<li> 線+シンボルおよび折れ線プロットに適用されます。</li></ul>
+</td></tr>
+<tr>
+<th>凡例シンボルの幅
+</th>
+<td>
+<ul><li> このボックスは100より大きい数を取ります。100の場合、実際の幅は<b>作図の詳細</b>ダイアログの<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Legends_Titles_Tab.html#Legend_Symbol_Width_.28.25_of_Font.29" title="ユーザガイド：(作図の詳細) 「凡例/タイトル」タブ"><b>凡例/タイトル</b>タブ</a>の設定に従います。</li>
+<li> このコントロールはアクティブデータセットの標識の幅を調整するために使用され、内部ブロックの幅は凡例のアクティブデータセットの標識のサイズに制限されます。 </li>
+<li> 凡例のテキストサイズを大きくすると(<b>テキスト</b>タブ)、アクティブデータセットの標識の高さ/幅が大きくなります。 </li>
+<li> 棒グラフや面積グラフプロットなどのブロックスタイルの凡例シンボルや、線 + シンボル、折れ線プロットを使用するグラフタイプにも適用されます。</li></ul>
+</td></tr>
+<tr>
+<th>パターンブロックの幅
+</th>
+<td>
+<ul><li> このボックスは100より大きい数には<i>なりません</i>。 </li>
+<li> アクティブデータセットインジケータが設定されたら、このコントロールを使用して内部ブロック幅を調整できます。100未満の場合、インジケータ内でブロックの前後に隙間ができます。</li>
+<li> 棒グラフや面積グラフプロットなどのブロックスタイルの凡例シンボルや、線 + シンボル、折れ線プロットを使用するグラフタイプにも適用されます。</li></ul>
+</td></tr>
+<tr>
+<th>パターンブロックの高さ
+</th>
+<td>
+<ul><li> このボックスは100より大きい数には<i>なりません</i>。 </li>
+<li> このコントロールを使用して、内部ブロックの高さを調整できます。100未満の場合、インジケータ内にパターンブロックの上下に隙間ができます。</li>
+<li> 棒グラフや面積グラフプロットなどのブロックスタイルの凡例シンボルや、線 + シンボル、折れ線プロットを使用するグラフタイプにも適用されます。</li></ul>
+</td></tr>
+<tr>
+<th>フォントサイズ
+</th>
+<td>
+<ul><li> このボックスは100より大きい数には<i>なりません</i>。 </li>
+<li> このコントロールを使用してフォントサイズの倍率を調整できます。<a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html" title="ユーザガイド：テキストオブジェクトプロパティのテキストタブ"><b>テキスト</b>タブ</a>でセットされているフォントサイズが<i><b>18</b></i>の時、フォントサイズの倍率は<b>50</b>となり、フォントサイズは<i><b>9</b></i>となりますが、実際のフォントサイズは<i><b>18</b></i> のままとなります。(<b>テキスト</b> タブか、ツールチップボックスでは)</li></ul>
+</td></tr></table>
+<h2><a name="Apply_to"></a><span class="mw-headline">適用先</span></h2>
+<p>凡例オブジェクトダイアログボックスで行った編集を他の凡例オブジェクトにも適用します。<b>テキスト</b>または<b>プログラミング</b>タブで行うような一部の編集は他の凡例オブジェクトに適用されません。
+</p>
+<table class="dialogcontroltable">
+<tr>
+<th>レイヤ
+</th>
+<td> 現在のレイヤにのみ適用します。レイヤは1つの凡例オブジェクトしか持てません。
+</td></tr>
+<tr>
+<th>ウィンドウ
+</th>
+<td> ウィンドウ(ページ)の全てに適用します。
+</td></tr>
+<tr>
+<th>フォルダ
+</th>
+<td> プロジェクトエクスプローラの現フォルダ内全てに適用します。
+</td></tr>
+<tr>
+<th>プロジェクト
+</th>
+<td> 現在のプロジェクトファイルの全てに適用します。
+</td></tr></table>
+
+
+
+
+    

@@ -1,0 +1,209 @@
+﻿<h1 class="firstHeading">対応のあるt検定ダイアログボックス</h1><p class='urlname' style='display: none'>tTest-PairSample-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">入力</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">平均のt検定</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">検出力解析</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">プロット</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p>対応のあるt検定ダイアログボックスを開くには、
+</p>
+<ul><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：t検定(対応あり)</b>をクリックします。</li></ul>
+<p><br />
+<b>詳細な情報</b>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Pair-Sample_t-Test.html" title="カテゴリー:対応のあるt検定">イントロダクション：対応のあるt検定</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(PairSampletTest).html" title="ユーザガイド:アルゴリズム(PairSampletTest)"> アルゴリズム：対応のあるt検定</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">チュートリアル:仮説検定</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>再計算</b>
+</th>
+<td>
+<p>分析結果の再計算の設定を変更します。
+</p>
+<ul><li><b>なし</b> </li>
+<li><b>自動</b> </li>
+<li><b>手動</b>  </li></ul>
+<p>詳細情報は、 <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">分析結果の再計算</a>をご覧下さい。
+</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>入力データ形式</b>
+</th>
+<td>
+<p><b>素データ</b>
+</p>
+<dl><dd>列を範囲形式指定します。範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。</dd></dl>
+<p><b>要約データ</b>
+</p>
+<dl><dd>サンプルの「平均差、プールド標準偏差、サンプルサイズ」を <i>mean</i> <i>SD</i> <i>N</i> という形式で（スペース区切りで）入力します。</dd>
+<dd>平均差は次のように計算できます。</dd>
+<dd><img src="../images/The_PairSampletTest_Dialog_Box/math-43345524f07b1555dc3ccdf064c4d4bb.png" title="\bar{d}=\frac{1}{N}\sum_{i=1}^N d_i" alt="\bar{d}=\frac{1}{N}\sum_{i=1}^N d_i" class="tex"/></dd>
+<dd><b>SD</b>は次式で計算します。</dd>
+<dd><img src="../images/The_PairSampletTest_Dialog_Box/math-4fe7e169c9e636a6e51aebc2b52698ef.png" title="s_d=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(d_i-\bar{d})}" alt="s_d=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(d_i-\bar{d})}" class="tex"/></dd>
+<dd>ここで、<b>N</b>はサンプルサイズです。<img src="../images/The_PairSampletTest_Dialog_Box/math-d247f594c78d0d2be10fc6d82512cc4e.png" title="d_i" alt="d_i" class="tex"/> は <img src="../images/The_PairSampletTest_Dialog_Box/math-c3fa588f5df674427b00fc94ed77a94d.png" title="x_{1i}-x_{2i},for(i=1,2,...,N)\,\!" alt="x_{1i}-x_{2i},for(i=1,2,...,N)\,\!" class="tex"/>.</dd></dl>
+</td></tr>
+<tr>
+<th><b>入力</b>
+</th>
+<td>
+<p>入力データを指定します。
+</p>
+</td></tr></table>
+<h2><a name="t-Test_for_Mean"></a><span class="mw-headline">平均の t 検定</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>検定する平均
+</th>
+<td>検定する仮説平均差（通常は <i>0</i>）。
+</td></tr>
+<tr>
+<th>帰無仮説
+</th>
+<td>検定される帰無仮説（通常は<i>Mean1 - Mean2 = 0</i>）。
+</td></tr>
+<tr>
+<th>対立仮説
+</th>
+<td>オプション：
+<p><b>Mean1-Mean2 &lt;&gt; 検定する平均</b> 
+</p>
+<dl><dd>両側検定：2つのデータセット間の平均差が仮説平均差と異なるか？</dd></dl>
+<p><b>Mean1-Mean2 &gt; 検定する平均</b> 
+</p>
+<dl><dd>片側検定（上側）：平均差が仮説平均差より大きいか？</dd></dl>
+<p><b>Mean1-Mean2 &lt; 検定する平均</b> 
+</p>
+<dl><dd>片側検定（下側）：平均差が仮説平均差より小さいか？</dd></dl>
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td>検定の有意水準。
+</td></tr>
+<tr>
+<th>効果量
+</th>
+<td>効果量 Cohen&rsquo;s d を計算します。これは実際の mean1-mean2 と <b>検定する平均</b> の差の大きさを示します。
+</td></tr>
+<tr>
+<th>信頼区間
+</th>
+<td>平均の信頼区間を計算します。
+<p>計算の詳細は<a href="../../UserGuide/UserGuide/Algorithm_(PairSampletTest).html" title="ユーザガイド:アルゴリズム(PairSampletTest)">アルゴリズム：対応のあるt検定</a>を参照してください。
+</p>
+</td></tr>
+<tr>
+<th>%単位での信頼水準
+</th>
+<td>信頼水準 (1 - <img src="../images/The_PairSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex"/>)% をスペース区切りで指定します。<i>信頼区間</i>が選択されている場合にのみ使用できます。
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>関心のある最小差
+</th>
+<td>検定する平均からの最小差を指定します。ここに値を入力すると、検出力解析のグラフに、この差を検出するために必要なサンプルサイズが異なる検出力ごとに表示されます。
+</td></tr>
+<tr>
+<th>実際の検出力
+</th>
+<td>検定の検出力（帰無仮説が偽のときにそれを棄却する確率）を計算します。
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td><i>仮説の検出力</i> または <i>実際の検出力</i>が選択されている場合にのみ利用可能です。検出力計算のための有意水準 (α値) を指定します。
+</td></tr>
+<tr>
+<th>仮説の検出力
+</th>
+<td>サンプルサイズを変化させた場合の検出力を計算します。
+</td></tr>
+<tr>
+<th>仮説のサンプルサイズ
+</th>
+<td><i>仮説の検出力</i> が選択されている場合のみ利用可能です。検出力計算のための仮想サンプルサイズを指定します。
+</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">プロット</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>差のプロット
+</th>
+<td>平均差に対するボックスチャートとヒストグラムを描画します。
+</td></tr>
+<tr>
+<th>ボックスチャート
+</th>
+<td>ボックスチャートをプロットします。
+</td></tr>
+<tr>
+<th>ヒストグラム
+</th>
+<td>ヒストグラムをプロットします。
+</td></tr>
+<tr>
+<th>グラフ中に同じ形式のプロットを配列
+</th>
+<td>ヒストグラムの場合レイヤは縦に並びます。ボックスチャートの場合、レイヤは横に並びます。<b>差のプロット</b> が選択されている場合、このオプションは表示されません。
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
+<p>範囲制御についてはこちらを参照してください：<a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">出力結果</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>結果ログの出力</b>
+</th>
+<td>
+<p>選択すると結果を結果ログに出力します。
+</p>
+</td></tr>
+<tr>
+<th>グラフィカル要約レポート
+</th>
+<td>サマリーグラフを作成します。内容には P値バー、効果量バー、差の分布グラフが含まれます。また、統計値を示す3つの結果表がグラフに添付されます。
+<p>サマリーグラフの脚注として、これらの統計結果の診断が表示されます。
+</p>
+</td></tr>
+<tr>
+<th>グラフィカル検出力解析レポート
+</th>
+<td>検出力曲線を含むグラフィカルな検出力分析レポートを作成します。
+<p><b>関心のある最小差</b>に値が設定されていない場合、現在のサンプルサイズの検出力曲線のみが出力され、60%、70%、80%、90% の検出力における差が表示されます。<b>関心のある最小差</b>に値が設定されている場合、60%、70%、80%、90% と現在のサンプルサイズの5本の検出力曲線が出力され、最小差を検出するために必要なサンプルサイズが一覧表示されます。
+</p><p>検出力曲線グラフの後に検出力解析の診断結果を示す脚注を追加で表示します。
+</p>
+</td></tr>
+<tr>
+<th>プロットデータ出力
+</th>
+<td>プロットデータの出力用ワークシートを指定します (Originはプロットの作成時に表形式のデータを生成します)。
+</td></tr>
+<tr>
+<th>結果の出力
+</th>
+<td>結果を出力するワークシートを指定します。
+</td></tr></table>
+
+
+
+
+
+
+
+    

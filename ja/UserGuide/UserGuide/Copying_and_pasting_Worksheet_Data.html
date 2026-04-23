@@ -1,0 +1,163 @@
+﻿<h1 class="firstHeading">ワークシートデータのコピーと貼り付け</h1><p class='urlname' style='display: none'>CopyPaste-Wks-Data</p>
+<p>Originでは、元のワークシート列から他のワークシートにデータをコピーする様々なオプションを提供しています。  
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Copy_and_paste_worksheet_values_with_the_context_menus"><span class="tocnumber">1</span> <span class="toctext">コンテキストメニューでワークシートの値をコピーして貼り付け</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Copy_worksheet_values"><span class="tocnumber">1.1</span> <span class="toctext">ワークシートの値をコピー</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Paste_Worksheet_values"><span class="tocnumber">1.2</span> <span class="toctext">ワークシートの値を貼り付け</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Copy_worksheet_values_by_X-Functions"><span class="tocnumber">2</span> <span class="toctext">Xファンクションでワークシートの値をコピー</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Copy_worksheet_columns_by_the_X-Function_.22colcopy.22"><span class="tocnumber">2.1</span> <span class="toctext">Xファンクション&quot;colcopy&quot;によるワークシート列のコピー</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_worksheet_cells_by_the_X-Function_.22Wcopy.22_or_.22Wrcopy.22"><span class="tocnumber">2.2</span> <span class="toctext">Xファンクション&quot;Wcopy&quot;または&quot;Wrcopy&quot;によるワークシートセルのコピー</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Wcopy"><span class="tocnumber">2.2.1</span> <span class="toctext">Wcopy</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Wrcopy"><span class="tocnumber">2.2.2</span> <span class="toctext">Wrcopy</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Copy_worksheet_as_HTML.2FEMF_table"><span class="tocnumber">3</span> <span class="toctext">ワークシートをHTML/EMF表としてコピー</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Copy_and_paste_worksheet_values_with_the_context_menus"></a><span class="mw-headline">コンテキストメニューでワークシートの値をコピーして貼り付け</span></h2>
+<h3><a name="Copy_worksheet_values"></a><span class="mw-headline">ワークシートの値をコピー</span></h3>
+<p>ワークシート列を選択し、右クリックして<b>コピー</b>を選択し、次のいずれかを選択します。
+</p>
+<table class="simple">
+
+<tr>
+<th align="left" width="190"> コピー
+</th>
+<td>表示精度でデータをコピー
+</td></tr>
+<tr>
+<th align="left">値をコピー(フル精度)
+</th>
+<td>フル精度でデータをコピー
+</td></tr>
+<tr>
+<th align="left">コピー（ラベル行含む）
+</th>
+<td>元の列のラベルとデータ（表示精度）をコピー
+</td></tr>
+<tr>
+<th align="left">コピー(式)
+</th>
+<td>元の列の式のみコピー
+</td></tr>
+<tr>
+<th align="left">コピー（ラベル行）
+</th>
+<td>元の列のラベル行のみコピー
+</td></tr>
+<tr>
+<th align="left">コピー（式とラベル行)
+</th>
+<td>式とラベル行をコピー
+</td></tr>
+<tr>
+<th align="left" width="190">転置してコピー
+</th>
+<td>コピー時に選択したセルのブロックを転置
+</td></tr>
+<tr>
+<th align="left">すべてコピー
+</th>
+<td>元の列の式、ラベル、データ（フル精度）をコピー
+</td></tr></table>
+<p><br />
+詳細は、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html"><b>FAQ-482:最大の精度でデータをコピーするにはどうしたら良いですか?</b></a>を参照してください。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> Origin 2019bでは、複数のワークシートセルのコピーと貼り付けがMS Excelと同様の動作をするように変更されました。1つのセルをコピーして<i>m</i>個のセルに貼り付けると、<i>m</i>個のセルに貼りつきます。さらに、<i>n</i>個のセルをコピーして<i>n*m</i>個のセルに貼り付けると、コピーした<i>n</i>個のセルの内容を繰り返してセルに値を入力します。新旧の動作を切り替える場合、LabTalkシステム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C"><b>@CPNB</b></a>を使用できます。システム変数の値を変更する方法については、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">このFAQ</a>を参照してください。</li>
+<li> Origin 2024bからは、右クリックメニューの<b>コピー: マスクステータスのコピー</b>をクリックして、マスクステータス（マスクデータポイントの位置）をコピーできます。</li></ul>
+</td></tr></table>
+<h3><a name="Paste_Worksheet_values"></a><span class="mw-headline">ワークシートの値を貼り付け</span></h3>
+<p>Originは、コピーしたワークシートの値を、新しいワークシートセルを貼り付ける際に、様々なオプションを提供しています。 
+</p><p>貼り付け先の最初のセルを選択して右クリックし、目的に応じて以下のメニューから選択します。
+</p>
+<table class="simple">
+
+<tr>
+<th align="left" width="190">貼り付け
+</th>
+<td>コピーしたワークシートセルの値を貼り付け
+</td></tr>
+<tr>
+<th align="left" width="190">貼り付け（挿入）
+</th>
+<td>選択したセルの前にコピーしたワークシートセルを挿入します。
+</td></tr>
+<tr>
+<th align="left" width="190">転置して貼り付け
+</th>
+<td>コピーしたセルブロックを転置して貼り付け
+</td></tr>
+<tr>
+<th align="left" width="190">貼り付け（間隔を空ける）
+</th>
+<td>クリップボードに保持されたデータを分割せずにワークシートのセルに貼り付けます。<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PST = 0</b></a>の場合にのみ表示されます。詳細は<b><a class="external text" href="../../QuickHelp/QuickHelp/Paste_into_Origin_keep_spaces.html">こちらのFAQ</a></b>を参照してください。
+</td></tr>
+<tr>
+<th align="left" width="190">リンクの貼り付け
+</th>
+<td>コピーしたセルをリンクとして貼り付けます。元のセルで値が変更されると貼り付け先の値も自動で更新されます。
+<p>1つのセルのみをコピーした場合、<b><b>編集: リンクの貼り付け</b></b>からそのセルを (連続して) 複数のセルへのリンクとして貼り付けることができます。
+</p>
+</td></tr>
+<tr>
+<th align="left" width="190">リンクの転置貼り付け
+</th>
+<td>コピーしたセルブロックをリンクとして転置して貼り付けます。
+</td></tr></table>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> リンクされたセルが緑色の背景色で塗りつぶされます。そのようなセルをダブルクリックしてインプレース編集モードに入ると、使用される表記が確認できます。例えば、<code>cell://A[6]</code> という表記は、列Aの6番目のセルにリンクしていることを示します。ル A[6] が更新された場合、<code>cell://A[6]</code> のどのセルも自動で更新されます。</li>
+<li> Origin 2019以降、現在のデータセット内のデータポイントをマスクした場合、データセットをコピーして貼り付けると、これらのポイントのマスクステータスが維持されます。なお、このマスクを使用したコピーでは、「転置して貼り付け」、「リンクの貼り付け」、「リンクの転置貼り付け」はサポートされません。<br /><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C">システム変数@CPM</a>を使用すると、マスクの状態を維持せずにデータのコピーするように切り替えることができます。</li>
+<li> MS Excelやメモ帳など、Originの外部にある値(テキストと数値)をコピーし、コピー先の列の最初のセルを選択して<b>貼り付け</b>すると、Originはコピーされた値のラベル行を自動的にに検出し、テキストをラベル行に、残りの数値をデータ領域に配置します。<br /><b>貼り付け（ラベル検出なし）</b>を選択すると、自動検出がオフになり、コピーされたすべての値がデータ領域に配置されます。 </li></ul>
+</td></tr></table>
+<h2><a name="Copy_worksheet_values_by_X-Functions"></a><span class="mw-headline">Xファンクションでワークシートの値をコピー</span></h2>
+<p>上記の直接コピーする方法以外にも、Xファンクションを利用してワークシートの値をコピー・ペーストを実行することもできます。
+</p>
+<h3><a name="Copy_worksheet_columns_by_the_X-Function_.22colcopy.22"></a><span class="mw-headline">Xファンクション&quot;colcopy&quot;によるワークシート列のコピー</span></h3>
+<p><a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>というXファンクションがあります。これは、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Properties_Tab.html#Format" title="ユーザガイド：(列プロパティ) 「プロパティ」タブ">列データフォーマット</a>やラベルのコピーが行え、元の列に対してフィルタが使用されているときの非表示列をコピーするかどうか設定できます。
+</p><p><a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>ダイアログを開くには、メインメニューから<b><b>ワークシート：列をコピー...</b></b>を選択します。
+</p><p><i>または</i> 
+</p><p>列を右クリックし、ショートカットメニューから<b><b>列をコピー...</b></b>を選択します。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>フィルタが適用されると、右クリックの<b><b>コピー</b></b>メニューはデフォルトで非表示の列を無視します。全ての行をコピーするために、デフォルトの設定を変更するには、システム変数@iHR=1にします。詳細は<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">システム変数の一覧</a>を確認してください。
+</p></td></tr></table>
+<h3><a name="Copy_worksheet_cells_by_the_X-Function_.22Wcopy.22_or_.22Wrcopy.22"></a><span class="mw-headline">Xファンクション&quot;Wcopy&quot;または&quot;Wrcopy&quot;によるワークシートセルのコピー</span></h3>
+<p>上記のXファンクション<a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>の他に、Originには、ワークシートのセル(特に選択したデータ行やセルの指定ブロック)内のデータをコピーして、新規または既存のワークシートに貼り付けるための2つのXファンクション<a class="external text" href="../../XFunction/X-Function/Wcopy.html">Wcopy</a> および <a class="external text" href="../../XFunction/X-Function/Wrcopy.html">Wrcopy</a>があります。
+</p>
+<h4><a name="Wcopy"></a><span class="mw-headline">Wcopy</span></h4>
+<p>Xファンクション<a class="external text" href="../../XFunction/X-Function/Wcopy.html">Wcopy</a>は、は特定のワークシート行を指定したワークシートにコピーします。
+</p><p>これを利用して、
+</p>
+<ul><li> すべての行を別のワークシートにコピします。</li>
+<li> ワークシートの行を事前に選択して、ワークシートにのみコピーします。</li>
+<li> 指定したカウントまたはレートでランダムな行をコピーします。</li>
+<li> 出力ワークシートの表示方法を指定します。</li>
+<li> 列の式を含む出力操作を保持するかどうかを指定します。</li></ul>
+<h4><a name="Wrcopy"></a><span class="mw-headline">Wrcopy</span></h4>
+<p>Xファンクション<a class="external text" href="../../XFunction/X-Function/Wrcopy.html">Wrcopy</a>は任意の範囲のワークシートセルを他のワークシートにコピーします。コピーした範囲を貼り付ける出力先のワークシートの場所を指定できます。
+</p>
+<h2><a name="Copy_worksheet_as_HTML.2FEMF_table"></a><span class="mw-headline">ワークシートをHTML/EMF表としてコピー</span></h2>
+<p>ほとんどの場合は、別の場所でワークシートの値が必要なだけです。例えば、データを別のアプリケーションにコピーします。しかし、場合によっては、ワークシート全体をEMF テーブルとして PowerPointスライドにコピーしてプレゼンテーションで使用したり、テキストブックの画像としてエクスポートしたりする必要があります。 
+</p><p><span class='headerInParagraph'>ワークシート全体を画像としてコピーする</span>
+</p>
+<ul><li>ワークシートをアクティブにし、メニューの<b>編集: コピー: HTMLまたはEMFとしてコピー</b> (<b>Ctrl+Shift+G</b>) を選択します。</li></ul>
+<p>データと列ヘッダ (ロングネーム、単位、コメントなどがある場合) を含むワークシート全体と、フォントスタイル、セルの色 (条件付きフォーマットの色を含む)、縞模様の行、表形式、などのHTML 形式がコピーされます。ただし、テキスト形式 (Unicodeテキスト形式およびOEMテキスト形式を含む) は保持されません。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>選択した行/列を HTML/EMF表としてコピーするには、選択を右クリックして<b>表のコピー(HTML, EMF)</b>を選択します。
+</p></td></tr></table>
+
+
+
+    

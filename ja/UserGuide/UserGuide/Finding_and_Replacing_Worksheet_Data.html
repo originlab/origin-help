@@ -1,0 +1,275 @@
+﻿<h1 class="firstHeading">ワークシートデータの検索と置換</h1><p class='urlname' style='display: none'>Wks-Find-Replace-Data</p>
+<p><br />
+ワークシートデータの検索と置換をするには、<b>検索と置換</b>ツールを使用できます。 
+</p>
+<ul>
+<li><b>簡易検索</b>ダイアログを開きます。
+<ul><li> <b>編集：シート内を検索</b>を選択します</li>
+<li> <b>Ctrl</b> + <b>F</b> キーを押します</li>
+<li> ワークシートのミニツールバーにある<b>検索</b>ボタン<a  class="image"><img alt="Popup Find.png" src="../images/Finding_and_Replacing_Worksheet_Data/Popup_Find.png" width="24"  /></a>をクリックします</li></ul>
+</li>
+<li>簡易検索ダイアログの<a  class="image"><img alt="Find More.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_More.png" width="74"  /></a>ボタンをクリックし、<b>検索と置換</b>ダイアログが<b>検索</b>タブが選択された状態で開きます。
+<li>メニューから<b>編集：置換</b>を選択し、<b>置き換え</b>タブが選択された状態で直接開くことができます。
+</ul>
+<p><br />
+このツールは数値データと文字列データの両方を扱うことができます。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Finding_and_Replacing_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p><a class="external text" href="../../XFunction/X-Function/Wreplace.html">wreplace Xファンクション</a>を使用して、ワークシート内の数値や文字列を置き換えることもできます。
+</p></td></tr></table>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Simple_Find_dialog"><span class="tocnumber">1</span> <span class="toctext">簡易検索ダイアログ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#The_Find_tab"><span class="tocnumber">2</span> <span class="toctext">検索タブ</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_Replace_tab"><span class="tocnumber">3</span> <span class="toctext">置き換えタブ</span></a></li>
+</ul>
+</div>
+<p><br />
+</p>
+<h2><a name="Simple_Find_dialog"></a><span class="mw-headline">簡易検索ダイアログ</span></h2>
+<p>このダイアログを使うと、ワークシート内の数値または文字列を検索することができます。
+</p><p><a  class="image"><img alt="Simple Find dialog.png" src="../images/Finding_and_Replacing_Worksheet_Data/Simple_Find_dialog.png" width="342"  /></a>
+</p>
+<ul><li> ダイアログの最小化ボタンをクリックするか、<b>Win</b> + <b>下方向</b>キーを押してダイアログを最小化すると、ワークシートで範囲を選択して、選択した範囲を制限できます。</li>
+<li> <a  class="image"><img alt="Find Previous Button.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_Previous_Button.png" width="74"  /></a>または<a  class="image"><img alt="Find Next Button.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_Next_Button.png" width="74"  /></a>をクリックする以外に、<b>Ctrl</b> + <b>Page Up / Down</b>キーを押して、選択した範囲で前/次を検索できます。</li></ul>
+<h2><a name="The_Find_tab"></a><span class="mw-headline">検索タブ</span></h2>
+<p><b>検索</b>タブを使用して、ワークシート内の数値データまたは文字列データを検索します。
+</p>
+<table class="noborder" style="width: 80%">
+<tr>
+<td style="width: 40%"><a  class="image"><img alt="Find and replace-1.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_and_replace-1.png" width="405"  /></a>
+</td>
+<td style="width: 40%"><a  class="image"><img alt="Find and replace-2.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_and_replace-2.png" width="405"  /></a>
+</td></tr></table>
+<table class="dialogcontroltable">
+<tr>
+<th>データタイプ
+</th>
+<td>
+<p>検索したいデータの種類を指定します。
+</p>
+<ul><li><b>数値</b> </li>
+<li><b>文字列</b> </li></ul>
+</td></tr>
+<tr>
+<th>条件
+</th>
+<td>
+<p>このチェックボックスは、<b>データ種類</b>で<b>数値</b>を選択したときのみ利用可能です。これにより、条件の構築に使用する演算子を指定できます。例えば、<b>条件</b>ドロップダウンリストで<b>&gt;</b>を選択し、 <b>検索内容</b>編集ボックスに<b>3</b>を入力すると、3より大きいデータ値が検索されます。
+</p>
+<ul><li><b>=</b>： 等しい</li>
+<li><b>&lt;</b>：未満 </li>
+<li><b>&lt;=</b>：より大きくない</li>
+<li><b>&gt;</b>：より大きい </li>
+<li><b>&gt;=</b>：より小さくない</li>
+<li><b>!=</b>：等しくない</li></ul>
+</td></tr>
+<tr>
+<th>検索内容
+</th>
+<td>
+<p>検索したい値を指定します。
+</p><p><b>データ種類</b>で<b>数値</b>ラジオボタンが選択されている場合、<b>検索内容</b>編集ボックスの右側にある<b>右三角形</b>ボタン<a  class="image"><img alt="Button Select Data Right Triangle.png" src="../images/Finding_and_Replacing_Worksheet_Data/Button_Select_Data_Right_Triangle.png" width="18"  /></a>をクリックし、ショートカットメニューからオプションを選択できます。
+</p>
+<ul><li><b>-- 欠損値のみ</b>
+<dl><dd>&quot;--&quot;が、<b>検索内容</b>編集ボックスに表示されます。これは欠損値を意味します。</dd></dl></li>
+<li><b>- 欠損値/空セル/テキストセル</b>
+<dl><dd>&quot;-&quot;が、<b>検索内容</b>編集ボックスに表示されます。これは欠落値、空白セル、テキストセルを意味します。</dd></dl></li></ul>
+<p><b>データ種類</b>グループで<b>文字列</b>ラジオボタンを選択すると、検索に次のワイルドカードを使用できます。
+</p>
+<ul><li><b>* 任意の文字列</b>
+<dl><dd>* は任意の長さの文字列を表すために使用できます。例えば、s*d　では &rdquo;sad&rdquo;と&rdquo;started&rdquo;が見つかります。</dd></dl></li>
+<li><b>? 任意の一文字</b>
+<dl><dd>? は<b>検索対象</b>編集ボックスで任意の一文字の代わりとして使用できます。例えば、s?t では&rdquo;sat&rdquo;と&rdquo;set&rdquo;が見つかります。</dd></dl></li>
+<li><b>~の後に&nbsp;?、*、または~</b>
+<dl><dd>&quot;~?&quot; で疑問符を検索、 &quot;~*&quot;でアスタリスクを検索、&quot;~~&quot; でその他のチルダ文字を検索します。</dd></dl></li></ul>
+<p><b>検索内容</b>文字列にワイルドカード&quot;?&quot;や&quot;*&quot;が使用されている場合、検索はセルの内容全体と一致しなければならないことに注意してください(<b>セルの内容全体に一致する</b>かどうかにかかわらず)。
+</p>
+</td></tr>
+<tr>
+<th>検索場所
+</th>
+<td>
+<p><b>検索内容</b>値を検索する場所を指定します。このオプションは、<b>オプション</b>グループ<b>検索・置換を選択領域に限定</b>がチェックされていない場合にのみ利用できます。
+</p>
+<ul><li><b>アクティブワークシート</b>
+<dl><dd> アクティブなワークシートです。</dd></dl></li>
+<li> <b>アクティブワークブック </b>
+<dl><dd>アクティブワークブック内のシート。</dd></dl></li>
+<li><b>アクティブフォルダ中の全ワークブック</b>
+<dl><dd>アクティブフォルダ内のすべてのワークブック（サブフォルダは除く）。</dd></dl></li>
+<li> <b>アクティブフォルダ内のすべてのワークブック（再帰的）</b>
+<dl><dd>アクティブフォルダ内のすべてのブック（サブフォルダも含む）。</dd></dl></li>
+<li> <b>アクティブフォルダ中の全てのワークブック（オープンのもの）</b>
+<dl><dd>アクティブフォルダ内の非表示でないワークブックがすべて。</dd></dl></li>
+<li><b>プロジェクト内の全ワークブック</b>
+<dl><dd>現プロジェクトの全てのワークブック</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>オプション
+</th>
+<td>
+<dl><dd><b>検索・置換を選択領域に限定</b>
+<dl><dd>ダイアログを開く前に範囲を選択している場合、このチェックボックスが利用可能になり、デフォルトで選択されます。このオプションを使用して、検索範囲を選択した範囲に制限するかどうかを指定できます。</dd></dl></dd>
+<dd><b>絶対値で検索する</b>
+<dl><dd><b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。このオプションを使用して、条件に対してセルの絶対値を使用するかどうかを指定します。 </dd></dl></dd>
+<dd><b>上に向かって検索する</b>
+<dl><dd>上方向に検索するかどうかを指定します。</dd></dl></dd>
+<dd><b>許容値</b>
+<dl><dd> <b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。このオプションを使用して、ワークシートデータ値と検索する値との間の許容誤差を指定します。Originでは、2つの数値aとbが次の条件を満たす場合に等しいと見なします：<img src="../images/Finding_and_Replacing_Worksheet_Data/math-787c60d1b0621710da1889513e738f8f.png" title="\frac{\mid a-b\mid }{\mid a\mid +\mid b\mid }&lt;Tolerance" alt="\frac{\mid a-b\mid }{\mid a\mid +\mid b\mid }&lt;Tolerance" class="tex"/></dd></dl></dd>
+<dd><b>セル式内のみを検索</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。セルの数式内のみを検索する場合に使用します。数式を表示（<b>式を表示</b>ミニツールバーを選択）したり、<b>編集モード</b>（<b>編集: 編集モード</b>）に切り替える必要はありません。<br />セルリンクも検索に含める場合は、このチェックボックスを外します。</dd></dl></dd>
+<dd><b>ノートを含める</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されていて、<b>セル式内のみを検索</b>にチェックを付けていない場合に利用できます。検索時にワークシートのセルに埋め込まれたノートを含めるかどうかを指定します。なお、この場合はセルコメントの注釈は含まれません。</dd></dl></dd>
+<dd><b>検索時にワークシートのセルに埋め込まれたノートを含めるかどうかを指定します</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。検索で大文字と小文字を区別するかどうかを指定します。</dd></dl></dd>
+<dd><b>セルの内容全体を一致させる</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。<b>検索内容</b>の値をセルの内容全体と比較するかどうかを指定します。このチェックボックスを選択すると、<b>検索内容</b>文字列がセル全体と一致する場合にのみ見つかったと見なされます。</dd></dl></dd>
+<dd><b>ラベル行を含める</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。検索範囲に列ラベル行を含めるかどうかを指定します。 </dd></dl></dd></dl>
+</td></tr>
+<tr>
+<th>次を検索
+</th>
+<td>
+<p>検索条件に一致する値の次の出現を検索します。
+</p>
+</td></tr></table>
+<h2><a name="The_Replace_tab"></a><span class="mw-headline">置き換えタブ</span></h2>
+<p><b>置き換え</b>タブを使用して、数値または文字列値を別の値に置換できます。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Finding_and_Replacing_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>数値を文字列に置き換えるには、<b>文字列</b>を選択し、<b>セルの内容全体を一致させる</b>ボックスをチェックします。
+</p>
+<dl><dd><a  class="image"><img alt="OH replace numeric with string.png" src="../images/Finding_and_Replacing_Worksheet_Data/OH_replace_numeric_with_string.png" width="321"  /></a></dd></dl>
+</td></tr></table>
+<table class="noborder" style="width: 80%">
+<tr>
+<td style="width: 40%"><a  class="image"><img alt="Find and replace-3.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_and_replace-3.png" width="405"  /></a>
+</td>
+<td style="width: 40%"><a  class="image"><img alt="Find and replace-4.png" src="../images/Finding_and_Replacing_Worksheet_Data/Find_and_replace-4.png" width="405"  /></a>
+</td></tr></table>
+<table class="dialogcontroltable">
+<tr>
+<th>データタイプ
+</th>
+<td>
+<p>置換したいデータの種類を指定します。
+</p>
+<ul><li><b>数値</b> </li>
+<li><b>文字列</b></li></ul>
+</td></tr>
+<tr>
+<th>条件
+</th>
+<td>
+<p>このチェックボックスは、<b>データ種類</b>で<b>数値</b>を選択したときのみ利用可能です。これにより、条件の構築に使用する演算子を指定できます。例えば、<b>条件</b>ドロップダウンリストで<b>&gt;</b>を選択し、 <b>検索内容</b>編集ボックスに<b>3</b>を入力すると、3より大きいデータ値が検索されます。
+</p>
+<ul><li><b>=</b>： 等しい</li>
+<li><b>&lt;</b>：未満 </li>
+<li><b>&lt;=</b>：より大きくない</li>
+<li><b>&gt;</b>：より大きい </li>
+<li><b>&gt;=</b>：より小さくない</li>
+<li><b>!=</b>：等しくない</li></ul>
+</td></tr>
+<tr>
+<th>検索内容
+</th>
+<td>
+<p>置換したい値を指定します。
+</p><p><b>データ種類</b>で<b>数値</b>ラジオボタンが選択されている場合、<b>検索内容</b>編集ボックスの右側にある<b>右三角形</b>ボタン<a  class="image"><img alt="Button Select Data Right Triangle.png" src="../images/Finding_and_Replacing_Worksheet_Data/Button_Select_Data_Right_Triangle.png" width="18"  /></a>をクリックし、ショートカットメニューからオプションを選択できます。
+</p>
+<ul><li><b>-- 欠損値のみ</b>
+<dl><dd>&quot;--&quot;が、<b>検索内容</b>編集ボックスに表示されます。これは欠損値を意味します。</dd></dl></li>
+<li><b>- 欠損値/空セル/テキストセル</b>
+<dl><dd>&quot;-&quot;が、<b>検索内容</b>編集ボックスに表示されます。これは欠落値、空白セル、テキストセルを意味します。</dd></dl></li></ul>
+<p><b>データ種類</b>グループで<b>文字列</b>ラジオボタンを選択すると、検索に次のワイルドカードを使用できます。
+</p>
+<ul><li><b>* 任意の文字列</b>
+<dl><dd>* は任意の長さの文字列を表すために使用できます。例えば、s*d　では &rdquo;sad&rdquo;と&rdquo;started&rdquo;が見つかります。</dd></dl></li>
+<li><b>? 任意の一文字</b>
+<dl><dd>? は<b>検索対象</b>編集ボックスで任意の一文字の代わりとして使用できます。例えば、s?t では&rdquo;sat&rdquo;と&rdquo;set&rdquo;が見つかります。</dd></dl></li>
+<li><b>~の後に&nbsp;?、*、または~</b>
+<dl><dd>&quot;~?&quot; で疑問符を検索、 &quot;~*&quot;でアスタリスクを検索、&quot;~~&quot; でその他のチルダ文字を検索します。</dd></dl></li></ul>
+<p><b>検索</b>文字列にワイルドカード&quot;?&quot;や&quot;*&quot;が使用されている場合、検索はセルの内容全体と一致しなければならないことに注意してください(<b>セルの内容全体を一致させる</b>かどうかにかかわらず)。
+</p>
+</td></tr>
+<tr>
+<th>置換先
+</th>
+<td>
+<p>見つかった値の置換後の新しい値を指定します。
+</p>
+</td></tr>
+<tr>
+<th>検索場所
+</th>
+<td>
+<p>置換する値を検索する範囲を指定します。このオプションは、<b>オプション</b>グループ<b>検索・置換を選択領域に限定</b>がチェックされていない場合にのみ利用できます。
+</p>
+<ul><li><b>アクティブワークシート</b>
+<dl><dd> アクティブなワークシートです。</dd></dl></li>
+<li> <b>アクティブワークブック </b>
+<dl><dd>アクティブワークブック内のシート。</dd></dl></li>
+<li><b>アクティブフォルダ中の全ワークブック</b>
+<dl><dd>アクティブフォルダ内のすべてのワークブック（サブフォルダは除く）。</dd></dl></li>
+<li> <b>アクティブフォルダ内のすべてのワークブック（再帰的）</b>
+<dl><dd>アクティブフォルダ内のすべてのブック（サブフォルダも含む）。</dd></dl></li>
+<li> <b>アクティブフォルダ中の全てのワークブック（オープンのもの）</b>
+<dl><dd>アクティブフォルダ内の非表示でないワークブックがすべて。</dd></dl></li>
+<li><b>プロジェクト内の全ワークブック</b>
+<dl><dd>現プロジェクトの全てのワークブック</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>オプション
+</th>
+<td>
+<dl><dd><b>検索・置換を選択領域に限定</b>
+<dl><dd>ダイアログを開く前に範囲を選択している場合、このチェックボックスが利用可能になり、デフォルトで選択されます。このオプションを使用して、検索範囲を選択した範囲に制限するかどうかを指定できます。</dd></dl></dd>
+<dd><b>絶対値で検索する</b>
+<dl><dd><b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。このオプションを使用して、条件に対してセルの絶対値を使用するかどうかを指定します。 </dd></dl></dd>
+<dd><b>元の正負符号を保持する</b>
+<dl><dd><b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。条件が満たされた場合に、見つかった値の元の符号を保持するかどうかを指定します。</dd></dl></dd>
+<dd><b>条件に合わないものを欠落値に変える</b>
+<dl><dd><b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。このチェックボックスを選択すると、条件を満たさない値が欠損値として設定されます。</dd></dl></dd>
+<dd><b>上に向かって検索する</b>
+<dl><dd>上方向に検索するかどうかを指定します。</dd></dl></dd>
+<dd><b>許容値</b>
+<dl><dd> <b>数値</b>の<b>データタイプ</b>が選択されている場合にのみ利用可能です。このオプションを使用して、ワークシートデータ値と検索する値との間の許容誤差を指定します。Originでは、2つの数値aとbが次の条件を満たす場合に等しいと見なします：<img src="../images/Finding_and_Replacing_Worksheet_Data/math-787c60d1b0621710da1889513e738f8f.png" title="\frac{\mid a-b\mid }{\mid a\mid +\mid b\mid }&lt;Tolerance" alt="\frac{\mid a-b\mid }{\mid a\mid +\mid b\mid }&lt;Tolerance" class="tex"/></dd></dl></dd>
+<dd><b>セル式内のみを検索</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。セルの数式内のみを検索する場合に使用します。数式を表示（<b>式を表示</b>ミニツールバーを選択）したり、<b>編集モード</b>（<b>編集: 編集モード</b>）に切り替える必要はありません。<br />セルリンクも検索に含める場合は、このチェックボックスを外します。</dd></dl></dd>
+<dd><b>大文字と小文字を区別する</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。検索で大文字と小文字を区別するかどうかを指定します。</dd></dl></dd>
+<dd><b>セルの内容全体を一致させる</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。<b>検索内容</b>の値をセルの内容全体と比較するかどうかを指定します。このチェックボックスを選択すると、<b>検索内容</b>文字列がセル全体と一致する場合にのみ見つかったと見なされます。 </dd></dl></dd>
+<dd><b>ワイルドカード文字を使う</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。<b>検索内容</b>の中でワイルドカード（<b>?</b> と <b>*</b>）を使用するかどうかを指定します。このチェックボックスを選択すると、「セルの内容全体を一致させる」のチェックボックスは無効になります。 </dd></dl></dd>
+<dd><b>ラベル行を含める</b>
+<dl><dd><b>文字列</b>の<b>データ種類</b>が選択されている場合にのみ利用可能です。これを使用して、検索範囲に列ラベル行を含めるかどうかを指定します。 </dd></dl></dd></dl>
+</td></tr>
+<tr>
+<th>次を検索
+</th>
+<td>
+<p>次の<b>検索内容</b>の値を検索します。
+</p>
+</td></tr>
+<tr>
+<th>置換
+</th>
+<td>
+<p>現在検出された値を置換します。
+</p>
+</td></tr>
+<tr>
+<th>全て置換
+</th>
+<td>
+<p><b>検索内容</b>値のすべての出現箇所を置換します。 
+</p>
+</td></tr></table>
+
+
+    

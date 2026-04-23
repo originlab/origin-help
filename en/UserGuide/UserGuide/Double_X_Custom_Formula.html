@@ -1,0 +1,45 @@
+<h1 class="firstHeading">29.6.5 Double X - Custom Formula Graph</h1><p class='urlname' style='display: none'>DoubleX-CustomFormula</p>
+<dl><dd><a  class="image"><img alt="Double X Custom Formula 01.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_01.png?v=98391" width="700"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select at least XY columns to create a Double X plot, where the 2nd X axis is functionally mapped to the first. 
+</p><p>Ideal for displaying data in different units, such as temperature (°C/°F/K), wavelength and wavenumber.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>Select <span class="menu">Plot &gt; Multi-Panel, Multi-Axis: Double X – Custom Formula</span> from the main menu.
+</p><p>A dialog will pop up to let you set the secondary axis:
+</p>
+<dl><dd><a  class="image"><img alt="Double X Custom Formula 02.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_02.png?v=98395" width="380"  /></a></dd></dl>
+<p>There are two method to functionally mapped the double X axes: <b>Independent Ticks</b> and <b>Share Ticks</b>.
+</p>
+<ul><li> <b>Independent Ticks</b>: Selecting this type to allow you to enter <b>Direct Formula</b> and <b>Inverse Formula</b> to represents the secondary X axis in another layer without Y axis. The tick position is decided by the secondary axis itself. You can specify whether share Y range between these two layers.
+<dl><dd> For more details, you can refer to the scale type <b>Custom Formula</b> in <a href="../../UserGuide/UserGuide/Scale_2.html#Type" title="UserGuide:Scale 2"><b>Scale</b> tab of <b>Axis</b> dialog</a>. </dd></dl></li>
+<li> <b>Share Ticks</b>:Selecting this type to show shared ticks on secondary X axis of current layer, and the tick labels are decided by the formula you entered.</li></ul>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>dxcform.otpu (installed in the Origin program folder). 
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>This graph contains two layers if you select <b>Functionally Mapped - Independent Ticks</b> as <b>Double X Type</b>, the secondary X axis will be added to the second layer. If you selected <b>Functionally Mapped - Share Ticks</b>, only one layer will be plotted with both bottom X axis and Top X axis which share tick position and with different tick labels related to the specified formula.
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2026
+</td></tr></table>
+
+
+
+
+
+

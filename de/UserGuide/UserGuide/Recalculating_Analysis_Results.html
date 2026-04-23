@@ -1,0 +1,409 @@
+﻿<h1 class="firstHeading">Analyseergebnisse neu berechnen</h1>
+
+  <p class='urlname' style='display: none'>AnalyDialog-Recalculate</p>
+
+  <p>Alle Analysehilfsmittel und die meisten anderen Datenverarbeitungsdialoge enthalten die Funktion <b>Neu berechnen</b>, die sich normalerweise obven im Dialog befindet, wo Sie Ihre Eingabedaten festlegen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Image1002.png" src="../images/Recalculating_Analysis_Results/Image1002.png" width="277"></a></dd>
+  </dl>
+
+  <p>Verwenden Sie dieses operationsspezifische Bedienelement, um zu bestimmen, wie die Software Änderungen an den Eingabedaten behandelt. Wählen Sie einen der drei Modi -- <b>Kein</b>, <b>Auto</b> und <b>Manuell</b> (siehe Tabelle unten). Zusammengefasst gibt es folgende Optionen: <b>Kein</b> = keine Neuberechnung, <b>Auto</b> = Neuberechnung automatisch auslösen und <b>Manuell</b> = Neuberechnung manuell auslösen.</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1">
+        <a href="#Modes_for_Recalculate"><span class="tocnumber">1</span> <span class="toctext">Modi für Neuberechnung</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-2"><a href="#Recalculate_Toolbar_Buttons_and_Operation_Lock_Icons"><span class="tocnumber">1.1</span> <span class="toctext">Symbolleistenschaltflächen neu berechnen und Schlosssymbole der Operationen</span></a></li>
+
+          <li class="toclevel-2 tocsection-3"><a href="#Context_Menu_for_Locked_Operations"><span class="tocnumber">1.2</span> <span class="toctext">Kontextmenü für gesperrte Operationen</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Remove_Locked_Operations"><span class="tocnumber">2</span> <span class="toctext">Gesperrte Operationen entfernen</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Modes_for_Recalculate"></a><span class="mw-headline">Modi der Neuberechnung</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Kein</th>
+
+      <td>
+        <p>Wird <b>Neu berechnen</b> auf <b>Keine</b> gesetzt, ist die Ausgabe von den Eingabedaten getrennt. Nachfolgende Änderungen an den Eingabedaten führen zu keiner Aktualisierung der ursprünglichen Ausgabedaten. Außerdem ist es nicht möglich, den Dialog mit dem Kontextmenübefehl <b>Parameter ändern</b> (siehe unten) erneut zu öffnen und Anpassungen an den Analyseparametern vorzunehmen (der Dialog <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues"><b>Werte setzen</b></a> ist die einzige Ausnahme).</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Auto</th>
+
+      <td>
+        <p>Wird <b>Neu berechnen</b> auf <b>Automatisch</b> gesetzt, werden die Ergebnisse automatisch aktualisiert, wenn sich die Eingabedaten ändern.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Manuell (Standard)</th>
+
+      <td>
+        <p>Wird <b>Neu berechnen</b> auf <b>Manuell</b> gesetzt, können Sie eine Aktualisierung manuell herbeiführen, nachdem sich die Eingabedaten geändert haben.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h3><a name="Recalculate_Toolbar_Buttons_and_Operation_Lock_Icons"></a><span class="mw-headline">Symbolleistenschaltflächen neu berechnen und Schlosssymbole der Operationen</span></h3>
+
+  <p>Die Anwesenheit der Neuberechnungsoperationen in einem Origin-Projekt erzeugt mehrere visuelle Hinweise für den Anwender:</p>
+
+  <ul>
+    <li>Wenn das Projekt die Ausgabe einer <i>beliebigen</i> Zeichen- oder Analyseoperation enthält, für der <b>Modus des Neuberechnung</b> auf <b>Manuell</b> oder <b>Auto</b> gesetzt wurde, dann ist die Schaltfläche <b>Neu berechnen</b> auf der Standardsymbolleiste aktiviert.</li>
+  </ul>
+
+  <dl>
+    <dd>
+      <dl>
+        <dd><a class="image"><img alt="Recalculation On vs Off.png" src="../images/Recalculating_Analysis_Results/Recalculation_On_vs_Off.png" width="224"></a></dd>
+      </dl>
+    </dd>
+  </dl>
+
+  <ul>
+    <li>Ein "Schloss"symbol (z. B. <a class="image"><img alt="Icon Recalculate Auto.png" src="../images/Recalculating_Analysis_Results/Icon_Recalculate_Auto.png" width="14"></a>) wird zu allen Ausgabedatensätzen hinzugefügt, die durch eine Berechnung mit den Eingabedaten verknüpft sind. Das Schlosssymbol zeigt dem Anwender, dass <i>dies eine Analyseausgabe ist</i>, die nicht manuell bearbeitet werden kann.</li>
+
+    <li>Gibt es viele Neuberechnungsoperationen in Ihrer Projektdatei, kann Ihre Arbeit verlangsamt werden.
+
+      <ul>
+        <li>Pausieren Sie alle Neuberechnungen in der Sitzung, indem Sie auf die Schaltfläche <b>Automatische Aktualisierung/Neuberechnung pausieren</b> <a class="image"><img alt="Button Recalculate Pause.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Pause.png" width="25"></a> auf der Standardsymbolleiste klicken (Tastenkombination <b>Strg + 0</b>).</li>
+
+        <li>Sie können die Neuberechnung in der Sitzung auch aussetzen, indem Sie den <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">Wert der Systemvariablen</a> <b>@AU</b> = <i>0</i> setzen. Beachten Sie, dass der <a class="external text" href="../../GettingStarted/OriginLab/The_Origin_Interface.html#The_Status_Bar">Statusbalken</a> <b>AU: AUS</b> anzeigt, wenn die Berechnungen gesperrt sind.</li>
+
+        <li>Sie können die Neuberechnung von <i>einzelnen</i> Operationen sperren, indem Sie auf das zugehörige Schlosssymbol klicken und die Option <b>Neuberechnung sperren</b> im Popupmenü wählen.</li>
+      </ul>
+    </li>
+
+    <li>Bei Diagrammen, die alle Neuberechnungen einschließen, werden alle Schlösser (z. B <a class="image"><img alt="Icon Recalculate Auto.png" src="../images/Recalculating_Analysis_Results/Icon_Recalculate_Auto.png" width="14"></a>) oben links vom Diagrammfenster angezeigt, an den entsprechenden Layersymbolen ausgerichtet. Sie können im Menü <b>Daten: Schlossposition: Layersymbol/Erster Punkt/Letzter Punkt</b> wählen, um die Position zu ändern.
+
+      <ul>
+        <li>Beachten Sie, dass nur die Schlösse für sichtbare Zeichnungen in einem Diagramm gezeigt werden. Das bedeutet, falls eine Zeichnung verborgen ist, dass das mit dieser Zeichnung verknüpfte Schloss ebenfalls verborgen wird.</li>
+      </ul>
+    </li>
+
+    <li>Das Festlegen von <b>Modus Neuberechung</b> = <b>Keine</b> löscht die Operation.</li>
+
+    <li>Das Löschen der Eingabe einer Operation löscht die Ausgabe.</li>
+  </ul>
+
+  <p><br>
+  Die folgende Tabelle fasst die verschiedenen Neuberechnungsschaltflächen und -symbole zusammen und erläutert ihre jeweilige Bedeutung.</p>
+
+  <table class="simple" style="width: 90%">
+    <tr>
+      <th style="width: 15%">Schaltfläche / Symbol</th>
+
+      <th style="width: 75%">Beschreibung</th>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button Recalculate Auto.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Auto.png" width="22"></a></td>
+
+      <td>Befindet sich auf der Symbolleiste <b>Standard</b>. Eine grüne Schaltfläche signalisiert, dass es keine Neuberechnungsoperationen gibt, die für das Projekt ausstehen.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button Recalculate Manual.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Manual.png" width="22"></a></td>
+
+      <td>Befindet sich auf der Symbolleiste <b>Standard</b>. Eine gelbe Schaltfläche signalisiert, dass es manuelle Neuberechnungsoperationen gibt, die für das Projekt ausstehen.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button Recalculate Off.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Off.png" width="25"></a></td>
+
+      <td>Befindet sich auf der Symbolleiste <b>Standard</b>. Eine abgeblendete Schaltfläche signalisiert, dass die Neuberechnungsoperationen entweder nicht im Projekt existieren oder in der Sitzung gesperrt sind (siehe oben).</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button Recalculate Pause.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Pause.png" width="25"></a></td>
+
+      <td>Befindet sich auf den Symbolleisten <b>Standard</b> und <b>Automatisch aktualisieren</b>. Wenn sie angeklickt wird, wird die Schaltfläche Neuberechnung (grün oder gelb) abgeblendet und die Operationen werden angehalten, bis erneut auf die Schaltfläche geklickt wird.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Operation lock auto.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto.png" width="14"></a></td>
+
+      <td>
+        Verbundene Operationen werden auf <b>Neu berechnen</b> = <b>Auto</b> gesetzt. Keine ausstehenden Operationen. Das Schloss der Hauptoperation wird auf der Spalte ganz links als <a class="image"><img alt="Operation lock auto.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto.png" width="14"></a> angezeigt, während alle verbundenen Operationsspalten rechts von der Hauptoperation das Symbol "+" <a class="image"><img alt="Operation lock auto related.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related.png" width="11"></a> aufweisen. Wenn Sie die Maus über das zugehörige Schloss bewegen, wird ein Tooltipp angezeigt, das auf das Hauptoperationsschloss verweist.
+
+        <dl>
+          <dd><a class="image"><img alt="Operation lock auto related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related_tooltip.png" width="379"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Operation lock manual.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual.png" width="13"></a></td>
+
+      <td>
+        Verbundene Operationen werden auf <b>Neu berechnen</b> = <b>Manuell</b> gesetzt. Keine ausstehenden Operationen. Anfänglich werden alle manuellen Neuberechnungen grün angezeigt. Die verbundenen aktualisierten Operationsspalten rechts von der Hauptoperation zeigt das Symbol "+" <a class="image"><img alt="Operation lock auto related.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related.png" width="11"></a> an. Wenn Sie die Maus über das zugehörige Schloss bewegen, wird ein Tooltipp angezeigt, das auf das Hauptoperationsschloss verweist.
+
+        <dl>
+          <dd><a class="image"><img alt="Operation lock manual related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_related_tooltip.png" width="379"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Operation lock manual pending.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_pending.png" width="14"></a></td>
+
+      <td>Verbundene Operationen werden auf <b>Neu berechnen</b> = <b>Manuell</b> gesetzt. Wenn die Eingabe für die aktuellen manuellen Operationen sich ändert, wechselt das Symbol von grün zu gelb. Die verbundenen ausstehenden Operationsspalten rechts von der Hauptoperation zeigt das Symbol "+" an. <a class="image"><img alt="Operation lock manual related.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_related.png" width="13"></a></td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Gray lock pro only.png" src="../images/Recalculating_Analysis_Results/Gray_lock_pro_only.png" width="15"></a></td>
+
+      <td>Wenn ein Schlosssymbol dunkelgrau mit der Farbe angezeigt wird, ist das ein Hinweis darauf, dass die zugehörige Operation in <a class="external text" href="https://www.originlab.com/index.aspx?go=Products/Origin" target="_blank">OriginPro</a> in durchgeführt wurde und das Fenster oder Projekt in der Standardversion von Origin geöffnet wurde. Die Operation wird von der Standardversion von Origin nicht unterstützt. Um die Analyse zu modifizieren oder erneut durchzuführen, benötigen Sie einen Computer mit einer OriginPro-Lizenz.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Broken operation lock.png" src="../images/Recalculating_Analysis_Results/Broken_operation_lock.png" width="15"></a></td>
+
+      <td>Ein rotes Schlosssymbol signalisiert, dass etwas aufgetreten ist, dass eine weitere Neuberechnung verhindert. Diese Zustände treten selten auf, tun dies aber, wenn Sie beispielsweise eine Projektdatei, die eine benutzerdefinierte Kurvenanpassungsoperation enthält, an einen Kollegen weitergeben, dabei aber vergessen, Ihre benutzerdefinierte Anpassungsfunktion mitzugeben.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button block recalculation auto.png" src="../images/Recalculating_Analysis_Results/Button_block_recalculation_auto.png" width="15"></a></td>
+
+      <td>Das Verwenden einer Sperre für aktuelle Neuberechnungen platziert ein grünes "Sperrsymbol" auf allen zugehörigen Operationen in der Kette.</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="Button block recalculation manual.png" src="../images/Recalculating_Analysis_Results/Button_block_recalculation_manual.png" width="15"></a></td>
+
+      <td>Das Verwenden einer Sperre für ausstehende Neuberechnungen oder das Ändern der Eingabe für eine gesperrte aktuelle Neuberechnungsoperation platziert ein gelbes "Sperrsymbol" auf allen zugehörigen Operationen in der Kette.</td>
+    </tr>
+  </table>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Recalculating_Analysis_Results/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Wenn Sie keine der oben beschriebenen Schaltflächen sehen, können Sie den <a href="../../UserGuide/UserGuide/The_Customize_Toolbar_Dialog_Box.html" title="UserGuide:The Customize Toolbar Dialog Box">Dialog <b>Anpassen</b> (Symbolleisten)</a> öffnen und die Schaltfläche(n) zum Arbeitsbereich hinzufügen.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h3><a name="Context_Menu_for_Locked_Operations"></a><span class="mw-headline">Kontextmenü für gesperrte Operationen</span></h3>
+
+  <p>Sie können auf ein Schlosssymbol in einer Grafik oder einem Berichtsblatt klicken und ein Kontextmenü öffnen. Die aufgelisteten Optionen werden in der folgenden Tabelle erklärt. Die Menüoptionen hängen von der Operation ab.</p>
+
+  <dl>
+    <dd>
+      <dl>
+        <dd><a class="image"><img alt="Recalculate icon context menu.png" src="../images/Recalculating_Analysis_Results/Recalculate_icon_context_menu.png" width="425"></a></dd>
+      </dl>
+    </dd>
+  </dl>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Modus der Neuberechnung</th>
+
+      <td>
+        <p>Die Ergebnisspalten/-blätter werden neu berechnet und die Ergebnisse aktualisiert. Wenn ein Schloss grün ist (<b>Auto</b> oder <b>Manuell</b>), wird die Option <b>Neu berechnen</b> abgeblendet.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Parameter ändern</th>
+
+      <td>
+        <p>Öffnet den ursprünglichen Dialog zum Ändern der Einstellungen.</p>
+
+        <p>Wenn das Arbeitsblatt (Berichtsblatt) oder Diagramm ein grünes Neuberechnungsschloss zeigt, können Sie auch die Tastenkombinationen <b>Strg + F10</b> oder <b>Strg + Klick auf grünes Schlosssymbol</b> verwenden, um den ursprünglichen Dialog erneut zu öffnen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Löschen</th>
+
+      <td>
+        <p>Löscht alle Ausgabeergebnisse, die mit dieser Operation zusammenhängen. Ergebnisse können nach dem Löschen nicht wiederhergestellt werden.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Gehe zu Quelle</th>
+
+      <td>
+        <p>Wechselt zu dem Arbeitsblatt, das die Eingabedaten dieser Operation enthält.</p>
+
+        <p>Wenn diese Operation mehrere Quellarbeitsblätter hat, wechselt Origin zum ersten. Wenn diese Operation über mehrere Schloss-Symbole verfügt, wechselt Origin zum ersten Ergebnisblatt dieser Operation. (um die sich überschneidenden Schloss-Symbole zu unterscheiden, ändern Sie die Position des Schloss-Symbols über das <b>Layersymbol</b> in <b>Erster Punkt</b> oder <b>Letzter Punkt</b>, indem Sie <b>Daten: Position feststellen: Erster Punkt/Letzter Punkt</b>.)</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Diagramm gehen</th>
+
+      <td>
+        <p>Gehen Sie zum Quelldiagramm, das die Eingabezeichnung enthält. <b>Hinweis:</b> Dieses Elemente ist nur verfügbar, wenn diese Operation von einem Diagrammfenster aus gestartet wird.</p>
+
+        <p>Wenn diese Operation mehrere Quelldiagramme hat, geht Origin zum ersten. Wenn diese Operation über mehrere Schlosssymbole verfügt, geht Origin zum ersten Ergebnisdiagramm dieser Operation. (um die sich überschneidenden Schloss-Symbole zu unterscheiden, ändern Sie die Position des Schloss-Symbols über das <b>Layersymbol</b> in <b>Erster Punkt</b> oder <b>Letzter Punkt</b>, indem Sie <b>Daten: Position feststellen: Erster Punkt/Letzter Punkt</b>.)</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Gehe zu Ergebnissen</th>
+
+      <td>
+        <p>Es wird zum Ergebnisblatt dieser Operation gewechselt. Dieses Menü ist verfügbar, wenn ein Diagrammfenster aktiv ist.</p>
+
+        <p>Wenn diese Operation mehrere Ergebnisblätter hat, wechselt Origin zum ersten. Wenn diese Operation über mehrere Schloss-Symbole verfügt, wechselt Origin zum ersten Ergebnisblatt dieser Operation.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Analysemarkierung verbergen</th>
+
+      <td>
+        <p>Steuern Sie die Anzeige der <a class="external text" href="https://www.originlab.com/Index.aspx?go=Support%2fVideoTutorials&amp;pid=2024" target="_blank"><b>Analysemarker</b></a> im Diagrammfenster. Nur im Kontextmenü des Diagrammfensters</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Eingabedaten mit Datenmarkern zeichnen</th>
+
+      <td>
+        <p>Zeichnen Sie die Eingabedaten mit <a class="external text" href="https://www.originlab.com/Index.aspx?go=Support%2fVideoTutorials&amp;pid=2024" target="_blank"><b>Datenmarkern</b></a> in einem neuen Diagrammfenster. Nur im Kontextmenü des Arbeitsblatts</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Modus Neu berechnen: Manuell/Automatisch/Kein</th>
+
+      <td>
+        <p>Der gewählte Modus wird mit einem Häkchen markiert. Ändern Sie den Modus, indem Sie eine andere Option auswählen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Sperren Sie die Neuberechnung.</th>
+
+      <td>
+        <p>Klicken Sie auf <b>Neuberechnungen sperren</b>, um die Neuberechnung für diese Operation und alle anderen Operationen in der Kette auszusetzen. Für ausstehende Neuberechnungen wird ein gelbes "Sperrsymbol" <a class="image"><img alt="Button block recalculation manual.png" src="../images/Recalculating_Analysis_Results/Button_block_recalculation_manual.png" width="15"></a> auf jeder zugehörigen Operation in der Kette platziert. Das Verwenden einer Sperre für aktuelle Neuberechnungen platziert ein grünes "Sperrsymbol“ <a class="image"><img alt="Button block recalculation auto.png" src="../images/Recalculating_Analysis_Results/Button_block_recalculation_auto.png" width="15"></a> auf allen zugehörigen Operationen in der Kette. Um die Sperre zu entfernen, klicken Sie auf das "Sperr"symbol und deaktivieren Sie das Häkchen. (Beachten Sie, dass gesperrte Operationen durch Klicken auf die gelbe Schaltfläche <b>Neu berechnen</b> <a class="image"><img alt="Button Recalculate Manual.png" src="../images/Recalculating_Analysis_Results/Button_Recalculate_Manual.png" width="22"></a> auf der Standardsymbolleiste nicht aktualisiert werden). Wenn die Neuberechnung gesperrt ist, sind die anderen in dieser Tabelle aufgeführten Menüoptionen nicht verfügbar.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Verborgene Zeilen ignorieren</th>
+
+      <td>
+        <p>Wählen Sie diese Option im Untermenü, um verborgene Zeilen während der nachfolgenden Zeichen- und Analyseoperation zu ignorieren oder einzuschließen (gefilterte Daten). <b>Auto</b> bedeutete, dass der Einstellung <b>Verborgene Zeilen beim Zeichnen und Analysieren ignorieren</b> auf der <a href="../../UserGuide/UserGuide/Miscellaneous_tab_of_Worksheet_Properties.html" title="UserGuide:Miscellaneous tab of Worksheet Properties">Registerkarte Verschiedenes</a> im Dialog <b>Arbeitsblatteigenschaften</b> gefolgt wird.</p>
+
+        <p>Beachten Sie, dass die Hilfsmittel <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues"><b>Werte setzen</b></a> und <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Spalten kopieren into</b></a>, die X-Funktion nlbegin und die Operation mit einer Matrix als Eingabe dieses Menü nicht unterstützen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Informationen anzeigen</th>
+
+      <td>
+        <p>Schreiben Sie Anmerkungen und Informationen über Eingabe/Ausgabe in das Skriptfenster.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Design speichern unter</th>
+
+      <td>
+        <p>Speichern Sie zugehörige Analysedialogparameter als ein <a href="../../UserGuide/UserGuide/Dialog_Themes.html" title="UserGuide:Dialog Themes">Design</a>, das verwendet werden kann, um die gleiche Operation für neue Datensätze zu wiederholen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Operation kopieren</th>
+
+      <td>
+        <p>Die Analyseoperation der aktuellen Kurve wird für andere Diagramme kopiert, wenn eine 2D- und 3D-Anpassungsanalyse, mit Ausnahme einer multiplen linearen Anpassung, durchgeführt wird. Um die Analyseoperation einzufügen, klicken Sie mit der rechten Maustaste auf die Zielzeichnung, die gruppierten Zeichnungen, den Layer oder die gesamte Grafik und wählen Sie <b>Operation einfügen</b> im Kontextmenü. Beachten Sie, dass Origin keine unterschiedlichen Arten von Dateneingaben zulässt, um eine Operation einzufügen. Weitere Einzelheiten finden Sie unter <a href="../../UserGuide/UserGuide/Copy_Paste_Operation.html" title="UserGuide:Copy Paste Operation">Operation kopieren/einfügen</a>.</p>
+
+        <p>Dieses Menü ist nicht für die Neuberechnung von Matrixdaten verfügbar.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Operation duplizieren</th>
+
+      <td>
+        <p><b>Neuberechnen</b> ist nützlich bei Datenänderungen. <b>Operation kopieren</b> ist nützlich zum Anwenden einer Analyse auf andere Diagramme. <b>Diese Operation duplizieren</b> ist nützlich zum Vergleichen von Ergebnissen nach Änderung der Operationsparameter. Führen Sie Ihre anfängliche Operation durch, klicken Sie dann auf das Schloss und wählen Sie <b>Diese Operation duplizieren</b>. Dies fügt (a) ein neues Operationsschloss zum Diagrammfenster oder (b) einen neuen Satz Ausgabeblätter zur Arbeitsmappe hinzu. Klicken Sie auf ein neu hinzugefügtes Schlosssymbol und ändern Sie die Parameter, um nur die duplizierte Operation zu aktualisieren. Vergleichen Sie mit den Ergebnissen der anfänglichen Operation.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Dies für alle Zeichnungen/Y-Spalten wiederholen</th>
+
+      <td>
+        <p>Die Analyse der aktuellen Zeichnung/Y-Spalte wiederholen für:</p>
+
+        <ul>
+          <li>Alle restlichen sichtbaren Zeichnungen in der aktuellen Grafik.</li>
+
+          <li>Alle restlichen Y-Spalten im Quellarbeitsblatt.</li>
+        </ul>
+
+        <p>Wenn es mehrere Zeichnungen in der Grafik gibt oder mehrere Y-Spalten im Quellblatt gibt und Sie für eine von ihnen eine Analyse durchgeführt haben, verwenden Sie dieses Kontextmenüelement, um die gleiche Analyse für alle anderen Zeichnungen/Y-Spalten durchzuführen. Weitere Informationen finden Sie unter <a class="external text" href="../../GettingStarted/OriginLab/How_to_Handle_Repetitive_Tasks.html#Repeating_Analysis_on_Other_Datasets_or_Data_Plots">Analyse für andere Datensätze oder Datenzeichnungen wiederholen</a>.</p>
+
+        <p>Dieses Menü ist nicht für die Neuberechnung von Matrixdaten verfügbar.</p>
+
+        <table class="noborder">
+          <tr>
+            <td style="vertical-align:top" width="60"><img src="../images/Recalculating_Analysis_Results/Alert_icon.png" width="57" border="0" alt=""></td>
+
+            <td>
+              <p>Anwender sollten eine Änderung in <b>Origin 2022b</b> beachten: In älteren Versionen, wenn die ursprüngliche Analyseausgabe ein neues Blatt oder eine neue Mappe erstellte, erstellte die Funktion <b>Dies für alle wiederholen</b> ein neues Blatt oder eine neue Mappe für die restlichen Y-Spalten oder Zeichnungen. Anwender äußerten den Wunsch, die gesamte Ausgabe an ein einzelnes Blatt zu senden, unabhängig von der ursprünglichen Ausgabespezifikation. Wenn die Eingabespalten einen gemeinsamen X-Datensatz teilen, wird der X-Datensatz nur einmal in das Ausgabeblatt geschrieben. Um zum alten Verhalten zurückzukehren, setzen Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#R"><b>@RAO</b> = <i>0</i></a> (Standard ist <i>1</i>).</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Remove_Locked_Operations"></a><span class="mw-headline">Gesperrte Operationen entfernen</span></h2>
+
+  <p>Manchmal müssen Sie gesperrte Operationen für die Nachbearbeitung entfernen.</p>
+
+  <ul>
+    <li>Um bestimmte gesperrte Operationen zu entfernen, klicken Sie auf das Symbol des grünen Schlosses und wählen Sie <b>Modus Neu berechnen: Kein</b>.</li>
+
+    <li>Um gesperrte Operationen im Stapel zu entfernen im
+
+      <ul>
+        <li>aktives/r Blatt/(Diagramm)layer</li>
+
+        <li>aktiven Fenster (Arbeitsmappe/Matrix/Diagramm</li>
+
+        <li>aktiven Ordner (offen bzw. rekursiv, Shortcutfenster werden per Standard auch eingeschlossen)</li>
+
+        <li>gesamten Projekt</li>
+      </ul>Wählen Sie im Menü <b>Bearbeiten: Operationen entfernen für</b>.
+    </li>
+  </ul>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweise:</b>
+
+        <ul>
+          <li>Wenn eine Operation sich auf mehrere Blätter/Layer bezieht, wird das Entfernen dieser Operation aus dem aktiven Blatt/Layer sie aus allen verbundenen Blättern/Layern entfernen.</li>
+
+          <li>Die Aktion des Entfernens lässt sich nicht rückgängig machen, da alle Operationsobjekte entfernt wurden.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>

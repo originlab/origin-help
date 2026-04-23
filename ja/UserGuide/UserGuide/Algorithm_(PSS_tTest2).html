@@ -1,0 +1,26 @@
+﻿<h1 class="firstHeading">アルゴリズム((PSS)2群t検定)</h1><p class='urlname' style='display: none'>PSS-tTest2-Algorithm</p>
+<p>2つの等しい大きさの標本(n)に対して、自由度 <img src="../images/Algorithm_(PSS_tTest2)/math-320b62a6ef11c47ea23bbad3ca3ebbcd.png" title="v = 2(n-1)" alt="v = 2(n-1)" class="tex"/> の検出力およびプールド標準偏差<img src="../images/Algorithm_(PSS_tTest2)/math-03c7c0ace395d80182db07ae2c30f034.png" title="s" alt="s" class="tex"/> は、次の式で計算されます。
+</p>
+<ul><li> 対立仮説より大きい場合：</li></ul>
+<p><img src="../images/Algorithm_(PSS_tTest2)/math-90e72b5bba11abb5d294d2587220648a.png" title=" Power=Prob(t &gt;t_{(1-\alpha ,\nu )},\nu ,\lambda )\,\!" alt=" Power=Prob(t &gt;t_{(1-\alpha ,\nu )},\nu ,\lambda )\,\!" class="tex"/> 
+</p><p><br />
+</p>
+<ul><li> 対立仮説より小さい場合：</li></ul>
+<p><img src="../images/Algorithm_(PSS_tTest2)/math-f314baa848ab627af0377b75dec94180.png" title=" Power=Prob(t &lt;t_{(\alpha ,\nu )},\nu ,\lambda )\,\!" alt=" Power=Prob(t &lt;t_{(\alpha ,\nu )},\nu ,\lambda )\,\!" class="tex"/> 
+</p><p><br />
+</p>
+<ul><li> 対立仮説と異なる場合：</li></ul>
+<p><img src="../images/Algorithm_(PSS_tTest2)/math-d8f208a36656f1255c4485c4edf1053e.png" title=" Power=Prob(t &gt;t_{(1-\alpha /2,\nu )},\nu ,\lambda )+ Prob(t &lt;t_{(\alpha /2,\nu )},\nu ,\lambda )\,\!" alt=" Power=Prob(t &gt;t_{(1-\alpha /2,\nu )},\nu ,\lambda )+ Prob(t &lt;t_{(\alpha /2,\nu )},\nu ,\lambda )\,\!" class="tex"/>
+</p><p><br />
+ここで、非心度のパラメータは
+</p><p><img src="../images/Algorithm_(PSS_tTest2)/math-569b2398820839ab74c83de61237cfde.png" title="\lambda =\delta \sqrt{n} \,\!" alt="\lambda =\delta \sqrt{n} \,\!" class="tex"/> 
+</p><p>および
+</p><p><img src="../images/Algorithm_(PSS_tTest2)/math-8c1c98afea981ae924673f23068851a6.png" title=" \delta =\frac{ \mu _\alpha -\mu _0 }s\,\!" alt=" \delta =\frac{ \mu _\alpha -\mu _0 }s\,\!" class="tex"/>
+</p>
+
+
+
+
+
+
+    

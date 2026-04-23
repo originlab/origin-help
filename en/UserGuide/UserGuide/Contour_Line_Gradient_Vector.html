@@ -1,0 +1,56 @@
+<h1 class="firstHeading">29.13.4 Contour Line + Gradient Vector</h1><p class='urlname' style='display: none'>Contour+GradientVector</p><a  class="image"><img alt="Contour Line Gradient Vector.png" src="../images/Contour_Line_Gradient_Vector/Contour_Line_Gradient_Vector.png?v=96186" width="671"  /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Note"><span class="tocnumber">4</span> <span class="toctext">Note</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Input:_Matrix"><span class="tocnumber">4.1</span> <span class="toctext">Input: Matrix</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Input:_XYZ_Columns"><span class="tocnumber">4.2</span> <span class="toctext">Input: XYZ Columns</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p><b>Matrix</b>: A matrix of Z values.<br />
+<b>Worksheet</b>: XYZ columns.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>Select <span class="menu">Plot &gt; Specialized&#160;: Contour Line + Gradient Vector</span>.
+</p>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>ContQuiver.otpu<br />
+CONTQUIVERXYZ.optu<br />
+(Installed to the Origin program folder.)
+</p>
+<h2><a name="Note"></a><span class="mw-headline">Note</span></h2>
+<p><b>Contour Line + Gradient Vector</b> graph is a graph with gradient vector(or quiver plot) overlaying on the contour line plot. 
+</p><p>The X-Function <b>plot_mquiver</b> or <b>plot_xyzquiver</b> is used to create such graph:
+</p><p><a  class="image"><img alt="Contour Line Gradient Vector 01.png" src="../images/Contour_Line_Gradient_Vector/800px-Contour_Line_Gradient_Vector_01.png?v=97071" width="800"   /></a>
+</p>
+<h3><a name="Input:_Matrix"></a><span class="mw-headline">Input: Matrix</span></h3>
+<p>When Plot Type is <b>Contour Line + Gradient Vector</b>, the output is a worksheet with XYAM columns for gradient vector.  Firstly, the X-Function <b>plot_mquiver</b> will use the gradient function to get gradient matrix in both directions(U and V), and then transfer U and V to XYAM columns and output them to a worksheet. It will plot a contour from source matrix and plot a XYAM vector plot based on result sheet. <b>Density</b> option can be used to specify the desired density of the vector lines. 
+</p><p>When Plot Type is <b>Contour + Streamline</b>, the output is two matrix objects. Firstly, the X-Function <b>plot_mquiver</b>  will use the gradient function to get negative gradient matrix in both directions(U and V), and then output U and V as two matrix objects. It will plot a contour from source matrix and plot a streamline plot based on U and V.
+</p>
+<h3><a name="Input:_XYZ_Columns"></a><span class="mw-headline">Input: XYZ Columns</span></h3>
+<p>For XYZ data, the control <b>Skip Points by Increment</b> will show up instead of <b>Density</b> option for "Contour+Vector". It keeps one point and skips N-1 points(N is the setting). When total number of points exceed 900(30*30), N will be set to <i><a class="external text" href="../../LabTalk/LabTalk/Ceil_(function).html">ceil(number of points/900,1)</a></i> automatically. Then use the reduced xy points to get the vector data. When total number is less than 900, set N=1 which means no skip, use original XY point to get vector for original data points. 
+</p><p>For Streamline, this tool provides control <b>Number of Points in X Direction</b>, <b>Number of Points in Y Direction</b>. By default, they will be set to <i>Count(unique(x/y))</i>. Then get matrix by min_x, max_x, np_x, min_y, max_y, np_y and use this matrix to get matrix result for streamline.
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2024b
+</td>
+<td><b>Last Update</b>: Origin 2025
+</td></tr></table>
+
+
+
+
+
+

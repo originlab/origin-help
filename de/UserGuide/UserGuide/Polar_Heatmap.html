@@ -1,0 +1,65 @@
+﻿<h1 class="firstHeading">Polare Heatmap</h1>
+
+  <p class='urlname' style='display: none'>Polar-Heatmap</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Polar Heat Map.png" src="../images/Polar_Heatmap/Polar_Heat_Map.png" width="533"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+
+  <ul>
+    <li><b>Arbeitsblatt</b>: Wählen Sie XY-Spalten oder XYZ-Spalten (voll oder Teilbereich) oder eine virtuelle Matrix aus.</li>
+  </ul>
+
+  <p>oder</p>
+
+  <ul>
+    <li><b>Matrix</b>: Ein Matrixblatt. Ein Blatt mit mehreren Objekten wird unterstützt.</li>
+  </ul>
+
+  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+
+  <p>Aktivieren Sie das Matrixblatt oder wählen Sie die erforderlichen Daten im Arbeitsblatt aus:</p>
+
+  <ul>
+    <li>Wählen Sie im Menü <span class="menu">Zeichnen: Kontur: Polare Heatmap θ(X)r(Y)</span>.</li>
+  </ul>
+
+  <p>Wenn Sie die polare Heatmap aus XY-Daten erstellen, wird der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxy.html"><b>plot_heatmapxy</b></a> geöffnet.</p>
+
+  <p>Wenn Sie die polare Heatmap aus XYZ-Daten erstellen, wird der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html"><b>plot_heatmapxyz</b></a> geöffnet.</p>
+
+  <p>Wenn Sie die polare Heatmap aus mehreren Y-Spalten ohne Z erstellen, wird der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html"><b>plotvm</b></a> geöffnet.</p>
+
+  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+
+  <p>PolarheatmapMat.otpu</p>
+
+  <p>(installiert im Origin-Programmordner)</p>
+
+  <h2><a name="Notes"></a><span class="mw-headline">Notizen</span></h2>
+
+  <p>Die polare Heatmap ähnelt der <a href="../../UserGuide/UserGuide/Heat_Map.html" title="UserGuide:Heat Map">Heatmap</a>, wird aber in ein polares Koordinatensystem gezeichnet.</p>
+
+  <ul>
+    <li>Wenn Sie <b>Zeichnen &gt; Kontur: Polare HeatMap θ(X)r(Y)</b> wählen, werden alle <b>X</b> und <b>Y</b> in der Beschriftung in den X-Funktionsdialogen <b>plot_heatmapxy</b>, <b>plot_heatmapxyz</b> und <b>plotvm</b> in <b>θ</b> und <b>R</b> geändert.</li>
+
+    <li>Es wird das Erstellen einer polaren Heatmap mit RGB-Werten in der Z-Quellspalte oder -Matrix unterstützt.</li>
+  </ul>

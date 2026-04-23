@@ -1,0 +1,213 @@
+﻿<h1 class="firstHeading">(作図の詳細) ベクトル タブ</h1><p class='urlname' style='display: none'>PD-Dialog-Vector-Tab</p>
+<p>通常の2Dベクトルグラフに加え、極座標および三点ベクトルグラフでも、作図の詳細の<b>ベクトル</b>タブでベクトルの編集ができます。3D ベクトルグラフのベクトル編集に関しては、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_3D_Vector_Tab.html" title="ユーザガイド:(作図の詳細)「3D ベクトル」タブ"><b>3Dベクトル</b>タブ</a>を参照してください。
+</p>
+<table class="simple" style="width: 65%">
+<tr>
+<td align="center"> <a  class="image"><img alt="PD Vector XYXY.png" src="../images/The_(Plot_Details)_Vector_Tab/400px-PD_Vector_XYXY.png" width="535"   /></a>
+<p>直交座標と極座標の両方の<b>XYXY</b>グラフのベクトルタブ
+</p>
+</td>
+<td align="center"> <a  class="image"><img alt="PD Vector XYXY 01.png" src="../images/The_(Plot_Details)_Vector_Tab/400px-PD_Vector_XYXY_01.png" width="535"   /></a>
+<p><a href="../../UserGuide/UserGuide/Compass_Plot.html" title="ユーザガイド：コンパスプロット">コンパスプロット</a> のベクトルタブ
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="PD Vector XYAM.png" src="../images/The_(Plot_Details)_Vector_Tab/400px-PD_Vector_XYAM.png" width="553"   /></a>
+<p>直交座標の<b>XYAM</b> グラフのベクトルタブ
+</p>
+</td>
+<td align="center"> <a  class="image"><img alt="PD Vector ThetaRAM Polar.png" src="../images/The_(Plot_Details)_Vector_Tab/400px-PD_Vector_ThetaRAM_Polar.png" width="581"   /></a>
+<p>極座標の<b>θRAM</b> グラフのベクトルタブ
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="PD Vector XYZXYZ.png" src="../images/The_(Plot_Details)_Vector_Tab/400px-PD_Vector_XYZXYZ.png" width="561"   /></a>
+<p>三角座標の<b>XYZXYZ</b> ベクトルグラフのベクトルタブ
+</p>
+</td></tr></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Arrowheads_group_controls"><span class="tocnumber">1</span> <span class="toctext">矢先形状</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Color"><span class="tocnumber">2</span> <span class="toctext">色</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Style"><span class="tocnumber">3</span> <span class="toctext">線種</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Width"><span class="tocnumber">4</span> <span class="toctext">幅</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Transparency"><span class="tocnumber">5</span> <span class="toctext">透過率</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#End_Point_group_controls_.28XYXY_or_Ternary.29"><span class="tocnumber">6</span><span class="toctext">端点(XYXYまたは三点ベクトル)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Vector_Data_group_controls_.28XYAM.2F.CE.B8RAM.29"><span class="tocnumber">7</span> <span class="toctext">ベクトルデータ (XYAM/θRAM)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Magnitude_.28XYAM.2F.CE.B8RAM.29"><span class="tocnumber">8</span> <span class="toctext">大きさ (XYAM/θRAM)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Magnitude_Multiplier"><span class="tocnumber">8.1</span> <span class="toctext">倍率</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Magnitude_in"><span class="tocnumber">8.2</span> <span class="toctext">大きさ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Position_group_controls_.28XYAM.2F.CE.B8RAM.29"><span class="tocnumber">9</span> <span class="toctext">位置 (XYAM/θRAM)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Angle_.28XYAM.2F.CE.B8RAM.29"><span class="tocnumber">10</span> <span class="toctext">角度 (XYAM/θRAM)</span></a></li>
+</ul>
+</div>
+<h2><a name="Arrowheads_group_controls"></a><span class="mw-headline">矢先形状</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th> 長さと強度でスケーリング
+</th>
+<td>
+<p>ベクトルの強度の変化に応じて矢印の長さをスケーリングします。  以下のオプションを利用できます。
+</p>
+<ul><li>なし
+<dl><dd>すべての矢先は、<b>長さ</b>で指定された同じ長さを共有します。</dd></dl></li>
+<li>対数間隔
+<dl><dd>矢先の長さはベクトルの長さと対数的な関係を持ちます。</dd></dl></li>
+<li>線形
+<dl><dd>矢先の長さはベクトルの長さと線形関係を持ちます。</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th> 長さ
+</th>
+<td>
+<p>矢先の長さを指定します。  単位はポイントです。
+</p>
+</td></tr>
+<tr>
+<th> 角度
+</th>
+<td>
+<p>矢先の角度を決定します。
+</p>
+</td></tr>
+<tr>
+<th>閉じる/開ける
+</th>
+<td>
+<p>矢先を塗りつぶすには、<b>閉じる</b>ラジオボタンを選択します。 
+</p><p>矢先を塗りつぶさない(枠のみにする)には、<b>開ける</b>ラジオボタンを選択します。
+</p>
+</td></tr></table>
+<h2><a name="Color"></a><span class="mw-headline">色</span></h2>
+<p><b>色</b>ボタンからベクトル色を選択します。
+</p>
+<h2><a name="Style"></a><span class="mw-headline">線種</span></h2>
+<p>ベクトルの線種を変更します。<a href="../../UserGuide/UserGuide/The_Style_Toolbar.html" title="ユーザガイド：スタイルツールバー"><b>スタイル</b>ツールバー</a>の<b>線/境界色</b>ツール<a  class="image"><img alt="Button Border.png" src="../images/The_(Plot_Details)_Vector_Tab/Button_Border.png" width="65"  /></a>を使用して変更することもできます。
+</p>
+<h2><a name="Width"></a><span class="mw-headline">幅</span></h2>
+<p>このコンビネーションボックスでベクトルの線の<b><b>太さ</b></b>を入力または選択します。  線の太さはポイント単位とし、1ポイント＝ 1/72インチです。
+</p><p>線タブのあるすべての2Dベクトルグラフで、<b>太さ</b>ドロップダウンリストで列を選択でき、線の太さをその列にマップできます。ドロップダウンリストには現在のワークシートにある列のみ表示されるのでご注意ください。
+</p><p>列を選択して、<b>縮尺倍率</b>を指定して、幅の列に値を掛けてベクトルの線の太さを定義することもできます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Symbol_Tab.html" title="ユーザガイド：（作図の詳細）シンボルタブ">シンボルサイズの縮尺倍率</a>を参照することができます。
+</p>
+<h2><a name="Transparency"></a><span class="mw-headline">透過率</span></h2>
+<p>スライダで調整するか、コンボボックスに数値を入力してベクトルに透過率を適用します。スケールは0（透明でない）から100（完全透明）まで調整できます。
+</p><p><a href="../../UserGuide/Category/Customizing_Plot_Elements.html#Fast_Switching_of_Plot_Type" title="カテゴリ：プロットの要素を編集する">特別な点</a>の場合、 <b>自動</b>にチェックを付けると、他のベクトルの透過率設定に従います。特別な点の透過率を調整するには、チェックを外します。
+</p>
+<h2><a name="End_Point_group_controls_.28XYXY_or_Ternary.29"></a><span class="mw-headline">端点(XYXYまたは三点ベクトル)</span></h2>
+<p><b>X端点</b>ドロップダウンリストから<a href="../../UserGuide/UserGuide/X,_Y,_X,_Y_Vector_Graph.html" title="ユーザガイド：XYXY型ベクトルグラフ">XYXYベクトルグラフ</a>または<a href="../../UserGuide/UserGuide/Ternary_Vector.html" title="ユーザガイド:三点ベクトル">三点ベクトルグラフ</a>の<b>Xの端点</b>の値を持つ列を選択します。
+</p><p><b>Y端点</b>ドロップダウンリストから<a href="../../UserGuide/UserGuide/X,_Y,_X,_Y_Vector_Graph.html" title="ユーザガイド：XYXY型ベクトルグラフ">XYXYベクトルグラフ</a>または<a href="../../UserGuide/UserGuide/Ternary_Vector.html" title="ユーザガイド:三点ベクトル">三点ベクトルグラフ</a>の<b>Yの端点</b>の値を持つ列を選択します。
+</p><p><b>Z端点</b>ドロップダウンリストから<a href="../../UserGuide/UserGuide/Ternary_Vector.html" title="ユーザガイド:三点ベクトル">三点ベクトルグラフ</a>の<b>Zの端点</b>の値を持つ列を選択します。
+</p>
+<table class="note">
+<tr>
+<td>Note:
+<ul><li> <a href="../../UserGuide/UserGuide/Polar_Vector_theta_r_theta_r.html" title="ユーザガイド：θrθr極座標ベクトル"><b>θrθr極座標ベクトル</b></a>の場合、<b>X端点</b>を使用して、角度軸上の端点の角度座標を含む列を指定し、Yの端点を使用して、半径軸上の端点の半径座標を含む列を指定します。 </li>
+<li> <a href="../../UserGuide/UserGuide/Compass_Plot.html" title="ユーザガイド：コンパスプロット">コンパスプロット</a>の場合、極の中心は始点であり、ソースXY列は、終点の角度座標と半径座標を個別に含む列です。そのため、ベクトルタブにはX終了オプションとY終了オプションはありません。</li></ul>
+</td></tr></table>
+<h2><a name="Vector_Data_group_controls_.28XYAM.2F.CE.B8RAM.29"></a><span class="mw-headline">ベクトルデータ (XYAM/θRAM)</span></h2>
+<p>これらの制御は、<b>XYAM</b>ベクトルまたは <b>θRAM</b>極ベクトルグラフにのみ適用されます。
+</p>
+<table class="dialogcontroltable">
+<tr>
+<th> 角度
+</th>
+<td>
+<p><b>大きさ</b>コンビネーションボックスから、ベクトルの角度オフセット値を持つ列を選択します。  あるいは、このコンビネーションボックスから値を選択することができます。単位は、<b><b>角度単位</b></b>ドロップダウンリストから選択します。  XYAMベクトルでは、角度はX軸に平行な線を基準とし、ベクトルを二等分する方向に対して反時計回りに測定されます。
+<b>θRAM</b>極座標ベクトルでは、角度は半径Rの円の接線から測定され、方向は極座標の角度軸の向きと<b>開始角度を座標に合わせる</b>オプションの設定に依存します。
+</p>
+</td></tr>
+<tr>
+<th> 大きさ
+</th>
+<td>
+<p><b>大きさ</b>コンビネーションボックスから、ベクトルの大きさを持つ列を選択します。  あるいは、このコンビネーションボックスから値を選択することができます。  単位はポイントです。
+</p>
+</td></tr></table>
+<h2><a name="Magnitude_.28XYAM.2F.CE.B8RAM.29"></a><span class="mw-headline">大きさ (XYAM/θRAM)</span></h2>
+<p>これらの制御は、<b>XYAM</b>ベクトルまたは <b>θRAM</b>極ベクトルグラフにのみ適用されます。
+</p>
+<h3><a name="Magnitude_Multiplier"></a><span class="mw-headline">倍率</span></h3>
+<p><b>倍率</b>のコンビネーションボックスから、ベクトルの長さを比例的に増加または減少させる値を選択/入力します。  例えば、ベクトルを元の長さの半分に描画するには、<b>.5</b>を入力します。  デフォルトの値は1で、<b>倍率</b>の値でベクトルの長さが決まります。
+</p>
+<h3><a name="Magnitude_in"></a><span class="mw-headline">大きさ</span></h3>
+<p>このチェックボックスにチェックを付けて、大きさの基準を選択します。
+</p><p>XYAM<b>ベクトル</b><b>の場合</b>：
+</p>
+<ul><li> <b>現実世界の空間</b>: このボックスにチェックを付けると、実際の大きさとして解釈され、ベクトルの終点のXY座標を修正するのに使用されます。グラフ内に表示された大きさは、XあるいはYの軸スケールが変更された時に一緒に変更されますが、実際の長さを保ちます。 </li>
+<li> <b>Xスケール/Yスケール</b>: <b>大きさ</b>が<b>現実世界の空間</b>に設定されている場合、大きさは両方のX Yスケールに基づきます。XスケールまたはYスケールのみを選択できます。</li>
+<li> <b>参照長さ</b>: XまたはYスケールとは関係のないルーラーを定義する場合使用します。たとえば、世界地図に風ベクトルをプロットする場合、大きさは<i>m/s</i>単位で、X Yスケールは緯度と経度です。  <b>参照長さ</b>を選択すると、<b>倍率</b>オプションが無効になります。グラフ内の距離を指定するための3つのオプションが表示され、<b>参照長さ</b>と<b>参照大きさ</b>コントロールを使用して値と単位を設定し、<b>ベクトルスケール追加</b>ボタンでグラフにベクトルスケールオブジェクトを追加します。</li></ul>
+<p>θRAM<b>極ベクトルの</b><b>場合</b>：
+</p>
+<ul><li> <b>放射スケール</b>: ベクトルの大きさは放射スケールに基づいて描画されます。放射軸のスケールを変更すると、ベクトルの大きさもそれに応じて変化します。</li>
+<li> <b>参照長さ</b>: XYAMベクトルの場合と同様に、このオプションを使用して、ベクトルの大きさの目安となるスケールを定義できます。</li></ul>
+<h2><a name="Position_group_controls_.28XYAM.2F.CE.B8RAM.29"></a><span class="mw-headline">位置 (XYAM/θRAM)</span></h2>
+<p>これらの制御は、<b>XYAM</b>ベクトルまたは <b>θRAM</b>極ベクトルグラフにのみ適用されます。
+</p><p>ベクトルの<b>先端</b>、<b>中央</b>、<b>末端</b>に、<b>XY</b>/<b>θR</b>値を適用できます。それぞれのボタンを選択してください。
+</p>
+<h2><a name="Angle_.28XYAM.2F.CE.B8RAM.29"></a><span class="mw-headline">角度 (XYAM/θRAM)</span></h2>
+<p>これらの制御は、<b>XYAM</b>ベクトルまたは <b>θRAM</b>極ベクトルグラフにのみ適用されます。
+</p>
+<table class="dialogcontroltable">
+<tr>
+<th>角度単位
+</th>
+<td>
+<p>角度の単位を選択します。
+</p>
+<ul><li><b>システム</b>
+<dl><dd><span class="db">環境設定:オプション</span>の<b>角度単位</b>グループの設定を角度の単位として使用します。</dd></dl></li>
+<li><b>ラジアン</b>
+<dl><dd>角度の単位としてラジアンを使います。</dd></dl></li>
+<li><b>度</b>
+<dl><dd>角度の単位として度を使います。</dd></dl></li>
+<li><b>グラジアン</b>
+<dl><dd>角度の単位としてグラジアンを使います。</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>規約
+</th>
+<td> このオプションは<b>XYAM</b>ベクトルでのみ利用できます。
+<ul><li><b>極座標</b>
+<dl><dd> これが選択されていると、<b><b>オフセット角度</b></b>が<b><b>0</b></b>、<b>方向</b>が<b>反時計回り</b>になります。これらのオプションはグレーアウトしていますが、更新されます。</dd></dl></li>
+<li><b>気象学 </b>
+<dl><dd> これが選択されていると、<b>オフセット角度</b>が<b>90</b>、<b>方向</b>が<b>時計回り</b>になります。これらのオプションはグレーアウトしていますが、更新されます。</dd></dl></li>
+<li><b>カスタム</b>
+<dl><dd> これを選択すると、<b>オフセット角度</b>と<b>方向</b>のオプションが編集できるようになります。</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>開始角度を座標に合わせる
+</th>
+<td> このオプションは、<b>θRAM</b>極座標ベクトルにのみ適用されます。このチェックボックスをオンにすると、極座標ベクトルの角度オフセットの方向は以下のルールに従います。
+<ul><li> 極座標の角度軸方向が反時計回りの場合、 
+<ul><li>放射軸は反転せず、正の角度は時計回り。 </li>
+<li>放射軸が反転し、正の角度が反時計回りになる。 </li></ul></li>
+<li>極座標の角度軸方向が時計回りの場合、
+<ul><li>放射軸は反転せず、正の角度は反時計回り。</li>
+<li>放射軸が反転し、正の角度が時計回りになる。</li></ul></li></ul>
+<p>このオプションのチェックを外すと、<b>オフセット角度（度）</b>および<b>方向</b>オプションが、XYAMベクトルの場合と同様に表示されます。
+</p>
+</td></tr>
+<tr>
+<th>オフセット角度（度）
+</th>
+<td> ベクトルのオフセット角を度で指定します。ベクトルの角度の値（A）と、オフセット角度が<b><b>0</b></b>の場合、ベクトルは3時の方向になります。
+</td></tr>
+<tr>
+<th>方向
+</th>
+<td>
+<p><b>オフセット角度</b>の方向を指定します。
+</p>
+<ul><li><b>時計回り</b>
+<dl><dd>ベクトルは<b>時計回り</b>に回転します。 </dd></dl></li>
+<li><b>反時計回り</b>
+<dl><dd>ベクトルは<b>反時計回り</b>に回転します。 </dd></dl></li></ul>
+</td></tr></table>
+
+
+
+
+    

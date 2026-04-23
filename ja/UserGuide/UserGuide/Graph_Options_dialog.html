@@ -1,0 +1,152 @@
+﻿<h1 class="firstHeading">グラフオプションダイアログを使用したグラフのデフォルト設定</h1><p class='urlname' style='display: none'>Graph-Options-Set-Graph-Default</p>
+<p><br />
+<a href="../../UserGuide/UserGuide/Theme_Organizer.html" title="ユーザガイド:テーマオーガナイザ"><b>テーマオーガナイザ</b></a>を使ってグラフ全体にスタイルやフォーマットを適用する方法のほかに、<b>グラフオプション</b>ダイアログを使って、グラフのデフォルトの書式やスタイルを変更することができます。 
+</p><p><span class='headerInParagraph'>「グラフオプション」ダイアログを開くには </span>
+</p>
+<ul><li> メインメニューから<b>環境設定:グラフオプション</b>を選択します。</li></ul>
+<p><a  class="image"><img alt="Graph Options dialog 01.png" src="../images/Graph_Options_dialog/750px-Graph_Options_dialog_01.png" width="750"   /></a>
+</p><p><b>Note:</b> デフォルトでは、一部のデフォルト設定はグローバルシステムテーマと共に事前に設定されています。  一部のオプションが<b>自動</b>として表示されます。グラフオプションダイアログで設定を変更すると、その設定はシステムデフォルトテーマよりも優先され、Originの標準テンプレートに適用されます（ただし、ユーザーテンプレートには適用されません）。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Graph_Options_dialog/Tip_icon.png" width="57"  border="0" /></td><td><p>このダイアログには、次の3つの状態を持つ複数のチェックボックスがあります。
+</p>
+<dl><dd><a  class="image"><img alt="GraphOptions CheckboxStatus.png" src="../images/Graph_Options_dialog/GraphOptions_CheckboxStatus.png" width="280"  /></a></dd></dl>
+<ul><li> <b>チェックあり</b>：この設定をデフォルトとしてオンにする。</li>
+<li> <b>チェックなし</b>：この設定をオフにする。</li>
+<li> <b>ボックス内が黒色</b>：このオプションを<b>自動</b>に設定すると、システムテーマまたは指定したテンプレートに含まれているものをすべて使用できます。</li></ul>
+</td></tr></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Settings_in_Different_Tabs"><span class="tocnumber">1</span> <span class="toctext">タブごとの設定</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Axis"><span class="tocnumber">1.1</span> <span class="toctext">軸</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Line_Thickness"><span class="tocnumber">1.1</span> <span class="toctext">線の太さ</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Ticks"><span class="tocnumber">1.1.2</span> <span class="toctext">目盛</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Gridlines"><span class="tocnumber">1.1.3</span> <span class="toctext">グリッド線</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Rotate_Tick_Labels_if_Overlapping"><span class="tocnumber">1.1.4</span> <span class="toctext">重なった場合は目盛ラベルを回転</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Show_Layer_Frame"><span class="tocnumber">1.1.5</span> <span class="toctext">レイヤ枠を表示</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Show_Arrow_at_End"><span class="tocnumber">1.1.6</span> <span class="toctext">終了の矢印を表示</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#X_Axis_Rescale_Margin.28.25.29"><span class="tocnumber">1.1.7</span> <span class="toctext">X軸再スケールマージン(%)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Fonts"><span class="tocnumber">1.2</span> <span class="toctext">フォント</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Font"><span class="tocnumber">1.2.1</span> <span class="toctext">フォント</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Specific_Objects"><span class="tocnumber">1.2.2</span> <span class="toctext">特定オブジェクト</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Layout"><span class="tocnumber">1.3</span> <span class="toctext">レイアウト</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Graph_Size"><span class="tocnumber">1.3.1</span> <span class="toctext">グラフサイズ</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Fix_Scale_Factor_.3D_1"><span class="tocnumber">1.3.2</span> <span class="toctext">スケール倍率を固定 =1</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Gap_Between_Layers.28.25.29"><span class="tocnumber">1.3.3</span><span class="toctext">レイヤ間の間隔(%)</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Page_Margin.28.25.29"><span class="tocnumber">1.3.4</span> <span class="toctext">ページ余白(%)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Legend"><span class="tocnumber">1.4</span> <span class="toctext">凡例</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Position"><span class="tocnumber">1.4.1</span> <span class="toctext">位置</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Show_Legend_Only_for_Multiple_Entries"><span class="tocnumber">1.4.2</span> <span class="toctext">複数のエントリに対してのみ凡例を表示</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Show_Legend_Outside_of_Layer_for_Single_Block"><span class="tocnumber">1.4.3</span> <span class="toctext">単一ブロックの場合レイヤの外側に凡例を表示</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Direction"><span class="tocnumber">1.4.4</span> <span class="toctext">方向</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Show_Frame"><span class="tocnumber">1.4.5</span> <span class="toctext">枠を表示</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Save_and_Load_Settings_Buttons"><span class="tocnumber">2</span> <span class="toctext">保存と設定を読み込みボタン</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Buttons_at_Bottom"><span class="tocnumber">3</span> <span class="toctext">下部のボタン</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Apply_to"><span class="tocnumber">3.1</span> <span class="toctext">適用先</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Reset"><span class="tocnumber">3.2</span> <span class="toctext">リセット</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Settings_in_Different_Tabs"></a><span class="mw-headline">タブごとの設定</span></h2>
+<h3><a name="Axis"></a><span class="mw-headline">軸</span></h3>
+<h4><a name="Line_Thickness"></a><span class="mw-headline">線の太さ</span></h4>
+<p>軸の太さを変更します。 
+</p>
+<h4><a name="Ticks"></a><span class="mw-headline">目盛</span></h4>
+<p>目盛の方向、主目盛および副目盛の長さを変更します。このオプションは、2Dの直交座標グラフレイヤのみに適用されます。 
+</p>
+<h4><a name="Gridlines"></a><span class="mw-headline">グリッド線</span></h4>
+<p>主目盛および副目盛に対して、グリッド線を表示するかどうかを指定します。また、それぞれのグリッド線の線のスタイルを個別に設定できます。
+</p>
+<h4><a name="Rotate_Tick_Labels_if_Overlapping"></a><span class="mw-headline">重なった場合は目盛ラベルを回転</span></h4>
+<p>目盛ラベルが重なった場合に、ラベルを回転させて表示するかどうかを指定します。回転角度を数値で入力します。 
+</p><p>正の値を入力すると、反時計回りに回転し、負の値を入力すると、時計回りに回転します。
+</p>
+<h4><a name="Show_Layer_Frame"></a><span class="mw-headline">レイヤ枠を表示</span></h4>
+<p>現在のレイヤーにフレーム（枠）を表示するかどうかを指定します。このオプションは、2Dの直交座標グラフレイヤのみに適用されます。 
+</p>
+<h4><a name="Show_Arrow_at_End"></a><span class="mw-headline">終了の矢印を表示</span></h4>
+<p>軸の終端に矢印を表示するかどうかを指定します。ドロップダウンリストから矢印のスタイルを選び、サイズを設定できます。
+</p><p>このオプションはデフォルトでは無効です。<b>レイヤ枠を表示</b>がオフの場合に利用できます。
+</p>
+<h4><a name="X_Axis_Rescale_Margin.28.25.29"></a><span class="mw-headline">X軸再スケールマージン(%)</span></h4>
+<p>X軸の再スケール時に、最小値・最大値に対して余白（パディング）を追加するかどうかを指定します。このオプションは、<b>軸</b>ダイアログの<b>スケール</b>タブ内の<a href="../../UserGuide/UserGuide/Scale_2.html#Rescale_Margin.28.25.29" title="ユーザガイド：スケール2"><b>再スケールのマージン(%)</b></a>と類似の機能です。
+</p>
+<h3><a name="Fonts"></a><span class="mw-headline">フォント</span></h3>
+<p>このタブでは、グラフ上の各種テキストオブジェクトのフォントと太字設定を制御します。設定内容は、既存のオブジェクトと、新たに追加するオブジェクトのデフォルトスタイルの両方に影響します。 
+</p>
+<h4><a name="Font"></a><span class="mw-headline">フォント</span></h4>
+<p>グラフ内のすべてのオブジェクト（グラフテーブルを含む）のフォントを一括で変更できます。
+</p>
+<h4><a name="Specific_Objects"></a><span class="mw-headline">特定オブジェクト</span></h4>
+<p>目盛ラベル、軸タイトル、凡例、データラベル、レイヤタイトル、ページタイトル、テキストオブジェクト、データラベル、参照線ラベル、レイヤラベルといったオブジェクトに対して、フォントと太字を個別に設定できます。
+</p>
+<h3><a name="Layout"></a><span class="mw-headline">レイアウト</span></h3>
+<h4><a name="Graph_Size"></a><span class="mw-headline">グラフサイズ</span></h4>
+<p>グラフサイズを指定します。サイズ設定は、<b>作図の詳細</b>ダイアログの<b>印刷・ページサイズ</b>タブ内の<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Print_Dimensions_Tab.html#Dimensions" title="ユーザガイド：(作図の詳細) 印刷・ページサイズタブ"><b>サイズ</b>グループ</a>と同等です。
+</p>
+<h4><a name="Fix_Scale_Factor_.3D_1"></a><span class="mw-headline">スケール倍率を固定 =1</span></h4>
+<p>スケール倍率を1に固定するか指定します。 
+</p><p>このオプションは<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Size_Speed_Tab.html#Scale_Elements_Group" title="ユーザガイド：(作図の詳細) 『レイヤの大きさ』タブ"><b>作図の詳細</b>ダイアログの<b>レイヤの大きさ</b>タブにある<b>固定倍率</b>設定</a>に対応しています。
+</p>
+<h4><a name="Gap_Between_Layers.28.25.29"></a><span class="mw-headline">レイヤ間の間隔(%)</span></h4>
+<p>グラフに複数のレイヤがある場合、このオプションを使用してレイヤ間の間隔を指定できます。このコントロールの単位はページサイズに対する割合（%）です。 
+</p>
+<h4><a name="Page_Margin.28.25.29"></a><span class="mw-headline">ページ余白(%)</span></h4>
+<p>グラフ全体の余白を指定します。このコントロールの単位はページサイズに対する割合（%）です。 
+</p><p>デフォルトでは、ページマージンは3%に設定されており、ページタイトルまたはレイヤータイトルを追加したい場合には、上部マージンに追加マージンを置けます。
+</p>
+<h3><a name="Legend"></a><span class="mw-headline">凡例</span></h3>
+<h4><a name="Position"></a><span class="mw-headline">位置</span></h4>
+<p>凡例の表示位置を指定します。
+</p>
+<h4><a name="Show_Legend_Only_for_Multiple_Entries"></a><span class="mw-headline">複数のエントリに対してのみ凡例を表示</span></h4>
+<p>現在のレイヤの曲線の数が1より大きい場合にのみ凡例を表示します。現在のレイヤにデータセットが1つしかない場合、現在のレイヤに凡例は表示されません。
+</p>
+<h4><a name="Show_Legend_Outside_of_Layer_for_Single_Block"></a><span class="mw-headline">単一ブロックの場合レイヤの外側に凡例を表示</span></h4>
+<p>グラフレイヤが1つだけの場合に、凡例をレイヤ外に表示するかどうかを指定します。このチェックを外すと、凡例はレイヤフレーム内の指定位置に表示されます。
+</p>
+<h4><a name="Direction"></a><span class="mw-headline">方向</span></h4>
+<p>凡例の項目を水平または垂直方向に配置するか指定します。
+</p>
+<h4><a name="Show_Frame"></a><span class="mw-headline">枠を表示</span></h4>
+<p>凡例に枠を表示するかどうか指定します。枠を表示する場合、枠線の色、枠線の幅、塗りつぶしの色を変更できます。
+</p>
+<h2><a name="Save_and_Load_Settings_Buttons"></a><span class="mw-headline">保存と設定を読み込みボタン</span></h2>
+<p>ダイアログの右上には、<b>名前を付けて設定を保存</b>ボタン<a  class="image"><img alt="Button Save Settings as.png" src="../images/Graph_Options_dialog/Button_Save_Settings_as.png" width="16"  /></a>と<b>設定を読み込み</b>ボタンの2つのボタンがあります。 <a  class="image"><img alt="Button Load Settings.png" src="../images/Graph_Options_dialog/Button_Load_Settings.png" width="14"  /></a>
+</p><p><a  class="image"><img alt="Buttons Save and Load Settings.png" src="../images/Graph_Options_dialog/Buttons_Save_and_Load_Settings.png" width="489"  /></a>
+</p>
+<ul><li> <b>名前を付けて設定を保存...</b>ボタンをクリックすると<b>保存</b>ダイアログが開き、各タブ名の4つのチェックボックスを利用できます。デフォルトでは、これらすべてのボックスが選択されています。下部にファイル名を入力します。いずれかのチェックボックスをオフにすると、このタブの設定はテーマファイルに保存されません。保存済みのテーマファイルを後で読み込むと、そのタブのコントロールは<i>Auto</i>に設定されます。</li>
+<li> <b>設定を読み込み</b>ボタンをクリックすると、<i>\User Files Folder\Themes\Graph Options</i>フォルダの下にあるテーマファイル (.othファイル) をアルファベット順に一覧表示します。ここにリストされるテーマファイルの最大数は10で、<b>より詳しく...</b>を選択すると、他のテーマファイルを参照できます。デフォルトでは、<i>\User Files Folder\Themes\Graph Options</i>フォルダが開きます。</li></ul>
+<h2><a name="Buttons_at_Bottom"></a><span class="mw-headline">下部のボタン</span></h2>
+<h3><a name="Apply_to"></a><span class="mw-headline">適用先</span></h3>
+<p><a  class="image"><img alt="Graph Options dialog 02.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_02.png" width="351"  /></a>
+</p><p>スタイル・フォーマットの設定をどのグラフに適用するかを選択します。<b>アクティブグラフ</b>は、アクティブなウィンドウがグラフウィンドウである場合にのみ使用可能です。
+</p>
+<h3><a name="Reset"></a><span class="mw-headline">リセット</span></h3>
+<p><a  class="image"><img alt="Graph Options dialog 03.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_03.png" width="313"  /></a>
+</p>
+<ul><li> <b>すべてをデフォルトにリセット</b>：すべてのタブの現在のタブオプションをリセットして、システムのデフォルトテーマのデフォルト設定に戻します。</li>
+<li> <b>このタブをデフォルトにリセット</b>：現在のタブをリセットして、システムのデフォルトテーマの設定に戻します。</li>
+<li> <b>すべてをクラシックにリセット</b>：ダイアログのすべてのオプションをリセットして、2025bより前の古いバージョンのデフォルト設定であるクラシック形式の設定に戻します。</li>
+<li> <b>すべてクリア</b>：すべての設定をクリアします。</li></ul>
+
+
+    

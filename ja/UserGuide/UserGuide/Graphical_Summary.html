@@ -1,0 +1,60 @@
+﻿<h1 class="firstHeading">グラフィカル要約</h1>
+<p class='urlname' style='display: none'>Graphical-Summary</p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">はじめに</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Performing_Graphical_Summary"><span class="tocnumber">2</span> <span class="toctext">グラフィカル要約を実行</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">3</span> <span class="toctext">ダイアログの設定</span></a></li>
+</ul>
+</div>
+<h2><a name="Introduction" id="Introduction"></a><span class="mw-headline">はじめに</span></h2>
+<p>このツールは、入力データの統計情報を含むグラフィカルサマリーレポートを作成するために使用できます。レポートには、ヒストグラムプロット、ボックスチャート（箱ひげ図）、信頼区間プロット、統計情報を含む結果テーブルが含まれます。</p>
+<p><a class="image"><img alt="Graphical Summary.png" src="../images/Graphical_Summary/800px-Graphical_Summary.png" width="800" /></a></p>
+<h2><a name="Performing_Graphical_Summary" id="Performing_Graphical_Summary"></a><span class="mw-headline">グラフィカル要約を実行</span></h2>
+<ul>
+<li>基本統計解析を実行したい入力データ列を選択します。</li>
+<li><b>統計 &gt; 記述統計：グラフィカル要約</b>メニューを選択して、ツールを開きます。
+<dl>
+<dd><a class="image"><img alt="Graphical Summary 01.png" src="../images/Graphical_Summary/Graphical_Summary_01.png" width="428" /></a></dd>
+</dl>
+</li>
+<li><b>グループ</b> を選択し、信頼水準(%)ボックスに値を入力し、<b>グラフ配置</b>リストで希望する配置を選択します。</li>
+<li>OKをクリックして、記述統計を確認し、グラフを作成します。</li>
+</ul>
+<h2><a name="Dialog_Controls" id="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>入力</th>
+<td>入力列を選択します。</td>
+</tr>
+<tr>
+<th>グループ</th>
+<td>入力データを複数のグループに分割するためのグループ列を選択します。</td>
+</tr>
+<tr>
+<th>信頼区間(%)</th>
+<td>信頼区間の信頼水準を指定します。</td>
+</tr>
+<tr>
+<th>グラフ配置</th>
+<td>統計グラフの配置方法を指定します。
+<ul>
+<li><b>グラフを分離</b>: 各変数とグループごとに個別のグラフを作成します。各グラフには、分布曲線付きのヒストグラム、信頼区間プロット、確率プロットが含まれ、3つの結果テーブル「記述統計」、「##% 信頼区間」、および「正規性テスト」が表示されます。グラフのタイトルには変数とグループ情報が表示されます。</li>
+<li><b>変数ごと</b>: 各変数ごとに個別のグラフを作成します。グループは異なる縦方向のパネルにプロットされます。各グラフには、分布曲線付きのヒストグラム、外れ値を含む箱ひげ図、信頼区間プロット、および各グループの統計情報を行ごとにまとめたテーブルが表示されます。</li>
+<li><b>グループごと</b>: 各グループごとに個別のグラフを作成します。変数は異なる縦方向のパネルにプロットされます。各グラフには、分布曲線付きのヒストグラム、外れ値を含む箱ひげ図、信頼区間プロット、および各変数の統計情報を行ごとにまとめたテーブルが表示されます。</li>
+<li><b>オールインワン</b>: すべての変数とグループを1つのグラフにプロットします。 各サブセット（<i>グループ</i> * <i>変数</i>）は異なる縦方向のパネルにプロットされます。このグラフには、分布曲線付きのヒストグラム、外れ値を含む箱ひげ図、信頼区間プロット、およびサブセットごとの統計情報を行ごとにまとめたテーブルが表示されます。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>プロットデータ出力</th>
+<td>プロットデータを出力する場所を指定します。</td>
+</tr>
+<tr>
+<th>グラフ出力</th>
+<td>結果グラフを出力する場所を指定します。</td>
+</tr>
+</table>

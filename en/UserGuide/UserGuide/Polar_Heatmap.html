@@ -1,0 +1,46 @@
+<h1 class="firstHeading">29.18.6 Polar Heatmap</h1><p class='urlname' style='display: none'>Polar-Heatmap</p>
+<dl><dd><a  class="image"><img alt="Polar Heat Map.png" src="../images/Polar_Heatmap/Polar_Heat_Map.png?v=96751" width="533"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<ul><li> <b>Worksheet</b>: Select XY columns or XYZ columns (full or subrange); or a virtual matrix.</li></ul>
+<p>or
+</p>
+<ul><li><b>Matrix</b>: A matrix sheet. Multi-object sheet is supported.</li></ul>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Activate the matrixsheet or select required data from worksheet:
+</p>
+<ul><li> From the menu, choose <span class="menu">Plot &gt; Contour: Polar HeatMap θ(X)r(Y)</span>.</li></ul>
+<p>When you create the polar heatmap from XY data, the dialog <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxy.html"><b>plot_heatmapxy</b></a> will be opened.
+</p><p>When you create the polar heatmap from XYZ data, the dialog <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html"><b>plot_heatmapxyz</b></a> will be opened.
+</p><p>When you create the polar heatmap from multiple Y columns without Z, the dialog <a class="external text" href="../../XFunction/X-Function/Plotvm.html"><b>plotvm</b></a> dialog be opened.
+</p>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>PolarheatmapMat.otpu
+</p><p>(Installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>The polar heatmap is similar with <a href="../../UserGuide/UserGuide/Heat_Map.html" title="UserGuide:Heat Map">heatmap</a>, but plotted into a polar coordinate. 
+</p>
+<ul><li> When you choose <b>Plot &gt; Contour: Polar HeatMap θ(X)r(Y)</b>, all <b>X</b> and <b>Y</b> in label will be changed as <b>θ</b> and <b>R</b> in the X-function dialog <b>plot_heatmapxy</b>,  <b>plot_heatmapxyz</b> and <b>plotvm</b>.</li>
+<li>It supports to create a polar heatmap with RGB values in the source Z column or matrix.</li></ul>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2025
+</td></tr></table>
+
+
+
+
+
+

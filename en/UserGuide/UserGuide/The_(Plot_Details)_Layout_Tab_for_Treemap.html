@@ -1,0 +1,45 @@
+<h1 class="firstHeading">9.3.7.40 The (Plot Details) Layout Tab for Treemap</h1><p class='urlname' style='display: none'>PD-Layout-tab-Treemap</p>
+<p>This tab is used to do the layout settings for the treemap diagram.
+</p>
+<dl><dd><a  class="image"><img alt="Layout Tab for Treemap 01.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_01.png?v=97870" width="451"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Layout"><span class="tocnumber">1</span> <span class="toctext">Layout</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Order"><span class="tocnumber">2</span> <span class="toctext">Order</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Depth"><span class="tocnumber">3</span> <span class="toctext">Depth</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Gap_between_Levels"><span class="tocnumber">4</span> <span class="toctext">Gap between Levels</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Custom_Layout_Per_Levels"><span class="tocnumber">5</span> <span class="toctext">Custom Layout Per Levels</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Layout"></a><span class="mw-headline">Layout</span></h2>
+<p>There are 6 layouts available to arrange the node rectangles for each levels:
+</p>
+<ul><li> <b>Split</b>:  Arranges the rectangles according to the value ordering of the levels/values of the X variable.</li>
+<li> <b>Squarified</b>: Arrange all rectangles in descending order base on size column(summary statistic). This places the largest rectangles in the top left corner of the plot and the smallest in the bottom right corner.</li>
+<li> <b>Squarified+</b>:Improved Squarified for better aspect ratio without too slow. It is basically same as Squarified, but when a row is decided, it compare the current row direction with the alternate row direction. Choice the better row direction after comparing the aspect ratio. </li>
+<li> <b>Pivot by Size/Middle/Split Size</b>: The squarified treemap algorithm produces good aspect ratios, but ignores the sorting order of the rectangles. The ordered treemap, <i>pivot by Size/Middle/Split Size</i> algorithm takes the sorting order into account while aspect ratios are still acceptable. 
+<ul><li><b>Pivot by Size</b>: Pivot is largest item in the list, Average aspect ratio is better.</li>
+<li><b>Pivot by Middle</b>: Pivot is the middle item of the list. (If the list ontains n items, the pivot will be the item with index n/2). This algorithm is more stable.</li>
+<li><b>Pivot by Split Size</b>: The pivot will split the list into approxiaamately equal total areas. This layout is more balanced.</li></ul></li></ul>
+<h2><a name="Order"></a><span class="mw-headline">Order</span></h2>
+<p>You can choose how to order the rectangles, <b>Categorical Order</b>, <b>Alphabetical Order</b>, <b>by Size</b> or <b>by Column</b>(specify another data column).
+</p><p>The Squarified and Squarified+ layout only support order the nodes by size.
+</p>
+<h2><a name="Depth"></a><span class="mw-headline">Depth</span></h2>
+<p>Specify the treemap of which levels will show. Depth=1 means only show the treemap of 1st level. Depth=N means only show the treemap of first N levels. Infinite means show the treemap of all levels.
+</p>
+<h2><a name="Gap_between_Levels"></a><span class="mw-headline">Gap between Levels</span></h2>
+<p>Specfy the gap for the rectangles.
+</p>
+<h2><a name="Custom_Layout_Per_Levels"></a><span class="mw-headline">Custom Layout Per Levels</span></h2>
+<p>You can check this control group to customize the layout for different levels seperately, except the first level.
+</p>
+<dl><dd><a  class="image"><img alt="Layout Tab for Treemap 02.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_02.png?v=97887" width="454"  /></a></dd></dl>
+<p>The <b>Layout</b> and <b>Order</b> control in the opened <b>Edit</b> dialog are the same as above.
+</p>
+
+
+
+
+

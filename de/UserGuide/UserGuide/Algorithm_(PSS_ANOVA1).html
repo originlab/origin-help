@@ -1,0 +1,65 @@
+﻿<h1 class="firstHeading">Algorithmus Einfache ANOVA</h1>
+
+  <p class='urlname' style='display: none'>PSS-ANOVA-Algorithm</p>
+
+  <p>Im Allgemeinen wollen wir, wenn ein ANOVA-Test durchgeführt wird, die Trennschärfe des Tests mit festgelegten Stichprobenumfängen oder die Stichprobenumfänge mit festgelegten Trennschärfestufen wissen. Die X-Funktion PSS ANOVA1 kann verwendet werden, um die Trennschärfe sowie den Stichprobenumfang zu berechnen.</p>
+
+  <p><b>Der Algorithmus für die Berechnung der Trennschärfe</b></p>
+
+  <p>Wir nehmen an, dass jede Gruppe den gleichen Umfang hat. Die Formel der Trennschärfenberechnung ist gegeben durch</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-451e329fef8e80a248804d0bc3a67d27.png" title="Power=Prob(F&gt; F_0,\nu _{1,}\nu _2,\lambda )\,\!" alt="Power=Prob(F&gt; F_0,\nu _{1,}\nu _2,\lambda )\,\!" class="tex"></p>
+
+  <p>wobei <img src="../images/Algorithm_(PSS_ANOVA1)/math-7617376c4ee07c377351181ae25399e6.png" title="F\,\!" alt="F\,\!" class="tex"> als nichtzentrale <img src="../images/Algorithm_(PSS_ANOVA1)/math-ffc3aa8bbfb9461225eb31eb2b117d9d.png" title="F(\lambda ,\nu _{1,}\nu _2) \,\!" alt="F(\lambda ,\nu _{1,}\nu _2) \,\!" class="tex"> verteilt ist,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-b5125928794db12addea5ab0c4bfc6aa.png" title="F_0=F_{(1-\alpha ,\nu _{1,}\nu _2)}" alt="F_0=F_{(1-\alpha ,\nu _{1,}\nu _2)}" class="tex">, das <img src="../images/Algorithm_(PSS_ANOVA1)/math-d1c2a3034426827b01f7a1eba46a0c35.png" title="1-\alpha \,\!" alt="1-\alpha \,\!" class="tex"> Quartil der F-Verteilung mit <img src="../images/Algorithm_(PSS_ANOVA1)/math-ae5787f61ff2a77a8838833e09777396.png" title="\nu _1 \,\!" alt="\nu _1 \,\!" class="tex"> und <img src="../images/Algorithm_(PSS_ANOVA1)/math-d098596001dd1926cb1e564b8bdb9507.png" title="\nu _2 \,\!" alt="\nu _2 \,\!" class="tex"> Freiheitsgraden ist,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-6018d1bd33adfeb87c574f013fe2c86d.png" title="\nu _1=r-1 \,\!" alt="\nu _1=r-1 \,\!" class="tex"> die Freiheitsgrade des Zählers sind,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-eef721978be397064d4b0f049b07ddbd.png" title="\nu _2=n*r-r \,\!" alt="\nu _2=n*r-r \,\!" class="tex"> die Freiheitsgrade des Nenners sind,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-58b7fc3474b021ff11c1a0df58a54060.png" title="n \,\!" alt="n \,\!" class="tex"> die Anzahl pro Gruppe <i>i</i> ist,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-a01b83d7a33164700942b4b74732fd96.png" title="r \,\!" alt="r \,\!" class="tex"> die Anzahl der Gruppen ist,</p>
+
+  <p><img src="../images/Algorithm_(PSS_ANOVA1)/math-6988616b360131d0eea0de525ed128d6.png" title="\lambda =\frac{n*CSS}{S^2}" alt="\lambda =\frac{n*CSS}{S^2}" class="tex"> der Nichtzentralitätsparameter ist,</p>
+
+  <ul>
+    <li>Wenn wir <a href="../../UserGuide/UserGuide/The_PSS_ANOVA1_Dialog_Box.html#Test_Specification" title="UserGuide:The PSS ANOVA1 Dialog Box">die Differenz der Gruppenmittelwerte mit</a> <b>CSS der Mittelwerte</b> festlegen:</li>
+  </ul>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-d8985e55d847e8dbff8396250377df96.png" title="CSS=\sum _{g=1}^r(\mu _g-\mu )^2" alt="CSS=\sum _{g=1}^r(\mu _g-\mu )^2" class="tex"></dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-ee00b45dc165537d6c2e65b1cb765ff9.png" title="\mu _g \,\!" alt="\mu _g \,\!" class="tex"> der Mittelwert der <i>i</i>ten Gruppe ist,</dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-74b8eddf4b37de80c7c8eed1b64e46fc.png" title="\mu \,\!" alt="\mu \,\!" class="tex"> der Gesamtmittelwert ist,</dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-5c9f6395bcfef917a121d7b046c62780.png" title="S^2 \,\!" alt="S^2 \,\!" class="tex"> mit dem Mittelwert des quadratischen Fehler geschätzt wird.</dd>
+  </dl>
+
+  <ul>
+    <li>Wenn wir <a href="../../UserGuide/UserGuide/The_PSS_ANOVA1_Dialog_Box.html#Test_Specification" title="UserGuide:The PSS ANOVA1 Dialog Box">die Differenz der Gruppenmittelwerte mit</a> <b>Maximale Differenz der Mittelwerte</b> festlegen:</li>
+  </ul>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-6edc61472f77072704fc3735cc9e8684.png" title="CSS=D^2/2" alt="CSS=D^2/2" class="tex"></dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-2de7e7ed883eec9db2977e38f178c2d3.png" title="D=\mu_{max}-\mu_{min}" alt="D=\mu_{max}-\mu_{min}" class="tex"> die Differenz zwischen dem kleinsten Gruppenmittelwert und dem größten Gruppenmittelwert ist.</dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-d39862f4ab106d6caa45b522b4160ce9.png" title="\mu_{max}" alt="\mu_{max}" class="tex"> der größte Gruppenmittelwert ist.</dd>
+  </dl>
+
+  <dl>
+    <dd><img src="../images/Algorithm_(PSS_ANOVA1)/math-4c9c3f994a0aa21f5d3ea869c7e219ff.png" title="\mu_{min}" alt="\mu_{min}" class="tex"> der kleinste Gruppenmittelwert ist.</dd>
+  </dl>

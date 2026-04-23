@@ -1,0 +1,114 @@
+<h1 class="firstHeading">4.6.3 Reduce Columns</h1><p class='urlname' style='display: none'>Reduce-Columns</p>
+<p>Origin has a tool for reducing data by deleting or merging worksheet columns. Works on all or partial columns of the worksheet and reduces worksheet columns by deleting or statistically merging. 
+</p><p><br />
+To open this dialog box:
+</p>
+<ol><li> Activate the workbook.</li>
+<li> Click <b>Worksheet: Reduce Columns...</b> and open the <b>wreducecols</b> dialog box, which utilizes the <a class="external text" href="../../XFunction/X-Function/Wreducecols.html">wreducecols</a> x-function.</li></ol>
+<h2><a name="Dialog_Options"></a><span class="mw-headline">Dialog Options</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>Recalculate</b>
+</th>
+<td>
+<p>Controls recalculation of results
+</p>
+<ul><li><b>None</b> </li>
+<li><b>Auto</b> </li>
+<li><b>Manual</b>  </li></ul>
+<p>For more information, see: <a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="UserGuide:Recalculating Analysis Results">Recalculating Analysis Results</a>
+</p>
+</td></tr>
+<tr>
+<th>Input Worksheet
+</th>
+<td>
+<p>Select the worksheet to be reduce. See also: <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">How to specify your input data</a>
+</p>
+</td></tr>
+<tr>
+<th>Reduce Method
+</th>
+<td>
+<ul><li> <b>Delete N columns, then skip M columns</b></li></ul>
+<dl><dd> Delete N columns, then skip M columns </dd></dl>
+<ul><li> <b>Reduce N columns with merged values</b></li></ul>
+<dl><dd> Merge every N data points into one data point. The replace data point after merge is calculated by the method specified in <b>Merge by</b> options.</dd></dl>
+<ul><li> <b>Merge by Column Labels</b></li></ul>
+<dl><dd> Merge columns with the same column label row into one. The replace value after merge is calculated by the method specified in <b>Merge by</b> options. The column label row is specified in <b>Label Row</b> option. </dd></dl>
+</td></tr>
+<tr>
+<th>Label Row
+</th>
+<td>
+<p>Available only when <b>Merge by Column Labels</b> is selected for <b>Reduce Method</b>. Slect the desired column label row from the drop-down list.
+</p>
+</td></tr>
+<tr>
+<th>Merge/Delete Columns
+</th>
+<td>
+<p>Specify how many columns to delete when <b>Reduce Method</b> is set to <b>Delete N columns, then skip M columns</b>, or how many columns to merge when <b>Reduce Method</b> is set to <b>Reduce N columns with merged values</b>. 
+</p>
+</td></tr>
+<tr>
+<th>Skip Columns
+</th>
+<td>
+<p>Only available when <b>Reduce Method</b> is set to <b>Delete N columns, then skip M columns</b>. Specify how many columns to skip.
+</p>
+</td></tr>
+<tr>
+<th>Merge by
+</th>
+<td>
+<p>Available when <b>Reduce Method</b> is set to <b>Reduce N columns with merged values</b> or <b>Merge by Column Label</b>.  Specify value to replace merged data points. 
+</p>
+<ul><li>First Point </li></ul>
+<dl><dd>Replace every N data points with the value of the first merged point. </dd></dl>
+<ul><li>Last Point </li></ul>
+<dl><dd>Replace every N data points with the value of the last merged point. </dd></dl>
+<ul><li>Average </li></ul>
+<dl><dd>Replace every N data points with the average of the merged points. </dd></dl>
+<ul><li>Min </li></ul>
+<dl><dd>Replace every N data points with the minimum value of the merged points. </dd></dl>
+<ul><li>Max </li></ul>
+<dl><dd>Replace every N data points with the maximum value of the merged points. </dd></dl>
+<ul><li>Sum </li></ul>
+<dl><dd>Replace every N data points with the sum of the merged points. </dd></dl>
+<ul><li>SD </li></ul>
+<dl><dd>Replace every N data points with the standard derivation of the merged points. </dd></dl>
+<ul><li>Median </li></ul>
+<dl><dd>Replace every N data points with the median of the merged points. </dd></dl>
+<ul><li>Custom</li></ul>
+<dl><dd>Specify quantities in the <b>Custom</b> control below.</dd></dl>
+</td></tr>
+<tr>
+<th>Custom
+</th>
+<td>
+<p>Choose quantities from the flyout menu or enter desired quantities directly. Multiple quantities should be space-separated (e.g. "ave sd" for average and standard deviation). Each quantity will be output to a separate column and indentified by <b>Merge by</b> column label. 
+</p>
+</td></tr>
+<tr>
+<th>Starting Column to Delete/Merge
+</th>
+<td>
+<p>The starting column to merge/delete. 
+</p>
+</td></tr>
+<tr>
+<th>Output Worksheet
+</th>
+<td>
+<p>Specify output worksheet. The output columns are labeled with <b>Merge by</b> quantity.
+</p><p>For help with the range controls, see: <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">Output Results</a>
+</p>
+</td></tr></table>
+
+
+
+
+
+

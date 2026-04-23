@@ -1,0 +1,286 @@
+﻿<h1 class="firstHeading">Dialog t-Test bei verbundenen Stichproben</h1>
+
+  <p class='urlname' style='display: none'>tTest-PairSample-Dialog</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neuberechnen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">t-Test für Mittelwert</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennschärfe</span></a></li>
+
+      <li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Diagramme</span></a></li>
+
+      <li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+
+  <p>Um den Dialog t-Test bei verbundenen Stichproben zu öffnen:</p>
+
+  <ul>
+    <li>Klicken Sie bei aktivem Arbeitsblatt auf <b>Statistik: Hypothesentest: t-Test bei verbundenen Stichproben</b>.</li>
+  </ul>
+
+  <p><br>
+  <b>Mehr Informationen:</b></p>
+
+  <ul>
+    <li><a href="../../UserGuide/Category/Pair-Sample_t-Test.html" title="Category:Pair-Sample t-Test">Einführung: <i>t</i>-Test bei verbundenen Stichproben</a></li>
+
+    <li><a href="../../UserGuide/UserGuide/Algorithm_(PairSampletTest).html" title="UserGuide:Algorithm (PairSampletTest)">Algorithmen: <i>t</i>-Test bei verbundenen Stichproben</a></li>
+
+    <li><a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">Tutorial: Hypothesentests</a></li>
+  </ul>
+
+  <h2><a name="Recalculate"></a><span class="mw-headline">Neuberechnen</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th><b>Neuberechnen</b></th>
+
+      <td>
+        <p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
+
+        <ul>
+          <li><b>Kein</b></li>
+
+          <li><b>Auto</b></li>
+
+          <li><b>Manuell</b></li>
+        </ul>
+
+        <p>Weitere Informationen finden Sie unter <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Analyseergebnisse neu berechnen</a>.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th><b>Form der Eingabedaten</b></th>
+
+      <td>
+        <p><b>Rohdaten</b></p>
+
+        <dl>
+          <dd>Geben Sie die Spalte mit Bereichsformat ein. Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></dd>
+        </dl>
+
+        <p><b>Zusammengefasste Daten</b></p>
+
+        <dl>
+          <dd>Geben Sie den Wert von Mittelwertdifferenz, gepoolter Standardabweichung und Stichprobenumfangsdaten für Stichprobe(n) gemäß der Form "<i>Mittelwert</i> <i>Std.Abw.</i> <i>N</i>" (durch Leerzeichen getrennte Zahlen) ein.</dd>
+
+          <dd>Sie können die Mittelwertdifferenz folgendermaßen berechnen:</dd>
+
+          <dd><img src="../images/The_PairSampletTest_Dialog_Box/math-43345524f07b1555dc3ccdf064c4d4bb.png" title="\bar{d}=\frac{1}{N}\sum_{i=1}^N d_i" alt="\bar{d}=\frac{1}{N}\sum_{i=1}^N d_i" class="tex"></dd>
+
+          <dd>Die <b>Std.Abw.</b> wird berechnet mit:</dd>
+
+          <dd><img src="../images/The_PairSampletTest_Dialog_Box/math-4fe7e169c9e636a6e51aebc2b52698ef.png" title="s_d=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(d_i-\bar{d})}" alt="s_d=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(d_i-\bar{d})}" class="tex"></dd>
+
+          <dd><b>N</b> ist der Stichprobenumfang. <img src="../images/The_PairSampletTest_Dialog_Box/math-d247f594c78d0d2be10fc6d82512cc4e.png" title="d_i" alt="d_i" class="tex"> ist <img src="../images/The_PairSampletTest_Dialog_Box/math-c3fa588f5df674427b00fc94ed77a94d.png" title="x_{1i}-x_{2i},for(i=1,2,...,N)\,\!" alt="x_{1i}-x_{2i},for(i=1,2,...,N)\,\!" class="tex">.</dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th><b>Eingabe</b></th>
+
+      <td>
+        <p>Geben Sie die Eingabedaten ein.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="t-Test_for_Mean"></a><span class="mw-headline">t-Test für Mittelwert</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Testmittelwert</th>
+
+      <td>Die zu testende hypothetische Mittelwertdifferenz (normalerweise <i>0</i>).</td>
+    </tr>
+
+    <tr>
+      <th>Nullhypothese</th>
+
+      <td>Die zu testende Nullhypothese (normalerweise <i>Mittelwert1 - Mittelwert2 = 0</i>).</td>
+    </tr>
+
+    <tr>
+      <th>Alternativhypothese</th>
+
+      <td>
+        Optionen:
+
+        <p><b>Mittelwert1-Mittelwert2 &lt;&gt; Testmittelwert</b></p>
+
+        <dl>
+          <dd>Ein zweiseitiger t-Test bei verbundenen Stichproben wird durchgeführt: Ist die Mittelwertdifferenz zwischen den zwei Datensätzen kleiner oder größer als die hypothetische Mittelwertdifferenz?</dd>
+        </dl>
+
+        <p><b>Mittelwert1-Mittelwert2 &gt; Testmittelwert</b></p>
+
+        <dl>
+          <dd>Ein oberer t-Test bei verbundenen Stichproben wird durchgeführt: Ist die Mittelwertdifferenz größer als die hypothetische Mittelwertdifferenz?</dd>
+        </dl>
+
+        <p><b>Mittelwert1-Mittelwert2 &lt; Testmittelwert</b></p>
+
+        <dl>
+          <dd>Ein unterer t-Test bei verbundenen Stichproben wird durchgeführt: Ist die Mittelwertdifferenz kleiner als die hypothetische Mittelwertdifferenz?</dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Signifikanzniveau</th>
+
+      <td>Das Signifikanzniveau des Tests</td>
+    </tr>
+
+    <tr>
+      <th>Effektgröße</th>
+
+      <td>Berechnen Sie den Wert von Cohens d, um die Effektgröße zu zeigen, die der Differenzbetrag zwischen dem tatsächlichen Mittelwert1-Mittelwert2 und dem <b>Testmittelwert</b> ist.</td>
+    </tr>
+
+    <tr>
+      <th>Kondenzintervall(e)</th>
+
+      <td>
+        Ein Konfidenzintervall für den Mittelwert wird berechnet.
+
+        <p>Berechnungseinzelheiten finden Sie unter <a href="../../UserGuide/UserGuide/Algorithm_(PairSampletTest).html" title="UserGuide:Algorithm (PairSampletTest)">Algorithmen: <i>t</i>-Test bei verbundenen Stichproben</a>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Konfidenzniveau(s) in %</th>
+
+      <td>Legen Sie mit Leerzeichen getrennte Konfidenzniveaus fest, (1-<img src="../images/The_PairSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex">)%. Diese Option ist verfügbar, wenn <i>Konfidenzintervall(e)</i> aktiviert wird.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Power_Analysis"></a><span class="mw-headline">Trennschärfeanalyse</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Mindestdifferenz von Interesse</th>
+
+      <td>Legen Sie die Mindestdifferenz vom Testmittelwert fest, für den Sie sich interessieren. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennschärfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennschärfen zu entdecken.</td>
+    </tr>
+
+    <tr>
+      <th>Tatsächliche Trennschärfe</th>
+
+      <td>Berechnen Sie die Trennschärfe eines Tests (die Wahrscheinlichkeit, die Nullhypothese abzulehnen, wenn sie falsch ist).</td>
+    </tr>
+
+    <tr>
+      <th>Signifikanzniveau</th>
+
+      <td>Diese Option ist nur verfügbar, wenn <i>Hypothetische Trennschärfe</i> und/oder <i>Tatsächliche Trennschärfe</i> aktiviert ist/sind. Dies ist das Signifikanzniveau (Alpha-Wert) für die Berechnung der Trennschärfe.</td>
+    </tr>
+
+    <tr>
+      <th>Hypothetische Trennschärfe</th>
+
+      <td>Berechnen Sie die Trennschärfe des Tests für verschiedene Stichprobenumfänge.</td>
+    </tr>
+
+    <tr>
+      <th>Hypothetische/r Stichprobenumfang/-umfänge</th>
+
+      <td>Nur verfügbar, wenn <i>Hypothetische Trennschärfe</i> aktiviert ist. Legen Sie den/die hypothetischen Stichprobenumfang/-umfänge für die Berechnung der Trennschärfe fest.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Plots"></a><span class="mw-headline">Diagramme</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Für Differenzen zeichnen</th>
+
+      <td>Aktivieren Sie dieses Kontrollkästchen, um das Boxdiagramm und Histogramm für mittlere Differenzen zu zeichnen.</td>
+    </tr>
+
+    <tr>
+      <th>Boxdiagramm</th>
+
+      <td>Sie zeichnen ein Boxdiagramm.</td>
+    </tr>
+
+    <tr>
+      <th>Histogramm</th>
+
+      <td>Sie zeichnen ein Histogramm.</td>
+    </tr>
+
+    <tr>
+      <th>Diagramme des gleichen Typs in einem Graph anordnen</th>
+
+      <td>Beachten Sie, dass Layer für Histogramme vertikal angeordnet werden. Für Boxdiagramme werden Layer horizontal angeordnet. Dieses Kontrollkästchen wird verborgen, wenn Sie die Option <b>Für Differenzen zeichnen</b> wählen.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+
+  <p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th><b>Ausgabe Ergebnisprotokoll</b></th>
+
+      <td>
+        <p>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Grafischer Zusammenfassungsbericht</th>
+
+      <td>
+        Erstellen Sie einen grafischen Zusammenfassungsbericht, einschließlich dem Balken für den p-Wert und die Effektgröße und dem Verteilungsdiagramm der Differenz. Es werden auch drei Ergebnistabellen an das Diagramm angehängt, um die statistischen Werte zu zeigen.
+
+        <p>Die Fußnote nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Grafischer Bericht der Trennschärfeanalyse</th>
+
+      <td>
+        Erstellen Sie einen grafischen Bericht der Trennschärfeanalyse mit Trennschärfekurven.
+
+        <p>Wenn im Bearbeitungsfeld <b>Mindestdifferenz von Interesse</b> kein Wert eingegeben wurde, wird nur die Trennschärfekurve des aktuellen Stichprobenumfangs ausgegeben. Die Trennschärfe bei 60 %, 70 %, 80 % und 90 % wird gekennzeichnet, um die Differenz bei diesen Trennschärfewerten zu zeigen. Wenn ein Differenzwert im Bearbeitungsfeld <b>Mindestdifferenz von Interesse</b> festgelegt wurde, werden fünf Trennschärfekurven ausgegeben: Die Trennschärfekurven bei 60 %, 70 %, 80 % und 90 % und dem aktuellen Stichprobenumfang. Der Stichprobenumfang, mit dem die Mindestdifferenz entdeckt wird, ist dann aufgeführt.</p>
+
+        <p>Es wird eine Fußnote nach dem Trennschärfekurvendiagramm hinzugefügt, um die Diagnoseergebnisse der Trennschärfeanalyse zu zeigen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ausgabezeichnungsdaten</th>
+
+      <td>Legen Sie ein Arbeitsblatt für die Ausgabe der gezeichneten Daten fest (Origin erzeugt beim Erstellen von Zeichnungen tabellarische Daten).</td>
+    </tr>
+
+    <tr>
+      <th>Ergebnisse ausgeben</th>
+
+      <td>Legen Sie das Ausgabearbeitsblatt für die Testergebnisse fest.</td>
+    </tr>
+  </table>

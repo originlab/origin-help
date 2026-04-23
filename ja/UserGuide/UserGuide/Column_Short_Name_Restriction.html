@@ -1,0 +1,82 @@
+﻿<h1 class="firstHeading">列ショートネームの制限</h1><p class='urlname' style='display: none'>Column-Short-Names-Restrict</p>
+<p><br />
+</p><p>バージョン<b>2017</b>より、OriginのワークブックにおいてMS Excelと同様の「<b>スプレッドシートセル表記</b>(<b>SCN</b>)」が サポートされました。Originの古いバージョンを使用していたユーザは、次の点にご注意ください。
+</p>
+<ul><li> SCNの目的は、より単純で読みやすい構文で<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">列式</a>を作成できるようにすることです。</li>
+<li> SCNはデフォルト設定で全ての新しいワークブックで有効になっています。  </li>
+<li> SCNが有効な時、<a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html#Workbook.2C_Worksheet_and_Column_Basics">列<b>ショートネーム</b></a>は編集不可で並び替えもできません（古いバージョンとは異なりますのでご注意ください）。 </li>
+<li> SCNが有効な時（デフォルト）、列ショートネームは、次のように列の番号に従ってアルファベット順に並べられます：</li></ul>
+<dl><dd><dl><dd><i>A, B, …, Z, AA, BB, …, ZZ, .etc</i></dd></dl></dd></dl>
+<p>ワークシート内で列を挿入したり移動したりすると、列ショートネームがアルファベット順に並べ替えられます。 
+</p><p>新しいシンタックスで列式を書く場合
+</p>
+<dl><dd><ul><li><i>A</i> はショートネームが 「A」の列を参照します。以前の<i>col(A)</i> と同じです。</li>
+<li><i>A1 </i>は列Aの最初の行を参照します。<i>col(A)[1]</i> と同じです。</li>
+<li><i>[Book2]Sheet1!A</i> は、現在のワークシート上にはなくても、Book2、Sheet1の最初の列を参照します。これは、スプレッドシートセル表記が有効な場合にのみ利用できます。</li>
+<li><i>A:A</i>は、<i>A</i> と同じようにショートネーム&quot;A&quot;の列を参照するのに使用できます (<i>col(A)</i> と同様)。</li>
+<li>列ショートネームまたは行インデックスの前に<i>$</i> を付けると、<a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html#Extending_Formulas_Across_Rows_or_Columns" title="ユーザガイド：数式を使用してセル値を設定する">自動入力セル式</a>または<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">列の数式</a>でこの列または行を固定することを意味します。</li></ul></dd></dl>
+<p>「以前の」<b>col</b>/<b>wcol</b>構文は今でも使用できますが、新しい構文の利点の一部はサポートされません。たとえば、古い構文を使用する<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ"><b>F(x)=</b></a>または<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定"><b>値の設定</b></a>式を使って派生した値の列の前に、ワークシート列を挿入した場合、新しい列の配置を反映するような列の式になるように自動的に更新されません。
+</p>
+<dl><dd><dl><dd><a  class="image"><img alt="SCN disabled for col.png" src="../images/Column_Short_Name_Restriction/SCN_disabled_for_col.png" width="579"  /></a></dd></dl></dd></dl>
+<table class="note">
+<tr>
+<td>
+<p><b>Note: </b> 
+<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">列式</a>でショートネームによって列を参照する場合 
+</p>
+<ul><li> ショートネームは、3文字までに制限されます。そうでない場合、列参照は認識されません。ショートネームが3文字を超える場合、 <b>col()</b> または <b>wcol()</b>シンタックスを使用して参照します。</li>
+<li> 関数を<a class="external text" href="../../LabTalk/LabTalk/Token_(function).html">Token</a>のように文字列パラメータとして使用する場合、一重引用符の代わりに二重引用符を使用する必要があります。</li></ul>
+</td></tr></table>
+<table class="noborder">
+	<tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Column_Short_Name_Restriction/Tutorial_icon.png" width="57"  border="0" />
+	</td>
+	<td><p><b>サンプル 1</b>
+</p>
+<ol>
+次のような Excel型の数式を <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ"><b>F(x)</b></a>列ラベル行に入力して、
+<pre class="lt" style="font-family:monospace;">A<span style="color: #000080;">-</span>abs<span style="color: #000000;">(</span>B<span style="color: #000000;">)</span></pre>
+<p>列Aから列Bの絶対値を引いた値を計算します。 
+</p>
+</ol>
+<p><b>サンプル 2</b>
+</p>
+<ol>
+次の数式を <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定"><b>列値の設定</b></a> ダイアログ に入力します。
+<pre class="lt" style="font-family:monospace;">B<span style="color: #000080;">+</span>A2</pre>
+<p>列Bと列Aの2番目のセルを足します。
+</p>
+</ol>
+<p><b>サンプル 3</b>
+</p>
+<ol>
+Book1, sheet1の最初の列で、F(x)列ラベル行に以下の式を入力します。
+<pre class="lt" style="font-family:monospace;"><span style="color: #000000;">[</span>Book2<span style="color: #000000;">]</span>Sheet1<span style="color: #000080;">!</span>A<span style="color: #000080;">+</span><span style="color: #000000;">[</span>Book2<span style="color: #000000;">]</span>Sheet1<span style="color: #000080;">!</span>B</pre>
+<p>別のワークブック[Book2]Sheet1にあるデータによって値を設定します。
+</p>
+</ol>
+</td></tr></table>
+<p><br />
+繰り返しになりますが、スプレッドシートセル表記(SCN)が有効な場合、列のショートネームは編集できません。 
+</p>
+<ul><li> GUI操作の編集を可能にするには<a href="../../UserGuide/UserGuide/Folder_and_Window_Properties_Dialog.html#The_Properties_tab" title="ユーザガイド：フォルダとウィンドウのプロパティダイアログ"><b>ウィンドウプロパティ</b>ダイアログの<b>プロパティ</b>タブ</a>にある、<b>スプレッドシートセル表記</b> のチェックを外します。</li>
+<li> <a class="external text" href="../../QuickHelp/QuickHelp/Turn_off_spreadsheet_cell_notation.html"><b>FAQ-849 ワークブックでスプレッドシートセル表記を無効にしたり、選択して利用するにはどのようにしたらよいでしょうか？</b></a>も参照してください。 </li>
+<li> スクリプトで列名の変更を有効にするには、<a class="external text" href="../../QuickHelp/QuickHelp/Set_column_names_in_script_using_wksaddCol_wkscolname.html">このFAQを</a>参照してください。</li></ul>
+<p><br />
+</p>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b>
+簡単な表記が可能なワークブックとプロジェクトは、旧バージョン（2017より前）では利用できません。
+</p>
+</td></tr></table>
+<p><br />
+Originでのワークシート計算に関連する列の命名の詳細については、次のトピックを参照してください。
+</p>
+<ul><li> <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html#Spreadsheet_Cell_Notation" title="ユーザーガイド：クイックスタート 列の設定">スプレッドシートセル表記</a></li>
+<li> <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">値の設定ダイアログボックス-クイックスタート</a></li>
+<li> <a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="ユーザガイド：数式を使用してセル値を設定する">数式を利用してセルの値を設定する</a></li></ul>
+
+
+    

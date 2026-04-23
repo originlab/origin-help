@@ -1,0 +1,46 @@
+﻿<h1 class="firstHeading">Die Hierarchie Seite &gt; Layer &gt; Zeichnung</h1>
+
+  <p class='urlname' style='display: none'>Page-Layer-Plot-Hierarchy</p>
+
+  <p>Jedes Origin-Diagrammfenster wird mit Hilfe einer Diagrammvorlage erstellt -- entweder standardmäßig oder benutzerdefiniert. Die Inhalte jedes Origin-Diagrammfensters sind in einer Hierarchie <b>Seite &gt; Layer &gt; Zeichnung</b> organisiert. Die Seite befindet sich an oberster Stelle (dargestellt durch das Symbol Graph1 im Dialog <b>Details Zeichnung</b> und in der <b>Objektverwaltung</b>). Sie dürfen auch spezielle Punkte auf der Ebene Zeichnung hinzufügen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="The Page Layer Plot Hierarchy-1-vNext.png" src="../images/The_Page_Layer_Plot_Hierarchy/The_Page_Layer_Plot_Hierarchy-1.png" width="752"></a></dd>
+  </dl>
+
+  <p><i><b>Allgemein:</b></i></p>
+
+  <ul>
+    <li>Die Seite muss mindestens einen -- und kann mehrere -- Diagrammlayer enthalten.</li>
+
+    <li>Die Layer beinhalten (normalerweise) eine oder mehrere Diagramme. Die Zeichnungen können zusammen gruppiert und mit einer Gruppierungskennzeichnung versehen werden (<a class="image"><img alt="PlotGroup Indicator 1.png" src="../images/The_Page_Layer_Plot_Hierarchy/PlotGroup_Indicator_1.png" width="18"></a> und <a class="image"><img alt="PlotGroup Indicator 2.png" src="../images/The_Page_Layer_Plot_Hierarchy/PlotGroup_Indicator_2.png" width="19"></a> abwechselnd im Dialog Details Zeichnung, <b>g#</b> in der Objektverwaltung).
+
+      <dl>
+        <dd><a class="image"><img alt="The Page Layer Plot Hierarchy 02.png" src="../images/The_Page_Layer_Plot_Hierarchy/650px-The_Page_Layer_Plot_Hierarchy_02.png" width="650"></a></dd>
+      </dl>
+    </li>
+
+    <li>Das Diagramm besteht (normalerweise) aus einem oder mehreren Datenpunkten (in einem 2D-Diagramm ist der Datenpunkt ein einzelnes XY-Paar, ein Fehlerbalken oder eine Datenbeschriftung; in 3D-Diagrammen ist der Datenpunkt eine XYZ-Dreiergruppe).</li>
+
+    <li>Der <a href="../../UserGuide/Category/Customizing_Plot_Elements.html#Customizing_Individual_Data_Points" title="Category:Customizing Plot Elements">spezielle Punkt</a> wird manuell nach dem Zeichnen des Diagramm erstellt. Sie können mehrere spezielle Punkte auf einer Zeichnung hinzuzufügen.</li>
+  </ul>
+
+  <p>Jedes Objekt in dieser Hierarchie von Seite-Layer-Diagramm hat zugeordnete Objekte und/oder Eigenschaften. Es wird hilfreich für Sie sein, einen Sinn dafür zu entwickeln, welche Objekte und Eigenschaften logisch mit den jeweiligen Ebenen der Hierarchie Seite &gt; Layer &gt; Zeichnung verbunden sind. Beachten Sie, dass sich neben jedem Layer und jedem Diagramm ein Kontrollkästchen befindet, mit dem Sie das Element entweder zeigen (aktiviert) oder verbergen (deaktiviert) können.</p>
+
+  <p><i><b>Zum Beispiel:</b></i></p>
+
+  <ul>
+    <li>Wenn Sie zum Beispiel die <b>Größe einer Diagrammseite</b> verändern möchten, so dass ein exportiertes Bild des Diagramms genaue Abmessungen hat, werden Sie die Eigenschaften der Diagrammseite bearbeiten müssen. Allgemeine Informationen zur Diagrammseite finden Sie unter <a href="../../UserGuide/Category/Customizing_Graph_Page_Elements.html" title="Category:Customizing Graph Page Elements">Elemente der Diagrammseite benutzerdefiniert anpassen</a>.</li>
+  </ul>
+
+  <ul>
+    <li>Wenn Sie die <b>Achsenskalierung</b> eines Diagramms verändern möchten, ist es hilfreich zu wissen, dass die Achsen ein Teil des Diagrammlayers sind -- eine verschiebbare, in der Größe veränderbare Einheit bestehend aus (1) einem Satz X- und Y- (optional Z-) Koordinatenachsen, (2) einer oder mehreren Datenzeichnungen und (3) zugeordneten Textbeschriftungen und Zeichenobjekten. Allgemeine Informationen zum Diagrammlayer finden Sie unter <a href="../../UserGuide/Category/Customizing_Graph_Layer_Elements.html" title="Category:Customizing Graph Layer Elements">Elemente des Diagrammlayers benutzerdefiniert anpassen</a>.</li>
+  </ul>
+
+  <ul>
+    <li>Wenn Sie die <b>Symbolform</b> Ihres Punktdiagramms ändern möchten, hilft es zu wissen, dass die Symbolform eine Eigenschaft des Diagramms ist. Allgemeine Informationen zum Diagramm finden Sie in <a href="../../UserGuide/Category/Customizing_Plot_Elements.html" title="Category:Customizing Plot Elements">Elemente der Zeichnung benutzerdefiniert anpassen</a>.</li>
+  </ul>
+
+  <p>Beachten Sie, dass jede Eigenschaft der Diagrammseite auf alle Diagrammlayer dieser Seite angewendet wird und jede Eigenschaft eines Diagrammlayers auf alle Diagramme dieses Layers. Bei Zeichnungen wird jede Eigenschaft auf alle Datenpunkte angewendet, außer wenn bei <a href="../../UserGuide/Category/Customizing_Plot_Elements.html#Customizing_Individual_Data_Points" title="Category:Customizing Plot Elements"><i>einem einzelnen Datenpunkt</i></a> Anpassungen durch den Anwender gemacht wurden (gilt nur für 2D-Diagramme und Linien- &amp; Symboldiagramme).</p>
+
+  <p>Beachten Sie außerdem, dass Origin über mehrere Seitenansichtsmodi verfügt, die Sie durch entweder eine schnellere Bildschirmneuzeichnung oder eine größere Anzeigegenauigkeit des Diagramms unterstützt. Einzelheiten können Sie auf der Seite <a href="../../UserGuide/UserGuide/Available_Page_Viewing_Modes_Speed_vs_Accuracy.html" title="UserGuide:Available Page Viewing Modes Speed vs.">Verfügbare Seitenansichten: Geschwindigkeit contra Genauigkeit</a> nachlesen.</p>

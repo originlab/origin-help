@@ -1,0 +1,76 @@
+﻿<h1 class="firstHeading">特性要因図</h1>
+<p class='urlname' style='display: none'>Cause-and-Effect-Diagram</p>
+<a class="image"><img alt="Cause-and-Effect Diagram 01.png" src="../images/Cause-and-Effect_Diagram/Cause-and-Effect_Diagram_01.png" width="685" /></a>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_causeeffect_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">plot_causeeffectダイアログボックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>特性要因図（フィッシュボーン図またはイシカワ図とも呼ばれます）を作成するには、少なくとも 2 列のテキスト列を選択してください。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メニューから、<b>作図 &gt; 統計：特性要因図</b>を選択して、<b>plot_causeeffect</b>ダイアログを開きます。</p>
+<h3><a name="The_plot_causeeffect_Dialog_Box" id="The_plot_causeeffect_Dialog_Box"></a><span class="mw-headline">plot_causeeffectダイアログボックス</span></h3>
+<p><a class="image"><img alt="Cause-and-Effect Diagram 02.png" src="../images/Cause-and-Effect_Diagram/Cause-and-Effect_Diagram_02.png" width="465" /></a></p>
+<table class="dialogcontroltable">
+<tr>
+<th>データ形式</th>
+<td>このグラフには2つのデータ構造がサポートされています。
+<ul>
+<li><b>親子の列</b>：原因とサブ原因の関係が「親」と「子」の2つの列として保存されています。</li>
+<li><b>それぞれの原因を別々の列に表示</b>：各原因の関係は別々の列に保存されています。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>親</th>
+<td><b>データ形式</b>が<b>親子の列</b>に設定されている場合は、親の原因として列を選択します。</td>
+</tr>
+<tr>
+<th>子</th>
+<td><b>データ形式</b>が<b>親の子列</b>に設定されている場合は、子の原因として列を選択する。</td>
+</tr>
+<tr>
+<th>原因</th>
+<td><b>データ形式</b>が<b>それぞれの原因を別々の列に表示</b>に設定されている場合、すべての原因列を原因として選択します。</td>
+</tr>
+<tr>
+<th>効果</th>
+<td>解決したい問題または効果のラベルを入力します（オプション）。</td>
+</tr>
+<tr>
+<th>テンプレート</th>
+<td>デフォルトでは、組み込みテンプレート"CauseEffect"が選択されています。<b>自動</b>ボックスのチェックを外すことで、ユーザ定義テンプレートを選択することも可能です。</td>
+</tr>
+<tr>
+<th>プロットデータ出力</th>
+<td>プロットデータを出力する場所を指定します。プロットデータは、親子列として配置されます。</td>
+</tr>
+</table>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>CauseEffect.OTPU (Originのプログラムフォルダにインストールされています)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>特性要因図は、問題や効果の潜在的な原因を特定し、整理するための視覚的ツールです。フィッシュボーン図、石川ダイアグラムとも呼ばれます。多くの業界で問題の根本原因を特定するために広く使用されています。</p>
+<p>図は魚の骨のような形をしており、「頭」は解決したい特定の問題や効果、「背骨」は問題に向かっている中心線、「肋骨」は原因の主要なカテゴリーで、背骨から分岐しています。小さな骨は、カテゴリー肋骨から分岐した特定の原因やサブ原因です。</p>
+<p>カテゴリーは、問題の文脈や性質によって異なる場合があります。例えば、</p>
+<ul>
+<li>製造業では、カテゴリーは人、機械、材料、方法、環境などが含まれるかもしれません。</li>
+<li>医療において、カテゴリーは患者、プロセス、装置、環境、スタッフなどが含まれるかもしれません。</li>
+</ul>
+<p>図を編集するには、<b>作図の詳細</b>ダイアログの以下のタブを使用します。</p>
+<ul>
+<li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Layout_Tab_for_CauseEffect.html" title="ユーザガイド：(作図の詳細) 特性要因図のレイアウトタブ">レイアウトタブ</a></li>
+<li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Bones_Tab.html" title="ユーザガイド:(作図の詳細) 「骨」タブ">骨タブ</a></li>
+<li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Labels_Tab_for_CauseEffect.html" title="ユーザガイド:(作図の詳細)特性要因図のラベルタブ"><b>ラベル</b>タブ</a></li>
+</ul>

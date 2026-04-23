@@ -1,0 +1,71 @@
+﻿<h1 class="firstHeading">インポートウィザード、ヘッダーバイトページ(バイナリ)</h1><p class='urlname' style='display: none'>ImpWiz-Bin-HeadBytesPage</p>
+<p>このページを使って、バイナリヘッダのファイルを定義し、後で利用するためにヘッダから変数を抽出します。
+</p>
+<dl><dd><a  class="image"><img alt="Header Bytes Page Binary.png" src="../images/Import_Wizard_Header_Bytes_Page_(Binary)/Header_Bytes_Page_Binary.png" width="731"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Header_Bytes_Controls"><span class="tocnumber">1</span> <span class="toctext">ヘッダバイトのオプション</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Preview_Window"><span class="tocnumber">2</span> <span class="toctext">プレビューウィンドウ</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Variables"><span class="tocnumber">3</span> <span class="toctext">変数</span></a></li>
+</ul>
+</div>
+<h2><a name="Header_Bytes_Controls"></a><span class="mw-headline">ヘッダバイトのオプション</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th> ヘッダバイト数
+</th>
+<td>
+<p>数値を入力するか、ヘッダ部分をグラフィカルに選択して、バイナリファイルのヘッダ部分のバイト数を指定します。  グラフィカルに選択するには、プレビューパネル (<b>Hex</b> または <b>ASCII</b>) の目的の場所にカーソルを配置し、<b>ヘッダバイト数テキスト</b>ボックスの右にある「リフレッシュ」ボタン<a  class="image"><img alt="Refresh.png" src="../images/Import_Wizard_Header_Bytes_Page_(Binary)/Refresh.png" width="25"  /></a>をクリックします。
+</p>
+</td></tr>
+<tr>
+<th> プレビューフォント
+</th>
+<td>
+<p>プレビューウィンドウのフォントを選択します。
+</p>
+</td></tr>
+<tr>
+<th> Big-Endianバイトオーダー
+</th>
+<td>
+<p>このチェックボックスを使用して、インポートデータのバイト順を指定します。 
+</p>
+</td></tr></table>
+<h2><a name="Preview_Window"></a><span class="mw-headline">プレビューウィンドウ</span></h2>
+<p>左のパネルはバイト形式でデータを表示し、右側のパネルはASCIIテキストでデータを表示します。  どちらかのパネルにカーソルを配置して、<b>ヘッダバイト数</b>または<b>バイトオフセット</b>をグラフィカルに選択できます。
+</p>
+<h2><a name="Variables"></a><span class="mw-headline">変数</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th> ヘッダ変数の定義
+</th>
+<td>
+<p>このボックスを選択して、ファイルのヘッダ部分から変数を定義して抽出します。  このボックスを選択すると、変数の定義で使われる他のオプションが有効になります。
+</p>
+</td></tr>
+<tr>
+<th> バイトオフセット
+</th>
+<td>
+<p>このテキストボックスに(ヘッダ部分の)変数のバイトオフセット値を入力します。   hexおよびASCIIデータファイルの表示は、オフセットを反映して更新されます。  
+</p><p>hex または ASCIIデータファイルの表示をクリックして、グラフィカルにバイトオフセットを指定できます。   テキストボックスは、バイトオフセット値で更新されます。
+</p>
+</td></tr>
+<tr>
+<th> 変数定義グループ
+</th>
+<td>
+<p>バイトオフセットを指定すると、
+</p>
+<ol><li> 表示領域で、変数に対応するバイトをハイライトします。 </li>
+<li> <b>タイプ</b>リストから変数タイプを選択します。  変数の値が、編集不可の<b>値</b>ビューボックスに表示されます。 </li>
+<li> 変数のデフォルト名は<b>P</b><i>n</i>です。<b>名前</b>編集ボックスで名前を変更できます。</li>
+<li> <b>追加</b>をクリックして、ターゲットページに保存する変数のリスト（右下のリストボックス）に変数を追加します。  </li>
+<li> 変数を削除するには、右側のボックスで変数を選択し、<b>削除</b>をクリックします。 </li></ol>
+</td></tr></table>
+
+
+
+
+    

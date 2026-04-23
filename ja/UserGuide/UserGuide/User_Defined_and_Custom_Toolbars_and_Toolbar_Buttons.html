@@ -1,0 +1,117 @@
+﻿<h1 class="firstHeading">ユーザ定義およびカスタムツールバーとツールバーボタン</h1><p class='urlname' style='display: none'>UserDef-Custom-Toobar-Button</p>
+<p>Originには、<b>ユーザ定義</b>という組込みの<b>ボタングループ</b>があります。   これらのボタンは個々に選択することができ、ツールバーからカスタムプログラムにアクセスするために、自分のスクリプトやコードをボタンと結びつけることができます。  さらに、Originは自分で作成したビットマップを使って、新しいボタングループを作成することもできます。
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Showing_or_hiding_toolbars"><span class="tocnumber">1</span> <span class="toctext">ツールバーの表示/非表示</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Programming_a_User-Defined_toolbar_button_to_perform_a_custom_task"><span class="tocnumber">2</span> <span class="toctext">自分のプログラムを実行するために ユーザ定義ツールバーボタンにプログラムを結びつける</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Adding_a_button_group_that_performs_custom_tasks"><span class="tocnumber">3</span> <span class="toctext">カスタムタスクを実行するボタングループを作成する</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Method_1:_Create_a_new_button_group"><span class="tocnumber">3.1</span> <span class="toctext">方法1: 新しいボタングループの作成</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Method_2:_Copy_another_Origin_user.27s_custom_button_group_to_your_Origin_program_folder"><span class="tocnumber">3.2</span> <span class="toctext">方法2: 他の場所にあるカスタムボタングループをOriginプログラムフォルダにコピーする</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Method_3:_Install_button_groups_that_have_been_exported_to_an_.OPX_file"><span class="tocnumber">3.3</span> <span class="toctext">方法3: OPXファイルにエクスポートしたボタングループをインストールする</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Modifying_a_custom_button_group"><span class="tocnumber">4</span> <span class="toctext">カスタムボタングループを修正する</span></a></li>
+</ul>
+</div>
+<h2><a name="Showing_or_hiding_toolbars"></a><span class="mw-headline">ツールバーの表示/非表示</span></h2>
+<p>Originのインターフェイスですべてのツールバーを非表示/表示
+</p>
+<ul><li> <b>表示：ツールバーを非表示</b>メニュー<br /><i>または </i></li>
+<li> ホットキー <b>Ctrl</b>+<b>Alt</b>+<b>R</b> を押す</li></ul>
+<p><br />
+<a href="../../UserGuide/UserGuide/The_Customize_Toolbar_Dialog_Box.html" title="ユーザガイド：ツールバーのカスタマイズダイアログボックス">｢<b>ツールバーのカスタム化</b>｣ダイアログボックス</a>を使って、ツールバーを表示したり、非表示にすることができます。
+</p><p>Originの指定するツールバーを表示/非表示する
+</p>
+<ol><li>メニューから<b>表示：ツールバー</b>を選択します。</li>
+<li>『<b>ツールバー</b>』タブを選択し、Originが実行するとき表示させるツールバーを選択し、 <b>閉じる</b>ボタンをクリックします。</li></ol>
+<h2><a name="Programming_a_User-Defined_toolbar_button_to_perform_a_custom_task"></a><span class="mw-headline">自分のプログラムを実行するために ユーザ定義ツールバーボタンにプログラムを結びつける</span></h2>
+<p>「<b>ユーザ定義</b>」ボタングループにはプログラムがされていないボタンが10個あり、操作を実行するためのプログラムと結びつけ、実行するのに使用することができます。
+</p>
+<dl><dd><a  class="image"><img alt="User-Defined and Custom Toolbars and Toolbar Buttons-1.png" src="../images/User_Defined_and_Custom_Toolbars_and_Toolbar_Buttons/User-Defined_and_Custom_Toolbars_and_Toolbar_Buttons-1.png" width="237"  /></a></dd></dl>
+<p>｢<b>ユーザ定義</b>｣ボタングループにあるボタンをカスタムタスクと結びつけるには
+</p>
+<ol><li>「<b>ツールバーのカスタム化</b>」ダイアログボックス(「<b>表示：ツールバー</b>」)を開き、『<b>ボタングループ</b>』タブを選びます。</li>
+<li>『<b>グループ</b>』リストから「<b>ユーザ定義</b>」を選びます。 
+<dl><dd><a  class="image"><img alt="User-Defined and Custom Toolbars and Toolbar Buttons-2.png" src="../images/User_Defined_and_Custom_Toolbars_and_Toolbar_Buttons/User-Defined_and_Custom_Toolbars_and_Toolbar_Buttons-2.png" width="424"  /></a></dd></dl></li>
+<li>『<b>ボタン</b>』グループのボタンを選択します。</li>
+<li>『<b>ボタン</b>』グループの｢<b>設定</b>｣ボタンをクリックします。  「<b>ボタンの設定</b>」ダイアログボックスが開きます。</li>
+<li><a href="../../UserGuide/UserGuide/The_Button_Settings_Dialog_Box.html" title="ユーザガイド：ボタン設定ダイアログボックス"><b>「ボタンの設定」</b>ダイアログボックス</a>を編集し、<b>OK</b>ボタンをクリックします。カスタムボタンのプログラム化が完了します。</li></ol>
+<h2><a name="Adding_a_button_group_that_performs_custom_tasks"></a><span class="mw-headline">カスタムタスクを実行するボタングループを作成する</span></h2>
+<p><b>｢ユーザ定義｣</b>ボタングループのプログラミングボタンに加えて、Originにカスタムボタンの新しいグループを追加できます。  これを行うには、3つの方法があります。
+</p>
+<h3><a name="Method_1:_Create_a_new_button_group"></a><span class="mw-headline">方法1: 新しいボタングループの作成</span></h3>
+<ol><li>『<b>ボタングループ</b>』グループの｢<b>新規作成</b>｣ボタンをクリックします。  「<b>ボタングループの作成</b>」ダイアログボックスが開きます。  
+<dl><dd><a  class="image"><img alt="User-Defined and Custom Toolbars and Toolbar Buttons-3.png" src="../images/User_Defined_and_Custom_Toolbars_and_Toolbar_Buttons/User-Defined_and_Custom_Toolbars_and_Toolbar_Buttons-3.png" width="410"  /></a></dd>
+<dd><i><b>以下の項目を指定します。</b></i>
+<ul><li>ボタンの<b>『グループ名』</b>  既存のボタングループ名を入力する場合、Originは、ボタングループに対して、<b>名前を変更</b>するか、<b>統合</b>するか、<b>置き換える</b>か を尋ねます。</li>
+<li>グループ内の『<b>ボタンの個数</b>』(最大50個のボタンを持つことができます。)</li>
+<li>ボタンの<b>ビットマップファイル</b>  ビットマップは16色のビットマップにする必要があります。  さらに、ビットマップは、カスタムボタングループ内の各ボタンが16ピクセル×16ピクセルで構成される必要があります。  例えば、5つのボタンを持つボタングループを作成する場合、16 × 80ピクセルのビットマップを使用します。  Originは『<b>ボタンの個数</b>』で指定した分のビットマップを使用します。</li></ul></dd></dl></li>
+<li><b>OK</b>をクリックします。  入力したすべての情報が有効なら、Originは「<b>名前を付けて保存</b>」ダイアログボックスを開きます。  デフォルトでは、<b>グループ名</b>が<b>ファイル名</b>テキストボックスに表示されます。</li>
+<li>「<b>保存</b>」ボタンをクリックし、指定した初期化ファイルに新しいボタングループの設定を保存します。</li></ol>
+<p>これらのステップが完了したら、『<b>グループ</b>』リストボックスに新しいボタングループが表示されます(「<b>ツールバーのカスタム化</b>」ダイアログの『<b>ボタングループ</b>』タブ) 。  グループ内のボタンに対する設定は、前項『自分のプログラムを実行するために ユーザ定義ツールバーボタンにプログラムを結びつける』で述べたようにカスタマイズすることができます。
+</p>
+<h3><a name="Method_2:_Copy_another_Origin_user.27s_custom_button_group_to_your_Origin_program_folder"></a><span class="mw-headline">方法2: 他の場所にあるカスタムボタングループをOriginプログラムフォルダにコピーする</span></h3>
+<p>カスタムボタングループ(｢ユーザ定義｣グループを含む)は、以下のファイルと関連付けがされています。 
+</p>
+<ul><li><b>関連する設定(INI)ファイル</b>：初期化ファイルは、「ボタングループ」グループの「新規作成」ボタンをクリックして、「ボタングループの作成」および「保存」ダイアログを編集します。</li></ul>
+<ul><li><b>ビットマップファイル</b>：ビットマップファイルは、「ボタングループの作成」ダイアログボックスで指定します。この情報はボタングループの初期化ファイルに追加されます。 </li></ul>
+<ul><li><b>LabTalkスクリプトファイル(OGS)とサポートファイル</b>：LabTalkスクリプトファイルを「ボタン設定」ダイアログボックスのグループ内の各ボタンに対して指定します。この情報はボタングループの初期化ファイルに追加されます。 </li></ul>
+<p><br />
+他のOriginユーザ(ネットワーク上のユーザなど)が、あなたが使いたいカスタムボタングループを持っている場合
+</p>
+<ol><li>そのユーザの<b>設定ファイル(INIファイル)</b>、<b>ビットマップファイル</b>、LabTalk<b>スクリプトファイル</b>、<b>サポートファイル</b>をあなたのOriginフォルダにコピーします。 </li>
+<li>Origin(Pro)を起動します。</li>
+<li>メニューから「<b>表示：ツールバー</b>」を選び、『<b>ボタングループ</b>』タブを選びます。</li>
+<li>『<b>ボタングループ</b>』グループの｢<b>追加</b>｣ボタンをクリックします。  「<b>ボタングループの追加</b>」ダイアログボックスが開きます。  </li>
+<li>ボタングループの設定(<b>.INI</b>)ファイルを指定して、<b>OK</b>ボタンをクリックします。  新しいボタングループが『<b>グループ</b>』リストボックスに表示されます。  </li></ol>
+<p><br />
+ボタングループを交換する最も簡単な方法は、<b>.OPX</b> ファイルを作成する方法です(<b>方法3</b>をご覧ください。)
+</p>
+<h3><a name="Method_3:_Install_button_groups_that_have_been_exported_to_an_.OPX_file"></a><span class="mw-headline">方法3: OPXファイルにエクスポートしたボタングループをインストールする</span></h3>
+<p>OPXファイルにエクスポートしたボタングループをインストールすることについては、以下を参照してください
+</p>
+<ul><li> <a href="../../UserGuide/UserGuide/Exporting_Button_Group.html" title="ユーザガイド：ボタングループのエクスポート">ボタングループのエクスポート</a></li>
+<li> <a class="external text" href="../../LabTalk/LabTalk/Tutorial_Creating_OPX_for_Custom_Tools.html">カスタムツール用のOPXの作成</a></li></ul>
+<h2><a name="Modifying_a_custom_button_group"></a><span class="mw-headline">カスタムボタングループを修正する</span></h2>
+<p>「ツールバーのカスタム化」ダイアログ(「<b>表示：ツールバー</b>」)の「<b>ボタングループ</b>」タブにある編集オプションを使って、カスタムボタングループのビットマップを削除や修正、カスタムボタングループのボタンを追加や削除することができます。   
+</p>
+<ul><li>カスタムボタングループにボタンを追加するには</li></ul>
+<ol><li>「グループ」リストボックスからファイルグループを選択します。</li>
+<li>「ビットマップ」テキストボックスで新しいパスとファイル名を入力し、参照ボタンをクリックして、新しいビットマップファイルを指定します。 </li></ol>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b> 「ユーザ定義」ボタングループのビットマップを修正することもできます。
+</p>
+</td></tr></table>
+<ul><li>カスタムボタングループからボタンを削除するには</li></ul>
+<ol><li>削除したいボタンを選択します。</li>
+<li>『ボタン』グループの｢削除｣ボタンをクリックします。</li></ol>
+<ul><li>カスタムボタングループを削除するには</li></ul>
+<ol><li>「グループ」リストボックスから削除したいボタングループを選択します。</li>
+<li>『ボタングループ』グループの｢削除｣ボタンをクリックします。
+<dl><dd><a  class="image"><img alt="User-Defined and Custom Toolbars and Toolbar Buttons-4.png" src="../images/User_Defined_and_Custom_Toolbars_and_Toolbar_Buttons/User-Defined_and_Custom_Toolbars_and_Toolbar_Buttons-4.png" width="432"  /></a></dd>
+<dd>グループを削除する前に「注意」メッセージボックスが確認のために現れます。</dd></dl></li>
+<li>「はい」をクリックすると、Originは 「グループ」リストボックスからカスタムボタングループを削除します。この(削除された)グループからのボタンがツールバーに配置されていた場合、それらのツールバーはグループを削除した後は機能しません。</li></ol>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b>  組込のボタングループを削除することはできません。
+</p>
+</td></tr></table>
+<ul><li>カスタムボタングループのビットマップを修正するには</li></ul>
+<ol><li>「グループ」リストボックスからファイルグループを選択します。</li>
+<li>「ビットマップ」テキストボックスで新しいパスとファイル名を入力し、参照ボタンをクリックして、新しいビットマップファイルを指定します。</li></ol>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b> 「ユーザ定義」ボタングループのビットマップを修正することもできます。
+</p>
+</td></tr></table>
+
+
+
+
+    

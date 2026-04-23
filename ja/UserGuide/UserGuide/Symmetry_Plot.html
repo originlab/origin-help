@@ -1,0 +1,37 @@
+﻿<h1 class="firstHeading">対称性プロット</h1>
+<p class='urlname' style='display: none'>Symmetry-Plot</p>
+<a class="image"><img alt="Symmetry Plot 01.png" src="../images/Symmetry_Plot/Symmetry_Plot_01.png" width="608" /></a>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>少なくとも1つの列を選択して対称性プロットを作成します。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メニューから<b>作図&gt; 統計：対称性プロット</b>を選択します。</p>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>Symmetry.OTPU(Originのプログラムフォルダにインストールされています)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>対称性プロットは、応答データが中央値を基準に対称に分布しているかどうかを判定するために使用されます。 プロット作成時、Originは以下の処理を実行します。</p>
+<ul>
+<li>データを昇順に並べ替え</li>
+<li>データセットの中央値を計算</li>
+<li>X軸上の中央値の上側のデータとの距離と、Y軸上の中央値の下側のデータとの距離で散布図を作成</li>
+<li>完全な対称性を示す基準線（Y = X） を追加</li>
+<li>ヒストグラムを表示し、中央値位置に基準線を追加</li>
+</ul>
+<p>結果として、2つの結果シート（プロット用データと結果グラフ）が作成されます。</p>
+<dl>
+<dd><a class="image"><img alt="Symmetry Plot 03.png" src="../images/Symmetry_Plot/600px-Symmetry_Plot_03.png" width="600" /></a></dd>
+<dd>結果グラフでは、散布図の点が Y = X の線上に並んでおり、ヒストグラムも対称的な山形の分布を示しています。したがって、このデータは中央値に対して対称に分布していると判断できます。</dd>
+</dl>
+<p>複数の応答列を選択して対称性プロットを作成しようとすると、<b>plot_symmetry</b> ダイアログが表示されます。このダイアログでは、<b>グラフ内のレイヤを分離</b>または<b>グラフを分離</b>から配置方法を指定できます。</p>
+<p><a class="image"><img alt="Symmetry Plot 02.png" src="../images/Symmetry_Plot/850px-Symmetry_Plot_02.png" width="850" /></a></p>

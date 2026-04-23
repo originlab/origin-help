@@ -1,0 +1,123 @@
+﻿<h1 class="firstHeading">最近使ったOriginファイル</h1><p class='urlname' style='display: none'>Recent-Origin-Files</p>
+<p><br />
+最近使ったOriginファイルダイアログには、Originのプロジェクトファイル(*.opj(u))と子ウィンドウファイル(*.ogw(u)・*.ogg(u)・*.ogm(u))が表示されます。最近使用されたOriginファイルを閲覧したり見つけたりするのに役立ちます。
+</p><p><b>最近使ったOriginファイル</b>ダイアログを開くには 
+</p>
+<ul><li>Originのメインメニューで、<b>ファイル：最近使ったプロジェクト：最近使ったOriginファイル...</b>の順に選択します。</li></ul>
+<p>または、
+</p>
+<ul><li>Originのワークスペースで灰色の領域をダブルクリックする</li></ul>
+<p>または
+</p>
+<ul><li>OriginのGUIで空のスペースを右クリックし、コンテキストメニューで<b>最近使ったOriginファイル</b>を選択</li></ul>
+<p>または
+</p>
+<ul><li>Origin上でショートカットキー<b>Ctrl+F11</b>を押す</li></ul>
+<p>または
+</p>
+<ul><li>スクリプトウィンドウで以下のLabtalkスクリプトを実行します。</li></ul>
+<pre class="lt" style="font-family:monospace;">doc <span style="color: #000080;">-</span>mrf;</pre>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><p><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">システム変数</a>を使用することで、ワークスペースをダブルクリックして<b>最近使ったOriginファイル</b>ダイアログを開き、Ctrlキー+ダブルクリックで<b>プロジェクトブラウザ</b>を開くかどうかを制御できます。
+</p>
+<ul><li> <b>@DDW=0</b>（デフォルト）：ダブルクリックで<b>最近使ったOriginファイル</b>ダイアログを開き、Ctrl+ダブルクリックで<b>プロジェクトブラウザ</b>を開きます。</li>
+<li> <b>@DDW=1</b>：ダブルクリックとCtrl+ダブルクリックの両方を無効にします。</li>
+<li> <b>@DDW=2</b>：ダブルクリックで<b>最近使ったOriginファイル</b>ダイアログを開かず、Ctrl+ダブルクリックで<b>プロジェクトブラウザ</b>を開きます。</li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Previews"><span class="tocnumber">1</span> <span class="toctext">プレビュー</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Open_the_Files"><span class="tocnumber">2</span> <span class="toctext">ファイルを開く</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Find_in_Project_Files"><span class="tocnumber">3</span> <span class="toctext">プロジェクトファイル内を検索</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Specify_the_displaying_Files"><span class="tocnumber">4</span> <span class="toctext">表示ファイルを指定</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Copy_Information_of_the_Recent_Files"><span class="tocnumber">5</span> <span class="toctext">最近使ったファイルの情報をコピー</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Remove_the_file_from_this_list"><span class="tocnumber">6</span> <span class="toctext">このリストからファイルを削除する</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Pin_Files_to_Top"><span class="tocnumber">7</span> <span class="toctext">ファイルを先頭にピン留めする</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Change_the_Display_or_the_Order_of_Columns_for_the_list"><span class="tocnumber">8</span> <span class="toctext">リストで表示や列の順序を変更</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Search_in_Recent_Origin_Files"><span class="tocnumber">9</span> <span class="toctext">最近使用したOriginファイルを検索</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Recent_Origin_Files_Menu"><span class="tocnumber">10</span> <span class="toctext">最近使ったOriginファイルメニュー</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Customize_the_Fly-out_Menu"><span class="tocnumber">10.1</span> <span class="toctext">フライアウトメニューのカスタマイズ</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Previews"></a><span class="mw-headline">プレビュー</span></h2>
+<p>Originファイル名にカーソルを置くと、プロジェクト内のグラフ/ワークブックのポップアッププレビューがプロジェクト名で表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files preview.png" src="../images/Recent_Origin_Files/830px-Recent_Origin_Files_preview.png" width="1032"   /></a></dd></dl>
+<h2><a name="Open_the_Files"></a><span class="mw-headline">ファイルを開く</span></h2>
+<ul><li> 行をダブルクリックして、Originのファイルを開きます。ファイルがプロジェクトの場合、現在のプロジェクトを閉じて、選択したファイルを開きます。ファイルが子ウィンドウファイルの場合、現在のプロジェクトで開かれます。</li></ul>
+<ul><li> ファイルを右クリックします。
+<ul><li><b>開く</b>を選択してファイルを開きます。ファイルがプロジェクトの場合、現在のプロジェクトを閉じて、選択したファイルを開きます。ファイルが子ウィンドウファイルの場合、現在のプロジェクトで開かれます。</li>
+<li><b>プロジェクトの追加</b>を選択して、ファイルを現在のプロジェクトの第1階層のフォルダに追加します。</li>
+<li><b>新しいインスタンスで開く</b>を選択して、ファイルを新規プロジェクトで開きます。</li>
+<li><b>保存したフォルダを開く</b>を選択して、ファイルを保存したフォルダを開きます。</li></ul></li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Open File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Open_File.png" width="823"  /></a></dd></dl>
+<h2><a name="Find_in_Project_Files"></a><span class="mw-headline">プロジェクトファイル内を検索</span></h2>
+<p>ファイルを右クリックし、<b>プロジェクトファイル内を検索</b>を選択すると<a href="../../UserGuide/UserGuide/Find_in_Project_Files.html" title="ユーザーガイド:プロジェクトファイル内を検索"><b>プロジェクトファイルで検索</b>ダイアログ</a>が開きます。
+</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Find File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Find_File.png" width="739"  /></a></dd></dl>
+<h2><a name="Specify_the_displaying_Files"></a><span class="mw-headline">表示ファイルを指定</span></h2>
+<p>表示するファイルを指定するには、ファイルまたはファイルリストの空のスペースを右クリックして、次のオプションを選択するか、ホットキーを使用します。
+</p>
+<ul><li> <b>プロジェクトのみを表示</b> (Ctrl+P)</li>
+<li> <b>ブックのみを表示</b> (Ctrl+B)</li>
+<li> <b>グラフのみを表示</b> (Ctrl+G)</li>
+<li> <b>所在不明のファイルを表示</b> (Ctrl+M)：デフォルトでは、所在不明ファイルはダイアログに表示されません。それらを表示するには、このオプションにチェックを付けます。所在不明ファイルの場合、またそれらのための前の場所を開くことをサポートします。</li></ul>
+<h2><a name="Copy_Information_of_the_Recent_Files"></a><span class="mw-headline">最近使ったファイルの情報をコピー</span></h2>
+<p>最近のファイル情報をコピーするには、ファイルを右クリックして次のオプションを選択するか、ホットキーを使用することができます。
+</p>
+<ul><li> <b>ファイル名をコピー</b> (Ctrl+F)</li>
+<li> <b>フルパスをコピー</b> (Ctrl+C)</li>
+<li> <b>行全体をコピー</b> (Ctrl+W)</li></ul>
+<p><br />
+</p>
+<h2><a name="Remove_the_file_from_this_list"></a><span class="mw-headline">このリストからファイルを削除する</span></h2>
+<p>1つまたは複数のファイルを選択し、右クリックして<b>リストから削除</b>を選択し、このダイアログでファイルを削除します。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><p><b>Ctrl + A</b>キーを使用して、リスト内のすべてのファイルを選択できます。また、<b>Ctrl+Z</b>と<b>Ctrl+Y</b>ホットキーによって、この削除操作を元に戻したりやり直したりすることができます。
+</p></td></tr></table>
+<p><br />
+</p>
+<h2><a name="Pin_Files_to_Top"></a><span class="mw-headline">ファイルを先頭にピン留めする</span></h2>
+<p>1つまたは複数のファイルを選択し、右クリックして<b>先頭にピン留め</b>を選択し、このダイアログの先頭にファイルをピン留めします。その後、これらのファイルの行は黄色で背景が塗られます。
+</p><p>トップファイルにピン留めされているを右クリックし、<b>ピン留めを外す</b>を選択すると、ファイルはこのダイアログの列でソートされます。
+</p><p><br />
+</p>
+<h2><a name="Change_the_Display_or_the_Order_of_Columns_for_the_list"></a><span class="mw-headline">リストで表示や列の順序を変更</span></h2>
+<ul><li>列ヘッダ領域で右クリックして、表示したい項目を選択したり、非表示にしたい項目の選択を外します。</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Header.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Header.png" width="821"  /></a></dd></dl>
+<ul><li>列の各行の完全な情報を表示するには、列ヘッダを右クリックして、<b>列のサイズを合わせる</b>をクリックします。<b>すべての列のサイズを合わせる</b>をクリックした場合</li></ul>
+<ul><li>列ヘッダをドラッグして表示順を変更できます。</li></ul>
+<ul><li>列ヘッダのカスタマイズは後で使用できるように記憶されます。</li></ul>
+<h2><a name="Search_in_Recent_Origin_Files"></a><span class="mw-headline">最近使用したOriginファイルを検索</span></h2>
+<ul><li> ファイル名でファイルを検索する文字列を入力します。</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 01.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_01.png" width="739"  /></a></dd></dl>
+<ul><li> ワイルドカード（* および&nbsp;?）がサポートされています。たとえば、末尾を「<i><b>*abc</b></i>」というように検索できます。</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 02.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_02.png" width="739"  /></a></dd></dl>
+<ul><li> <i><b>\abc</b></i>：パス内の文字列を検索します</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 03.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_03.png" width="739"  /></a></dd></dl>
+<p><br />
+</p>
+<h2><a name="Recent_Origin_Files_Menu"></a><span class="mw-headline">最近使ったOriginファイルメニュー</span></h2>
+<p><b>ファイル:最近使ったプロジェクト</b>メニューを選択すると、フライアウトメニューに15個の最近使用したプロジェクトファイルのリストが表示されます。プロジェクト名をクリックして、最近のプロジェクトを簡単に再度開くことができます。また、このメニューが開いているときは、プロジェクトのアクセラレータキーを押して再度開くことができます。
+</p>
+<dl><dd><a  class="image"><img alt="Recent Projects menu.png" src="../images/Recent_Origin_Files/Recent_Projects_menu.png" width="863"  /></a></dd></dl>
+<h5><a name="Customize_the_Fly-out_Menu"></a><span class="mw-headline">フライアウトメニューのカスタマイズ</span></h5>
+<p><b>カスタマイズ...</b>メニューの下で、<b>最近使ったプロジェクト</b>ダイアログを開きます。メニューに表示されている最近のプロジェクトの番号を変更したり、ファイルのファイルパスとアクセラレータキーを表示するかどうかを指定したりできます。このメニューを選択したとき、すべての変更が有効になります。
+</p>
+<dl><dd><a  class="image"><img alt="Recent Projec dialog.png" src="../images/Recent_Origin_Files/Recent_Projec_dialog.png" width="312"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><ul><li>メニューでファイルパスが非表示になっている場合は、ファイル名にカーソルを置くと、ツールチップとステータスバーにパスが表示されます。</li></ul>
+<ul><li><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">システム変数</a>を使用して、このフライアウトメニューをカスタマイズすることもできます。 
+<ul><li> <b>@MRP</b>：最近のプロジェクト項目の数を設定します。デフォルトでは、@MRP=15 です。</li>
+<li> <b>@MRPHP</b>：ファイルパスを表示するかどうかを設定します。デフォルトでは@MRPHP=0で、メニューにファイルパスを表示します。</li>
+<li> <b>@MRPA</b>：アクセラレータキーを表示するかどうかを設定します。デフォルトでは@MRPA=1で、メニューにアクセラレータキーを表示します。</li></ul></li></ul>
+</td></tr></table>
+
+
+    

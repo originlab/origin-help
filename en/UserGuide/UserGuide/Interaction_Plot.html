@@ -1,0 +1,130 @@
+<h1 class="firstHeading">29.9.40 Interaction Plot</h1><p class='urlname' style='display: none'>Interaction-Plot</p><a  class="image"><img alt="Interaction Plot 01.png" src="../images/Interaction_Plot/650px-Interaction_Plot_01.png?v=97760" width="650"   /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2.1</span> <span class="toctext">Dialog Controls</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select at least one data column and one factor column to create interaction plot by factors.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>From the menu, select <b>Plot &gt; Statistical: Interaction Plot</b> to open the <b>plot_interaction</b> dialog. 
+</p><p><a  class="image"><img alt="Interaction Plot 02.png" src="../images/Interaction_Plot/Interaction_Plot_02.png?v=97761" width="475"  /></a>
+</p>
+<h3><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<td><b>Input</b>
+</td>
+<td>Specify the input data.
+</td></tr>
+<tr>
+<td><b>Factors</b>
+</td>
+<td>Select <b>N</b> factors which interact with each other.
+</td></tr>
+<tr>
+<td><b>Matrix Profile</b>
+</td>
+<td> This group is similar with <a href="../../UserGuide/UserGuide/Scatter_Matrices.html#Matrix_Profile" title="UserGuide:Scatter Matrices">that for Scatter Matrix diagram</a>.
+<ul><li> <b>Matrix Display</b>: There are three arrangments for all N*N layers:</li></ul>
+<table class="noborder">
+
+<tr>
+<td style="width:90px"><b>Square</b>
+<p><a  class="image"><img alt="Matrix Display Square.png" src="../images/Interaction_Plot/Matrix_Display_Square.png?v=66202" width="60"  /></a>
+</p>
+</td>
+<td style="width:120px"><b>Upper Triangular</b>
+<p><a  class="image"><img alt="Matrix Display Upper Triangular.png" src="../images/Interaction_Plot/Matrix_Display_Upper_Triangular.png?v=66203" width="60"  /></a>
+</p>
+</td>
+<td style="width:120px"><b>Lower Triangular</b>
+<p><a  class="image"><img alt="Matrix Display Lower Triangular.png" src="../images/Interaction_Plot/Matrix_Display_Lower_Triangular.png?v=66204" width="60"  /></a>
+</p>
+</td></tr></table>
+<ul><li> <b>Show Tick and Label</b>: Choose how to show the tick and labels for all layers. There are three arrangements as below:</li></ul>
+<table class="noborder">
+
+<tr>
+<td style="width:120px"><b>None</b>
+<p><a  class="image"><img alt="Ticks None.png" src="../images/Interaction_Plot/Ticks_None.png?v=66103" width="50"  /></a>
+</p>
+</td>
+<td style="width:120px"><b>All</b>
+<p><a  class="image"><img alt="Ticks All.png" src="../images/Interaction_Plot/Ticks_All.png?v=66107" width="50"  /></a>
+</p>
+</td>
+<td style="width:120px"><b>Alternate</b>
+<p><a  class="image"><img alt="Ticks Alternate.png" src="../images/Interaction_Plot/Ticks_Alternate.png?v=66108" width="50"  /></a>
+</p>
+</td>
+<td style="width:120px">
+</td></tr>
+<tr>
+<td><b>Bottom&amp;Left</b>
+<p><a  class="image"><img alt="Ticks Bottom&amp;Left.png" src="../images/Interaction_Plot/Ticks_Bottom_26Left.png?v=0" width="50"  /></a>
+</p>
+</td>
+<td><b>Bottom&amp;Right</b>
+<p><a  class="image"><img alt="Ticks Bottom&amp;Right.png" src="../images/Interaction_Plot/Ticks_Bottom_26Right.png?v=0" width="50"  /></a>
+</p>
+</td>
+<td><b>Top&amp;Left</b>
+<p><a  class="image"><img alt="Ticks Top&amp;Left.png" src="../images/Interaction_Plot/Ticks_Top_26Left.png?v=0" width="50"  /></a>
+</p>
+</td>
+<td><b>Top&amp;Right</b>
+<p><a  class="image"><img alt="Ticks Top&amp;Right.png" src="../images/Interaction_Plot/Ticks_Top_26Right.png?v=0" width="50"  /></a>
+</p>
+</td></tr></table>
+<ul><li> <b>Factor Info in</b>: Specify where the factor names show, in the diagonal cells or each panel. </li></ul>
+</td></tr>
+<tr>
+<td><b>Graph Template</b>
+</td>
+<td>Specify the template to plot the interaction plot.
+<p>By default, the built-in template <i>interaction</i> is used; Uncheck <b>Auto</b> check box to browse and select a user template, to apply the format you saved in advance.
+</p>
+</td></tr>
+<tr>
+<td><b>Output</b>
+</td>
+<td> Output the plot data to specified sheet.
+</td></tr>
+<tr>
+<td><b>Output Graphs</b>
+</td>
+<td> Output the result graph(s) to specified sheet.
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>interaction.OTPU(installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>The interaction plot looks like a <a href="../../UserGuide/UserGuide/Scatter_matrix_Graph.html" title="UserGuide:Scatter matrix Graph">Scatter Matrix</a>, shows a matrix of interaction plots. In a Interaction plot, the number of rows and columns are both equal to the number of grouping variables(factors), each panel(except the diagonal panels) indicates the interaction of the row effect with the column effect. 
+</p><p>When you select N factors, you will get N*N layers(cells). By default, the diagonal cells show labels for each factor. For the (N, M) cell, get the mean of data column by Nth and Mth factor. Then plot Mth factor in X direction against Y as line+symbol plot, Nth factor set to subset column. Note: Cell (N, M) and (M, N) share the same data in the result plot data sheet. 
+</p><p><a  class="image"><img alt="Interaction Plot 03.png" src="../images/Interaction_Plot/870px-Interaction_Plot_03.png?v=97776" width="870"   /></a>
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2025b
+</td></tr></table>
+
+
+
+
+
+

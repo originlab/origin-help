@@ -1,0 +1,37 @@
+﻿<h1 class="firstHeading">カスタムメニューの作成</h1><p class='urlname' style='display: none'>Create-Custom-Menus</p>
+<p>カスタムメニューオーガナイザを使うと、以下のことが可能です。
+</p>
+<ul><li>3つまでのポップアップメニューを作成でき、それぞれ複数レベルのメニューをサポートします。 </li>
+<li>LabTalkスクリプトやXファンクションをメニューアイテムに割り当てできます。</li>
+<li>メニュー項目の利用可否を、指定したウィンドウの種類がアクティブなときのインスタンスに制限するできます。</li>
+<li>カスタマイズしたメニューを<b>.omc</b>ファイルとして他のユーザと共有できます。 </li>
+<li>組み込みメニューを非表示にします。</li></ul>
+<p>次の例では、ワークシート操作という名前のメニューを作成する方法を示しています。
+</p>
+<ol><li>Originメニューから<b><b>環境設定：カスタムメニューオーガナイザ</b></b>を選択します。</li>
+<li>メニューから<b>ファイル:新規作成</b>を選択して、新しいOMCファイルを作成します。</li>
+<li><a href="../../UserGuide/UserGuide/The_Custom_Menu_Organizer_Dialog_Box.html#The_Add_Custom_Menu_Panel" title="ユーザガイドカスタムメニューオーガナイザダイアログボックス"><b>カスタムメニューの追加</b>パネル</a>の左側を右クリックし、<b>新規メインポップアップを</b>選択します。右側で、<b>ポップアップテキスト</b>のテキストボックスに<b>ワークシート操作</b>と入力します。<b>ウィンドウ</b>ラジオボックスを選び、<b>ワークブック</b>にだけチェックします。これにより、ワークシートがアクティブな場合にのみ<b>ワークシート操作</b>メニューを使用できるようになります。
+<dl><dd><a  class="image"><img alt="Create Custom Menus 1.png" src="../images/Create_Custom_Menus/Create_Custom_Menus_1.png" width="786"  /></a></dd></dl></li>
+<li><b>カスタムメニューの追加</b>パネルの左側の<b>ワークシート操作</b>を右クリックし、ショートカットメニューから<b>項目の追加</b>を選びます。<b>カスタムメニューの追加</b>パネルの右側で、次のように入力します。 
+<dl><dd><a  class="image"><img alt="Add Custom Menu Panel New.png" src="../images/Create_Custom_Menus/Add_Custom_Menu_Panel_New.png" width="786"  /></a></dd></dl></li>
+<li><b>ファイル:保存</b>を選択して、変更を<b>.omc</b>ファイルとして保存します。User Filesフォルダを参照します。ファイル名として<b>test.omc</b>と入力し、<b>OK</b>をクリックします。</li>
+<li><b>カスタムメニューオーガナイザ</b>を終了します。</li>
+<li>メインメニューから<b><b>環境設定：メニュー：test</b></b>を選択します。ワークシートをアクティブにします。<b>ワークシート操作</b>メニューが表示されます。  
+<dl><dd><a  class="image"><img alt="Menu In Origin.png" src="../images/Create_Custom_Menus/Menu_In_Origin.png" width="418"  /></a></dd></dl></li>
+<li>ワークシートの列数が10列未満の場合、<b>10列作成</b>メニューが利用できます。選択すると、ワークシート列数が10列になります。</li></ol>
+<table class="note">
+<tr>
+<td>
+<p><b>システムフォルダ</b>、<b>User Filesフォルダ</b>、<b>グループ</b>フォルダ内のすべての<b>.omc</b>ファイルが、<b>環境設定:メニュー</b>の下に表示されます。それらのいずれか1つを選択して、カスタマイズしたメニューをアクティブにします。<b>環境設定:メニュー</b>に表示されない場合は、 <b>環境設定:カスタムメニューオーガナイザー...</b>を一度選択してみてください。
+</p>
+</td></tr></table>
+<p><br />
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Create_Custom_Menus/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> <b>ツールまたは環境設定</b>メニューが非表示になっていて、メインメニューから<b>カスタムメニューダイアログ</b>を開けない場合は、 <b>スクリプトウィンドウ</b>または<b>コマンドウィンドウ</b>に<b>customMenu</b>と入力して、<b>カスタムメニューオーガナイザ</b>ダイアログを開くことができます。</li>
+<li> WindowsエクスプローラからOriginワークスペースに<b>.omc</b>ファイルをドラッグアンドドロップして開くことができます。または、<b>システムフォルダ</b>、<b>ユーザファイルフォルダ</b>、または<b>グループ</b>フォルダの下に<b>.omc</b>ファイルを直接置くこともできます。<b>環境設定:メニュー</b>に表示されない場合は、 <b>環境設定:カスタムメニューオーガナイザー...</b>を一度選択してみてください。</li>
+<li> LabTalkシステム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D">@DSB=1</a>を設定することで、<a class="external text" href="../../GettingStarted/OriginLab/The_Origin_Interface.html#Start_Menu"><b>スタート</b>メニュー</a>を非表示にし、関連するF1検索機能を無効にすることができます。</li></ul>
+</td></tr></table>
+
+
+    

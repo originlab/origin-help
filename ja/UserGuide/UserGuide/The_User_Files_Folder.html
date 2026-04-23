@@ -1,0 +1,40 @@
+﻿<h1 class="firstHeading">User Filesフォルダ</h1><p class='urlname' style='display: none'>UserFilesFolder</p>
+<p><br />
+Originを始めて実行すると、このダイアログボックスが表示され、カスタマイズしたファイルを保存するデフォルトのフォルダ、<b>User FIlesフォルダ</b>（<b>UFF</b>）を指定するように促されます。  他の場所にファイルを保存することも可能ですが、このフォルダはデフォルトの保存先として機能し、カスタムグラフテンプレート、テーマ、フィット関数、Originインポートフィルタ (OIF) ファイルなどを格納します。このフォルダはユーザーのログイン権限で書き込み可能である必要があります。
+</p><p>既定の保存場所は、現在のユーザーの Documents フォルダ下に作成されるUser Files という名前のフォルダです。 
+</p>
+<dl><dd><a  class="image"><img alt="The User Files Folder-1.png" src="../images/The_User_Files_Folder/The_User_Files_Folder-1.png" width="644"  /></a></dd></dl>
+<p><br />
+<b>Note</b>: 
+</p>
+<ul><li>以下のフォルダやファイルは ユーザーファイルフォルダ には含まれません：OCTemp ファイル、AutoSave ファイル、ライセンスファイル、Origin インストールフォルダやサンプルフォルダのショートカット。これらのパスは、<a href="../../UserGuide/UserGuide/The_(Options)_System_Path_Tab.html" title="ユーザガイド: (オプション) 「システムパス」 タブ">オプションダイアログのシステムパスタブ</a>で確認できます。一部は<b>ヘルプ:フォルダを開く</b>メニューから開くことができます。</li>
+<li>Origin のインストールフォルダやそのサブフォルダをユーザーファイルフォルダに指定してはいけません。</li>
+<li>デフォルトでは、異なるバージョンの Origin が同じユーザーファイルフォルダを共有しますが、<a href="#How_to_Change_the_User_Files_Folder">別の場所を選択</a>することも可能です。</li>
+<li>ユーザーファイルフォルダをクラウド同期フォルダ（OneDrive、Google Drive、Dropbox など）に設定することは推奨されません。 同期に起因する問題が発生する可能性があるためです。必要に応じて、<b>デフォルトUser Filesフォルダにリセット</b>ボタンをクリックすると、推奨されるパスにリセットできます。</li></ul>
+<table class="note">
+<tr>
+<td>
+<p>ユーザーファイルフォルダをリムーバブルデバイス（例：USB メモリ）やクラウド同期フォルダに設定することも推奨されません。複数のPC間で Origin ファイルやカスタマイズを共有したい場合は、<a href="../../UserGuide/UserGuide/Set_Group_Folder_Location_Dialog.html" title="ユーザーガイド：グループフォルダの場所設定ダイアログ">グループフォルダ</a>を利用してください。
+</p>
+</td></tr></table>
+<p><br />
+<span class='headerInParagraph'>現在のUFFを開く、場所を取得するには </span>
+</p>
+<ul><li> メニューから<b>ヘルプ: フォルダを開く: ユーザファイルフォルダ</b>を選択します。</li>
+<li> <b>環境設定: オプション</b>&gt;<b>システムパス</b>タブを選択し、ユーザファイルフォルダのパスを取得します。 </li>
+<li> スクリプトウィンドウ (<b><b>ウィンドウ：スクリプトウィンドウ</b></b>) を開き、<b>%Y</b>= と入力してEnterキーを押します。</li>
+<li> <b>スクリプトウィンドウ</b>で、<code>cd 1;</code>を実行します。</li></ul>
+<h2><a name="How_to_Change_the_User_Files_Folder"></a><span class="mw-headline">User Filesフォルダの変更方法</span></h2>
+<p>User Filesフォルダの場所を変更する場合は、 
+</p>
+<ul><li> メニューアイテムの<b>環境設定:オプション</b>を選択して、<b>オプション</b>ダイアログを表示します。<b>システムパス</b>タブで<b>ユーザファイルフォルダ</b>を選択し、<b>変更</b>ボタンをクリックします。</li></ul>
+<dl><dd><i>または、</i> </dd></dl>
+<ul><li>Xファンクション<a class="external text" href="../../XFunction/X-Function/ChangeUFF.html">changeUFF</a>を使用します。このXファンクションを実行するには、以下のコマンド <pre class="lt" style="font-family:monospace;">changeUFF <span style="color: #000080;">-d;</span></pre> を<b>コマンドウィンドウ</b>で実行します。</li></ul>
+<dl><dd><a  class="image"><img alt="The User Files Folder-4.png" src="../images/The_User_Files_Folder/The_User_Files_Folder-4.png" width="514"  /></a></dd></dl>
+<p>次に、新しいUser Filesフォルダを指定するか、User Filesフォルダとして新しい参照します。元のUser Filesフォルダのすべてのファイルを新しいフォルダにコピーするかどうか指定できます。新しく指定したUser Filesフォルダを使用するには、Originを再起動します。 
+</p><p>元のUser Filesフォルダのすべてのファイルを新しいフォルダにコピーしたくない場合は、<b>オリジナルから全てのファイルをコピー</b>のチェックを外します。Originを再起動して新しいUser Filesフォルダが使用された後に、メニュー<a href="../../UserGuide/UserGuide/Transfer_User_Files.html" title="ユーザガイド:ユーザファイルの転送"><b>環境設定: ユーザファイルの移行</b></a>を使用して、移行したいファイルを新しいUser Filesフォルダに転送可能です。
+</p>
+
+
+
+    

@@ -1,0 +1,286 @@
+﻿<h1 class="firstHeading">プロジェクトブラウザ</h1><p class='urlname' style='display: none'>Project-Browser</p>
+<p><br />
+</p><p>Originはワークブック、グラフ、シートをナビゲートするための<b>プロジェクトブラウザ</b>機能をサポートしています。また、メタデータやデータセル、グラフオブジェクトを含むプロジェクトにある文字列や数値データを検索できます。
+</p><p><b>プロジェクトブラウザ</b>ダイアログを開くには 
+</p>
+<ul><li>Originのメインメニューで<b>編集：プロジェクトブラウザ</b>を選択する</li></ul>
+<p>または
+</p>
+<ul><li><b>プロジェクトエクスプローラ</b>で、プロジェクトエクスプローラの上部にある<b>検索</b>アイコン<a  class="image"><img alt="Search icon.png" src="../images/Project_Browser/Search_icon.png" width="221"  /></a>をクリックする</li></ul>
+<p>または
+</p>
+<ul><li><b>プロジェクトエクスプローラ</b>で右クリックして表示されるコンテキストメニューから<b>プロジェクトブラウザ</b>を選択する</li></ul>
+<p>または
+</p>
+<ul><li>Originのプロジェクトファイル上でショートカットキー<b>F3</b>を押す</li></ul>
+<p>または
+</p>
+<ul><li><b>Ctrl</b>キーを押しながら、Originのワークスペースで灰色の領域をダブルクリックする</li></ul>
+<p><br />
+</p>
+<table class="note">
+<tr>
+<td><b>Note：</b>このダイアログの空のスペースをダブルクリックして閉じます。
+</td></tr></table>
+<p><br />
+<a  class="image"><img alt="Project Browser 01.png" src="../images/Project_Browser/Project_Browser_01.png" width="949"  /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Drop-Down_List"><span class="tocnumber">1</span> <span class="toctext">ドロップダウンリスト</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Drop-Down_List_for_the_range"><span class="tocnumber">2</span> <span class="toctext">範囲のドロップダウンリスト</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Advanced_Find_button"><span class="tocnumber">3</span> <span class="toctext">高度な検索ボタン</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Find_in_Project_Files"><span class="tocnumber">4</span> <span class="toctext">プロジェクトファイル内を検索</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#List_Box"><span class="tocnumber">5</span> <span class="toctext">リストボックス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Customize_the_Columns_for_the_list"><span class="tocnumber">5.1</span> <span class="toctext">リストの列をカスタマイズする</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Active_the_Window.2FSheet.2FColumn.2FFolder"><span class="tocnumber">5.2</span> <span class="toctext">ウィンドウ/シート/列/フォルダをアクティブにする</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Context_Menu_of_the_Row"><span class="tocnumber">5.3</span> <span class="toctext">行のコンテキストメニュー</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Show"><span class="tocnumber">5.3.1</span> <span class="toctext">表示</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Hide"><span class="tocnumber">5.3.2</span> <span class="toctext">非表示</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Delete"><span class="tocnumber">5.3.3</span> <span class="toctext">削除</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Rename"><span class="tocnumber">5.3.4</span> <span class="toctext">名前の変更</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Name_and_Comments"><span class="tocnumber">5.3.5</span> <span class="toctext">名前とコメント</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Bulk_Rename"><span class="tocnumber">5.3.6</span> <span class="toctext">名前の一括変更</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Change_Formula"><span class="tocnumber">5.3</span> <span class="toctext">式の変更</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Remove_Operations"><span class="tocnumber">5.3.8</span> <span class="toctext">操作の削除</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Keep_Dialog_Open_on_Double-click"><span class="tocnumber">5.3.9</span> <span class="toctext">ダブルクリックでダイアログを開いたままにする</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Hide_Embedded"><span class="tocnumber">5.3.10</span> <span class="toctext">埋め込みの非表示</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Hide_Result_Sheets"><span class="tocnumber">5.3.11</span> <span class="toctext">結果シートの非表示</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Show_Source_Path"><span class="tocnumber">5.3.12</span> <span class="toctext">ソースパスを表示</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Edit_Name_by_Hotkey"><span class="tocnumber">5.4</span> <span class="toctext">ホットキーによる名前の編集</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Search_in_Project_Browse"><span class="tocnumber">6</span> <span class="toctext">プロジェクトブラウザで検索</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Case_Sensitive_button"><span class="tocnumber">6.1</span> <span class="toctext">大文字小文字の区別ボタン</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Column_to_Search_filter"><span class="tocnumber">6.2</span> <span class="toctext">検索フィルタ列</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Enter_Box"><span class="tocnumber">6.3</span> <span class="toctext">入力ボックス</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Drop-Down_List"></a><span class="mw-headline">ドロップダウンリスト</span></h2>
+<p>ドロップダウンを使用して、プロジェクトブラウザにリストするウィンドウ/シート/列/フォルダのウィンドウ/タイプを指定します。
+</p><p><a  class="image"><img alt="Project Browser 02.png" src="../images/Project_Browser/Project_Browser_02.png" width="798"  /></a>
+</p>
+<h2><a name="Drop-Down_List_for_the_range"></a><span class="mw-headline">範囲のドロップダウンリスト</span></h2>
+<p>ドロップダウンを使用して、ウィンドウ/列/フォルダの範囲をフィルタリングします。
+</p>
+<table class="dialogcontroltable">
+<tr>
+<th>プロジェクト全体
+</th>
+<td>プロジェクト全体のウィンドウ/列/フォルダを一覧表示します。
+</td></tr>
+<tr>
+<th>フォルダとサブフォルダ
+</th>
+<td>アクティブなフォルダとそのサブフォルダ内のウィンドウ/列/フォルダを一覧表示します。
+</td></tr>
+<tr>
+<th>フォルダ
+</th>
+<td>アクティブなフォルダ内のウィンドウ/列/フォルダのみを一覧表示します。
+</td></tr></table>
+<h2><a name="Advanced_Find_button"></a><span class="mw-headline">高度な検索ボタン</span></h2>
+<p><b>高度な検索</b> ボタンをクリックして、<a href="../../UserGuide/UserGuide/Finding_in_Origin_Project.html" title="ユーザガイド:Originプロジェクト内を検索"><b>検索</b> ダイアログ</a>を開きます。
+</p>
+<h2><a name="Find_in_Project_Files"></a><span class="mw-headline">プロジェクトファイル内を検索</span></h2>
+<p><b>プロジェクトファイル内を検索</b>ボタンをクリックすると、<a href="../../UserGuide/UserGuide/Find_in_Project_Files.html" title="ユーザーガイド:プロジェクトファイル内を検索"><b>プロジェクトファイル内で検索</b>ダイアログ</a>を開けます。
+</p>
+<h2><a name="List_Box"></a><span class="mw-headline">リストボックス</span></h2>
+<h3><a name="Customize_the_Columns_for_the_list"></a><span class="mw-headline">リストの列をカスタマイズする</span></h3>
+<p>コンテキストメニューを表示するには、このリストの列ヘッダ領域を右クリックします。
+</p>
+<ul><li><b>ウィンドウ/グラフ</b>が表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 03.png" src="../images/Project_Browser/Project_Browser_03.png" width="799"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Project_Browser/Tip_icon.png" width="57"  border="0" /></td><td><p><i><b>列ヘッダ</b></i>
+</p>
+<ul><li><b>従属</b>：ウィンドウが独立しているかどうかを表示します。</li>
+<li><b>表示</b>：ウィンドウ/シートを通常の表示または最小化または非表示の状態で表示します。</li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<ul><li><b>ブック</b>が表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 07.png" src="../images/Project_Browser/Project_Browser_07.png" width="801"  /></a></dd></dl>
+<ul><li><b>ノート</b>が表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 08.png" src="../images/Project_Browser/Project_Browser_08.png" width="798"  /></a></dd></dl>
+<ul><li><b>シート</b>が表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 04.png" src="../images/Project_Browser/Project_Browser_04.png" width="797"  /></a></dd></dl>
+<ul><li><b>列</b>が表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 05.png" src="../images/Project_Browser/Project_Browser_05.png" width="798"  /></a></dd></dl>
+<ul><li><b>フォルダ</b>表示されている場合は、列ヘッダを次のようにカスタマイズできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Project Browser 06.png" src="../images/Project_Browser/Project_Browser_06.png" width="798"  /></a></dd></dl>
+<h3><a name="Active_the_Window.2FSheet.2FColumn.2FFolder"></a><span class="mw-headline">ウィンドウ/シート/列/フォルダをアクティブにする</span></h3>
+<ul><li> リスト内のウィンドウをダブルクリックすると、このウィンドウがあるフォルダに移動し、ウィンドウがアクティブにされます。 </li>
+<li> リスト内のシートをダブルクリックすると、そのフォルダに移動し、ウィンドウがアクティブにされます。</li>
+<li> リスト内の列をダブルクリックすると、そのフォルダに移動し、列を含むワークシートがアクティブになり、その列が強調表示されます。</li>
+<li> リスト内のフォルダをダブルクリックすると、そのフォルダに移動します。</li></ul>
+<h3><a name="Context_Menu_of_the_Row"></a><span class="mw-headline">行のコンテキストメニュー</span></h3>
+<h5><a name="Show"></a><span class="mw-headline">表示</span></h5>
+<p>選択したウィンドウ/列を非表示にした場合に表示します。
+</p>
+<h5><a name="Hide"></a><span class="mw-headline">非表示</span></h5>
+<p>選択したウィンドウ/列を非表示にします。
+</p>
+<h5><a name="Delete"></a><span class="mw-headline">削除</span></h5>
+<p>選択したウィンドウ/シート/列/フォルダを削除します。
+</p>
+<h5><a name="Rename"></a><span class="mw-headline">名前の変更</span></h5>
+<p>ウィンドウ/シート列の<b>ロングネーム</b>を変更します。
+</p>
+<h5><a name="Name_and_Comments"></a><span class="mw-headline">名前とコメント</span></h5>
+<p><b>名前の変更</b>ダイアログを開きます。ウィンドウ/列の場合、選択したウィンドウの<b>ショートネーム</b>、<b>ロングネーム</b>、<b>コメント</b>を編集できます。 
+</p>
+<dl><dd><a  class="image"><img alt="Rename dialog.png" src="../images/Project_Browser/Rename_dialog.png" width="519"  /></a></dd></dl>
+<p><br />
+シートの場合、<b>名前</b>、<b>ラベル</b>、<b>メモ</b>、<b>タブの色</b>を編集できます。
+</p>
+<dl><dd><a  class="image"><img alt="Rename dialog for Sheet.png" src="../images/Project_Browser/Rename_dialog_for_Sheet.png" width="418"  /></a></dd></dl>
+<p><br />
+フォルダの場合、<a href="../../UserGuide/UserGuide/Folder_and_Window_Properties_Dialog.html" title="ユーザガイド：フォルダとウィンドウのプロパティダイアログ"><b>フォルダプロパティ</b>ダイアログ</a>を開きます。
+</p>
+<h5><a name="Bulk_Rename"></a><span class="mw-headline">名前の一括変更</span></h5>
+<p>複数の行を選択して右クリックし、<b>名前の一括変更</b>を選択してダイアログを開きます。このダイアログで、複数のウィンドウ/シート/列/フォルダの名前を変更できます。
+</p>
+<dl><dd><a  class="image"><img alt="Bulk Rename dialog.png" src="../images/Project_Browser/Bulk_Rename_dialog.png" width="491"  /></a></dd></dl>
+<table class="dialogcontroltable">
+<tr>
+<th>変更
+</th>
+<td> ウィンドウの場合は、<b>ロングネーム</b>または<b>ショートネーム</b>を変更することを選択できます。
+<p>列の場合は、<b>シート名</b>または<b>シートラベル</b>を変更するように選択できます。
+</p>
+</td></tr>
+<tr>
+<th>名前全体を置換
+</th>
+<td> ウィンドウ/シート/列/フォルダの名前全体を置換します。
+</td></tr>
+<tr>
+<th>検索と置換
+</th>
+<td> ウィンドウ/シート/列/フォルダの名前で指定された文字列を見つけて、指定された文字列を置き換えることができます。
+</td></tr>
+<tr>
+<th>検索
+</th>
+<td> <b>検索と置換</b>オプションがチェックされている場合、この編集ボックスがダイアログに表示されます。検索したい文字列を指定します。
+<p><b>Note:</b> ワイルドカード（*?）を使用することができます。 
+<br />abc*: abcから末尾まで、*abc: 先頭からabcまで
+</p>
+</td></tr>
+<tr>
+<th>大文字小文字の区別
+</th>
+<td> 検索で大文字と小文字を区別するかどうかを指定します。
+<p>例えば<b>ABC</b>を検索するときにこの設定が有効な場合には、<b>ABC</b>は検索しますが<b>abc</b>は検索しません。
+</p>
+</td></tr>
+<tr>
+<th>置換
+</th>
+<td>
+<ul><li><b>名前全体を置換</b>オプションがチェックされている場合、選択したウィンドウ/シート/列/フォルダの名前全体を置換する新しい文字列を指定します。</li>
+<li><b>名前全体を置換</b>オプションがチェックされている場合、見つかった文字列を置換する新しい文字列を指定します。</li></ul>
+<p><b>Note:</b> %(), $(),&nbsp;%Y,&nbsp;%@F などがサポートされています。
+</p>
+</td></tr></table>
+<p><br />
+<i><b>メタデータを使用した名前の一括変更の例：</b></i>
+</p>
+<ol>
+<li>グラフのショートネームを選択順序として変更：
+<br />行を選択して右クリックし、<b>名前の一括変更</b>ダイアログを開き、置換の編集ボックスに<b>Graph$(i)</b>と入力します。
+<br /><a  class="image"><img alt="Bulk Rename Sample1.png" src="../images/Project_Browser/850px-Bulk_Rename_Sample1.png" width="850"   /></a>
+</li>
+<p><br />
+</p>
+<li>グラフのロングネームを対応するワークシート名に変更：
+<br />行を選択して右クリックし、<b>名前の一括変更</b>ダイアログを開き、置換の編集ボックスに<b>%(1, @WS)</b>と入力します。
+<br /><a  class="image"><img alt="Bulk Rename Sample2.png" src="../images/Project_Browser/850px-Bulk_Rename_Sample2.png" width="850"   /></a>
+</li>
+<p><br />
+</p>
+<li>すべてのワークブックのロングネームを現在のフォルダ名に変更：
+<br />行を選択して右クリックし、<b>名前の一括変更</b>ダイアログを開き、置換の編集ボックスに<b>%@F</b>と入力します。
+<br /><a  class="image"><img alt="Bulk Rename Sample3.png" src="../images/Project_Browser/Bulk_Rename_Sample3.png" width="857"  /></a>
+</li>
+</ol>
+<p><br />
+</p>
+<h5><a name="Change_Formula"></a><span class="mw-headline">式の変更</span></h5>
+<p>このダイアログで<b>列</b>を表示するよう選択した場合、このダイアログで行を右クリックし、右クリックして<b>式の変更</b>を選択すると、選択した列の式を変更できます。
+</p>
+<dl><dd><a  class="image"><img alt="Change Column Formula.png" src="../images/Project_Browser/Change_Column_Formula.png" width="875"  /></a></dd></dl>
+<table class="dialogcontroltable">
+<tr>
+<th>式全体を置換
+</th>
+<td>式全体を、<b>置換</b>の編集ボックスに入力された新しい式で置換します。
+</td></tr>
+<tr>
+<th>検索と置換
+</th>
+<td>式で指定された部分を検索し、<b>置換</b>の編集ボックスに入力した新しいスクリプトを使用して置換します。
+</td></tr>
+<tr>
+<th>検索
+</th>
+<td>検索する式に指定した部分を入力します。
+</td></tr>
+<tr>
+<th>置換
+</th>
+<td>式または式の中の指定された部分を置換する新しい式（スクリプト）を入力します。
+</td></tr></table>
+<h5><a name="Remove_Operations"></a><span class="mw-headline">操作の削除</span></h5>
+<p>ワークシートの列の再計算を<b>なし</b>に設定します（緑色の鍵を除去します）すると<b>再計算モード</b>に<b>なし</b>と表示されます。
+<br />
+このダイアログでは、複数の行（ワークシート内の複数の列）を選択して、それらの操作を一緒に除去することができます。
+</p>
+<h5><a name="Keep_Dialog_Open_on_Double-click"></a><span class="mw-headline">ダブルクリックでダイアログを開いたままにする</span></h5>
+<p>行をダブルクリックして<a href="#Active_the_Window.2FSheet.2FColumn.2FFolder">ウィンドウ/シート/列/フォルダをアクティブにする</a>と、この<b>プロジェクトブラウザ</b>ダイアログが開いたままになります。
+</p>
+<h5><a name="Hide_Embedded"></a><span class="mw-headline">埋め込みを非表示</span></h5>
+<p>リスト内の埋め込みウィンドウを非表示にします。
+</p>
+<h5><a name="Hide_Result_Sheets"></a><span class="mw-headline">結果シートの非表示</span></h5>
+<p>プロジェクトブラウザで<b>シート</b>を表示する場合、このオプションにチェックを付けて分析結果シートを非表示にします。
+</p>
+<h5><a name="Show_Source_Path"></a><span class="mw-headline">ソースパスを表示</span></h5>
+<p>プロジェクトブラウザに<b>ブック/シート</b>を表示し、列ヘッダーに<b>データソース</b>を表示する場合、このオプションにチェックを入れると、<b>データソース</b>にソースパスが表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="PB Show Source Path.png" src="../images/Project_Browser/850px-PB_Show_Source_Path.png" width="849"   /></a></dd></dl>
+<p><br />
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Project_Browser/Tip_icon.png" width="57"  border="0" /></td><td><p><b>Ctrl + A</b>キーを使用して、リスト内のすべての行を選択できます。このダイアログでは、<b>Ctrl+Z</b>と<b>Ctrl+Y</b>ホットキーによって、操作を元に戻したりやり直したりすることができます。
+</p></td></tr></table>
+<p><br />
+</p>
+<h3><a name="Edit_Name_by_Hotkey"></a><span class="mw-headline">ホットキーによる名前の編集</span></h3>
+<p>リスト内のウィンドウ（ブック/グラフ/ノート）/シート/列を選択し、<b>F2</b>キーを押すと、インプレース編集状態で入力して名前を編集できます。
+</p><p><b>ロングネーム</b>と<b>ショートネーム</b>の列が表示されている場合は、ロングネームを編集するだけです。<b>ショートネーム</b>の列のみが表示されている場合は、ショートネームを編集できます。
+</p>
+<h2><a name="Search_in_Project_Browse"></a><span class="mw-headline">プロジェクトブラウザで検索</span></h2>
+<p>ボックスに文字列または数値データを入力して、プロジェクトブラウザにリストされているウィンドウ/シート/列/フォルダを検索します。
+名前だけでなく、それらのメタデータを検索できます。 
+</p>
+<dl><dd><a  class="image"><img alt="Search in Project Browser.png" src="../images/Project_Browser/Search_in_Project_Browser.png" width="811"  /></a></dd></dl>
+<h3><a name="Case_Sensitive_button"></a><span class="mw-headline">大文字小文字の区別ボタン</span></h3>
+<p>このボタンを使用して、検索で大文字と小文字を区別するかどうかを指定します。
+</p>
+<h3><a name="Column_to_Search_filter"></a><span class="mw-headline">検索フィルタ列</span></h3>
+<p>検索する列(メタデータ)を指定します。
+</p>
+<h3><a name="Enter_Box"></a><span class="mw-headline">入力ボックス</span></h3>
+<p>検索したい文字列や数値データを指定します。ワイルドカード（* および&nbsp;?）がサポートされています。たとえば、末尾を「<i><b>*abc</b></i>」というように検索できます。
+</p>
+
+    

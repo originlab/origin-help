@@ -1,0 +1,83 @@
+<h1 class="firstHeading">17.2.5 Creating Pareto Charts</h1><p class='urlname' style='display: none'>Create-Pareto-Chart</p>
+<p><br />
+</p>
+<dl><dd><a  class="image"><img alt="Pareto Chart.png" src="../images/Creating_Pareto_Charts/450px-Pareto_Chart.png?v=96874" width="450"   /></a></dd></dl>
+<p>The pareto chart is a special type of bar chart accompanied with a line+scatter graph. Typically, the vertical bars, whose heights reflect the frequency or impact of problems, are in descending order of significance and the line+scatter graph is ascending monotonously. 
+</p><p>Pareto charts can be used to identify factors that have the greatest cumulative effect on the system. Thus, it is helpful in screening out the less significant factors in an analysis. 
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"><span class="tocnumber">1</span> <span class="toctext">Creating Pareto Chart from the Binned Data or Raw Data</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Input_Data:_Binned_Data"><span class="tocnumber">1.1</span> <span class="toctext">Input Data: Binned Data</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Input_Data:_Raw_Data"><span class="tocnumber">1.2</span> <span class="toctext">Input Data: Raw Data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_for_Plotting"><span class="tocnumber">2</span> <span class="toctext">Controls for Plotting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Multiple_Groups"><span class="tocnumber">2.1</span> <span class="toctext">Multiple Groups</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Show_Cumulative_Percent_Plot"><span class="tocnumber">2.2</span> <span class="toctext">Show Cumulative Percent Plot</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Show_Symbol_at_Right_Side_of_Bar"><span class="tocnumber">2.3</span> <span class="toctext">Show Symbol at Right Side of Bar</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.4</span> <span class="toctext">Combine Smaller Counts in One Category</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.4.1</span> <span class="toctext">Combine Smaller Values</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Threshold"><span class="tocnumber">2.4.2</span> <span class="toctext">Threshold</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Threshold_value"><span class="tocnumber">2.4.3</span> <span class="toctext">Threshold value</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Tick_Label"><span class="tocnumber">2.4.4</span> <span class="toctext">Tick Label</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"></a><span class="mw-headline">Creating Pareto Chart from the Binned Data or Raw Data</span></h2>
+<p>According to the different source data, Origin supports to create these two Pareto Charts:
+</p>
+<ul><li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Binned_Data.html" title="UserGuide:Pareto Chart - Binned Data">Pareto Chart - Binned Data</a> </li>
+<li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Raw_Data.html" title="UserGuide:Pareto Chart - Raw Data">Pareto Chart - Raw Data</a></li></ul>
+<h3><a name="Input_Data:_Binned_Data"></a><span class="mw-headline">Input Data: Binned Data</span></h3>
+<p>If you have already had binned data, you can create a pareto chart from it by using the <b>Plot &gt; Statistical: Pareto: Pareto Chart - Binned Data</b> menu command, or click the <b>Pareto Chart - Binned Data</b> button <a  class="image"><img alt="Button Pareto Chart-Binned Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Binned_Data.png?v=21670" width="21"  /></a> on the <b>2D Graphs</b> toolbar. This will bring up the <a class="external text" href="../../XFunction/X-Function/Plot_paretobin.html">plot_paratobin</a> dialog.
+</p><p><a  class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png?v=98580" width="700"   /></a>
+</p>
+<h3><a name="Input_Data:_Raw_Data"></a><span class="mw-headline">Input Data: Raw Data</span></h3>
+<p>If you have raw data, you can create a pareto chart from it by using the <b>Plot &gt; Statistical: Pareto: Pareto Chart - Raw Data</b> menu command, or click the <b>Pareto Chart - Raw Data</b> button <a  class="image"><img alt="Button Pareto Chart-Raw Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Raw_Data.png?v=21671" width="21"  /></a> on the <b>2D Graphs</b> toolbar. This will bring up the <a class="external text" href="../../XFunction/X-Function/Plot_paretoraw.html">plot_paratoraw</a> dialog.
+</p><p><a  class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png?v=98581" width="700"   /></a>
+</p>
+<h2><a name="Controls_for_Plotting"></a><span class="mw-headline">Controls for Plotting</span></h2>
+<h3><a name="Multiple_Groups"></a><span class="mw-headline">Multiple Groups</span></h3>
+<p>When a grouping column has been selected for <b>Graph</b> box, you can use this control to decide how to arrange the multiple groups: <b>Separate Panels in Same Graph</b> or <b>Separate Graphs</b>.
+</p><p>If you choose <b>Separate Panels in Same Graph</b>, the pareto charts will be plotted into separate panels on same graph by groups. If the number of group is <b>N</b>, then the panels will be wrapped by <i>sqrt(N)</i>.
+</p><p>If you choose <b>Separate Graphs</b>, the pareto charts will be plotted as separate graphs by groups.
+</p>
+<h3><a name="Show_Cumulative_Percent_Plot"></a><span class="mw-headline">Show Cumulative Percent Plot</span></h3>
+<p>Specify whether to show the cumulative percent as a line+scatter plot on the Pareto chart. This line+scatter plot will be plotted into another new layer.
+</p>
+<h3><a name="Show_Symbol_at_Right_Side_of_Bar"></a><span class="mw-headline">Show Symbol at Right Side of Bar</span></h3>
+<p>Specify whether show the scatter symbol at the right side of bar. <b>Note:</b> This line+scatter plot will start from the Origin(0,0) and put the scatter point at the right-side of bar if you checked this check box.
+</p><p><a  class="image"><img alt="Pareto Charts Symbol At Right.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Symbol_At_Right.png?v=96710" width="750"   /></a>
+</p>
+<h3><a name="Combine_Smaller_Counts_in_One_Category"></a><span class="mw-headline">Combine Smaller Counts in One Category</span></h3>
+<p>Specify whether to combine the data of which the counts are below a threshold. 
+</p><p><a  class="image"><img alt="Pareto Charts Combine By Count.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Combine_By_Count.png?v=96719" width="750"   /></a>
+</p>
+<h4><a name="Combine_Smaller_Values"></a><span class="mw-headline">Combine Smaller Values</span></h4>
+<p>Enable the combination of specified smaller count values.
+</p>
+<h4><a name="Threshold"></a><span class="mw-headline">Threshold</span></h4>
+<p>Specify how to define the threshold value: <b>By Percent</b>,  <b>By Count</b> or <b>By Bar Number</b>.
+</p>
+<ul><li><b>By Percent</b>:Specify a percent value as the threshold to combine the data which the count's percentage is smaller than this value.</li>
+<li><b>By Count</b>:Specify a count value as the threshold to combine the data which the count number is smaller than this value.</li>
+<li><b>By Bar Number</b>:Enter a bar number as the threshold to specify how many bars are in this plot.</li></ul>
+<h4><a name="Threshold_value"></a><span class="mw-headline">Threshold value</span></h4>
+<p>Enter the threshold value according to the selection of <b>Threshold</b> drop-dwon list.
+</p>
+<h4><a name="Tick_Label"></a><span class="mw-headline">Tick Label</span></h4>
+<p>Enter a label text for the combination bar.
+</p>
+
+
+
+
+

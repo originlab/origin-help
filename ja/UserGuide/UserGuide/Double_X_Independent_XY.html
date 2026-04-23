@@ -1,0 +1,32 @@
+﻿<h1 class="firstHeading">二重X軸 - 独立XYグラフ</h1>
+<p class='urlname' style='display: none'>DoubleX-IndependentXY</p>
+<dl>
+<dd><a class="image"><img alt="Double X Independent XY 01.png" src="../images/Double_X_Independent_XY/Double_X_Independent_XY_01.png" width="700" /></a></dd>
+</dl>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>二重X軸グラフを作成するには、2組のX(Y)データ、または少なくとも4列のデータを選択します。2組目のX(Y)データは独立した軸を使用します。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メインメニューから<span class="menu">作図&gt; 複数区分、複数軸: 二重X軸 – 独立XY</span>を選びます。</p>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>dxindxy.otpu (Originのプログラムフォルダにインストールされています。)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>ここのグラフは 2つのレイヤを持ち、それぞれが独立したXY軸を使用します。既定では、下側のX軸と左Y軸が第1レイヤを構成し、上側のX軸と右Y軸が第2レイヤを構成します。</p>
+<p><span class='headerInParagraph'>データ列の選択とレイヤへの割り当て</span></p>
+<ul>
+<li>選択したX列が2列以上ある場合、1組目のX(Y)は第1レイヤ、2組目は第2レイヤ、3組目は第1レイヤ…の順に割り当てます。</li>
+<li>選択したX列が2列未満の場合、データ列を XYXY形式と見なし、1組目は第1レイヤ、2組目は第2レイヤ、3組目は第1レイヤ…の順に割り当てます。</li>
+<li>選択列が 4列未満の場合、2組のX(Y)データ、または少なくとも4列を選択してください、というメッセージが表示されます。</li>
+<li>選択列が4列以上で、かつX列が2未満の場合、列数が奇数なら、最後の列をY列として扱うことができます。</li>
+</ul>

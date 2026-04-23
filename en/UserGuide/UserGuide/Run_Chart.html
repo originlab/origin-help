@@ -1,0 +1,107 @@
+<h1 class="firstHeading">29.9.38 Run Chart</h1><p class='urlname' style='display: none'>Run-Chart</p><a  class="image"><img alt="Run Chart 01.png" src="../images/Run_Chart/Run_Chart_01.png?v=97692" width="803"  /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2.1</span> <span class="toctext">Dialog Controls</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select at least one column to create run chart. For multiple columns, each row is one subgroup.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>From the menu, select <b>Plot &gt; Statistical: Run Chart</b> to open the <b>plot_runchart</b> dialog. 
+</p><p><a  class="image"><img alt="Run Chart 02.png" src="../images/Run_Chart/Run_Chart_02.png?v=97697" width="522"  /></a>
+</p>
+<h3><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<td><b>Data Layout</b>
+</td>
+<td>Choose the data layout according to the data arrangement.
+<ul><li> <b>All Subgroups in One Column</b>: All subgroups are arranged in one column, using sample size or reference column to specify the subgroups.</li>
+<li> <b>Each Subgroup in Row</b>: Each subgroup is arranged in one row.</li></ul>
+</td></tr>
+<tr>
+<td><b>Input</b>
+</td>
+<td>Select the input data.
+<ul><li> For <b>All Subgroups in One Column</b> layout, select one column at least. Each selected column will be plotted as a run chart. </li>
+<li> For <b>Each Subgroup in Row</b> layout, select multiple columns. Each row of these columns willl be plotted at one X value.</li></ul>
+</td></tr>
+<tr>
+<td><b>Subgroup by</b>
+</td>
+<td> This control is only avaliable for <b>All Subgroups in One Column</b> layout. Choose how to subgroup the input column(s), by sample size or values in specified reference column.
+</td></tr>
+<tr>
+<td><b>Size</b>
+</td>
+<td> This control is only avaliable for <b>All Subgroups in One Column</b> layout and <b>Subgroup by</b> = <b>Size</b>. Specify the row number to subgroup the data.
+</td></tr>
+<tr>
+<td><b>Subgroup Label</b>
+</td>
+<td> This control is only avaliable for <b>All Subgroups in One Column</b> layout and <b>Subgroup by</b> = <b>Size'</b>. Specify a column to label the subgroups.
+</td></tr>
+<tr>
+<td><b>Column</b>
+</td>
+<td> This control is only avaliable for <b>All Subgroups in One Column</b> layout and <b>Subgroup by</b> = <b>Column</b>. Specify the reference column to subgroup the input  data.
+</td></tr>
+<tr>
+<td><b>Connect</b>
+</td>
+<td> Connect Mean values or Median values of subgroups.
+</td></tr>
+<tr>
+<td><b>Show Statistics Info in Graph Table</b>
+</td>
+<td> Specify whether to show the statistics results as a table on the graph.
+</td></tr>
+<tr>
+<td><b>Graph Template</b>
+</td>
+<td>Specify the template to plot the run chart.
+<p>By default, the built-in template <i>Runchart</i> is used; you can uncheck <b>Auto</b> check box to browse and select a user template, to apply the format you saved in advance.
+</p>
+</td></tr>
+<tr>
+<td><b>Output</b>
+</td>
+<td> Output the plot data to specified sheet.
+</td></tr>
+<tr>
+<td><b>Output Graphs</b>
+</td>
+<td> Output the result graph(s) to specified sheet.
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>Runchart.OTPU(installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>A Run Chart, also known as a run-sequence plot, is used to study collected data for trends or patterns over a specific period of time or an ongoing process. You can use it to monitor data over time to detect trends, shifts, or cycles, to analyze evidence of special-cause variation in your process.
+</p><p>Origin's Run Chart plots the collected data by specified subgroups; each subgroup contains the observed data from the same time. All observed data will be plotted as vertically arranged dots by subgroups, and the mean or median of each subgroup will be plotted as Line+Scatter plot against the time series. A horizontal dash line at mean or median of whole input data will be added as the reference line.
+</p><p><a  class="image"><img alt="Run Chart 03.png" src="../images/Run_Chart/850px-Run_Chart_03.png?v=97726" width="850"   /></a>
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2025b
+</td></tr></table>
+
+
+
+
+
+

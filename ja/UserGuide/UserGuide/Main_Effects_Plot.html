@@ -1,0 +1,25 @@
+﻿<h1 class="firstHeading">主効果プロット</h1>
+<p class='urlname' style='display: none'>Main-Effects-Plot</p>
+<a class="image"><img alt="Main Effects Plot 01.png" src="../images/Main_Effects_Plot/Main_Effects_Plot_01.png" width="681" /></a>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>主効果プロットを作成するには、少なくとも1つのデータ列と1つの因子列を選択してください。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メニューから<b>作図 &gt; 統計 : 交互作用プロットを</b>選択して'<b>plotmaineffects</b>ダイアログを開く</p>
+<p><a class="image"><img alt="Main Effects Plot 02.png" src="../images/Main_Effects_Plot/Main_Effects_Plot_02.png" width="463" /></a></p>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>MainEffect.OTPU(Originのプログラムフォルダにインストールされています)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>主効果プロット は、複数のカテゴリカル変数（質的変数）を扱う際に非常に有用です。レベル平均の変化を比較することで、どのカテゴリカル変数が応答変数に最も影響を与えているかを視覚的に確認できます。</p>
+<p>Originの主効果プロットでは、複数の応答データ列を入力データとして選択でき、複数のカテゴリカル変数を因子として指定できます。各入力列は、別々の主効果プロットとして描画され、各因子は、別々のグラフレイヤとして表示されます。各レイヤでは、因子の各水準における平均応答値がデータ点としてプロットされます。応答データ全体の平均値は、破線の基準線として表示されます。</p>

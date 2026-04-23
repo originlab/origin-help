@@ -1,0 +1,411 @@
+﻿<h1 class="firstHeading">Diagrammdatenschnitt</h1>
+
+  <p class='urlname' style='display: none'>Graph-Data-Slicer</p>
+
+  <p><br>
+  Neben dem <a href="../../UserGuide/UserGuide/Data_Filter.html" title="UserGuide:Data Filter">Anwenden eines Filters auf ein Arbeitsblatt</a> (d. h. Arbeitsblattdatenschnitt) können Sie Filter direkt auf ein Diagramm anwenden (d h. Diagrammdatenschnitt).</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Data slicer 01.gif" src="../images/Graph_With_Data_Slicer/Data_slicer_01.gif" width="779"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Worksheet_Data_Slicer_vs._Graph_Data_Slicer"><span class="tocnumber">1</span> <span class="toctext">Arbeitsblattdatenschnitt vs. Diagrammdatenschnitt</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Add_Data_Slicer_to_Graph"><span class="tocnumber">2</span> <span class="toctext">Datenschnitt zu Diagramm hinzufügen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Filter_Controls"><span class="tocnumber">3</span> <span class="toctext">Filtersteuerung</span></a></li>
+
+      <li class="toclevel-1 tocsection-4">
+        <a href="#Explore_Graph_with_Data_Filter"><span class="tocnumber">4</span> <span class="toctext">Diagramm mit Datenfilter untersuchen</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-5"><a href="#Extract_Filtered_Data"><span class="tocnumber">4.1</span> <span class="toctext">Gefilterte Daten extrahieren</span></a></li>
+
+          <li class="toclevel-2 tocsection-6"><a href="#Analysis_on_Graph_with_Graph_Data_Slicer"><span class="tocnumber">4.2</span> <span class="toctext">Analyse eines Diagramms mit Datenschnitt</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Worksheet_Data_Slicer_vs._Graph_Data_Slicer"></a><span class="mw-headline">Arbeitsblattdatenschnitt vs. Diagrammdatenschnitt</span></h2>
+
+  <ul>
+    <li>Ein <span class='headerInParagraph'>Arbeitsblattdatenschnitt</span> ist ein arbeitsblattbasierter Filter.</li>
+  </ul>
+
+  <dl>
+    <dd>Wenn das Quellarbeitsblatt über einen Filter verfügt, wird durch das Einschalten des Datenfilters auf jedem Diagramm, das auf Grundlage dieses Arbeitsblatts gezeichnet wurde, der vorhandene Arbeitsblattfilter angewendet. Dies wird als Arbeitsblattdatenschnitt bezeichnet.</dd>
+
+    <dd>Der Arbeitsblattdatenschnitt wird auf das Arbeitsblatt und auch auf alle Diagramme, die basierend auf diesem Arbeitsblatt gezeichnet wurden, angewendet. Das Ändern der Filter (Bedingung oder Status aktivieren/deaktivieren) im Diagramm aktualisiert das Arbeitsblatt und alle Diagramme, die auf diesem Arbeitsblatt basieren. Und umgekehrt.</dd>
+  </dl>
+
+  <ul>
+    <li>Ein <span class='headerInParagraph'>Diagrammdatenschnitt</span> ist ein diagrammbasierter Filter.</li>
+  </ul>
+
+  <dl>
+    <dd>Wenn das Quellarbeitsblatt über keinen Filter verfügt, wird durch das Einschalten des Datenschnitts auf jedem Diagramm, das basierend auf diesem Arbeitsblatt gezeichnet wurde, ein Popup-Dialog angezeigt, in dem Sie eine Spalte wählen können, auf die der Filter angewendet werden soll. Dieser Typ von Filter wird als Diagrammdatenschnitt bezeichnet</dd>
+
+    <dd>Der Diagrammdatenschnitt wird nur auf das aktuelle Diagramm angewendet und hat KEINEN Einfluss auf die Daten im Quellarbeitsblatt. Das heißt, der Filter des aktuellen Diagramms hat keine Wirkung auf andere Diagramme, auch wenn sie alle auf Grundlage des gleichen Arbeitsblatts gezeichnet wurden. Wenn Sie das Diagrammfenster löschen, auf dem der Datenschnitt basiert, werden auch alle Analysen und Aktionen, die von diesem Datenschnitt abgeleitet sind, entfernt.</dd>
+  </dl>
+
+  <p>Wir empfehlen immer den Diagrammdatenschnitt, nicht nur, weil er nur das aktuelle Diagramm beeinflusst (und in diesem Sinn unabhängig vom Quellarbeitsblatt ist), sondern auch weil er mehr nützliche Funktionen aufweist, wie z. B. duplizierte Zeichnungen für Vergleiche. Er wird außerdem kontinuierlich weiterentwickelt.</p>
+
+  <h2><a name="Add_Data_Slicer_to_Graph"></a><span class="mw-headline">Datenschnitt zu Diagramm hinzufügen</span></h2>
+
+  <ol>
+    <li>Aktivieren Sie ein Diagramm, auf dessen Quellarbeitsblatt kein Datenfilter angewendet wurde.</li>
+
+    <li>Wählen Sie im Menü <b>Daten: Datenschnitt</b>.<br>
+      <i>Oder</i><br>
+      Klicken Sie auf die Schaltfläche <b>Datenfilter hinzufügen/entfernen</b> <a class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"></a> auf der Symbolleiste Arbeitsblattdaten.<br>
+      <i>Oder</i><br>
+      Bewegen Sie den Cursor über den Rand der Diagrammseite, bis sich der Cursor in <a class="image"><img alt="Data slicer mouse.png" src="../images/Graph_With_Data_Slicer/Data_slicer_mouse.png" width="30"></a> verwandelt. Klicken Sie einmal auf die leere Fläche, um die Minisymbolleiste auf Seitenebene aufzurufen. Klicken Sie auf die Schaltfläche <b>Datenschnitt</b>.
+
+      <dl>
+        <dd><a class="image"><img alt="Data slicer 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_02.png" width="340"></a></dd>
+      </dl>
+    </li>
+
+    <li>Der Dialog <b>Datenschnitt zu Diagramm hinzufügen</b> wird geöffnet.
+
+      <dl>
+        <dd><a class="image"><img alt="Data slicer dialog 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_dialog_02.png" width="399"></a></dd>
+      </dl>
+
+      <ul>
+        <li>Wählen Sie bis zu zwei Spalten, auf die Sie die Schnitte anwenden. Beachten Sie, dass Sie später jederzeit weitere Datenschnitte hinzufügen können.</li>
+
+        <li>Wenn die ausgewählte Filterspalte ein Textformat hat, können Sie <b>Mehrfachauswahl</b> aktivieren, um das Auswählen von mehreren Elementen für die Filterbedingung zu aktivieren. Sie können auch zwischen <b>Einzelauswahl</b> und <b>Mhrfachauswahl</b> wechseln, nachdem der Datenschnitt hinzugefügt wurde. Siehe <a href="#Text_.26_Categorical">nächsten Abschnitt</a>.<br>
+          Der Datenschnitt, angewendet auf eine Text-/kategoriale Spalte, kann 2 Auswahlmodi haben:<br>
+          <i><b>Einzelauswahl vs. Mehrfachauswahl</b></i>
+
+          <table class="simple" style="width: 80%">
+            <tr>
+              <th>
+                <center>
+                  Einzelauswahl
+                </center>
+              </th>
+
+              <th>
+                <center>
+                  Mehrfachauswahl
+                </center>
+              </th>
+            </tr>
+
+            <tr>
+              <td>Eine Auswahlliste zum Auswählen von nur einem Element zur gleichen Zeit</td>
+
+              <td>Eine Auswahlliste zum Auswählen von mehreren Elementen<br>
+              Das Diagramm wird automatisch aktualisiert, wenn Sie ein Element auswählen/seine Auswahl aufheben.<br>
+              Klicken Sie außerhalb der Liste, um die Auswahl fertigzustellen.</td>
+            </tr>
+
+            <tr>
+              <td><a class="image"><img alt="Data slicer 04.png" src="../images/Graph_With_Data_Slicer/Data_slicer_04.png" width="286"></a><br>
+              <br>
+              <br></td>
+
+              <td><a class="image"><img alt="Data slicer 03.png" src="../images/Graph_With_Data_Slicer/Data_slicer_03.png" width="362"></a></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>Um verschiedene Filterbedingungen intuitiv zu vergleichen, können Sie <b>Zeichnung duplizieren</b> wählen.
+
+          <table class="simple">
+            <tr>
+              <th width="20%">Zeichnung duplizieren</th>
+
+              <td>
+                <ul>
+                  <li><b>Kein</b></li>
+                </ul>
+
+                <dl>
+                  <dd>Es werden keine Zeichnungen dupliziert.</dd>
+                </dl>
+
+                <ul>
+                  <li><b>Gleicher Layer</b></li>
+                </ul>
+
+                <dl>
+                  <dd>Zeichnungen werden im gleichen Layer dupliziert. Für Diagramme mit mehreren Layern ist nur diese Option zum Duplizieren verfügbar.</dd>
+
+                  <dd><a class="image"><img alt="Graph Data Slicer DuplicatePlot SameLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_SameLayer.png" width="471"></a></dd>
+                </dl>
+
+                <ul>
+                  <li>'<b>Mehrere Layer</b></li>
+                </ul>
+
+                <dl>
+                  <dd>Zeichnungen werden in mehrere Layer dupliziert. Diese Option ist nur für Diagramme mit einzelnem Layer verfügbar.</dd>
+
+                  <dd><a class="image"><img alt="Graph Data Slicer DuplicatePlot MultiLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_MultiLayer.png" width="627"></a></dd>
+                </dl>
+              </td>
+            </tr>
+
+            <tr>
+              <th>Anzahl der Duplikate</th>
+
+              <td>
+                <p>Wenn <b>Zeichnung duplizieren</b> = <b>Gleicher Layer</b>, verwenden Sie dieses Bearbeitungsfeld, um die Anzahl der duplizierten Zeichnungen festzulegen.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <th>Anzahl der Spalten/<br>
+              Anzahl der Zeilen</th>
+
+              <td>
+                <p>Wenn <b>Zeichnung duplizieren</b> = <b>Mehrere Layer</b>, verwenden Sie diese Auswahllisten, um die Anzahl der Duplikate und das Bedienfeldlayout zu bestimmen.</p>
+
+                <p>Die Anzahl der Duplikate = <b>Anzahl der Spalten</b> X <b>Anzahl der Zeilen</b> - 1.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <th>Allgemeiner Filter für alle Layer/Zeichnungen</th>
+
+              <td>
+                <ul>
+                  <li>Bei Diagrammen mit mehreren Layern werden ALLE Filter, die Sie im Dialog <b>Datenschnitt zu Diagramm hinzufügen</b> definiert haben, auf ALLE Layer angewendet. Aktivieren Sie dieses Kontrollkästchen, um eine gemeinsame Filtersteuerung für alle Layer festzulegen. Dadurch wird die gleiche Filterbedingung auf alle Layer angewendet.</li>
+
+                  <li>Andernfalls hat jeder Layer seine eigene Filtersteuerung. In diesem Fall sind die Filter auf verschiedenen Layern unabhängig voneinander. Das heißt, Sie können unterschiedliche Filterbedingungen für verschiedene Layer festlegen, einen vorhandenen Filter entfernen oder neue Filter zu einem Layer hinzufügen, aber nicht andere Layer beeinflussen.<br>
+                  Sie können auch mit der rechten Maustaste auf einen Datenschnitt klicken und <b>Filter zu allgemeinem Filter verschieben</b> wählen, um alle Filter in eine gemeinsame Steuerung zu übertragen.</li>
+                </ul>
+
+                <dl>
+                  <dd><a class="image"><img alt="Data slicer 09.png" src="../images/Graph_With_Data_Slicer/Data_slicer_09.png" width="648"></a></dd>
+                </dl>
+
+                <ul>
+                  <li>Sie können sogar gemischte Bedienelemente in einem Diagramm haben, indem Sie einen neuen Filter auf <b>Alle Zeichnungen</b> oder <b>Allgemeinen Filter zur Seite</b> hinzufügen.</li>
+                </ul>
+
+                <dl>
+                  <dd><a class="image"><img alt="Data slicer 10.png" src="../images/Graph_With_Data_Slicer/Data_slicer_10.png" width="385"></a></dd>
+                </dl>
+              </td>
+            </tr>
+
+            <tr>
+              <th>Filter in Legende zeigen</th>
+
+              <td>
+                <p>Aktivieren Sie dieses Kontrollkästchen, um die aktuelle Filterbedingung in der Legende zu zeigen. Die Legende wird automatisch aktualisiert, wenn der Filter sich ändert.</p>
+
+                <p>Beachten Sie, dass Sie Filterinformationen auch zum Layertitel hinzufügen können, indem Sie auf die Schaltfläche <b>Layerfilter hinzufügen</b> <a class="image"><img alt="Popup Add Layer Filter Title.png" src="../images/Graph_With_Data_Slicer/Popup_Add_Layer_Filter_Title.png" width="24"></a> auf der Minisymbolleiste auf Seitenebene klicken.</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </li>
+
+    <li>Das Feld des Datenschnitts wird auf der linken Seite des Diagrammfensters gezeigt. Es führt die von Ihnen festgelegten Filter auf. Das Diagramm wird entsprechend aktualisiert. Sie können die aktuelle Filterbedingung anzeigen und ändern, mehr Filter hinzufügen, vorhandene Filter entfernen oder sie neu ordnen. Im <a href="#Edit_Filters">nächsten Abschnitt</a> finden Sie Einzelheiten dazu.
+
+      <dl>
+        <dd><a class="image"><img alt="Data slicer 01.png" src="../images/Graph_With_Data_Slicer/Data_slicer_01.png" width="746"></a></dd>
+      </dl>
+
+      <table class="noborder">
+        <tr>
+          <td style="vertical-align:top" width="60"><img src="../images/Graph_With_Data_Slicer/Tip_icon.png" width="57" border="0" alt=""></td>
+
+          <td>
+            <p>Wenn das Quellarbeitsblatt (aus dem das Diagramm erstellt wurde) einen oder mehrere Filter hat, werden, unabhängig davon, ob der <a href="../../UserGuide/UserGuide/Data_Filter.html#Status_of_Filter" title="UserGuide:Data Filter">Filter aktiviert ist oder nicht</a>, durch das Einblenden des Datenschnittfelds (über die Schaltfläche <b>Datenfilter</b> <a class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"></a>) alle Arbeitsblattfilter auf das Diagrammfenster übertragen.</p>
+
+            <p>In diesem Fall KÖNNEN Sie KEINEN neuen Schnitt hinzufügen. Sie können nur die vorhandenen Filter anzeigen und bearbeiten. Siehe die verfügbaren Ausgaben im <a href="#Edit_Filters">nächsten Abschnitt</a>.</p>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ol>
+
+  <h2><a name="Filter_Controls"></a><span class="mw-headline">Filtersteuerung</span></h2>
+
+  <ul>
+    <li>Ein Rechtsklick auf die leere Fläche innerhalb des Bedienfelds Datenschnitt ruft die Kontextmenüs auf, mit denen Sie Filter kopieren/einfügen, Filter hinzufügen und Layer mit Filtern duplizieren können.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Data slicer 12.png" src="../images/Graph_With_Data_Slicer/Data_slicer_12.png" width="509"></a></dd>
+  </dl>
+
+  <table class="simple">
+    <tr>
+      <th>Filter zu allen Zeichnungen hinzufügen</th>
+
+      <td>Wählen Sie eine Spalte aus der Teilmenüliste, um einen neuen Filter auf Layerebene hinzuzufügen, der auf alle Zeichnungen in allen Layern angewendet wird, aber über eine unabhängige Filtersteuerung auf jeder Layerebene verfügt. In diesem Fall können Sie unterschiedliche Filterbedingungen für verschiedene Layerfilter zum Vergleich festlegen.</td>
+    </tr>
+
+    <tr>
+      <th>Allgemeinen Filter zur Seite hinzufügen</th>
+
+      <td>Wählen Sie eine Spalte aus der Teilmenüliste, um einen neuen Filter auf Seitenebene hinzuzufügen, der auf alle Zeichnungen in allen Layern angewendet wird und über eine gemeinsame Steuerung auf Seitenebene verfügt.</td>
+    </tr>
+
+    <tr>
+      <th>X ändern/<br>
+      Y ändern</th>
+
+      <td>Ändern Sie XY, wenn alle Layer die gleiche XY-Spalte teilen, und skalieren Sie neu, um alles zu zeigen.</td>
+    </tr>
+
+    <tr>
+      <th>Layer mit Filter duplizieren</th>
+
+      <td>Duplizieren Sie zum Vergleich Layer mit Filtern in das aktuelle Diagramm.</td>
+    </tr>
+
+    <tr>
+      <th>Automatisch neu skalieren</th>
+
+      <td>Aktivieren Sie dieses Element, um Achsen entsprechend der Filterergebnisse automatisch neu zu skalieren.</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>Ein Rechtsklick auf einen Datenschnitt ruft eine Kontextliste zum Deaktivieren/Löschen, Neuordnen, Bearbeiten von Filtern auf.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Data slicer 11.png" src="../images/Graph_With_Data_Slicer/Data_slicer_11.png" width="509"></a></dd>
+  </dl>
+
+  <table class="simple">
+    <tr>
+      <th>Mehrfachauswahl/<br>
+      Einzelauswahl</th>
+
+      <td>
+        <p>Die Filter auf einer Text-/kategorialen Spalte können eine <b>Mehrfachauswahl</b> und eine <b>Einzelauswahl</b> haben. Wählen Sie das Menüelement, um zwischen den zwei Auswahlmodi zu wechseln.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Benutzerdefinierter Filter/<br>
+      Bedingungstyp ändern</th>
+
+      <td>
+        <p>Es werden verschiedene Optionen bereitgestellt, je nach Format der Spalte, auf die der Filter angewendet wird.</p>
+
+        <ul>
+          <li>Text &amp; Kategorial
+
+            <ul>
+              <li>Klicken Sie mit der rechten Maustaste auf eine Text- oder kategorialen Datenschnitt und wählen Sie im Kontextmenü <b>Benutzerdefinierter Filter...</b>, um den Dialog <b>Benutzerdefinierter Filter (erweiterter Text)</b> für die weiterführende Bearbeitung zu öffnen. Auf <a href="../../UserGuide/UserGuide/Data_Filter.html#Text_Filter" title="UserGuide:Data Filter">dieser Seite</a> können Sie lesen, wie ein Textfilter eingerichtet wird.</li>
+            </ul>
+          </li>
+
+          <li>Numerisch
+
+            <ul>
+              <li>Für das einfache Bearbeiten klicken Sie auf einen numerischen Datenschnitt, um den Dialog <b>Einfacher numerischer Filter</b> zu öffnen, oder klicken Sie mit der rechten Maustaste auf den Datenschnitt, um im Kontextmenü <b>Bedingungstyp ändern</b> auszuwählen und eine Bedingung in der Popup-Liste auszuwählen.</li>
+
+              <li>Klicken Sie mit der rechten Maustaste und wählen Sie im Kontextmenü <b>Benutzerdefinierter Filter...</b>, um den Dialog <b>Benutzerdefinierter Filter (erweiterter Text)</b> für die weiterführende Bearbeitung zu öffnen. Auf <a href="../../UserGuide/UserGuide/Data_Filter.html#Numeric_Filter" title="UserGuide:Data Filter">dieser Seite</a> können Sie lesen, wie ein numerischer Filter eingerichtet wird.</li>
+
+              <li>Wählen Sie <b>Bedingungstyp ändern: Laden</b>, um eine gespeicherte Filterbedingung zu laden.</li>
+            </ul>
+          </li>
+
+          <li>Datum &amp; Zeit
+
+            <ul>
+              <li>Für das einfache Bearbeiten klicken Sie auf einen Datums- und Zeitdatenschnitt, um den Dialog <b>Einfacher Datumsfilter</b> zu öffnen, oder klicken Sie mit der rechten Maustaste auf den Datenschnitt, um im Kontextmenü <b>Bedingungstyp ändern</b> auszuwählen und eine Bedingung in der Popup-Liste auszuwählen.</li>
+
+              <li>Klicken Sie mit der rechten Maustaste und wählen Sie im Kontextmenü <b>Benutzerdefinierter Filter...</b>, um den Dialog <b>Benutzerdefinierter Filter (erweiterter Text)</b> für die weiterführende Bearbeitung zu öffnen. Auf <a href="../../UserGuide/UserGuide/Data_Filter.html#Date_Filter" title="UserGuide:Data Filter">dieser Seite</a> können Sie lesen, wie ein Datumsfilter eingerichtet wird.</li>
+
+              <li>Wählen Sie <b>Bedingungstyp ändern: Laden</b>, um eine gespeicherte Filterbedingung zu laden.</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Filterspalte ändern</th>
+
+      <td>
+        <p>Wählen Sie eine Spalte aus der Auswahlliste, um zum aktuellen Filter zu wechseln.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Als allgemeinen Filter zur Seite verschieben</th>
+
+      <td>
+        <p>Wählen Sie für einen Datenschnitt, basierend auf dem aktuellen Layer, dieses Element, um es auf Seitenebene zu verschieben, so dass die Filterbedingung auf ALLE Layer (alle Zeichnungen) angewendet und die gleiche Filtersteuerung geteilt wird.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Filter löschen</th>
+
+      <td>
+        <p>Löschen Sie ausgewählte Datenschnitte.</p>
+
+        <ul>
+          <li>Sie können auch auf die Schaltfläche <b>Datenfilter hinzufügen/entfernen</b> <a class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"></a> auf der Symbolleiste <b>Worksheet Daten</b> klicken, um ALLE Datenschnitte im aktuellen Diagrammfenster zu entfernen.</li>
+
+          <li>Beachten Sie, dass alle Analysen, die aus den Schnitten abgeleitet wurden, auch entfernt werden.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Explore_Graph_with_Data_Filter"></a><span class="mw-headline">Diagramm mit Datenfilter untersuchen</span></h2>
+
+  <h3><a name="Extract_Filtered_Data"></a><span class="mw-headline">Gefilterte Daten extrahieren</span></h3>
+
+  <p>Klicken Sie mit der rechten Maustaste auf die gefilterte Zeichnung und wählen Sie <b>Kopie des Datenschnitts als neue Mappe erstellen</b>.</p>
+
+  <p>Eine Arbeitsmappe mit dem Namen <i>Slicer</i> wird erstellt, die die gefilterten Daten enthält. Die Filterbedingung wird in den benutzerdefinierten Parametern gezeigt.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Creaate Slicer Copy as New Book.png" src="../images/Graph_With_Data_Slicer/Creaate_Slicer_Copy_as_New_Book.png" width="534"></a></dd>
+  </dl>
+
+  <h3><a name="Analysis_on_Graph_with_Graph_Data_Slicer"></a><span class="mw-headline">Analyse eines Diagramms mit Diagrammdatenschnitt</span></h3>
+
+  <p><a class="image"><img alt="DataSlicerwithAnalaysis.gif" src="../images/Graph_With_Data_Slicer/DataSlicerwithAnalaysis.gif" width="672"></a></p>
+
+  <p><i><b>Dinge, die Sie wissen müssen ...</b></i></p>
+
+  <ul>
+    <li>Wenn Sie Ihre Analyseergebnisse bei Änderungen der Filterbedingung neuberechnen möchten, müssen Sie den Datenschnitt VOR der Durchführung der Analyseoperation hinzufügen. Wenn Sie zum Beispiel das angepasste Kurvendiagramm aus dem Berichtsblatt Linear Fit öffnen</li>
+  </ul>
+
+  <p>und einen Datenschnitt hinzufügen, dann werden die Ergebnisse der linearen Anpassung bei Änderung der Filterbedingung NICHT aktualisiert.</p>
+
+  <ul>
+    <li>Jede Analyse, die auf ein Diagramm mit Datenschnitt(en) durchgeführt wird, basiert auf den gefilterten Daten und ist unabhängig von den Quelldaten. Die Analyseergebnisse werden in eine verborgene Arbeitsmappe ausgegeben, die durch Klicken auf das grüne Schloss der Analyse und Auswahl von <b>Gehe zu Ergebnissen</b> aktiviert wird. Durch Klicken auf das grüne Schloss im Berichtsblatt oder auf den Link in der Tabelle <b>Notizen</b> &gt; Zelle <b>Datenfilter</b> können Sie zum Quelldiagramm gelangen.</li>
+
+    <li>Denken Sie immer dran, dass das Löschen des Diagrammfensters alle Operationsausgaben, die auf dem Diagrammdatenfilter basieren, auch löscht.</li>
+
+    <li>Wenn Sie eine Analyse auf ein Diagramm mit Datenschnitt durchführen, wird beim Duplizieren des Diagramms ein Dialog angezeigt, der Sie fragt, ob die Analyseoperationen und -ausgaben eingeschlossen werden sollen.</li>
+  </ul>
+
+  <dl>
+    <dd>
+      <a class="image"><img alt="Data slicer 08.png" src="../images/Graph_With_Data_Slicer/Data_slicer_08.png" width="391"></a>
+
+      <ul>
+        <li>Klicken Sie auf <b>Ja</b>, um sowohl das Diagramm als auch die Analyse zu duplizieren (Operationen und zugehörige Ausgaben). In diesem Fall aktualisiert das Ändern der Filterbedingung oder Analyseparameter nur das aktuelle Diagrammfenster, nicht das andere Fenster.</li>
+
+        <li>Klicken Sie auf <b>Nein</b>, um nur das Diagramm, aber nicht die Analyse zu duplizieren.</li>
+      </ul>
+    </dd>
+  </dl>

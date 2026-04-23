@@ -1,0 +1,643 @@
+﻿<h1 class="firstHeading">Diagrammlegenden</h1>
+
+  <p class='urlname' style='display: none'>Legend-ColorScale</p>
+
+  <p>&#160;</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Übersicht</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Graph_Legend_Components"><span class="tocnumber">2</span> <span class="toctext">Komponenten von Diagrammlegenden</span></a></li>
+
+      <li class="toclevel-1 tocsection-3">
+        <a href="#Legend_Customization"><span class="tocnumber">3</span> <span class="toctext">Benutzerdefinierte Legendenanpassung</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-4"><a href="#Other_Manual_Customization_Tasks"><span class="tocnumber">3.1</span> <span class="toctext">Weitere manuelle Anpassungsaufgaben</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Customizing_Special_Legends"><span class="tocnumber">4</span> <span class="toctext">Spezielle Legenden anpassen</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Overview"></a><span class="mw-headline">Übersicht</span></h2>
+
+  <p>Origin unterstützt vier Legendenobjekte und zwei Skalenobjekte. Diese Seite behandelt hauptsächlich die Legendenobjekte. Informationen zu Skalenobjekte erhalten Sie unter <a href="../../UserGuide/UserGuide/Color_Scales.html" title="UserGuide:Color Scales"><b>Farbskalen</b></a> und <a href="../../UserGuide/UserGuide/Bubble_Scale.html" title="UserGuide:Bubble Scale"><b>Blasenskalen</b></a>.</p>
+
+  <table class="simple">
+    <tr>
+      <th>Die <a class="external text" href="../../GettingStarted/OriginLab/Customizing_Graphs.html#Graph_Legends">Datenzeichnungslegende</a></th>
+
+      <th>Die <a href="../../UserGuide/UserGuide/Legends_for_Categorical_Data.html" title="UserGuide:Legends for Categorical Data">Legende der kategorialen Werte</a></th>
+
+      <th>Die <a href="../../UserGuide/UserGuide/Point_by_Point_Legend.html" title="UserGuide:Point by Point Legend">Punkt-für-Punkt-Legende</a></th>
+
+      <th><a href="../../UserGuide/UserGuide/Legend_for_Box_Components.html" title="UserGuide:Legend for Box Components">Legende der Boxdiagrammkomponenten</a></th>
+    </tr>
+
+    <tr align="center">
+      <td><a class="image"><img alt="Graph Legends and Color Scales 001.png" src="../images/Graph_Legends_and_Color_Scales/Graph_Legends_and_Color_Scales_001.png" width="124"></a></td>
+
+      <td><a class="image"><img alt="Graph Legends and Color Scales 2.png" src="../images/Graph_Legends_and_Color_Scales/Graph_Legends_and_Color_Scales_2.png" width="108"></a></td>
+
+      <td><a class="image"><img alt="Graph Legends and Color Scales 04.png" src="../images/Graph_Legends_and_Color_Scales/Graph_Legends_and_Color_Scales_04.png" width="146"></a></td>
+
+      <td><a class="image"><img alt="Graph Legends and Color Scales 05.png" src="../images/Graph_Legends_and_Color_Scales/Graph_Legends_and_Color_Scales_05.png" width="172"></a></td>
+    </tr>
+  </table>
+
+  <h2><a name="Graph_Legend_Components"></a><span class="mw-headline">Komponenten von Diagrammlegenden</span></h2>
+
+  <p>Die vier Diagrammlegenden oben haben folgende Komponenten gemeinsam:</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Data plot legend components2.png" src="../images/Graph_Legends_and_Color_Scales/Data_plot_legend_components2.png" width="460"></a></dd>
+  </dl>
+
+  <p>Die Diagrammlegende ist ein spezielles Textobjekt, das automatisch auf der Diagrammseite erstellt wird. Das Legendenobjekt erhält einen spezifischen Namen -- "Legende" -- und wird programmatisch mit Ihren Origin-Projektdaten mit Hilfe der <a class="external text" href="../../LabTalk/LabTalk/Legend_Substitution_Notation.html">LabTalk-Notation</a> verknüpft. Diese Notation wird nicht angezeigt, es sei denn Sie bearbeiten das Legendenobjekt. Normalerweise wird das "übersetzte" Symbol bzw. der Legendentext angezeigt.</p>
+
+  <p>Dieses Bild für einen typischen Legendendialog 'Objekteigenschaften' zeigt die LabTalk-Notation in der Mitte des Dialogs und die "Übersetzung" von Legendensymbol und Legendentext -- was Sie tatsächlich auf der Diagrammseite sehen -- im unteren Bereich des Dialogs.</p>
+
+  <p><a class="image"><img alt="Legend construction object properties.png" src="../images/Graph_Legends_and_Color_Scales/Legend_construction_object_properties.png" width="639"></a></p>
+
+  <p>Im Allgemeinen ist die Verwendung der mit einer Zeichnung verbundenen Metadaten in Kombination mit Dialogeinstellungen vorzuziehen, um Legendensymbol und -text zu erstellen. Informationen dazu, wie Sie dies festlegen, finden Sie hier:</p>
+
+  <ul>
+    <li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Legends_Titles_Tab.html#Auto_Legend" title="UserGuide:The (Plot Details) Legends Titles Tab">Der Dialog Details Zeichnung, Registerkarte <b>Legenden/Titel</b></a></li>
+
+    <li><a href="../../UserGuide/UserGuide/The_legendupdate_Dialog_Box.html" title="UserGuide:The legendupdate Dialog Box">Der Dialog <b>legendupdate</b></a></li>
+
+    <li><a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows">Nützliche Daten in Arbeitsblattkopfzeilen anzeigen</a></li>
+  </ul>
+
+  <p><br>
+  Sie sind jedoch nicht auf programmierte Legenden beschränkt. Zuweilen ist die manuelle Bearbeitung des Legendenobjekts der schnellste Weg, um eine Aufgabe zu erledigen. Seitdem die Legende ein Textobjekt ist, können Sie es mit Hilfe allgemeingültiger Methoden für alle Textobjekte bearbeiten:</p>
+
+  <ul>
+    <li>Um den Dialog der Legende zu öffnen, drücken Sie doe Strg-Taste und klicken Sie doppelt auf den Diagrammlegendentext oder klicken Sie mit der rechten Maustaste und wählen Sie die Option <b>Eigenschaften</b>.</li>
+
+    <li>Um den direkten Bearbeitungsmodus zu aktivieren, klicken Sie doppelt.</li>
+  </ul>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Graph_Legends_and_Color_Scales/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Klicken Sie doppelt auf das Symbol der Diagrammlegende und der Dialog <a href="../../UserGuide/Category/Customizing_Plot_Elements.html" title="Category:Customizing Plot Elements">Details Zeichnung</a> wird geöffnet. Drücken Sie Strg und klicken Sie doppelt auf den Text der Diagrammlegende und der Dialog <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html" title="UserGuide:The (Text Object Properties) Text tab">Legende</a> wird geöffnet.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Legend_Customization"></a><span class="mw-headline">Benutzerdefinierte Legendenanpassung</span></h2>
+
+  <p>Es gibt <b>Minisymbolleisten</b> für <a href="../../UserGuide/UserGuide/Popup_Button.html" title="UserGuide:Popup Button">die Anpassung von Legenden</a>. Verfügbare Schaltflächen variieren nach Diagramm-/Legendentyp.</p>
+
+  <ul>
+    <li>Um die Symbolleiste anzuzeigen, klicken Sie auf das Legendenfeld oder ein Symbol im Legendenfeld.
+
+      <dl>
+        <dd><a class="image"><img alt="MT legend customization.png" src="../images/Graph_Legends_and_Color_Scales/MT_legend_customization.png" width="632"></a></dd>
+      </dl>
+    </li>
+  </ul>
+
+  <p>Sie können auch mit der rechten Maustaste auf die Legende klicken, um das Kontextmenü zu erweitern und die Legende benutzerdefiniert anzupassen:</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Legend Context Menu.png" src="../images/Graph_Legends_and_Color_Scales/Legend_Context_Menu.png" width="613"></a></dd>
+  </dl>
+
+  <table class="simple">
+    <tr>
+      <th style="width: 20%"><i>To Do</i></th>
+
+      <th style="width: 40%">Mittels Minisymbolleiste</th>
+
+      <th style="width: 40%">Mittels anderer Bedienelemente</th>
+    </tr>
+
+    <tr>
+      <th>Zum Löschen des gesamten Legendenobjekts:</th>
+
+      <td></td>
+
+      <td>Taste <b>Entfernen</b> oder Befehl <b>Inhalt entfernen</b> im Kontextmenü</td>
+    </tr>
+
+    <tr>
+      <th>Zum Hinzufügen von Hintergrund zum Legendenfeld:</th>
+
+      <td></td>
+
+      <td>Schaltfläche <b>Füllfarbe</b> <a class="image"><img alt="Button Fill Color.png" src="../images/Graph_Legends_and_Color_Scales/Button_Fill_Color.png" width="22"></a></td>
+    </tr>
+
+    <tr>
+      <th>Zum Zeigen oder Verbergen des Rahmens des Legendenfelds:</th>
+
+      <td>Schaltfläche <b>Rahmen</b> <a class="image"><img alt="Popup Frame.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Frame.png" width="24"></a> auf der Symbolleiste <b>Stil</b></td>
+
+      <td></td>
+    </tr>
+
+    <tr>
+      <th>Zum Ändern der Dicke oder Farbe der Rahmenlinie:</th>
+
+      <td></td>
+
+      <td>Schaltfläche <b>Linien-/Rahmenfarbe</b> <a class="image"><img alt="Button Line Border Color.png" src="../images/Graph_Legends_and_Color_Scales/Button_Line_Border_Color.png" width="22"></a> und Liste <b>Linie-/Rahmenbreite</b> <a class="image"><img alt="Button Border Width.png" src="../images/Graph_Legends_and_Color_Scales/Button_Border_Width.png" width="59"></a> auf der Symbolleiste <b>Stil</b></td>
+    </tr>
+
+    <tr>
+      <th>Zum Ändern der Größe der Legende:</th>
+
+      <td></td>
+
+      <td>Markieren Sie das Legendenobjekt und ziehen Sie an einem der Auswahlelemente.</td>
+    </tr>
+
+    <tr>
+      <th>Zum Anordnen der Legendeneinträge:</th>
+
+      <td>Schaltfläche <b>Horizontal anordnen</b> <a class="image"><img alt="OH legend MT arrainge in horizontal.png" src="../images/Graph_Legends_and_Color_Scales/OH_legend_MT_arrainge_in_horizontal.png" width="24"></a></td>
+
+      <td>
+        <ul>
+          <li>Menü <b>Grafik: Legende: Horizontal anordnen</b></li>
+
+          <li>Drücken Sie die <b>Strg</b>-Taste und ziehen Sie am mittleren Element auf einer der vertikalen Seiten.
+
+            <dl>
+              <dd><a class="image"><img alt="ArrangeLegendEntries2015.png" src="../images/Graph_Legends_and_Color_Scales/300px-ArrangeLegendEntries2015.png" width="300"></a></dd>
+
+              <dd>Beachten Sie, dass Sie dies nicht tun können, wenn <a class="external text" href="../../QuickHelp/QuickHelp/How_to_wrap_legend_text_into_multiple_lines.html"><b>Textumbruch</b></a> aktiviert ist.</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Um den Zwischenraum von Legendeneinträgen und Hintergrund anzupassen:</th>
+
+      <td></td>
+
+      <td>
+        Zeigen Sie auf den äußeren Rand des Legendenobjekts und, wenn der Zeiger als "Hand" angezeigt wird, klicken Sie einmal, um die Bedienelemente anzuzeigen. Ziehen Sie an dem Bedienelement zum Hinzufügen bzw. Subtrahieren von Zwischenraum.
+
+        <dl>
+          <dd><a class="image"><img alt="Legend adjust padding.png" src="../images/Graph_Legends_and_Color_Scales/300px-Legend_adjust_padding.png" width="300"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Vergrößern der Breite des Legendensymbols:</th>
+
+      <td>Schaltfläche <b>Größere Symbolbreite</b> <a class="image"><img alt="Popup Larger Symbol Width.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Larger_Symbol_Width.png" width="24"></a> und <b>Kleinere Symbolbreite</b><a class="image"><img alt="Popup Smaller Symbol Width.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Smaller_Symbol_Width.png" width="24"></a></td>
+
+      <td><b>Legendensymbolbreite (% der Schrift)</b> auf der Registerkarte <b>Legenden/Titel</b> im Dialog <b>Details Zeichnung</b></td>
+    </tr>
+
+    <tr>
+      <th>Zum Ändern des Zeilenabstands zwischen Legendeneinträgen:</th>
+
+      <td></td>
+
+      <td>Liste <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html#Line_Spacing.28.25.29" title="UserGuide:The (Text Object Properties) Text tab"><b>Linienabstände (%)</b></a> auf der Registerkarte <b>Text</b> im Dialog <b>Textobjekt - Legende</b></td>
+    </tr>
+
+    <tr>
+      <th>Zum Anpassen der Symbolgröße</th>
+
+      <td>Schaltfläche <b>Punktsymbol vergrößern</b> <a class="image"><img alt="Popup Scatter Symbol Size Increase.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Scatter_Symbol_Size_Increase.png" width="24"></a> und Schaltfläche <b>Punktsymbol verkleinern</b><a class="image"><img alt="Popup Scatter Symbol Size Reduce.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Scatter_Symbol_Size_Reduce.png" width="24"></a></td>
+
+      <td>
+        Klicken Sie zur Registerkarte <b>Symbole</b> und legen Sie die <b>Symbolgröße</b> im Dialog <b>Textobjekt - Legende</b> fest.
+
+        <dl>
+          <dd><a class="image"><img alt="Increase plot symbol size.png" src="../images/Graph_Legends_and_Color_Scales/250px-Increase_plot_symbol_size.png" width="250"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Ändern der Linienbreite des Legendensymbols:</th>
+
+      <td>Schaltfläche <b>Liniendicke vergrößern</b> <a class="image"><img alt="Popup Line Thickness Increase.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Line_Thickness_Increase.png" width="24"></a> und Schaltfläche <b>Liniendicke verkleinern</b><a class="image"><img alt="Popup Line Thickness Reduce.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Line_Thickness_Reduce.png" width="24"></a></td>
+
+      <td>
+        Klicken Sie auf die Registerkarte <b>Symbole</b> und legen Sie die <b>Liniendicke</b> im Dialog <b>Textobjekt - Legende</b> fest.
+
+        <dl>
+          <dd><a class="image"><img alt="Legend symbol line thickness.png" src="../images/Graph_Legends_and_Color_Scales/250px-Legend_symbol_line_thickness.png" width="250"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Ändern des Formats des Legendentexts:</th>
+
+      <td>
+        Schaltflächen <b>Schriftart</b>, <b>Schriftgröße</b>, <b>Schrift vergrößern</b>, <b>Schrift verkleinern</b> und <b>Schriftfarbe</b>
+
+        <dl>
+          <dd><a class="image"><img alt="MT LegendFont.png" src="../images/Graph_Legends_and_Color_Scales/200px-MT_LegendFont.png" width="200"></a></dd>
+        </dl>
+      </td>
+
+      <td>
+        Symbolleiste <b>Format</b>
+
+        <dl>
+          <dd><a class="image"><img alt="Format toolbar.png" src="../images/Graph_Legends_and_Color_Scales/300px-Format_toolbar.png" width="300"></a></dd>
+
+          <dd><b>Hinweis:</b> Einige Schaltflächen sind nur im "direkten" Bearbeitungsmodus verfügbar (den Sie aktivieren, indem Sie <b>Strg</b> drücken und doppelt klicken).</dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Damit die Legendentextfarbe der Legendensymbolfarbe entspricht:</th>
+
+      <td>
+        Schaltfläche <b>Schriftfarbe</b> <a class="image"><img alt="Popup Font Color.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Font_Color.png" width="24"></a> auf <b>Auto</b> setzen
+
+        <dl>
+          <dd><a class="image"><img alt="Legend Color Text Ex.png" src="../images/Graph_Legends_and_Color_Scales/Legend_Color_Text_Ex.png" width="68"></a></dd>
+        </dl>
+      </td>
+
+      <td>
+        <ul>
+          <li>Klicken Sie mit der rechten Maustaste auf das Legendenobjekt und wählen Sie <b>Legende: Textfarbe folgt Zeichnung</b>.</li>
+
+          <li>Setzen Sie die Schriftfarbe auf der Symbolleiste <b>Format</b> auf <b>Auto</b>.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Hinzufügen von Sonderzeichen zu der Legende (Symbole, griechische Zeichen etc.):</th>
+
+      <td>
+        Klicken Sie auf die Schaltfläche <b>Mehr</b> <a class="image"><img alt="Popup Open Properties Dialog.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Open_Properties_Dialog.png" width="24"></a> zum Auswählen:
+
+        <dl>
+          <dd><a class="image"><img alt="MT More Menu.png" src="../images/Graph_Legends_and_Color_Scales/250px-MT_More_Menu.png" width="250"></a></dd>
+        </dl>
+      </td>
+
+      <td>
+        <ul>
+          <li>Verwenden Sie im direkten Bearbeitungsmodus die Optionen <b>Schriftart</b> oder <b>Griechisch</b> auf der Symbolleiste <b>Format</b>.</li>
+        </ul>
+
+        <dl>
+          <dd><a class="image"><img alt="Greek symbols legend.png" src="../images/Graph_Legends_and_Color_Scales/300px-Greek_symbols_legend.png" width="300"></a></dd>
+        </dl>
+
+        <ul>
+          <li>Klicken Sie mit der rechten Maustaste auf das Objekt und wählen Sie <b>Abbildung Symbole</b> im Kontextmenü.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Neuordnen von Legendeneinträgen:</th>
+
+      <td>Schaltfläche <b>Umkehren</b> <a class="image"><img alt="Popup Reverse.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Reverse.png" width="24"></a></td>
+
+      <td>
+        <ul>
+          <li>Menü <b>Legende: Umgekehrte Reihenfolge</b></li>
+
+          <li>Neuordnen durch Ausschneiden und Einfügen der Legendeneinträge, entweder im direkten Bearbeitungsmodus oder im Dialog <b>Objekteigenschaften</b></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Aktualisieren des Legendenobjekts nach Hinzufügen oder Entfernen von Zeichnungen/speziellen Punkten:</th>
+
+      <td>Schaltfläche <b>Legende rekonstruieren</b> <a class="image"><img alt="Popup Reconstruct Legend.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Reconstruct_Legend.png" width="24"></a></td>
+
+      <td>
+        <ul>
+          <li>Kontextmenü <b>Legende: Legende rekonstruieren</b> oder <b>Legende: Legende aktualisieren</b></li>
+
+          <li>Setzen Sie den <b>Aktualisierungsmodus der Legende</b> auf <b>Beim Hinzufügen/Entfernen neu erzeugen</b> oder <b>Beim Hinzufügen aktualisieren</b> auf der Registerkarte <b>Legende/Titel</b> im Dialog <b>Details Zeichnung</b>.</li>
+        </ul>
+
+        <table class="noborder">
+          <tr>
+            <td style="vertical-align:top" width="60"><img src="../images/Graph_Legends_and_Color_Scales/Tip_icon.png" width="57" border="0" alt=""></td>
+
+            <td>
+              <p>Wenn das Bedienelement <b>Legende nur für sichtbare Zeichnungen zeigen</b> im Kontextmenü oder im <a href="../../UserGuide/UserGuide/The_legendupdate_Dialog_Box.html" title="UserGuide:The legendupdate Dialog Box">Dialog <b>legendupdate</b></a> aktiviert wurde und Sie eine Zeichnung verbergen/entfernen, wird das Legendenfeld rekonstruiert und aktualisiert, um nur die verbleibenden Zeichnungen zu zeigen.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Erzeugen einer einzelnen Legende für mehrere Layer:</th>
+
+      <td></td>
+
+      <td>Kontextmenü <b>Legende: Legende aktualisieren</b> Setzen Sie im Dialog legendupdate <b>Umfang aktualisieren</b> auf <b>Gesamte Seite</b>, den <b>Aktualisierungsmodus</b> auf <b>Rekonstruieren</b> und <b>Legende</b> auf <b>Eine Legende für gesamte Seite</b>.</td>
+    </tr>
+
+    <tr>
+      <th>Zum Zeigen oder Verbergen bestimmter Legendeneinträge:</th>
+
+      <td>
+        Klicken Sie auf die Schaltfläche <b>Zeigen/Verbergen</b> <a class="image"><img alt="Popup Show Hide.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Show_Hide.png" width="24"></a> zum Auswählen:
+
+        <dl>
+          <dd><a class="image"><img alt="MT ShowHide List.png" src="../images/Graph_Legends_and_Color_Scales/250px-MT_ShowHide_List.png" width="250"></a></dd>
+        </dl>
+      </td>
+
+      <td><b>Legende: Legende nur für sichtbare Zeichnungen zeigen</b>, <b>Legende: Legende für angepasste Kurven verbergen</b> oder <b>Legende: Legende für Funktionsdiagramme verbergen</b> im Kontextmenü</td>
+    </tr>
+
+    <tr>
+      <th>Zum Verbergen von Legendensymbolen:</th>
+
+      <td>
+        Klicken Sie auf die Schaltfläche Zeigen/Verbergen <a class="image"><img alt="Popup Show Hide.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Show_Hide.png" width="24"></a>, um auszuwählen:
+
+        <dl>
+          <dd><a class="image"><img alt="MT ShowHide Symbol.png" src="../images/Graph_Legends_and_Color_Scales/250px-MT_ShowHide_Symbol.png" width="250"></a></dd>
+        </dl>
+      </td>
+
+      <td>Kontextmenü <b>Legende: Legendensymbol verbergen</b></td>
+    </tr>
+
+    <tr>
+      <th>Zum Zeigen der Kennzeichnung des aktiven Datensatzes:</th>
+
+      <td>Schaltfläche <b>Aktiven Datensatz kennzeichnen</b> <a class="image"><img alt="Popup Indicate Active Dataset.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Indicate_Active_Dataset.png" width="24"></a></td>
+
+      <td>
+        <ul>
+          <li>Kontextmenü <b>Legende: Aktiven Datensatz kennzeichnen</b></li>
+
+          <li><b>Aktiven Datensatz kennzeichnen</b> auf <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Legends_Titles_Tab.html" title="UserGuide:The (Plot Details) Legends Titles Tab">der Registerkarte <b>Legende/Titel</b></a> des Dialogs <b>Details Zeichnung</b></li>
+        </ul>
+
+        <dl>
+          <dd><a class="image"><img alt="Show active dataset indicator.png" src="../images/Graph_Legends_and_Color_Scales/Show_active_dataset_indicator.png" width="138"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zum Anhängen der Legendentexte an Zeichnungen:</th>
+
+      <td>Schaltfläche <b>An Zeichnungen anhängen</b> <a class="image"><img alt="Popup Attach to Plots.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Attach_to_Plots.png" width="24"></a></td>
+
+      <td>
+        Kontextmenü <b>Legende: An Zeichnungen anhängen</b>
+
+        <p><b>Hinweis:</b></p>
+
+        <ul>
+          <li>Diese Operation hängt den Legendentext an die letzten Datenpunkte der Zeichnungen an. Sie können dann doppelt auf den Text klicken, um die Registerkarte <b>Beschriftung</b> des Dialogs <b>Details Zeichnung</b>, um ihn benutzerdefiniert anzupassen.</li>
+
+          <li>Eine Systemvariable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#A">@ALP</a> kann verwendet werden, um festzulegen, ob die Zeichnungsbeschriftungen der Änderung des Übersetzungsmodus für den Legendentext folgen.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Um den Legendentext auf eine andere Variable der Zeichnung zu ändern (wie die Spaltenbeschriftungszeilen),</th>
+
+      <td>
+        klicken Sie auf die Schaltfläche <b>Übersetzungsmodus der Diagrammlegende</b> <a class="image"><img alt="Popup Data Plot Legend Translation Mode.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Data_Plot_Legend_Translation_Mode.png" width="24"></a>, um
+
+        <p><a class="image"><img alt="MT Legend TranslationMode.png" src="../images/Graph_Legends_and_Color_Scales/200px-MT_Legend_TranslationMode.png" width="200"></a></p>
+      </td>
+
+      <td>das Bedienelement <b>Übersetzungsmodus von %(1),%(2)</b> auf der Registerkarte <b>Legenden/Titel</b> im Dialog <b>Details Zeichnung</b> auszuwählen.</td>
+    </tr>
+
+    <tr>
+      <th>Um den Legendentext umzubrechen:</th>
+
+      <td>Schaltfläche Textumbruch <a class="image"><img alt="Popup Wrap Text.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Wrap_Text.png" width="24"></a></td>
+
+      <td>
+        Gehen Sie zur Registerkarte <b>Rahmen</b> im Dialog <b>Textobjekt - Legende</b> und aktivieren Sie <b>Textumbruch, Höhe anpassen</b>.
+
+        <p>Wenn Sie Legendentext <i>manuell</i> bearbeiten und eine lange Zeichenkette umbrechen müssen, siehe <a href="../../UserGuide/UserGuide/Escape_Sequences.html#Available_text_formatting_commands" title="UserGuide:Escape Sequences">die Escape-Sequenz <b>\ww(literal text)</b></a>. Siehe auch die Verwendung von "%(CRLF)", um einen Zeilenumbruch hart zu kodieren (nächster Abschnitt).</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Um die Blockhöhe/-breite des Legendensymbols zu ändern:</th>
+
+      <td>
+        <b>Schaltflächen Musterblock<br></b>
+
+        <p><a class="image"><img alt="MT Legend PatternBlock.png" src="../images/Graph_Legends_and_Color_Scales/MT_Legend_PatternBlock.png" width="152"></a></p>
+      </td>
+
+      <td>Auswahllisten <b>Blockbreite des Legendensymbols</b> und <b>Blockhöhe des Legendensymbols</b> auf der Registerkarte <b>Symbol</b> im Dialog <b>Textobjekt - Legende</b></td>
+    </tr>
+
+    <tr>
+      <th>Um "hantelförmige" Symbole in Linien- + Symbollegenden zu verwenden:</th>
+
+      <td></td>
+
+      <td>
+        Auswahlliste <b>Stil von Symbol + Linie</b> auf der Registerkarte <b>Symbol</b> im Dialog <b>Textobjekt - Legende</b>
+
+        <dl>
+          <dd><a class="image"><img alt="Legend double symbol.png" src="../images/Graph_Legends_and_Color_Scales/Legend_double_symbol.png" width="185"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Um den Legendentext auszurichten:</th>
+
+      <td></td>
+
+      <td>
+        <ul>
+          <li>Auswahlliste <b>Ausrichtung</b> auf der Registerkarte <b>Text</b> im Dialog <b>Textobjekt - Legende</b></li>
+
+          <li>Schaltfläche <b>Ausrichtung</b> auf der Symbolleiste <b>Format</b>
+
+            <dl>
+              <dd><a class="image"><img alt="Format Toolbar Alignment.png" src="../images/Graph_Legends_and_Color_Scales/300px-Format_Toolbar_Alignment.png" width="300"></a></dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Um die Legende zu rekonstruieren, so dass nur noch ein Legendentyp gezeigt wird, und die Legende automatisch zu aktualisieren:</th>
+
+      <td></td>
+
+      <td>Klicken Sie mit der rechten Maustaste auf die Legende und wählen Sie <b>Nur einen Legendentyp verwenden und automatisch aktualisieren</b>.</td>
+    </tr>
+
+    <tr>
+      <th>Um die wiederholten Legendeneinträge zu entfernen, wenn Sie <a href="../../UserGuide/UserGuide/Customizing_Data_Plot_Colors.html#Using_Column_Label_Row_Values_to_Control_Plot_Color" title="UserGuide:Customizing Data Plot Colors">eine Spaltenbeschriftungszeile zum Steuern der Zeichnungsfarbe</a> verwendet haben:</th>
+
+      <td>Schaltfläche <b>Legende rekonstruieren</b> <a class="image"><img alt="Popup Reconstruct Legend.png" src="../images/Graph_Legends_and_Color_Scales/Popup_Reconstruct_Legend.png" width="24"></a></td>
+
+      <td>Klicken Sie mit der rechten Maustaste auf die Legende und wählen Sie <b>Legende: Legende rekonstruieren</b>.</td>
+    </tr>
+  </table>
+
+  <h3><a name="Other_Manual_Customization_Tasks"></a><span class="mw-headline">Weitere manuelle Anpassungsaufgaben</span></h3>
+
+  <ul>
+    <li><b>Um die Größe eines einzelnen Legendensymbols zu ändern</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Verwenden Sie die Syntax <i><b>\L([LayerIndex.]ZeichnungIndex[,PunktIndex][,S:GrößeOption])</b></i>. <i>GrößeOption</i> kann auf zwei Wegen festgelegt werden: <i>S:##</i>, wobei <i>##</i> die Punktgröße des Zeichnungssymbol ist (obere Grenze von ca. 16 Pt.); oder <i>S:p##</i>, wobei <i>p##</i> der Prozentsatz der Schriftgröße ist (Werte beschränkt auf 1 - 99). Die Legendennotation lautet also zum Beispiel \l(3,s:24)�%(3), wobei s:24 eine Symbolgröße von 24 Punkten festlegt, oder \l(3,s:p50)�%(3), wobei s:p50 eine Symbolgröße festlegt, die 50% der Schriftgröße bedeutet. Eine vollständige Erläuterung dieser Notation finden Sie unter <a class="external text" href="../../LabTalk/LabTalk/Legend_Substitution_Notation.html#Complete_List_of_.40Options">Substitutionsnotation von Legenden</a>.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um Informationen in Beschriftungszeilen einer Arbeitsblattspalte in den Legendentext einzufügen</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Verwenden Sie den Dialog legendupdate. Klicken Sie mit der rechten Maustaste in den Diagrammlayer und wählen Sie <b>Legende: Legende aktualisieren</b>. Wählen Sie eine Option für den Legendentext in der Liste unter <b>Automatischer Übersetzungsmodus der Legende</b>. Weitere Optionen sehen Sie, wenn Sie <b>Benutzerdefiniert</b> wählen und dann auf den Pfeil rechts von <b>Benutzerdefiniertes Legendenformat (@D, @LU etc.)</b> klicken. Beachten Sie, dass die Option Benutzerdefiniert es erlaubt, Headerinformationen zusammenzufassen. Ihnen steht auch <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html#Complete_List_of_.40Options">eine vollständige Liste der @options</a> zur Verfügung.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um Informationen der Beschriftungszeilen einer Arbeitsblattspalte in den Legendentext einzufügen</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Verwenden Sie die Syntax <b>%(<i>ZeichnungIndex</i>,@<i>Option</i>)</b>. Um mehrere @options zu kombinieren, durchsetzt mit beliebigem Text, verwenden Sie <b>%(<i>ZeichnungIndex</i>,@(@<i>Option1</i>+@<i>Option2</i>+...))</b>, wie unten gezeigt. Ihnen steht auch <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html#Complete_List_of_.40Options">eine vollständige Liste der @options</a> zur Verfügung.</dd>
+
+    <dd><a class="image"><img alt="Manual insert col label legend.png" src="../images/Graph_Legends_and_Color_Scales/Manual_insert_col_label_legend.png" width="463"></a>.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Eine weitere Option zum Einfügen von in Arbeitsblättern gespeicherten Variableninformationen in den Legendentext</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Drücken Sie Strg und klicken Sie doppelt auf die Legendentext, um den direkten Bearbeitungsmodus zu öffnen. Klicken Sie mit der rechten Maustaste und wählen Sie <b>Infovariablen einfügen</b> im Kontextmenü. Weitere Informationen zum Dialog 'Variablen einfügen' finden Sie auf <a href="../../UserGuide/UserGuide/The_Insert_Info_Variables_Dialog_Box.html" title="UserGuide:The Insert Info Variables Dialog Box">dieser Seite</a>.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um einen Zeilenumbruch im Legendentext hart zu kodieren</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Setzen Sie im Dialog <a class="external text" href="../../UserGuide/UserGuide/The_legendupdate_Dialog_Box.html">legendupdate</a> den <b>Automatischen Übersetzungsmodus der Legende</b> auf <b>Benutzerdefiniert</b> und fügen Sie "%(CRLF)" in Ihre Formatzeichenkette ein. Das Gleiche können Sie im Dialog Details Zeichnung tun. Gehen Sie zur <a class="external text" href="../../UserGuide/UserGuide/The_(Plot_Details)_Legends_Titles_Tab.html">Registerkarte <b>Legende/Titel</b></a>, setzen Sie <b>Übersetzungsmodus von %(1), %(2)</b> auf <b>Benutzerdefiniert</b> und geben Sie Ihren benutzerdefinierten Legendentext ein, um "%(CRLF)" an der Stelle einzubinden, an der Sie den Text auf eine neue Zeile umbrechen möchten.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um ein Trennzeichen zwischen zwei Zeilen des Legendentexts hinzuzufügen:</b></li>
+  </ul>
+
+  <dl>
+    <dd>Siehe <a href="../../UserGuide/UserGuide/Manual_Control_of_the_Graph_Legend.html#Inserting_Line_Separators_in_the_Legend_Object" title="UserGuide:Manual Control of the Graph Legend">Zeilentrennzeichen in Legendenobjekt einfügen</a>.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um Legendensymbole und -text, die unabhängig von den Datenzeichnungen sind, manuell hinzuzufügen:</b></li>
+  </ul>
+
+  <dl>
+    <dd>Klicken Sie doppelt auf den Legendenobjekt, um den Dialog Legende zu öffnen. Klicken Sie auf die Registerkarte <b>Text</b> und dann auf die Schaltfläche <b>Legendensymbol hinzufügen</b> <a class="image"><img alt="Add Legend Symbol.png" src="../images/Graph_Legends_and_Color_Scales/Add_Legend_Symbol.png" width="30"></a> in der unteren rechten Ecke des Dialogs. Starten Sie eine neue Zeile im Textfeld und fügen Sie Ihr Legendensymbol hinzu. Fügen Sie dann manuell Ihren Legendentext ein und befolgen Sie dabei den Legenden"symbol"code. Beachten Sie, dass "Symbol" Symbol, Linie oder Linie + Symbol bedeuten kann</dd>
+
+    <dd><a class="image"><img alt="Legend custom entry.png" src="../images/Graph_Legends_and_Color_Scales/Legend_custom_entry.png" width="826"></a></dd>
+  </dl>
+
+  <ul>
+    <li><b>Weitere Methoden zum Hinzufügen von Legendensymbolen, die unabhängig von den Datenzeichnungen sind</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Verwenden Sie <a href="../../UserGuide/UserGuide/Manual_Control_of_the_Graph_Legend.html#Use_Independent_Symbols" title="UserGuide:Manual Control of the Graph Legend">die hier erläuterte Syntax</a>.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um sicherzustellen, dass die Legendenanpassungen nicht durch die Rekonstruktion überschrieben werden können</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Benennen Sie das Legendenobjekt um. Klicken Sie mit der rechten Maustaste auf die Legende und wählen Sie <b>Eigenschaften</b>. Klicken Sie auf die Registerkarte <b>Programmierung</b> und ändern Sie den <b>Namen</b>, so dass er nicht mehr "Legende" lautet.</dd>
+  </dl>
+
+  <ul>
+    <li><b>Um Ihre Legendenanpassungen auf eine andere Diagrammlegende anzuwenden</b>:</li>
+  </ul>
+
+  <dl>
+    <dd>Klicken Sie mit der rechten Maustaste auf die benutzerdefinierte Legende, wählen Sie <b>Format kopieren</b> und wählen Sie eine Option. Klicken Sie mit der rechten Maustaste auf die Ziellegende und wählen Sie <b>Format einfügen in</b> und wählen Sie eine Option (siehe <a href="../../UserGuide/UserGuide/Copying_and_Pasting_Formats.html" title="UserGuide:Copying and Pasting Formats">Formate kopieren und einfügen</a>).</dd>
+  </dl>
+
+  <h2><a name="Customizing_Special_Legends"></a><span class="mw-headline">Spezielle Legenden anpassen</span></h2>
+
+  <p>Die vier Typen von Legendenobjekten können sich alle zusammen in einem Diagramm befinden. Sie können beispielsweise mehrere Y-Datensätze haben und mit diesen ein Boxdiagramm zeichnen. Sie möchten jedoch sowohl die Datenzeichnungslegende als auch die Legende der Boxdiagrammkomponenten anzeigen.</p>
+
+  <ul>
+    <li>Sobald ein Diagramm erstellt wurde, klicken Sie auf <b>Legende rekonstruieren</b> <a class="image"><img alt="Button New Legend.png" src="../images/Graph_Legends_and_Color_Scales/Button_New_Legend.png" width="23"></a>, und die am besten geeignete Legende für Ihr Diagramm wird erzeugt.</li>
+
+    <li>Wenn Sie mit der rechten Maustaste auf ein Legendenobjekt klicken und im Kontextmenü auf <b>Legende</b> klicken, zeigt die erste Gruppe im Untermenü die anwendbaren Legendenobjekte für Ihr Diagramm. Wenn Sie eine dieser Legenden wählen, wird sie an die vorhandene Legende angehängt. <b>Hinweis:</b> Jeder Legendenobjekttyp kann nur einmal im Diagrammlayer angezeigt werden.</li>
+
+    <li>Die gleichen Menüoptionen sind ebenfalls im Menü <b>Grafik</b> und durch Rechtsklick auf das Diagramm verfügbar.</li>
+
+    <li>Jede spezielle Legende hat einen entsprechenden Dialog zum Anpassen des Menüs.</li>
+  </ul>
+
+  <dl>
+    <dd><a href="../../UserGuide/UserGuide/Legends_for_Categorical_Data.html" title="UserGuide:Legends for Categorical Data">Legende der kategorialen Werte</a></dd>
+
+    <dd><a href="../../UserGuide/UserGuide/Point_by_Point_Legend.html" title="UserGuide:Point by Point Legend">Punkt-für-Punkt-Legende</a></dd>
+
+    <dd><a href="../../UserGuide/UserGuide/Legend_for_Box_Components.html" title="UserGuide:Legend for Box Components">Legende der Boxdiagrammkomponenten</a></dd>
+  </dl>
+
+  <table class="topiclist">
+    <tr>
+      <td>
+        <p><i><b>Themen, die in diesem Abschnitt behandelt werden:</b></i></p>
+
+        <div class="CategoryTreeTag" data-ct-mode="20" data-ct-options="{&quot;mode&quot;:20,&quot;hideprefix&quot;:10,&quot;showcount&quot;:false,&quot;namespaces&quot;:false}">
+          <ul class="noindent">
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Legends_for_Categorical_Data.html">Legende für kategoriale Werte</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Point_by_Point_Legend.html">Punkt-für-Punkt-Legende</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Color_Scales.html">Farbskalen</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Legend_for_Box_Components.html">Legende für Komponenten von Boxdiagrammen</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Manual_Control_of_the_Graph_Legend.html">Manuelle Steuerung der Diagrammlegende</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Bubble_Scale.html">Blasenskala</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/The_legendupdate_Dialog_Box.html">Dialog legendupdate</a></li>
+
+            <li><a class="CategoryTreeLabel CategoryTreeLabelNs114 CategoryTreeLabelPage" href="../../UserGuide/UserGuide/Box_Scale.html">Boxskalierung</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>

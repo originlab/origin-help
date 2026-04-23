@@ -1,0 +1,92 @@
+﻿<h1 class="firstHeading">Grafische Zusammenfassung</h1>
+
+  <p class='urlname' style='display: none'>Graphical-Summary</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Einführung</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Performing_Graphical_Summary"><span class="tocnumber">2</span> <span class="toctext">Grafische Zusammenfassung durchführen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">3</span> <span class="toctext">Bedienelemente der Dialoge</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Introduction"></a><span class="mw-headline">Einführung</span></h2>
+
+  <p>Dieses Hilfsmittel kann verwendet werden, um den grafischen Zusammenfassungsbericht der Eingabedaten mit Gruppierungsinformationen zu erstellen. Der Bericht enthält Histogramme, Boxdiagramme, Kondenzintervalldiagramme und Ergebnistabellen mit statistischen Informationen.</p>
+
+  <p><a class="image"><img alt="Graphical Summary.png" src="../images/Graphical_Summary/800px-Graphical_Summary.png" width="800"></a></p>
+
+  <h2><a name="Performing_Graphical_Summary"></a><span class="mw-headline">Grafische Zusammenfassung durchführen</span></h2>
+
+  <ul>
+    <li>Wählen Sie die Spalten der Eingabedaten aus, für die Sie eine einfache statistische Analyse durchführen möchten.</li>
+
+    <li>Wählen Sie <b>Statistik &gt; Deskriptive Statistik: Grafische Zusammenfassung</b> im Menü, um das Hilfsmittel zu öffnen.
+
+      <dl>
+        <dd><a class="image"><img alt="Graphical Summary 01.png" src="../images/Graphical_Summary/Graphical_Summary_01.png" width="417"></a></dd>
+      </dl>
+    </li>
+
+    <li>Wählen Sie die Gruppierungsspalte(n) für die Option <b>Gruppe(n)</b>, geben Sie einen Wert im Feld Konfidenzniveau (%) ein und wählen Sie eine gewünschte Anordnung in der Liste <b>Diagrammanordnung</b> aus.</li>
+
+    <li>Klicken Sie auf OK, um eine deskriptive Statistik durchzuführen und die Diagramme zu erstellen.</li>
+  </ul>
+
+  <h2><a name="Dialog_Controls"></a><span class="mw-headline">Bedienelemente des Dialogs</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Eingabe</th>
+
+      <td>Wählen Sie die Eingabespalte(n).</td>
+    </tr>
+
+    <tr>
+      <th>Gruppen</th>
+
+      <td>Wählen Sie (eine) Gruppierungsspalte(n), um die Eingabedaten in mehrere Gruppen aufzuteilen.</td>
+    </tr>
+
+    <tr>
+      <th>Kondenzintervall (%)</th>
+
+      <td>Legen Sie das Konfidenzniveau des Konfidenzintervalls fest.</td>
+    </tr>
+
+    <tr>
+      <th>Diagrammanordnung</th>
+
+      <td>
+        Legen Sie fest, wie die Statistikdiagramme angeordnet werden.
+
+        <ul>
+          <li><b>Separate Grafiken</b>: Jede Variable für jede Gruppe wird in eine separate Grafik gezeichnet. Jede Grafik enthält ein Histogramm mit Verteilungskurve, ein Konfidenzintervalldiagramm und ein Wahrscheinlichkeitsdiagramm mit drei Ergebnistabellen "Deskriptive Statistik", "##% Konfidenzintervalle" und "Test auf Normalverteilung". Der Grafiktitel zeigt die Variable und die Gruppeninformation.</li>
+
+          <li><b>Pro Variable</b>: Jede Variable wird in eine separate Grafik gezeichnet. Die Gruppen werden in verschiedene vertikale Felder gezeichnet. Jede Grafik enthält Histogramme mit Verteilungskurve, Boxdiagramme mit Ausreißern, Konfidenzintervalldiagramme und eine Tabelle, die die Ergebnisse nach Zeile zusammenfasst und die Statistiken für jede Gruppe zeigt.</li>
+
+          <li><b>Pro Gruppe</b>: Jede Gruppe wird in eine separate Grafik gezeichnet. Die Variablen werden in verschiedene vertikale Felder gezeichnet. Jede Grafik enthält Histogramme mit Verteilungskurve, Boxdiagramme mit Ausreißern, Konfidenzintervalldiagramme und eine Tabelle, die die Ergebnisse nach Zeile zusammenfasst und die Statistiken für jede Variable zeigt.</li>
+
+          <li><b>Alle in einer</b>: Alle Variablen und alle Gruppe werden in einer Grafik gezeichnet. Jeder Teildatensatz (<i>Gruppe</i>*<i>Variable</i>) wird in verschiedene vertikale Felder gezeichnet. Jede Grafik enthält Histogramme mit Verteilungskurve, Boxdiagramme mit Ausreißern, Konfidenzintervalldiagramme und eine Tabelle, die die Ergebnisse nach Zeile zusammenfasst und die Statistiken für jeden Teildatensatz zeigt.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ausgabezeichnungsdaten</th>
+
+      <td>Legen Sie fest, wo die Zeichnungsdaten ausgegeben werden sollen.</td>
+    </tr>
+
+    <tr>
+      <th>Diagramme ausgeben</th>
+
+      <td>Legen Sie fest, wo die Ergebnisdiagramme ausgegeben wird.</td>
+    </tr>
+  </table>

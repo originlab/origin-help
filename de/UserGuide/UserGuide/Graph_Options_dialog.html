@@ -1,0 +1,250 @@
+﻿<h1 class="firstHeading">Dialog Grafikoptionen verwenden, um Diagrammstandard festzulegen</h1>
+
+  <p class='urlname' style='display: none'>Graph-Options-Set-Graph-Default</p>
+
+  <p><br>
+  Neben der Funktion <a href="../../UserGuide/UserGuide/Theme_Organizer.html" title="UserGuide:Theme Organizer"><b>Designs verwalten</b></a> zum globalen Anwenden von Stilen/Formaten auf Diagramme, können Sie auch den Dialog <b>Grafikoptionen</b> verwenden, um Standardformat/-stile der Diagramme zu ändern.</p>
+
+  <p><span class='headerInParagraph'>Um den Dialog '''Grafikoptionen'‘ zu öffnen:</span></p>
+
+  <ul>
+    <li>Wählen Sie <b>Einstellungen: Grafikoptionen</b> im Hauptmenü.</li>
+  </ul>
+
+  <p><a class="image"><img alt="Graph Options dialog 01.png" src="../images/Graph_Options_dialog/750px-Graph_Options_dialog_01.png" width="750"></a></p>
+
+  <p><b>Hinweis:</b> Standardmäßig wurden einige Standardeinstellungen mit einem globalen Systemdesign ausgeliefert. Sie können einige Optionen als <b>Auto</b> sehen. Wenn eine Einstellung im Dialog Grafiktoptionen geändert wurde, hat sie eine höhere Priorität als das Systemstandarddesign und wird auf die integrierten Systemvorlagen angewendet, aber nicht auf die Anwendervorlagen.</p>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Graph_Options_dialog/Tip_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>In diesem Dialog gibt es mehrere Kontrollkästchen, die drei Zustände haben:</p>
+
+        <dl>
+          <dd><a class="image"><img alt="GraphOptions CheckboxStatus.png" src="../images/Graph_Options_dialog/GraphOptions_CheckboxStatus.png" width="283"></a></dd>
+        </dl>
+
+        <ul>
+          <li><b>Aktiviert</b>: Schaltet diese Einstellung als Standard ein.</li>
+
+          <li><b>Deaktiviert</b>: Schaltet diese Einstellung aus.</li>
+
+          <li><b>Schwarzes Quadrat innen</b>: Setzt diese Option auf <b>Automatisch</b>. Das bedeutet, dass das jeweilige Systemdesign bzw. die festgelegte Vorlage verwendet wird.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1">
+        <a href="#Settings_in_Different_Tabs"><span class="tocnumber">1</span> <span class="toctext">Einstellungen auf verschiedenen Registerkarten</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-2">
+            <a href="#Axis"><span class="tocnumber">1.1</span> <span class="toctext">Achsen</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-3"><a href="#Line_Thickness"><span class="tocnumber">1.1</span> <span class="toctext">Liniendicke</span></a></li>
+
+              <li class="toclevel-3 tocsection-4"><a href="#Ticks"><span class="tocnumber">1.1.2</span> <span class="toctext">Hilfsstriche</span></a></li>
+
+              <li class="toclevel-3 tocsection-5"><a href="#Gridlines"><span class="tocnumber">1.1.3</span> <span class="toctext">Gitternetzlinien</span></a></li>
+
+              <li class="toclevel-3 tocsection-6"><a href="#Rotate_Tick_Labels_if_Overlapping"><span class="tocnumber">1.1.4</span> <span class="toctext">Hilfsstrichsbeschriftungen bei Überschneidung drehen</span></a></li>
+
+              <li class="toclevel-3 tocsection-7"><a href="#Show_Layer_Frame"><span class="tocnumber">1.1.5</span> <span class="toctext">Layerrahmen zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-8"><a href="#Show_Arrow_at_End"><span class="tocnumber">1.1.6</span> <span class="toctext">Pfeil am Ende zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-9"><a href="#X_Axis_Rescale_Margin.28.25.29"><span class="tocnumber">1.1.7</span> <span class="toctext">Rand für X-Achse neu skalieren (%)</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-10">
+            <a href="#Fonts"><span class="tocnumber">1.2</span> <span class="toctext">Schriftarten</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-11"><a href="#Font"><span class="tocnumber">1.2.1</span> <span class="toctext">Schriftart</span></a></li>
+
+              <li class="toclevel-3 tocsection-12"><a href="#Specific_Objects"><span class="tocnumber">1.2.2</span> <span class="toctext">Spezifische Objekte</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-13">
+            <a href="#Layout"><span class="tocnumber">1.3</span> <span class="toctext">Layout</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-14"><a href="#Graph_Size"><span class="tocnumber">1.3.1</span> <span class="toctext">Diagrammgröße</span></a></li>
+
+              <li class="toclevel-3 tocsection-15"><a href="#Fix_Scale_Factor_.3D_1"><span class="tocnumber">1.3.2</span> <span class="toctext">Skalierungsfaktoren festlegen= 1</span></a></li>
+
+              <li class="toclevel-3 tocsection-16"><a href="#Gap_Between_Layers.28.25.29"><span class="tocnumber">1.3.3</span> <span class="toctext">Abstand zwischen Layern (%)</span></a></li>
+
+              <li class="toclevel-3 tocsection-17"><a href="#Page_Margin.28.25.29"><span class="tocnumber">1.3.4</span> <span class="toctext">Seitenrand (%)</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-18">
+            <a href="#Legend"><span class="tocnumber">1.4</span> <span class="toctext">Legende</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-19"><a href="#Position"><span class="tocnumber">1.4.1</span> <span class="toctext">Position</span></a></li>
+
+              <li class="toclevel-3 tocsection-20"><a href="#Show_Legend_Only_for_Multiple_Entries"><span class="tocnumber">1.4.2</span> <span class="toctext">Legende nur für mehrere Einträge zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-21"><a href="#Show_Legend_Outside_of_Layer_for_Single_Block"><span class="tocnumber">1.4.3</span> <span class="toctext">Legende außerhalb des Layers für einzelnen Block zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-22"><a href="#Direction"><span class="tocnumber">1.4.4</span> <span class="toctext">Richtung</span></a></li>
+
+              <li class="toclevel-3 tocsection-23"><a href="#Show_Frame"><span class="tocnumber">1.4.5</span> <span class="toctext">Rahmen zeigen</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-24"><a href="#Save_and_Load_Settings_Buttons"><span class="tocnumber">2</span> <span class="toctext">Schaltflächen Einstellungen speichern und laden</span></a></li>
+
+      <li class="toclevel-1 tocsection-25">
+        <a href="#Buttons_at_Bottom"><span class="tocnumber">3</span> <span class="toctext">Schaltflächen unten</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-26"><a href="#Apply_to"><span class="tocnumber">3.1</span> <span class="toctext">Anwenden auf</span></a></li>
+
+          <li class="toclevel-2 tocsection-27"><a href="#Reset"><span class="tocnumber">3.2</span> <span class="toctext">Zurücksetzen</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Settings_in_Different_Tabs"></a><span class="mw-headline">Einstellungen auf verschiedenen Registerkarten</span></h2>
+
+  <h3><a name="Axis"></a><span class="mw-headline">Achse</span></h3>
+
+  <h4><a name="Line_Thickness"></a><span class="mw-headline">Liniendicke</span></h4>
+
+  <p>Ändern Sie die Liniendicke für die Achsen.</p>
+
+  <h4><a name="Ticks"></a><span class="mw-headline">Hilfsstriche</span></h4>
+
+  <p>Ändern Sie die Hilfsstrichsrichtung, die Länge der großen und kleinen Hilfsstriche. Diese Option ist nur für kartesische 2D-Diagrammlayer verfügbar.</p>
+
+  <h4><a name="Gridlines"></a><span class="mw-headline">Gitternetzlinien</span></h4>
+
+  <p>Legen Sie fest, ob die Gitternetzlinien für große und kleine Hilfsstriche und die Linienstile der Gitternetzlinien für große und kleine Hilfsstriche jeweils separat gezeigt werden sollen.</p>
+
+  <h4><a name="Rotate_Tick_Labels_if_Overlapping"></a><span class="mw-headline">Hilfsstrichsbeschriftungen bei Überschneidung drehen</span></h4>
+
+  <p>Legen Sie fest, ob die Hilfsstrichsbeschriftungen bei Überschneidung der Beschriftungen gedreht werden sollen. Geben Sie einen Winkelwert ein, um die Hilfsstrichsbeschriftungen zu drehen.</p>
+
+  <p>Geben Sie eine positive Zahl ein, um die Beschriftungen entgegen dem Uhrzeigersinn zu drehen, und eine negative Zahl, um die Beschriftung im Uhrzeigersinn zu drehen.</p>
+
+  <h4><a name="Show_Layer_Frame"></a><span class="mw-headline">Layerrahmen zeigen</span></h4>
+
+  <p>Legen Sie fest, ob der Layerrahmen für das aktuelle Layer gezeigt werden soll. Diese Option ist nur für kartesische 2D-Diagrammlayer verfügbar.</p>
+
+  <h4><a name="Show_Arrow_at_End"></a><span class="mw-headline">Pfeil am Ende zeigen</span></h4>
+
+  <p>Legen Sie fest, ob am Ende der Achsen ein Pfeil gezeigt werden soll. Sie können einen Pfeilstil aus der folgenden Auswahlliste wählen und die Pfeilgröße festlegen.</p>
+
+  <p>Diese Option ist standardmäßig deaktiviert und bei Deaktivierung der Option <b>Layerrahmen zeigen</b> aktiviert.</p>
+
+  <h4><a name="X_Axis_Rescale_Margin.28.25.29"></a><span class="mw-headline">Rand für X-Achse neu skalieren (%)</span></h4>
+
+  <p>Diese Option kann verwendet werden, um festzulegen, ob die Werte von Minimum und Maximum während der Neuskalierung der X-Achse mit Nullen aufgefüllt werden sollen. Diese Option entspricht der Option <a href="../../UserGuide/UserGuide/Scale_2.html#Rescale_Margin.28.25.29" title="UserGuide:Scale 2"><b>Rand neu skalieren (%)</b></a> auf der Registerkarte <b>Skalieren</b> des Dialogs <b>Achsen</b>.</p>
+
+  <h3><a name="Fonts"></a><span class="mw-headline">Zeichensätze</span></h3>
+
+  <p>Die Optionen auf dieser Registerkarte werden verwendet, um die Schriftart und die fette Schrift für verschiedene Textobjekte im Diagramm zu steuern. Die Einstellungen beeinflussen sowohl die vorhandenen Objekte als auch den Standardstil der neuen Objekte, die hinzugefügt werden.</p>
+
+  <h4><a name="Font"></a><span class="mw-headline">Schriftart</span></h4>
+
+  <p>Ändern Sie die Schriftart aller Objekte im Diagramm, einschließlich der Diagrammtabellen.</p>
+
+  <h4><a name="Specific_Objects"></a><span class="mw-headline">Spezifische Objekte</span></h4>
+
+  <p>Sie können die Schriftart und die fette Schrift der Hilfsstrichsbeschriftungen, Achsentitel, Legende, Datenbeschriftungen, Layertitel, Seitentitel, Textobjekte, Anmerkungen, Beschriftungen der Referenzlinien und Layerbeschriftungen ändern.</p>
+
+  <h3><a name="Layout"></a><span class="mw-headline">Layout</span></h3>
+
+  <h4><a name="Graph_Size"></a><span class="mw-headline">Diagrammgröße</span></h4>
+
+  <p>Legen Sie die Diagrammgröße fest. Die Größenoptionen haben den gleichen Effekt wie die Größeneinstellungen unter <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Print_Dimensions_Tab.html#Dimensions" title="UserGuide:The (Plot Details) Print Dimensions Tab">der Gruppe <b>Dimensionen</b></a> auf der Registerkarte <b>Drucken/Druckbereich</b> des Dialogs <b>Details Zeichnung</b>.</p>
+
+  <h4><a name="Fix_Scale_Factor_.3D_1"></a><span class="mw-headline">Skalierungsfaktoren festlegen = 1</span></h4>
+
+  <p>Legen Sie fest, ob der Skalierungsfaktor auf 1 gesetzt werden soll.</p>
+
+  <p>Sie können unter der Option <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Size_Speed_Tab.html#Scale_Elements_Group" title="UserGuide:The (Plot Details) Size Speed Tab"><b>Fester Faktor</b> auf der Registerkarte <b>Größe</b> des Dialogs <b>Details Zeichnung</b></a> nachlesen, was der Skalierungsfaktor ist.</p>
+
+  <h4><a name="Gap_Between_Layers.28.25.29"></a><span class="mw-headline">Abstand zwischen Layern (%)</span></h4>
+
+  <p>Wenn es im Diagramm viele Layer gibt, können Sie diese Option dazu verwenden, den Abstand zwischen den Layern festzulegen. Die Einheit dieser Option ist&#160;% der Seitengröße.</p>
+
+  <h4><a name="Page_Margin.28.25.29"></a><span class="mw-headline">Seitenrand (%)</span></h4>
+
+  <p>Legen Sie den Rand des gesamten Diagramms fest. Die Einheit dieser Option ist&#160;% der Seitengröße.</p>
+
+  <p>Standardmäßig wurde der Seitenrand auf 3 % gesetzt. Es gibt einen zusätzlichen Rand oben, falls Sie einen Seitentitel oder Layertitel hinzufügen möchten.</p>
+
+  <h3><a name="Legend"></a><span class="mw-headline">Legende</span></h3>
+
+  <h4><a name="Position"></a><span class="mw-headline">Position</span></h4>
+
+  <p>Legen Sie fest, wo die Legende positioniert werden soll.</p>
+
+  <h4><a name="Show_Legend_Only_for_Multiple_Entries"></a><span class="mw-headline">Legende nur für mehrere Einträge zeigen</span></h4>
+
+  <p>Zeigen Sie die Legende nur, wenn die Anzahl der Kurven im aktuellen Layer größer ist als 1. Wenn es im aktuellen Layer nur einen Datensatz gibt, wird für den aktuellen Layer keine Legende gezeigt.</p>
+
+  <h4><a name="Show_Legend_Outside_of_Layer_for_Single_Block"></a><span class="mw-headline">Legende außerhalb des Layers für einzelnen Block zeigen</span></h4>
+
+  <p>Legen Sie fest, ob die Legende außerhalb des Layers für jeden Diagrammlayer gezeigt werden soll. Das Deaktivieren dieses Kontrollkästchens zeigt die Legende innerhalb des Layerrahmens bei einer bestimmten Position.</p>
+
+  <h4><a name="Direction"></a><span class="mw-headline">Richtung</span></h4>
+
+  <p>Legen Sie fest, wie die Legendeneinträge angeordnet sein sollen, horizontal oder vertikal.</p>
+
+  <h4><a name="Show_Frame"></a><span class="mw-headline">Rahmen zeigen</span></h4>
+
+  <p>Legen Sie fest, ob ein Rahmen für die Legende gezeigt werden soll. Wenn der Rahmen gezeigt werden soll, können Sie die Rahmenfarbe, Rahmenbreite und Füllfarbe innerhalb des Rahmens ändern.</p>
+
+  <h2><a name="Save_and_Load_Settings_Buttons"></a><span class="mw-headline">Schaltflächen Einstellungen speichern und laden</span></h2>
+
+  <p>Es gibt oben rechts im Dialog zwei Schaltflächen: Schaltfläche <b>Einstellungen speichern unter</b> <a class="image"><img alt="Button Save Settings as.png" src="../images/Graph_Options_dialog/Button_Save_Settings_as.png" width="16"></a> und Schaltfläche <b>Einstellungen laden</b>. <a class="image"><img alt="Button Load Settings.png" src="../images/Graph_Options_dialog/Button_Load_Settings.png" width="14"></a></p>
+
+  <p><a class="image"><img alt="Buttons Save and Load Settings.png" src="../images/Graph_Options_dialog/Buttons_Save_and_Load_Settings.png" width="511"></a></p>
+
+  <ul>
+    <li>Durch Klicken auf die Schaltfläche <b>Einstellungen speichern unter …</b> wird ein Dialog angezeigt --<b>Speichern</b>--, der 4 Kontrollkästchen enthält mit den Registerkartennamen. Per Standard sind alle diese Kästchen aktiviert. Sie können unten einen Dateinamen eingeben. Falls Sie eines der Kontrollkästchen deaktiviert haben, werden die Einstellungen dieser entsprechenden Registerkarte nicht in der Designdatei gespeichert. Wenn Sie diese vorgespeicherte Designdatei später laden, werden die Bedienelemente auf dieser Registerkarte auf <i>Auto</i> gesetzt.</li>
+
+    <li>Durch Klicken auf die Schaltfläche <b>Einstellungen laden</b> wird ein Ausklappmenü mit einer Liste angezeigt, die die Designdatei(en) (.oth) aus dem Ordner <i>\Anwenderdateiordner\Themes\Graph Options</i> in alphabetisher Reihenfolge aufführt. Die maximale Anzahl der hier aufgeführten Designdateien ist 10. Sie können auch das Element <b>Mehr ...</b> wählen, um den Dateibrowser zu öffnen und eine andere Designdatei auszuwählen. Per Standadrd wird der Ordner <i>\Anwenderdateiordner\Themes\Graph Options</i> geöffnet.</li>
+  </ul>
+
+  <h2><a name="Buttons_at_Bottom"></a><span class="mw-headline">Schaltflächen unten</span></h2>
+
+  <h3><a name="Apply_to"></a><span class="mw-headline">Anwenden auf</span></h3>
+
+  <p><a class="image"><img alt="Graph Options dialog 02.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_02.png" width="339"></a></p>
+
+  <p>Wählen Sie die Zieldiagramme, um die Format-/Stileinstellungen anzuwenden. <b>Aktives Diagramm</b> ist nur verfügbar, wenn das aktive Fenster ein Diagrammfenster ist.</p>
+
+  <h3><a name="Reset"></a><span class="mw-headline">Zurücksetzen</span></h3>
+
+  <p><a class="image"><img alt="Graph Options dialog 03.png" src="../images/Graph_Options_dialog/Graph_Options_dialog_03.png" width="264"></a></p>
+
+  <ul>
+    <li><b>Alle auf Standard zurücksetzen</b>: Setzen Sie die Optionen auf allen Registerkarten der aktuellen Registerkarte zurück, um zu den Standardeinstellungen des Systemstandarddesigns zurückzukehren.</li>
+
+    <li><b>Diese Registerkarte auf Standard zurücksetzen</b>: Setzen Sie die Optionen der aktuellen Registerkarte zurück, um zu den Standardeinstellungen des Systemstandarddesigns zurückzukehren.</li>
+
+    <li><b>Alle auf Klassisch zurücksetzen</b>: Setzen Sie alle Optionen im Dialog zurück, um den klassischen Formateinstellungen zurückzukehren, das heißt den Standardeinstellungen in Versionen vor 2025b.</li>
+
+    <li><b>Alle löschen</b>: Löschen Sie alle Einstellungen.</li>
+  </ul>

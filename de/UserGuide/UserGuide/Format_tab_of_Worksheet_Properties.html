@@ -1,0 +1,187 @@
+﻿<h1 class="firstHeading">Registerkarte Format (Arbeitsblatteigenschaften)</h1>
+
+  <p class='urlname' style='display: none'>WksProperties-Dialog-Format-Tab</p>
+
+  <p>Sie können den Text auf Block- und Zellenebene im Arbeitsblatt formatieren.</p>
+
+  <h2><a name="Text_Control"></a><span class="mw-headline">Textformatierung</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Anwenden auf</th>
+
+      <td>
+        <p>Wenden Sie die Formatierung auf <b>Standard</b> (ganzes Blatt), <b>Spaltenbeschriftungen</b>, <b>Daten</b>, <b>Spaltenheader</b>, <b>Zeilenheader</b>, <b>Langnamen</b>, <b>Einheiten</b>, <b>Kommentare</b> oder <b>F(x)=</b> an. Beachten Sie, dass die Verfügbarkeit der Optionen unten sich dynamisch an die Auswahl unter <b>Anwenden auf</b> anpasst.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Rich Text</th>
+
+      <td>
+        <p>Aktivieren Sie RichText-Formatierung (z.B. hoch- und tiefgestellte Schrift) für die ausgewählten Zellen. Beachten Sie, dass die Optionen <b>Frei beweglich</b> und <b>Ellipse</b> ignoriert werden, wenn dieses Kontrollkästchen aktiviert ist. <b>Rich Text</b> und <b>Textumbruch</b> der Arbeitsblattzellen können gleichzeitig aktiviert werden, so dass Sie längere Textzeichenketten in eine Zelle mit aktiviertem Rich Text eingeben können und der Text wird bei Verlassen des Bearbeitungsmodus automatisch umgebrochen (Anpassen der Zellengröße kann notwendig sein, um den gesamten Zelleninhalt anzuzeigen).</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Eingabe erlauben</th>
+
+      <td>
+        <p>Die Verwendung der Taste <b>Enter</b> innerhalb einer Zelle wird zugelassen. Wenn diese Option ausgewählt ist, klicken Sie doppelt in die Zelle oder klicken Sie einmal und drücken Sie <b>F2</b>, um den Zelleninhalt zu bearbeiten. Drücken Sie <span class="key">Shift</span> + <span class="key">Enter</span>, um den Text in die nächste Zeile zu zwingen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Umbruch für Text</th>
+
+      <td>
+        <p>Wenn die Textlänge die Zellenbreite überschreitet, wird der Text automatisch umgebrochen, um in die Zelle zu passen. <b>Umbruch für Text</b> verhindert, dass Text in der Mitte von Wörtern umgebrochen wird, das heißt:</p>
+
+        <ul>
+          <li>Wenn <b>Umbruch für Text</b> deaktiviert ist, ist der Umbruch im Wort erlaubt.</li>
+        </ul>
+
+        <ul>
+          <li>Wenn <b>Umbruch für Text</b> aktiviert ist, wird kein Wort umgebrochen.</li>
+        </ul>
+
+        <table class="noborder">
+          <tr>
+            <td style="vertical-align:top" width="60"><img src="../images/Format_tab_of_Worksheet_Properties/Tip_icon.png" width="57" border="0" alt=""></td>
+
+            <td>
+              <p>Sie können den Textumbruch für Spaltenbeschriftungszeilen ein-/ausschalten, indem Sie eine Zeile auswählen und auf die Schaltfläche <b>Textumbruch</b> auf der Minisymbolleiste der Beschriftungszeile klicken.</p>
+
+              <dl>
+                <dd>
+                  <dl>
+                    <dd><a class="image"><img alt="UG wrap text toggle label row.png" src="../images/Format_tab_of_Worksheet_Properties/UG_wrap_text_toggle_label_row.png" width="462"></a></dd>
+                  </dl>
+                </dd>
+              </dl>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Frei beweglich</th>
+
+      <td>
+        <p>Diese Option erlaubt, dass der Text einer Zelle auch in die Zelle rechts daneben weiter geschrieben wird.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Bearbeiten deaktivieren</th>
+
+      <td>
+        <p>Die Bearbeitung der betroffenen Zellen wird deaktiviert. Diese Option ist nicht verfügbar, wenn <b>Anwenden auf</b> auf <b>Spaltenheader</b> oder <b>Zeilenheader</b> gesetzt ist.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Ellipse</th>
+
+      <td>
+        <p>Wenn aber weder Umbruch noch Frei beweglich gewählt wurden, kann eine Ellipse angezeigt werden, die kennzeichnet, dass der Text nicht vollständig angezeigt wird. Ohne eine Ellipse (<b>Ellipse</b> = <b>Keine</b>) kann eine Zahl wie "1,2345678E9" in einer schmalen Spalte als "1,234" angezeigt werden. Mit einer Ellipse jedoch, die auf <b>...</b> oder <b>###</b> festgelegt ist, wird nicht passender Text entweder mit dem Suffix <b>...</b> oder durch wiederholte <b>#</b> angezeigt, mit denen die jeweiligen Zellen gefüllt werden.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Dynamisches Zusammenfassen</th>
+
+      <td>
+        <p>Verbinden Sie benachbarte Zellen, die den gleichen Text beinhalten. Verwenden Sie die Auswahlliste, um festzulegen, in welcher Richtung die Zellen verbunden werden: <b>Horizontal</b>, <b>Vertikal</b> oder <b>Beide</b>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zeige Fehlende als leer</th>
+
+      <td>
+        <p>Dieses Kontrollkästchen ist nur verfügbar, wenn Sie <b>Daten</b> oder <b>Standard</b> in der Auswahlliste <b>Anwenden auf</b> auswählen. Standardmäßig wird ein fehlender Wert in einer Zelle als "--" angezeigt. Wählen Sie dieses Kontrollkästchen, um "--" zu entfernen und Zellen mit fehlenden Werten als leer anzeigen zu lassen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Format</th>
+
+      <td>
+        <p>Verfügbar für die Beschriftungszeilen <b>Langname</b>, <b>Einheiten</b>, <b>Kommentare</b>, <b>Parameter</b>.</p>
+
+        <p>Verfügbare Formate: <b>Datum</b>, <b>Text &amp; Numerisch</b> oder <b>Zeit</b>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Anzeige</th>
+
+      <td>
+        <p>Legen Sie fest, wie die <b>Format</b>auswahl angezeigt werden soll.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Benutzerdefinierte Anzeige</th>
+
+      <td>
+        <p>Verfügbar, wenn <b>Anzeige</b> auf <b>Benutzerdefiniert</b> gesetzt ist. Mit dieser Option haben Sie mehr Optionen für die Anzeige Ihrer Daten in der Spaltenbeschriftungszeile. Lesen Sie bitte auf <a class="external text" href="../../LabTalk/LabTalk/Origin_Formats.html">dieser Seite</a> Einzelheiten der unterstützten benutzerdefinierten Anzeige.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Stellen</th>
+
+      <td>
+        <p>Nur verfügbar, wenn <b>Format</b> auf <b>Numerisch</b> gesetzt ist.</p>
+
+        <p>Verfügbare Optionen: <b>Standard Dezimalstellen</b>, <b>Dezimalstellen setzen =</b> oder <b>Signifikante Stellen =</b>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Signifikante Stellen</th>
+
+      <td>
+        <p>Nur verfügbar, wenn <b>Stellen</b> auf <b>Signifikante Stellen =</b> gesetzt wurde.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Dezimalzahl</th>
+
+      <td>
+        <p>Nur verfügbar, wenn <b>Stellen</b> auf <b>Dezimalstellen setzen =</b> gesetzt wurde.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Schriftart</th>
+
+      <td>
+        <ul>
+          <li><b>Schrift</b>: Bestimmen Sie die Schriftart im Arbeitsblatt.</li>
+        </ul>
+
+        <ul>
+          <li><b>Schriftgröße</b>: Legen Sie die Schriftgröße fest.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Farbe</th>
+
+      <td>
+        <ul>
+          <li><b>Farbe</b>: Wählen Sie die Textfarbe.</li>
+        </ul>
+
+        <ul>
+          <li><b>Füllfarbe</b>: Wählen Sie die Füllfarbe für die Zellen.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>

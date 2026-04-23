@@ -1,0 +1,89 @@
+﻿<h1 class="firstHeading">ランチャート</h1>
+<p class='urlname' style='display: none'>Run-Chart</p>
+<a class="image"><img alt="Run Chart 01.png" src="../images/Run_Chart/Run_Chart_01.png" width="803" /></a>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2.1</span> <span class="toctext">ダイアログの設定</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>最低1つの列を選択してランチャートを作成します。複数列の場合、各行は1つのサブグループです。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メニューから、<b>作図 &gt; 統計: ランチャート</b>を選択して、<b>plot_runchart</b>ダイアログを開きます。</p>
+<p><a class="image"><img alt="Run Chart 02.png" src="../images/Run_Chart/Run_Chart_02.png" width="546" /></a></p>
+<h3><a name="Dialog_Controls" id="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h3>
+<table class="dialogcontroltable">
+<tr>
+<td><b>データレイアウト</b></td>
+<td>データ配置に応じてレイアウトを選択します。
+<ul>
+<li><b>すべてのサブグループを1つの列に</b>: すべてのサブグループが1列に並び、サンプルサイズまたは参照列を使ってグループ分けします。</li>
+<li><b>行の各サブグループ</b>:各サブグループが1行に並びます。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><b>入力</b></td>
+<td>入力データを選択します。
+<ul>
+<li><b>すべてのサブグループを1つの列に</b>レイアウトの場合、少なくとも1列選択します。選択した各列が、ランチャートとしてプロットされます。</li>
+<li><b>行の各サブグループ</b>レイアウトの場合、複数の列を選択します。各行のデータが1つのX値に対してプロットされます。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><b>サブグループ</b></td>
+<td>このコントロールは、<b>すべてのサブグループを1つの列に</b>レイアウトの場合にのみ使用可能です。入力データをどのようにサブグループ化するか、サンプルサイズまたは参照列を指定します。</td>
+</tr>
+<tr>
+<td><b>サイズ</b></td>
+<td><b>すべてのサブグループを1つの列に</b>レイアウトで<b>サブグループ</b>=<b>サイズ</b>の時に使用可能です。データを何行ごとにグループ化するかを指定します。</td>
+</tr>
+<tr>
+<td><b>サブグループラベル</b></td>
+<td><b>すべてのサブグループを1つの列に</b>レイアウトで<b>サブグループ</b>=<b>サイズ</b>の時に使用可能です。各サブグループにラベルを付けるための列を指定します。</td>
+</tr>
+<tr>
+<td><b>列</b></td>
+<td><b>すべてのサブグループを1つの列に</b>レイアウトで<b>サブグループ</b>=<b>列</b>の時に使用可能です。入力データをグループ化するための参照列を指定します。</td>
+</tr>
+<tr>
+<td><b>接続線</b></td>
+<td>サブグループの平均値または中央値を線で接続するかを選択します。</td>
+</tr>
+<tr>
+<td><b>グラフテーブルに統計情報を表示</b></td>
+<td>グラフ上に統計結果を表形式で表示するかどうかを指定します。</td>
+</tr>
+<tr>
+<td><b>グラフテンプレート</b></td>
+<td>ランチャートをプロットするテンプレートを指定します。
+<p>デフォルトでは、組み込みテンプレート<i>Runchart</i> が使用されます。<b>自動</b>チェックボックスをオフにすると、保存済みのユーザテンプレートを選択して適用することができます。</p>
+</td>
+</tr>
+<tr>
+<td><b>出力</b></td>
+<td>プロット用のデータを出力するシートを指定します。</td>
+</tr>
+<tr>
+<td><b>グラフ出力</b></td>
+<td>結果グラフを出力するシートを指定します。</td>
+</tr>
+</table>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>Runchart.OTPU(Originのプログラムフォルダにインストールされています)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>ランチャート は、「ランシーケンスプロット」とも呼ばれ、一定期間または継続的なプロセスにおいて、収集されたデータの傾向やパターンを調べるために使用されます。このチャートを使うことで、時間経過に伴う傾向、変化、周期的な動きを監視したり、プロセス内における特異な変動（特別要因によるばらつき）の兆候を分析したりできます。</p>
+<p>Originのランチャートは、指定されたサブグループごとにデータをプロットします。各サブグループには、同じ時点で観測されたデータが含まれます。すべての観測値は縦方向に並んだドットとして表示されます。各サブグループの平均値または中央値が、折れ線+散布図として時系列上にプロットされます。入力データ全体の平均または中央値を基準とした水平破線が参照線として追加されます。</p>
+<p><a class="image"><img alt="Run Chart 03.png" src="../images/Run_Chart/850px-Run_Chart_03.png" width="850" /></a></p>

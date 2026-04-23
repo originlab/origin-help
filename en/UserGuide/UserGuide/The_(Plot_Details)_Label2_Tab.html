@@ -1,0 +1,615 @@
+<h1 class="firstHeading">9.3.7.9 The (Plot Details) Label Tab</h1><p class='urlname' style='display: none'>PD-Dialog-Label2-Tab</p>
+<p><br />
+</p>
+<div style="text-align: left; direction: ltr; margin-left: 1em;">
+<p><a  class="image"><img alt="Video Image.png" src="../images/The_(Plot_Details)_Label2_Tab/Video_Image.png?v=29468" width="33"  /></a> See related video:<a class="external text" href="http://www.originlab.com/index.aspx?go=Products/Origin/Graphing&amp;pid=1731" target="_blank">Labeling Data Plots Based on Data in any Worksheet Column</a>
+</p>
+</div>
+<p>You can specify label source in two ways:
+</p>
+<ul><li> Using the <b>Label Form</b> drop-down on this tab, you select the source (and form) of the data label. This gives many options including X and Y values, metadata, information from other column(s) in the worksheet, or even a custom label.</li>
+<li> You can <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">pre-designate a column of data as a <b>Label</b> column</a> and co-select the label column with your Y column, when creating your graph.</li></ul>
+<p><br />
+Note that pre-designating a worksheet <b>Label</b> column and using it to label a plot no longer creates a label dataset in Plot Details, as it did in earlier versions of Origin. All data labels now use the <b>Label</b> tab controls of the Y dataset, as documented below.
+</p>
+<dl><dd><dl><dd><a  class="image"><img alt="Labelling Data Points1.png" src="../images/The_(Plot_Details)_Label2_Tab/Labelling_Data_Points1.png?v=85627" width="256"  /></a></dd></dl></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Label_Tab_Controls"><span class="tocnumber">1</span> <span class="toctext">Label Tab Controls</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Enable"><span class="tocnumber">2</span> <span class="toctext">Enable</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Show_at_Specified_Points_Only"><span class="tocnumber">3</span> <span class="toctext">Show at Specified Points Only</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Percentile_Labels"><span class="tocnumber">4</span> <span class="toctext">Percentile Labels</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Font"><span class="tocnumber">5</span> <span class="toctext">Font</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Font_2"><span class="tocnumber">5.1</span> <span class="toctext">Font</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Size"><span class="tocnumber">5.2</span> <span class="toctext">Size</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Color"><span class="tocnumber">5.3</span> <span class="toctext">Color</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#White_Out"><span class="tocnumber">5.4</span> <span class="toctext">White Out</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Rotate_.28deg.29"><span class="tocnumber">5.5</span> <span class="toctext">Rotate (deg)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Emphasis"><span class="tocnumber">5.6</span> <span class="toctext">Emphasis</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#The_formatting_buttons"><span class="tocnumber">5.7</span> <span class="toctext">The formatting buttons</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Alignment"><span class="tocnumber">5.8</span> <span class="toctext">Alignment</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Frame"><span class="tocnumber">6</span> <span class="toctext">Frame</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Frame_2"><span class="tocnumber">6.1</span> <span class="toctext">Frame</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Border"><span class="tocnumber">6.2</span> <span class="toctext">Border</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Fill"><span class="tocnumber">6.3</span> <span class="toctext">Fill</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Margin.28.25_Font_Height.29"><span class="tocnumber">6.4</span> <span class="toctext">Margin(% Font Height)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Label_Source"><span class="tocnumber">7</span> <span class="toctext">Label Source</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Label_Form"><span class="tocnumber">7.1</span> <span class="toctext">Label Form</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Numeric_Display_Format.2FFormat_String"><span class="tocnumber">7.2</span> <span class="toctext">Numeric Display Format/Format String</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Show"><span class="tocnumber">8</span> <span class="toctext">Show</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Attach_to"><span class="tocnumber">9</span> <span class="toctext">Attach to</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Auto_Offset"><span class="tocnumber">10</span> <span class="toctext">Auto Offset</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Label_Offset_Units"><span class="tocnumber">11</span> <span class="toctext">Label Offset Units</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Position"><span class="tocnumber">12</span> <span class="toctext">Position</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Hide_Label_if_Column.2FBar_Height_Less_than_.28.25.29"><span class="tocnumber">13</span> <span class="toctext">Hide Label if Column/Bar Height Less than (%)</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Hide_Label_if_Percentage_Less_than_.28.25.29"><span class="tocnumber">14</span> <span class="toctext">Hide Label if Percentage Less than (%)</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Wrap_Text_by_Percent_of_Diameter"><span class="tocnumber">15</span> <span class="toctext">Wrap Text by Percent of Diameter</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Advanced_Position_Controls"><span class="tocnumber">16</span> <span class="toctext">Advanced Position Controls</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#Attach_to_2"><span class="tocnumber">16.1</span> <span class="toctext">Attach to</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#X.2FY_Value"><span class="tocnumber">16.2</span> <span class="toctext">X/Y Value</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Auto_Reposition_of_Data_Labels"><span class="tocnumber">16.3</span> <span class="toctext">Auto Reposition of Data Labels</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#Auto_Reposition_to_Avoid_Overlapping"><span class="tocnumber">16.3.1</span> <span class="toctext">Auto Reposition to Avoid Overlapping</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Reposition_Direction"><span class="tocnumber">16.3.2</span> <span class="toctext">Reposition Direction</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-36"><a href="#Leader_Line.2FLeader_Line_for_Outliers"><span class="tocnumber">17</span> <span class="toctext">Leader Line/Leader Line for Outliers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-37"><a href="#Show_Leader_Line_if_Offset_Exceeds_.28.25.29"><span class="tocnumber">17.1</span> <span class="toctext">Show Leader Line if Offset Exceeds (%)</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#Connect"><span class="tocnumber">17.2</span> <span class="toctext">Connect</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#Style"><span class="tocnumber">17.3</span> <span class="toctext">Style</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#Width"><span class="tocnumber">17.4</span> <span class="toctext">Width</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#Color_2"><span class="tocnumber">17.5</span> <span class="toctext">Color</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-42"><a href="#Show_Label_for_Leaves_Only"><span class="tocnumber">18</span> <span class="toctext">Show Label for Leaves Only</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="#Auto_Hide_Overlapped_Labels"><span class="tocnumber">19</span> <span class="toctext">Auto Hide Overlapped Labels</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="#Label_Display"><span class="tocnumber">20</span> <span class="toctext">Label Display</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="#Addtional_Labels"><span class="tocnumber">21</span> <span class="toctext">Addtional Labels</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="#Signficant_Mark"><span class="tocnumber">22</span> <span class="toctext">Signficant Mark</span></a>
+<ul>
+<li class="toclevel-2 tocsection-47"><a href="#Show_2"><span class="tocnumber">22.1</span> <span class="toctext">Show</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="#Value_by"><span class="tocnumber">22.2</span> <span class="toctext">Value by</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#Level"><span class="tocnumber">22.3</span> <span class="toctext">Level</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="#Symbol"><span class="tocnumber">22.4</span> <span class="toctext">Symbol</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="#Add_Significant_Levels"><span class="tocnumber">22.5</span> <span class="toctext">Add Significant Levels</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Label_Tab_Controls"></a><span class="mw-headline">Label Tab Controls</span></h2>
+<table class="noborder">
+
+<tr>
+<td><b>Label tab for 2D line and/or symbol plot or 2D Column/Bar plot in Cartesian coordinate system</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab.png?v=91500" width="718"  /></a>
+</td></tr>
+<tr>
+<td><b>Label tab for Box Chart</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab Box.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Box.png?v=97601" width="676"  /></a>
+</td></tr>
+<tr>
+<td><b>Label tab for Histogram</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab Histogram.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Histogram.png?v=97125" width="658"  /></a>
+</td></tr>
+<tr>
+<td><b>Label tab for 2D Vector</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab Vector.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Vector.png?v=85853" width="640"  /></a>
+</td></tr>
+<tr>
+<td><b>Label tab for Dendrogram</b>
+</td></tr>
+<tr>
+<td>
+<p><a  class="image"><img alt="Label2 tab Dendrogram.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Dendrogram.png?v=84360" width="611"  /></a>
+<br />
+<br />
+<a  class="image"><img alt="Label2 tab Dendrogram Circular.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Dendrogram_Circular.png?v=84364" width="613"  /></a>
+</p>
+</td></tr>
+<tr>
+<td><b>Label tab for Heatmap</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab Heatmap.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Heatmap.png?v=98644" width="382"  /></a>
+</td></tr>
+<tr>
+<td><b>Label tab for Circular Packing Graph</b>
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Label2 tab Circ Packing.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab_Circ_Packing.png?v=91387" width="613"  /></a>
+</td></tr></table>
+<h2><a name="Enable"></a><span class="mw-headline">Enable</span></h2>
+<p>Select this check box to enable adding labels to data plots.
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/The_(Plot_Details)_Label2_Tab/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Note that prior to Origin <b>2020b</b>, checking this box enabled labels for all plots in a <a class="external text" href="../../GettingStarted/OriginLab/2D_Graphs.html#Grouping_Data_Plots">plot group</a>. To accommodate improvements to <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Show_at_Specified_Points_Only" title="UserGuide:The (Plot Details) Label2 Tab">showing data at specified points only</a>, this box now only enables labels for the selected plot, whether or not it is part of a group. However, you can still use the <b>Show Data Labels</b> button on the Mini Toolbar to label all plots.
+</p><p><br />
+<p><i><b>To add data labels to ALL plots in your group, simultaneously:</b></i>
+</p>
+</p>
+<ol><li> In the graph window, click to select any plot in the group.</li>
+<li> On the <a class="external text" href="../../GettingStarted/OriginLab/The_Origin_Interface.html#Mini_Toolbars">Mini Toolbar "group" tab</a>, click <b>Show Data Labels</b>. 
+<dl><dd><dl><dd> <a  class="image"><img alt="MT label points 1.png" src="../images/The_(Plot_Details)_Label2_Tab/400px-MT_label_points_1.png?v=86250" width="400"   /></a></dd></dl></dd></dl></li>
+<li> To customize what is displayed by the label, click to select a label and from the Mini Toolbar, click <b>Label Source</b> and choose how you want to label data points. 
+<ul><li> Note that available Label Sources will vary by plot type and available column label row data (see <a href="../../UserGuide/UserGuide/Popup_Button.html#Data_Label" title="UserGuide:Popup Button"><b>Mini Toolbar</b> tables</a>). </li>
+<li> For information on specifying <b>Custom</b> strings, see <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Numeric_Display_Format.2FFormat_String" title="UserGuide:The (Plot Details) Label2 Tab">Numeric Display Format/Format Strings</a>, below. </li></ul>
+<dl><dd> <a  class="image"><img alt="MT label points 2.png" src="../images/The_(Plot_Details)_Label2_Tab/500px-MT_label_points_2.png?v=86251" width="500"   /></a></dd></dl></li></ol>
+</td></tr></table>
+<h2><a name="Show_at_Specified_Points_Only"></a><span class="mw-headline">Show at Specified Points Only</span></h2>
+<p>Check this box to label specified data points only. Once enabled, use the list box to locate labels by:
+</p>
+<ul><li> <b>&lt;drop line&gt;</b>: Labels will be added only at drop line locations (specified on the <b>Drop Lines</b> tab). Note that drop lines can be located by interpolation of actual data points whereas labels can only be added to actual data points. Therefore, only drop lines from actual data points can be labeled in this way.</li>
+<li> <b>&lt;L<i>#</i>&gt;</b>: For the <a href="../../UserGuide/UserGuide/Circular_Packing_Graph.html" title="UserGuide:Circular Packing Graph">Circular Packing graph</a>, you can select <b>&lt;L<i>#</i>&gt;</b> to decide the node labels of which level will be shown, such as <b>&lt;L1&gt;</b> means show the labels for the parent nodes in first level. And, you also can select <b>&lt;Leaves&gt;</b> to just show the labels for leaves(nodes in the last level of each hierarchy line).</li>
+<li> <b>Begin</b> or <b>Beg</b> or <b>-1</b>: Label will be added to the first data point within the layer.</li>
+<li> <b>End</b> or <b>0</b>: Label will be added to the last data point within current layer.</li>
+<li> <b>Max</b>/<b>Min</b>: Label the point with maximum/minimum Y/Z.</li>
+<li>  <b>By dataset</b>: Pick a dataset from the drop-down list to use for labeling. Values will be assigned to points by row index.</li>
+<li> <b>By row index or X value</b>: Refer to the following table.</li></ul>
+<dl><dd><table class="simple" style="width: 90%">
+<tr>
+<th style="width: 20%">Syntax
+</th>
+<th style="width: 40%">Description
+</th>
+<th style="width: 30%">Example
+</th></tr>
+<tr>
+<td> <i>a b c d e</i>
+</td>
+<td> Show labels at space-separated list of row indices
+</td>
+<td> 1 4 5 9
+</td></tr>
+<tr>
+<td> <i>n</i>:<i>m</i>:<i>s</i>
+</td>
+<td> Show labels from rows <i>n</i> to <i>m</i>, skipping every <i>s</i> rows
+</td>
+<td> 2:0:5
+</td></tr>
+<tr>
+<td> x=<i>a b d g</i>
+</td>
+<td> Show labels at x values
+</td>
+<td> x=3.5 7.8 10.2 14.0
+</td></tr>
+<tr>
+<td> [Book<i>N</i>]sheet<i>M</i>!col(<i>A</i>)
+</td>
+<td> Show labels at row indices contained in specified column
+</td>
+<td> [Book1]Sheet2!Col(A)
+</td></tr>
+<tr>
+<td> x=[Book<i>N</i>]sheet<i>M</i>!col(<i>A</i>)
+</td>
+<td> Show labels at x values listed in specified column
+</td>
+<td> x=[Book1]Sheet2!Col(A)
+</td></tr></table></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/The_(Plot_Details)_Label2_Tab/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>One use of this feature might be to use plot metadata to label individual plots instead of using a standard graph legend. For more information, see <a class="external text" href="../../QuickHelp/QuickHelp/How_to_label_line_plot_with_legend_entry.html"><b>FAQ-1065 How to label each line plot with a legend-type entry?</b></a>
+</p></td></tr></table>
+<h2><a name="Percentile_Labels"></a><span class="mw-headline">Percentile Labels</span></h2>
+<p>Enable the percentile labels for the box chart.
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th> Box Range
+</th>
+<td> Show the labels of the top, the median and the bottom lines mext to the box plot.
+<p>For example, when you select <b>Perc 25, 75</b> from the <b>Range</b> list for <b>Box</b>, the labels for the 75th percentile, median and 25th percentile, will display in the graph.
+</p>
+</td></tr>
+<tr>
+<th> Whisker
+</th>
+<td> Show the label of upper and lower whisker next to the box plot.
+</td></tr>
+<tr>
+<th> Mean
+</th>
+<td> Show the label of mean next to the box plot.
+<p>The location of the mean can be marked by symbols (<b>Percentile</b> tab) and/or horizontal lines (<b>Lines</b> tab). You must enable mean display on at least one of these tabs before you can choose to label the mean.
+</p><p>Beginning with Origin 2020, you can mark the location of the mean using a horizontal line, without showing a box (e.g. on the <b>Box</b> tab, set <b>Type</b> = <b>Data</b>) but you will have to enable <b>Type</b> = <b>Box</b> momentarily, in order to check the <b>Labels</b> boxes. Once checked, you can disable box display and your horizontal line will remain labeled.
+</p>
+</td></tr>
+<tr>
+<th> Median
+</th>
+<td> Show the label of median next to the box plot.
+<p>The location of the median can be marked by symbols (<b>Percentile</b> tab) and/or horizontal lines (<b>Lines</b> tab). You must enable median display on at least one of these tabs before you can choose to label the median.
+</p><p>Beginning with Origin 2020, you can mark the location of the median using a horizontal line, without showing a box (e.g. on the <b>Box</b> tab, set <b>Type</b> = <b>Data</b>) but you will have to enable <b>Type</b> = <b>Box</b> momentarily, in order to check the <b>Labels</b> boxes. Once checked, you can disable box display and your horizontal line will remain labeled.
+</p>
+</td></tr>
+<tr>
+<th> Outliers
+</th>
+<td> Specify whether to show the labels of outliers. Once this check box is checked, you can use the <b>Leader Line for Outliers</b> group to add leader lines for the outliers with specified offset been exceeded.
+</td></tr>
+<tr>
+<th> Show
+</th>
+<td> Specify to show the <b>Value</b>, <b>Percentile</b> or both for the <b>Box/Whisker/Mean Value Labels</b>.
+</td></tr></table>
+<h2><a name="Font"></a><span class="mw-headline">Font</span></h2>
+<h3><a name="Font_2"></a><span class="mw-headline">Font</span></h3>
+<p>Select the desired font for label text.
+</p><p>Select <b>Default: <i>FontName</i></b> to use the font determined by the <b>Default</b> drop-down list on <a href="../../UserGuide/UserGuide/The_(Options)_Text_Fonts_Tab.html" title="UserGuide:The (Options) Text Fonts Tab">the <b>Text Fonts</b> tab of the <b>Options</b> dialog box</a>.(<b>Preferences: Option</b>).
+</p>
+<h3><a name="Size"></a><span class="mw-headline">Size</span></h3>
+<p>Type or select the desired font size (in points) for the label text.
+</p><p>The default size is determined by the <b>Size</b> combination box value in the <b>Text Tool</b> group on the <b>Text Fonts</b> tab of the <b>Options</b> dialog box (<b>Preferences: Options</b>).
+</p>
+<h3><a name="Color"></a><span class="mw-headline">Color</span></h3>
+<p>Select a color for the labels. 
+</p><p>If color is set to <b>Auto</b> and the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Auto_Color_of_Label_Follows_Symbol" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Auto Color of Label Follows Symbol</b></a> box is selected on the <b>Miscellaneous</b> tab (page level) of <b>Plot Details</b>, then label color follows symbol color.
+</p><p>If color is set to <b>Auto</b> and the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Auto_Color_of_Label_Follows_Symbol" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Auto Color of Label Follows Symbol</b></a> box is cleared on the <b>Miscellaneous</b> tab (page level) of <b>Plot Details</b>, then label color will be chosen to display in highest contrast to the background color.
+</p>
+<h3><a name="White_Out"></a><span class="mw-headline">White Out</span></h3>
+<p>Select this check box to put a white background behind each label.
+</p>
+<h3><a name="Rotate_.28deg.29"></a><span class="mw-headline">Rotate (deg)</span></h3>
+<p>Type or select the angle, in degrees, by which to rotate the label. 
+</p>
+<ul><li>Positive values rotate the label counter-clockwise. </li>
+<li>Negative values rotate it clockwise.</li></ul>
+<p>Zero degrees is horizontal text.
+</p>
+<h3><a name="Emphasis"></a><span class="mw-headline">Emphasis</span></h3>
+<p>This checkbox is only available for <i><b>special points</b></i>. <br />
+When a data point becomes special, its properties will follow that of the plot until you customize it. <b>Emphasis</b> means the <b>Bold</b>, <i>Italic</i> and <u>Underline</u> label formats of this special point follows the plot. Uncheck it to edit the formatting buttons below.
+</p>
+<h3><a name="The_formatting_buttons"></a><span class="mw-headline">The formatting buttons</span></h3>
+<p>Click the text formatting buttons (Bold, Italic, and Underline) to format the label text.
+</p>
+<dl><dd><a  class="image"><img alt="Plot Details Accent Buttons.PNG" src="../images/The_(Plot_Details)_Label2_Tab/Plot_Details_Accent_Buttons.PNG?v=3971" width="71"  /></a></dd></dl>
+<h3><a name="Alignment"></a><span class="mw-headline">Alignment</span></h3>
+<p>Used to align multi-line data labels. Not available for all plot types.
+</p><p><b>Auto</b>: Follow the <a href="#Position"><b>Position</b></a> setting:
+</p>
+<dl><dd><ul><li> If <b>Position</b> = <i>Right</i>, position labels to the right of the labeled point and left-align multi-line labels.</li>
+<li> If <b>Position</b> = <i>Left</i>, position labels to the left of the labeled point and right-align multi-line labels.</li>
+<li> If <b>Position</b> = <i>Center</i>/<i>Above</i>/<i>Below</i>, center-align multi-line labels.</li></ul></dd></dl>
+<p>Other combinations are possible by setting <b>Alignment</b> = <i>Left</i>, <i>Right</i> or <i>Center</i>.
+</p>
+<h2><a name="Frame"></a><span class="mw-headline">Frame</span></h2>
+<h3><a name="Frame_2"></a><span class="mw-headline">Frame</span></h3>
+<p>Specify whether add a frame around the label text. This option is not available for Box Chart.
+</p><p>Three selections are available for this drop-down list: <b>None</b>, <b>Box</b> and <b>Shadow</b>.
+</p>
+<ul><li><b>None</b> is select by default; meanwhile, <b>Border</b> and <b>Fill</b> color control will be disabled.  </li>
+<li>When <b>Box</b> is selected, a box will be added as a frame around the label text. </li>
+<li>When <b>Shadow</b> is selected, a box and its shadow will be added around the label text.  </li></ul>
+<p>Please note that the <b>Frame</b> option will be set to <b>Auto</b> for the special point by default. It means that the settings of special point will follow that of the whole plot. Of cause, you can customize these settings for the special point for your own needs.
+</p>
+<h3><a name="Border"></a><span class="mw-headline">Border</span></h3>
+<p>When <b>Box</b> or <b>Shadow</b> is select as <b>Frame</b>, you can set a border color for box of the labels. 
+</p>
+<h3><a name="Fill"></a><span class="mw-headline">Fill</span></h3>
+<p>When <b>Box</b> or <b>Shadow</b> is select as <b>Frame</b>, you can set a fill color for box of the labels. 
+</p>
+<h3><a name="Margin.28.25_Font_Height.29"></a><span class="mw-headline">Margin(% Font Height)</span></h3>
+<p>Adjust the margin of the frame in the percent of font height. The top/bottom/left/right margin shares the same value. This option is not available for Box Chart.
+</p><p>Please note that this option will be set to <b>Auto</b> for the special point by default. It means the settings of special point will follow that of the whole plot. Of cause, you can customize these settings for the special point for your own needs.
+</p><p><br />
+</p>
+<h2><a name="Label_Source"></a><span class="mw-headline">Label Source</span></h2>
+<h3><a name="Label_Form"></a><span class="mw-headline">Label Form</span></h3>
+<p>Specify the quantities or data set to be used for creating the label.
+</p>
+<table class="optiontable">
+
+<tr>
+<th> X
+</th>
+<td> Use X values of the data as labels.
+</td></tr>
+<tr>
+<th> Y
+</th>
+<td> Use Y values of the data as labels.
+</td></tr>
+<tr>
+<th> Row Indices
+</th>
+<td> Use row indices as labels.
+</td></tr>
+<tr>
+<th> (X, Y)
+</th>
+<td> Use both X and Y values of the data as labels.
+</td></tr>
+<tr>
+<th> Custom
+</th>
+<td> Use content and format specified in <b>Format String</b> to create the labels (see next section).
+</td></tr>
+<tr>
+<th> Col(<i>ColumnShortName</i>)
+</th>
+<td> Use the desired column from the worksheet as labels.  All columns located to the right of the data Y column will be listed here.
+</td></tr></table>
+<h3><a name="Numeric_Display_Format.2FFormat_String"></a><span class="mw-headline">Numeric Display Format/Format String</span></h3>
+<ul><li>When <b>Label Form</b> is set to X, Y or (X/Y) or Col(<i>ColumnShortName</i>), a <b>Numeric Display Format</b> box becomes available.  See <a class="external text" href="../../LabTalk/LabTalk/Origin_Formats.html"><b>Origin Formats</b></a>. Supported formats include D (date) and T (time) options as long as the date and time data display in the worksheet as numeric <a href="../../UserGuide/UserGuide/Dates_and_Times_in_Origin.html" title="UserGuide:Dates and Times in Origin">Julian Date values</a>.</li>
+<li> When <b>Label Form</b> = <b>Custom</b>, a <b>Format String</b> box becomes available. See <a class="external text" href="../../LabTalk/LabTalk/Syntax_and_notations_used_in_plot_label.html"><b>Syntax and notations used in plot label</b></a>.</li>
+<li> Note that clicking on the <b>Numeric Display Format</b> or <b>Format String</b> lists shows prototyped formats.</li>
+<li> Use <b>%(CRLF)</b> (Carriage Return Line Feed) in Format String to define multi-line labels. E.g. Set Format String as <i>$(col(C)[i], .2)&#160;%(CRLF) $(col(E)[i], S.1)</i> to define 2 line label, with values in column C display 2 decimal places while values in column E display with scientific notation with 1 decimal place.</li></ul>
+<p><br />
+<i><b>Numeric Display Format Notes:</b></i>
+</p>
+<ul><li> If you have applied a <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Formula" title="UserGuide:Tick Labels 2"><b>Formula</b></a> to axis tick labels, you can display the formula-adjusted tick value as opposed to the actual data (scale) value by entering <i>X</i> or <i>Y</i> into <b>Numeric Display Format</b> (e.g. if you have entered a formula for Y axis labels, set <b>Label Form</b> = <i>Y</i> and <b>Numeric Display Format</b> = <i>Y</i>). Please note, if you want to the label value follow <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Display" title="UserGuide:Tick Labels 2">the axis major tick label format</a>, such as decimal digit place, you can enter Xt or Yt for the <b>Numeric Display Format</b> box. </li></ul>
+<p><br />
+<i><b>Format String Notes:</b></i>
+<br />
+</p>
+<dl><dd><dl><dd><a  class="image"><img alt="Label Form Custom 2.png" src="../images/The_(Plot_Details)_Label2_Tab/Label_Form_Custom_2.png?v=75777" width="657"  /></a></dd></dl></dd></dl>
+<ul><li> In this box, column designators <a class="external text" href="../../LabTalk/LabTalk/Col_(function).html">col()</a> and <a class="external text" href="../../LabTalk/LabTalk/WCol_(function).html">wcol()</a> and arbitrary fixed strings can be combined, as desired.  </li>
+<li> The <a class="external text" href="../../LabTalk/LabTalk/String_Substitution.html">%() substitution</a> and <a class="external text" href="../../LabTalk/LabTalk/Numeric_to_String_Conversion.html">$() substitution</a> can be used here (for example,  <i>$(wcol(n)[i], *4)</i> translates to "show the Y values of the current plot and set decimal places to 4" <i>or</i> <i>%(?,@LL)</i> translates to "show the Long Name of current Y column as labels", with <i>L</i> indicating the <b>Long Name</b> of current column -- see <a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">Column Label Characters</a> for a full list of the column label rows' substitute characters).</li>
+<li> Columns <i>to the left or right of the current Y column</i> can be referred to by column index (e.g. col(2)[i] or wcol(n+1)[i]), or by Short or Long Name (e.g. col(B)[i] or col(Percent)[i]). </li>
+<li> Numeric and date/time formats are modified using <a class="external text" href="../../LabTalk/LabTalk/Date_and_Time_Format_Specifiers.html">these specifiers</a>.</li>
+<li> Before Origin 9.0, you could only use $(x) to get numeric values. Origin 9.0 and later support <b>x$/y$/z$</b> which is useful for categorical data. For example, <i>%(X$)</i> is used to return categorical data in the x column, whereas <i>$(x)</i> only shows the index value of the categorical data.</li></ul>
+<h2><a name="Show"></a><span class="mw-headline">Show</span></h2>
+<p>This drop-down list is only available for <i><b>Histogram</b></i> graph. <br />
+You can use this option to specify which values to show as labels, <b>Count</b>, <b>Percentage</b>(relative frequency for each bin in percent format) or <b>Both</b>.
+</p>
+<h2><a name="Attach_to"></a><span class="mw-headline">Attach to</span></h2>
+<p>This group is only available for <i><b>Vector</b></i> graph.  <br />
+Choose to place labels to <b>Arrow Head</b> or <b>Arrow Tail</b>. If the vector graph is created from XYXY dataset, the coordinates the label shows will be that of the end point the label attaches to.
+</p>
+<h2><a name="Auto_Offset"></a><span class="mw-headline">Auto Offset</span></h2>
+<p>This checkbox is only available for <i><b>special points</b></i>.  <br />
+When a data point becomes special, its properties will follow that of the plot until you customize it. <b>Auto Offset</b> means the label position of this special point follows the plot. Uncheck it to customize <b>Horizontal Offset</b> and <b>Vertical Offset</b>.
+</p>
+<h2><a name="Label_Offset_Units"></a><span class="mw-headline">Label Offset Units</span></h2>
+<p>Label offset is measured as a percentage of the font height. Enter a positive or negative value to adjust label position.
+</p>
+<ul><li> <b>Horizontal Offset</b>  </li>
+<li> <b>Vertical Offset</b></li>
+<li> <b>Angular Offset</b> (Circular Dendrogram)</li>
+<li> <b>Radial Offset</b> (Circular Dendrogram)</li></ul>
+<h2><a name="Position"></a><span class="mw-headline">Position</span></h2>
+<p>Specify the label position. This option is not available for Box Chart.
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th> Center
+</th>
+<td> Place label in the center of the data point.
+</td></tr>
+<tr>
+<th> Left
+</th>
+<td rowspan="2">Place label to the left or right of the data point.
+</td></tr>
+<tr>
+<th> Right
+</th></tr>
+<tr>
+<th> Above
+</th>
+<td rowspan="2">Place label above or below the data point.
+</td></tr>
+<tr>
+<th> Below
+</th></tr>
+<tr>
+<th> Inside End
+</th>
+<td> This option applies to Column/Bar graphs.
+<p>Place label inside the column/bar and close to the line where column/bar ends.
+</p>
+</td></tr>
+<tr>
+<th> Inside Base
+</th>
+<td> This option applies to Column/Bar graphs.
+<p>Place label inside the column/bar and close to the line where column/bar starts.
+</p>
+</td></tr>
+<tr>
+<th> Outside End
+</th>
+<td> This option applies to unstacked Column/Bar graphs, bridge chart or lollipop plot.
+<p>For Column/Bar graphs and bridge chart, selecting <b>Outside End</b> will place label outside of the column/bar and close to the line where column/bar ends. 
+</p><p>For the plots with drop lines, such as <a href="../../UserGuide/UserGuide/Lollipop_Plot.html" title="UserGuide:Lollipop Plot">lollipop plot</a> which has the drop lines connecting two data plots, selecting <b>Outside End</b> will place the labels away from the end points of the drop lines for the plot(s). 
+</p>
+</td></tr>
+<tr>
+<th> Auto
+</th>
+<td> This option is available for vertical/horizontal Dendrogram.
+<p>Always place labels to the opposite side of leaves. It is useful to auto reposition labels after exchanging XY axes.
+</p>
+</td></tr>
+<tr>
+<th> Angular Outer
+</th>
+<td> This option is available for circular Dendrogram.
+<p>Place labels to the outside of leaves. 
+</p>
+</td></tr>
+<tr>
+<th> Angular Inner
+</th>
+<td> This option is available for circular Dendrogram.
+<p>Place labels alongside of leaves. 
+</p>
+</td></tr></table>
+<h2><a name="Hide_Label_if_Column.2FBar_Height_Less_than_.28.25.29"></a><span class="mw-headline">Hide Label if Column/Bar Height Less than (%)</span></h2>
+<p>This control is only available for <i><b>2D Column/Bar</b></i> graphs.
+</p><p>Use it to hide the column/bar label if the height/length of column/bar is less than the specified value. Only whole numbers are supported.
+</p><p>Critical Length = <i>percentage value</i>% * Y axis length
+</p>
+<h2><a name="Hide_Label_if_Percentage_Less_than_.28.25.29"></a><span class="mw-headline">Hide Label if Percentage Less than (%)</span></h2>
+<p>This control is only available for <b>Circular Packing</b> graphs.
+</p><p>Use it to automatically hide labels for categories whose fraction accounts for less than <b><i>N</i>%</b>.
+</p>
+<h2><a name="Wrap_Text_by_Percent_of_Diameter"></a><span class="mw-headline">Wrap Text by Percent of Diameter</span></h2>
+<p>This control is only available for <b>Circular Packing</b> graphs.
+</p><p>Use it to automatically wrap labels to a percentage of category diameter.
+</p>
+<h2><a name="Advanced_Position_Controls"></a><span class="mw-headline">Advanced Position Controls</span></h2>
+<p>These controls are only available when the plot type is line/symbol in the 2D Cartesian coordinate system.
+</p>
+<h3><a name="Attach_to_2"></a><span class="mw-headline">Attach to</span></h3>
+<p>Specify the reference position of the data label. The data label position will be calculated based on the <b>Horizontal Offset</b>, <b>Vertical Offset</b> and <b>Position</b> settings from the reference position.
+</p>
+<table class="optiontable">
+
+<tr>
+<th> Data
+</th>
+<td> Use the position of the corresponding data points as reference.
+</td></tr>
+<tr>
+<th> X Line
+</th>
+<td> Use a line of <b>X = <i>Value</i></b> as reference, i.e. a line parallel to the Y axis.
+</td></tr>
+<tr>
+<th> Y Line
+</th>
+<td> Use a line of <b>Y = <i>Value</i></b> as reference, i.e. a line parallel to the X axis.
+</td></tr>
+<tr>
+<th> Error Bar
+</th>
+<td> Use the position of error bar as reference.
+<ul><li> For the Y error bar, it will take effect when position is <b>Above</b> or <b>Below</b>.</li>
+<li> For the X error bar, it will take effect when position is <b>Left</b> or <b>Right</b>.</li></ul>
+</td></tr></table>
+<h3><a name="X.2FY_Value"></a><span class="mw-headline">X/Y Value</span></h3>
+<p>This text box is only available when <b>Attach to</b> is set as either <b>X Line</b> or <b>Y Line</b>.
+</p><p>It is used to specify the <i>Value</i> that determines the reference position. The value can be an arbitrary double, or can be LabTalk notations such as X1 X2 Y1 Y2. X1/X2 refers to the <b>From</b>/<b>To</b> values of the X axis, and this is similar for Y1 and Y2.
+</p>
+<h3><a name="Auto_Reposition_of_Data_Labels"></a><span class="mw-headline">Auto Reposition of Data Labels</span></h3>
+<p>They are used for repositioning overlapping data labels.
+</p>
+<h4><a name="Auto_Reposition_to_Avoid_Overlapping"></a><span class="mw-headline">Auto Reposition to Avoid Overlapping</span></h4>
+<p>This check box is used to specify whether to turn on reposition to avoid overlapping. If it is not selected, the positions of data label remain relative to data even though they are overlapping with other data labels, data points, or leader lines.
+</p>
+<h4><a name="Reposition_Direction"></a><span class="mw-headline">Reposition Direction</span></h4>
+<p>This drop-down menu is only available when <b>Auto Reposition to Avoid Overlapping</b> is checked. <br />
+It is used to specify the direction to move data labels when re-position needs to be applied. Choose between <b>X</b> and <b>Y</b> to re-position the data labels either along X axis or along Y axis.
+</p>
+<h2><a name="Leader_Line.2FLeader_Line_for_Outliers"></a><span class="mw-headline">Leader Line/Leader Line for Outliers</span></h2>
+<p>The leader line is a line object connecting the data label and its reference position (determined by the <b>Attach to</b> drop-down list).
+</p>
+<h3><a name="Show_Leader_Line_if_Offset_Exceeds_.28.25.29"></a><span class="mw-headline">Show Leader Line if Offset Exceeds (%)</span></h3>
+<p>This check box controls display of the leader line. Leader lines will only be shown if the offset between data labels and data points exceeds a certain critical length. The critical length is defined using the <i>Percent Value</i> in the text box next to the check box.
+</p><p>Critical Length = <i>Percent Value</i>% * (Layer Height + Layer Width)/2.
+</p>
+<h3><a name="Connect"></a><span class="mw-headline">Connect</span></h3>
+<p>Select the leader line connection type. The seven options are <b>Straight</b>, <b>Polyline-Horz</b>, <b>Polyline-Vert</b>, <b>Step-Horz</b>, <b>Step-Vert</b>, <b>Horizontal</b> and <b>Vertical</b> . Polyline-Horz and Polyline-Vert create three segment lines where the middle segment is angled.  Step-Horz and Step-Vert create three segment lines where the middle segment is perpendicular.
+</p><p>If <b>Polyline-Horz</b> or <b>Polyline-Vert</b> is chosen, you can change the percent of horizontal or vertical distance between two inflection points in the text box after the <b>Connect</b> drop-down list (see the below <i>Image(1)</i>). Similarly, if <b>Step-Horz</b> or <b>Step-Vert</b> is chosen, you can specify the position of the inflection point by the percent of horizontal or vertical distance in the text box after the <b>Connect</b> drop-down list (see the below <i>Image(2)</i>).
+</p>
+<table class="noborder" width="90%">
+<tr>
+<td><a  class="image"><img alt="Label2 tab-connect.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab-connect.png?v=61950" width="312"  /></a>
+</td>
+<td><a  class="image"><img alt="Label2 tab-connect 01.png" src="../images/The_(Plot_Details)_Label2_Tab/Label2_tab-connect_01.png?v=62038" width="342"  /></a>
+</td></tr>
+<tr>
+<td><p align="center"><b>Image(1)</b></p>
+</td>
+<td><p align="center"><b>Image(2)</b></p>
+</td></tr></table>
+<p><br />
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/The_(Plot_Details)_Label2_Tab/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>To obtain an "L-shaped" leader line as in the following image, set <b>Connect</b> = <b>Step-Horz</b> and enter <i>0</i> in the accompanying text box.
+</p>
+<dl><dd><a  class="image"><img alt="PD Label tab L-shape Connector.png" src="../images/The_(Plot_Details)_Label2_Tab/PD_Label_tab_L-shape_Connector.png?v=84962" width="742"  /></a></dd></dl>
+</td></tr></table>
+<h3><a name="Style"></a><span class="mw-headline">Style</span></h3>
+<p>Select the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Style" title="UserGuide:The (Plot Details) Line Tab">line style</a> of the leader line.
+</p>
+<h3><a name="Width"></a><span class="mw-headline">Width</span></h3>
+<p>Determine the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Width" title="UserGuide:The (Plot Details) Line Tab">width</a> of the leader line.
+</p>
+<h3><a name="Color_2"></a><span class="mw-headline">Color</span></h3>
+<p>Determine the color of leader line either by system color or custom color. If it is set as <b>Auto</b>, the color setting of leader line will follow the color of data labels.
+</p>
+<h2><a name="Show_Label_for_Leaves_Only"></a><span class="mw-headline">Show Label for Leaves Only</span></h2>
+<p>This control is only available for <i><b>Dendrogram</b></i> graphs. 
+</p><p>Check this check box to show label of the leaves only. It means the label of nodes will be hidden.
+</p>
+<h2><a name="Auto_Hide_Overlapped_Labels"></a><span class="mw-headline">Auto Hide Overlapped Labels</span></h2>
+<p>This control is only available for <i><b>Dendrogram</b></i> graphs. 
+</p><p>Check this check box to hide the overlapped labels automatically.
+</p>
+<h2><a name="Label_Display"></a><span class="mw-headline">Label Display</span></h2>
+<p>This drop-down option is only available for the <b>Heatmap</b> graph, including Heatmap with Split Tiles.
+</p><p>It supports <b>Square</b>, <b>Upper Triangular</b>, <b>Upper Triangular without diagonal</b>, <b>Lower Triangular</b> <b>Lower Triangular without diagonal</b> and <b>By Value</b> four display styles for the labels.
+</p><p>When you select <b>By Value</b>, for the label values set by <b>Label Form</b>, you can set a value condition to decide which cells should show the labels.
+</p>
+<table class="note">
+
+<tr>
+<td><b>Note:</b>
+<p>If the Heatmap X and Y is not <b>N*N</b>, these four options, <b>Upper Triangular</b>, <b>Upper Triangular without diagonal</b>, <b>Lower Triangular</b> and <b>Lower Triangular without diagonal</b> are not avaiable.
+</p>
+</td></tr></table>
+<h2><a name="Addtional_Labels"></a><span class="mw-headline">Addtional Labels</span></h2>
+<p>Add additional labels for a box chart.
+</p>
+<ul><li> <b>Label Form</b>: You can choose one column label row as the labels. Selecting <i>&lt;Custom&gt;</i> from the drop-down list, a string box becomes available to let you choose or enter a syntax to refer to a label variable. 
+<dl><dd>See <a class="external text" href="../../LabTalk/LabTalk/Syntax_and_notations_used_in_plot_label.html"><b>Syntax and notations used in plot label</b></a>.</dd></dl></li>
+<li> <b>Position</b>: You can choose how to position the labels around the boxes. 
+<dl><dd><a  class="image"><img alt="The (Plot Details) Label2 Tab AdditionalLabels.png" src="../images/The_(Plot_Details)_Label2_Tab/The__28Plot_Details_29_Label2_Tab_AdditionalLabels.png?v=0" width="553"  /></a></dd>
+<dd>When Box Type is Bar or Bar + Data, Bottom and Below Whisker will not be listed. For Box Type is Data, only Top and Bottom will be listed.</dd>
+<dd>When Boxes in Panels, you can select a column while Label Form =&lt;Custom&gt;, then content in first row of panels from selected column will be shown as labels for panels.</dd></dl></li>
+<li> <b>Horizontal/Vertical Offset</b>: Adjust the offset of the labels from the position you have set with <b>Position</b> control.</li></ul>
+<h2><a name="Signficant_Mark"></a><span class="mw-headline">Signficant Mark</span></h2>
+<p>This control group can be used to add significance marks on the heatmap cells.
+</p>
+<h3><a name="Show_2"></a><span class="mw-headline">Show</span></h3>
+<p>Specofy whare to show the siginificant marks.
+</p>
+<h3><a name="Value_by"></a><span class="mw-headline">Value by</span></h3>
+<p>This editable combo list can specify the data source to decide siginificant marks.
+</p>
+<h3><a name="Level"></a><span class="mw-headline">Level</span></h3>
+<p>Enter the significant levels to divide the data source. These ranges will be used to decide the marks which will be shown for the values.
+</p>
+<h3><a name="Symbol"></a><span class="mw-headline">Symbol</span></h3>
+<p>Enter the symbols as significance marks. By default <b>Auto</b> is selected, which provides number of * acorrding to number of value in Significant Level. 
+</p>
+<h3><a name="Add_Significant_Levels"></a><span class="mw-headline">Add Significant Levels</span></h3>
+<p>Click it to add a footnote below the graph to show the significant levels.
+<br /><br />
+For example, if <b>Level</b> is set <b>0,05 0.01 0.001</b>, and <b>Symbol</b> is set to <b>Auto</b>(* ** ***)
+</p>
+<ul><li> when 0.01&lt;value&lt;=0.05, the mark will display as *</li>
+<li> when 0.001&lt;value&lt;=0.01, the mark will display as **</li>
+<li> when value&lt;=0.001, the mark will display as ***</li></ul>
+<p>And the footnote for significant levels will show:
+<code>* ≤ 0.05 ** ≤ 0.01 *** ≤ 0.001</code>
+</p>
+

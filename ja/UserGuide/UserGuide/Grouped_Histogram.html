@@ -1,0 +1,103 @@
+﻿<h1 class="firstHeading">グループ化ヒストグラム</h1>
+<p class='urlname' style='display: none'>grouped-histogram</p>
+<a class="image"><img alt="Grouped Histogram.png" src="../images/Grouped_Histogram/600px-Grouped_Histogram.png" width="600" /></a>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_ghist_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">plot_ghistダイアログボックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>入力データとして最低1つY列が必要です。</p>
+<p>オプションで、各Y列に対応するYエラー列を持たせることもできます。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p><b>作図 &gt; カテゴリカル&#160;: グループ化ヒストグラム</b> を選択して、<b>plot_ghist</b>ダイアログを開きます。</p>
+<p>開いたダイアログで、入力データ範囲を選択します。最低でも1つのグループ列を追加し、計算データの出力先を指定します。グループ化ヒストグラムが生成されます。</p>
+<p>ダイアログの内容に関する詳細は、次のセクションを参照してください。</p>
+<h3><a name="The_plot_ghist_Dialog_Box" id="The_plot_ghist_Dialog_Box"></a><span class="mw-headline">plot_ghistダイアログボックス</span></h3>
+<p><a class="image"><img alt="Plot ghist dialog box.png" src="../images/Grouped_Histogram/Plot_ghist_dialog_box.png" width="549" /></a></p>
+<table class="dialogcontroltable">
+<tr>
+<th>データ列</th>
+<td>この欄は、<a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="ユーザーガイド：入力データの指定">入力データを指定する</a>のに使用します。</td>
+</tr>
+<tr>
+<th>グループ</th>
+<td>入力データを複数のプロットに分割するには、グループ列を選択します。</td>
+</tr>
+<tr>
+<th>グラフ配置</th>
+<td>
+<ul>
+<li><b>複数データ</b>：複数入力データの配置方法を選択します。
+<dl>
+<dd><b>同じグラフ上で重ね合わせ</b>: 選択した入力データを、同じグラフレイヤ上に重なり合ったプロットとしてプロットします。</dd>
+<dd><b>同じグラフ内でレイヤを分ける</b>：選択された入力データを同じグラフページ上の別々のレイヤに個別にプロットします。</dd>
+<dd><b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</dd>
+</dl>
+</li>
+<li><b>同じレイヤでプロットを積み上げ</b>: チェックを付けると、列をグループ化して分割したすべてのプロットが同じレイヤに積上げられます。</li>
+<li><b>パネルの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</li>
+<li><b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにグループ化棒グラフを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Yを共有</th>
+<td>複数の列が入力として選択された場合、<b>複数データ</b>が<b>同じグラフ上でレイヤを分離</b>に設定すると、このボックスにチェックを入れて、同じグラフ上の複数のレイヤでY軸スケールを共有することができます。</td>
+</tr>
+<tr>
+<th>Xとビンを共有</th>
+<td>チェックを付けると異なるレイヤと異なるグラフ間でXスケールとビン設定を共有します。</td>
+</tr>
+<tr>
+<th>分布曲線</th>
+<td>ヒストグラムに分布曲線を追加するかどうかを指定します。
+<ul>
+<li><b>分布</b>: 分布関数を選択して、ヒストグラム上に分布曲線を重ねます。</li>
+<li><b>データより推定</b>: このボックスをチェックすると、Originは曲線のパラメータ値を推定できます。次のボックスでカスタムパラメータ値を設定するには、チェックを外します。</li>
+<li><i><b>パラメータ</b></i>:<b>データより推定</b>ボックスのチェックを外すと、<i><b>パラメータ</b></i>ボックスがアクティブになり、カスタム値を入力して曲線を描くことができます。</li>
+</ul>
+<p><a href="../../UserGuide/UserGuide/Customizing_the_Violin_Plot_Distribution_Tab_Controls.html#Curve_Type" title="ユーザガイド:バイオリンプロットの分布タブコントロールのカスタマイズ">分布曲線の詳細</a>については、<b>作図の詳細</b>ダイアログの<b>分布</b>タブで確認できます。</p>
+</td>
+</tr>
+<tr>
+<th>ビンを隠す</th>
+<td>分布曲線を追加すると、このボックスをチェックしてヒストグラムバーを非表示にすることができます。</td>
+</tr>
+<tr>
+<th>データ高さ</th>
+<td>データをバーの高さとして指定します。<b>作図の詳細</b>ダイアログの<b>データ</b>タブの<a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Data_Height." title="ユーザガイド:ボックスチャートのデータタブの編集オプション"><b>データ高さ</b>コントロール</a>を参照してください。</td>
+</tr>
+<tr>
+<th>グラフテンプレート</th>
+<td>必要に応じてユーザテンプレートを指定します。デフォルトでは、自動チェックボックスがオンになっており、組み込みテンプレートHistが使用されています。</td>
+</tr>
+<tr>
+<th>プロットデータ出力</th>
+<td><a href="../../UserGuide/UserGuide/Output_Results.html" title="ユーザガイド：出力結果">計算したデータの出力</a>先を指定します。</td>
+</tr>
+<tr>
+<th>グラフ出力</th>
+<td>結果グラフを出力するシートを指定します。</td>
+</tr>
+</table>
+<p>さらに、このダイアログでは作成されるグラフをプレビュー出来ます。</p>
+<table class="note">
+<tr>
+<td><b>Note:</b> グループ範囲はデフォルトでアルファベット順にソートされますが、変更したい場合、列をカテゴリーとして設定し、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>カテゴリー</b>タブ</a>で順序を編集します。</td>
+</tr>
+</table>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>Hist.otpu (OriginのEXEフォルダにインストールされています。)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p><b>グループ</b>、<b>パネルの分割</b>、<b>ページの分割</b>ボックスで複数の列を選択できます。</p>

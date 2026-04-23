@@ -1,0 +1,45 @@
+﻿<h1 class="firstHeading">(作図の詳細) ツリーマップのレイアウトタブ</h1>
+<p class='urlname' style='display: none'>PD-Layout-tab-Treemap</p>
+<p>このタブではツリーマップ図のレイアウト設定が可能です。</p>
+<dl>
+<dd><a class="image"><img alt="Layout Tab for Treemap 01.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_01.png" width="451" /></a></dd>
+</dl>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Layout"><span class="tocnumber">1</span> <span class="toctext">レイアウト</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Order"><span class="tocnumber">2</span> <span class="toctext">順序</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Depth"><span class="tocnumber">3</span> <span class="toctext">深さ</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Gap_between_Levels"><span class="tocnumber">4</span> <span class="toctext">レベル間の間隔</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Custom_Layout_Per_Levels"><span class="tocnumber">5</span> <span class="toctext">各レイヤのレイアウトをカスタマイズ</span></a></li>
+</ul>
+</div>
+<h2><a name="Layout" id="Layout"></a><span class="mw-headline">レイアウト</span></h2>
+<p>各レベルのノードの長方形を配置する方法として、次の6種類のレイアウトが利用可能です。</p>
+<ul>
+<li><b>分割</b>: X変数のレベルや値の順に基づいて、長方形を並べて配置します。</li>
+<li><b>正方形化</b>: サイズ列（要約統計量）に基づき、すべての長方形を大きい順に並べます。一番大きな長方形がプロットの左上に、最も小さいものが右下に配置されます。</li>
+<li><b>正方形化 +</b>: アスペクト比を向上させ、処理速度を保った正方形化の改良版です。基本的には正方形化と同じですが、行が決定されると、現在の行の方向と代替行の方向を比較します。アスペクト比を比較した後に行の方向を選択します。</li>
+<li><b>サイズ/中央/分割によるピボット</b>: 正方形化はアスペクト比が良好ですが、並び順は無視されます。<i>サイズ/中央/分割によるピボット</i> のアルゴリズムは並び順を維持しつつ、アスペクト比も妥当な値を保つよう設計されています。
+<ul>
+<li><b>サイズによるピボット</b>: 最も大きい要素をピボットとします。アスペクト比の平均は良好です。</li>
+<li><b>中央によるピボット</b>: リストの中央の要素をピボットとします。（リストにn個ある場合、ピボットはn/2番目の要素）。安定性に優れています。</li>
+<li><b>分割サイズによるピボット</b>: 面積の合計がほぼ等しくなるようにリストを分割してピボットを決定します。バランスのとれたレイアウトです。</li>
+</ul>
+</li>
+</ul>
+<h2><a name="Order" id="Order"></a><span class="mw-headline">順序</span></h2>
+<p>四角形の並び順を、<b>カテゴリ順</b>、<b>アルファベット順</b>、<b>サイズによる</b>、 <b>列による</b>（任意の列を指定）から選択できます。</p>
+<p>正方形化および正方形化+レイアウトでは、並び順は「サイズによる」のみがサポートされます。</p>
+<h2><a name="Depth" id="Depth"></a><span class="mw-headline">深さ</span></h2>
+<p>表示する階層の深さを指定します。深さ = 1は、最上位（第1階層）のみ表示します。深さ = Nは、上位N階層のツリーマップを表示します。無限は、すべての階層のツリーマップを表示します。</p>
+<h2><a name="Gap_between_Levels" id="Gap_between_Levels"></a><span class="mw-headline">レベル間の間隔</span></h2>
+<p>階層ごとの長方形の間隔を指定します。</p>
+<h2><a name="Custom_Layout_Per_Levels" id="Custom_Layout_Per_Levels"></a><span class="mw-headline">各レイヤのレイアウトをカスタマイズ</span></h2>
+<p>このコントロールグループにチェックを入れると、最初のレベルを除いて、各レベルのレイアウトを個別にカスタマイズできます。</p>
+<dl>
+<dd><a class="image"><img alt="Layout Tab for Treemap 02.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_02.png" width="478" /></a></dd>
+</dl>
+<p>開いた<b>編集</b>ダイアログの<b>レイアウト</b>と<b>順序</b>の設定は、上記のものと同じです。</p>

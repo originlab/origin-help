@@ -1,0 +1,53 @@
+﻿<h1 class="firstHeading">Unabhängiges XY-Diagramm mit doppeltem X</h1>
+
+  <p class='urlname' style='display: none'>DoubleX-IndependentXY</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Double X Independent XY 01.png" src="../images/Double_X_Independent_XY/Double_X_Independent_XY_01.png" width="700"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+
+  <p>Wählen Sie zwei X(Y)-Datensätze oder mindestens 4 Spalten, um ein Diagramm mit doppeltem X zu erstellen. Der zweite X(Y)-Datensatz verwendet unabhängige Achsen.</p>
+
+  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+
+  <p>Wählen Sie die gewünschten Daten aus.</p>
+
+  <p>Wählen Sie <span class="menu">Zeichnen &gt; Mehrere Felder, mehrere Achsen: Unabhängiges XY mit doppeltem X</span> im Hauptmenü.</p>
+
+  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+
+  <p>dxindxy.otpu (im Origin-Programmordner installiert)</p>
+
+  <h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+
+  <p>Dieses Diagramm enthält zwei Layer mit unabhängigem XY. Standardmäßig bilden das untere X und linke Y den ersten Layer und das obere X und rechte Y bilden den zweiten Layer.</p>
+
+  <p><span class='headerInParagraph'>Um Datenspalten auszuwählen und sie in zwei Layer zu zeichnen:</span></p>
+
+  <ul>
+    <li>Wenn die X-Spalten in der Auswahl &gt;=2, sollte der erste X(Y)-Datensatz im ersten Layer sein, der zweite im zweiten Layer, der dritte im ersten Layer und so weiter.</li>
+
+    <li>Wenn die X-Spalte in der Auswahl &lt;2, werden die Spalten als XYXY betrachtet. Das erste Paar der Datenspalten im ersten Layer, das zweite im zweiten Layer, das dritte im ersten Layer und so weiter.</li>
+
+    <li>Wenn die Anzahl der Spalten in der Auswahl &lt;4, wird ein Nachrichtenfeld angezeigt, das Sie daran erinnert, dass Sie zwei X(Y)-Datensätze oder mindestens 4 Spalten auswählen.</li>
+
+    <li>Wenn die Anzahl der Spalten &gt;=4 und die X-Spalte in der Auswahl &lt;2, können wir die letzte Spalte als Y-Spalte behandeln, falls die Anzahl der Spalten eine ungerade Zahl ist.</li>
+  </ul>

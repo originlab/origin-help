@@ -1,0 +1,208 @@
+<h1 class="firstHeading">4.4.22 Time Series Pivot</h1><p class='urlname' style='display: none'>Time-Series-Pivot</p>
+<p>Origin supports Time Series Pivot tool to create a pivot table to visualize data summarization (of statistics) based on a date-time column
+</p><p><span class='headerInParagraph'>To open this tool, with a workbook window activated, </span> 
+</p>
+<ul><li> Select <b>Restructure&#160;: Time Series Pivot...</b> menu;</li></ul>
+<p>Or
+</p>
+<ul><li>Run <code>wtspivot -d;</code> in Script Window or Command Window.</li></ul>
+<p>This tool utilizes the <a class="external text" href="../../XFunction/X-Function/Wtspivot.html">Wtspivot</a> X-Function.
+</p><p><a  class="image"><img alt="Time Series Pivot 01.png" src="../images/Time_Series_Pivot/Time_Series_Pivot_01.png?v=97093" width="943"  /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Recalculate"><span class="tocnumber">1</span> <span class="toctext">Recalculate</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Source"><span class="tocnumber">2</span> <span class="toctext">Source</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rows"><span class="tocnumber">3</span> <span class="toctext">Rows</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Columns"><span class="tocnumber">4</span> <span class="toctext">Columns</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Date.2FTime_Window"><span class="tocnumber">5</span> <span class="toctext">Date/Time Window</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Aggregate_by"><span class="tocnumber">6</span> <span class="toctext">Aggregate by</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Custom"><span class="tocnumber">6.1</span> <span class="toctext">Custom</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Show_Zeros_when_Empty"><span class="tocnumber">7</span> <span class="toctext">Show Zeros when Empty</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">8</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Samples"><span class="tocnumber">9</span> <span class="toctext">Samples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Summarize_Data_Row-wise_Only"><span class="tocnumber">9.1</span> <span class="toctext">Summarize Data Row-wise Only</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Summarize_Data_Both_Column_and_Row-wise"><span class="tocnumber">9.2</span> <span class="toctext">Summarize Data Both Column and Row-wise</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Summarize_Data_by_Fiscal_Year"><span class="tocnumber">9.3</span> <span class="toctext">Summarize Data by Fiscal Year</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Recalculate"></a><span class="mw-headline">Recalculate</span></h2>
+<p>Specify the <a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="UserGuide:Recalculating Analysis Results">Recalculate Mode</a>.
+</p>
+<h2><a name="Source"></a><span class="mw-headline">Source</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Source Time
+</th>
+<td>Select one column with date/time dataset
+</td></tr>
+<tr>
+<th>Source Data
+</th>
+<td>Select the dataset(s) will be aggregated in the result sheet.
+</td></tr></table>
+<h2><a name="Rows"></a><span class="mw-headline">Rows</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Aggregation Interval
+</th>
+<td> Specify the aggregation interval of time in the rows of the pivot table. This time interval is shown in first column of the pivot table.
+<p>You can select this options in this drop-down list：
+</p>
+<dl><dd><a  class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png?v=97049" width="135"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>Time Period
+</th>
+<td> Specify the time group of the aggregation interval.
+<p>According to the selected <b>Aggregation Interval</b>, you can select the corresponding time period.
+</p>
+<ul><li> When <b>10yr:Decade</b> is selected as <b>Aggregation Interval</b>, <b>Time Period</b> just can keep to &lt;none&gt;.</li>
+<li> When <b>Year</b> is selected as <b>Aggregation Interval</b>, you can select <b>10yr:Decade</b> as <b>Time Period</b>.</li>
+<li> When <b>3 Month: Quarter</b>, <b>Month</b>, <b>Week</b> or <b>Day</b> is selected as the <b>Aggregation Interval</b>, you can select <b>Year</b> as <b>Time Period</b>.</li>
+<li> When <b>Week</b> or <b>Day</b> is selected as <b>Aggregation Interval</b>, you can select <b>Month</b> as <b>Time Period</b>.</li>
+<li> When <b>Day</b> or <b>Hour</b> is selected as <b>Aggregation Interval</b>, you can select <b>Week</b> as <b>Time Period</b>.</li>
+<li> When <b>30 min</b>, <b>15min</b> or <b>Minute</b> is selected as <b>Aggregation Interval</b>, you need select <b>Day</b> or <b>Hour</b> as <b>Time Period</b>. The <b>Time Period</b> can not keep to &lt;none&gt;.</li></ul>
+</td></tr>
+<tr>
+<th>Remove Empty
+</th>
+<td> Check this check box to remove the empty rows.
+</td></tr>
+<tr>
+<th>Start / End
+</th>
+<td> Enter the start or end time of the rows of the pivot table. The time format of the <b>Start</b> and <b>End</b> is based on the selected <b>Aggregation Interval</b>. You can refer to the blue hint showing above this edit box. If keeps the edit box empty, the start or end time is default time of the table.
+<p><br />
+Under the <b>Rows</b> setting, in the following situations, the <b>Start / End</b> box is hided.
+</p>
+<ul><li> When <b>Aggregation Interval=10yr:Decade</b></li>
+<li> When <b>Aggregation Interval=3 Month: Quarter</b> and <b>Time Period=&lt;none&gt;</b></li></ul>
+</td></tr>
+<tr>
+<th>Custom Format
+</th>
+<td>Custom the time format showing in the first column except some combinations of <b>Aggregation Interval</b> and <b>Time Period</b>.
+<p>For example: when <b>Aggregation Interval=Month</b> and <b>Time Period=Year</b>, this the format can not be customized.
+</p>
+</td></tr></table>
+<h2><a name="Columns"></a><span class="mw-headline">Columns</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Aggregation Interval
+</th>
+<td> Specify the aggregation interval of time in the columns of the pivot table. This time interval is shown in <b>Comment</b> label row of the pivot table.
+<p>You can select this options in this drop-down list：
+</p>
+<dl><dd><a  class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png?v=97049" width="135"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>Time Period
+</th>
+<td> Specify the time group of the aggregation interval.
+<p>According to the selected <b>Aggregation Interval</b>, you can select the corresponding time period.
+</p>
+<ul><li> When <b>10yr:Decade</b> is selected as <b>Aggregation Interval</b>, <b>Time Period</b> just can keep to &lt;none&gt;.</li>
+<li> When <b>Year</b> is selected as <b>Aggregation Interval</b>, you can select <b>10yr:Decade</b> as <b>Time Period</b>.</li>
+<li> When <b>3 Month: Quarter</b>, <b>Month</b>, <b>Week</b> or <b>Day</b> is selected as the <b>Aggregation Interval</b>, you can select <b>Year</b> as <b>Time Period</b>.</li>
+<li> When <b>Week</b> or <b>Day</b> is selected as <b>Aggregation Interval</b>, you can select <b>Month</b> as <b>Time Period</b>.</li>
+<li> When <b>Day</b> or <b>Hour</b> is selected as <b>Aggregation Interval</b>, you can select <b>Week</b> as <b>Time Period</b>.</li>
+<li> When <b>30 min</b>, <b>15min</b> or <b>Minute</b> is selected as <b>Aggregation Interval</b>, you need select <b>Day</b> or <b>Hour</b> as <b>Time Period</b>. The <b>Time Period</b> can not keep to &lt;none&gt;.</li></ul>
+</td></tr>
+<tr>
+<th>Remove Empty
+</th>
+<td> Check this check box to remove the empty columns.
+</td></tr>
+<tr>
+<th>Follow Rows Start
+</th>
+<td>When the Start Value of <b>Rows</b> is bigger than End value and the <b>Column’s Aggregation Interval</b> is same as the <b>Rows Time Period</b>. The option is shown in the dialog.
+<p>If the <b>Row Time Period</b> is set to <i>Year</i> or <i>Week</i>, etc. but it doesn’t start from the traditional start of the year or week, you can check this option to summarize data by Fiscal Year. If unchecked, all data of same calendar year/week will instead be put in one column.
+</p>
+</td></tr>
+<tr>
+<th>Start / End
+</th>
+<td> Enter the start or end time of the columns of the pivot table. The time format of the <b>Start</b> and <b>End</b> is based on the selected <b>Aggregation Interval</b>. You can refer to the blue hint showing above this edit box. If keeps the edit box empty, the start or end time is default time of the table.
+<p><br />
+Under the <b>Columns</b> setting, in the following situations, the <b>Start / End</b> box is hided.
+</p>
+<ul><li> When <b>Aggregation Interval=10yr:Decade</b></li>
+<li> When <b>Aggregation Interval=Year/3 Month: Quarter/Week/Day/Hour</b> and <b>Time Period=&lt;none&gt;</b></li></ul>
+</td></tr>
+<tr>
+<th>Custom Format
+</th>
+<td>Custom the time format showing in the <b>Comment</b> label row except some combinations of <b>Aggregation Interval</b> and <b>Time Period</b>.
+<p>For example: when <b>Aggregation Interval=Month</b> and <b>Time Period=Year</b>, this the format can not be customized.
+</p>
+</td></tr></table>
+<h2><a name="Date.2FTime_Window"></a><span class="mw-headline">Date/Time Window</span></h2>
+<p>Specify the date/time range to control the source date range that used to be aggregated.
+</p>
+<h2><a name="Aggregate_by"></a><span class="mw-headline">Aggregate by</span></h2>
+<p>Select the aggregation method to summarize the <b>Source Data</b>, including 
+</p>
+<h3><a name="Custom"></a><span class="mw-headline">Custom</span></h3>
+<p>Available only when <b>Aggregate by</b> is set to <b>Custom</b>. Specify the summarized method in the combo edit box. The triangle button next to the edit box provides some frequently-used statistics quantities. You can mix them and construct your own summarized method. You also can add all methods or reset the selection by this menu.
+</p><p><a  class="image"><img alt="Aggregate Custom.png" src="../images/Time_Series_Pivot/Aggregate_Custom.png?v=97056" width="212"  /></a>
+</p>
+<h2><a name="Show_Zeros_when_Empty"></a><span class="mw-headline">Show Zeros when Empty</span></h2>
+<p>Specify whether to show missing values in the pivot table as zeros.
+</p>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<p>Specify where to output the result time series pivot table <b>tsPivot</b>. Click the triangle button to specify output method.<br /> 
+</p><p><b>[&lt;input&gt;]&lt;input&gt;</b>: Input the time series pivot table into the current worksheet.
+</p><p><b>&lt;new&gt;</b>: Put time series pivot table into a new sheet of the current workbook.
+</p><p><b>[&lt;new&gt;]&lt;new&gt;</b>: Put time series pivot table into a new workbook.
+</p><p><br />
+</p>
+<h2><a name="Samples"></a><span class="mw-headline">Samples</span></h2>
+<h3><a name="Summarize_Data_Row-wise_Only"></a><span class="mw-headline">Summarize Data Row-wise Only</span></h3>
+<p><i>Here, We have a daily max temperature data from 1970-01-01 to 2023-12-31.</i>
+</p><p><font color="blue"><b>Sample1</b>:</font> 
+To summarize the mean value of max temperature in each month during 1970 to 2023.
+</p>
+<ul><li> Set <b>Aggregation Interval: Month</b> in the <b>Rows</b>, then you can get the summarize data of max temperature in each month, and there is no <b>Time Period</b>, each month of different years will be a separate row.</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 01.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_01.png?v=97619" width="850"   /></a></dd></dl>
+<ul><li> Set <b>Aggregation Interval: Month</b> and <b>Time Period: Year</b> in the <b>Rows</b>, then the same month of different years will be summarized together so only 12 rows in output.</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 02.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_02.png?v=97620" width="850"   /></a></dd></dl>
+<p><br />
+</p>
+<h3><a name="Summarize_Data_Both_Column_and_Row-wise"></a><span class="mw-headline">Summarize Data Both Column and Row-wise</span></h3>
+<p><i>We go on using a daily max temperature data from 1970-01-01 to 2023-12-31.</i>
+</p><p><font color="blue"><b>Sample2</b>:</font> 
+To summarize the mean value of max temperature of each month for each decade.
+</p>
+<ul><li> Set <b>Aggregation Interval: Month</b>  and <b>Time Period: Year</b> in the <b>Rows</b>,  and <b>Aggregation Interval: 10yr:Decade</b> in the <b>Columns</b>.</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 03.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_03.png?v=97622" width="850"   /></a></dd></dl>
+<ul><li> If you just want to focus on the temperature changing in Winter, following above setting, and then set <b>Start: Dec</b> and <b>End: Feb</b> in the <b>Rows</b>. </li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 04.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_04.png?v=97626" width="850"   /></a></dd></dl>
+<h3><a name="Summarize_Data_by_Fiscal_Year"></a><span class="mw-headline">Summarize Data by Fiscal Year</span></h3>
+<p>When the summarized data doesn’t start from the traditional start of the year or week, and the <b>Row Time Period</b> is set to Year or Week, etc, you can use <b>Follow Rows Start</b> to summarize data for Fiscal Year.
+</p><p><i>Here, we use a sample data of the tardiness of School Year from 9/1/2022 to 6/25/2025.</i>
+This fiscal year starts from Sep. 1st and ends on Jun. 30th next year
+</p><p><font color="blue"><b>Sample3</b>:</font> 
+To summarize the sum value of the tardiness in each month for Fiscal Year.
+</p>
+<ul><li> Set <b>Aggregation Interval: Month</b>  and <b>Time Period: Year</b> in the <b>Rows</b>,  <b>Aggregation Interval: Year</b> in the <b>Columns</b> and check <b>Follow Rows Start</b> option.</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 05.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_05.png?v=97629" width="850"   /></a></dd></dl>
+<ul><li> If you want to specify the data range for the dataset, following above setting, and then fill the date/time range under <b>Date/Time Window</b>, for example from 4/1/2023 to 12/1/2024.</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 06.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_06.png?v=97630" width="850"   /></a></dd></dl>
+
+
+
+
+
+

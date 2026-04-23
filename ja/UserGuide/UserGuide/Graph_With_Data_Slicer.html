@@ -1,0 +1,223 @@
+﻿<h1 class="firstHeading">グラフデータスライサー</h1><p class='urlname' style='display: none'>Graph-Data-Slicer</p>
+<p><br />
+<a href="../../UserGuide/UserGuide/Data_Filter.html" title="ユーザガイド:データフィルタ">ワークシートに適用するフィルタ</a>(ワークシートデータスライサーなど)だけでなく、グラフデータスライサーを使用してグラフに直接フィルターを適用することができます。
+</p>
+<dl><dd><a  class="image"><img alt="Data slicer 01.gif" src="../images/Graph_With_Data_Slicer/Data_slicer_01.gif" width="779"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Worksheet_Data_Slicer_vs._Graph_Data_Slicer"><span class="tocnumber">1</span> <span class="toctext">ワークシートデータスライサーとグラフデータスライサー</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Add_Data_Slicer_to_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフにデータスライサーを追加</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Filter_Controls"><span class="tocnumber">3</span> <span class="toctext">フィルタコントロール</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Explore_Graph_with_Data_Filter"><span class="tocnumber">4</span> <span class="toctext">データフィルタを使用したグラフの探索</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Extract_Filtered_Data"><span class="tocnumber">4.1</span> <span class="toctext">フィルタデータの抽出</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Analysis_on_Graph_with_Graph_Data_Slicer"><span class="tocnumber">4.2</span> <span class="toctext">グラフデータスライサーを使用したグラフ上での分析</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Worksheet_Data_Slicer_vs._Graph_Data_Slicer"></a><span class="mw-headline">ワークシートデータスライサーとグラフデータスライサー</span></h2>
+<ul><li><span class='headerInParagraph'>ワークシートデータスライサー</span>はワークシートベースのフィルターです。 </li></ul>
+<dl><dd>ソースワークシートにフィルタがある場合、このワークシートからプロットされたグラフでデータフィルタをオンにすると、既存のワークシートフィルタが適用されます。これをワークシートデータスライサーと呼びます。 </dd>
+<dd>ワークシートデータスライサーはワークシートに適用され、そのワークシートから作成されたすべてのグラフにも影響します。フィルタ(条件または有効/無効ステータス)を変更すると、ワークシートと、このワークシートから作成されたすべてのグラフが更新されます。逆もまた同様です。</dd></dl>
+<ul><li><span class='headerInParagraph'>グラフデータスライサー</span>はグラフベースのフィルタです。 </li></ul>
+<dl><dd>元のワークシートにフィルタが設定されていない場合、そのワークシートから作成されたグラフ上でデータスライサーを有効にすると、フィルタを適用する列を選択できるダイアログが表示されます。このフィルタ機能がグラフデータスライサーです。</dd>
+<dd>グラフデータスライサーは現在のグラフにのみ適用され、元のワークシートのデータには影響しません。つまり、現在のグラフのフィルタは、同じワークシートからプロットされているグラフには影響しません。データスライサーのベースとなっているグラフウィンドウを削除すると、このスライサーによって得られたすべての分析や処理が削除されます。  </dd></dl>
+<p>グラフデータスライサーは、現在のグラフに影響を与えるだけでなく（ソースワークシートとは無関係に）、例えば、比較のためにプロットを複製するより有用な機能を持ち、今後も機能の改善を続ける予定です。
+</p>
+<h2><a name="Add_Data_Slicer_to_Graph"></a><span class="mw-headline">グラフにデータスライサーを追加</span></h2>
+<ol>
+<li> ソースワークシートにデータフィルタが適用されていないグラフをアクティブにします。
+<li> メニュー<b>データ:スライサー</b>を選択します。<br />
+<i>または</i><br />
+ワークシートデータツールバーの<b>データフィルタを追加/削除</b>ボタン<a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"  /></a>をクリックします。<br />
+<i>または、</i><br />
+カーソルの表示が<a  class="image"><img alt="Data slicer mouse.png" src="../images/Graph_With_Data_Slicer/Data_slicer_mouse.png" width="30"  /></a>に変わるまでグラフページの端にカーソルを移動します。そしてクリックすると、ページレベルのミニツールバーが表示されます。<b>データスライサー</b>ボタンをクリックします。 
+<dl><dd><a  class="image"><img alt="Data slicer 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_02.png" width="394"  /></a></dd></dl>
+<li> <b>グラフにスライサーを追加</b>ダイアログが開きます。
+<dl><dd><a  class="image"><img alt="Data slicer dialog 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_dialog_02.png" width="337"  /></a></dd></dl>
+<ul>
+<li>スライサーを適用する列を2つまで選択します。スライサーは後でいつでも追加できます。
+<li>選択したフィルタ列がテキスト形式の場合、<b>複数選択</b>にチェックをつけることで、フィルタ条件として複数の項目を選択できるようになります。スライサーを追加した後に、<b>単一選択</b>と<b>複数選択</b>を切り替えることもできます。<a href="#Text_.26_Categorical">次のセクション</a>を参照してください。
+<br />テキスト/カテゴリ列のフィルタには、2つの選択タイプがあります。
+<br /><i><b>単一選択 vs. 複数選択</b></i>
+<table class="simple" style="width: 80%">
+<tr>
+<th><center>単一選択</center>
+</th>
+<th><center>複数選択</center>
+</th></tr>
+<tr>
+<td>一度に1つの項目だけを選択するドロップダウンリストです。
+</td>
+<td>複数の項目を選択するためのドロップダウンリストです。<br />グラフは、項目を選択/選択解除すると自動的に更新されます。<br />リストの外側をクリックして選択を終了できます。
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Data slicer 04.png" src="../images/Graph_With_Data_Slicer/Data_slicer_04.png" width="358"  /></a><br /><br /><br />
+</td>
+<td><a  class="image"><img alt="Data slicer 03.png" src="../images/Graph_With_Data_Slicer/Data_slicer_03.png" width="351"  /></a>
+</td></tr></table>
+</li>
+<li>異なるフィルタ条件で直感的に比較するには、<b>プロットを複製</b>を選択します。 
+<table class="simple">
+<tr>
+<th width="20%"> プロットを複製
+</th>
+<td>
+<ul><li><b>なし</b></li></ul>
+<dl><dd>プロットを複製しません。</dd></dl>
+<ul><li><b>同じレイヤ</b></li></ul>
+<dl><dd>プロットを同じレイヤに複製します。複数レイヤグラフの場合、複製の際はこのオプションのみ使用できます。</dd>
+<dd><a  class="image"><img alt="Graph Data Slicer DuplicatePlot SameLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_SameLayer.png" width="498"  /></a></dd></dl>
+<ul><li><b>複数のレイヤ</b></li></ul>
+<dl><dd>プロットを複数のレイヤに複製します。このオプションは、単一レイヤグラフでのみ使用可能です。</dd>
+<dd><a  class="image"><img alt="Graph Data Slicer DuplicatePlot MultiLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_MultiLayer.png" width="655"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th> 複製の数
+</th>
+<td>
+<p><b>プロットを複製</b> = <b>同じレイヤ</b>の場合、この編集ボックスを使用して、複製されるプロットの数を指定します。
+</p>
+</td></tr>
+<tr>
+<th> 行数/<br />列数
+</th>
+<td>
+<p><b>複数のレイヤ</b> = <b>プロットを複製</b>の場合、この2つのドロップダウンリストを使って複製の数とパネルレイアウトを決定します。 
+</p><p>複製の数は、<b>列数</b> X <b>行数</b> - 1です。
+</p>
+</td></tr>
+<tr>
+<th>すべてのレイヤ/プロットで共通のフィルタ
+</th>
+<td>
+<ul><li>複数レイヤグラフの場合、<b>グラフにスライサーを追加</b>ダイアログで定義したすべてのフィルタがすべてのレイヤに適用されます。このチェックボックスをオンにすると、すべてのレイヤに共通のフィルタ制御が設定され、すべてのレイヤで同じフィルタ条件が適用されます。 </li>
+<li>チェックを外した場合、各レイヤは独自のフィルタ制御が可能です。この場合、異なるレイヤ上のフィルタは他のレイヤから独立した状態になります。つまり、レイヤごとに異なるフィルター条件を設定したり、既存のフィルターを削除したり、1つのレイヤに対して新しいフィルターを追加したりすることができますが、他のレイヤには影響しません。<br />スライサーを右クリックして、<b>共通フィルターとしてフィルタに移動</b>を選択して、複数のフィルタを1つの共通フィルタ制御にまとめることも可能です。</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 09.png" src="../images/Graph_With_Data_Slicer/Data_slicer_09.png" width="648"  /></a></dd></dl>
+<ul><li>さらに、<b>すべてのプロット</b>にフィルタを追加したり、<b>ページに共通フィルタを追加</b>することで、共通フィルタと個別フィルタを混在させることもできます。</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 10.png" src="../images/Graph_With_Data_Slicer/Data_slicer_10.png" width="385"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>凡例にフィルターを表示
+</th>
+<td>
+<p>凡例に現在のフィルタ条件を表示するには、このチェックボックスにチェックを付けます。凡例はフィルタが変更されると自動的に更新されます。
+</p><p>ページレベルのミニツールバーの<b>レイヤフィルタタイトルの追加</b>ボタン<a  class="image"><img alt="Popup Add Layer Filter Title.png" src="../images/Graph_With_Data_Slicer/Popup_Add_Layer_Filter_Title.png" width="24"  /></a>で、レイヤタイトルにフィルタ情報を追加することもできます。
+</p>
+</td></tr></table>
+</li>
+</ul>
+</li>
+<li>グラフウィンドウの左側にデータスライサーパネルが表示され、設定したフィルタが一覧表示されます。グラフはそれに従い更新されます。このパネルで現在のフィルタ条件を変更したり、フィルタを追加したり、既存のフィルタの削除や並べ替えが可能です。詳細については、<a href="#Edit_Filters">次のセクションを</a>参照してください。 
+<dl><dd><a  class="image"><img alt="Data slicer 01.png" src="../images/Graph_With_Data_Slicer/Data_slicer_01.png" width="722"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Graph_With_Data_Slicer/Tip_icon.png" width="57"  border="0" /></td><td><p>元となるワークシート（グラフが作成されたワークシート）に1つ以上のフィルタが設定されている場合、<a href="../../UserGuide/UserGuide/Data_Filter.html#Status_of_Filter" title="ユーザガイド:データフィルタ">そのフィルタが無効になっていても</a>、<b>データフィルタ</b>ボタン<a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"  /></a>でデータスライサパネルを有効にすると、すべてのワークシートフィルタがグラフウィンドウに引き継がれます。 
+</p><p>この場合、新しいスライサーを追加することはできません。既存のフィルタの表示と編集のみ可能です。利用可能なエディションについては<a href="#Edit_Filters">次のセクション</a>を参照してください。  
+</p></td></tr></table>
+</ol>
+<h2><a name="Filter_Controls"></a><span class="mw-headline">フィルタコントロール</span></h2>
+<ul><li>スライサーパネル内の空白部分を右クリックすると、コンテキストメニューが表示され、フィルタのコピー/貼り付け、フィルタの追加、フィルタ付きのレイヤの複製が可能です。</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 12.png" src="../images/Graph_With_Data_Slicer/Data_slicer_12.png" width="646"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th>すべてのプロットにフィルタを追加
+</th>
+<td>サブメニューのリストから列を選択して、レイヤレベルのフィルタを追加します。このフィルタはすべてのレイヤ内のすべてのプロットに適用されますが、各レイヤに独立したフィルタ制御を持ちます。そのため、異なるレイヤに異なるフィルター条件を設定して比較することができます。
+</td></tr>
+<tr>
+<th>ページに共通フィルタを追加
+</th>
+<td>サブメニューから列を選んで、ページレベルの共通フィルタを追加します。このフィルタはすべてのレイヤ内のすべてのプロットに共通して適用され、1つのフィルタコントロールで一括制御できます。
+</td></tr>
+<tr>
+<th>Xを変更/<br />Yを変更
+</th>
+<td>すべてのレイヤが同じX/Y列を共有している場合は、X/Yを変更し、すべてを表示するためにスケールを変更します。
+</td></tr>
+<tr>
+<th>フィルター付きでレイヤを複製
+</th>
+<td>現在のグラフに、フィルタ付きのレイヤを複製します。複数のフィルター条件を比較できます。
+</td></tr>
+<tr>
+<th>自動再スケール
+</th>
+<td>この項目をチェックすると、フィルタ結果に応じて軸が自動的に再スケールされます。
+</td></tr></table>
+<ul><li>データスライサー上で右クリックすると、コンテキストメニューが表示され、データフィルタの無効化/削除、並び替え、編集が可能です。 </li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 11.png" src="../images/Graph_With_Data_Slicer/Data_slicer_11.png" width="535"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th>複数選択/<br />単一選択
+</th>
+<td>
+<p>テキスト/カテゴリ列のフィルタでは、<b>複数選択</b>と<b>単一選択</b>を利用できます。メニュー項目を選択して、2つの選択モードを切り替えられます。 
+</p>
+</td></tr>
+<tr>
+<th>カスタムフィルタ/<br />条件タイプを変更
+</th>
+<td>
+<p>フィルタを適用した列のフォーマットに応じて、異なるオプションが提供されます。
+</p>
+<ul>
+<li>テキストとカテゴリ
+<ul><li>テキスト/カテゴリスライサーを右クリックして、<b>カスタムフィルタ...</b>コンテキストメニューを選択すると、<b>カスタムフィルタ</b>ダイアログを利用できます。テキストフィルタの設定については<a href="../../UserGuide/UserGuide/Data_Filter.html#Text_Filter" title="ユーザガイド:データフィルタ">このページ</a>を参照してください。</li></ul>
+</li>
+<li>数値
+<ul><li>単純な編集の場合は、数値スライサを左クリックして<b>単純な数値フィルタ</b>ダイアログ開くか、スライサーを右クリックして<b>条件タイプを変更</b>コンテキストメニューを選択し、ポップアップリストから条件を選択します。 </li>
+<li>右クリックして、<b>カスタムフィルタ...</b>コンテキストメニューを使用して<b>カスタムデータフィルタ</b>ダイアログを開き、詳細な編集が可能です。数値フィルタの設定については<a href="../../UserGuide/UserGuide/Data_Filter.html#Numeric_Filter" title="ユーザガイド:データフィルタ">このページ</a>を参照してください。</li>
+<li><b>条件タイプを変更: ロード</b>を選択して、保存したフィルタ条件をロードします。</li></ul>
+</li>
+<li>日付と時間
+<ul><li>単純な編集の場合は、日付と時刻のスライサーを左クリックして<b>単純な日付フィルタ</b>ダイアログを開くか、スライサーを右クリックして<b>条件タイプを変更</b>コンテキストメニューを選択し、ポップアップリストから条件を選択します。 </li>
+<li>右クリックして、<b>カスタムフィルタ...</b>コンテキストメニューを使用して<b>カスタムデータフィルタ</b>ダイアログを開き、詳細な編集が可能です。日付フィルタの設定については<a href="../../UserGuide/UserGuide/Data_Filter.html#Date_Filter" title="ユーザガイド:データフィルタ">このページ</a>を参照してください。</li>
+<li><b>条件タイプを変更: ロード</b>を選択して、保存したフィルタ条件をロードします。</li></ul>
+</li></ul>
+</td></tr>
+<tr>
+<th>フィルタ列を変更
+</th>
+<td>
+<p>ポップアップリストから、フィルタ列を選択して切り替えできます。 
+</p>
+</td></tr>
+<tr>
+<th>共通フィルタとしてページに移動
+</th>
+<td>
+<p>現在のレイヤに基づくデータスライサーの場合、このアイテムを選択するとページレベルに移動し、フィルタ条件がすべてのレイヤ (すべてのプロット) に適用され、同じフィルタコントロールを共有します。
+</p>
+</td></tr>
+<tr>
+<th>フィルタを削除
+</th>
+<td>
+<p>選択したデータスライサーを削除します。 
+</p>
+<ul><li><b>ワークシートデータ</b>ツールバーの<b>データフィルタの追加と削除</b>ボタン<a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png" width="21"  /></a>をクリックして、現在のグラフウィンドウ上のすべてのデータスライサーを削除できます。 </li>
+<li>スライサーから派生したすべての解析も削除されることに注意してください。 </li></ul>
+</td></tr></table>
+<h2><a name="Explore_Graph_with_Data_Filter"></a><span class="mw-headline">データフィルタを使用したグラフの探索</span></h2>
+<h3><a name="Extract_Filtered_Data"></a><span class="mw-headline">フィルタデータの抽出</span></h3>
+<p>フィルタ処理されたプロットを右クリックし、<b>新しいブックとしてスライサーのコピーを作成</b>を選択します。
+</p><p>フィルタデータを含む<i>Slicer</i>というブックが作成されます。ユーザ定義パラメータ行フィルタ条件が表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="Creaate Slicer Copy as New Book.png" src="../images/Graph_With_Data_Slicer/Creaate_Slicer_Copy_as_New_Book.png" width="595"  /></a></dd></dl>
+<h3><a name="Analysis_on_Graph_with_Graph_Data_Slicer"></a><span class="mw-headline">グラフデータスライサーを使用したグラフ上での分析</span></h3>
+<p><a  class="image"><img alt="DataSlicerwithAnalaysis.gif" src="../images/Graph_With_Data_Slicer/DataSlicerwithAnalaysis.gif" width="672"  /></a>
+</p><p><i><b>予め注意したいこと</b></i>
+</p>
+<ul><li> フィルタ条件の変更時に解析結果を再計算したい場合は、解析操作を実行する前にデータスライサを追加する必要があります。例えば、線形フィットポートシートからフィット曲線グラフを開いた場合 </li></ul>
+<p>データスライサーを追加すると、フィルター条件を変更しても線形フィットの結果は更新されません。
+</p>
+<ul><li> データスライサーを使用したグラフで実行される分析は、フィルタリングされたデータに基づいており、ソースデータから独立しています。この場合の解析結果は非表示のワークブックに出力されます。このワークブックは、解析の緑色の鍵のアイコンをクリックして<b>結果に行く</b>を選択することで開けます。逆に、レポートシートの緑色の鍵のアイコンをクリックするか、レポートシートの<b>ノート</b>表&gt; <b>データフィルタ</b>セルのリンクをクリックすると、ソースグラフに移動できます。</li>
+<li> グラフウィンドウを削除すると、グラフデータフィルタに基づくすべての操作の出力が削除されることに注意してください。</li>
+<li> データスライサーを使用してグラフに対して何らかの分析を実行し、グラフを複製すると、分析操作と出力を含めるかどうかを尋ねるダイアログがポップアップ表示されます。</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 08.png" src="../images/Graph_With_Data_Slicer/Data_slicer_08.png" width="412"  /></a>
+<ul><li><b>はい</b>をクリックすると、グラフと解析（操作と関連する出力）の両方を複製します。この場合、フィルタ条件または解析パラメータを変更しても、現在のグラフウィンドウのみで更新され、他のグラフウィンドウには影響しません。</li>
+<li><b>いいえ</b>をクリックすると、グラフのみを複製し、解析は複製しません。</li></ul></dd></dl>
+
+
+    

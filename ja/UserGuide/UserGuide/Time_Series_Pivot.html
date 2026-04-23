@@ -1,0 +1,203 @@
+﻿<h1 class="firstHeading">時系列ピボット</h1><p class='urlname' style='display: none'>Time-Series-Pivot</p>
+<p>日時列に基づいて (統計の) データ要約を視覚化するピボットテーブルを作成する時系列ピボットツールがサポートされています。
+</p><p><span class='headerInParagraph'>ワークブックウィンドウをアクティブにしてこのツールを開くには、 </span> 
+</p>
+<ul><li> <b>データ整形：時系列ピボット</b>メニューを選択します。</li></ul>
+<p>または
+</p>
+<ul><li>コマンドウィンドウまたはスクリプトウィンドウで<code>wtspivot -d;</code>を実行します。</li></ul>
+<p>これでXファンクションの<a class="external text" href="../../XFunction/X-Function/Wtspivot.html">Wtspivot</a>が開きます。
+</p><p><a  class="image"><img alt="Time Series Pivot 01.png" src="../images/Time_Series_Pivot/Time_Series_Pivot_01.png" width="939"  /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Recalculate"><span class="tocnumber">1</span> <span class="toctext">再計算</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Source"><span class="tocnumber">2</span> <span class="toctext">ソース</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rows"><span class="tocnumber">3</span> <span class="toctext">行</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Columns"><span class="tocnumber">4</span> <span class="toctext">列</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Date.2FTime_Window"><span class="tocnumber">5</span> <span class="toctext">日付/時間ウィンドウ</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Aggregate_by"><span class="tocnumber">6</span> <span class="toctext">集計方法</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Custom"><span class="tocnumber">6.1</span> <span class="toctext">カスタム</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Show_Zeros_when_Empty"><span class="tocnumber">7</span> <span class="toctext">空白時ゼロを表示</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">8</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Samples"><span class="tocnumber">9</span> <span class="toctext">サンプル</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Summarize_Data_Row-wise_Only"><span class="tocnumber">9.1</span> <span class="toctext">行単位のデータのみを集計</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Summarize_Data_Both_Column_and_Row-wise"><span class="tocnumber">9.2</span> <span class="toctext">列単位と行単位の両方でデータを集計</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Summarize_Data_by_Fiscal_Year"><span class="tocnumber">9.3</span> <span class="toctext">会計年度ごとにデータを集計</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
+<p><a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="ユーザガイド：分析結果の再計算">再計算モード</a>を指定します。
+</p>
+<h2><a name="Source"></a><span class="mw-headline">ソース</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>ソース時間
+</th>
+<td>日付/時間データセットを含む列を1つ選択
+</td></tr>
+<tr>
+<th>ソースデータ
+</th>
+<td>結果シートに集約されるデータセットを選択します。
+</td></tr></table>
+<h2><a name="Rows"></a><span class="mw-headline">行</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>集計間隔
+</th>
+<td> ピボットテーブルの行の時間の集計間隔を指定します。この時間間隔は、ピボットテーブルの最初の列に表示されます。
+<p>このドロップダウンリストでは、以下のオプションを選択できます。
+</p>
+<dl><dd><a  class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png" width="135"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>期間
+</th>
+<td> 集計間隔の時間グループを指定します。
+<p>選択した<b>集計間隔</b>に従って、対応する期間を選択できます。
+</p>
+<ul><li> <b>集計間隔</b>として<b>10yr:Decade</b>を選択した場合、 <b>期間</b>は&lt;なし&gt;のままです。</li>
+<li> <b>集計間隔</b>として<b>Year(年)</b>を選択した場合、<b>期間</b>として<b>10yr:decade(10年)</b>を選択できます。</li>
+<li> <b>集計間隔</b>として<b>3 Month: Quarter(3か月)、Month(月)、Week(週)、Day(日)</b>が選択されている場合、<b>Year(年)</b>を<b>期間</b>として選択できます。</li>
+<li> <b>集計間隔</b>として<b>Week(週)</b>または<b>Day(日)</b>が選択されている場合は、<b>期間</b>として<b>Month(月)</b>を選択できます。</li>
+<li> <b>集計間隔</b>として<b>Day(日)</b>または<b>Time(時間)</b>を選択した場合、<b>期間</b>として<b>Week(週)</b>を選択できます。</li>
+<li> <b>30 min(30分)</b>、<b>15min(15分)</b>または<b>Minute(分)</b>を<b>集約間隔</b>として選択した場合、<b>Day(日)</b>または<b>Time(時間)</b>を<b>期間</b>として選択します。<b>期間</b>を&lt;なし&gt;のままにできません。</li></ul>
+</td></tr>
+<tr>
+<th>空を削除
+</th>
+<td> 空の行を除去するには、このチェックボックスにチェックを付けます。
+</td></tr>
+<tr>
+<th>開始 / 終了
+</th>
+<td> ピボットテーブルの行の開始時間または終了時間を入力します。<b>開始</b>と<b>終了の</b>時間形式は、選択した<b>集計間隔</b>に基づきます。この編集ボックスの上に表示されている青いヒントを参考にしてください。編集ボックスを空のままにしておくと、テーブルの開始時間または終了時間はデフォルトの時間になります。
+<p><br />
+<b>行</b>設定で、以下の場合、<b>開始/終了</b>ボックスが非表示になります。
+</p>
+<ul><li> <b>集約間隔=10yr:Decade</b>の場合</li>
+<li> <b>集計間隔=3 Month: Quarter</b>および<b>：四半期</b>および<b>期間=&lt;なし&gt;</b>の場合</li></ul>
+</td></tr>
+<tr>
+<th>カスタムフォーマット
+</th>
+<td>第一列の表示フォーマットをカスタマイズします。ただし、一部の<b>集計間隔</b>と<b>期間</b>の組み合わせでは除外されます。
+<p>例：<b>集計間隔=Month(月)、</b> <b>期間=Year(年)</b>の場合、この形式はカスタマイズできません。
+</p>
+</td></tr></table>
+<h2><a name="Columns"></a><span class="mw-headline">列</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>集計間隔
+</th>
+<td> ピボットテーブルの列の時間の集計間隔を指定します。この時間間隔は、ピボットテーブルの<b>コメント</b>ラベル行に表示されます。
+<p>このドロップダウンリストでは、以下のオプションを選択できます。
+</p>
+<dl><dd><a  class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png" width="135"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>期間
+</th>
+<td> 集計間隔の時間グループを指定します。
+<p>選択した<b>集計間隔</b>に従って、対応する期間を選択できます。
+</p>
+<ul><li> <b>集計間隔</b>として<b>10yr:Decade</b>を選択した場合、 <b>期間</b>は&lt;なし&gt;のままです。</li>
+<li> <b>集計間隔</b>として<b>Year(年)</b>を選択した場合、<b>期間</b>として<b>10yr:decade(10年)</b>を選択できます。</li>
+<li> <b>集計間隔</b>として<b>3 Month: Quarter(3か月)、Month(月)、Week(週)、Day(日)</b>が選択されている場合、<b>Year(年)</b>を<b>期間</b>として選択できます。</li>
+<li> <b>集計間隔</b>として<b>Week(週)</b>または<b>Day(日)</b>が選択されている場合は、<b>期間</b>として<b>Month(月)</b>を選択できます。</li>
+<li> <b>集計間隔</b>として<b>Day(日)</b>または<b>Time(時間)</b>を選択した場合、<b>期間</b>として<b>Week(週)</b>を選択できます。</li>
+<li> <b>30 min(30分)</b>、<b>15min(15分)</b>または<b>Minute(分)</b>を<b>集約間隔</b>として選択した場合、<b>Day(日)</b>または<b>Time(時間)</b>を<b>期間</b>として選択します。<b>期間</b>を&lt;なし&gt;のままにできません。</li></ul>
+</td></tr>
+<tr>
+<th>空を削除
+</th>
+<td> 空の列を除去するには、このチェックボックスにチェックを付けます。
+</td></tr>
+<tr>
+<th>行開始に従う
+</th>
+<td><b>行</b>の開始値が終了値よりも大きく、<b>列の集計間隔</b>が<b>行の期間</b>と同じ場合。ダイアログにオプションが表示されます。
+<p><b>行の期間</b>が<i>Year</i>や<i>Week</i>などに設定されているが、従来の年や週の開始から始まらない場合は、このオプションにチェックを入れて会計年度ごとにデータを集計することができます。チェックを外すと、同じ暦年/週のすべてのデータが1つの列にまとめて表示されます。
+</p>
+</td></tr>
+<tr>
+<th>開始 / 終了
+</th>
+<td> ピボットテーブルの列の開始時間または終了時間を入力します。<b>開始</b>と<b>終了の</b>時間形式は、選択した<b>集計間隔</b>に基づきます。この編集ボックスの上に表示されている青いヒントを参考にしてください。編集ボックスを空のままにしておくと、テーブルの開始時間または終了時間はデフォルトの時間になります。
+<p><br />
+<b>列</b>設定で、以下の場合<b>開始/終了</b>ボックスが非表示になります。
+</p>
+<ul><li> <b>集約間隔=10yr:Decade</b>の場合</li>
+<li> <b>集計間隔=Year/3 Month: Quarter/Week/Day/Hour</b>および<b>期間=&lt;なし&gt;</b>の場合</li></ul>
+</td></tr>
+<tr>
+<th>カスタムフォーマット
+</th>
+<td><b>コメント</b>ラベル行に表示される時間形式をカスタマイズします。ただし、一部の<b>集計間隔</b>と<b>期間</b>の組み合わせは除外されます。
+<p>例：<b>集計間隔=Month(月)、</b> <b>期間=Year(年)</b>の場合、この形式はカスタマイズできません。
+</p>
+</td></tr></table>
+<h2><a name="Date.2FTime_Window"></a><span class="mw-headline">日付/時間ウィンドウ</span></h2>
+<p>集計するために使用したソース日付範囲を制御する日付/時間範囲を指定します。
+</p>
+<h2><a name="Aggregate_by"></a><span class="mw-headline">集計方法</span></h2>
+<p><b>ソースデータ</b>を要約する集計方法を選択します。 
+</p>
+<h3><a name="Custom"></a><span class="mw-headline">カスタム</span></h3>
+<p><b>集計方法</b>が<b>カスタム</b>に設定されている場合のみ利用できます。編集ボックスで集計方法を指定します。編集ボックスの横にある三角形のボタンをクリックすると、頻繁に使用する統計量が表示されます。それらを組み合わせて集計方法を自身で構築することができます。また、このメニューですべてのメソッドを追加したり、選択をリセットしたりすることもできます。
+</p><p><a  class="image"><img alt="Aggregate Custom.png" src="../images/Time_Series_Pivot/Aggregate_Custom.png" width="259"  /></a>
+</p>
+<h2><a name="Show_Zeros_when_Empty"></a><span class="mw-headline">空白時ゼロを表示</span></h2>
+<p>ピボットテーブルの欠損値をゼロとして表示するかどうかを指定します。
+</p>
+<h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
+<p>結果の時系列ピボットテーブル<b>tsPivot</b>を出力する場所を指定します。三角形のボタンをクリックして出力方法を指定します。<br /> 
+</p><p><b>[&lt;入力&gt;]&lt;入力&gt;</b>:現在のワークシートに時系列ピボットテーブルを入力します。
+</p><p><b>&lt;新規&gt;</b>：現在のワークブックの新しいシートに時系列ピボットテーブルを出力します。
+</p><p><b>[&lt;新規&gt;]&lt;新規&gt;</b>:新しいワークブックに時系列ピボットテーブルを出力します。
+</p><p><br />
+</p>
+<h2><a name="Samples"></a><span class="mw-headline">サンプル</span></h2>
+<h3><a name="Summarize_Data_Row-wise_Only"></a><span class="mw-headline">行単位のデータのみを集計</span></h3>
+<p><i>ここでは、1970-01-01から2023-12-31までの日最高温度データを使用します。</i>
+</p><p><font color="blue"><b>サンプル1</b></font> 
+1970年から2023年までの各月の平均最高温度値を集計します。
+</p>
+<ul><li> <b>行</b>の<b>集計間隔:Month</b>と設定すると、各月の最高温度の集計データを取得できます。この場合、<b>期間</b>の設定は行われず、異なる年の同じ月も別々の行として表示されます。</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 01.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_01.png" width="850"   /></a></dd></dl>
+<ul><li> <b>行</b>の<b>集計間隔:Month</b>および<b>期間:Year</b>と設定すると、各年の同じ月がまとめられ、出力には12行のみが表示されます。</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 02.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_02.png" width="850"   /></a></dd></dl>
+<p><br />
+</p>
+<h3><a name="Summarize_Data_Both_Column_and_Row-wise"></a><span class="mw-headline">列単位と行単位の両方でデータを集計</span></h3>
+<p><i>1970-01-01から2023-12-31までの日最高温度データを使用します。</i>
+</p><p><font color="blue"><b>サンプル2</b></font> 
+10年ごとの各月の最高温度の平均値を集計します。
+</p>
+<ul><li> <b>行</b>の<b>集計間隔：Month</b>および<b>期間：Year</b>にし、<b>列</b>の<b>集計間隔：10yr:Decade</b>に設定します。</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 03.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_03.png" width="850"   /></a></dd></dl>
+<ul><li> 冬の温度変化を確認するた場合、上記の設定に従い、 <b>行</b>の<b>開始:Dec</b>と<b>終了:Feb</b>に設定します。 </li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 04.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_04.png" width="850"   /></a></dd></dl>
+<h3><a name="Summarize_Data_by_Fiscal_Year"></a><span class="mw-headline">会計年度ごとにデータを集計</span></h3>
+<p>集計データの開始が通常の年初や週の始まりではない場合に、<b>行の期間</b>を年や週などに設定しているときは、<b>行開始に従う</b>を使用することで、会計年度に基づいた集計が可能になります。
+</p><p><i>ここでは、2022/9/1 から 2025/6/25までの学年度における遅刻データのサンプルを使用します。</i>
+年度は9月1日から次の年の6月30日までです。
+</p><p><font color="blue"><b>サンプル3</b></font> 
+年度の各月の遅刻の合計値を集計します。
+</p>
+<ul><li> <b>行</b>の<b>集計間隔:Month</b>および<b>期間:Year</b>にし、<b>列</b>の<b>集計間隔: Year</b>で<b>行開始に従う</b>にチェックを付けます。</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 05.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_05.png" width="850"   /></a></dd></dl>
+<ul><li> データセットの範囲を指定したい場合は、上記の設定に従ったうえで、<b>日付/時刻ウィンドウ</b>に範囲を入力します。例えば、2023/4/1から2024/12/1までのように指定します。</li></ul>
+<dl><dd><a  class="image"><img alt="Time Series Pivot Sample 06.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_06.png" width="850"   /></a></dd></dl>
+
+
+
+
+    

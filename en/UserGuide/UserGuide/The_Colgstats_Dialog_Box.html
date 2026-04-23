@@ -1,0 +1,320 @@
+<h1 class="firstHeading">17.1.3.1 Side-by-Side Statistics Dialog Box</h1><p class='urlname' style='display: none'>SidebySide-Stats-Dialog</p><a  class="image"><img alt="Side-by-Side Statistics dialog.png" src="../images/The_Colgstats_Dialog_Box/Side-by-Side_Statistics_dialog.png?v=97978" width="521"  /></a>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Input"><span class="tocnumber">1</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Groups"><span class="tocnumber">2</span> <span class="toctext">Groups</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Quantities"><span class="tocnumber">3</span> <span class="toctext">Quantities</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Output"><span class="tocnumber">4</span> <span class="toctext">Output</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<p>Specify the input data range.
+</p>
+<h2><a name="Groups"></a><span class="mw-headline">Groups</span></h2>
+<p>Multiple grouping columns contains grouping information can be inserted into the <b>Group</b> box. Different grouping values indicate the data in the corresponding cells are from different groups.  You can add, remove, order grouping columns via controlling buttons: <b>Move Up</b> button <a  class="image"><img alt="Button Group List Move Up.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Move_Up.png?v=38533" width="16"  /></a>, <b>Move Down</b> button <a  class="image"><img alt="Button Group List Move Down.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Move_Down.png?v=38534" width="13"  /></a>, <b>Remove</b> button <a  class="image"><img alt="Button Group List Remove.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Remove.png?v=38532" width="14"  /></a>, <b>Select All</b> button <a  class="image"><img alt="Button Group List Select All.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Select_All.png?v=45398" width="18"  /></a>, <b>Select</b> button <a  class="image"><img alt="Button Group List Add.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Add.png?v=38531" width="17"  /></a> in toolbar <a  class="image"><img alt="Group List Toolbar.png" src="../images/The_Colgstats_Dialog_Box/Group_List_Toolbar.png?v=47304" width="160"  /></a>.<br />The grouping columns are set as categorical if most of the column values are text. So you can easily reorder the output columns.
+</p>
+<h2><a name="Quantities"></a><span class="mw-headline">Quantities</span></h2>
+<p>Let <img src="../images/The_Colgstats_Dialog_Box/math-0a645fc515fe6128f91758f996ebe307.png?v=0" title="x_i\," alt="x_i\," class="tex"/> be the <img src="../images/The_Colgstats_Dialog_Box/math-66c1e9c9357288ba6a1a52d275a97896.png?v=0" title="i\," alt="i\," class="tex"/>th sample and  <img src="../images/The_Colgstats_Dialog_Box/math-727ca9427f1817e05f5444c381452d9c.png?v=0" title="w_i\," alt="w_i\," class="tex"/> be the <img src="../images/The_Colgstats_Dialog_Box/math-66c1e9c9357288ba6a1a52d275a97896.png?v=0" title="i\," alt="i\," class="tex"/>th weight:
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>N Total
+</th>
+<td>
+<p>Total number of data points, denoted by n
+</p>
+</td></tr>
+<tr>
+<th>N Missing
+</th>
+<td>
+<p>Number of missing values
+</p>
+</td></tr>
+<tr>
+<th>Mean
+</th>
+<td>
+<p>The mean (average) score
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-2c3cfd80f98bd53eab611bf1d9b0b06b.png?v=0" title="\bar{x}=\frac 1w\sum_{i=1}^n x_iw_i" alt="\bar{x}=\frac 1w\sum_{i=1}^n x_iw_i" class="tex"/>. If there is no WEIGHT variable, the formula reduces to <img src="../images/The_Colgstats_Dialog_Box/math-5a9ad94b4dc8d40b8904d1d6d5d82628.png?v=0" title="\frac 1n\sum_{i=1}^n x_i" alt="\frac 1n\sum_{i=1}^n x_i" class="tex"/>. 
+</p>
+</td></tr>
+<tr>
+<th>Standard deviation
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-4e24737c2d5a93e253dec1bd9308b54a.png?v=0" title="s=\sqrt{\sum_{i=1}^n w_i(x_i-\bar{x})^2/d}" alt="s=\sqrt{\sum_{i=1}^n w_i(x_i-\bar{x})^2/d}" class="tex"/>
+</p><p>where <img src="../images/The_Colgstats_Dialog_Box/math-312096b61619b115046f533673235492.png?v=0" title="d=n-1 \," alt="d=n-1 \," class="tex"/>
+</p><p><b>Note</b>: In OriginPro, <img src="../images/The_Colgstats_Dialog_Box/math-8277e0910d750195b448797616e091ad.png?v=0" title="d" alt="d" class="tex"/>  has 4 more options, which are defined in the <a href="#Variance_Divisor_of_Moment"><b>Variance Divisor of Moment</b></a> branch.
+</p>
+</td></tr>
+<tr>
+<th>SE of Mean
+</th>
+<td>Standard error of mean:
+<p><img src="../images/The_Colgstats_Dialog_Box/math-0eb997acda4211d05b721da8f1a83fa5.png?v=0" title="\frac s{\sqrt{w}}" alt="\frac s{\sqrt{w}}" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Lower 95% CI of Mean
+</th>
+<td>
+<p>Lower limit of the 95% confidence interval of mean
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-2074a3eee27a71e90a1b1f30be8a4898.png?v=0" title="\bar{x}-t_{(1-\alpha /2)}\frac s{\sqrt{n}}" alt="\bar{x}-t_{(1-\alpha /2)}\frac s{\sqrt{n}}" class="tex"/>
+</p><p>where <img src="../images/The_Colgstats_Dialog_Box/math-974be0012b08e1011563485bb0ce9980.png?v=0" title="t_{(1-\alpha /2)}" alt="t_{(1-\alpha /2)}" class="tex"/> is the <img src="../images/The_Colgstats_Dialog_Box/math-381591fd1f0ff50229001d29940aba51.png?v=0" title="(1-\alpha /2)" alt="(1-\alpha /2)" class="tex"/> critical value of the Student's t-statistic with <i>n-1</i> degrees of freedom
+</p>
+</td></tr>
+<tr>
+<th>Upper 95% CI of Mean
+</th>
+<td>
+<p>Upper limit of the 95% confidence interval of mean
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-524ee5a694dda77745fc41eb49858fd3.png?v=0" title="\bar{x}+t_{(1-\alpha /2)}\frac s{\sqrt{n}}" alt="\bar{x}+t_{(1-\alpha /2)}\frac s{\sqrt{n}}" class="tex"/>
+</p><p>where <img src="../images/The_Colgstats_Dialog_Box/math-974be0012b08e1011563485bb0ce9980.png?v=0" title="t_{(1-\alpha /2)}" alt="t_{(1-\alpha /2)}" class="tex"/> is the <img src="../images/The_Colgstats_Dialog_Box/math-381591fd1f0ff50229001d29940aba51.png?v=0" title="(1-\alpha /2)" alt="(1-\alpha /2)" class="tex"/> critical value of the Student's t-statistic with <i>n-1</i> degrees of freedom
+</p>
+</td></tr>
+<tr>
+<th>Variance
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-c8fa97f712bd91847dc8b5ac9840315d.png?v=0" title=" s^2\ " alt=" s^2\ " class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Sum
+</th>
+<td><img src="../images/The_Colgstats_Dialog_Box/math-7d17543867ac9ab7904cec6a3d42351b.png?v=0" title="\sum_{i=1}^n x_iw_i" alt="\sum_{i=1}^n x_iw_i" class="tex"/>. If there is no WEIGHT variable, the formula reduces to <img src="../images/The_Colgstats_Dialog_Box/math-b86704cc7988edbe5d39436b8da4ac59.png?v=0" title="\sum_{i=1}^n x_i" alt="\sum_{i=1}^n x_i" class="tex"/>.
+</td></tr>
+<tr>
+<th>Skewness
+</th>
+<td>
+<p>Skewness measures the degree of asymmetry of a distribution. It is defined as
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-936b5875488d28c26ba0adce2ea7aac8.png?v=0" title="\gamma_1=\frac n{(n-1)(n-2)}\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3 ,\mbox{for DF}" alt="\gamma_1=\frac n{(n-1)(n-2)}\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3 ,\mbox{for DF}" class="tex"/>
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-11103f62bee4f685a870f1b5829fc68d.png?v=0" title="\gamma_1=\frac 1n\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for N}" alt="\gamma_1=\frac 1n\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for N}" class="tex"/>
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-b9208507102bb6a5d5a99c6e830946f3.png?v=0" title="\gamma_1=\frac 1d\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for WVR}" alt="\gamma_1=\frac 1d\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for WVR}" class="tex"/>
+</p><p><b>Note:</b> When <a href="#Variance_Divisor_of_Moment">the <b>WDF</b> or <b>WS</b> methods</a> are chosen, skewness is returned as a missing value.
+</p>
+</td></tr>
+<tr>
+<th>Kurtosis
+</th>
+<td>
+<p>Kurtosis depicts the degree of peakedness of a distribution.
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-9503b366bc48e9ccbd00754eef9ccf1e.png?v=0" title="\gamma_2=\frac{n(n+1)}{(n-1)(n-2)(n-3)}\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4-\frac{3(n-1)^2}{(n-2)(n-3)},\mbox{for DF}" alt="\gamma_2=\frac{n(n+1)}{(n-1)(n-2)(n-3)}\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4-\frac{3(n-1)^2}{(n-2)(n-3)},\mbox{for DF}" class="tex"/>
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-6f844f8e42c3fa4e0654664ed69fd357.png?v=0" title="\gamma_2=\frac 1n\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for N}" alt="\gamma_2=\frac 1n\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for N}" class="tex"/>
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-f49becc99441331604531bf4cae4be73.png?v=0" title="\gamma_2=\frac 1d\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for WVR}" alt="\gamma_2=\frac 1d\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for WVR}" class="tex"/>
+</p><p><b>Note:</b> When <a href="#Variance_Divisor_of_Moment">the <b>WDF</b> or <b>WS</b> methods</a> are chosen, kurtosis is returned as a missing value.
+</p>
+</td></tr>
+<tr>
+<th>Uncorrected Sum of Squares
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-ea51c2bd37d61b495f5db6165f511772.png?v=0" title="\sum_{i=1}^n w_ix_i^2" alt="\sum_{i=1}^n w_ix_i^2" class="tex"/> 
+</p>
+</td></tr>
+<tr>
+<th>Corrected Sum of Squares
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-26ef79c989d89bd72300a28e8a2edb45.png?v=0" title="\sum_{i=1}^n w_i(x_i-\bar{x})^2" alt="\sum_{i=1}^n w_i(x_i-\bar{x})^2" class="tex"/> 
+</p>
+</td></tr>
+<tr>
+<th>Coefficient of Variance
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-81441eca0840e568a8db47161facac8a.png?v=0" title="\frac s{\bar{x}}" alt="\frac s{\bar{x}}" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Mean absolute Deviation
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-717c2294e9c02aabd7cd2938f48c4bf8.png?v=0" title="\frac{ \sum_{i=1}^n w_i|x_i-\bar{x}|}w" alt="\frac{ \sum_{i=1}^n w_i|x_i-\bar{x}|}w" class="tex"/> 
+</p>
+</td></tr>
+<tr>
+<th>SD times 2
+</th>
+<td>
+<p>Standard deviation times 2. 
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-bbb38220075e5e05df381ff137dd0d39.png?v=0" title="2s \," alt="2s \," class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>SD times 3
+</th>
+<td>
+<p>Standard deviation times 3. 
+</p><p><img src="../images/The_Colgstats_Dialog_Box/math-2e90c3bb8d77435a2950aa2d3e6a659c.png?v=0" title="3s \," alt="3s \," class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Geometric Mean
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-a78893aee86be50cda2c2b557d329e66.png?v=0" title="\bar{x}_g=\left( \prod_{i=1}^n x_i\right) ^{\frac 1n}" alt="\bar{x}_g=\left( \prod_{i=1}^n x_i\right) ^{\frac 1n}" class="tex"/> 
+</p><p><b>Note:</b>: Weights are ignored for the geometric mean.
+</p>
+</td></tr>
+<tr>
+<th>Geometric SD
+</th>
+<td>
+<p>The geometric standard deviation
+<img src="../images/The_Colgstats_Dialog_Box/math-5f7d06b0f3d72efa7b25ca36df8e6d2c.png?v=0" title="e^{std(\log x_i)}" alt="e^{std(\log x_i)}" class="tex"/>
+Where <i>std</i> is the unweighted sample standard deviation. 
+</p><p><b>Note:</b> Weights are ignored for the geometric standard deviation.
+</p>
+</td></tr>
+<tr>
+<th>Mode
+</th>
+<td>
+<p>The mode is the element that appears most often in the data range. If multiple modes are found, the smallest will be chosen.
+</p>
+</td></tr>
+<tr>
+<th>Sum of Weights
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-958b48150e1f0cdf16de4414a32547ec.png?v=0" title="w=\sum_{i=1}^n w_i" alt="w=\sum_{i=1}^n w_i" class="tex"/> 
+</p>
+</td></tr>
+<tr>
+<th>Harmonic Mean
+</th>
+<td>
+<p>harmonic mean (sometimes called the subcontrary mean)
+</p><p><br />
+without weight: <img src="../images/The_Colgstats_Dialog_Box/math-5f3874b42ba6adbf3d616cbb324a285a.png?v=0" title="\frac n{\frac 1{x_1} + \frac 1{x_2} + ... + \frac 1{x_n}}=\left(\frac {\sum_{i=1}^n (x_i)^{-1}}n\right)^{-1}" alt="\frac n{\frac 1{x_1} + \frac 1{x_2} + ... + \frac 1{x_n}}=\left(\frac {\sum_{i=1}^n (x_i)^{-1}}n\right)^{-1}" class="tex"/>
+</p><p>with weight: <img src="../images/The_Colgstats_Dialog_Box/math-82df59ebf5b57a278568118b8a1eb264.png?v=0" title="\frac {\sum_{i=1}^n w_i}{\sum_{i=1}^n \frac {w_i}{x_i}}=\left(\frac {\sum_{i=1}^n w_i x_i^{-1}}{\sum_{i=1}^n w_i}\right)^{-1}" alt="\frac {\sum_{i=1}^n w_i}{\sum_{i=1}^n \frac {w_i}{x_i}}=\left(\frac {\sum_{i=1}^n w_i x_i^{-1}}{\sum_{i=1}^n w_i}\right)^{-1}" class="tex"/>
+</p><p>if any <img src="../images/The_Colgstats_Dialog_Box/math-1ba8aaab47179b3d3e24b0ccea9f4e30.png?v=0" title="x_i" alt="x_i" class="tex"/> or weight is negative, return missing; if any <img src="../images/The_Colgstats_Dialog_Box/math-1ba8aaab47179b3d3e24b0ccea9f4e30.png?v=0" title="x_i" alt="x_i" class="tex"/> or weight is 0, return 0.
+</p>
+</td></tr>
+<tr>
+<th>Minimum
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-76fcdbddbf0525a612332b0877bb4cfa.png?v=0" title="x_{(1)}\," alt="x_{(1)}\," class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Index of Minimum
+</th>
+<td>
+<p>The index number of Minimum in the original (input) dataset
+</p>
+</td></tr>
+<tr>
+<th>1st Quartile (Q1)
+</th>
+<td>
+<p>First (25%) quantile, <i>Q</i>1. See <a href="#Interpolation_of_quantiles"><b>Interpolation of quantiles</b></a> for computational methods
+</p>
+</td></tr>
+<tr>
+<th>Median
+</th>
+<td>
+<p>Median or second (50%) quantile, <i>Q2</i>. See <a href="#Interpolation_of_quantiles"><b>Interpolation of quantiles</b></a> for computational methods
+</p>
+</td></tr>
+<tr>
+<th>3rd Quartile (Q3)
+</th>
+<td>
+<p>Third (75%) quantile, <i>Q3.</i> <a href="#Interpolation_of_quantiles"><b>Interpolation of quantiles</b></a> for computational methods
+</p>
+</td></tr>
+<tr>
+<th>Maximum
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-e6727f576cfe0d84c7ffd707fa811e83.png?v=0" title="x_{(n)}\," alt="x_{(n)}\," class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Index of Maximum
+</th>
+<td>
+<p>The index number of Maximum in the original (input) dataset
+</p>
+</td></tr>
+<tr>
+<th>Interquartile Range (Q3-Q1)
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-e24c89c8ced8e20a05eec2b423ead18f.png?v=0" title="Q_3-Q_1\," alt="Q_3-Q_1\," class="tex"/>
+</p>
+</td></tr>
+<tr>
+<th>Range (Maximum-Minimum)
+</th>
+<td>
+<p><b>Maximum</b> - <b>Minimum</b>
+</p>
+</td></tr>
+<tr>
+<th>Custom Percentile(s)
+</th>
+<td>
+<p>Request computation of custom percentiles.
+</p>
+</td></tr>
+<tr>
+<th>Percentile list
+</th>
+<td>
+<p>This option is only available when <b>Custom Percentile(s)</b> is checked. Percentiles are computed for all the values listed.
+</p>
+</td></tr>
+<tr>
+<th>Median Absolute Deviation
+</th>
+<td>For a univariate data set X1, X2, ..., Xn, the MAD is defined as the median of the absolute deviations from the data's median:
+<p><img src="../images/The_Colgstats_Dialog_Box/math-d1924c239e9a6578aedd26903c37a580.png?v=0" title="MAD = median(|{X_i} - median(X)|)\," alt="MAD = median(|{X_i} - median(X)|)\," class="tex"/>
+</p><p>that is, starting with the residuals (deviations) from the data's median, the MAD is the median of their absolute values.
+</p>
+</td></tr>
+<tr>
+<th>Robust Coefficient of Variation
+</th>
+<td>
+<p><img src="../images/The_Colgstats_Dialog_Box/math-67154cc3788d523ddd4ba317afc11bbd.png?v=0" title="(MAD/norminv(0.75))/Median\," alt="(MAD/norminv(0.75))/Median\," class="tex"/>
+</p>
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Output for Each Row of Input
+</th>
+<td>Output corresponding statistics result on the right of each row of data.
+</td></tr>
+<tr>
+<th>Output All Combinations for Groups
+</th>
+<td>Output statistics result on each combination groups on right side of source data.
+<p><b>Note:</b>
+</p>
+<ul><li>When <b>Output for Each Row of Input</b> option is checked, this option is not available.</li>
+<li>If there are two groups, for example <i>Group1: A1, A2</i> and <i>Group2: B1,B2</i>, the output group will with <i>A1-B2</i>, <i>A1-B2</i>, <i>A2-B1</i>,<i>A2-B2</i>. Even if there is no <i>A1-B2</i> is source data, it will be output as a row.</li></ul>
+</td></tr>
+<tr>
+<th>Output Group as Columns
+</th>
+<td>Output group information on the columns.
+</td></tr></table>
+
+
+
+
+
+

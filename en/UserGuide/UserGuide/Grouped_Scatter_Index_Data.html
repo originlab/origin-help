@@ -1,0 +1,124 @@
+<h1 class="firstHeading">29.10.1 Grouped Scatter</h1><p class='urlname' style='display: none'>GroupedScatter-IndexedData</p><a  class="image"><img alt="Grouped Scatter Indexed Data.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Indexed_Data.png?v=81147" width="520"  /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_.22plot_gscatter.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">The "plot_gscatter" dialog box</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Requires at least one Y column as input data. In addition, one or more column(s) provide grouping information.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data, 
+</p>
+<ul><li>Select <b>Plot &gt; Categorical: Grouped Scatter...</b> menu</li></ul>
+<p><br />
+Or
+<br />
+</p>
+<ul><li>Click the <a  class="image"><img alt="Button Grouped Scatter-Indexed Data.png" src="../images/Grouped_Scatter_Index_Data/Button_Grouped_Scatter-Indexed_Data.png?v=81139" width="23"  /></a> button in the <b>2D Graphs</b> toolbar
+<dl><dd><a  class="image"><img alt="Grouped Scatter Index Data Button From Toolbar.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Index_Data_Button_From_Toolbar.png?v=96647" width="309"  /></a></dd></dl></li></ul>
+<p>The <b>plot_gscatter</b> will be opened:
+</p>
+<dl><dd><a  class="image"><img alt="Plot grouped scatter dialog box.png" src="../images/Grouped_Scatter_Index_Data/Plot_grouped_scatter_dialog_box.png?v=98748" width="553"  /></a></dd></dl>
+<p>You can select the input data range, add at least one group column, select columns to split page/panel optionally, add fitting curve optionally and determine where to put the plot data and graphs. Click <b>Preview</b>, or <b>OK</b> to create your plot and close the dialog. 
+</p>
+<h3><a name="The_.22plot_gscatter.22_dialog_box"></a><span class="mw-headline">The "plot_gscatter" dialog box</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Data Column(s)
+</th>
+<td>This branch is used to <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">specify the input data</a>.
+</td></tr>
+<tr>
+<th>Group Column(s)
+</th>
+<td>Choose the categorical column(s) as grouping column(s)
+</td></tr>
+<tr>
+<th> Graph Arrangement
+</th>
+<td>
+<ul><li> <b>Multiple Data</b>&#160;:Choose how to arrange the multiple input data. 
+<ul><li> <b>Overlay on Same Graph</b>: Plot the seleted input data as overlapping plots on the same graph layer.</li>
+<li> <b>Seperate Layers on Same Graph</b>:Plot the seleted input data into seperate layers on the same graph layer.</li>
+<li> <b>Seperate Graphs</b>:Plot the seleted input data on the seperate graph windows.</li></ul></li></ul>
+<ul><li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped column plot for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default. When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</li>
+<li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created grouped columns in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
+</td></tr>
+<tr>
+<th> Share X/Share Y
+</th>
+<td> Check the check to share X/Y scale between the graphs and layers.
+</td></tr>
+<tr>
+<th> Plot Type
+</th>
+<td> Specify the plot type, scatter, line or line+symbol.
+</td></tr>
+<tr>
+<th> Stack
+</th>
+<td> Specify whether to stack the columns/bars when multiple input variables overlay in same graph. You can choose <b>Side by Side</b>, <b>Stacked</b> or <b>100% Stacked</b>. This option is not avaiable for Plot Type being Scatter.
+</td></tr>
+<tr>
+<th> Graph Template
+</th>
+<td> Specify a user template if needed. By default, the Auto check box is checked and the built-in template GBOX is used.
+</td></tr>
+<tr>
+<th> Fitting
+</th>
+<td> This branch is used to create fitted curves or bands with reference lines. Only polynomial fit is aviliable here.
+<ul><li> <b>Polynomial Order</b>: Specify the order of the polunomial function.</li>
+<li> <b>Label</b>:  Specify the label for the fitted curves. There are four choices: <b>Equation</b>, <b>Pearson's R</b> and <b>R-Square (COD)</b>.</li>
+<li> <b>Confidence Bands</b>: Specify whether show confidence band onto the graph.</li>
+<li> <b>Prediction Bands</b>: Specify whether show prediction band onto the graph.</li>
+<li> <b>Confidence Ellipse (Mean)</b>: Specify whether show confidence ellipse based on Mean onto the graph.</li>
+<li> <b>Confidence Ellipse (Prediction)</b>: Specify whether show confidence ellipse based on Prediction onto the graph.</li></ul>
+</td></tr>
+<tr>
+<th>Output Data
+</th>
+<td>Specify where to <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">output the calculated data</a>.
+</td></tr>
+<tr>
+<th>Output Graphs
+</th>
+<td>Specify which sheet the result graphs is output to.
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b> The grouping range will be sorted with default alphabetical order. If this is not acceptable , select the worksheet column, right Click and Set as Categorical. Then, you can modify list order on the <a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="UserGuide:The (Column Properties) Categories Tab"><b>Categories</b> tab</a>.
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>SCATTER.OPTU
+(installed to the Origin EXE folder)
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<ul><li> When <b>Share Y</b> is selected, multiple layers in same graph only show Y axis in same row for left layer; when <b>Share X</b> is selected, multiple layers in same graph should only show bottom X axis in same column for bottom layer. </li>
+<li> When there is multiple panels in same graph for multiple input data, if there is a column selected for <b>Split Panels by</b> option, it will arrange each variable in different row, each panel factor combination in different column. When there is only variable or only panel factors, it will wrap the layers by ceil(sqrt(N)), N is number of layers.</li></ul>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2019b
+</td>
+<td><b>Last Update</b>: Origin 2026
+</td></tr></table>
+
+
+
+
+
+

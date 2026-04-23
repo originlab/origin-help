@@ -1,0 +1,173 @@
+﻿<h1 class="firstHeading">Dialog t-Test bei zwei Stichproben</h1>
+
+  <p class='urlname' style='display: none'>PSS-tTest2-Dialog</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">Ausgabe Ergebnisprotokoll</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Calculate"><span class="tocnumber">3</span> <span class="toctext">Berechnen</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Test_Specification"><span class="tocnumber">4</span> <span class="toctext">Testspezifikationen</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Options"><span class="tocnumber">5</span> <span class="toctext">Optionen</span></a></li>
+
+      <li class="toclevel-1 tocsection-6"><a href="#Output_Results"><span class="tocnumber">6</span> <span class="toctext">Ergebnisausgabe</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+
+  <ul>
+    <li><a href="../../UserGuide/Category/(PSS)_Two-Sample_t-Test.html" title="Category:(PSS) Two-Sample t-Test">Einführung: t-Test bei zwei Stichproben</a></li>
+
+    <li><a href="../../UserGuide/UserGuide/Algorithm_(PSS_tTest2).html" title="UserGuide:Algorithm (PSS tTest2)">Algorithmen: t-Test bei zwei Stichproben</a></li>
+
+    <li><a class="external text" href="../../Tutorial/Tutorial/Power_and_Sample_Size.html#.28PSS.29Two-Sample_t-Test">Tutorial: t-Test bei zwei Stichproben</a></li>
+  </ul>
+
+  <h2><a name="Results_Log_Output"></a><span class="mw-headline">Ausgabe Ergebnisprotokoll</span></h2>
+
+  <p>Aktivieren Sie das Kontrollkästchen, um die Ergebnisse im Ergebnisprotokoll auszugeben.</p>
+
+  <h2><a name="Calculate"></a><span class="mw-headline">Berechnen</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Trennschärfe</th>
+
+      <td>Die Trennschärfe für den festgelegten Stichprobenumfang wird berechnet.</td>
+    </tr>
+
+    <tr>
+      <th>Stichprobenumfang</th>
+
+      <td>Der Stichprobenumfang für eine vorgeschlagene Trennschärfe wird berechnet.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Test_Specification"></a><span class="mw-headline">Testspezifikationen</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>1. Gruppenmittelwert</th>
+
+      <td>Mittelwert der Gruppe 1</td>
+    </tr>
+
+    <tr>
+      <th>2. Gruppenmittelwert</th>
+
+      <td>Mittelwert der Gruppe 2</td>
+    </tr>
+
+    <tr>
+      <th>Standardabweichung</th>
+
+      <td>Gepoolte Standardabweichung für die zwei Stichproben</td>
+    </tr>
+
+    <tr>
+      <th>Alpha</th>
+
+      <td>Wahrscheinlichkeit der Zurückweisung der Nullhypothese, wenn es wahr ist</td>
+    </tr>
+
+    <tr>
+      <th>Hypothetische Trennschärfe(n)</th>
+
+      <td>Legen Sie eine mit Leerzeichen getrennte Liste der hypothetische(n) Trennschärfe(n) fest. Verfügbar, wenn <b>Berechnen</b> = <b>Stichprobenumfang</b>.</td>
+    </tr>
+
+    <tr>
+      <th>Hypothetische/r Stichprobenumfang/-umfänge</th>
+
+      <td>Legen Sie eine mit Leerzeichen getrennte Liste der hypothetischen Stichprobenumfang/-umfänge fest. Verfügbar, wenn <b>Berechnen</b> = <b>Trennschärfe</b>.</td>
+    </tr>
+
+    <tr>
+      <th>Alternativhypothese</th>
+
+      <td>
+        <p>Wählen Sie eine Alternativhypothese für den t-t-Test bei zwei Stichproben.</p>
+
+        <dl>
+          <dd>
+            <b>Nicht gleich</b>
+
+            <dl>
+              <dd>Ein beidseitiger Test wird durchgeführt. Verwendet, um zu prüfen, ob der <b>Mittelwert der 1. Gruppe</b> sich signifikant vom <b>Mittelwert der 2. Gruppe</b> unterscheidet.</dd>
+            </dl>
+          </dd>
+        </dl>
+
+        <dl>
+          <dd>
+            <b>Größer als</b>
+
+            <dl>
+              <dd>Ein rechtsseitiger Test wird durchgeführt.<br>
+              (Wenn <b>Berechnen</b> auf <b>Stichprobenumfang</b> gesetzt ist, sollte <b>Mittelwert der 1. Gruppe</b> größer sein als der <b>Mittelwert der 2. Gruppe</b> für eine Größer-als-Alternativhypothese.)</dd>
+            </dl>
+          </dd>
+        </dl>
+
+        <dl>
+          <dd>
+            <b>Kleiner als</b>
+
+            <dl>
+              <dd>Ein linksseitiger Test wird durchgeführt.<br>
+              (Wenn <b>Berechnen</b> auf <b>Stichprobenumfang</b> gesetzt ist, sollte <b>Mittelwert der 1. Gruppe</b> kleiner sein als der <b>Mittelwert der 2. Gruppe</b> für eine Kleiner-als-Alternativhypothese.)</dd>
+            </dl>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Options"></a><span class="mw-headline">Optionen</span></h2>
+
+  <p>Die zu verwendenden Bedienelemente, wenn zusätzliche Werte für Trennschärfe und Stichprobenumfang durch den Arbeitsblattdatensatz zur Verfügung stehen:</p>
+
+  <p>Beim Berechnen der Trennschärfe (<b>Berechnen</b> = <b>Trennschärfe</b>).</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Weitere Hypothetische Stichprobenumfänge</th>
+
+      <td>Aktivieren Sie diese Option, um die Eingabeelemente <b>Spalte der Hypothetischen Stichprobenumfänge</b> zu aktivieren.</td>
+    </tr>
+
+    <tr>
+      <th>Spalte der Hypothetischen Stichprobenumfänge</th>
+
+      <td>Legen Sie die Spalte der Werte für den Stichprobenumfang fest. Nur verfügbar, wenn <b>Weitere Hypothetische Stichprobenumfänge</b> aktiviert ist.</td>
+    </tr>
+  </table>
+
+  <p>Beim Berechnen des Stichprobenumfangs (<b>Berechnen</b> = <b>Stichprobenumfang</b>):</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Weitere Hypothetische Trennschärfen</th>
+
+      <td>Aktivieren Sie diese Option, um die Eingabeelemente <b>Spalte der Hypothetischen Stichprobenumfänge</b> zu aktivieren.</td>
+    </tr>
+
+    <tr>
+      <th>Spalte Hypothetische Trennschärfe(n)</th>
+
+      <td>Legen Sie die Spalte für die Trennschärfewerte fest. Nur verfügbar, wenn <b>Weitere Hypothetische Trennschärfe(n)</b> aktiviert ist.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Output_Results"></a><span class="mw-headline">Ergebnisse ausgeben</span></h2>
+
+  <p>Bestimmen Sie, wo das auszugebende Berichtsblatt erstellt wird. Weitere Einzelheiten finden Sie unter: <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="UserGuide:Analysis Report Sheets and Columns">Analyseberichtsblätter</a>.</p>

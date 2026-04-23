@@ -1,0 +1,41 @@
+﻿<h1 class="firstHeading">極座標ヒートマップ</h1>
+<p class='urlname' style='display: none'>Polar-Heatmap</p>
+<dl>
+<dd><a class="image"><img alt="Polar Heat Map.png" src="../images/Polar_Heatmap/Polar_Heat_Map.png" width="533" /></a></dd>
+</dl>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<ul>
+<li><b>ワークシート</b>：XY列またはXYZ列（全範囲または部分範囲）、または仮想行列を選択します。</li>
+</ul>
+<p>または</p>
+<ul>
+<li><b>行列</b>：1つの行列シート。複数オブジェクトを含むシートがサポートされています。</li>
+</ul>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>行列シートをアクティブにするか必要なデータをワークシート上で選択します。</p>
+<ul>
+<li>メニューから<span class="menu">作図&gt; 等高線：極座標ヒートマップ θ(X)r(Y)</span>を選択します。</li>
+</ul>
+<p>XYデータから極座標ヒートマップを作成すると、<a class="external text" href="../../XFunction/X-Function/Plot_heatmapxy.html"><b>plot_heatmapxy</b></a>ダイアログが開きます。</p>
+<p>XYZデータから極座標ヒートマップを作成すると、<a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html"><b>plot_heatmapxyz</b></a> ダイアログが開きます。</p>
+<p>Zを含まない複数のY列から極座標ヒートマップを作成すると、<a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html"><b>plotvm</b></a> ダイアログが開きます。</p>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>PolarheatmapMat.otpu</p>
+<p>(Originのプログラムフォルダにインストールされています。)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>極座標ヒートマップは<a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ">ヒートマップ</a>と似ていますが、極座標にプロットされます。</p>
+<ul>
+<li><b>作図&gt;等高線：極座標ヒートマップ θ(X)r(Y)を</b>選択すると、Xファンクションダイアログ<b>plot_heatmapxy</b>、<b>plot_heatmapxyz</b>、<b>plotvm</b>でラベルのすべての<b>X</b>および<b>Y</b>が<b>θ</b> および<b>R</b>に変更されます。</li>
+<li>ソースZ列または行列にRGB値を持つ極座標ヒートマップを作成することができます。</li>
+</ul>

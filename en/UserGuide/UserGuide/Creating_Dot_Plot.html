@@ -1,0 +1,138 @@
+<h1 class="firstHeading">17.2.12 Creating Dot Plot</h1><p class='urlname' style='display: none'>Create-Dot-Plot</p>
+<p>Dot Plot is a statistical chart consisting of data points plotted on a fairly simple scale, typically using filled in circles.
+</p><p>Origin supports to plot the dot plot from the <b>Plot</b> menu:
+</p>
+<ul><li> <b>Plot &gt; Statistical&#160;: <a href="../../UserGuide/UserGuide/Dot_Plot.html" title="UserGuide:Dot Plot">Dot Plot</a></b></li>
+<li> <b>Plot &gt; Statistical&#160;: <a href="../../UserGuide/UserGuide/Stacked_Dot_Plots.html" title="UserGuide:Stacked Dot Plots">Stacked Dot Plots</a></b></li>
+<li> <b>Plot &gt; Categorical&#160;: <a href="../../UserGuide/UserGuide/Grouped_Dot_Plots.html" title="UserGuide:Grouped Dot Plots">Grouped Dot Plots</a></b></li>
+<li> <b>Plot &gt; Categorical&#160;: <a href="../../UserGuide/UserGuide/Grouped_Stacked_Dot_Plots.html" title="UserGuide:Grouped Stacked Dot Plots">Grouped Stacked Dot Plots</a></b></li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Dot_Plot_Types"><span class="tocnumber">1</span> <span class="toctext">Dot Plot Types</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_Dot_Plots"><span class="tocnumber">2</span> <span class="toctext">Creating Dot Plots</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Input"><span class="tocnumber">2.1</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Group"><span class="tocnumber">2.2</span> <span class="toctext">Group</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Plot_Order"><span class="tocnumber">2.3</span> <span class="toctext">Plot Order</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Stack"><span class="tocnumber">2.4</span> <span class="toctext">Stack</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Arrange_Points"><span class="tocnumber">2.5</span> <span class="toctext">Arrange Points</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Horizontal_Margin"><span class="tocnumber">2.6</span> <span class="toctext">Horizontal Margin</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Output"><span class="tocnumber">2.7</span> <span class="toctext">Output</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Customizing_Dot_Plots"><span class="tocnumber">3</span> <span class="toctext">Customizing Dot Plots</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Dot_Plot_Types"></a><span class="mw-headline">Dot Plot Types</span></h2>
+<table class="simple" style="width:850px">
+
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 1.png" src="../images/Creating_Dot_Plot/350px-DotPlot_1.png?v=96769" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of One Y
+</td>
+<td> <b>Input</b>: One Y column<br />
+<p><b>Menu</b>: <b>Plot &gt; Statistical&#160;: Dot Plot</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 2.png" src="../images/Creating_Dot_Plot/350px-DotPlot_2.png?v=96775" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of One Y With Groups
+</td>
+<td> <b>Input</b>: One Y column and One Grouping column<br />
+<p><b>Menu</b>: <b>Plot &gt; Categorical&#160;: Grouped Dot Plots</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 3.png" src="../images/Creating_Dot_Plot/350px-DotPlot_3.png?v=96776" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of One Y With Stacked Groups
+</td>
+<td> <b>Input</b>: One Y column and Two Grouping columns<br />
+<p><b>Menu</b>: <b>Plot &gt; Categorical&#160;: Grouped Stacked Dot Plots</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 5.png" src="../images/Creating_Dot_Plot/350px-DotPlot_5.png?v=96777" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of Multiple Ys
+</td>
+<td> <b>Input</b>: Multiple Y columns(2 Columns in This Example)<br />
+<p><b>Menu</b>:<b>Plot &gt; Statistical&#160;: Dot Plot</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 4.png" src="../images/Creating_Dot_Plot/350px-DotPlot_4.png?v=96773" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of Multiple Ys, Stacked
+</td>
+<td> <b>Input</b>: Multiple Y columns(2 Columns in Example)<br />
+<p><b>Menu</b>: <b>Plot &gt; Statistical&#160;: Stacked Dot Plots</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 6.png" src="../images/Creating_Dot_Plot/350px-DotPlot_6.png?v=96779" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of Multiple Ys, With Groups
+</td>
+<td> <b>Input</b>: Multiple Y columns(2 Columns in Example) and One Grouping column<br />
+<p><b>Menu</b>: <b>Plot &gt; Categorical&#160;: Grouped Dot Plots</b><br />
+</p>
+</td></tr>
+<tr>
+<td align="center"> <a  class="image"><img alt="DotPlot 7.png" src="../images/Creating_Dot_Plot/350px-DotPlot_7.png?v=96780" width="350"   /></a>
+</td>
+<td align="center"> Dot Plot of Multiple Ys, With Stacked Groups
+</td>
+<td> <b>Input</b>: Multiple Y columns(2 Columns in Example) and Two Grouping columns<br />
+<p><b>Menu</b>: <b>Plot &gt; Categorical&#160;: Grouped Stacked Dot Plots</b><br />
+</p>
+</td></tr></table>
+<h2><a name="Creating_Dot_Plots"></a><span class="mw-headline">Creating Dot Plots</span></h2>
+<p>When you plot a Dot Plot with groups, the X-function <b>plot_gdot</b> will open to let you decide how to plot the dots:
+</p>
+<dl><dd><a  class="image"><img alt="Grouped Dot dialog.png" src="../images/Creating_Dot_Plot/Grouped_Dot_dialog.png?v=96792" width="402"  /></a></dd></dl>
+<h3><a name="Input"></a><span class="mw-headline">Input</span></h3>
+<p>Select the source Y data column for counting. You are allowed to select multiple columns.
+</p>
+<h3><a name="Group"></a><span class="mw-headline">Group</span></h3>
+<p>Select the grouping column(s).
+</p>
+<h3><a name="Plot_Order"></a><span class="mw-headline">Plot Order</span></h3>
+<p>Specify how to sort the data in Output sheet and plot grouped dot plots when there are multiple Input columns. This control is same as <b>Sort Output Columns By</b> in the <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns"><b>Unstack Columns</b></a> dialog. 
+</p><p>It will be disable when <b>Stack</b> control is set to <b>Input Variable</b>, <b>Last Group</b> or <b>All Groups</b>. Because selecting <b>Stack Input Variable</b> will use <b>Group Info First</b>; selecting <b>Last Group</b> or <b>All Groups</b> will use <b>Input Variable First</b>.
+</p>
+<h3><a name="Stack"></a><span class="mw-headline">Stack</span></h3>
+<p>Specify whether stack the dot plots and how to stack them in each group.
+</p>
+<ul><li> When <b>Stack</b> is <i><b>None</b></i>, <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns">split source input variable data using group columns</a>, plot all of them as grouped dot. When Input is multiple variables+groups, if Plot Order is Input Variable First, set subgroup to last group label row in the <i>Output</i> sheet; If Plot Order is Group Info First, set subgroup to Long Name row in the <i>Output</i> sheet. When Input is one variable+multiple groups, set subgroup to last group label row in the <i>Output</i> sheet.</li>
+<li> When <b>Stack</b> is <i><b>Input Variable/Last Group/All Group</b></i>, <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns">split source input variable data using group columns</a>, plot all of them as grouped dot. Select <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Stack_Tab.html#Cumulative" title="UserGuide:The (Plot Details) Stack Tab">Cumulative for Stack</a>, and set <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="UserGuide:The (Plot Details) Group Tab">Subgrouping to By Column Label</a> and Column Label is the user parameter of last group/the group above last group/Long Name in the <i>Output</i> sheet.</li>
+<li> When <b>Stack</b> is <i><b>All</b></i>, same as <i><b>Input Variable/Last Group/All Group</b></i>, but without setting Subgrouping.</li></ul>
+<h3><a name="Arrange_Points"></a><span class="mw-headline">Arrange Points</span></h3>
+<p>Specify how to arrange the dots:
+</p>
+<ul><li> <b>Density</b>: The point will be arranged as that in a column scatter, but the points will be aligned to base line of each plot. Actually there is no bin for data, the data arrangement relate to size of data point.</li>
+<li> <b>Histogram</b>: Just like a histogram plot, but show number of points instead of bars. It will split the data by bins, count the points in each bin, and then plot symbols from base line according to the count.</li></ul>
+<p>This control is same as <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Arrange_Points_Control_for_Dot_Plot" title="UserGuide:Customizing the Box Chart Data Tab Controls"><b>Arrange Points</b></a> control in <b>Data</b> Tab of <b>Plot Details</b>.
+</p>
+<h3><a name="Horizontal_Margin"></a><span class="mw-headline">Horizontal Margin</span></h3>
+<p>Specify the horizontal margin to fit page to layer, for making the tick labels show well especially when there are multiple table rows on Y axis.
+</p>
+<h3><a name="Output"></a><span class="mw-headline">Output</span></h3>
+<p>Output the unstacked input columns using specified grouping column(s).
+</p>
+<h2><a name="Customizing_Dot_Plots"></a><span class="mw-headline">Customizing Dot Plots</span></h2>
+<p>Once you created a dot plot, you can customzie the dot plot with Plot Details dialog:
+</p>
+<ul><li> <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Symbol_Tab.html" title="UserGuide:The (Plot Details) Symbol Tab">The (Plot Details) Symbol Tab</a></li>
+<li> <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="UserGuide:The (Plot Details) Spacing Tab">The (Plot Details) Spacing Tab</a></li>
+<li> <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html" title="UserGuide:Customizing the Box Chart Data Tab Controls">The (Plot Details) Data Tabl</a></li></ul>
+<p>And you can also click the plot element to customize it with Mini toolbar.
+</p>
+
+
+
+
+

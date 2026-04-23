@@ -1,0 +1,53 @@
+﻿<h1 class="firstHeading">ページ / レイヤ / プロットの階層</h1>
+<p class="urlname" style="display: none;">Page-Layer-Plot-Hierarchy</p>
+<p>すべてのOriginグラフウィンドウは、組込み、オンラインまたはユーザが修正したグラフテンプレートを使って作成されます。 すべてのOriginグラフウィンドウの内容は<b>ページ&gt;レイヤ&gt;プロット</b>の階層構造になっており、ページは最上位のレベルです（<b>作図の詳細</b>ダイアログと<b>オブジェクトマネージャ</b>ウィンドウで、Graph1アイコンで表されます）。プロットレベルの下に特別なポイントを追加することもできる。 
+ </p>
+<dl>
+	<dd><a class="image"><img alt="The Page Layer Plot Hierarchy-1-vNext.png" 
+								 src="../images/The_Page_Layer_Plot_Hierarchy/The_Page_Layer_Plot_Hierarchy-1.png" 
+								 width="752" border="0" /></a></dd>
+</dl>
+<p><i><b>一般に</b></i> </p>
+<ul>
+	<li>ページには少なくとも1つのグラフレイヤが含まれている必要があります。複数のレイヤを含めることもできます。</li>
+	<li>レイヤは基本的に1つ以上のデータプロットを含みます。プロットはグループ化され、グループ化インジケータ（<a class="image"><img 
+	 alt="PlotGroup Indicator 1.png" src="../images/The_Page_Layer_Plot_Hierarchy/PlotGroup_Indicator_1.png" 
+	 width="18" border="0" /></a>と<a class="image"><img alt="PlotGroup Indicator 2.png" 
+														 src="../images/The_Page_Layer_Plot_Hierarchy/PlotGroup_Indicator_2.png" 
+														 width="19" border="0" /></a>が作図の詳細に交互に、<b>g#</b>がオブジェクトマネージャに表示されます）とともに表示されます。 
+	 
+	<dl>
+		<dd><a class="image"><img alt="The Page Layer Plot Hierarchy 02.png" 
+									 src="../images/The_Page_Layer_Plot_Hierarchy/650px-The_Page_Layer_Plot_Hierarchy_02.png" 
+									 width="650" border="0" /></a></dd>
+	</dl></li>
+	<li>データプロットは、基本的に1つ以上のデータポイントで構成されます。(2Dグラフでは、データポイントは1セットのXYデータまたはエラーバーやデータラベル、3DグラフではXYZの3要素を表します。)</li>
+	<li><a href="../../UserGuide/Category/Customizing_Plot_Elements.html#Customizing_Individual_Data_Points" 
+			 title="カテゴリ：プロットの要素を編集する">特別な点</a>はグラフのプロット後に手動で作成されます。1つのプロットに複数の特別な点を追加できます。</li>
+</ul>
+<p>ページ&gt;レイヤ&gt;プロットの階層構造にある各オブジェクトは、別のオブジェクトや属性と結びついています。どのオブジェクトや属性がページ 
+ &gt; レイヤ &gt; プロットの階層構造の各レベルと論理的に結びついているかを知っておくと役立ちます。各レイヤとプロットの左側にチェックボックスがあり、それぞれを表示(チェック)したり非表示に(チェック無し)にできます。 
+ </p>
+<p><i><b>例えば、</b></i> </p>
+<ul>
+	<li><b>グラフページの大きさ</b>を変更し、グラフをエクスポートした画像サイズの寸法を正確にするには、グラフページの属性を編集する必要があります。 
+	 グラフページに関する説明は、『<a href="../../UserGuide/Category/Customizing_Graph_Page_Elements.html" 
+						 title="カテゴリー:グラフページの構成要素を編集">グラフページの要素を編集する</a>』をご覧下さい。</li>
+</ul>
+<ul>
+	<li>グラフの<b>軸スケール</b>を編集する場合、軸はグラフレイヤの一部であることを知っておくと役に立ちます。レイヤは、移動可能で、大きさを変更でき、(1)XおよびY(任意でZ)からなる1セットの座標軸、(2)1つ以上のデータプロット、(3)軸タイトル、テキストラベル、描画オブジェクト、で構成されています。グラフレイヤに関する説明は、『<a 
+	 href="../../UserGuide/Category/Customizing_Graph_Layer_Elements.html" 
+	 title="カテゴリー:グラフレイヤの構成要素を編集">グラフレイヤの要素を編集する</a>』をご覧下さい。</li>
+</ul>
+<ul>
+	<li>例えば、散布図の<b>シンボルの形状</b>を変更する場合、シンボルの形状はプロットの属性であることを知っておくと役に立ちます。 
+	 グラフプロットに関する説明は、『<a href="../../UserGuide/Category/Customizing_Plot_Elements.html" 
+						 title="カテゴリ：プロットの要素を編集する">グラフプロットの要素を編集する</a>』をご覧下さい。</li>
+</ul>
+<p>グラフページの属性は、そのページの中のすべてのグラフレイヤに適用され、グラフレイヤの属性は、そのグラフレイヤにあるすべてのプロットに適用されます。 
+ プロットのレベルにおいては、<a href="../../UserGuide/Category/Customizing_Plot_Elements.html#Customizing_Individual_Data_Points" 
+					 title="カテゴリ：プロットの要素を編集する"><i>1つのデータポイントのみ</i></a>を編集している場合を除いて、プロットの属性がそのプロットのすべてのデータポイントに適用されます。（2D散布図と線+シンボルにのみ適用されます）。 
+ </p>
+<p>また、Originには、再描画スピードを高速にしたりグラフの表示をより正確にするための表示モードがあります。<a href="../../UserGuide/UserGuide/Available_Page_Viewing_Modes_Speed_vs_Accuracy.html" 
+															 title="ユーザガイド：ページビューモードのオプション　｢スピード｣対｢正確さ｣">利用可能なページビューモード：｢スピード｣対｢正確さ｣</a> 
+ で詳細を確認してください。 </p>

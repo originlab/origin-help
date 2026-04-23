@@ -1,0 +1,345 @@
+﻿<h1 class="firstHeading">Pivot für Zeitreihen</h1>
+
+  <p class='urlname' style='display: none'>Time-Series-Pivot</p>
+
+  <p>Origin unterstützt das Hilfsmittel Pivot für Zeitreihen, um eine Pivot-Tabelle zu erstellen und mit ihr die Datenzusammenfassung (der Statistik), basierend auf einer Datums-/Zeitspalte, zu visualisieren.</p>
+
+  <p><span class='headerInParagraph'>Um dieses Hilfsmittel zu öffnen, während eine Arbeitsmappe aktiviert ist,</span></p>
+
+  <ul>
+    <li>wählen Sie <b>Restrukturieren: Pivot für Zeitreihen ...</b> im Menü.</li>
+  </ul>
+
+  <p>Oder:</p>
+
+  <ul>
+    <li>Führen Sie <code>wtspivot -d;</code> im Skript- und Befehlsfenster aus.</li>
+  </ul>
+
+  <p>Dieses Hilfsmittel verwendet die X-Funktion <a class="external text" href="../../XFunction/X-Function/Wtspivot.html">Wtspivot</a>.</p>
+
+  <p><a class="image"><img alt="Time Series Pivot 01.png" src="../images/Time_Series_Pivot/Time_Series_Pivot_01.png" width="943"></a></p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Recalculate"><span class="tocnumber">1</span> <span class="toctext">Neuberechnen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Source"><span class="tocnumber">2</span> <span class="toctext">Quelle</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Rows"><span class="tocnumber">3</span> <span class="toctext">Zeilen</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Columns"><span class="tocnumber">4</span> <span class="toctext">Spalten</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Date.2FTime_Window"><span class="tocnumber">5</span> <span class="toctext">Datums-/Zeitfenster</span></a></li>
+
+      <li class="toclevel-1 tocsection-6">
+        <a href="#Aggregate_by"><span class="tocnumber">6</span> <span class="toctext">Aggregieren nach</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-7"><a href="#Custom"><span class="tocnumber">6.1</span> <span class="toctext">Benutzerdefiniert</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-8"><a href="#Show_Zeros_when_Empty"><span class="tocnumber">7</span> <span class="toctext">Nullen zeigen, wenn leer</span></a></li>
+
+      <li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">8</span> <span class="toctext">Ausgabe</span></a></li>
+
+      <li class="toclevel-1 tocsection-10">
+        <a href="#Samples"><span class="tocnumber">9</span> <span class="toctext">Beispiele</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-11"><a href="#Summarize_Data_Row-wise_Only"><span class="tocnumber">9.1</span> <span class="toctext">Daten nur zeilenweise zusammenfassen</span></a></li>
+
+          <li class="toclevel-2 tocsection-12"><a href="#Summarize_Data_Both_Column_and_Row-wise"><span class="tocnumber">9.2</span> <span class="toctext">Daten sowohl spalten- als auch zeilenweise zusammenfassen</span></a></li>
+
+          <li class="toclevel-2 tocsection-13"><a href="#Summarize_Data_by_Fiscal_Year"><span class="tocnumber">9.3</span> <span class="toctext">Daten nach Fiskaljahr zusammenfassen</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Recalculate"></a><span class="mw-headline">Neuberechnen</span></h2>
+
+  <p>Legen Sie den <a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="UserGuide:Recalculating Analysis Results">Neuberechnungsmodus</a> fest.</p>
+
+  <h2><a name="Source"></a><span class="mw-headline">Quelle</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Quellzeit</th>
+
+      <td>Wählen Sie eine Spalte mit dem Datums-/Zeitdatensatz.</td>
+    </tr>
+
+    <tr>
+      <th>Quelldaten</th>
+
+      <td>Die Auswahl der Datensätze wird im Ergebnisblatt aggregiert.</td>
+    </tr>
+  </table>
+
+  <h2><a name="Rows"></a><span class="mw-headline">Zeilen</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Aggregationsintervall</th>
+
+      <td>
+        Legen Sie das Aggregationsintervall der Zeit in den Zeilen der Pivot-Tabelle fest. Dieses Zeitintervall wird in der ersten Spalte der Pivot-Tabelle gezeigt.
+
+        <p>Sie können diese Optionen in dieser Auswahlliste auswählen:</p>
+
+        <dl>
+          <dd><a class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png" width="135"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zeitraum</th>
+
+      <td>
+        Legen Sie die Zeitgruppe des Aggregationsintervalls fest.
+
+        <p>Sie können entsprechend des ausgewählten <b>Aggregationsintervalls</b> den passenden Zeitraum wählen.</p>
+
+        <ul>
+          <li>Wenn <b>10yr:Decade</b> als <b>Aggregationsintervall</b> ausgewählt ist, kann der <b>Zeitraum</b> auf &lt;Keine&gt; festgelegt bleiben.</li>
+
+          <li>Wenn <b>Year</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>10 yr: Decade</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>3 Month: Quarter</b>, <b>Month</b>, <b>Week</b> oder <b>Day</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Year</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>Week</b> oder <b>Day</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Month</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>Day</b> oder <b>Hour</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Week</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>30 min</b>, <b>15min</b> oder <b>Minute</b> als <b>Aggregationsintervall</b> ausgewählt ist, müssen Sie <b>Day</b> oder <b>Hour</b> als <b>Zeitraum</b> auswählen. Der <b>Zeitraum</b> kann nicht auf &lt;Keine&gt; gesetzt bleiben.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Leere entfernen</th>
+
+      <td>Aktivieren Sie dieses Kontrollkästchen, um die leeren Zeilen zu entfernen.</td>
+    </tr>
+
+    <tr>
+      <th>Anfang/Ende</th>
+
+      <td>
+        Legen Sie die Anfangs- und Endzeit der Zeilen der Pivot-Tabelle fest. Das Zeitformat von <b>Anfang</b> und <b>Ende</b> basiert auf dem ausgewählten <b>Aggregationsintervall</b>. Ein blauer Hinweis wird diesbezüglich oberhalb des Bearbeitungsfelds gezeigt. Wenn das Bearbeitungsfeld leer bleibt, ist die Standardzeit Anfangs- und Endzeit der Tabelle.
+
+        <p><br>
+        Unter der Einstellung für <b>Zeilen</b> wird das Feld <b>Anfang/Ende</b> in den folgenden Situationen verborgen.</p>
+
+        <ul>
+          <li>Wenn <b>Aggregationsintervall = 10 yr: Decade</b></li>
+
+          <li>Wenn <b>Aggregationsintervall = 3 Month: Quarter</b> und <b>Zeitraum=&lt;Keine&gt;</b></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Benutzerdefiniertes Format</th>
+
+      <td>
+        Passen Sie das Zeitformat, das in der ersten Spalte gezeigt wird, benutzerdefiniert an außer bei einigen Kombinationen von <b>Aggregationsintervall</b> und <b>Zeitraum</b>.
+
+        <p>Zum Beispiel: Wenn <b>Aggregationsintervall = Month</b> und <b>Zeitraum = Year</b>, kann dieses Format nicht angepasst werden.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Columns"></a><span class="mw-headline">Spalten</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Aggregationsintervall</th>
+
+      <td>
+        Legen Sie das Aggregationsintervall der Zeit in den Spalten der Pivot-Tabelle fest. Dieses Zeitintervall wird in der Beschriftungszeile <b>Kommentar</b> der Pivot-Tabelle gezeigt.
+
+        <p>Sie können diese Optionen in dieser Auswahlliste auswählen:</p>
+
+        <dl>
+          <dd><a class="image"><img alt="Aggregation Interval.png" src="../images/Time_Series_Pivot/Aggregation_Interval.png" width="135"></a></dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Zeitraum</th>
+
+      <td>
+        Legen Sie die Zeitgruppe des Aggregationsintervalls fest.
+
+        <p>Sie können entsprechend des ausgewählten <b>Aggregationsintervalls</b> den passenden Zeitraum wählen.</p>
+
+        <ul>
+          <li>Wenn <b>10yr:Decade</b> als <b>Aggregationsintervall</b> ausgewählt ist, kann der <b>Zeitraum</b> auf &lt;Keine&gt; festgelegt bleiben.</li>
+
+          <li>Wenn <b>Year</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>10 yr: Decade</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>3 Month: Quarter</b>, <b>Month</b>, <b>Week</b> oder <b>Day</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Year</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>Week</b> oder <b>Day</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Month</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>Day</b> oder <b>Hour</b> als <b>Aggregationsintervall</b> ausgewählt ist, können Sie <b>Week</b> als <b>Zeitraum</b> auswählen.</li>
+
+          <li>Wenn <b>30 min</b>, <b>15min</b> oder <b>Minute</b> als <b>Aggregationsintervall</b> ausgewählt ist, müssen Sie <b>Day</b> oder <b>Hour</b> als <b>Zeitraum</b> auswählen. Der <b>Zeitraum</b> kann nicht auf &lt;Keine&gt; gesetzt bleiben.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Leere entfernen</th>
+
+      <td>Aktivieren Sie dieses Kontrollkästchen, um die leeren Spalten zu entfernen.</td>
+    </tr>
+
+    <tr>
+      <th>Zeilenanfang folgen</th>
+
+      <td>
+        Wenn der Anfangswert der <b>Zeilen</b> größer ist als der Endwert und das <b>Aggregationsintervall der Spalten</b> gleich dem <b>Zeitraum der Zeilen</b> ist. Die Option wird im Dialog gezeigt.
+
+        <p>Wenn der <b>Zeitraum der Zeilen</b> auf <i>Year</i> oder <i>Week</i> etc. gesetzt ist, aber nicht am klassischen Jahres- oder Wochenanfang beginnt, können Sie diese Option aktivieren, um die Daten nach Fiskaljahr zusammenzufassen. Wenn die Option deaktiviert ist, werden alle Daten des/r gleichen Kalenderjahres/-woche stattdessen in eine Spalte in einer Spalte abgelegt.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Anfang/Ende</th>
+
+      <td>
+        Legen Sie die Anfangs- und Endzeit der Spalten der Pivot-Tabelle fest. Das Zeitformat von <b>Anfang</b> und <b>Ende</b> basiert auf dem ausgewählten <b>Aggregationsintervall</b>. Ein blauer Hinweis wird diesbezüglich oberhalb des Bearbeitungsfelds gezeigt. Wenn das Bearbeitungsfeld leer bleibt, ist die Standardzeit Anfangs- und Endzeit der Tabelle.
+
+        <p><br>
+        Unter der Einstellung für <b>Spalten</b> wird das Feld <b>Anfang/Ende</b> in den folgenden Situationen verborgen.</p>
+
+        <ul>
+          <li>Wenn <b>Aggregationsintervall = 10 yr: Decade</b></li>
+
+          <li>Wenn <b>Aggregationsintervall = Year/3 Month: Quarter/Week/Day/Hour</b> und <b>Zeitraum=&lt;Keine&gt;</b></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Benutzerdefiniertes Format</th>
+
+      <td>
+        Passen Sie das Zeitformat, das in der Beschriftungszeile <b>Kommentar</b> gezeigt wird, benutzerdefiniert an außer bei einigen Kombinationen von <b>Aggregationsintervall</b> und <b>Zeitraum</b>.
+
+        <p>Zum Beispiel: Wenn <b>Aggregationsintervall = Month</b> und <b>Zeitraum = Year</b>, kann dieses Format nicht angepasst werden.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Date.2FTime_Window"></a><span class="mw-headline">Datums-/Zeitfenster</span></h2>
+
+  <p>Legen Sie den Datums-/Zeitfensterbereich fest, um den Quelldatenbereich zu steuern, der aggregiert worden ist.</p>
+
+  <h2><a name="Aggregate_by"></a><span class="mw-headline">Aggregieren nach</span></h2>
+
+  <p>Wählen Sie die Aggregationsmethode, um die <b>Quelldaten</b> zusammenzufassen, einschließlich</p>
+
+  <h3><a name="Custom"></a><span class="mw-headline">Benutzerdefiniert</span></h3>
+
+  <p>Nur verfügbar, wenn <b>Aggregieren nach</b> auf <b>Benutzerdefiniert</b> gesetzt ist. Legen Sie die Zusammenfassungsmethode im Kombinationsfeld fest. Die dreieckige Schaltfläche neben dem Bearbeitungsfeld bietet einige häufig verwendete Statistikgrößen. Sie können sie mischen und Ihre eigene Zusammenfassungsmethode zusammenstellen. Sie können auch alle Methoden hinzufügen oder die Auswahl durch dieses Menü zurücksetzen.</p>
+
+  <p><a class="image"><img alt="Aggregate Custom.png" src="../images/Time_Series_Pivot/Aggregate_Custom.png" width="212"></a></p>
+
+  <h2><a name="Show_Zeros_when_Empty"></a><span class="mw-headline">Nullen zeigen, wenn leer</span></h2>
+
+  <p>Legen Sie fest, ob die fehlenden Werte in der Pivot-Tabelle als Nullen angezeigt werden sollen.</p>
+
+  <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+
+  <p>Legen Sie fest, wo die Pivot-Tabelle mit den Ergebnissen der Zeitreihen <b>tsPivot</b> ausgegeben wird. Klicken Sie auf die dreieckige Schaltfläche, um die Ausgabemethode festzulegen.</p>
+
+  <p><b>[&lt;Eingabe&gt;]&lt;Eingabe&gt;</b>: Die Pivot-Tabelle der Zeitreihen wird in das aktuelle Arbeitsblatt eingefügt.</p>
+
+  <p><b>&lt;neu&gt;</b>: Die Pivot-Tabelle der Zeitreihen wird in ein neues Blatt der aktuellen Arbeitsmappe eingefügt.</p>
+
+  <p><b>[&lt;neu&gt;]&lt;neu&gt;</b>: Die Pivot-Tabelle der Zeitreihen wird in eine neue Arbeitsmappe eingefügt.</p>
+
+  <p>&#160;</p>
+
+  <h2><a name="Samples"></a><span class="mw-headline">Beispiele</span></h2>
+
+  <h3><a name="Summarize_Data_Row-wise_Only"></a><span class="mw-headline">Daten nur zeilenweise zusammenfassen</span></h3>
+
+  <p><i>Wir haben hier die täglichen maximalen Temperaturdaten von 1970-01-01 bis 2023-12-31.</i></p>
+
+  <p><font color="blue"><b>Beispiel 1</b>:</font>Um den Mittelwert der max. Temperatur in jedem Monat zwischen 1970 und 2023 zusammenzufassen:</p>
+
+  <ul>
+    <li>Setzen Sie das <b>Aggregationsintervall: Month</b> unter <b>Zeilen</b>. Danach können Sie die Daten der max. Temperatur in jedem Monat zusammenfassen. Es gibt keinen <b>Zeitraum</b>. Jeder Monat der verschiedenen Jahre hat eine separate Zeile.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 01.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_01.png" width="850"></a></dd>
+  </dl>
+
+  <ul>
+    <li>Setzen Sie das <b>Aggregationsintervall: Month</b> und den <b>Zeitraum: Year</b> unter <b>Zeilen</b>. Danach wird der jeweils gleiche Monat der unterschiedlichen Jahre zusammengefasst, so dass sich in der Ausgabe nur 12 Zeilen befinden.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 02.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_02.png" width="850"></a></dd>
+  </dl>
+
+  <p>&#160;</p>
+
+  <h3><a name="Summarize_Data_Both_Column_and_Row-wise"></a><span class="mw-headline">Daten sowohl spalten- als auch zeilenweise zusammenfassen</span></h3>
+
+  <p><i>Wir haben hier die täglichen maximalen Temperaturdaten von 1970-01-01 bis 2023-12-31.</i></p>
+
+  <p><font color="blue"><b>Beispiel 2</b>:</font>Um den Mittelwert der max. Temperatur von jedem Monat für jedes Jahrzehnt zusammenzufassen:</p>
+
+  <ul>
+    <li>Setzen Sie das <b>Aggregationsintervall: Month</b> und den <b>Zeitraum: Year</b> unter <b>Zeilen</b> und das <b>Aggregationsintervall: 10 yr: Decade</b> unter <b>Spalten</b>.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 03.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_03.png" width="850"></a></dd>
+  </dl>
+
+  <ul>
+    <li>Wenn Sie sich nur auf den Temperaturwechsel im Winter konzentrieren möchten, folgen Sie den obigen Einstellungen und setzen Sie dann <b>Anfang: Dec</b> und <b>Ende: Feb</b> unter <b>Zeilen</b>.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 04.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_04.png" width="850"></a></dd>
+  </dl>
+
+  <h3><a name="Summarize_Data_by_Fiscal_Year"></a><span class="mw-headline">Daten nach Fiskaljahr zusammenfassen</span></h3>
+
+  <p>Wenn die zusammengefassten Daten nicht beim klassischen Anfang des Jahres oder der Woche beginnen und der <b>Zeitraum der Zeilen</b> auf Year oder Week etc. festgelegt ist, dann können Sie <b>Zeilenanfang folgen</b> verwenden, um die Daten für das Fiskaljahr zusammenzufassen.</p>
+
+  <p><i>Wir haben hier Beispieldaten für die Verspätungen des Schuljahres von 9/1/2022 bis 6/25/2025.</i> Dieses Fiskaljahr beginnt am 1. September und endet am 30. Juni des nächsten Jahres.</p>
+
+  <p><font color="blue"><b>Beispiel 3</b>:</font>Um den Summenwert der Verspätungen in jedem Monat für das Fiskaljahr zusammenzufassen:</p>
+
+  <ul>
+    <li>Setzen Sie das <b>Aggregationsintervall: Month</b> und den <b>Zeitraum: Year</b> unter <b>Zeilen</b> und das <b>Aggregationsintervall: Year</b> unter <b>Spalten</b> und aktivieren Sie die Option <b>Zeilenanfang folgen</b>.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 05.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_05.png" width="850"></a></dd>
+  </dl>
+
+  <ul>
+    <li>Wenn Sie den Datenbereich für den Datensazu festlegen möchten, folgen Sie den obigen Einstellungen und füllen Sie den Datums-/Zeitbereich unter <b>Datums-/Zeitfenster</b> zum Beispiel mit von 4/1/2023 bis 12/1/2024 aus.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Time Series Pivot Sample 06.png" src="../images/Time_Series_Pivot/850px-Time_Series_Pivot_Sample_06.png" width="850"></a></dd>
+  </dl>

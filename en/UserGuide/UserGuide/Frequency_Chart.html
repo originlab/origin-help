@@ -1,0 +1,126 @@
+<h1 class="firstHeading">29.4.14 Frequency Chart</h1><p class='urlname' style='display: none'>Frequency-Chart</p>
+<dl><dd><a  class="image"><img alt="Frequency Chart 01.png" src="../images/Frequency_Chart/Frequency_Chart_01.png?v=98454" width="787"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_.22plot_frequency.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">The "plot_frequency" dialog box</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select at least one column to count unique values, and create column/bar/pie/doughnut/sunburst plot.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>From the menu, choose <span class="menu">Plot &gt; Bar, Pie, Area: Frequency Chart</span>. The dialog <b>plot_frequency</b> will pop up.
+</p>
+<h3><a name="The_.22plot_frequency.22_dialog_box"></a><span class="mw-headline">The "plot_frequency" dialog box</span></h3>
+<p><a  class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png?v=98540" width="800"   /></a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Input
+</th>
+<td>Choose at least one column as source data to calculate and plot the frequency chart.
+</td></tr>
+<tr>
+<th>Frequncy
+</th>
+<td>Choose one column or columns as frequency data as optional input.
+<p>When <b>Multiple Data</b> is set to <b>Separate Graphs</b>, this option allows multiple columns to be selected as frequency data. The number of columns could be 1 or same as the number of Input columns. 
+</p>
+<ul><li> When you selected only one column for this option, then every input column will take this column as frequency. </li>
+<li> When you selected multiple columns for this option, each input column will take one selected column as frequency data in order. And, the Y value is the  sum of frequency data by input category.</li></ul>
+<p>When  <b>Multiple Data</b> is set to <b>Nested Count in Same Graph</b>, this option only allows one column to be selected.
+</p>
+</td></tr>
+<tr>
+<th>Multiple Data
+</th>
+<td>Specify how to plot the selected multiple data columns.
+<ul><li> <b>Separate Graphs</b>: Plot the multiple input columns into separate graphs.</li>
+<li> <b>Nested Count in Same Graph</b>:Count the nested counts of last input column based on all selected columns, and then plot them on the same graph.</li></ul>
+</td></tr>
+<tr>
+<th>Split Panels by
+</th>
+<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a frequency chart for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
+<p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma; Meanwhile, if <b>Multiple Data</b> is set to <b>Nested Count in Same Graph</b>, this option will be hidden.
+</p>
+</td></tr>
+<tr>
+<th>Split Pages by
+</th>
+<td>Once this check box has been checked, you can select another grouping column to split the input data and created frequency column chart in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages.
+</td></tr>
+<tr>
+<th>Plot Type
+</th>
+<td>Choose a plot type to present the frequency of the source data.
+<ul><li> <b>Column</b></li>
+<li> <b>Bar</b></li>
+<li> <b>Pie</b></li>
+<li> <b>Doughnut</b>: Only for multiple input columns and <b>Multiple Data</b> is set to <b>Separate Graphs</b>.</li>
+<li> <b>Sunburst</b>: Only for multiple input columns and <b>Multiple Data</b> is set to <b>Nested Count in Same Graph</b>.</li>
+<li> <b>Sunburst with Hole</b>: Only for multiple input columns and <b>Multiple Data</b> is set to <b>Nested Count in Same Graph</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Share Y
+</th>
+<td>This option only shows when multiple source data columns have been selected for <b>Input</b> box and <b>Multiple Data</b> has been set to <b>Separate  Graphs</b> for Column or Bar plot type. It is used to make the Y scale shared between different graphs.
+</td></tr>
+<tr>
+<th>Stack
+</th>
+<td>The control is only avaliable when there are multiple input data, Multiple Data has been set to  Nested Count in Same Graph and Plot Type has been set to Column or Bar.
+<p>Specify how to plot the nested count as columns/bars. There are three ways to present the count as columns/bars:
+</p>
+<ul><li> Side by Side</li>
+<li> Stacked(Last Column)</li>
+<li> 100% Stacked(Last Column)</li></ul>
+</td></tr>
+<tr>
+<th>Graph Template
+</th>
+<td>This option will show default template to create the different plot types. You can uncheck <b>Auto</b> box to choose another template, such as user-defined templates.
+</td></tr>
+<tr>
+<th>Output Plot Data
+</th>
+<td>Specify which sheet the plot data will be outputed to.
+</td></tr>
+<tr>
+<th>Output Graphs
+</th>
+<td>Specify which sheet the result graphs will be outputed to.
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>column.otpu<br />
+bar.otpu<br />
+Pie2D.otpu<br />
+Doughnut.otpu<br />
+(installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>If the selected category columns includes missing values, you can use <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C">the system variable <b>@CATS</b></a> to exclude them.
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2026
+</td></tr></table>
+
+
+
+
+
+

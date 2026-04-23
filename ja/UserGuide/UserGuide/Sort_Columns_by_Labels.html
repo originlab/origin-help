@@ -1,0 +1,80 @@
+﻿<h1 class="firstHeading">ラベルで列をソート</h1><p class='urlname' style='display: none'>Wks-Sort-Col-by-Labels</p>
+<p><br />
+このツールは、<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ">ワークシートラベル行</a>の値を基準に列を並べ替える機能です。複数の列ラベル行を基準にして、入れ子の並べ替えを行うこともできます。
+</p><p>ダイアログを開く方法は以下の2通りあります。
+</p>
+<ul><li>ワークシート列を選択し、右クリックして<b>ラベルで列をソート</b>を選択します。</li>
+<li>ワークシートをアクティブにした状態で、メインメニュー<b>ラベルで列をソート</b>を選択します。</li></ul>
+<dl><dd><a  class="image"><img alt="Sort Columns by Labels 01.png" src="../images/Sort_Columns_by_Labels/Sort_Columns_by_Labels_01.png" width="693"  /></a></dd></dl>
+<p>このダイアログでは、<b>有効なラベル</b>パネルで列ラベル行を選択し、<b>昇順</b>または<b>降順</b>ボタンをクリックすると、基準として<b>階層（ネスト）ソートの基準</b>パネル に追加されます。追加後に、書式などをカスタマイズできます。複数の基準を追加することも可能です。
+</p><p>選択したワークシートのラベル行に欠損値がある場合、対応するラジオボタンを選択することで、それらを 最小値 または 最大値 として扱うことができます。
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Available_Labels"><span class="tocnumber">1</span> <span class="toctext">有効なラベル</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Nested_Sort_Criteria"><span class="tocnumber">2</span> <span class="toctext">階層（ネスト）ソートの基準</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Row_Format"><span class="tocnumber">3</span> <span class="toctext">行フォーマット</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Missing_Value_as"><span class="tocnumber">4</span> <span class="toctext">欠損値</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Sort"><span class="tocnumber">5</span> <span class="toctext">ソート</span></a></li>
+</ul>
+</div>
+<h2><a name="Available_Labels"></a><span class="mw-headline">有効なラベル</span></h2>
+<p>このパネルには、使用可能なラベル行が表示されます（<b>ロングネーム</b>、<b>単位</b>、<b>コメント</b>、<b>パラメータ</b>、<b>サンプリング間隔</b>、<b>ユーザ定義パラメータ</b>など）。
+</p>
+<h2><a name="Nested_Sort_Criteria"></a><span class="mw-headline">階層（ネスト）ソートの基準</span></h2>
+<p><b>有効なラベル</b>パネルでラベルを選択し、<b>昇順</b> <a  class="image"><img alt="Ascending Button.png" src="../images/Sort_Columns_by_Labels/Ascending_Button.png" width="80"  /></a>、<b>降順</b> <a  class="image"><img alt="Descending Button.png" src="../images/Sort_Columns_by_Labels/Descending_Button.png" width="80"  /></a>または<b>カテゴリ</b> <a  class="image"><img alt="Categorical Button.png" src="../images/Sort_Columns_by_Labels/Categorical_Button.png" width="67"  /></a>（カテゴリデータの場合のみ）ボタンをクリックして、<b>階層（ネスト）ソートの基準</b>パネルに追します。 
+</p><p>また、<b>階層（ネスト）ソートの基準</b>パネルにラベルを追加するときに、<a href="../../UserGuide/UserGuide/Sort_Columns_by_Labels.html#Row_Format" title="ユーザガイド:ラベルで列をソート">行の書式</a>を指定できます。
+</p>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b>
+</p>
+<ul><li> カテゴリカル形式の場合は、あらかじめワークシートでラベル行をカテゴリカルとして設定する必要があります
+（ラベル行を右クリックし、<b>カテゴリーとして設定</b>を選択）。<br />カテゴリカル順序を確認するには、カテゴリーラベル行を右クリックし、<b>カテゴリ...</b>を選択します。</li>
+<li> <b>階層（ネスト）ソートの基準</b>パネルに追加されたラベル行は、直接並べ替えできません。並べ替えたい場合は、一度削除して希望の順番で再追加する必要があります。</li>
+<li> <b>階層（ネスト）ソートの基準</b>パネルに追加されたラベルの並べ替え順を変更する場合は、<b>有効なラベル</b>パネルで対応するラベル行を選択し、
+<b>昇順</b>または<b>降順</b>ボタンをクリックして順序を変更します。</li></ul>
+</td></tr></table>
+<h2><a name="Row_Format"></a><span class="mw-headline">行フォーマット</span></h2>
+<p>ラベル行には、テキスト、数字、カテゴリ、時刻、日付を指定できます。ラベルを基準に並べ替える場合は、フォーマットを正しく設定しておく必要があります。 
+</p>
+<ul><li> 正しいフォーマットでラベル行を追加する方法 </li></ul>
+<dl><dd><ol><li>フォーマットボタン<a  class="image"><img alt="Row Format Button.png" src="../images/Sort_Columns_by_Labels/Row_Format_Button.png" width="57"  /></a>の横にある三角形のボタン<a  class="image"><img alt="Row Format Button 2.png" src="../images/Sort_Columns_by_Labels/Row_Format_Button_2.png" width="21"  /></a>をクリックし、フライアウトメニューでフォーマットのいずれかを選択します。<i>または、</i><br />フォーマットボタン<a  class="image"><img alt="Row Format Button.png" src="../images/Sort_Columns_by_Labels/Row_Format_Button.png" width="57"  /></a>をクリックして<b>行のフォーマット</b>ダイアログを開きます。</li>
+<li>その後、ラベル行を<b>階層（ネスト）ソートの基準</b>パネルに追加します。 </li></ol></dd></dl>
+<ul><li> <b>階層（ネスト）ソートの基準</b>内の行書式を変更するには、<b>フォーマット</b>欄のボタン<a  class="image"><img alt="Row Format Button 3.png" src="../images/Sort_Columns_by_Labels/Row_Format_Button_3.png" width="108"  /></a>をクリックして<b>行のフォーマット</b>ダイアログを開きます。</li></ul>
+<dl><dd><a  class="image"><img alt="Sort Columns by Labels 02.png" src="../images/Sort_Columns_by_Labels/Sort_Columns_by_Labels_02.png" width="308"  /></a></dd></dl>
+<table class="dialogcontroltable">
+<tr>
+<th>フォーマット
+</th>
+<td>ラベル行の形式を指定します（<b>テキスト</b>、<b>数値</b>、<b>時間</b>、<b>日付）</b>。
+</td></tr>
+<tr>
+<th>表示
+</th>
+<td><b>時間</b>または<b>日付</b>形式を選択すると、このドロップダウンリストが表示されます。列のデータを表示する形式を決めます。
+</td></tr>
+<tr>
+<th>カスタム表示
+</th>
+<td><b>表示</b>ドロップダウンリストで<b>カスタム表示</b>を選択すると、このコンボボックスが表示されます。日付または時間の形式をカスタマイズできます。
+</td></tr></table>
+<h2><a name="Missing_Value_as"></a><span class="mw-headline">欠損値</span></h2>
+<p>ラベル内に欠損値がある場合、列を並べ替える際にそれらを 最小値 または 最大値 として扱うことができます。
+</p>
+<h2><a name="Sort"></a><span class="mw-headline">ソート</span></h2>
+<p><b>選択した列</b>または<b>ワークシート全体</b>のいずれかを選び、並べ替えを実行できます。 
+</p>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b>
+列を選択せずに、メインメニューの<b>ワークシート: ラベルで列をソート</b>からこのダイアログを開いた場合、デフォルトで<b>ワークシート全体</b> が選択され、このオプションはグレー表示になります。
+</p>
+</td></tr></table>
+
+
+
+
+    

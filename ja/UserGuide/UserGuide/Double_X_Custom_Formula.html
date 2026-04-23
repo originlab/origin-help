@@ -1,0 +1,39 @@
+﻿<h1 class="firstHeading">二重X軸 – カスタム数式グラフ</h1>
+<p class='urlname' style='display: none'>DoubleX-CustomFormula</p>
+<dl>
+<dd><a class="image"><img alt="Double X Custom Formula 01.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_01.png" width="700" /></a></dd>
+</dl>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements" id="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>少なくとも XY 列を選択して 二重X軸プロットを作成します。このとき、2つ目のX軸は1つ目のX軸に数式で対応付けられます。</p>
+<p>このグラフは、温度（°C/°F/K）、波長と波数など、異なる単位でデータを表示する場合に便利です。</p>
+<h2><a name="Creating_the_Graph" id="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。</p>
+<p>メインメニューから<span class="menu">作図&gt; 複数区分、複数軸: 二重X軸 – カスタム数式</span>を選びます。</p>
+<p>ダイアログが表示され、2つ目のX軸を設定できます。</p>
+<dl>
+<dd><a class="image"><img alt="Double X Custom Formula 02.png" src="../images/Double_X_Custom_Formula/Double_X_Custom_Formula_02.png" width="362" /></a></dd>
+</dl>
+<p>二重X軸を数式で対応付ける方法は<b>独立目盛</b>と<b>目盛共有</b>の2つがあります。</p>
+<ul>
+<li><b>独立目盛</b>：このタイプを選択すると、<b>変換式</b>および<b>逆変換式</b>を入力して、2つ目のX軸を別レイヤ（Y軸なし）に追加します。目盛位置は2つ目の軸自身で決まります。2つのレイヤでY軸範囲を共有するかどうかを指定できます。
+<dl>
+<dd>詳しくは、 <a href="../../UserGuide/UserGuide/Scale_2.html#Type" title="ユーザガイド：スケール2"><b>軸</b>ダイアログの<b>スケール</b>タブ</a>の<b>カスタム式</b>を参照してください。</dd>
+</dl>
+</li>
+<li><b>共有目盛</b>：このタイプを選択すると、現在のレイヤの2つ目のX軸に共有目盛が表示されます。目盛ラベルは入力した数式によって決まります。</li>
+</ul>
+<h2><a name="Template" id="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>dxcform.otpu (Originのプログラムフォルダにインストールされています。)</p>
+<h2><a name="Notes" id="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p><b>二重Xタイプ</b>で<b>数式対応 - 独立目盛</b>を選んだ場合、グラフは2つのレイヤで構成され、2つ目のX軸は第2レイヤに追加されます。<b>数式対応 - 目盛共有</b>を選んだ場合、1つのレイヤに、下側のX軸と上側のX軸が共存します。2つの軸は目盛位置を共有し、入力した数式に基づいて異なる目盛ラベルを表示します。</p>

@@ -1,0 +1,95 @@
+<h1 class="firstHeading">29.9.39 CDF Plot</h1><p class='urlname' style='display: none'>CDF-Plot</p><a  class="image"><img alt="CDF Plot 01.png" src="../images/CDF_Plot/650px-CDF_Plot_01.png?v=98495" width="650"   /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2.1</span> <span class="toctext">Dialog Controls</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Version Information</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select at least one column to create Empirical CDF plot and/or Theoretical CDF plot. 
+</p><p>Select multiple data and group column to compare cumulative distribution of different data/groups. 
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>From the menu, select <b>Plot &gt; Statistical: CDF Plot</b> to open the <b>plot_cdf</b> dialog. 
+</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png?v=98496" width="501"  /></a>
+</p>
+<h3><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<th><b>Data Range</b>
+</th>
+<td>Select input data column(s).
+</td></tr>
+<tr>
+<th><b>Group</b>
+</th>
+<td>Select grouping column(s).
+</td></tr>
+<tr>
+<th><b>Graph Arrangement</b>
+</th>
+<td>Choose how to arrange the plots.
+<ul><li><b>Multiple Data</b> and <b>Multiple Groups</b>：Use these two options , the plots will be arranged in these four ways:
+<ul><li><b>Overlay All</b>: Both Multple Data and Multiple Group select Overlap on Same Graph.</li>
+<li><b>Overlay Groups, Variables in Different Layers</b>: Multple Data=Separate Layer, Multiple Groups=Overlap on Same Graph</li>
+<li><b>Overlay Variables, Groups in Different Layers</b>: Multiple Groups=Separate Layer, Multple Data=Overlap on Same Graph</li>
+<li><b>Different Layers</b>: Both Multple Data and Multiple Groups select Separate Layer</li></ul></li></ul>
+<ul><li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to separate the graphs into multiple layers. 
+<dl><dd><b>Note:</b> If Multiple Data and Multiple Groups both are set to Separate Layers, the layer order in result sheet should follow the hierarchy of "by Input Data" →"Split Panels by" → "by Groups"</dd></dl></li>
+<li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created CDF plots in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
+</td></tr>
+<tr>
+<th><b>Distribution</b>
+</th>
+<td>
+<ul><li><b>Distribution</b>:Specify the distribution type to calculate the cumulative distribution probability. Here, four distribution types are supported: <a class="external text" href="../../LabTalk/LabTalk/Normpdf_(function).html"><b>Normal</b></a>, <a class="external text" href="../../LabTalk/LabTalk/Lognpdf_(function).html"><b>Lognormal</b></a>, <a class="external text" href="../../LabTalk/LabTalk/Wblpdf_(function).html"><b>Weibull</b></a>, <a class="external text" href="../../LabTalk/LabTalk/Exppdf_(function).html"><b> Exponential</b></a> and <a class="external text" href="../../LabTalk/LabTalk/Gampdf_(function).html"><b>Gamma</b></a>.</li>
+<li> <b>Estimate from Data</b>: Estimate the parameter value from the input data. Uncheck it to enter the parameter values under this check box for each distribution function.</li></ul>
+</td></tr>
+<tr>
+<th><b>Plot</b>
+</th>
+<td>
+<ul><li><b>Plots</b>: Choose which CDF plot you want to plot, empirical CDF, theoretical CDF or both of them.</li>
+<li><b>Use Common X Range</b>: Unchecked by default. Checking it to find min and max of x for all plots, if x range is small for a plot, add min or max at the end of plot.</li>
+<li><b>Y Scale Type</b>: Percent (default, 0-100) and Probability (0-1)</li></ul>
+</td></tr>
+<tr>
+<th><b>Output Plot Data</b>
+</th>
+<td>Specify which sheet the plot data is output to.
+</td></tr>
+<tr>
+<th><b>Output Graphs</b>
+</th>
+<td>Specify which sheet the result graphs is output to.
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>CDF.OTPU(installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>CDF plot, fully-named as cumulative distribution function plot, is used to examine the distribution of a sample data. It shows the empirical and/or theoretical cumulative distribution function of the data. You are allowed to decide how to arrange multiple source data and their groups. And the distribution information values(<i>mu</i>, <i>sigma</i> and <i>N</i>) for each groups of each data will be output to the result graph(s) automatically.
+</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Version Information</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Minimum Version</b>: Origin 2025b
+</td>
+<td><b>Last Update</b>: Origin 2026
+</td></tr></table>
+
+
+
+
+
+

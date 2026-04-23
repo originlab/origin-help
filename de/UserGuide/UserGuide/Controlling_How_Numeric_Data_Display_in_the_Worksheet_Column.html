@@ -1,0 +1,269 @@
+﻿<h1 class="firstHeading">Anzeige der numerischen Daten in der Arbeitsblattspalte festlegen</h1>
+
+  <p class='urlname' style='display: none'>Wks-Col</p>
+
+  <p>Zusätzlich zum Benennen und Festlegen <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation"><b>der Diagrammzuordnung</b></a> einer Spalte können Sie das <b>Format</b> (Text &amp; Numerisch, Numerisch usw.) und den <b>Datentyp</b> (z. B. numerische Daten werden als "Double", "Real" usw. gespeichert) festlegen. Standardmäßig wird das <b>Format</b> der Spalten so festgelegt, dass <b>Text &amp; Numerische</b> Daten bearbeitet werden können, aber wenn die Systemleistung begrenzt ist, kann es auf <b>Numerisch</b> beschränkt werden. Zusätzlich zum Festlegen des <b>Datentyps</b> als <b>Numerisch</b> können Sie die Größe des Speichers, der dem numerischen Datenspeicher zugeordnet wird, weiter verringern (siehe unten <a href="#Format_and_Numeric_Display">Vorsicht</a>).</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Numeric_vs._Text_.26_Numeric"><span class="tocnumber">1</span> <span class="toctext">Numerisch vs. Text &amp; Numerisch</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Numeric_Data_Types_and_memory_allocation"><span class="tocnumber">2</span> <span class="toctext">Numerische Datentypen und Speicherzuordnung</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Format_and_Numeric_Display"><span class="tocnumber">3</span> <span class="toctext">Format und numerische Anzeige</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#A_Note_about_Displayed_vs._Actual_Values"><span class="tocnumber">4</span> <span class="toctext">Ein Hinweis zu angezeigten vs. tatsächlichen Werten</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Decimal.2C_Scientific_and_Engineering_Notation"><span class="tocnumber">5</span> <span class="toctext">Dezimal-, Wissenschaftliche und Ingenieursschreibweise</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Numeric_vs._Text_.26_Numeric"></a><span class="mw-headline">Numerisch vs. Text &amp; Numerisch</span></h2>
+
+  <p>Das Format <b>Text &amp; Numerisch</b> benötigt ungefähr 20% mehr Speicherkapazität als der Typ <b>Numerisch Doppelt(8)</b>. In den meisten Fällen bereitet dieser Unterschied keine Probleme mit der Computerleistung. Wenn Sie sich Gedanken über das Maximieren der Systemressourcen machen, können Sie Origin konfigurieren, so dass es <b>Numeric Double(8)</b> für alle Spalten von neuen Arbeitsblättern verwendet:</p>
+
+  <ol>
+    <li>Wählen Sie im Menü <b>Einstellungen: Optionen</b>.</li>
+
+    <li>Klicken Sie auf die Registerkarte <b>Sonstiges</b>.</li>
+
+    <li>Wählen Sie <b>Standardformat für Spalten = Numerisch</b>.</li>
+  </ol>
+
+  <p>Falls Sie außerdem <a class="external text" href="../../LabTalk/LabTalk/Origin_Formats.html">benutzerdefinierte Formate</a> auf eine Spalte mit numerischen Daten anwenden, sollten Sie die Spalte <b>Format</b> von <b>Text &amp; Numerisch</b> in <b>Numerisch</b> ändern. Während <b>Text &amp; Numerisch</b> <i>im Allgemeinen</i> Origins benutzerdefinierte Anzeigeformatierung unterstützt, gibt es kleine Macken. Das Festlegen des Formats auf <b>Numerisch</b> beseitigt einige Probleme.</p>
+
+  <h2><a name="Numeric_Data_Types_and_memory_allocation"></a><span class="mw-headline">Numerische Datentypen und Speicherzuweisung</span></h2>
+
+  <p>Wenn Sie mit numerischen Daten arbeiten, können Sie die Größe des Speichers einstellen, der jedem Datenwert zugeordnet wird, indem Sie die Einstellungen <b>Datentyp</b> im Dialogfeld <b>Spalteneigenschaften</b> ändern. Wenn Sie beispielsweise noch mehr Speicherplatz sparen wollen (bis zu weiteren 50%), können Sie die Spalten auf <b>Format</b> = <b>Numerisch</b> und den Datentyp auf <b>Real(4)</b> setzen (lesen Sie die untenstehende Anmerkung):</p>
+
+  <p>Um den Dialog <b>Spalteneigenschaften</b> zu öffnen:</p>
+
+  <ol>
+    <li>Klicken Sie doppelt auf den Spaltenkopf.</li>
+  </ol>
+
+  <p><i>oder</i></p>
+
+  <ol>
+    <li>Klicken Sie mit der rechten Maustaste auf die Spalte und wählen Sie <b>Einstellungen</b>.</li>
+  </ol>
+
+  <p><i>oder</i></p>
+
+  <ol>
+    <li>Wählen Sie bei ausgewählter Spalte im Origin-Menü <b>Format: Spalte</b>.
+
+      <dl>
+        <dd><i>Anschließend:</i></dd>
+      </dl>
+    </li>
+
+    <li>Wählen Sie im Dialog <b>Spalteneigenschaften</b> das <b>Format</b> = <b>Numerisch</b>.</li>
+
+    <li>Wählen Sie in der Auswahlliste <b>Datentyp</b>.</li>
+  </ol>
+
+  <table class="simple" width="50%">
+    <tr>
+      <th>Arbeitsmappe</th>
+
+      <th>Bytes</th>
+
+      <th>Wertebereich</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p>double</p>
+      </td>
+
+      <td>
+        <p>8</p>
+      </td>
+
+      <td>
+        <p>±1,7E±308 (15 Stellen)</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>real</p>
+      </td>
+
+      <td>
+        <p>4</p>
+      </td>
+
+      <td>
+        <p>±3,4E±38 (7 Stellen)</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>short</p>
+      </td>
+
+      <td>
+        <p>2</p>
+      </td>
+
+      <td>
+        <p>32.768 bis 32.767</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>long</p>
+      </td>
+
+      <td>
+        <p>4</p>
+      </td>
+
+      <td>
+        <p>2.147.483.648 bis 2.147.483.647</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>char</p>
+      </td>
+
+      <td>
+        <p>1</p>
+      </td>
+
+      <td>
+        <p>-128 bis 127</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Byte</p>
+      </td>
+
+      <td>
+        <p>1</p>
+      </td>
+
+      <td>
+        <p>0 bis 255</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>ushort</p>
+      </td>
+
+      <td>
+        <p>2</p>
+      </td>
+
+      <td>
+        <p>0 bis 65.535</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>ulong</p>
+      </td>
+
+      <td>
+        <p>4</p>
+      </td>
+
+      <td>
+        <p>0 bis 4.294.967.295</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>complex</p>
+      </td>
+
+      <td>
+        <p>16</p>
+      </td>
+
+      <td>
+        <p>±1,7E±308 (15 Stellen), alle 8 Bytes</p>
+      </td>
+    </tr>
+  </table>
+
+  <table class="note">
+    <tr>
+      <td>
+        <p><b>ACHTUNG:</b> <b>Datentypen</b> mit weniger als <b>Double(8)</b> können Probleme mit verschiedenen mathematischen Funktionen verursachen. Aus demselben Grund sollten Sie den <b>Datentyp</b> der Spalten überprüfen, bevor Sie Daten in die Arbeitsblattspalte eingeben oder importieren. Wenn der Datentyp den Daten nicht entspricht, riskieren Sie, die Genauigkeit Ihrer Zahlen zu verlieren.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Format_and_Numeric_Display"></a><span class="mw-headline">Format und numerische Anzeige</span></h2>
+
+  <p>Wenn die Arbeitsblattspalte auf <b>Datentyp</b> = <b>Numerisch</b> oder <b>Text &amp; Numerisch</b> eingestellt wurde, wird die Anzahl der dargestellten Ziffern durch eine Kombination dieser Einstellungen im Dialog <b>Spalteneigenschaften</b> bestimmt.</p>
+
+  <ul>
+    <li><b>Anzeige</b> Legen Sie Dezimal-, wissenschaftliche bzw. technische Formate oder ein <a class="external text" href="../../LabTalk/LabTalk/Origin_Formats.html">benutzerdefiniertes Format</a> fest.</li>
+
+    <li><b>Stellen</b> Dies ist die Anzahl der Dezimalstellen oder gültigen Stellen, die in den Spalten angezeigt werden (Datensatz).</li>
+  </ul>
+
+  <p>Wenn nichts anderes angegeben wird (z.B. die numerische Anzeige auf <b>Standard Dezimalstellen</b> eingestellt ist), verwendet Origin die voreingestellte <b>Anzahl der Dezimalstellen</b> auf der <b>Registerkarte Zahlenformat</b> des Dialogs <b>Optionen</b>.</p>
+
+  <p>Beachten Sie, dass die Einstellungen für <b>Stellen</b> im Dialog <b>Spalteneigenschaften</b> Vorrang haben vor den allgemeinen Einstellungen im Dialog <b>Optionen</b>.</p>
+
+  <p><br>
+  <span class='headerInParagraph'>Um die Anzahl der standardmäßig voreingestellten Dezimalstellen einzurichten (allgemein gültig, falls dies nicht im nächsten Schritt anders festgelegt werden sollte):</span></p>
+
+  <ol>
+    <li>Wählen Sie im Menü <b>Einstellungen: Optionen</b>.</li>
+
+    <li>Klicken Sie auf die Registerkarte <b>Zahlenformat</b>.</li>
+
+    <li>Legen Sie die <b>Anzahl der Nachkommastellen</b> fest.</li>
+  </ol>
+
+  <p><br>
+  <span class='headerInParagraph'>Um die Anzahl der gültigen Stellen bzw. der Dezimalstellen für einen oder mehrere Datensätze eines Arbeitsblatts festzulegen:</span></p>
+
+  <ol>
+    <li>Wählen Sie im aktiven Arbeitsblatt <b>Format: Spalte</b> aus oder klicken Sie doppelt auf die Spaltenüberschrift des Arbeitsblatts. Der Dialog <b>Spalteneigenschaften</b> wird geöffnet.</li>
+
+    <li>Ändern Sie <b>Stellen</b> von <b>Standard Dezimalstellen</b> in <b>Dezimalstellen setzen =</b> oder <b>Signifikante Stellen =</b> und geben Sie eine Zahl in das Textfeld unten ein (max. Dezimalstellen = 12; max. gültige Stellen = 15).</li>
+
+    <li>Optional wählen Sie <b>Auf alle Spalten rechts anwenden</b> aus.</li>
+  </ol>
+
+  <h2><a name="A_Note_about_Displayed_vs._Actual_Values"></a><span class="mw-headline">Ein Hinweis zu angezeigten vs. tatsächlichen Werten</span></h2>
+
+  <p>Wenn Sie Ihre Daten in ein Arbeitsblatt importieren oder eingeben, verwendet Origin die Einstellungen für die Anzahl der Ziffern/Dezimalstellen, um die Daten jeder einzelnen Zelle anzuzeigen. Beachten Sie, dass dies lediglich eine visuelle Darstellung des Datensatzes ist. Die tatsächlichen Datenwerte werden gespeichert. Wenn Sie Berechnungen durchführen, werden die tatsächlichen Werte -- übereinstimmend mit den Grenzen des <b>Datentyps</b> und der <a href="#Numeric_Data_Types_and_memory_allocation">zugeordneten Speichergröße</a> -- verwendet, <i>nicht</i> die in der Zelle angezeigten Werte.</p>
+
+  <h2><a name="Decimal.2C_Scientific_and_Engineering_Notation"></a><span class="mw-headline">Dezimale, wissenschaftliche und Ingenieursschreibweise</span></h2>
+
+  <p>Origin unterstützt die Anzeige von Arbeitsblattdaten in den Formaten <b>Dezimal:1000</b>, <b>Wissenschaftlich:1E3</b>, <b>Ingenieur:1k</b> und <b>Dezimal:1,000</b>. Wenn Sie <b>Dezimal:1000</b>, <b>Ingenieur:1k</b> oder <b>Dezimal:1.000</b> auswählen, verwendet Origin zusätzliche Einstellmöglichkeiten (die Einstellungen <b>Oberer Grenzwert</b> und <b>Unterer Grenzwert</b> auf der Registerkarte <b>Zahlenformat</b> im Dialog <b>Optionen</b>) für die numerische Anzeige.</p>
+
+  <p>Standardmäßig sind die Einstellungen <b>Oberer Grenzwert</b> und <b>Unterer Grenzwert</b> <b>6</b> beziehungsweise <b>-3</b>. Solange Werte in einem Bereich von 1x10<sup>-3</sup> bis 1x10<sup>6</sup> liegen, werden Daten mit Hilfe des im Dialog <b>Spalteneigenschaften</b> in der Auswahlliste <b>Anzeige</b> ausgewählten Formats angezeigt (Gruppe <b>Optionen</b>). Liegen die Werte entweder ober- oder unterhalb der Konvertierungsschwelle (kleiner als 1x10<sup>-3</sup> oder größer als 1x10<sup>6</sup>), werden die Daten in der <b>wissenschaftlichen</b> Schreibweise angezeigt, und zwar unabhängig von den Einstellungen in der Auswahlliste <b>Format</b>.</p>
+
+  <p><br>
+  <span class='headerInParagraph'>Um die standardmäßigen Grenzwerteinstellungen zu ändern:</span></p>
+
+  <ol>
+    <li>Wählen Sie im Menü <b>Einstellungen: Optionen</b>.</li>
+
+    <li>Klicken Sie auf die Registerkarte <b>Zahlenformat</b>.</li>
+
+    <li>In der Gruppe <b>In wissenschaftliche Schreibweise konvertieren</b> legen Sie den <b>Oberen Schwellenwert</b> und <b>Unteren Schwellenwert</b> fest.</li>
+  </ol>

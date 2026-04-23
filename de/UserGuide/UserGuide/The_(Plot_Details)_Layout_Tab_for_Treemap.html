@@ -1,0 +1,75 @@
+﻿<h1 class="firstHeading">Registerkarte Layput für Treemap (Details Zeichnung)</h1>
+
+  <p class='urlname' style='display: none'>PD-Layout-tab-Treemap</p>
+
+  <p>Diese Registerkarte wird verwendet, um die Layouteinstellungen für die Treemap vorzunehmen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Layout Tab for Treemap 01.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_01.png" width="451"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Layout"><span class="tocnumber">1</span> <span class="toctext">Layout</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Order"><span class="tocnumber">2</span> <span class="toctext">Ordnung</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Depth"><span class="tocnumber">3</span> <span class="toctext">Tiefe</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Gap_between_Levels"><span class="tocnumber">4</span> <span class="toctext">Abstand zwischen Ebenen</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Custom_Layout_Per_Levels"><span class="tocnumber">5</span> <span class="toctext">Benutzerdefiniertes Layout pro Ebenen</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Layout"></a><span class="mw-headline">Layout</span></h2>
+
+  <p>Es stehen 6 Layouts zur Verfügung, um die Knotenrechtecke für jede Stufe anzuordnen:</p>
+
+  <ul>
+    <li><b>Aufteilen</b>: Ordnet die Rechtecke entsprechend dem Ordnungswert der Ebenen/Werte der X-Variablen an.</li>
+
+    <li><b>Squarified</b>: Ordnet alle Rechtecke in absteigender Reihenfolge basierend auf der Größenspalte (Zusammenfassungsstatistik) an. Diese Option platziert die größten Rechtecke oben links in der Zeichnung und die kleinsten unten rechts.</li>
+
+    <li><b>Squarified+</b>: Verbessertes Squarified, um ein besseres Seitenverhältnis abzubilden, ohne zu langsam zu werden. Diese Option ist grundlegend identisch mit Squarified, aber wenn eine Zeile entschieden ist, wird die aktuelle Zeilenrichtung mit der alternativen Zeilenrichtung verglichen. Wählen Sie die bessere Zeilenrichtung nach dem Vergleich des Seitenverhältnisses.</li>
+
+    <li>
+      <b>Pivot nach Größe/Mitte/Aufteilungsgröße</b>: Der Algorithmus der „squarified“ Treemap erzeugt gute Seitenverhältnisse, ignoriert aber die Sortierreihenfolge der Rechtecke. Im Fall der geordneten Treemap berücksichtigt der Algorithmus <i>Pivot nach Größe/Mitte/Aufteilungsgröße</i> die Sortierreihenfolge, während die Seitenverhältnisse noch akzeptabel sind.
+
+      <ul>
+        <li><b>Pivot nach Größe</b>: Pivot ist das größte Element in der Liste. Das durchschnittliche Seitenverhältnis ist besser.</li>
+
+        <li><b>Pivot nach Mitte</b>: Pivot ist das mittlere Element der Liste. (Wenn die Liste n Elemente enthält, ist das Pivot das Element mit dem Index n/2). Dieser Algorithmust ist stabiler.</li>
+
+        <li><b>Pivot nach Aufteilungsgröße</b>: Das Pivot teilt die Liste in ungefähr gleiche Bereiche auf. Dieses Layout ist ausgeglichener.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2><a name="Order"></a><span class="mw-headline">Ordnung</span></h2>
+
+  <p>Sie können wählen, wie Sie die Rechtecke anordnen möchten, <b>Kategoriale Ordnung</b>, <b>Alphabetische Reihenfolge</b>, <b>Nach Größe</b> oder <b>Nach Spalte</b> (legen Sie eine andere Datenspalte fest).</p>
+
+  <p>Die Layouts Squarified und Squarified+ unterstützen nur die Ordnung der Knoten nach Größe.</p>
+
+  <h2><a name="Depth"></a><span class="mw-headline">Tiefe</span></h2>
+
+  <p>Legen Sie die Ebenen der Treemap fest, die gezeigt werden sollen. Tiefe = 1 bedeutet, dass nur die erste Ebene der Treemap gezeigt wird. Tiefe = N bedeutet, dass nur die ersten N Ebenen der Treemap gezeigt werden. Unbeschränkt bedeutet, dass alle Ebene der Treemap gezeigt werden.</p>
+
+  <h2><a name="Gap_between_Levels"></a><span class="mw-headline">Abstand zwischen Ebenen</span></h2>
+
+  <p>Legen Sie den Abstand zwischen den Rechtecken fest.</p>
+
+  <h2><a name="Custom_Layout_Per_Levels"></a><span class="mw-headline">Benutzerdefiniertes Layout pro Ebenen</span></h2>
+
+  <p>Sie können diese Bedienelementgruppe aktivieren, um das Layout von verschiedenen Ebenen separat benutzerdefiniert anzupassen, mit Ausnahme von der ersten Ebene.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Layout Tab for Treemap 02.png" src="../images/The_(Plot_Details)_Layout_Tab_for_Treemap/Layout_Tab_for_Treemap_02.png" width="454"></a></dd>
+  </dl>
+
+  <p>Die Bedienelemente <b>Layout</b> und <b>Ordnung</b> im geöffneten Dialog <b>Bearbeiten</b> sind die gleichen wie oben.</p>

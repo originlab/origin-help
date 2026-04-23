@@ -1,0 +1,81 @@
+﻿<h1 class="firstHeading">パレート図の作成</h1><p class='urlname' style='display: none'>Create-Pareto-Chart</p>
+<p><br />
+</p>
+<dl><dd><a  class="image"><img alt="Pareto Chart.png" src="../images/Creating_Pareto_Charts/450px-Pareto_Chart.png" width="450"   /></a></dd></dl>
+<p>パレート図は、折れ線グラフと縦棒グラフを組み合わせた特別なグラフです。通常、縦棒グラフは、その高さで問題の頻度または重要度を表し、重要性の順番に降順に並べ、折れ線+シンボルグラフはその累積度数を表し、単調に増加します。 
+</p><p>パレート図は、システムに影響を及ぼす要因を認識するのに使用されます。よって分析において、重要度の低い要因を除外するのに役立ちます。 
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"><span class="tocnumber">1</span> <span class="toctext">ビン化データまたは素データからパレート図を作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Input_Data:_Binned_Data"><span class="tocnumber">1.1</span> <span class="toctext">入力データ: ビン化データ</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Input_Data:_Raw_Data"><span class="tocnumber">1.2</span> <span class="toctext">入力データ: 素データ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_for_Plotting"><span class="tocnumber">2</span> <span class="toctext">作図の設定</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Multiple_Groups"><span class="tocnumber">2.1</span> <span class="toctext">複数グループ</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Show_Cumulative_Percent_Plot"><span class="tocnumber">2.2</span> <span class="toctext">累積パーセントプロットを表示</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Show_Symbol_at_Right_Side_of_Bar"><span class="tocnumber">2.3</span> <span class="toctext">棒の右側にシンボルを表示</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.4</span> <span class="toctext">小さなカウントを1つのカテゴリーにまとめる</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.4.1</span> <span class="toctext">より小さな値をまとめる</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Threshold"><span class="tocnumber">2.4.2</span> <span class="toctext">しきい値</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Threshold_value"><span class="tocnumber">2.4.3</span> <span class="toctext">しきい値の値</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Tick_Label"><span class="tocnumber">2.4.4</span> <span class="toctext">目盛ラベル</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"></a><span class="mw-headline">ビン化データまたは素データからパレート図を作成</span></h2>
+<p>ソースデータの形式によって、Originは以下の2つのパレート図の作成が可能です。
+</p>
+<ul><li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Binned_Data.html" title="ユーザガイド: パレート図-ビン化データ">パレート図-ビン化データ</a> </li>
+<li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Raw_Data.html" title="ユーザガイド: パレート図-素データ">パレート図-素データ</a></li></ul>
+<h3><a name="Input_Data:_Binned_Data"></a><span class="mw-headline">入力データ: ビン化データ</span></h3>
+<p>既にビン化データがある場合、<b>作図 &gt; 統計: パレート図：ビン化データ</b>メニューまたは、<b>2Dグラフギャラリー</b>ツールバーの<b>パレート図：ビン化データ</b>ボタン<a  class="image"><img alt="Button Pareto Chart-Binned Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Binned_Data.png" width="21"  /></a>をクリックして作図可能です。これにより、<a class="external text" href="../../XFunction/X-Function/Plot_paretobin.html">plot_paratobin</a> ダイアログが開きます。
+</p><p><a  class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png" width="700"   /></a>
+</p>
+<h3><a name="Input_Data:_Raw_Data"></a><span class="mw-headline">入力データ: 素データ</span></h3>
+<p>素データがある場合、<b>作図 &gt; 統計: パレート図：素データ</b>メニューまたは、<b>2Dグラフギャラリー</b>ツールバーの<b>パレート図：素データ</b>ボタン<a  class="image"><img alt="Button Pareto Chart-Raw Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Raw_Data.png" width="21"  /></a>をクリックして作図可能です。これにより、<a class="external text" href="../../XFunction/X-Function/Plot_paretoraw.html">plot_paratoraw</a>ダイアログが開きます。
+</p><p><a  class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png" width="700"   /></a>
+</p>
+<h2><a name="Controls_for_Plotting"></a><span class="mw-headline">作図の設定</span></h2>
+<h3><a name="Multiple_Groups"></a><span class="mw-headline">複数のグループ</span></h3>
+<p><b>グラフ</b>ボックスでグループ化列が選択されている場合、このコントロールを使用して、複数のグループをどのように配置するか (<b>同じグラフでパネルを分割</b>または<b>グラフを分ける</b>) を決定できます。
+</p><p><b>同じグラフでパネルを分割</b>を選択した場合、パレートグラフはグループごとに同じグラフ上の別々のパネルにプロットされます。グループの数が<b>N</b>の場合、パネルは<i>sqrt(N)</i> で折り返されます。
+</p><p><b>グラフを分ける</b>を選択した場合、パレート図はグループごとに別々のグラフとしてプロットされる。
+</p>
+<h3><a name="Show_Cumulative_Percent_Plot"></a><span class="mw-headline">累積パーセントプロットを表示</span></h3>
+<p>パレートグラフに線+シンボル図として累積パーセントを表示するかどうかを指定します。この線+散布図は別の新しいレイヤにプロットされます。
+</p>
+<h3><a name="Show_Symbol_at_Right_Side_of_Bar"></a><span class="mw-headline">棒の右側にシンボルを表示</span></h3>
+<p>棒の右側に散布図シンボルを表示するかどうかを指定します。<b>Note:</b>このチェックボックスにチェックを付けると、この線+シンボル図は原点(0,0)から開始し、散布点を棒の右側に配置します。
+</p><p><a  class="image"><img alt="Pareto Charts Symbol At Right.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Symbol_At_Right.png" width="750"   /></a>
+</p>
+<h3><a name="Combine_Smaller_Counts_in_One_Category"></a><span class="mw-headline">小さなカウントを1つのカテゴリーにまとめる</span></h3>
+<p>カウントがしきい値を下回るデータを結合するかどうかを指定します。 
+</p><p><a  class="image"><img alt="Pareto Charts Combine By Count.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Combine_By_Count.png" width="857"   /></a>
+</p>
+<h4><a name="Combine_Smaller_Values"></a><span class="mw-headline">より小さな値をまとめる</span></h4>
+<p>指定された小さいカウント値をまとめます。
+</p>
+<h4><a name="Threshold"></a><span class="mw-headline">しきい値</span></h4>
+<p>しきい値の定義方法として、<b>パーセント</b>、<b>カウント</b>、<b>棒の数</b>から選択します。
+</p>
+<ul><li><b>パーセント</b>: カウントのパーセントがこの値より小さいデータを、結合するしきい値としてパーセント値を指定します。</li>
+<li><b>カウント</b>:カウント数がこの値より小さいデータを、結合するしきい値としてカウント値を指定します。</li>
+<li><b>棒の数</b>:このプロット中の棒の数を指定するしきい値として棒の数を入力します。</li></ul>
+<h4><a name="Threshold_value"></a><span class="mw-headline">しきい値の値</span></h4>
+<p><b>しきい値</b>ドロップダウンリストの選択に従って、しきい値を入力します。
+</p>
+<h4><a name="Tick_Label"></a><span class="mw-headline">目盛ラベル</span></h4>
+<p>小さいカウントをまとめた棒のラベル用テキストを入力します。
+</p>
+
+
+
+    

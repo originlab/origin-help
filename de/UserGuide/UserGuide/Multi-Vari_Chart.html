@@ -1,0 +1,135 @@
+﻿<h1 class="firstHeading">Multi-Vari-Diagramm</h1>
+
+  <p class='urlname' style='display: none'>Multi-Vari-Chart</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Multi-Vari Chart.png" src="../images/Multi-Vari_Chart/700px-Multi-Vari_Chart.png" width="700"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2">
+        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-3">
+            <a href="#The_plot_multivari_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog <b>plot_multivari</b></span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-4"><a href="#Data"><span class="tocnumber">2.1.1</span> <span class="toctext">Daten</span></a></li>
+
+              <li class="toclevel-3 tocsection-5"><a href="#Factors"><span class="tocnumber">2.1.2</span> <span class="toctext">Faktoren</span></a></li>
+
+              <li class="toclevel-3 tocsection-6"><a href="#Connect_Mean_for_1st_Factor"><span class="tocnumber">2.1.3</span> <span class="toctext">Mittelwert für 1. Faktor verbinden</span></a></li>
+
+              <li class="toclevel-3 tocsection-7"><a href="#Connect_Mean_for_2nd_Factor"><span class="tocnumber">2.1.4</span> <span class="toctext">Mittelwert für 2. Faktor verbinden</span></a></li>
+
+              <li class="toclevel-3 tocsection-8"><a href="#Connect_Mean_for_3rd_Factor"><span class="tocnumber">2.1.5</span> <span class="toctext">Mittelwert für 3. Faktor verbinden</span></a></li>
+
+              <li class="toclevel-3 tocsection-9"><a href="#Show_Individual_Data_Points"><span class="tocnumber">2.1.6</span> <span class="toctext">Einzelne Datenpunkte zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-10"><a href="#Show_Grand_Mean"><span class="tocnumber">2.1.7</span> <span class="toctext">Gesamtmittelwert zeigen</span></a></li>
+
+              <li class="toclevel-3 tocsection-11"><a href="#Template"><span class="tocnumber">2.1.8</span> <span class="toctext">Vorlage</span></a></li>
+
+              <li class="toclevel-3 tocsection-12"><a href="#Output_Plot_Data.2FOutput_Graphs"><span class="tocnumber">2.1.9</span> <span class="toctext">Ausgabedaten/Ausgabediagramme</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-13"><a href="#Template_2"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+
+      <li class="toclevel-1 tocsection-14">
+        <a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-15"><a href="#Example"><span class="tocnumber">4.1</span> <span class="toctext">Beispiel</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+
+  <p>Wählen Sie eine oder mehrere Y-Spalte(n) mit bis zu 4 Faktorspalten.</p>
+
+  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+
+  <p>Um ein Multi-Vari-Diagramm zu erstellen:</p>
+
+  <ol>
+    <li>Wählen Sie mindestens eine Arbeitsblattspalte (oder einen Bereich aus mindestens einer Spalte).</li>
+
+    <li>Wählen <span class="menu">Zeichnen &gt; Statistisch: Multi-Vari-Diagramm</span>, um den Dialog <b>plot_multivari</b> zu öffnen.</li>
+  </ol>
+
+  <h3><a name="The_plot_multivari_Dialog_Box"></a><span class="mw-headline">Der Dialog <b>plot_multivari</b></span></h3>
+
+  <dl>
+    <dd><a class="image"><img alt="Multi-Vari Chart Dialog.png" src="../images/Multi-Vari_Chart/Multi-Vari_Chart_Dialog.png" width="586"></a></dd>
+  </dl>
+
+  <h4><a name="Data"></a><span class="mw-headline">Daten</span></h4>
+
+  <p>Wählen Sie die Spalte mit den Eingabedaten. Sie können nur eine Spalte auswählen.</p>
+
+  <h4><a name="Factors"></a><span class="mw-headline">Faktoren</span></h4>
+
+  <p>Wählen Sie mehrere Faktoren in Reihenfolge aus. Sie können mehrere Spalten auswählen, aber die Anzahl der Spalten sollte kleiner als 4 sein. Das Ausklappmenü wird deaktiviert, wenn bereits 4 Spalten ausgewählt sind.</p>
+
+  <h4><a name="Connect_Mean_for_1st_Factor"></a><span class="mw-headline">Mittelwert für 1. Faktor verbinden</span></h4>
+
+  <p>Legen Sie fest, ob die Mittelwertpunkte für den ersten Faktor verbunden werden sollen. Diese Option ist standardmäßig aktiviert.</p>
+
+  <h4><a name="Connect_Mean_for_2nd_Factor"></a><span class="mw-headline">Mittelwert für 2. Faktor verbinden</span></h4>
+
+  <p>Legen Sie fest, ob die Mittelwertpunkte für den zweiten Faktor verbunden werden sollen. Diese Option ist standardmäßig aktiviert. Diese Option ist deaktiviert, wenn es nur 1 Faktor gibt.</p>
+
+  <h4><a name="Connect_Mean_for_3rd_Factor"></a><span class="mw-headline">Mittelwert für 3. Faktor verbinden</span></h4>
+
+  <p>Legen Sie fest, ob die Mittelwertpunkte für den dritten Faktor verbunden werden sollen. Diese Option ist standardmäßig aktiviert. Diese Option ist deaktiviert, wenn es nur 2 Faktoren gibt.</p>
+
+  <h4><a name="Show_Individual_Data_Points"></a><span class="mw-headline">Einzelne Datenpunkte zeigen</span></h4>
+
+  <p>Legen Sie fest, on die einzelnen Punkte gezeigt werden sollen. Durch die Aktivierung wird der <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Box_Tab_Controls.html#Type" title="UserGuide:Customizing the Box Chart Box Tab Controls"><b>Boxtyp</b></a> für alle Boxdiagramme auf <b>Box+Datenüberschneidung</b> und <b>Boxstil</b> auf <b>Keine Box</b> gesetzt. Dieses Kontrollkästchen ist standardmäßig deaktiviert.</p>
+
+  <h4><a name="Show_Grand_Mean"></a><span class="mw-headline">Gesamtmittelwertlinie zeigen</span></h4>
+
+  <p>Legen Sie fest, ob der Gesamtmittelwert als Referenzlinie bei <code>Mean(plotdata(*,y))</code> gezeigt werden soll. Dieses Kontrollkästchen ist standardmäßig deaktiviert.</p>
+
+  <h4><a name="Template"></a><span class="mw-headline">Vorlage</span></h4>
+
+  <p>Per Standard wird die Vorlage „multivari“ verwendet, wobei Kontrollkästchen Auto aktiviert ist. Sie können das Kontrolkästchen Auto deaktivieren, um die von Ihnen vorbereitete Vorlage zu verwenden.</p>
+
+  <h4><a name="Output_Plot_Data.2FOutput_Graphs"></a><span class="mw-headline">Ausgabedaten/Ausgabediagramme</span></h4>
+
+  <p>Sobald Sie auf <b>OK</b> geklickt haben, um das Diagramm zu erstellen, können die Zeichnungsdaten und Ergebnisdiagramme in den festgelegten Blättern ausgegeben werden. Per Standard werden zwei neue Blätter mit den Namen "MultiVariPlotData#" und "MultiVariGraph#“ in der aktuellen Arbeitsmappe erstellt, um die Zeichnungsdaten und Ergebnisdiagramme zu speichern.</p>
+
+  <h2><a name="Template_2"></a><span class="mw-headline">Vorlage</span></h2>
+
+  <p>multivari.otpu (installiert im Origin-Programmordner)</p>
+
+  <h2><a name="Notes"></a><span class="mw-headline">Hinweis</span></h2>
+
+  <p>Ein Multi-Vari-Diagramm zeigt die Mittelwerte auf jeder Faktorstufe für jeden Faktor an. Es handelt sich um ein Multi-Boxdiagramm mit Verbindungslinien der Mittelwertpunkte. Jedes Boxdiagramm hat den Boxstil = Keine Box, den Whiskerbereich = Kein, zeigt das Mittelwertperzentil und verbindet die Mittelwerte.</p>
+
+  <h3><a name="Example"></a><span class="mw-headline">Beispiel</span></h3>
+
+  <p><a class="image"><img alt="Multi-Vari Chart Example.png" src="../images/Multi-Vari_Chart/850px-Multi-Vari_Chart_Example.png" width="850"></a></p>
+
+  <p>In diesem Beispiel wählen wir 3 Faktoren: "Engine Information.Driveline", "Identification.Classification" und "Identification.Year“ (mit roter Box markiert). Wählen Sie sie als Faktor im Dialog <b>plot_multivari</b>.</p>
+
+  <p>Entstapeln Sie die Quelldatenspalten mit Faktor 1 und Faktor 2, einschließlich dem Spaltenfaktor 3 (mit pinker Box markiert); mit 8 entstapelten Spalten zeichnen Sie die Boxdiagramme nur mit verbundenen Mittelwertpunkten (gelb gefüllte Punkte + schwarze Linie). Legen Sie im Dialog <b>Details Zeichnung</b> den Faktor 2 als <b>Teilgruppierung</b> auf der Registerkarte <b>Gruppe</b> und Faktor 3 als <b>Spalte Horizontales Feld</b> auf der Registerkarte <b>Feld</b> fest.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Multi-Vari Chart Example01.png" src="../images/Multi-Vari_Chart/400px-Multi-Vari_Chart_Example01.png" width="400"></a></dd>
+  </dl>
+
+  <p>Berechnen Sie die Mittelwerte für die Teilgruppen (markiert mit einer blauen Box) und verschiedene Felder (markiert mit einer grünen Box) und zeichnen Sie sie als Punkt-Liniendiagramme, um diese Mittelwerte darzustellen.</p>

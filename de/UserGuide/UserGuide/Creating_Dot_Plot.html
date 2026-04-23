@@ -1,0 +1,205 @@
+﻿<h1 class="firstHeading">Punktdiagramm erstellen</h1>
+
+  <p class='urlname' style='display: none'>Create-Dot Plot</p>
+
+  <p>Das Punktdiagramm ist ein statistisches Diagramm, das aus Datenpunkten besteht, die auf einer recht einfachen Skalierung gezeichnet sind, üblicherweise mit Hilfe von gefüllten Kreisen.</p>
+
+  <p>Origin unterstützt das Zeichnen von Punktdiagrammen im Menü <b>Zeichnen</b>:</p>
+
+  <ul>
+    <li><b>Zeichnen &gt; Statistisch: <a href="../../UserGuide/UserGuide/Dot_Plot.html" title="UserGuide:Dot Plot">Punktdiagramm</a></b></li>
+
+    <li><b>Zeichnen &gt; Statistisch: <a href="../../UserGuide/UserGuide/Stacked_Dot_Plots.html" title="UserGuide:Stacked Dot Plots">Gestapelte Punktdiagramme</a></b></li>
+
+    <li><b>Zeichnen &gt; Kategorial: <a href="../../UserGuide/UserGuide/Grouped_Dot_Plots.html" title="UserGuide:Grouped Dot Plots">Gruppierte Punktdiagramme</a></b></li>
+
+    <li><b>Zeichnen &gt; Kategorial&#160;: <a href="../../UserGuide/UserGuide/Grouped_Stacked_Dot_Plots.html" title="UserGuide:Grouped Stacked Dot Plots">Gruppierte gestapelte Punktdiagramme</a></b></li>
+  </ul>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Dot_Plot_Types"><span class="tocnumber">1</span> <span class="toctext">Punktdiagrammtypen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2">
+        <a href="#Creating_Dot_Plots"><span class="tocnumber">2</span> <span class="toctext">Punktdiagramme erstellen</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-3"><a href="#Input"><span class="tocnumber">2.1</span> <span class="toctext">Eingabe</span></a></li>
+
+          <li class="toclevel-2 tocsection-4"><a href="#Group"><span class="tocnumber">2.2</span> <span class="toctext">Gruppe</span></a></li>
+
+          <li class="toclevel-2 tocsection-5"><a href="#Plot_Order"><span class="tocnumber">2.3</span> <span class="toctext">Zeichnungsreihenfolge</span></a></li>
+
+          <li class="toclevel-2 tocsection-6"><a href="#Stack"><span class="tocnumber">2.4</span> <span class="toctext">Stapel</span></a></li>
+
+          <li class="toclevel-2 tocsection-7"><a href="#Arrange_Points"><span class="tocnumber">2.5</span> <span class="toctext">Punkte anordnen</span></a></li>
+
+          <li class="toclevel-2 tocsection-8"><a href="#Horizontal_Margin"><span class="tocnumber">2.6</span> <span class="toctext">Horizontaler Rand</span></a></li>
+
+          <li class="toclevel-2 tocsection-9"><a href="#Output"><span class="tocnumber">2.7</span> <span class="toctext">Ausgabe</span></a></li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-10"><a href="#Customizing_Dot_Plots"><span class="tocnumber">3</span> <span class="toctext">Punktdiagramme benutzerdefiniert anpassen</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Dot_Plot_Types"></a><span class="mw-headline">Punktdiagrammtypen</span></h2>
+
+  <table class="simple" style="width:850px">
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 1.png" src="../images/Creating_Dot_Plot/350px-DotPlot_1.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von einem Y</td>
+
+      <td>
+        <b>Eingabe</b>: Eine Y-Spalte<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Statistisch: Punktdiagramm</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 2.png" src="../images/Creating_Dot_Plot/350px-DotPlot_2.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von einem Y mit Gruppen</td>
+
+      <td>
+        <b>Eingabe</b>: Eine Y-Spalte und eine Gruppierungsspalte<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Kategorial: Gruppierte Punktdiagramme</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 3.png" src="../images/Creating_Dot_Plot/350px-DotPlot_3.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von einem Y mit gestapelten Gruppen</td>
+
+      <td>
+        <b>Eingabe</b>: Eine Y-Spalte und zwei Gruppierungsspalten<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Kategorisch: Gruppierte gestapelte Punktdiagramme</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 5.png" src="../images/Creating_Dot_Plot/350px-DotPlot_5.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm mit mehreren Y</td>
+
+      <td>
+        <b>Eingabe</b>: Mehrere Y-Spalten (2 Spalten in diesem Beispiel)<br>
+
+        <p><b>Menü</b>:<b>Zeichnen &gt; Statistisch: Punktdiagramm</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 4.png" src="../images/Creating_Dot_Plot/350px-DotPlot_4.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von mehreren Y, gestapelt</td>
+
+      <td>
+        <b>Eingabe</b>: Mehrere Y-Spalten (2 Spalten im Beispiel)<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Statistisch: Gestapelte Punktdiagramme</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 6.png" src="../images/Creating_Dot_Plot/350px-DotPlot_6.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von mehreren Y, mit Gruppen</td>
+
+      <td>
+        <b>Eingabe</b>: Mehrere Y-Spalten (2 Spalten im Beispiel) und eine Gruppierungsspalte<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Kategorial: Gruppierte Punktdiagramme</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center"><a class="image"><img alt="DotPlot 7.png" src="../images/Creating_Dot_Plot/350px-DotPlot_7.png" width="350"></a></td>
+
+      <td align="center">Punktdiagramm von mehreren Y, mit gestapelten Gruppen</td>
+
+      <td>
+        <b>Eingabe</b>: Mehrere Y-Spalten (2 Spalten im Beispiel) und zwei Gruppierungsspalten<br>
+
+        <p><b>Menü</b>: <b>Zeichnen &gt; Kategorisch: Gruppierte gestapelte Punktdiagramme</b></p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Creating_Dot_Plots"></a><span class="mw-headline">Punktdiagramme erstellen</span></h2>
+
+  <p>Wenn Sie ein Punktdiagramm mit Gruppen zeichnen, wird die X-Funktion <b>plot_gdot</b> geöffnet, mit der Sie entscheiden können, wie die Punkte gezeichnet werden sollen:</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Grouped Dot dialog.png" src="../images/Creating_Dot_Plot/Grouped_Dot_dialog.png" width="402"></a></dd>
+  </dl>
+
+  <h3><a name="Input"></a><span class="mw-headline">Eingabe</span></h3>
+
+  <p>Wählen Sie die Y-Datenspalte der Quelle zum Zählen. Sie können mehrere Spalten auswählen.</p>
+
+  <h3><a name="Group"></a><span class="mw-headline">Gruppe</span></h3>
+
+  <p>Wählen Sie die Gruppierungsspalte(n) aus.</p>
+
+  <h3><a name="Plot_Order"></a><span class="mw-headline">Zeichnungsreihenfolge</span></h3>
+
+  <p>Legen Sie fest, wie die Daten im Ausgabeblatt sortiert und gruppierte Punktdiagramme gezeichnet werden sollen, wenn es mehrere Eingabespalten gibt. Dieses Bedienelement ist das gleiche wie <b>Ausgabespalten sortieren nach</b> im Dialog <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns"><b>Spalten entstapeln</b></a>.</p>
+
+  <p>Es wird deaktiviert, wenn die Option <b>Stapeln</b> auf <b>Eingabevariable</b>, <b>Letzte Gruppe</b> oder <b>Alle Gruppen</b> gesetzt ist. Die Auswahl von <b>Eingabevariable stapeln</b> verwendet <b>Gruppeninfo zuerst</b>. Die Auswahl von <b>Letzte Gruppe</b> oder <b>Alle Gruppen</b> verwendet <b>Eingabevariable zuerst</b>.</p>
+
+  <h3><a name="Stack"></a><span class="mw-headline">Stapeln</span></h3>
+
+  <p>Legen Sie fest, ob die Punktdiagramme gestapelt und wie sie in jeder Gruppe gestapelt werden sollen.</p>
+
+  <ul>
+    <li>Wenn <b>Stapeln</b> auf <i><b>Kein</b></i> gesetzt ist, <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns">teilen Sie die Eingabevariablendaten der Quelle mit Hilfe der Gruppenspalten auf</a> und zeichnen Sie sie als gruppierte Punktdiagramme. Wenn die Eingabe mehrere Variablen + Gruppen sind und die Zeichnungsreihenfolge Eingabevariable zuerst ist, setzen Sie die Untergruppe auf die letzte Gruppenbeschriftungszeile im Blatt <i>Output</i> (Ausgabe). Falls die Zeichnungsreihenfolge Gruppeninfo zuerst ist, setzen Sie die Untergruppe auf Langnamenzeile im Blatt <i>Output</i>. Wenn die Eingabe eine Variable + mehrere Gruppen ist, setzen Sie die Untergruppe auf die letzte Gruppenbeschriftungszeile im Blatt <i>Output</i> (Ausgabe).</li>
+
+    <li>Wenn <b>Stapeln</b> auf <i><b>Eingabevariable/Letzte Gruppe/Alle Gruppen</b></i> gesetzt ist, <a href="../../UserGuide/UserGuide/Unstacking_Worksheet_Columns.html" title="UserGuide:Unstacking Worksheet Columns">teilen Sie die Eingabevariablendaten mit Hilfe der Gruppenspalten auf</a> und zeichnen Sie sie alle als gruppiertes Punktdiagramm. Wählen Sie <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Stack_Tab.html#Cumulative" title="UserGuide:The (Plot Details) Stack Tab">Kumulativ für Stapeln</a> und setzen Sie <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="UserGuide:The (Plot Details) Group Tab">Teilgruppierung auf Nach Spaltenbeschriftung</a>. Die Spaltenbeschriftung ist der Anwenderparameter der letzten Gruppe/der Gruppe über der letzten Gruppe/des Langnamens im Blatt <i>Output</i> (Ausgabe).</li>
+
+    <li>Wenn <b>Stapeln</b> auf <i><b>Alle</b></i> gesetzt ist, wie <i><b>Eingabevariable/Letzte Gruppe/Alle Gruppen</b></i>, aber ohne eine Teilgruppierung festzulegen.</li>
+  </ul>
+
+  <h3><a name="Arrange_Points"></a><span class="mw-headline">Punkte anordnen</span></h3>
+
+  <p>Legen Sie fest, wie die Punkte angeordnet werden:</p>
+
+  <ul>
+    <li><b>Dichte</b>: Das Punktdiagramm wird wie in einem Säulen-Punktdiagramm angeordnet, aber die Punkte werden an der Basislinie von jeder Zeichnung ausgerichtet. Es gibt keine Einteilung der Daten, die Datenanordnung bezieht sich auf die Größe des Datenpunkts.</li>
+
+    <li><b>Histogramm</b>: Wie ein Histogramm, aber es wird die Anzahl der Punkte anstatt von Balken gezeigt. Die Daten werden nach Klassen eingeteilt, die Punkte in jeder Klasse gezählt und dann die Symbole von der Basislinie aus entsprechend der Anzahl gezeichnet.</li>
+  </ul>
+
+  <p>Dieses Bedienelement ist das gleiche wie <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Arrange_Points_Control_for_Dot_Plot" title="UserGuide:Customizing the Box Chart Data Tab Controls"><b>Punkte anordnen</b></a> auf der Registerkarte <b>Daten</b> im Dialog <b>Details Zeichnung</b>.</p>
+
+  <h3><a name="Horizontal_Margin"></a><span class="mw-headline">Horizontaler Rand</span></h3>
+
+  <p>Legen Sie den horizontalen Rand fest, um die Seite an den Layer anzupassen, damit die Hilfsstrichsbeschriftungen angezeigt werden, insbesondere wenn es mehrere Tabellenzeilen auf der Y-Achse gibt.</p>
+
+  <h3><a name="Output"></a><span class="mw-headline">Ausgabe</span></h3>
+
+  <p>Geben Sie die ungestapelten Eingabespalten mit Hilfe festgelegter Gruppierungsspalte(n) aus.</p>
+
+  <h2><a name="Customizing_Dot_Plots"></a><span class="mw-headline">Punktdiagramme benutzerdefiniert anpassen</span></h2>
+
+  <p>Wenn Sie ein Punktdiagramm erstellt haben, können Sie das Punktdiagramm mit dem Dialog Details Zeichnung benutzerdefiniert anpassen:</p>
+
+  <ul>
+    <li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Symbol_Tab.html" title="UserGuide:The (Plot Details) Symbol Tab">Die Registerkarte Symbole (Details Zeichnung)</a></li>
+
+    <li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="UserGuide:The (Plot Details) Spacing Tab">Die Registerkarte Abstände (Details Zeichnung)</a></li>
+
+    <li><a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html" title="UserGuide:Customizing the Box Chart Data Tab Controls">Registerkarte Daten (Details Zeichnung)</a></li>
+  </ul>
+
+  <p>Sie können auch auf das Zeichnungselement klicken, um mit der Minisymbolleiste benutzerdefiniert anzupassen.</p>

@@ -1,0 +1,226 @@
+<h1 class="firstHeading">10.3 Graph Data Slicer</h1><p class='urlname' style='display: none'>Graph-Data-Slicer</p>
+<p><br />
+Besides <a href="../../UserGuide/UserGuide/Data_Filter.html" title="UserGuide:Data Filter">applying filter to worksheet</a> (i.e. worksheet data slicer), you can apply filters on graph directly (i.e. graph data slicer).
+</p>
+<dl><dd><a  class="image"><img alt="Data slicer 01.gif" src="../images/Graph_With_Data_Slicer/Data_slicer_01.gif?v=96495" width="779"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Worksheet_Data_Slicer_vs._Graph_Data_Slicer"><span class="tocnumber">1</span> <span class="toctext">Worksheet Data Slicer vs. Graph Data Slicer</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Add_Data_Slicer_to_Graph"><span class="tocnumber">2</span> <span class="toctext">Add Data Slicer to Graph</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Filter_Controls"><span class="tocnumber">3</span> <span class="toctext">Filter Controls</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Explore_Graph_with_Data_Filter"><span class="tocnumber">4</span> <span class="toctext">Explore Graph with Data Filter</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Extract_Filtered_Data"><span class="tocnumber">4.1</span> <span class="toctext">Extract Filtered Data</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Analysis_on_Graph_with_Graph_Data_Slicer"><span class="tocnumber">4.2</span> <span class="toctext">Analysis on Graph with Graph Data Slicer</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Worksheet_Data_Slicer_vs._Graph_Data_Slicer"></a><span class="mw-headline">Worksheet Data Slicer vs. Graph Data Slicer</span></h2>
+<ul><li><span class='headerInParagraph'>Worksheet Data Slicer</span> is a Worksheet-based filter. </li></ul>
+<dl><dd>If the source worksheet has any filter, turning on data filter on any graph plotted from this worksheet will apply the existed worksheet filter. This is called worksheet data slicer. </dd>
+<dd>Worksheet data slicer applies to worksheet and will also to all graphs plotted from this worksheet. Changing filters (condition or enable/disable status) in the graph will update worksheet and all graphs created from this worksheet. Vice versa.</dd></dl>
+<ul><li><span class='headerInParagraph'>Graph Data Slicer</span> is a graph-based filter. </li></ul>
+<dl><dd>If the source worksheet has no filter, turning on data slicer on any graph plotted from this worksheet will pop up dialog allowing you to choose a column to apply filter to. This type of filter is called graph data slicer.</dd>
+<dd>Graph data slicer only applies to current graph and NOT touches data in the source worksheet. That is to say, the filter on current graph will not affect other graphs even though they are all plotted from the same worksheet. If you delete the graph window on which the data slicer is based, all analysis and performance derived from this slicer will also be removed.  </dd></dl>
+<p>We always recommand graph data slicer not only because it only affects the current graph (in this sense independent of source worksheet), but also because it has more useful features such as duplicate plot(s) for comparesion, and will keep improving in the feature.
+</p>
+<h2><a name="Add_Data_Slicer_to_Graph"></a><span class="mw-headline">Add Data Slicer to Graph</span></h2>
+<ol>
+<li> Active a graph whose source worksheet has no data filter applied.
+<li> Select menu <b>Data: Slicer</b>. <br />
+<i>Or,</i><br />
+Click <b>Add/Remove Data Filter</b> button <a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png?v=29260" width="21"  /></a> on the Worksheet Data toolbar. <br />
+<i>Or,</i><br />
+ Hover the cursor over the edge of the graph page until the cursor changes to <a  class="image"><img alt="Data slicer mouse.png" src="../images/Graph_With_Data_Slicer/Data_slicer_mouse.png?v=87720" width="30"  /></a>. Single clicking on the blank area will bring up the page-level mini toolbar. Click <b>Data Slicer</b> button. 
+<dl><dd><a  class="image"><img alt="Data slicer 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_02.png?v=96510" width="340"  /></a></dd></dl>
+<li> A <b>Add Slicer to Graph</b> dialog opens.
+<dl><dd><a  class="image"><img alt="Data slicer dialog 02.png" src="../images/Graph_With_Data_Slicer/Data_slicer_dialog_02.png?v=97035" width="399"  /></a></dd></dl>
+<ul>
+<li>Select up to two columns to apply slicers to. Note that you can always add more slicers later.
+<li>If the selected filter column is Text format, you can check <b>Multiple Selection</b> to enable selecting multiple items for the filter condition. You can also switch between <b>Single Selection</b> and <b>Multple Selection</b> after the slicer is added. See <a href="#Text_.26_Categorical">next section</a>.
+<br />Slicer applied on a text/categorical column can have 2 selection modes: 
+<br /><i><b>Single Selection vs. Multple Selection</b></i>
+
+<table class="simple" style="width: 80%">
+<tr>
+<th><center>Single Selection</center>
+</th>
+<th><center>Multiple Selection</center>
+</th></tr>
+<tr>
+<td>A drop-down list to choose only one item at a time.
+</td>
+<td>A drop-down list to select multiple items. <br />The graph is auto-updated once you select/deselect an item.<br />Click outside the list to finish selection.
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Data slicer 04.png" src="../images/Graph_With_Data_Slicer/Data_slicer_04.png?v=97044" width="286"  /></a><br /><br /><br />
+</td>
+<td><a  class="image"><img alt="Data slicer 03.png" src="../images/Graph_With_Data_Slicer/Data_slicer_03.png?v=97036" width="362"  /></a>
+</td></tr></table>
+</li>
+<li>To intuitively comparing different filter conditions, you can choose <b>Duplicate plot</b>. 
+<table class="simple">
+<tr>
+<th width="20%"> Duplicate Plot
+</th>
+<td>
+<ul><li><b>None</b></li></ul>
+<dl><dd>Do not duplicate plot.</dd></dl>
+<ul><li><b>Same Layer'</b></li></ul>
+<dl><dd>Duplicate plots in the same layer. For multi-layer graph, only this option is available for duplication.</dd>
+<dd><a  class="image"><img alt="Graph Data Slicer DuplicatePlot SameLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_SameLayer.png?v=97037" width="471"  /></a></dd></dl>
+<ul><li>'<b>Multiple Layers</b></li></ul>
+<dl><dd>Duplicate plots to multiple layers. This option is available for single layer graph only.</dd>
+<dd><a  class="image"><img alt="Graph Data Slicer DuplicatePlot MultiLayer.png" src="../images/Graph_With_Data_Slicer/Graph_Data_Slicer_DuplicatePlot_MultiLayer.png?v=97039" width="627"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th> Number of Duplicates
+</th>
+<td>
+<p>When <b>Dulicate Plot</b> = <b>Same Layer</b>, use this edit box to specify the number of duplicated plots.
+</p>
+</td></tr>
+<tr>
+<th> Number of Columns/<br />Number of Rows
+</th>
+<td>
+<p>When <b>Duplicate Plot</b> = <b>Multiple Layers</b>, use these two drop-down lists to determine the number of duplicates and the panel layout. 
+</p><p>The number of duplicates = <b>Number of Columns</b> X <b>Number of Rows</b> - 1.
+</p>
+</td></tr>
+<tr>
+<th>Common Filter for All Layers/Plots
+</th>
+<td>
+<ul><li>For multiple-layers graph, ALL filters you defined in <b>Add Slicer to Graph</b> dialog will apply to ALL layers. Check this checkbxo to set a common filter control for all layers and thus all layers will be applied by same filter condition. </li>
+<li>Otherwise, each layer will have its own filter control. In this case, filters on different layers are independent from each others. That is to say, you can set different filter conditions for different layers, remove an existed filter or add new filters to one layer but not touch other layers. <br />You can also right click on any slicer and choose <b>Move to Filter as Common Filter</b> to transfer all filters into one common control.</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 09.png" src="../images/Graph_With_Data_Slicer/Data_slicer_09.png?v=97156" width="648"  /></a></dd></dl>
+<ul><li>You can even have mixed controls in one graph, by adding new filter <b>To All Plots</b> or <b>Common Filter to Page</b>.</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 10.png" src="../images/Graph_With_Data_Slicer/Data_slicer_10.png?v=97161" width="385"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>Show Filter in Legend
+</th>
+<td>
+<p>Check this checkbox to show current filter condition in the legend. The legend will auto-update when the filter is changed.
+</p><p>Note that you can also add filter info to layer title by <b>Add Layer Filter</b> button <a  class="image"><img alt="Popup Add Layer Filter Title.png" src="../images/Graph_With_Data_Slicer/Popup_Add_Layer_Filter_Title.png?v=97021" width="24"  /></a> from page-level mini toolbar.
+</p>
+</td></tr></table>
+</li>
+</ul>
+</li>
+<li>The Data Slicer panel will be turned on at the left side of the graph window, listing the filter you just set. Graph will update accordingly. You can view and change the current filter condition, add more filters, remove existed filters, or reorder them, see <a href="#Edit_Filters">next section</a> for details. 
+<dl><dd><a  class="image"><img alt="Data slicer 01.png" src="../images/Graph_With_Data_Slicer/Data_slicer_01.png?v=97906" width="746"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Graph_With_Data_Slicer/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>If the source worksheet (from which the graph is created) has one or more filters, no matter the <a href="../../UserGuide/UserGuide/Data_Filter.html#Status_of_Filter" title="UserGuide:Data Filter">filter is enable or not</a>, turning on Data Slicer panel (by <b>Data Filter</b> button ton <a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png?v=29260" width="21"  /></a>) will transfer all the worksheete filters to the graph window. 
+</p><p>In this case, you CANNOT add a new slicer. You can only view and edit the existed filters. See <a href="#Edit_Filters">next section</a> for available editions.  
+</p></td></tr></table>
+</ol>
+<h2><a name="Filter_Controls"></a><span class="mw-headline">Filter Controls</span></h2>
+<ul><li>Right clicking on the blank area inside Slicer panel will bring up context menus to copy/paste filter, add filters, and duplicate layer with filters.</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 12.png" src="../images/Graph_With_Data_Slicer/Data_slicer_12.png?v=97644" width="509"  /></a></dd></dl>
+<table class="simple">
+
+<tr>
+<th>Add Filter To All Plots
+</th>
+<td>Select a column from sub-menu list to add a new filter to layer level, which will apply to all plots in all layer but have independent filter control in each layer level. In this case, you can set different filter conditions to diffferent layer filters for comparison.
+</td></tr>
+<tr>
+<th>Add Common Filter to Page
+</th>
+<td>Select a column from sub-menu list to add a new filter to page level, which will apply to all plots in all layers and have a common control in page level.
+</td></tr>
+<tr>
+<th>Change X/<br />Change Y
+</th>
+<td>Change X/Y if all layers share the same X/Y column, and rescale to show all.
+</td></tr>
+<tr>
+<th>Duplicate Layers With Filter(s)
+</th>
+<td>Duplicate layers with filter(s) to the current graph for comparison.
+</td></tr>
+<tr>
+<th>Auto Rescale
+</th>
+<td>Check this item to auto rescale axes according to the filter results.
+</td></tr></table>
+<ul><li>Right clicking on any data slicer will bring up a context list to disable/delete, reorder, edit filters. </li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 11.png" src="../images/Graph_With_Data_Slicer/Data_slicer_11.png?v=97167" width="509"  /></a></dd></dl>
+<table class="simple">
+
+<tr>
+<th>Multiple Selection/<br />Single Selection
+</th>
+<td>
+<p>Filter on a Text/Categorical column can have <b>Multiple Selection'</b> and <b>Single Selection</b>. Choose the menu item to switch between the two selection modes. 
+</p>
+</td></tr>
+<tr>
+<th>Custom Filter/<br />Change Condition Type
+</th>
+<td>
+<p>Different options are provided according to the format of the column to which the filter is applied.
+</p>
+<ul>
+<li>Text &amp; Categorical
+<ul><li>Right click on a text/categorical slicer and select <b>Custom Filter...</b> context menu to open the <b>Custom Filter (Advanced Text)</b> dialog for advanced editting. Refer to <a href="../../UserGuide/UserGuide/Data_Filter.html#Text_Filter" title="UserGuide:Data Filter">this page</a> for how to set a text filter.</li></ul>
+</li>
+<li>Numeric
+<ul><li>For simple editting, left-click on a Numeric slicer to open the <b>Simple Numeric Filter</b> dailog, or right click on the slicer to select <b>Change Condition Type</b> context menu and select a condition from the pop-up list. </li>
+<li>Right-click and select <b>Custom Filter...</b> context menu to open the <b>Custom Data Filter</b> dialog for advanced editting. Refer to <a href="../../UserGuide/UserGuide/Data_Filter.html#Numeric_Filter" title="UserGuide:Data Filter">this page</a> for how to set a numeric filter.</li>
+<li>Select <b>Change Condition Type: Load</b> to load a saved filter condition.</li></ul>
+</li>
+<li>Data &amp; Time
+<ul><li>For simple editting, left-click on a date and time slicer to open the <b>Simple Date Filter</b> dailog, or right click on the slicer to select <b>Change Condition Type</b> context menu and select a condition from the pop-up list. </li>
+<li>Right click and select <b>Custom Filter...</b> context menu to open the <b>Custom Data Filter</b> dialog for advanced editting. Refer to <a href="../../UserGuide/UserGuide/Data_Filter.html#Date_Filter" title="UserGuide:Data Filter">this page</a> for how to set a date filter.</li>
+<li>Select <b>Change Condition Type: Load</b> to load a saved filter condition.</li></ul>
+</li></ul>
+</td></tr>
+<tr>
+<th>Change Filter Column
+</th>
+<td>
+<p>Choose a column from the pop-up list to switch the current filter to. 
+</p>
+</td></tr>
+<tr>
+<th>Move To Page As Common Filter
+</th>
+<td>
+<p>For a data slicer based on current layer, choose this item to move it to page level so that the filter condition is applied to ALL layers (all plots) and share the same filter control.
+</p>
+</td></tr>
+<tr>
+<th>Delete Filter
+</th>
+<td>
+<p>Delete selected data slicer. 
+</p>
+<ul><li>You can also click <b>Add/Remove Data Filter</b> button <a  class="image"><img alt="Button Add Remove Column Filter.png" src="../images/Graph_With_Data_Slicer/Button_Add_Remove_Column_Filter.png?v=29260" width="21"  /></a> on the <b>Worksheet Data</b> toolbar to remove ALL data slicers on the current graph window. </li>
+<li>Note that all analysis derived from slicers will also be removed. </li></ul>
+</td></tr></table>
+<h2><a name="Explore_Graph_with_Data_Filter"></a><span class="mw-headline">Explore Graph with Data Filter</span></h2>
+<h3><a name="Extract_Filtered_Data"></a><span class="mw-headline">Extract Filtered Data</span></h3>
+<p>Right click on the filtered plot and select <b>Create Slicer Copy as New Book</b>.
+</p><p>A workbook named <i>Slicer</i> will be created containing the filtered data. Filter condition shows in the User-defined parameter.
+</p>
+<dl><dd><a  class="image"><img alt="Creaate Slicer Copy as New Book.png" src="../images/Graph_With_Data_Slicer/Creaate_Slicer_Copy_as_New_Book.png?v=97648" width="534"  /></a></dd></dl>
+<h3><a name="Analysis_on_Graph_with_Graph_Data_Slicer"></a><span class="mw-headline">Analysis on Graph with Graph Data Slicer</span></h3>
+<p><a  class="image"><img alt="DataSlicerwithAnalaysis.gif" src="../images/Graph_With_Data_Slicer/DataSlicerwithAnalaysis.gif?v=96987" width="672"  /></a>
+</p><p><i><b>Things you need to know...</b></i>
+</p>
+<ul><li> If you want your analysis results recalcute upon any filter condition changes, you will need to add the data slicer BEFORE performing the analysis operation. For example, if you open the fitted curve graph from the Linear Fit report sheet </li></ul>
+<p>and add a data slicer, the linear fitting results will NOT update if you change the filter condition.
+</p>
+<ul><li> Any analysis performed on a graph with data slicer(s) is based on the filtered data and independent of the source data. The analysis results will be output to a hidden workbook, which can be activated by clicking on the analysis' green lock and choosing <b>Go to Results</b>. On the other hand, clicking on the green lock in the report sheet, or clickin on the link in <b>Notes</b> table &gt; <b>Data Filter</b> cell can go to the source graph.</li>
+<li> Always keep in mind that deleting the graph window will delete all operation outputs based on graph data filter.</li>
+<li> If you perform some analysis on a graph with data slicer, duplicating the graph will pop up a dialog asking whether to include the analysis operations and outputs.</li></ul>
+<dl><dd><a  class="image"><img alt="Data slicer 08.png" src="../images/Graph_With_Data_Slicer/Data_slicer_08.png?v=96827" width="391"  /></a>
+<ul><li>Click <b>Yes</b> to duplicate both the graph and the analysis (operations and associated outputs). In this case, changing filter condition or analysis parameters will update the current graph window only, not affect the other window.</li>
+<li>Click <b>No</b> to duplicate the graph only, no analysis.</li></ul></dd></dl>
+
+

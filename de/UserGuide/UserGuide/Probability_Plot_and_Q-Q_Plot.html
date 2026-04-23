@@ -1,0 +1,556 @@
+﻿<h1 class="firstHeading">Wahrscheinlichkeitsdiagramm und Q-Q-Diagramm</h1>
+
+  <p class='urlname' style='display: none'>ProbPlot-QQPlot</p>
+
+  <p>Das Wahrscheinlichkeitsdiagramm wird verwendet, um zu testen, ob ein Datensatz einer gegebenen Verteilung folgt. Allgemein gesagt zeigt es ein Diagramm mit beobachtetem kumulativen Prozentanteil auf der X-Achse und erwartetem kumulativen Prozentanteil auf der Y-Achse. Wenn alle Punkte nah an der Referenzlinie liegen, kann davon gesprochen werden, dass der Datensatz der gegebenen Verteilung folgt.</p>
+
+  <p>Das Q-Q-(Quantile-Quantile)-Diagramm ist eine weitere grafische Methode, um zu testen, ob ein Datensatz einer gegebenen Verteilung folgt. Es unterscheidet sich von dem Wahrscheinlichkeitsdiagramm darin, dass es die beobachteten und erwarteten Werte anstatt der Prozentsätze auf der X- und Y-Achse zeigt. Wenn alle Punkte nah an der Referenzlinie liegen, kann davon gesprochen werden, dass der Datensatz der gegebenen Verteilung folgt.</p>
+
+  <p>Origin unterstützt fünf gegebene Verteilungen (Normal, Lognormal, Exponentiell, Weibull und Gamma) und fünf Methoden zum Zeichnen von Perzentilapproximationen (Blom, Benard, Hazen, Van der Waerden und Kaplan-Meier).</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Creating_Probability_Plot_or_Q-Q_Plot"><span class="tocnumber">1</span> <span class="toctext">Wahrscheinlichkeitsdiagramm oder Q-Q-Diagramm erstellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#The_Dialog_of_plot_prob_X-Function"><span class="tocnumber">2</span> <span class="toctext">Der Dialog der X-Funktion plot_prob</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Distributions"><span class="tocnumber">3</span> <span class="toctext">Verteilungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Details_for_Constructing_Probability_Plot"><span class="tocnumber">4</span> <span class="toctext">Einzelheiten zum Erzeugen eines Wahrscheinlichkeitsdiagramms</span></a></li>
+
+      <li class="toclevel-1 tocsection-5"><a href="#Details_for_Constructing_Q-Q_Plot"><span class="tocnumber">5</span> <span class="toctext">Einzelheiten zum Erzeugen eines Q-Q-Diagramms</span></a></li>
+
+      <li class="toclevel-1 tocsection-6"><a href="#Score_Methods"><span class="tocnumber">6</span> <span class="toctext">Score-Methoden</span></a></li>
+
+      <li class="toclevel-1 tocsection-7"><a href="#Reference"><span class="tocnumber">7</span> <span class="toctext">Referenz</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Creating_Probability_Plot_or_Q-Q_Plot"></a><span class="mw-headline">Wahrscheinlichkeitsdiagramm oder Q-Q-Diagramm erstellen</span></h2>
+
+  <p>Zum Erstellen eines Wahrscheinlichkeits- oder Q-Q-Diagramms:</p>
+
+  <ol>
+    <li>Markieren Sie eine Y-Spalte oder mehrere Y-Spalten als Eingabevariable(n).</li>
+
+    <li>Öffnen Sie den Dialog des Wahrscheinlichkeits-/Q-Q-Diagramms:
+
+      <dl>
+        <dd>Für ein Wahrscheinlichkeitsdiagramm: Klicken Sie im Hauptmenü von Origin auf <b>Zeichnen &gt; Statistisch: Wahrscheinlichkeitsdiagramm ...</b>. Alternativ können Sie auf die Schaltfläche Wahrscheinlichkeitsdiagramm <a class="image"><img alt="Button Probability Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Probability_Plot.png" width="24"></a> auf der Symbolleiste 2D-Grafiken klicken.</dd>
+
+        <dd>Für ein Q-Q-Diagramm: Klicken Sie im Hauptmenü von Origin auf <b>Zeichnen &gt; Statistisch: Q-Q-Diagramm ...</b>. <i>Alternativ können Sie auf die Schaltfläche Q-Q-Diagramm <a class="image"><img alt="Button Q Q Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Q_Q_Plot.png" width="21"></a> auf der Symbolleiste 2D-Grafiken klicken.</i></dd>
+      </dl>
+    </li>
+
+    <li>Wählen Sie im Dialog der X-Funktion plot_prob die Gruppierungsspalte(n), legen Sie die Anordnung der Gruppen und Variablen fest, wählen Sie eine Spalte, um die Zeichnung in Felder aufzuteilen, legen Sie die Verteilung und Methode fest.</li>
+
+    <li>Klicken Sie auf die Schaltfläche <b>OK</b>, um ein Wahrscheinlichkeits- oder Q-Q-Diagramm zu erstellen.
+
+      <dl>
+        <dd><a class="image"><img alt="Probability Plot and Q Q Plot 2.png" src="../images/Probability_Plot_and_Q-Q_Plot/850px-Probability_Plot_and_Q_Q_Plot_2.png" width="850"></a></dd>
+      </dl>
+    </li>
+  </ol>
+
+  <p>Wie Sie in diesem Beispiel sehen können,</p>
+
+  <ul>
+    <li>wurden 2 Spalten, die in <b>Eingabedaten</b> ausgewählt wurden, in separate Grafiken gezeichnet, indem <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> gesetzt wurde.</li>
+
+    <li>Die Gruppierungsspalte "country", die im Feld <b>Gruppe</b> ausgewählt wurde, hat das Wahrscheinlichkeitsdiagramm in mehrere in der gleichen Grafik überlagerte Zeichnungen aufgeteilt.</li>
+
+    <li>Eine andere Gruppierungsspalte "Luxury", die im Feld <b>Felder teilen nach</b> ausgewählt wurde, hat das Diagramm in zwei Layer (<b>N</b> und <b>Y</b>) aufgeteilt.</li>
+
+    <li>Eine Tabelle mit den Statistikergebnissen wurde zur Grafik hinzugefügt.</li>
+  </ul>
+
+  <h2><a name="The_Dialog_of_plot_prob_X-Function"></a><span class="mw-headline">Der Dialog der X-Funktion plot_prob</span></h2>
+
+  <dl>
+    <dd><a class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png" width="449"></a></dd>
+  </dl>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>
+        <p><b>Eingabedaten</b></p>
+      </th>
+
+      <td>
+        <p>Legen Sie die Eingabedaten fest. Sie können mehrere Spalten als Eingabevariablen auswählen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Gruppe</b></p>
+      </th>
+
+      <td>
+        <p>Legen Sie die Gruppierungsspalte(n) fest, um die Eingabevariable(n) in mehrere unterschiedliche Zeichnungen aufzuteilen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Diagrammanordnung</b></p>
+      </th>
+
+      <td>
+        Die Bedienelemente unter diesem Zweig unterstützen Sie beim Anordnen der Eingabevariablen und Gruppen und teilen die Grafik in mehrere Felder und Seiten auf.
+
+        <ul>
+          <li>
+            <b>Mehrere Datensätze</b> und <b>Mehrere Gruppen</b>: Verwenden Sie diese zwei Optionen, um die Zeichnungen auf diese vier Arten anzuordnen:
+
+            <ul>
+              <li><b>Alle überlagern</b>: Sowohl Mehrere Datensätze als auch Mehrere Gruppen wählen Auf gleicher Grafik überlagern.</li>
+
+              <li><b>Gruppen überlagern, Variablen in verschiedenen Layern</b>: Mehrere Datensätze=Separate Layer, Mehrere Gruppen=Auf gleicher Grafik überlagern</li>
+
+              <li><b>Variablen überlagern, Gruppen in verschiedenen Layern</b>: Mehrere Gruppen=Separate Layer, Mehrere Daten=Auf gleicher Grafik überlagern</li>
+
+              <li><b>Verschiedene Layer</b>: Sowohl Mehrere Datensätze und Mehrere Gruppen wählen Separate Layer.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <b>Felder teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert ist, können Sie eine andere Gruppierungsspalte auswählen, um die Grafiken in mehrere Layer aufzuteilen.
+
+            <dl>
+              <dd><b>Hinweis:</b> Wenn Mehrere Daten und Mehrere Gruppen beide auf Separate Layer gesetzt wurden, sollte die Layerreihenfolge im Ergebnisblatt der Hierarchie von "nach Eingabedaten" →"Felder teilen nach" → "nach Gruppen“ folgen.</dd>
+            </dl>
+          </li>
+
+          <li><b>Seiten teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert wurde, können Sie (eine) Gruppierungsspalte(n) auswählen, um die Eingabedaten zu teilen und Wahrscheinlichkeitsdiagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der für die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt führt alle Seiten auf.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>X-Skalierungen teilen</b></p>
+      </th>
+
+      <td>
+        <p>Legen Sie fest, ob X-Skalierungen für alle Layer auf der gleichen Grafik geteilt werden sollen. Diese Option ist nur verfügbar, wenn <b>Separate Layer auf gleicher Grafik</b> unter <b>Mehrere Daten</b> ausgewählt ist und <b>Mehrere Gruppen</b> oder Gruppierungsspalten im Feld <b>Felder teilen nach</b>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Y-Skalierungen teilen</b></p>
+      </th>
+
+      <td>
+        <p>Legen Sie fest, ob Y-Skalierungen für alle Layer auf der gleichen Grafik geteilt werden sollen. Diese Option ist nur verfügbar, wenn <b>Separate Layer auf gleicher Grafik</b> unter <b>Mehrere Daten</b> ausgewählt ist und <b>Mehrere Gruppen</b> oder Gruppierungsspalten im Feld <b>Felder teilen nach</b>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Verteilung</b></p>
+      </th>
+
+      <td>
+        <p>Wählen Sie einen Verteilungstyp für Ihre Daten aus. Weitere Informationen zu Verteilungen finden Sie im <a href="#Distributions">Abschnitt Verteilungen</a>.</p>
+
+        <ul>
+          <li>
+            <b>Verteilung</b>
+
+            <dl>
+              <dd>Es sind 14 Verteilungen verfügbar.</dd>
+
+              <dd><a class="image"><img alt="Distribution PPandQQ.png" src="../images/Probability_Plot_and_Q-Q_Plot/Distribution_PPandQQ.png" width="286"></a></dd>
+            </dl>
+          </li>
+
+          <li>
+            <b>Aus Daten schätzen</b>
+
+            <dl>
+              <dd>Legen Sie fest, ob die Verteilungsparameter aus den Eingabedaten geschätzt werden sollen. Falls nicht, können Parameter manuell festgelegt werden.</dd>
+            </dl>
+          </li>
+
+          <li>
+            <i><b>Parameter</b></i>: Das Deaktivieren des Kontrollkästchens <b>Aus Daten schätzen</b> aktiviert die Felder <i><b>Parameter</b></i>, in die Sie benutzerdefinierte Werte eingeben können, um die Kurven zu zeichnen.
+
+            <dl>
+              <dd>Sie können mehr Einzelheiten über die <a href="../../UserGuide/UserGuide/Customizing_the_Violin_Plot_Distribution_Tab_Controls.html#Curve_Type" title="UserGuide:Customizing the Violin Plot Distribution Tab Controls">Verteilungskurven</a> auf der Registerkarte <b>Verteilung</b> im Dialog <b>Details Zeichnung</b> finden.</dd>
+            </dl>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Score-Methode</b></p>
+      </th>
+
+      <td>
+        <p>Wählen Sie eine Methode zum Zeichnen der Perzentilapproximationen aus. Weitere Informationen zu den Methoden finden Sie im <a href="#Score_Methods">Abschnitt Score-Methoden</a>.</p>
+
+        <ul>
+          <li><b>Blom</b></li>
+
+          <li><b>Benard</b></li>
+
+          <li><b>Hazen</b></li>
+
+          <li><b>Van der Waerden</b></li>
+
+          <li><b>Kaplan-Meier</b></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Konfidenzband</b></p>
+      </th>
+
+      <td>
+        <p>Legen Sie fest, ob das Konfidenzband im Wahrscheinlichkeitsdiagramm ausgegeben werden soll. Einzelheiten zur Berechnung finden Sie unter <a href="../../UserGuide/UserGuide/Algorithm(Distribution_Fit).html" title="UserGuide:Algorithm(Distribution Fit)">Algorithmen</a>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Konfidenzniveau (%)</b></p>
+      </th>
+
+      <td>
+        <p>Diese Option ist nur verfügbar, wenn <b>Konfidenzband</b> ausgewählt ist. Legen Sie das Konfidenzniveau in Prozent für die gewählte Verteilung fest.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th><b>XY-Achsen austauschen</b></th>
+
+      <td>
+        <p>Legen Sie fest, ob die Positionen von X- und Y-Achse ausgetauscht werden soll.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th><b>X-Minimum<br>
+      X-Maximum</b></th>
+
+      <td>
+        <p><i>Automatische</i> Werte sind <b>X-Minimum</b> = <i>1</i> und <b>X-Maximum</b> = <i>99,5</i>. Wenn <i>Auto</i> deaktiviert ist, verwenden Sie die Werte von Minimum und Maximum der Spalte <b>Referenzlinie</b> in der Ausgabe.</p>
+
+        <p>Wenn das X-Minimum größer ist als der Wert für <i>Auto</i>, berechnen wir den Perzentilwert p1 für das <b>X-Minimum</b>. Die Perzentilspalte sollte nur p1 und die Werte größer als p1 in der Standardliste einschließen. Wenn das <b>X-Minimum</b> größer ist als der <i>automatische</i> Wert, berechnen wir den Perzentilwert p2 für das X-Minimum und die Perzentilspalte sollte in der Standardliste nur p2 einschließen und Werte kleiner als p2.</p>
+
+        <p>Wenn das X-Minimum kleiner ist als der <i>automatische</i> Wert, berechnen wir den Perzentilwert p1 für das X-Minimum. Falls p1 &lt; 1e-5, p1 = 1e-5, dann finden wir den Wert für das Minimum 10^(-m), der größer ist als p1, und die Perzentilspalte schließt p1, 10^(-m), 10^(-m+1), ,,,,1, 2,... ein.</p>
+
+        <p>Wenn das X-Minimum größer ist als der <i>automatische</i> Wert, berechnen wir den Perzentilwert p2 für das X-Minimum. Falls p2 &gt; 99,99, p2 = 99,99, dann finden wir den Wert für das Maximum, der kleiner als p2 ist, in der Liste (99,9, 99,99) und die Perzentilspalte schließt 99, 99,5, 99,9, ... p2 ein.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Ausgabebereich</b></p>
+      </th>
+
+      <td>
+        <p>Diese Option bestimmt, wo die für das Diagramm berechneten Daten gespeichert werden.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <p><b>Diagramme ausgeben</b></p>
+      </th>
+
+      <td>
+        <p>Hier wird festgelegt, wo die Ergebnisdiagramme gespeichert werden.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Distributions"></a><span class="mw-headline">Verteilungen</span></h2>
+
+  <p>Origin umfasst vier Verteilungen für Wahrscheinlichkeits- und Q-Q-Diagramme. Die folgende Tabelle listet ihre Dichtefunktionen auf:</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Verteilung</th>
+
+      <th>Dichtefunktion <i><b>p(x)</b></i></th>
+
+      <th>Bereich</th>
+
+      <th>Parameter</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Normal</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c4faa7a02ad5fe3d1da6bca377356495.png" title="\frac 1{\sigma \sqrt{2\pi }}\exp \left( -\frac{\left( x-\mu \right) ^2}{2\sigma ^2}\right)" alt="\frac 1{\sigma \sqrt{2\pi }}\exp \left( -\frac{\left( x-\mu \right) ^2}{2\sigma ^2}\right)" class="tex"></p>
+      </td>
+
+      <td>Alle <img src="../images/Probability_Plot_and_Q-Q_Plot/math-9dd4e461268c8034f5c8564e155c67a6.png" title="x" alt="x" class="tex"></td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png" title="\mu" alt="\mu" class="tex">, Mittelwert, ist der lokale Parameter<br>
+        <img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex">, Standardabweichung, ist der Skalierungsparameter</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Lognormal</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-834da44fca49f2cf9d71692429625ca3.png" title="\frac 1{\sigma x\sqrt{2\pi }}\exp \left( -\frac{\left( \ln \left( x\right) -\mu \right) ^2}{2\sigma ^2}\right)" alt="\frac 1{\sigma x\sqrt{2\pi }}\exp \left( -\frac{\left( \ln \left( x\right) -\mu \right) ^2}{2\sigma ^2}\right)" class="tex"></p>
+      </td>
+
+      <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png" title="x&gt;0" alt="x&gt;0" class="tex"></td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png" title="\mu" alt="\mu" class="tex"> ist die Form des Skalierungsparameter.<br>
+        <img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"> ist der Skalierungsparameter.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Exponentiell</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-e69b36eddbad461f453154801c4521d7.png" title="\frac 1\sigma \exp \left( -\frac x\sigma \right)" alt="\frac 1\sigma \exp \left( -\frac x\sigma \right)" class="tex"></p>
+      </td>
+
+      <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png" title="x&gt;0" alt="x&gt;0" class="tex"></td>
+
+      <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"> ist der Skalierungsparameter.</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Weibull</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-9c78c3f1b96838bf9ce3cb355f54e447.png" title="\frac c\sigma \left( \frac x\sigma \right) ^{c-1}\exp \left( -\left( \frac x\sigma \right) ^c\right)" alt="\frac c\sigma \left( \frac x\sigma \right) ^{c-1}\exp \left( -\left( \frac x\sigma \right) ^c\right)" class="tex"></p>
+      </td>
+
+      <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png" title="x&gt;0" alt="x&gt;0" class="tex"></td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"> ist der Skalierungsparameter<br>
+        . <img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png" title="c(&gt;0)" alt="c(&gt;0)" class="tex"> ist der Formparameter.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Gamma</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-621bc77637522f27cf4b536957ab92fb.png" title="\frac{1}{\Gamma(c)\sigma^c}x^{c -1} exp(-x/\sigma)," alt="\frac{1}{\Gamma(c)\sigma^c}x^{c -1} exp(-x/\sigma)," class="tex"></p>
+      </td>
+
+      <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png" title="x&gt;0" alt="x&gt;0" class="tex"></td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"> ist der Skalierungsparameter<br>
+        . <img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png" title="c(&gt;0)" alt="c(&gt;0)" class="tex"> ist der Formparameter.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Details_for_Constructing_Probability_Plot"></a><span class="mw-headline">Einzelheiten zum Erzeugen eines Wahrscheinlichkeitsdiagramms</span></h2>
+
+  <p>Zum Erstellen eines Wahrscheinlichkeitsdiagramms sortieren Sie zuerst den beobachteten Datensatz vom kleinsten zum größten Wert:</p>
+
+  <dl>
+    <dd><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5624a30d4c678dc72eae5846b1e79702.png" title="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" alt="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" class="tex">, <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"> ist die Gesamtanzahl der Werte des beobachteten Datensatzes.</dd>
+  </dl>
+
+  <p>Die sortierten beobachteten Werte werden in der Zeichnung durch Punkte dargestellt, deren X-Koordinaten <img src="../images/Probability_Plot_and_Q-Q_Plot/math-92f8cb93ad9350ca1ab67868f3667559.png" title="x[i]\" alt="x[i]\" class="tex"> sind und deren Y-Koordinaten mit Hilfe der <a href="#Score_Methods">Score-Methode</a> berechnet werden.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Probability Plot and Q Q Plot 7.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_Plot_and_Q_Q_Plot_7.png" width="500"></a></dd>
+  </dl>
+
+  <p>Die <a href="../../UserGuide/UserGuide/The_Scale_Tab.html#Type" title="UserGuide:The Scale Tab">Skalierungstypen</a> des Wahrscheinlichkeitsdiagramm sind unterschiedlich je nach Verteilung.</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Verteilung</th>
+
+      <th>X-Skalierungstyp</th>
+
+      <th>Y-Skalierungstyp</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Normal</b></p>
+      </td>
+
+      <td>
+        <p>Linear</p>
+      </td>
+
+      <td>
+        <p>Wahrscheinlichkeit</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Lognormal</b></p>
+      </td>
+
+      <td>
+        <p>Ln</p>
+      </td>
+
+      <td>
+        <p>Wahrscheinlichkeit</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Exponentiell</b></p>
+      </td>
+
+      <td>
+        <p>Ln</p>
+      </td>
+
+      <td>
+        <p>Log-Reziprok doppelt</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Weibull</b></p>
+      </td>
+
+      <td>
+        <p>Log10</p>
+      </td>
+
+      <td>
+        <p>Log-Reziprok doppelt</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Gamma</b></p>
+      </td>
+
+      <td>
+        <p>Log10</p>
+      </td>
+
+      <td>
+        <p>Wahrscheinlichkeit</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Details_for_Constructing_Q-Q_Plot"></a><span class="mw-headline">Einzelheiten zum Erzeugen eines Q-Q-Diagramms</span></h2>
+
+  <p>Zum Erstellen eines Q-Q-Diagramms sortieren Sie zuerst den beobachteten Datensatz vom kleinsten zum größten Wert:</p>
+
+  <dl>
+    <dd><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5624a30d4c678dc72eae5846b1e79702.png" title="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" alt="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" class="tex">, wobei <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"> die Gesamtanzahl der beobachteten Werte ist.</dd>
+  </dl>
+
+  <p>Die Y-Werte sind die inversen kumulativen Verteilungsfunktionen der verwendeten <a href="#Score_Methods">Score-Methode</a>.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Probability Plot and Q Q Plot 6.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_Plot_and_Q_Q_Plot_6.png" width="500"></a></dd>
+  </dl>
+
+  <h2><a name="Score_Methods"></a><span class="mw-headline">Score-Methoden</span></h2>
+
+  <p>Eingabedaten werden von klein zu groß geordnet, und die Seriennummer der sortierten Daten wird dann mit Hilfe einer der Methoden unten bewertet. In dieser Tabelle ist <img src="../images/Probability_Plot_and_Q-Q_Plot/math-865c0c0b4ab0e063e5caa3387c1a8741.png" title="i" alt="i" class="tex"> die Seriennummer und <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"> die Gesamtanzahl der nicht fehlenden Eingabedaten.</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Methoden</th>
+
+      <th>Zeichnungsposition <img src="../images/Probability_Plot_and_Q-Q_Plot/math-c8fa53605faac83db7e752c47e6eeec8.png" title="method(i,n)" alt="method(i,n)" class="tex"></th>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Blom</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-6423aaa252ebfee1a082804be56f9f4d.png" title="(i-0,375)/(n+0,25)" alt="(i-0,375)/(n+0,25)" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Benard</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-1feec0f57bdfaecb34f50235f0a6f9c2.png" title="(i-0,3)/(n+0,4)" alt="(i-0,3)/(n+0,4)" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Hazen</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ac145606f998415e28771ab11f186044.png" title="(i-0,5)/n" alt="(i-0,5)/n" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Van der Waerden</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c630e4e41d2607d776d8f231d882dbec.png" title="i/(n+1)" alt="i/(n+1)" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><b>Kaplan-Meier</b></p>
+      </td>
+
+      <td>
+        <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-85acff6614271d07af7131b456124db4.png" title="i/n" alt="i/n" class="tex"></p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Reference"></a><span class="mw-headline">Referenz</span></h2>
+
+  <ul>
+    <li>Samuel Kotz , Campbell B. Read , N. Balakrishnan, Brani Vidakovic, 2005. <i>Encyclopedia of statistical sciences.</i>, NewYork: John Wiley &amp; Sons, Inc.</li>
+
+    <li>Thode, Henry C. 2002, <i>Testing for Normality</i>, CRC Press</li>
+  </ul>

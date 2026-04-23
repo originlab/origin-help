@@ -1,0 +1,396 @@
+﻿<h1 class="firstHeading">Dialog Nebeneinander angezeigte Statistik</h1>
+
+  <p class='urlname' style='display: none'>SidebySide-Stats-Dialog</p><a class="image"><img alt="Side-by-Side Statistics dialog.png" src="../images/The_Colgstats_Dialog_Box/Side-by-Side_Statistics_dialog.png" width="521"></a>
+
+  <p>&#160;</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Input"><span class="tocnumber">1</span> <span class="toctext">Eingabe</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Groups"><span class="tocnumber">2</span> <span class="toctext">Gruppen</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Quantities"><span class="tocnumber">3</span> <span class="toctext">Kennwerte</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#Output"><span class="tocnumber">4</span> <span class="toctext">Ausgabe</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+
+  <p>Legen Sie den Eingabedatenbereich fest..</p>
+
+  <h2><a name="Groups"></a><span class="mw-headline">Gruppen</span></h2>
+
+  <p>Mehrere Gruppierungsspalten enthalten Gruppierungsinformationen, die in das Feld <b>Gruppe</b> eingefügt werden können. Verschiedene Gruppierungswerte weisen darauf hin, dass die Daten in den entsprechenden Zellen aus verschiedenen Gruppen sind. Sie können Gruppierungsspalten über Schaltflächen hinzufügen, entfernen und ordnen: <b>Nach oben verschieben</b> <a class="image"><img alt="Button Group List Move Up.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Move_Up.png" width="16"></a>, <b>Nach unten verschieben</b> <a class="image"><img alt="Button Group List Move Down.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Move_Down.png" width="13"></a>, <b>Entfernen</b> <a class="image"><img alt="Button Group List Remove.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Remove.png" width="14"></a>, <b>Alle auswählen</b> <a class="image"><img alt="Button Group List Select All.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Select_All.png" width="18"></a>, <b>Auswählen</b> <a class="image"><img alt="Button Group List Add.png" src="../images/The_Colgstats_Dialog_Box/Button_Group_List_Add.png" width="17"></a> auf der Symbolleiste <a class="image"><img alt="Group List Toolbar.png" src="../images/The_Colgstats_Dialog_Box/Group_List_Toolbar.png" width="160"></a>. Die Gruppierungsspalten sind auf kategorisch gesetzt, falls die meisten Spaltenwerte Text sind. Sie können die Ausgabespalten ganz einfach neu ordnen.</p>
+
+  <h2><a name="Quantities"></a><span class="mw-headline">Statistische Kennwerte</span></h2>
+
+  <p>Angenommen, <img src="../images/The_Colgstats_Dialog_Box/math-0a645fc515fe6128f91758f996ebe307.png" title="x_i\," alt="x_i\," class="tex"> ist die <img src="../images/The_Colgstats_Dialog_Box/math-66c1e9c9357288ba6a1a52d275a97896.png" title="i\," alt="i\," class="tex">-te Stichprobe und <img src="../images/The_Colgstats_Dialog_Box/math-727ca9427f1817e05f5444c381452d9c.png" title="w_i\," alt="w_i\," class="tex"> die <img src="../images/The_Colgstats_Dialog_Box/math-66c1e9c9357288ba6a1a52d275a97896.png" title="i\," alt="i\," class="tex">-te Gewichtung.</p>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>N gesamt</th>
+
+      <td>
+        <p>Gesamtanzahl der Datenpunkte, bezeichnet mit n</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>N fehlend</th>
+
+      <td>
+        <p>Anzahl der fehlenden Werte</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Mittelwert</th>
+
+      <td>
+        <p>Der (durchschnittliche) Mittelwert</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-2c3cfd80f98bd53eab611bf1d9b0b06b.png" title="\bar{x}=\frac 1w\sum_{i=1}^n x_iw_i" alt="\bar{x}=\frac 1w\sum_{i=1}^n x_iw_i" class="tex">. Wenn es keine Variable Gewichtung gibt, wird die Formel reduziert auf <img src="../images/The_Colgstats_Dialog_Box/math-5a9ad94b4dc8d40b8904d1d6d5d82628.png" title="\frac 1n\sum_{i=1}^n x_i" alt="\frac 1n\sum_{i=1}^n x_i" class="tex">.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Standardabweichung</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-4e24737c2d5a93e253dec1bd9308b54a.png" title="s=\sqrt{\sum_{i=1}^n w_i(x_i-\bar{x})^2/d}" alt="s=\sqrt{\sum_{i=1}^n w_i(x_i-\bar{x})^2/d}" class="tex"></p>
+
+        <p>wobei <img src="../images/The_Colgstats_Dialog_Box/math-312096b61619b115046f533673235492.png" title="d=n-1 \," alt="d=n-1 \," class="tex"></p>
+
+        <p><b>Hinweis</b>: In OriginPro hat <img src="../images/The_Colgstats_Dialog_Box/math-8277e0910d750195b448797616e091ad.png" title="d" alt="d" class="tex"> vier Optionen mehr, die im Zweig <a href="#Variance_Divisor_of_Moment"><b>Varianzdivisor des Moments</b></a> definiert sind.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>SE des Mittelwerts</th>
+
+      <td>
+        Standardfehler des Mittelwerts
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-0eb997acda4211d05b721da8f1a83fa5.png" title="\frac s{\sqrt{w}}" alt="\frac s{\sqrt{w}}" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Unteres 95% KI des Mittelwerts</th>
+
+      <td>
+        <p>Untere Grenze des 95%-Konfidenzintervalls des Mittelwerts</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-2074a3eee27a71e90a1b1f30be8a4898.png" title="\bar{x}-t_{(1-\alpha /2)}\frac s{\sqrt{n}}" alt="\bar{x}-t_{(1-\alpha /2)}\frac s{\sqrt{n}}" class="tex"></p>
+
+        <p>wobei <img src="../images/The_Colgstats_Dialog_Box/math-974be0012b08e1011563485bb0ce9980.png" title="t_{(1-\alpha /2)}" alt="t_{(1-\alpha /2)}" class="tex">&#160;der <img src="../images/The_Colgstats_Dialog_Box/math-381591fd1f0ff50229001d29940aba51.png" title="(1-\alpha /2)" alt="(1-\alpha /2)" class="tex">&#160;kritische Wert der Studenten-t-Statistik mit <i>n-1</i> Freiheitsgraden ist.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Oberes 95% KI des Mittelwerts</th>
+
+      <td>
+        <p>Obere Grenze des 95%-Konfidenzintervalls des Mittelwerts</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-524ee5a694dda77745fc41eb49858fd3.png" title="\bar{x}+t_{(1-\alpha /2)}\frac s{\sqrt{n}}" alt="\bar{x}+t_{(1-\alpha /2)}\frac s{\sqrt{n}}" class="tex"></p>
+
+        <p>wobei <img src="../images/The_Colgstats_Dialog_Box/math-974be0012b08e1011563485bb0ce9980.png" title="t_{(1-\alpha /2)}" alt="t_{(1-\alpha /2)}" class="tex">&#160;der <img src="../images/The_Colgstats_Dialog_Box/math-381591fd1f0ff50229001d29940aba51.png" title="(1-\alpha /2)" alt="(1-\alpha /2)" class="tex">&#160;kritische Wert der Studenten-t-Statistik mit <i>n-1</i> Freiheitsgraden ist.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Varianz</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-c8fa97f712bd91847dc8b5ac9840315d.png" title="s^2\" alt="s^2\" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Summe</th>
+
+      <td><img src="../images/The_Colgstats_Dialog_Box/math-7d17543867ac9ab7904cec6a3d42351b.png" title="\sum_{i=1}^n x_iw_i" alt="\sum_{i=1}^n x_iw_i" class="tex">. Wenn es keine Variable Gewichtung gibt, wird die Formel reduziert auf <img src="../images/The_Colgstats_Dialog_Box/math-b86704cc7988edbe5d39436b8da4ac59.png" title="\sum_{i=1}^n x_i" alt="\sum_{i=1}^n x_i" class="tex">.</td>
+    </tr>
+
+    <tr>
+      <th>Schiefe</th>
+
+      <td>
+        <p>Die Schiefe misst den Grad der Asymmetrie einer Verteilung. Sie wird definiert als</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-936b5875488d28c26ba0adce2ea7aac8.png" title="\gamma_1=\frac n{(n-1)(n-2)}\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3 ,\mbox{for DF}" alt="\gamma_1=\frac n{(n-1)(n-2)}\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3 ,\mbox{for DF}" class="tex"></p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-11103f62bee4f685a870f1b5829fc68d.png" title="\gamma_1=\frac 1n\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for N}" alt="\gamma_1=\frac 1n\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for N}" class="tex"></p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-b9208507102bb6a5d5a99c6e830946f3.png" title="\gamma_1=\frac 1d\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for WVR}" alt="\gamma_1=\frac 1d\sum_{i=1}^n w_i^{\frac 32}(\frac{x_i-\bar{x}}s)^3,\mbox{for WVR}" class="tex"></p>
+
+        <p><b>Hinweis:</b> Wenn <a href="#Variance_Divisor_of_Moment">die <b>WDF-</b> oder <b>WS-</b>Methode</a> ausgewählt ist, wird die Schiefe als fehlender Wert angegeben.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Kurtosis</th>
+
+      <td>
+        <p>Die Kurtosis zeigt den Grad der Peaks einer Verteilung an.</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-9503b366bc48e9ccbd00754eef9ccf1e.png" title="\gamma_2=\frac{n(n+1)}{(n-1)(n-2)(n-3)}\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4-\frac{3(n-1)^2}{(n-2)(n-3)},\mbox{for DF}" alt="\gamma_2=\frac{n(n+1)}{(n-1)(n-2)(n-3)}\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4-\frac{3(n-1)^2}{(n-2)(n-3)},\mbox{for DF}" class="tex"></p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-6f844f8e42c3fa4e0654664ed69fd357.png" title="\gamma_2=\frac 1n\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for N}" alt="\gamma_2=\frac 1n\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for N}" class="tex"></p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-f49becc99441331604531bf4cae4be73.png" title="\gamma_2=\frac 1d\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for WVR}" alt="\gamma_2=\frac 1d\sum_{i=1}^n w_i^2(\frac{x_i-\bar{x}}s)^4 -3,\mbox{for WVR}" class="tex"></p>
+
+        <p><b>Hinweis:</b> Wenn <a href="#Variance_Divisor_of_Moment">die <b>WDF-</b> oder <b>WS-</b>Methode</a> ausgewählt ist, wird die Kurtosis als fehlender Wert angegeben.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Unkorrigierte Summe der Quadrate</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-ea51c2bd37d61b495f5db6165f511772.png" title="\sum_{i=1}^n w_ix_i^2" alt="\sum_{i=1}^n w_ix_i^2" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Korrigierte Summe der Quadrate</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-26ef79c989d89bd72300a28e8a2edb45.png" title="\sum_{i=1}^n w_i(x_i-\bar{x})^2" alt="\sum_{i=1}^n w_i(x_i-\bar{x})^2" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Variationskoeffizient</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-81441eca0840e568a8db47161facac8a.png" title="\frac s{\bar{x}}" alt="\frac s{\bar{x}}" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Mittelwert Absolutabweichung</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-717c2294e9c02aabd7cd2938f48c4bf8.png" title="\frac{ \sum_{i=1}^n w_i|x_i-\bar{x}|}w" alt="\frac{ \sum_{i=1}^n w_i|x_i-\bar{x}|}w" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>SD mal 2</th>
+
+      <td>
+        <p>Standardabweichung mal 2</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-bbb38220075e5e05df381ff137dd0d39.png" title="2s \," alt="2s \," class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>SD mal 3</th>
+
+      <td>
+        <p>Standardabweichung mal 3</p>
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-2e90c3bb8d77435a2950aa2d3e6a659c.png" title="3s \," alt="3s \," class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Geometrischer Mittelwert</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-a78893aee86be50cda2c2b557d329e66.png" title="\bar{x}_g=\left( \prod_{i=1}^n x_i\right) ^{\frac 1n}" alt="\bar{x}_g=\left( \prod_{i=1}^n x_i\right) ^{\frac 1n}" class="tex"></p>
+
+        <p><b>Hinweis:</b> Gewichtungen werden für den geometrischen Mittelwert ignoriert.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Geometrische StAbw</th>
+
+      <td>
+        <p>Die geometrische Standardabweichung <img src="../images/The_Colgstats_Dialog_Box/math-5f7d06b0f3d72efa7b25ca36df8e6d2c.png" title="e^{std(\log x_i)}" alt="e^{std(\log x_i)}" class="tex">, wobei <i>std</i> für die ungewichtete Standardabweichung der Stichprobe steht.</p>
+
+        <p><b>Hinweis:</b> Gewichtungen werden für die geometrische Standardabweichung ignoriert.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Modus</th>
+
+      <td>
+        <p>Der Modus ist das Element, das am häufigsten im Datenbereich auftaucht. Wenn mehrere Modi gefunden werden, wird das kleinste gewählt.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Summe der Gewichtungen</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-958b48150e1f0cdf16de4414a32547ec.png" title="w=\sum_{i=1}^n w_i" alt="w=\sum_{i=1}^n w_i" class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Harmonisches Mittel</th>
+
+      <td>
+        <p>Harmonisches Mittel</p>
+
+        <p><br>
+        ohne Gewichtung: <img src="../images/The_Colgstats_Dialog_Box/math-5f3874b42ba6adbf3d616cbb324a285a.png" title="\frac n{\frac 1{x_1} + \frac 1{x_2} + ... + \frac 1{x_n}}=\left(\frac {\sum_{i=1}^n (x_i)^{-1}}n\right)^{-1}" alt="\frac n{\frac 1{x_1} + \frac 1{x_2} + ... + \frac 1{x_n}}=\left(\frac {\sum_{i=1}^n (x_i)^{-1}}n\right)^{-1}" class="tex"></p>
+
+        <p>mit Gewichtung: <img src="../images/The_Colgstats_Dialog_Box/math-82df59ebf5b57a278568118b8a1eb264.png" title="\frac {\sum_{i=1}^n w_i}{\sum_{i=1}^n \frac {w_i}{x_i}}=\left(\frac {\sum_{i=1}^n w_i x_i^{-1}}{\sum_{i=1}^n w_i}\right)^{-1}" alt="\frac {\sum_{i=1}^n w_i}{\sum_{i=1}^n \frac {w_i}{x_i}}=\left(\frac {\sum_{i=1}^n w_i x_i^{-1}}{\sum_{i=1}^n w_i}\right)^{-1}" class="tex"></p>
+
+        <p>wenn <img src="../images/The_Colgstats_Dialog_Box/math-1ba8aaab47179b3d3e24b0ccea9f4e30.png" title="x_i" alt="x_i" class="tex"> oder Gewichtung negativ ist, wird Fehlende weitergegeben; wenn <img src="../images/The_Colgstats_Dialog_Box/math-1ba8aaab47179b3d3e24b0ccea9f4e30.png" title="x_i" alt="x_i" class="tex"> oder Gewichtung 0 ist, wird 0 weitergegeben.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Minimum</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-76fcdbddbf0525a612332b0877bb4cfa.png" title="x_{(1)}\," alt="x_{(1)}\," class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Index des Minimums</th>
+
+      <td>
+        <p>Die Indexnummer des Minimums im ursprünglichen (Eingabe-)Datensatz</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>1. Quartil (Q1)</th>
+
+      <td>
+        <p>Erstes (25%) Quantil, <i>Q</i>1 Informationen zu Berechnungsmethoden finden Sie unter <a href="#Interpolation_of_quantiles"><b>Interpolation von Quantilen</b></a>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Median</th>
+
+      <td>
+        <p>Median oder zweites (50%) Quantil, <i>Q</i>2 Informationen zu Berechnungsmethoden finden Sie unter <a href="#Interpolation_of_quantiles"><b>Interpolation von Quantilen</b></a>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>3. Quartil (Q3)</th>
+
+      <td>
+        <p>Drittes (75%) Quantil, <i>Q3</i> Informationen zu Berechnungsmethoden finden Sie unter <a href="#Interpolation_of_quantiles"><b>Interpolation von Quantilen</b></a>.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Maximum</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-e6727f576cfe0d84c7ffd707fa811e83.png" title="x_{(n)}\," alt="x_{(n)}\," class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Index des Maximums</th>
+
+      <td>
+        <p>Die Indexnummer des Maximums im ursprünglichen (Eingabe-)Datensatz</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Interquartilbereich (Q3-Q1)</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-e24c89c8ced8e20a05eec2b423ead18f.png" title="Q_3-Q_1\," alt="Q_3-Q_1\," class="tex"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Spannweite (Maximum-Minimum)</th>
+
+      <td>
+        <p><b>Maximum</b> - <b>Minimum</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Benutzerdefinierte Perzentil(e)</th>
+
+      <td>
+        <p>Benutzerdefinierte Perzentile können berechnet werden.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Perzentilliste</th>
+
+      <td>
+        <p>Diese Option ist nur verfügbar, wenn <b>Benutzerdefinierte Perzentil(e)</b> aktiviert ist. Perzentile werden für alle aufgeführten Werte berechnet.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Mittlere absolute Abweichung (MAD)</th>
+
+      <td>
+        Für einen univariaten Datensatz X1, X2, ..., Xn, wird MAD als Median der absoluten Abweichungen vom Median der Daten definiert:
+
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-d1924c239e9a6578aedd26903c37a580.png" title="MAD = Median(|{X_i} - Median(X)|)\," alt="MAD = Median(|{X_i} - Median(X)|)\," class="tex"></p>
+
+        <p>das heißt, angefangen bei den Residuen (Abweichungen) vom Median der Daten, ist die mittlere absolute Abweichung MAD der Median ihrer absoluten Werte.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Robuster Variationskoeffizient</th>
+
+      <td>
+        <p><img src="../images/The_Colgstats_Dialog_Box/math-67154cc3788d523ddd4ba317afc11bbd.png" title="(MAD/norminv(0,75))/Median\," alt="(MAD/norminv(0,75))/Median\," class="tex"></p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Ausgabe für jeder Zeile der Eingabe</th>
+
+      <td>Die entsprechenden Statistiken rechts von jeder Datenzeile werden ausgegeben.</td>
+    </tr>
+
+    <tr>
+      <th>Ausgabe aller Kombinationen der Gruppen</th>
+
+      <td>
+        Das Statistikergebnis von jeder kombinierten Gruppe wird auf der rechten Seite der Quelldaten ausgegeben.
+
+        <p><b>Hinweis:</b></p>
+
+        <ul>
+          <li>Wenn die Option <b>Ausgabe für jeder Zeile der Eingabe</b> aktiviert ist, ist diese Option nicht verfügbar.</li>
+
+          <li>Wenn es zwei Gruppen gibt, zum Beispiel <i>Gruppe1: A1, A2</i> und <i>Gruppe 2: B1,B2</i>, dann sind die Ausgabegruppen <i>A1-B2</i>, <i>A1-B2</i>, <i>A2-B1</i>,<i>A2-B2</i>. Auch wenn es kein <i>A1-B2</i> in den Quelldaten gibt, wird es als eine Zeile ausgegeben.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Gruppen als Spalten ausgeben</th>
+
+      <td>Die Gruppeninformationen zu den Spalten werden ausgegeben.</td>
+    </tr>
+  </table>

@@ -1,0 +1,123 @@
+<h1 class="firstHeading">3.9 Recent Origin Files</h1><p class='urlname' style='display: none'>Recent-Origin-Files</p>
+<p><br />
+Recent Origin Files dialog shows the Origin Project files (*.opj(u)) and child Window files (*.ogw(u);*.ogg(u);*.ogm(u)). It can help you browser or find the Origin files used recently.
+</p><p>To open the <b>Recent Origin Files</b> dialog: 
+</p>
+<ul><li>Select <b>File: Recent Projects: Recent Origin Files...</b> in the Origin main menu.</li></ul>
+<p>or
+</p>
+<ul><li>Double click on the Origin gray area workspace</li></ul>
+<p>or
+</p>
+<ul><li>Right-click on the empty space of Origin GUI, select <b>Recent Origin Files...</b> in the context menu.</li></ul>
+<p>or
+</p>
+<ul><li>Press the shortcut key <b>Ctrl+F11</b> in Origin.</li></ul>
+<p>or
+</p>
+<ul><li>Run the following Labtalk script in the Script Window.</li></ul>
+<pre class="lt" style="font-family:monospace;">doc <span style="color: #000080;">-</span>mrf;</pre>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Using <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">system variables</a> to control whether allow double-click workspace to open <b>Recent Origin Files</b> dialog and Ctrl+double-click to open <b>Project Browser</b>.
+</p>
+<ul><li> <b>@DDW=0</b> (default): Support both double-click to open <b>Recent Origin Files</b> dialog and Ctrl+double-click to open <b>Project Browser</b>.</li>
+<li> <b>@DDW=1</b>: Disable both double-click and Ctrl+double-click.</li>
+<li> <b>@DDW=2</b>: Disable double-click to open <b>Recent Origin Files</b> dialog, but allow Ctrl+double-click to open <b>Project Browser</b>.</li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Previews"><span class="tocnumber">1</span> <span class="toctext">Previews</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Open_the_Files"><span class="tocnumber">2</span> <span class="toctext">Open the Files</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Find_in_Project_Files"><span class="tocnumber">3</span> <span class="toctext">Find in Project Files</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Specify_the_displaying_Files"><span class="tocnumber">4</span> <span class="toctext">Specify the displaying Files</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Copy_Information_of_the_Recent_Files"><span class="tocnumber">5</span> <span class="toctext">Copy Information of the Recent Files</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Remove_the_file_from_this_list"><span class="tocnumber">6</span> <span class="toctext">Remove the file from this list</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Pin_Files_to_Top"><span class="tocnumber">7</span> <span class="toctext">Pin Files to Top</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Change_the_Display_or_the_Order_of_Columns_for_the_list"><span class="tocnumber">8</span> <span class="toctext">Change the Display or the Order of Columns for the list</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Search_in_Recent_Origin_Files"><span class="tocnumber">9</span> <span class="toctext">Search in Recent Origin Files</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Recent_Origin_Files_Menu"><span class="tocnumber">10</span> <span class="toctext">Recent Origin Files Menu</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Customize_the_Fly-out_Menu"><span class="tocnumber">10.1</span> <span class="toctext">Customize the Fly-out Menu</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Previews"></a><span class="mw-headline">Previews</span></h2>
+<p>When the cursor is placed on a Origin file name, it will produces a popup preview for the graph/workbook in the project with the project name.
+</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files preview.png" src="../images/Recent_Origin_Files/830px-Recent_Origin_Files_preview.png?v=97330" width="830"   /></a></dd></dl>
+<h2><a name="Open_the_Files"></a><span class="mw-headline">Open the Files</span></h2>
+<ul><li> Double click on the row to open the Origin file. If the file is a project, it will close current project to open this selected file. If the file is child Window files, it will be open in the the current project.</li></ul>
+<ul><li> Right-click on the file:
+<ul><li>Select <b>Open</b> to open the file. If the file is a project, it will close current project to open this selected file. If the file is child Window files, it will be open in the the current project.</li>
+<li>Select <b>Append Project</b> to append the file to the to the first level folder of current project.</li>
+<li>Select <b>Open in New Instance</b> to open the file in a new project.</li>
+<li>Select <b>Open the Containing Folder</b> to open the folder saved the file.</li></ul></li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Open File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Open_File.png?v=97335" width="750"  /></a></dd></dl>
+<h2><a name="Find_in_Project_Files"></a><span class="mw-headline">Find in Project Files</span></h2>
+<p>Right-click on the file and select <b>Find in Project Files...</b> in the context menu to open the <a href="../../UserGuide/UserGuide/Find_in_Project_Files.html" title="UserGuide:Find in Project Files"><b>Find in Project Files</b> dialog</a>.
+</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Find File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Find_File.png?v=98794" width="785"  /></a></dd></dl>
+<h2><a name="Specify_the_displaying_Files"></a><span class="mw-headline">Specify the displaying Files</span></h2>
+<p>To specify the displaying files, you can right-click on a file (files) or the empty space of the file list and then select the following option, or use the hotkey.
+</p>
+<ul><li> <b>Show Only Projects</b> (Ctrl+P)</li>
+<li> <b>Show Only Books</b>    (Ctrl+B)</li>
+<li> <b>Show Only Graphs</b>   (Ctrl+G)</li>
+<li> <b>Show Missing Files</b> (Ctrl+M): By default, the missing files are not shown in the dialog. Check this option to show them. For the missing files, it also supports to open previous location for them.</li></ul>
+<h2><a name="Copy_Information_of_the_Recent_Files"></a><span class="mw-headline">Copy Information of the Recent Files</span></h2>
+<p>To copy the recent files information, you can right-clicking on the file (files) and then select the following option, or use the hotkey.
+</p>
+<ul><li> <b>Copy File Name</b> (Ctrl+F)</li>
+<li> <b>Copy Full Path</b> (Ctrl+C)</li>
+<li> <b>Copy Whole Row</b> (Ctrl+W)</li></ul>
+<p><br />
+</p>
+<h2><a name="Remove_the_file_from_this_list"></a><span class="mw-headline">Remove the file from this list</span></h2>
+<p>Select one or multiple files, right-click it (them) and choose <b>Remove from List</b> to remove the file(s) in this dialog.
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>You can use <b>Ctrl+A</b> key to select all files in the list. It also supports to use <b>Ctrl+Z</b> and <b>Ctrl+Y</b> hotkey to undo and redo this remove operation.
+</p></td></tr></table>
+<p><br />
+</p>
+<h2><a name="Pin_Files_to_Top"></a><span class="mw-headline">Pin Files to Top</span></h2>
+<p>Select one or multiple files, right-click it  (them) and choose <b>Pin to Top</b> to pin the file(s) to the top of this dialog. Then the rows of these files will be filled background with Yellow color.
+</p><p>Right-click on the pinned to top files, and choose <b>Unpin</b>, then the files follow the sorting by the column in this dialog.
+</p><p><br />
+</p>
+<h2><a name="Change_the_Display_or_the_Order_of_Columns_for_the_list"></a><span class="mw-headline">Change the Display or the Order of Columns for the list</span></h2>
+<ul><li>Right click on the column header area and select or de-select a heading to display or hide the heading.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Header.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Header.png?v=98519" width="930"  /></a></dd></dl>
+<ul><li>To display the complete information of each row in a column, you can right-click on the column header to click <b>Size Column to Fit</b>. If click on <b>Size All Columns to Fit</b></li></ul>
+<ul><li>Drag to reorder displayed column headings.</li></ul>
+<ul><li>The customization of column header will be remembered for later use.</li></ul>
+<h2><a name="Search_in_Recent_Origin_Files"></a><span class="mw-headline">Search in Recent Origin Files</span></h2>
+<ul><li> Type the string to search the files by the file name.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 01.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_01.png?v=97340" width="771"  /></a></dd></dl>
+<ul><li> Wildcard （* and&#160;?) are supported, such as <i><b>*abc</b></i> to find at the end</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 02.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_02.png?v=97344" width="771"  /></a></dd></dl>
+<ul><li> <i><b>\abc</b></i> to search the string in the path</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 03.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_03.png?v=97343" width="845"  /></a></dd></dl>
+<p><br />
+</p>
+<h2><a name="Recent_Origin_Files_Menu"></a><span class="mw-headline">Recent Origin Files Menu</span></h2>
+<p>When you select <b>File: Recent Projects</b> menu, you can find the 15 recent project files listing in the fly-out Menu. Click the project name to reopen the recent project easily. Also, when this menu is expending, you can press the accelerator key of the project to reopen it.
+</p>
+<dl><dd><a  class="image"><img alt="Recent Projects menu.png" src="../images/Recent_Origin_Files/Recent_Projects_menu.png?v=97354" width="826"  /></a></dd></dl>
+<h5><a name="Customize_the_Fly-out_Menu"></a><span class="mw-headline">Customize the Fly-out Menu</span></h5>
+<p>Select <b>Customize...</b> under the menu to open the <b>Recent Project</b> dialog. You can change the number of the recent project displaying in the menu, and specify whether to show the file path and accelerator key of the files. All changes will take effect next time when you choose this menu.
+</p>
+<dl><dd><a  class="image"><img alt="Recent Projec dialog.png" src="../images/Recent_Origin_Files/Recent_Projec_dialog.png?v=97353" width="340"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li>When the file path is hidden in the menu, place the cursor on the file name then path should be shown on tooltip and on status bar.</li></ul>
+<ul><li>Using the <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">system variables</a> also can customize this fly-out menu. 
+<ul><li> <b>@MRP</b>&#160;: Set number of recent project items. By default, @MRP=15.</li>
+<li> <b>@MRPHP</b>: Set whether to show file path. By default, @MRPHP=0, show the file path in the menu.</li>
+<li> <b>@MRPA</b>: Set whether to show accelerator key. By default, @MRPA=1, show the accelerator key in the menu.</li></ul></li></ul>
+</td></tr></table>
+
+

@@ -1,0 +1,358 @@
+﻿<h1 class="firstHeading">Stapelzeichnen</h1>
+
+  <p class='urlname' style='display: none'>Graphing-Batch-Plotting</p>
+
+  <p><br>
+  In Origin gibt es mehrere Methoden, wie Sie ein Diagramm benutzerdefiniert anpassen können. Sie können diese Anpassungen danach für andere Datensätze wieder verwenden.</p>
+
+  <ul>
+    <li>Sie können Ihre benutzerdefinierten Einstellungen als <a href="../../UserGuide/UserGuide/Graph_Template_Basics.html" title="UserGuide:Graph Template Basics">Diagrammvorlagen</a> speichern.</li>
+
+    <li>Sie können Ihre Anpassungen als <a href="../../UserGuide/UserGuide/Saving_a_Format_as_a_Theme.html" title="UserGuide:Saving a Format as a Theme">Diagrammdesigns</a> speichern.</li>
+
+    <li>Sie können Formate aus einem Diagramm kopieren und <a href="../../UserGuide/UserGuide/Copying_and_Pasting_Formats.html" title="UserGuide:Copying and Pasting Formats">sie in andere Diagramme einfügen</a>.</li>
+
+    <li>Sie können Origins Funktion des Stapelzeichnens oder <b>Arbeitsblatt ändern</b> verwenden, das im Folgenden beschrieben wird.</li>
+  </ul>
+
+  <p>Um Diagramm<b>vorlagen</b> und Diagramm<b>designs</b> zu verwenden, müssen Sie zuvor eine Gruppe von Anpassungen in einer Datei gespeichert haben. <b>Formate kopieren/einfügen</b> und <b>Stapelzeichnen</b> erfordert kein vorheriges Speichern einer Datei. Alle haben ihre Anwendungen, aber das Stapelzeichnen ist insbesondere nützlich beim Arbeiten mit Daten in mehreren Spalte/Blättern/Mappen. In diesem Abschnitt wird erläutert, wie Sie mit neuen Spalten/Arbeitsblättern/Arbeitsmappen, die eine identische Struktur wie die ursprünglichen Daten aus Spalten/Blätter/Mappen bzw. übereinstimmende Identifizierer haben, gestapelt zeichnen.</p>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Supported_graph_types"><span class="tocnumber">1</span> <span class="toctext">Unterstützte Diagrammtypen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2">
+        <a href="#Four_Cases_of_Batch_Plotting"><span class="tocnumber">2</span> <span class="toctext">Vier Fälle des Stapelzeichnens</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-3">
+            <a href="#Duplicate_with_new_books"><span class="tocnumber">2.1</span> <span class="toctext">Mit neuen Arbeitsmappen duplizieren</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-4"><a href="#Settings_for_matching_conditions"><span class="tocnumber">2.1.1</span> <span class="toctext">Einstellungen für übereinstimmende Bedingungen</span></a></li>
+
+              <li class="toclevel-3 tocsection-5"><a href="#List_the_matching_books"><span class="tocnumber">2.1.2</span> <span class="toctext">Übereinstimmende Mappen auflisten</span></a></li>
+
+              <li class="toclevel-3 tocsection-6"><a href="#Settings_for_result_graph"><span class="tocnumber">2.1.3</span> <span class="toctext">Einstellungen für Ergebnisdiagramm</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-7">
+            <a href="#Duplicate_with_new_sheets"><span class="tocnumber">2,2</span> <span class="toctext">Mit neuen Arbeitsblättern duplizieren</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-8"><a href="#Settings_for_matching_conditions_2"><span class="tocnumber">2.2.1</span> <span class="toctext">Einstellungen für übereinstimmende Bedingungen</span></a></li>
+
+              <li class="toclevel-3 tocsection-9"><a href="#List_the_matching_sheets"><span class="tocnumber">2.2.2</span> <span class="toctext">Übereinstimmende Blätter auflisten</span></a></li>
+
+              <li class="toclevel-3 tocsection-10"><a href="#Settings_for_result_graph_2"><span class="tocnumber">2.2.3</span> <span class="toctext">Einstellungen für Ergebnisdiagramm</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-11">
+            <a href="#Duplicate_with_new_columns"><span class="tocnumber">2,3</span> <span class="toctext">Mit neuen Spalten duplizieren</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-12"><a href="#Settings_for_matching_conditions_3"><span class="tocnumber">2.3.1</span> <span class="toctext">Einstellungen für übereinstimmende Bedingungen</span></a></li>
+            </ul>
+          </li>
+
+          <li class="toclevel-2 tocsection-13">
+            <a href="#Duplicate_with_column_offset"><span class="tocnumber">2.4</span> <span class="toctext">Mit Spaltenversatz duplizieren</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-14"><a href="#Settings_for_matching_conditions_4"><span class="tocnumber">2.4.1</span> <span class="toctext">Einstellungen für übereinstimmende Bedingungen</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Supported_graph_types"></a><span class="mw-headline">Unterstützte Diagrammtypen</span></h2>
+
+  <ul>
+    <li>Stapelzeichnen ist nur für 2D-/3D-Diagramme in demselben Projekt und von demselben Datenquelltyp verfügbar.<br>
+    <b>Hinweis:</b> Für die meisten der gruppierten 2D-Diagramme, die über das Menü Zeichnen erstellt werden, wird die Gruppierungsinfospalte als Modifiziererspalte und nicht als Datenspalte behandelt.</li>
+
+    <li>Beim Duplizieren mit neuen Spalten sollte jede Spalte eine <b>Diagrammzuordnung</b> von <b>Y</b> (für 2D) haben bzw. <b>Z</b> (für 3D oder Kontur) und sich in dem gleichen Arbeitsblatt befinden.</li>
+
+    <li>Beim Duplizieren mit neuen Blättern sollte jedes Blatt genau die gleiche Spaltenstruktur haben.</li>
+
+    <li>Beim Duplizieren mit neuen Mappen sollte jede Mappe genau die gleiche Blatt- und Spaltenstruktur haben.</li>
+  </ul>
+
+  <h2><a name="Four_Cases_of_Batch_Plotting"></a><span class="mw-headline">Vier Fälle des Stapelzeichnens</span></h2>
+
+  <p><span class='headerInParagraph'>Um das Hilfsmittel Stapelzeichnen zu öffnen:</span></p>
+
+  <ul>
+    <li>Klicken Sie mit der rechten Maustaste auf den Titelbalken des Diagramms oder eine beliebige leere Stelle um den Diagrammlayerrahmen und wählen Sie <b>Stapelzeichnen...</b>.</li>
+  </ul>
+
+  <dl>
+    <dd><a class="image"><img alt="Dialog Batch Plotting 01.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_01.png" width="639"></a></dd>
+  </dl>
+
+  <p>Sie können die Auswahlliste <b>Zeichnung stapeln mit</b> verwenden, um zwischen den unterschiedlichen Quelldaten zu wechseln und das aktuelle Diagramm zu duplizieren:</p>
+
+  <ul>
+    <li><a href="#Duplicate_with_new_books">Aus Arbeitsmappen/Matrixmappen</a></li>
+
+    <li><a href="#Duplicate_with_new_sheets">Aus Arbeitsblättern/Matrixblättern</a></li>
+
+    <li><a href="#Duplicate_with_new_columns">Aus Arbeitsblattspalten</a></li>
+
+    <li><a href="#Duplicate_with_column_offset">Aus Spaltenversatz</a></li>
+  </ul>
+
+  <p>Wenn Sie <b>Mappe/Blatt/Spalte</b> für die Option <b>Zeichnung stapeln mit</b> auswählen, werden die verfügbaren Mappen/Blätter/Spalten im mittleren leeren Feld jeweils aufgelistet.</p>
+
+  <h3><a name="Duplicate_with_new_books"></a><span class="mw-headline">Mit neuen Mappen duplizieren</span></h3>
+
+  <p>Wenn alle Zeichnungen in einer Grafik aus einer Mappe stammen, können Sie die Funktion Stapelzeichnen starten, um Ihre Grafik mit anderen Mappen zu duplizieren. Dabei ist die Auswahlliste <b>Zeichnung stapeln mit</b> auf <b>Mappe</b> gesetzt. Wie zu sehen, zeigt der Dialog Stapelzeichnen <b>Arbeitsmappe auswählen</b> in der Titelleiste, um auf den aktuellen Stapelmodus hinzuweisen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Dialog Batch Plotting.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting.png" width="524"></a></dd>
+  </dl>
+
+  <h5><a name="Settings_for_matching_conditions"></a><span class="mw-headline">Einstellungen für übereinstimmende Bedingungen</span></h5>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Exakt</th>
+
+      <td>Wenn diese Option aktiviert ist (Standard), werden nur die Mappen mit einer Blatt- und Spaltenstruktur wie diejenigen des aktiven Diagramms aufgelistet. Wenn die Mappe zusätzliche Blätter oder Spalten enthält (innerhalb eines gegebenen Blatts), werden sie beim Klonen eines Diagramms ignoriert. Wenn die Mappe weniger Blätter enthält als zum Erzeugen des aktiven Diagramms notwendig, wird die Mappe nicht aufgeführt.<br>
+      <br>
+      Wenn <b>Exakt</b> deaktiviert ist, werden Mappen, die die minimale Anzahl von Blättern, aber weniger Spalten als notwendig zum Erzeugen des aktiven Diagramms haben, eventuell angezeigt, abhängig von der Einstellung von <b>Zeichnungsspalten stimmen überein mit</b> (siehe nächsten Abschnitt).</td>
+    </tr>
+
+    <tr>
+      <th>Zeichnungsspalten/-blätter<br>
+      stimmen überein mit</th>
+
+      <td>Durch Wählen von <b>Langname</b>, <b>Kurzname</b> oder <b>Spaltenindex</b> im Filter <b>Zeichnungsspalten stimmen überein mit</b> sowie <b>Langname</b>, <b>Kurzname</b> oder <b>Index</b> im Filter <b>Blatt stimmt überein mit</b> können Sie das Stapelzeichnen in zugewiesene Arbeitsmappen, die die gleiche Struktur wie die ursprünglichen Arbeitsmappen haben, implementieren.</td>
+    </tr>
+
+    <tr>
+      <th>Modifizierer stimmen überein mit</th>
+
+      <td>Diese Liste wird verwendet, um festzulegen, mit was die Modifizierer übereinstimmen sollen (Arbeitsblattspalten der Werte, die zum Modifizieren der Zeichnung, z. B. Diagrammfarbe, verwendet werden). Hier ist die Standardauswahl dem Bedienelement <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Modifizierer stimmen überein mit</b></a> auf der Registerkarte <b>Allgemeines</b> des Dialogs <b>Details Zeichnung</b> verbunden. Natürlich können Sie Ihre eigenen Einstellungen für die aktuelle Routine vornehmen.</td>
+    </tr>
+  </table>
+
+  <h5><a name="List_the_matching_books"></a><span class="mw-headline">Übereinstimmende Mappen auflisten</span></h5>
+
+  <p>Entsprechend dem ersten Teil der Filterbedingungen werden alle übereinstimmenden Mappen im Projekt im mittleren Feld aufgeführt. Sie können Datensätze aus einer oder mehreren Mappen auswählen, um das Stapelzeichnen durchzuführen.</p>
+
+  <h5><a name="Settings_for_result_graph"></a><span class="mw-headline">Einstellungen für Ergebnisdiagramm</span></h5>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Achsen neu skalieren</th>
+
+      <td>Dieses Kontrollkästchen ist standardmäßig aktiviert. Deaktivieren Sie das Kontrollkästchen, um zu verhindern, dass bei Änderung der Eingabedaten die Achsen neu skaliert werden.</td>
+    </tr>
+
+    <tr>
+      <th>Farbabbildung ggf. neu skalieren</th>
+
+      <td>Dieses Kontrollkästchen ist standardmäßig aktiviert. Deaktivieren Sie das Kontrollkästchen, um zu verhindern, dass bei Änderung der Eingabedaten die Farbabbildung neu skaliert wird.</td>
+    </tr>
+
+    <tr>
+      <th>Zeichnung ausgewählt für</th>
+
+      <td>
+        Diese Liste wird verwendet, um festzulegen, wo die ausgewählten Mappen gezeichnet werden. Mit dieser Option können Sie
+
+        <dl>
+          <dd>
+            <ul>
+              <li>die ausgewählten Mappen in das aktive Diagramm zeichnen,</li>
+
+              <li>jede Auswahl jeweils in ein einzelnes Diagramm zeichnen,</li>
+
+              <li>die ausgewählten Mappen in ein neues Diagramm zeichnen.</li>
+            </ul>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Diagrammkurzname</th>
+
+      <td>
+        Diese Bearbeitungsfelder werden verwendet, um die duplizierten Diagrammkurznamen zu definieren.
+
+        <dl>
+          <dd>
+            <ul>
+              <li>Der Standardwert &lt;Auto&gt; bedeutet, dass der duplizierte Diagrammkurzname als Graph<i>n</i> festgelegt wird, wobei <i>n</i> die Abfolgenummer des Diagrammfensters ist.</li>
+
+              <li>Es können Formatzeichenketten/Labtalk-Skripte eingegeben werden. Mehrere Notationen und beliebige festgelegte Zeichenketten können zudem nach Wunsch kombiniert werden. Außerdem stellt die Schaltfläche <a class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"></a> rechts vom Bearbeitungsfeld einige der <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">häufig verwendeten Notationen</a> und Beispielsyntax zur Verfügung.</li>
+            </ul>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Diagrammlangname</th>
+
+      <td>
+        Diese Bearbeitungsfelder werden verwendet, um die duplizierten Diagrammkurznamen zu definieren.
+
+        <dl>
+          <dd>
+            <ul>
+              <li>Der Standard &lt;Auto&gt; bedeutet, den Langnamen als Kombination einer festen Zeichenkette "Dupliziert mit" sowie dem Quellenarbeitsmappen- und Blattnamen festzulegen.</li>
+
+              <li>Es können Formatzeichenketten/Labtalk-Skripte eingegeben werden. Mehrere Notationen und beliebige festgelegte Zeichenketten können zudem nach Wunsch kombiniert werden. Außerdem stellt die Schaltfläche <a class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"></a> rechts vom Bearbeitungsfeld einige der <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">häufig verwendeten Notationen</a> und Beispielsyntax zur Verfügung.</li>
+            </ul>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <p>&#160;</p>
+
+  <h3><a name="Duplicate_with_new_sheets"></a><span class="mw-headline">Mit neuen Arbeitsblättern duplizieren</span></h3>
+
+  <p>Wenn alle Zeichnungen in einem Diagramm aus einem Blatt stammen, können Sie die Funktion Stapelzeichnen starten, um Ihr Diagramm mit anderen Blättern zu duplizieren. Dabei ist die Auswahlliste <b>Zeichnung stapeln mit</b> auf <b>Blatt</b> gesetzt. Wie zu sehen, zeigt der Dialog Stapelzeichnen <b>Arbeitsblatt auswählen</b> in der Titelleiste, um auf den aktuellen Stapelmodus hinzuweisen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Dialog Batch Plotting Sheet.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Sheet.png" width="524"></a></dd>
+  </dl>
+
+  <h5><a name="Settings_for_matching_conditions_2"></a><span class="mw-headline">Einstellungen für übereinstimmende Bedingungen</span></h5>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Exakt</th>
+
+      <td>Wenn diese Option aktiviert ist (Standard), werden nur die Blätter mit einer Spaltenstruktur wie derjenigen des aktiven Diagramms aufgelistet. Wenn das Blatt zusätzliche Spalten enthält, werden sie beim Klonen eines Diagramms ignoriert. Wenn das Blatt weniger Spalten enthält als zum Erzeugen des aktiven Diagramms notwendig, wird das Blatt nicht aufgeführt.<br>
+      <br>
+      Wenn <b>Exakt</b> deaktiviert ist, werden Blätter, die weniger Spalten als notwendig zum Erzeugen des aktiven Diagramms haben, eventuell angezeigt, abhängig von der Einstellung von <b>Zeichnungsspalten stimmen überein mit</b> (siehe nächsten Abschnitt). Beachten Sie, dass dies eine Methode ist, mit der Sie neue Zeichnungen zu einem <b>Aktiven Diagramm</b> hinzufügen können (siehe <b>Ausgewählte zeichnen in</b>).</td>
+    </tr>
+
+    <tr>
+      <th>Zeichnungsspalten stimmen überein mit</th>
+
+      <td>Durch Wählen von <b>Langname</b>, <b>Kurzname</b> oder <b>Spaltenindex</b> in diesem Filter können Sie das Stapelzeichnen in zugewiesenen Arbeitsblättern implementieren, die über die gleiche Struktur von <b>Langname</b>, <b>Kurzname</b> oder <b>Spaltenindex</b> verfügen wie die ursprünglichen Arbeitsblätter.</td>
+    </tr>
+
+    <tr>
+      <th>Modifizierer stimmen überein mit</th>
+
+      <td>Diese Liste wird beim Stapelzeichnen mit den ausgewählten Arbeitsblättern verwendet, um festzulegen, mit was die Modifizierer übereinstimmen sollen (Arbeitsblattspalten der Werte, die zum Modifizieren der Zeichnung, z. B. Diagrammfarbe, verwendet werden). Hier ist die Standardauswahl dem Bedienelement <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Modifizierer stimmen überein mit</b></a> auf der Registerkarte <b>Allgemeines</b> des Dialogs <b>Details Zeichnung</b> verbunden. Natürlich können Sie Ihre eigenen Einstellungen für die aktuelle Routine vornehmen.</td>
+    </tr>
+  </table>
+
+  <h5><a name="List_the_matching_sheets"></a><span class="mw-headline">Übereinstimmende Blätter auflisten</span></h5>
+
+  <p>Entsprechend dem ersten Teil der übereinstimmenden Bedingungen werden alle übereinstimmenden Blätter im Projekt im mittleren Feld aufgeführt. Sie können Datensätze aus einem oder mehreren Blättern auswählen, um das Stapelzeichnens durchzuführen.</p>
+
+  <h5><a name="Settings_for_result_graph_2"></a><span class="mw-headline">Einstellungen für Ergebnisdiagramm</span></h5>
+
+  <p>Die Optionen sind die gleichen wie bei den <a href="../../UserGuide/UserGuide/Batch_Plotting.html#Settings_for_result_graph" title="UserGuide:Batch Plotting"><b>Einstellungen für Ergebnisdiagramm</b></a> in Mit neuen Mappen duplizieren.</p>
+
+  <table class="note">
+    <tr>
+      <td><b>Hinweis:</b> <a href="../../UserGuide/Category/Managing_Data_Plots_in_Layers.html#Changing_the_datasets_associated_with_a_plot" title="Category:Managing Data Plots in Layers"><b>Arbeitsblatt ändern</b></a> ist eine Funktion, die es Ihnen ermöglicht, ein bestehendes 2D-Diagramm mit Hilfe von Datensätzen aus einem anderen Blatt erneut zu erstellen. Sowohl <b>Stapelzeichnen mit neuen Blättern</b> als auch <b>Arbeitsblatt ändern</b> erfordern Blätter mit genau der gleichen Spaltenstruktur, einschließlich Kurznamen, Diagrammzuordnung und Indizes. <b>Arbeitsblatt ändern</b> ermöglicht Ihnen, Datenzeichnungen innerhalb von einem Layer mit einem Kontextmenübefehl schnell zu ändern. <b>Arbeitsblatt ändern</b> kann eins-zu-eins auf jede Zeichnung in einem Layer, das mehrere Zeichnungen enthält, angewendet werden. Diese Funktion ist verfügbar, wenn Zeichnungen nicht "gruppiert" sind. Wenn Zeichnungen "gruppiert" <i>sind</i>, klicken Sie ein Mal, machen eine Pause, klicken ein zweites Mal, und diese Funktion wird verfügbar (beachten Sie, dass Sie in diesem Modus noch immer nur eine Zeichnung ersetzen -- nicht die gesamte Zeichnungsgruppe).</td>
+    </tr>
+  </table>
+
+  <p>&#160;</p>
+
+  <h3><a name="Duplicate_with_new_columns"></a><span class="mw-headline">Mit neuen Spalten duplizieren</span></h3>
+
+  <p>Wenn die Zeichnung aus einer Y/Z-Spalte in dem Arbeitsblatt erstellt wurde, können Sie Ihre Zeichnung mit anderen Y/Z-Spalten in diesem Blatt duplizieren, wobei die Auswahlliste <b>Zeichnung stapeln mit</b> auf <b>Spalte</b> gesetzt ist. Wie zu sehen, zeigt der Dialog Stapelzeichnen <b>Spalte auswählen</b> in der Titelleiste, um auf den aktuellen Stapelmodus hinzuweisen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Dialog Batch Plotting Column.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Column.png" width="524"></a></dd>
+  </dl>
+
+  <h5><a name="Settings_for_matching_conditions_3"></a><span class="mw-headline">Einstellungen für übereinstimmende Bedingungen</span></h5>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Verbundenes X verwenden / Verbundenes XY verwenden</th>
+
+      <td>Das Kontrollkästchen ist standardmäßig aktiviert. Wenn es aktiviert ist, verwenden neue Zeichnungen <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">die X-Spalte(n), die mit der ausgewählte(n) Y-Spalte(n) verbunden ist/sind</a>. Wenn dieses Kontrollkästchen deaktiviert ist, verwenden neue Zeichnungen die X/X&amp;Y-Spalte(n) der zu duplizierenden Zeichnung.</td>
+    </tr>
+
+    <tr>
+      <th>Modifizierer stimmen überein mit</th>
+
+      <td>
+        Dieses Kontrollkästchen und die zugehörige Auswahlliste werden verwendet, um festzulegen, wie die Modifizierer beim Stapelzeichnen mit ausgewählten Spalten übereinstimmen (die Spalten, die zum Steuern der Gruppierungsinfos, Diagrammfarbe oder anderer Diagrammeigenschaften verwendet werden). Hier folgt die Standardauswahl dem Bedienelement <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Modifizierer stimmen überein mit</b></a> auf der Registerkarte <b>Allgemeines</b> des Dialogs <b>Details Zeichnung</b>.
+
+        <p>Bitte beachten Sie, dass Ihnen für diese Art von Stapelzeichnen die Auswahl von <i>&lt;Versatz&gt;</i> für diese Option sehr empfohlen wird, um die modifizierenden Spalten mit dem gleichen Spaltenversatz, angefangen bei der ausgewählten Diagrammspalte, auszuwählen. Jede Auswahl einer Spaltenbeschriftung bildet immer die Zeichnungseigenschaften auf die ersten geeigneten Spalten im aktuellen Arbeitsblatt ab.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h3><a name="Duplicate_with_column_offset"></a><span class="mw-headline">Mit Spaltenversatz duplizieren</span></h3>
+
+  <p>Wenn die Zeichnung aus einer Y/Z-Spalte im Arbeitsblatt erstellt wurde, können Sie Ihre Zeichnung mit anderen Y/Z-Spalten in diesem Blatt duplizieren, wobei die Auswahlliste <b>Zeichnung stapeln mit</b> auf <b>Spaltenversatz</b> gesetzt ist. Wie zu sehen, zeigt der Dialog Stapelzeichnen <b>Spaltenversatz festlegen</b> in der Titelleiste, um den aktuellen Stapelmodus zu kennzeichnen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Dialog Batch Plotting ColumnOffset.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_ColumnOffset.png" width="524"></a></dd>
+  </dl>
+
+  <h4><a name="Settings_for_matching_conditions_4"></a><span class="mw-headline">Einstellungen für übereinstimmende Bedingungen</span></h4>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <th>Column Offset</th>
+
+      <td>Legen Sie einen Versatz von der/n Spalte/n fest, der im Quelldiagramm verwendet wird, um die Spalten mit diesem Versatz per Stapelverarbeitung zu zeichnen. Wenn das Quelldiagramm beispielsweise ein Punktdiagramm mit den Y-Spalten D&amp;E enthält, bedeutet ein <b>Spaltenversatz</b> = <i>+2</i>, dass die neuen Diagrammspalten F&amp;G sind. Ein <b>Spaltenversatz</b> = <i>-2</i> bedeutet, dass die neuen Diagrammspalten B&amp;C sind.</td>
+    </tr>
+
+    <tr>
+      <th>Anzahl der Versätze</th>
+
+      <td>
+        Legen Sie fest, wie viele Male per Stapelverarbeitung gezeichnet werden soll. Standardmäßig ist die Option <b>Auto</b> aktiviert, um zu berechnen, wie oft das Stapelzeichnen maximal durchgeführt werden soll.
+
+        <p>Sie können das Kontrollkästchen <b>Auto</b> deaktivieren und einen kleineren Wert als den automatisch berechneten eingeben. Das Quelldiagramm verfügt zum Beispiel über ein Punktdiagramm mit den Y-Spalten D&amp;E. Wenn die <b>Anzahl der Versätze</b> nicht auf 1 gesetzt ist, wird das Stapelzeichnen mit den folgenden Spalten wiederholt. Ein <b>Spaltenversatz</b> = <i>+2</i> und eine <b>Anzahl der Versätze</b> = <i>3</i> für das Quelldiagramm mit den Y-Spalten B&amp;C bedeutet, dass die neuen Diagrammspalten die Spalten D&amp;E, F&amp;G, H&amp;I sind.</p>
+
+        <p>Die automatische Berechnung für diese Option folgt den folgenden Regeln:</p>
+
+        <ul>
+          <li>Wenn <b>Modifizierer stimmen überein mit</b> auf <i>&lt;Versatz&gt;</i> gesetzt ist, berücksichtigt die <b>Anzahl der Versätze</b> die Modifiziererspalte, damit jede Datensatzkopie ihre Modifiziererspalte enthält.</li>
+
+          <li>Wenn <b>Verbundenes X verwenden</b> deaktiviert ist und <b>Übereinstimmung von X mit Versatz</b> aktiviert ist, berücksichtigt die <b>Anzahl der Versätze</b> die X-Spalte, damit jede Datensatzkopie ihre X-Spalte enthält.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Verbundenes X verwenden / Verbundenes XY verwenden</th>
+
+      <td>Das Kontrollkästchen ist standardmäßig aktiviert. Wenn es aktiviert ist, verwenden neue Zeichnungen <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">die X-Spalte(n), die mit der ausgewählte(n) Y-Spalte(n) verbunden ist/sind</a>. Wenn dieses Kontrollkästchen deaktiviert ist, verwenden neue Zeichnungen die X/X&amp;Y-Spalte(n) der zu duplizierenden Zeichnung.</td>
+    </tr>
+
+    <tr>
+      <th>Übereinstimmung von X mit Versatz</th>
+
+      <td>Dieses Kontrollkästchen ist standardmäßig abgeblendet und deaktiviert. Nur verfügbar, wenn <b>Verbundenes X/XY verwenden</b> deaktiviert ist. Wenn die Option deaktiviert ist, verwenden Sie das ursprüngliche X des Diagramms; wenn sie aktiviert ist, verwenden Sie den Versatz, um X zu bestimmen. Wie die Option <b>Verbundenes X verwenden</b> wird <b>Übereinstimmung von X mit Versatz</b> auf Fehler, Beschriftung, Y-Spalten (zusammen mit Z gezeichnet) angewendet.</td>
+    </tr>
+
+    <tr>
+      <th>Modifizierer stimmen überein mit</th>
+
+      <td>
+        Dieses Kontrollkästchen und die zugehörige Auswahlliste werden verwendet, um festzulegen, wie die Modifizierer beim Stapelzeichnen mit ausgewählten Spalten übereinstimmen (die Spalten, die zum Steuern der Gruppierungsinfos, Diagrammfarbe oder anderer Diagrammeigenschaften verwendet werden). Hier folgt die Standardauswahl dem Bedienelement <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="UserGuide:The (Plot Details) Miscellaneous Tab"><b>Modifizierer stimmen überein mit</b></a> auf der Registerkarte <b>Allgemeines</b> des Dialogs <b>Details Zeichnung</b>.
+
+        <p>Bitte beachten Sie, dass Origin für diese Art von Stapelzeichnen den gleichen Spaltenversatz auf Modifiziererspalten anwendet, wenn <b>Modifizierer stimmen überein mit</b> auf Versatz gesetzt ist; wenn "Modifizierer stimmen überein mit" auf eine andere Option festgelegt ist, verwendet Origin die aktuelle Übereinstimmungsregel, um den Modifizierer zu finden. In den meisten Fällen ist es der gleiche wie im Quelldiagramm.</p>
+      </td>
+    </tr>
+  </table>

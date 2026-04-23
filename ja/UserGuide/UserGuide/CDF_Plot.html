@@ -1,0 +1,82 @@
+﻿<h1 class="firstHeading">CDFプロット</h1><p class='urlname' style='display: none'>CDF-Plot</p><a  class="image"><img alt="CDF Plot 01.png" src="../images/CDF_Plot/650px-CDF_Plot_01.png" width="650"   /></a>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2.1</span> <span class="toctext">ダイアログの設定</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+</ul>
+</div>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>経験的CDFプロットおよび／または理論的CDFプロットを作成するには、少なくとも1列を選択してください。 
+</p><p>複数のデータとグループ列を選択して、異なるデータ/グループの累積分布を比較します。 
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>データを選択します。
+</p><p>メニューから、<b>プロット &gt; 統計：CDFプロット</b>を選択して、<b>plot_cdf</b>ダイアログを開きます。 
+</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png" width="478"  /></a>
+</p>
+<h3><a name="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h3>
+<table class="dialogcontroltable">
+<tr>
+<th><b>データ範囲</b>
+</th>
+<td>入力データ列を選択します。
+</td></tr>
+<tr>
+<th><b>グループ</b>
+</th>
+<td>グループ化列を選択します。
+</td></tr>
+<tr>
+<th><b>グラフ配置</b>
+</th>
+<td>プロットの配置方法を選択します。
+<ul><li><b>複数データ</b>と<b>複数グループ</b>：このオプションを使用すると、プロットは次の方法で配置されます。
+<ul><li><b>すべて重ね合わせる</b>: 複数データと複数グループの両方で、同じグラフ上でオーバーラップを選択します。</li>
+<li><b>重ね合わせグループ、別レイヤの変数</b>：複数データ=別のレイヤ、複数グループ=同じグラフ上でオーバーラップします</li>
+<li><b>重ね合わせ変数、別レイヤグループ</b>：複数グループ=個別レイヤ、複数データ=同じグラフ上でのオーバーラップ</li>
+<li><b>別レイヤ</b>：複数データと複数グループの両方が個別のレイヤを選択</li></ul></li></ul>
+<ul><li> <b>ページの分割</b>：このチェックボックスをにチェックをつけると、別のグループ化列を選択して、グラフを複数レイヤに分割できます。 
+<dl><dd><b>Note:</b> 複数データと複数グループの両方が別レイヤに設定されている場合、結果シートのレイヤの順序は、「入力データによる」→「パネルの分割」→「グループによる」の階層に従います。</dd></dl></li>
+<li> <b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにCDFプロットを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。 </li></ul>
+</td></tr>
+<tr>
+<th><b>分布</b>
+</th>
+<td>
+<ul><li><b>分布</b>: 累積分布確率を計算する分布タイプを指定します。ここでは、<a class="external text" href="../../LabTalk/LabTalk/Normpdf_(function).html"><b>正規分布</b></a>、 <a class="external text" href="../../LabTalk/LabTalk/Lognpdf_(function).html"><b>対数正規分布</b></a>、<a class="external text" href="../../LabTalk/LabTalk/Wblpdf_(function).html"><b>ワイブル分布</b></a>、 <a class="external text" href="../../LabTalk/LabTalk/Exppdf_(function).html"><b>指数分布</b></a>、 <a class="external text" href="../../LabTalk/LabTalk/Gampdf_(function).html"><b>ガンマ分布</b></a>の4種類がサポートされています。</li>
+<li> <b>データから推定</b>：入力データからパラメータ値を推定します。チェックボックスをオフにすると、各分布関数のパラメータ値をこのチェックボックスの下に入力できます。</li></ul>
+</td></tr>
+<tr>
+<th><b>プロット</b>
+</th>
+<td>
+<ul><li><b>プロット</b>: プロットするCDFプロット、経験的CDF、理論的CDF、またはその両方を選択します。</li>
+<li><b>共通X範囲を使用</b>：デフォルトではチェックされていません。チェックを入れると、すべてのプロットのXの最小値と最大値が検索されます。プロットのX範囲が狭い場合は、プロットの最後に最小値または最大値が追加されます。</li>
+<li><b>Yスケールタイプ</b>：パーセント（デフォルト、0-100）および確率（0-1）</li></ul>
+</td></tr>
+<tr>
+<th><b>プロットデータ出力</b>
+</th>
+<td>プロットデータを出力するシートを指定します。
+</td></tr>
+<tr>
+<th><b>グラフ出力</b>
+</th>
+<td>結果グラフを出力するシートを指定します。
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>CDF.OTPU (Originのプログラムフォルダにインストールされています)
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>CDFプロット（正式名称は累積分布関数プロット）は、サンプルデータの分布を調べるために使用されます。データの経験的および理論的累積分布関数を示します。複数のソースデータとそのグループをどのように配置するかを決定することができます。そして、各データのグループごとの分布情報の値（<i>mu</i>、<i>シグマ</i>、<i>N</i>）は自動的に結果グラフに出力されます。
+</p>
+
+
+
+    

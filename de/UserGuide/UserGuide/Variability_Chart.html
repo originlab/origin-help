@@ -1,0 +1,201 @@
+﻿<h1 class="firstHeading">Streuungskarte</h1>
+
+  <p class='urlname' style='display: none'>Variability-Chart</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Variability Chart.png" src="../images/Variability_Chart/700px-Variability_Chart.png" width="700"></a></dd>
+  </dl>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+
+      <li class="toclevel-1 tocsection-2">
+        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-3">
+            <a href="#The_plot_vari_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog <b>plot_vari</b></span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-4"><a href="#Input_tab"><span class="tocnumber">2.1.1</span> <span class="toctext">Registerkarte Eingabe</span></a></li>
+
+              <li class="toclevel-3 tocsection-5"><a href="#Quantities_tab"><span class="tocnumber">2.1.2</span> <span class="toctext">Registerkarte Eigenschaften</span></a></li>
+
+              <li class="toclevel-3 tocsection-6"><a href="#SD_Chart_tab"><span class="tocnumber">2.1.3</span> <span class="toctext">Registerkarte SD-Karte</span></a></li>
+
+              <li class="toclevel-3 tocsection-7"><a href="#Display_tab"><span class="tocnumber">2.1.4</span> <span class="toctext">Registerkarte Anzeige</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-8"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+
+      <li class="toclevel-1 tocsection-9">
+        <a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-10"><a href="#Example"><span class="tocnumber">4.1</span> <span class="toctext">Beispiel</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+
+  <p>Wählen Sie eine Y-Spalte mit mindestens einer Faktorspalte (bis zu 4 Faktoren).</p>
+
+  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+
+  <p>Um eine Streuungskarte zu erstellen:</p>
+
+  <ol>
+    <li>Wählen Sie mindestens eine Arbeitsblattspalte (oder einen Bereich aus mindestens einer Spalte).</li>
+
+    <li>Wählen <span class="menu">Zeichnen &gt; Statistisch&#160;: Streuungskarte</span>, um den Dialog <b>plot_vari</b> zu öffnen.</li>
+  </ol>
+
+  <h3><a name="The_plot_vari_Dialog_Box"></a><span class="mw-headline">Der Dialog <b>plot_vari</b></span></h3>
+
+  <dl>
+    <dd><a class="image"><img alt="Variability Chart Dialog.png" src="../images/Variability_Chart/850px-Variability_Chart_Dialog.png" width="850"></a></dd>
+  </dl>
+
+  <h4><a name="Input_tab"></a><span class="mw-headline">Registerkarte Eingabe</span></h4>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <td><b>Daten</b></td>
+
+      <td>Wählen Sie die zu zeichnenden Quelldatenspalten aus.</td>
+    </tr>
+
+    <tr>
+      <td><b>Faktoren</b></td>
+
+      <td>Wählen Sie die Spalten als Faktoren. Diese Spalten werden als Gruppierungsinformationen betrachtet. Falls mehrere Spalten ausgewählt wurden, wird die Gruppierung verschachtelt.</td>
+    </tr>
+  </table>
+
+  <h4><a name="Quantities_tab"></a><span class="mw-headline">Registerkarte Eigenschaften</span></h4>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <td><b>Zellenmittelwert verbinden</b></td>
+
+      <td>Legen Sie fest, ob die Mittelwerte des letzten Faktor verbunden werden sollen.</td>
+    </tr>
+
+    <tr>
+      <td><b>Mittelwertlinien für Faktoren zeigen</b></td>
+
+      <td>
+        Legen Sie fest, ob die Mittelwertlinien für Faktoren gezeigt werden.
+
+        <p>Die hier aufgeführten Faktoren sind wie die Faktoren organisiert, die Sie auf der Registerkarte <b>Eingabe</b> aktiviert haben. Sie können die gewünschten Faktoren wählen, um die Mittelwertlinien zu zeigen.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>Gesamtmittelwertlinie zeigen</b></td>
+
+      <td>Legen Sie fest, ob die Gesamtmittelwertlinie im Diagramm gezeigt werden soll. Falls diese Option aktiviert ist, wird eine Referenzlinie bei <i><b>Mean(plot(*,y))</b></i> gezeigt.</td>
+    </tr>
+
+    <tr>
+      <td><b>Gesamtmedianlinie zeigen</b></td>
+
+      <td>Legen Sie fest, ob die Gesamtmedianlinie im Diagramm gezeigt werden soll. Falls diese Option aktiviert ist, wird eine Referenzlinie bei <i><b>Meandian(plot(*,y))</b></i> gezeigt.</td>
+    </tr>
+  </table>
+
+  <h4><a name="SD_Chart_tab"></a><span class="mw-headline">Registerkarte SD-Karte</span></h4>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <td><b>Standardabweichungsdiagramm zeigen</b></td>
+
+      <td>Legen Sie fest, ob das Standardabweichungsdiagramm unter der Streuungskarte gezeigt werden soll.</td>
+    </tr>
+
+    <tr>
+      <td><b>Mittelwert der Standardabweichung zeigen</b></td>
+
+      <td>Legen Sie fest, ob der Mittelwert der Standardabweichungswerte des letzten Faktors gezeigt werden soll.</td>
+    </tr>
+
+    <tr>
+      <td><b>Mittelwertlinien für Faktoren zeigen</b></td>
+
+      <td>Wählen Sie den gewünschten Faktor, um die Mittelwertlinien auf dem Standardabweichungsdiagramm zu zeigen. Die Eingabefaktoren werden hier aufgeführt.</td>
+    </tr>
+  </table>
+
+  <h4><a name="Display_tab"></a><span class="mw-headline">Registerkarte Anzeige</span></h4>
+
+  <table class="dialogcontroltable">
+    <tr>
+      <td><b>Einzelne Datenpunkte zeigen</b></td>
+
+      <td>Legen Sie fest, ob die einzelnen Datenpunkte gezeigt werden sollen anstatt nur die Whiskerlinien. Das Aktivieren der Option setzt den <b>Boxtyp</b> auf <b>Box + Datenüberschneidung</b> und den <b>Boxstil</b> auf <b>Keine Box</b>, falls <b>Box zeigen</b> deaktiviert ist.</td>
+    </tr>
+
+    <tr>
+      <td><b>Box zeigen</b></td>
+
+      <td>Legen Sie fest, ob das Boxdiagramm für jede Gruppe gezeigt wird. Das Aktivieren der Option setzt den <b>Boxstil</b> auf <b>Box</b>.</td>
+    </tr>
+
+    <tr>
+      <td><b>Bereichslinie zeigen</b></td>
+
+      <td>Legen Sie fest, ob die Bereichswhiskerlinie für jede Gruppe gezeigt werden soll.</td>
+    </tr>
+
+    <tr>
+      <td><b>Vorlage</b></td>
+
+      <td>Per Standard wird die Vorlage "Variability" (Streuung) automatisch verwendet. Wenn Sie eine andere Vorlage verwenden möchten, deaktivieren Sie Auto und navigieren Sie zu der entsprechenden Vorlage und wählen sie.</td>
+    </tr>
+
+    <tr>
+      <td><b>Ausgabedaten/Ausgabediagramme</b></td>
+
+      <td>
+        Geben Sie die Zeichnungsdaten und Diagramme in unterschiedlichen Blättern aus.
+
+        <p>Sobald Sie auf <b>OK</b> geklickt haben, um das Diagramm zu erstellen, können die Zeichnungsdaten und Ergebnisdiagramme in den festgelegten Blättern ausgegeben werden. Per Standard werden zwei neue Blätter mit den Namen "VariabilityPlotData#" und "VariabilityGraph#“ in der aktuellen Arbeitsmappe erstellt, um die Zeichnungsdaten und Ergebnisdiagramme zu speichern.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+
+  <p>variability.otpu (installiert im Origin-Programmordner)</p>
+
+  <h2><a name="Notes"></a><span class="mw-headline">Hinweis</span></h2>
+
+  <p>Die Streuungskarte kann verwendet werden, um die Beziehungen zwischen Faktoren und einer Antwort zu untersuchen und die Ursachen für die Streuung zu analysieren. Eine Streuungskarte zeichnet die Daten und Mittelwerte für jede Stufe der Gruppierungsfaktoren mit allen Zeichnungen nebeneinander und Feld für Feld.</p>
+
+  <p>Origin zeichnet die Streuungskarten für bis zu 4 Faktoren. Sie können das Standardabweichungsdiagramm selektiv in die Streuungskarte zeichnen, wobei die Standardabweichung für jede Faktorstufenkombination angezeigt wird.</p>
+
+  <p><b>Hinweis:</b> Sie können auf die Schaltfläche <b>Verwandte Apps</b> unten im Dialog kicken, um die zugehörige App <a class="external text" href="https://www.originlab.com/FileExchange/details.aspx?fid=354" target="_blank">"Gage Study“</a> zu suchen und zu installieren.</p>
+
+  <h3><a name="Example"></a><span class="mw-headline">Beispiel</span></h3>
+
+  <p><a class="image"><img alt="Variability Chart Example.png" src="../images/Variability_Chart/850px-Variability_Chart_Example.png" width="850"></a></p>
+
+  <p>In diesem Beispiel wählen wir 2 Faktoren im Feld <b>Faktoren</b> des Dialogs plot_vari: "Identification.Classification" und "Identification.Year“ (mit roter Box markiert).</p>
+
+  <p>Entstapeln Sie die Quelldatenspalten mit Faktor 2, einschließlich dem Spaltenfaktor 1 (mit pinker Box markiert); mit 4 entstapelten Spalten zeichnen Sie die Boxdiagramme nur mit Bereichswhiskern und verbundenen Mittelwertpunkten. Setzen Sie im Dialog <b>Details Zeichnung</b> den Faktor 1 als die Spalte <b>Horizontales Feld</b> auf der Registerkarte <b>Feld</b>, um die Zeichnung in zwei Felder aufzuteilen.</p>
+
+  <dl>
+    <dd><a class="image"><img alt="Variability Chart PD Panel.png" src="../images/Variability_Chart/Variability_Chart_PD_Panel.png" width="340"></a></dd>
+  </dl>
+
+  <p>Verwenden Sie die Gruppierungsspalten, um die Quellantwortspalte "City mpg" in 8 Gruppen aufzuteilen, und die Standardabweichung für jede Gruppe zu berechnen. Zeichnen Sie die Standardabweichungswerte als ein Punkt-Liniendiagramm unter der Streuungskarte. Sie können sehen, dass die Standardabweichungen in diesem Beispiel relativ konsistent zwischen den Werten ("Automatic transmission" und "Manual transmission") des Faktors 1 variieren.</p>

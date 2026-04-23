@@ -1,0 +1,162 @@
+﻿<h1 class="firstHeading">アルゴリズム（二元配置分散分析）</h1><p class='urlname' style='display: none'>TwoWayANOVA-Algorithm</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Theory_of_Two-Way_ANOVA"><span class="tocnumber">1</span> <span class="toctext">Two-Way ANOVAの理論</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Homogeneity_of_Variance"><span class="tocnumber">2</span> <span class="toctext">等分散性</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Multiple_Means_Comparisons"><span class="tocnumber">3</span> <span class="toctext">複数平均の比較</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">検出力解析</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Theory_of_Two-Way_ANOVA"></a><span class="mw-headline">Two-Way ANOVAの理論</span></h2>
+<p><img src="../images/Algorithms_(ANOVATwoWay)/math-24e1348a922751ccbd4fc0a55d9f6ca8.png" title="y_{ij,k}\,\!" alt="y_{ij,k}\,\!" class="tex"/>を因子Aのレベル <i>I</i> と因子Bのレベル <i>j</i> での<i>k</i>番目の観測値を表すものとすると、二元配置分散分析モデルは下記のように書くことができます。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-0effb5dfe043214d3b87ff3ca0b1e4d4.png" title="y_{ij,k}=\mu +\alpha _i+\beta _j+\gamma _{ij}+\varepsilon _{ij,k}" alt="y_{ij,k}=\mu +\alpha _i+\beta _j+\gamma _{ij}+\varepsilon _{ij,k}" class="tex"/>
+</p><p>ここで、<img src="../images/Algorithms_(ANOVATwoWay)/math-74b8eddf4b37de80c7c8eed1b64e46fc.png" title="\mu \,\!" alt="\mu \,\!" class="tex"/>は全体の応答データの平均、<img src="../images/Algorithms_(ANOVATwoWay)/math-d015b015788a3872acceec61ded52bfb.png" title="\alpha _i\,\!" alt="\alpha _i\,\!" class="tex"/>は因子Aのレベル <i>I</i> での偏差、<img src="../images/Algorithms_(ANOVATwoWay)/math-193f021d9028eb9706698a6f5c0f1e0a.png" title="\beta _j\,\!" alt="\beta _j\,\!" class="tex"/> は因子<i>B</i>のレベル<i> j</i> での偏差、<img src="../images/Algorithms_(ANOVATwoWay)/math-4893dd2481ae10c24164553d3930b4b6.png" title="\gamma _{ij}\,\!" alt="\gamma _{ij}\,\!" class="tex"/>は2つの因子間の交互作用項、<img src="../images/Algorithms_(ANOVATwoWay)/math-2d8e26c124bbaaff2975eca997214c41.png" title="\varepsilon _{ij,k}\,\!" alt="\varepsilon _{ij,k}\,\!" class="tex"/> は誤差項です。そして、標本の変化は、3つの部分に分けられ、3つの仮説検定を行うことができます。
+</p><p>因子<i>A</i>に関しては、帰無仮説は<i>r</i> の異なる母集団の平均が同じとし、対立仮説は、少なくとも1つの標本の平均が、他とは異なるということになります。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-c33acaa27b66cec3e5a477ef1a4ec7ec.png" title="H_{01}:\alpha _1=\alpha _2=\ldots =\alpha _r=0" alt="H_{01}:\alpha _1=\alpha _2=\ldots =\alpha _r=0" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-1bcb49c656d9c9add5863d0330032e26.png" title="H_{A1}:\alpha _p\neq \alpha _q" alt="H_{A1}:\alpha _p\neq \alpha _q" class="tex"/>, のとき、<i>p</i> および <i>q</i>において1 ≤ <i>p</i>, <i>q</i> ≥ <i>r</i>
+</p><p>因子<i>B</i>については、帰無仮説は、<i>s</i> の異なる母集団の平均が同じであり、対立仮説は少なくとも1つの母集団の平均が他の母集団と異なるということになります。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-b0c76e650b839f11332fb55bc4916f4a.png" title="H_{02}:\beta _1=\beta _2=\ldots =\beta _s=0" alt="H_{02}:\beta _1=\beta _2=\ldots =\beta _s=0" class="tex"/>;
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-7a89b6844c46c8800f73742ac898bdbc.png" title="H_{A2}:\beta _p\neq \beta _q" alt="H_{A2}:\beta _p\neq \beta _q" class="tex"/>のとき、<i>p</i>および<i>q</i>に対して 1 ≤ <i>p</i>, <i>q</i> ≥ <i>s</i>;
+</p><p>交互作用の項に対して、帰無仮説は、2つの因子間の交互作用が無いということです。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-e7658574652ff84922c7e45311aa9711.png" title="H_{03}:\gamma _1=\gamma _2=\ldots =\gamma _{rs}=0" alt="H_{03}:\gamma _1=\gamma _2=\ldots =\gamma _{rs}=0" class="tex"/>;
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-caba9da65b46245805574ee743414b93.png" title="H_{A3}:\gamma _p\neq \gamma _q" alt="H_{A3}:\gamma _p\neq \gamma _q" class="tex"/>のとき、<i>p</i>および<i>q</i>に対して 1 ≤ <i>p</i>, <i>q</i> ≥ <i>rs</i>;
+</p><p>これらの仮説を検証するため、標本全体の分散を4つの部分に分け、標本の変動によって推定します。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-2c795d2f616da7e117502bbcf9cb9a87.png" title="SS_{Total}=SS_{Error}+SS_A+SS_B+SS_{AB}\,\!" alt="SS_{Total}=SS_{Error}+SS_A+SS_B+SS_{AB}\,\!" class="tex"/>
+</p><p>ここで
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-47e7f804f075b9c157584ec06cce79cd.png" title="SS_{Total}=\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^t(y_{ij,k}-\bar y)^2" alt="SS_{Total}=\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^t(y_{ij,k}-\bar y)^2" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-df8189819caf3b152811459af23977f2.png" title="SS_{Error}=\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^t(y_{ij,k}-\bar y_{ijm})^2" alt="SS_{Error}=\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^t(y_{ij,k}-\bar y_{ijm})^2" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-af748babfd23e3bfd39704d86135daa5.png" title="SS_A=st\sum_{i=1}^r(\bar y_{imm}-\bar y)^2" alt="SS_A=st\sum_{i=1}^r(\bar y_{imm}-\bar y)^2" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-07adec886e53b88c568666a7f5ad66d9.png" title="SS_B=rt\sum_{j=1}^s(\bar y_{mjm}-\bar y)^2" alt="SS_B=rt\sum_{j=1}^s(\bar y_{mjm}-\bar y)^2" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-472bd2d14aa56baec128037732f9c276.png" title="S_{AB}=t\sum_{i=1}^r\sum_{j=1}^s(\bar y_{ijm}-\bar y_{imm}-\bar y_{mjm}+\bar y)^2" alt="S_{AB}=t\sum_{i=1}^r\sum_{j=1}^s(\bar y_{ijm}-\bar y_{imm}-\bar y_{mjm}+\bar y)^2" class="tex"/>
+</p><p>また、
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-74c3be6091d315b1d45889451f08c9f1.png" title="\bar y=\frac 1{rst}\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^ty_{ij,k}" alt="\bar y=\frac 1{rst}\sum_{i=1}^r\sum_{j=1}^s\sum_{k=1}^ty_{ij,k}" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-8c782727576bb980e6cef0ccfd682cdf.png" title="\bar y_{ij}=\frac 1t\sum_{k=1}^ty_{ij,k}" alt="\bar y_{ij}=\frac 1t\sum_{k=1}^ty_{ij,k}" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-2ae3b31c7b66edb18f543169b3f2c9fa.png" title="\bar y_{imm}=\frac 1{st}\sum_{j=1}^s\sum_{k=1}^ty_{ij,k}" alt="\bar y_{imm}=\frac 1{st}\sum_{j=1}^s\sum_{k=1}^ty_{ij,k}" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-6b23df9fc156465fe8f63b0c088432ec.png" title="\bar y_{mjm}=\frac 1{rt}\sum_{i=1}^r\sum_{k=1}^ty_{ij,k}" alt="\bar y_{mjm}=\frac 1{rt}\sum_{i=1}^r\sum_{k=1}^ty_{ij,k}" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-100f5db42fc55631c7b4e798218f6a8f.png" title="SS_{Total}" alt="SS_{Total}" class="tex"/>は平方和であり、<img src="../images/Algorithms_(ANOVATwoWay)/math-8d95f5934baa7c353f18fd77c675e92c.png" title="SS_A" alt="SS_A" class="tex"/>は因子<i>A</i>からの平均差の変動を表します。<img src="../images/Algorithms_(ANOVATwoWay)/math-8abe5e40ad8ae7fd4ed12d2d27a1a7dd.png" title="SS_B" alt="SS_B" class="tex"/>は因子<i>B</i>との平均差の変動を表し、 <img src="../images/Algorithms_(ANOVATwoWay)/math-23d40e491f33023cbce6ed1898054a81.png" title="SS_{AB}" alt="SS_{AB}" class="tex"/>はは交互作用の変動、<img src="../images/Algorithms_(ANOVATwoWay)/math-349fb0475e9b16a6353bbc1aae235e6a.png" title="SS_{Error}" alt="SS_{Error}" class="tex"/>はすべての個別の標本の変動を表します。次に、F検定を使って、それらの間の分散の有意差を検定できます。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-fd17c1de0001a4efd8b9a0c82993d061.png" title="F_A=\frac{MS_A}{MS_{Error}}=\frac{SS_A/(r-1)}{SS_{Error}/(rs(t-1))}\sim F_\alpha (r-1,rs(t-1))" alt="F_A=\frac{MS_A}{MS_{Error}}=\frac{SS_A/(r-1)}{SS_{Error}/(rs(t-1))}\sim F_\alpha (r-1,rs(t-1))" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-44845adb89d0b9dd10565f5ff22f742a.png" title="F_B=\frac{MS_B}{MS_{Error}}=\frac{SS_B/(s-1)}{SS_{Error}/(rs(t-1))}\sim F_\alpha (s-1,rs(t-1))" alt="F_B=\frac{MS_B}{MS_{Error}}=\frac{SS_B/(s-1)}{SS_{Error}/(rs(t-1))}\sim F_\alpha (s-1,rs(t-1))" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-57af428ccc9c055f5a80fdc87089b1c2.png" title="F_{AB}=\frac{MS_{AB}}{MS_{Error}}=\frac{SS_{AB}/((r-1)(s-1))}{SS_{Error}/(rs(t-1))}\sim F_\alpha ((r-1)(s-1),rs(t-1))" alt="F_{AB}=\frac{MS_{AB}}{MS_{Error}}=\frac{SS_{AB}/((r-1)(s-1))}{SS_{Error}/(rs(t-1))}\sim F_\alpha ((r-1)(s-1),rs(t-1))" class="tex"/>
+</p><p>ある有意水準<img src="../images/Algorithms_(ANOVATwoWay)/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/>が与えられると、 <i>F</i> 統計量が重要な値<img src="../images/Algorithms_(ANOVATwoWay)/math-61ee10cfeb9c8fea41d940edebb82588.png" title="F_\alpha" alt="F_\alpha" class="tex"/>を超える場合、または<i>F</i>統計量の<i>P</i>値が有意水準<img src="../images/Algorithms_(ANOVATwoWay)/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/>以下の場合、帰無仮説<img src="../images/Algorithms_(ANOVATwoWay)/math-e65765bedcabe42c66ec93228769e82a.png" title="H_0" alt="H_0" class="tex"/> は棄却されます。
+</p><p>二元配置分散分析の計算は以下のようにまとめることができます。
+</p>
+<table class="simple">
+<tr>
+<th>変動のソース
+</th>
+<th>自由度(DF)
+</th>
+<th>平方和(SS)
+</th>
+<th>平均平方(MS)
+</th>
+<th><i>F</i> 値
+</th>
+<th><i>Prob &gt; F</i>
+</th></tr>
+<tr>
+<th>因子A
+</th>
+<td><i>r</i> - 1
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-8d95f5934baa7c353f18fd77c675e92c.png" title="SS_A" alt="SS_A" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-d8cf712091994539169b7f92bcabdd67.png" title="MS_A" alt="MS_A" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-d8cf712091994539169b7f92bcabdd67.png" title="MS_A" alt="MS_A" class="tex"/> / <img src="../images/Algorithms_(ANOVATwoWay)/math-ff8dc369a4b279c7e064cb1ef6fc4ba1.png" title="MS_{Error}" alt="MS_{Error}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-336e88336f1a211d0c3f3e2f533edff3.png" title="P\{F\geq F_{(r-1,rs(t-1),\alpha )}\}" alt="P\{F\geq F_{(r-1,rs(t-1),\alpha )}\}" class="tex"/>
+</td></tr>
+<tr>
+<th>因子B
+</th>
+<td>s - 1
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-8abe5e40ad8ae7fd4ed12d2d27a1a7dd.png" title="SS_B" alt="SS_B" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-666cadb9e58dc0e560e052a20e3a510f.png" title="MS_B" alt="MS_B" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-666cadb9e58dc0e560e052a20e3a510f.png" title="MS_B" alt="MS_B" class="tex"/> / <img src="../images/Algorithms_(ANOVATwoWay)/math-ff8dc369a4b279c7e064cb1ef6fc4ba1.png" title="MS_{Error}" alt="MS_{Error}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-b9560f30879a8b17bbee7eebd41b9efa.png" title="P\{F\geq F_{(s-1,rs(t-1),\alpha )}\}" alt="P\{F\geq F_{(s-1,rs(t-1),\alpha )}\}" class="tex"/>
+</td></tr>
+<tr>
+<th>交互作用
+</th>
+<td>(<i>r</i>- 1) (<i>s</i> - 1)
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-23d40e491f33023cbce6ed1898054a81.png" title="SS_{AB}" alt="SS_{AB}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-bcd1cd8741b39cdd8c3e290f145ae5a1.png" title="MS_{AB}" alt="MS_{AB}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-bcd1cd8741b39cdd8c3e290f145ae5a1.png" title="MS_{AB}" alt="MS_{AB}" class="tex"/> / <img src="../images/Algorithms_(ANOVATwoWay)/math-ff8dc369a4b279c7e064cb1ef6fc4ba1.png" title="MS_{Error}" alt="MS_{Error}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-50ceeeecbb0c9e5fec9e00f101ebad0c.png" title="P\{F\geq F_{((r-1)(s-1),rs(t-1),\alpha )}\}" alt="P\{F\geq F_{((r-1)(s-1),rs(t-1),\alpha )}\}" class="tex"/>
+</td></tr>
+<tr>
+<th>誤差
+</th>
+<td>rs (t - 1)
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-349fb0475e9b16a6353bbc1aae235e6a.png" title="SS_{Error}" alt="SS_{Error}" class="tex"/>
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-ff8dc369a4b279c7e064cb1ef6fc4ba1.png" title="MS_{Error}" alt="MS_{Error}" class="tex"/>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th>合計
+</th>
+<td>rst - 1
+</td>
+<td><img src="../images/Algorithms_(ANOVATwoWay)/math-100f5db42fc55631c7b4e798218f6a8f.png" title="SS_{Total}" alt="SS_{Total}" class="tex"/>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr></table>
+<p>Originの二元配置分散分析は、いくつかのNAG関数を使っています。NAG関数<a class="external text" href="http://www.originlab.com/pdfs/nagcl09/manual/pdf/g04/g04eac.pdf" target="_blank"><b>nag_dummy_vars(g04eac)</b></a>は必要な設計行列を作成するために使用され、NAG関数<a class="external text" href="http://www.originlab.com/pdfs/nagcl09/manual/pdf/g02/g02dac.pdf" target="_blank"><b>nag_regsn_mult_linear(g02dac)</b></a>は設計行列の線形回帰を実行するために使用されます。線形回帰の結果は、二元配置ANOVA表を作成するのに使われます。詳細はNAG文書をご覧ください。
+</p>
+<h2><a name="Homogeneity_of_Variance"></a><span class="mw-headline">等分散性</span></h2>
+<p>分散分析においては、異なるサンプルが等しい分散を持つと仮定します。これを一般に等分散性と呼びます。Levene検定とBrown-Forsythe検定を使用して、この仮定を検証できます。仮に、<i>k</i>個の応答データサンプルがあるとしましょう。ここで、<img src="../images/Algorithms_(ANOVATwoWay)/math-53969de94b3708187e040cc38293f661.png" title="y_{ij}\,\!" alt="y_{ij}\,\!" class="tex"/>は<i>j</i> 番目の因子レベル (<i>j</i> = 1, 2, ..., <i>k</i>)における i 番目の観測値 (<i>i</i> = 1, 2, ...<img src="../images/Algorithms_(ANOVATwoWay)/math-4aa861124eff57dd7988faa6753e8b7e.png" title="n_j" alt="n_j" class="tex"/>) を表します。Levene検定とBrown-Forsythe検定の仮説は次のように表すことができます。
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-e65765bedcabe42c66ec93228769e82a.png" title="H_0" alt="H_0" class="tex"/>：<img src="../images/Algorithms_(ANOVATwoWay)/math-6ae18486367863bbc938e896756f8df8.png" title="\sigma^2 _1=\sigma^2 _2=\cdots =\sigma^2 _k" alt="\sigma^2 _1=\sigma^2 _2=\cdots =\sigma^2 _k" class="tex"/>
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-6207a80403dcccc1aa3b5b7303315c4b.png" title="H_1" alt="H_1" class="tex"/>:<img src="../images/Algorithms_(ANOVATwoWay)/math-2b5c2cc59d7a827f54617e61fb32f2d9.png" title="\sigma^2 _p\neq \sigma^2 _q" alt="\sigma^2 _p\neq \sigma^2 _q" class="tex"/>、少なくとも1組 (<i>p</i>,<i> q</i>)に対して、<img src="../images/Algorithms_(ANOVATwoWay)/math-f3befe30a4a0d18509558e6012408028.png" title="1\leq p,q\leq k" alt="1\leq p,q\leq k" class="tex"/>
+</p><p>異なる検定に基づいて、<img src="../images/Algorithms_(ANOVATwoWay)/math-2af48c8053eb375472b4bbf78b90cec3.png" title="Z_{ij}\,\!" alt="Z_{ij}\,\!" class="tex"/>を以下のように定義します。
+</p>
+<ol><li>絶対値Levene検定:<img src="../images/Algorithms_(ANOVATwoWay)/math-b4e5bd6341b0f8ff84bf4a86cd819c58.png" title="Z_{ij}=|y_{ij}-\bar y_j|" alt="Z_{ij}=|y_{ij}-\bar y_j|" class="tex"/></li>
+<li>二乗Levene検定:<img src="../images/Algorithms_(ANOVATwoWay)/math-ca90d368003ebe629f44501f0e71c07a.png" title="Z_{ij}^2=(y_{ij}-\bar y_j)^2" alt="Z_{ij}^2=(y_{ij}-\bar y_j)^2" class="tex"/>   </li>
+<li>Brown-Forsythe検定:<img src="../images/Algorithms_(ANOVATwoWay)/math-face015854160d6388d3424185d3c24a.png" title="Z_{ij}=|y_{ij}-m_j|\,\!" alt="Z_{ij}=|y_{ij}-m_j|\,\!" class="tex"/>     </li></ol>
+<p>帰無仮説<img src="../images/Algorithms_(ANOVATwoWay)/math-e65765bedcabe42c66ec93228769e82a.png" title="H_0" alt="H_0" class="tex"/>が成立するとき、検定統計量は
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-9550c1c345a48df5bdeda1954598b3a4.png" title="F=\frac{\sum_{j=1}^kn_j(\bar Z_j-\bar Z)^2/(k-1)}{\sum_{j=1}^k\sum_{i=1}^{n_1}(Z_{ij}-\bar Z_j)^2/(n-k)}" alt="F=\frac{\sum_{j=1}^kn_j(\bar Z_j-\bar Z)^2/(k-1)}{\sum_{j=1}^k\sum_{i=1}^{n_1}(Z_{ij}-\bar Z_j)^2/(n-k)}" class="tex"/>
+</p><p><i>F</i>分布<img src="../images/Algorithms_(ANOVATwoWay)/math-9c7168c68d0f7e7fcc65ef56a0cf4e87.png" title="F_{(k-1,n-k)}\,\!" alt="F_{(k-1,n-k)}\,\!" class="tex"/>に従います。ここで<img src="../images/Algorithms_(ANOVATwoWay)/math-68dd52e4750d73c982c39f0a3a5bc7b2.png" title="\overline{Z_j}" alt="\overline{Z_j}" class="tex"/>および <img src="../images/Algorithms_(ANOVATwoWay)/math-a79056b6644e25416e91e8b496e5d378.png" title="\overline{Z}" alt="\overline{Z}" class="tex"/>は、それぞれ<img src="../images/Algorithms_(ANOVATwoWay)/math-2af48c8053eb375472b4bbf78b90cec3.png" title="Z_{ij}\,\!" alt="Z_{ij}\,\!" class="tex"/> のグループ平均と全体の平均です。
+</p>
+<h2><a name="Multiple_Means_Comparisons"></a><span class="mw-headline">複数平均の比較</span></h2>
+<p>二元配置ANOVA実験によって、少なくとも1つの因子レベルの平均が他の因子レベルの平均と統計的に異なることが判明した場合、その後、平均比較を行い、どの因子レベルの平均（または平均群）が有意に異なるかを調べます。Originでは、複数の平均比較のためにさまざまな方法が提供されており、NAG関数<a class="external text" href="http://www.originlab.com/pdfs/nagcl09/manual/pdf/g04/g04dbc.pdf" target="_blank"><b>nag_anova_confid_interval (g04dbc)</b></a>を使用して平均比較を実行します。 
+</p><p>複数平均の比較方法には、次の2種類があります。 
+</p><p>単一ステップ法これは、Tukey-Kramer、Bonferroni、Dunn-Sidak、Fisher&rsquo;s LSD、Scheffe、Dunnetなど、同時信頼区間を作成して、平均がどのように異なるかを示します。
+</p><p>段階的法Holm-BonferroniおよびHolm-Sidakh法のように、仮説検定を順番に実行します。
+</p>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
+<p>検出力分析手順は、サンプルデータの実際の検出力を計算するとともに、追加のサンプルサイズが指定された場合の仮定の検出力も計算します。
+</p><p>二元配置分散分析（ANOVA）の検出力は、その分析の感度を測定するものです。検出力は、実際に母集団の平均に差異が存在する場合に、その差異をANOVAが検出する確率です。帰無仮説と対立仮説に関して言うと、検出力は、実際に帰無仮説が棄却されるべき時に、F検定統計量が極端な値をとって帰無仮説を棄却する確率です（つまり、帰無仮説が真でない場合に棄却される確率）。
+</p><p>Originの二元配置ANOVAダイアログでは、因子Aおよび因子Bの検出力を計算できます。  もし「交互作用」チェックボックスが選択されていれば、Originは交互作用（<i>A*B</i>）についても検出力を計算できます。
+</p><p>検出力は次の式で定義されます。  
+</p><p><img src="../images/Algorithms_(ANOVATwoWay)/math-e3a9b7f790e5b9b01d2fe974337ea4cf.png" title="power=1-probf(f,df,dfe,nc)\,\!" alt="power=1-probf(f,df,dfe,nc)\,\!" class="tex"/>
+</p><p>ここで、<i>f</i>は非中央F分布の偏差、<i>df</i>は分子の自由度、<i>dfe</i>は誤差の自由度、<i>nc = SS/MSE</i>です。  SSはソース<i>A</i>、<i>B</i>、または<i>A * B</i>の平方和、MSEは誤差の平均平方、dfはソース<i>A、</i> <i>B</i>、または<i>A * B</i>の自由度、<i>dfe</i>は誤差の自由度です。  すべての値（<i>SS</i>、<i>MSE</i>、<i>df</i>、<i>dfe</i>）はANOVA表から取得されます。<i>probf ()</i>の値はNAG関数<a class="external text" href="http://www.originlab.com/pdfs/nagcl09/manual/pdf/g01/g01gdc.pdf" target="_blank"><b>nag_prob_non_central_f_dist (g01gdc)</b></a>を使って取得します。
+詳細はNAG文書をご覧ください。
+</p><p>上記は一元配置分散分析の簡単なアルゴリズムの概要です。詳細な数学的な導出については、ユーザーマニュアルおよびNAGドキュメントの該当部分を参照してください。
+</p>
+
+
+
+
+
+
+    

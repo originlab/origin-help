@@ -1,0 +1,131 @@
+﻿<h1 class="firstHeading">Die Registerkarte Anzeige für Heatmap (Details Zeichnung)</h1>
+
+  <p class='urlname' style='display: none'>PD-Dialog-Display4-Tab</p>
+
+  <p>Diese Registerkarte kann verwendet werden, um Füllfarbe, Anzeigestile, XY-Koordinaten und Zellenabstände zwischen den Zellen einer Heatmap/polaren Heatmap, die sowohl aus Arbeitsblattdaten als auch aus Matrixdaten erstellt wurde, zu steuern.</p>
+
+  <table class="noborder">
+    <tr>
+      <td>
+        <div style="text-align: center;">
+          <p><b>Heatmap</b></p>
+        </div>
+      </td>
+
+      <td>
+        <div style="text-align: center;">
+          <p><b>Polare Heatmap</b></p>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a class="image"><img alt="PD Display Tab for Heatmap.png" src="../images/The_(Plot_Details)_Display4_Tab/400px-PD_Display_Tab_for_Heatmap.png" width="400"></a></td>
+
+      <td><a class="image"><img alt="PD Display Tab for PolarHeatmap.png" src="../images/The_(Plot_Details)_Display4_Tab/400px-PD_Display_Tab_for_PolarHeatmap.png" width="400"></a></td>
+    </tr>
+  </table>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1"><a href="#Fill_Color"><span class="tocnumber">1</span> <span class="toctext">Füllfarbe</span></a></li>
+
+      <li class="toclevel-1 tocsection-2"><a href="#Fill_Display"><span class="tocnumber">2</span> <span class="toctext">Füllungsanzeige</span></a></li>
+
+      <li class="toclevel-1 tocsection-3"><a href="#Gap_between_Cells"><span class="tocnumber">3</span> <span class="toctext">Abstand zwischen Zellen</span></a></li>
+
+      <li class="toclevel-1 tocsection-4"><a href="#XY_Coordinates_Mapping_on_Matrix"><span class="tocnumber">4</span> <span class="toctext">Abbildung der XY-Koordinaten auf Matrix</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Fill_Color"></a><span class="mw-headline">Füllfarbe</span></h2>
+
+  <p>Legen Sie fest, wie die Farbe für Zellen gefüllt werden soll. Es gibt drei Farboptionen: <b>Index</b>, <b>Direkt RGB</b> und <b>Farbabbildung</b>.</p>
+
+  <p><a class="image"><img alt="PD Display Tab for Heatmap FillColor.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_FillColor.png" width="435"></a></p>
+
+  <p>Standardmäßig ist <b>Map:Mat(<i>#</i>):"<i>###</i>"</b> ausgewählt und die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Color_Map_Contours_Tab.html" title="UserGuide:The (Plot Details) Color Map Contours Tab">Registerkarte Farbpalette</a> wird, wie folgt angezeigt. Sie können Sie verwenden, um Füllfarbe, Zellenrahmen etc. festzulegen.</p>
+
+  <p>Wenn Sie <b>Index</b> oder <b>Direkt RGB</b> wählen, wird die Registerkarte <b>Farbpalette</b> nicht gezeigt, aber die Elemente Rahmen und Transparenz werden angezeigt und lassen Sie den Zellenrahmen und die Transparen der Füllfarbe benutzerdefiniert anpassen.</p>
+
+  <p><a class="image"><img alt="PD Display Tab for Heatmap Border.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Border.png" width="432"></a></p>
+
+  <h2><a name="Fill_Display"></a><span class="mw-headline">Füllungsanzeige</span></h2>
+
+  <p>Sie unterstützt die fünf Anzeigestile <b>Quadrat</b>, <b>Oberes Dreieck</b>, <b>Oberes Dreieck ohne Diagonale</b>, <b>Unteres Dreieck</b> und <b>Unteres Dreieck ohne Diagonale</b>. Dieses Bedienelement ist nicht für eine polare Heatmap verfügbar.</p>
+
+  <table class="note">
+    <tr>
+      <td>
+        <b>Hinweis:</b>
+
+        <p>Wenn die Heatmap X und Y nicht <b>N*N</b> ist, sind diese vier Optionen <b>Oberes Dreieck</b>, <b>Oberes Dreieck ohne Diagonale</b>, <b>Unteres Dreieck</b> und <b>Unteres Dreieck ohne Diagonale</b> nicht verfügbar.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Gap_between_Cells"></a><span class="mw-headline">Abstand zwischen Zellen</span></h2>
+
+  <p>Diese Bedienelementgruppe kann verwendet werden, um den Abstand zwischen Zellen anzupassen. Sie ist nicht für eine polare Heatmap verfügbar.</p>
+
+  <p>Neben dem Hinzufügen eines Abstand nach jeder Zelle (außer der letzten Zelle) in XY-Richtung können Sie auch einen Abstand nach allen N Zellen, jeder N-ten Zelle und Zellen, die mit Spalte oder Beschriftungszeile festgelegt wurden (nur für X-Richtung), hinzufügen.</p>
+
+  <p><a class="image"><img alt="PD Display Tab for Heatmap Gap.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Gap.png" width="632"></a></p>
+
+  <p>Die Beispiel unten zeigen Ihnen, wie Sie eine Auswahl aus der Auswahlliste treffen können:</p>
+
+  <p><a class="image"><img alt="PD Display Tab for Heatmap Gap Examples.png" src="../images/The_(Plot_Details)_Display4_Tab/PD_Display_Tab_for_Heatmap_Gap_Examples.png" width="808"></a></p>
+
+  <p>Diese Schieber für <b>X-Richtung</b> und <b>Y-Richtung</b> werden verwendet, um die Breite des Abstands in XY-Richtung zu steuern, auf einer Skala von 0 bis 100. Das Kontrollkästchen <b>Auto</b> hinter dem Abstandsschieber für Y wird verwendet, um jeden Abstand in Y-Richtung genau wie in X-Richtung festzulegen.</p>
+
+  <ul>
+    <li>
+      <i>Wenn der Abstand nach jeder Zelle gezeigt wird</i>:
+
+      <ul>
+        <li>Wenn der Abstand nur in eine Richtung geht:
+
+          <dl>
+            <dd><b>0</b> bedeutet, dass es keinen Abstand zwischen den Zellen in dieser Richtung gibt, <b>100</b> bedeutet, dass die Zellen als Zeilen in dieser Richtung angezeigt werden.</dd>
+          </dl>
+        </li>
+
+        <li>Wenn der Abstand in beide Richtungen geht:
+
+          <dl>
+            <dd>Die Berechnungsmethode des Abstandswerts unterscheidet sich von der obigen. Der Zellenwert ist nicht unabhängig für X oder Y. In beide Richtungen gilt <i><b>100 % Zellenwert = (Zellenbreite + Zellenhöhe)/2</b></i>.</dd>
+
+            <dd>Wenn Sie zum Beispiel <i>X-Richtung = 30</i> und <i>Y-Richtung = 50</i> setzen, dann ist der tatsächliche Abstandswert in X-Richtung = (Zellenbreite + Zellenhöhe)/2*30% und der tatsächliche Abstandswert in Y-Richtung = (Zellenbreite + Zellenhöhe)/2*50%</dd>
+          </dl>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <i>Wenn der Abstand für festgelegte Zelle, aber nicht jede Zelle gezeigt wird:</i>
+
+      <dl>
+        <dd>Die Einheit des Abstands ist % der Datenskalierung. Wenn es zum Beispiel in X-Richtung 3 Abstände und einen X-Skalierungsbereich von 1~200 gibt, dann bedeutet das Festlegen eines Abstand auf 5 %, dass jeder Abstand auf (200-1+1)*5%/(3+1)=2,5 in der X-Skalierung gesetzt ist.</dd>
+      </dl>
+    </li>
+  </ul>
+
+  <h2><a name="XY_Coordinates_Mapping_on_Matrix"></a><span class="mw-headline">Abbildung der XY-Koordinaten auf Matrix</span></h2>
+
+  <p>Die Option wird üblicherweise für Heatmaps verwendet, die auf Grundlage von NetCDF-Daten gezeichnet wurden, um Längen- und Breitengrade festzulegen.</p>
+
+  <ul>
+    <li>XY-Koordinaten</li>
+  </ul>
+
+  <p>Das Festlegen von XY-Koordinaten von der Matrix aus wird unterstützt.</p>
+
+  <ul>
+    <li>Ausrichtung</li>
+  </ul>
+
+  <p>Legen Sie die Ausrichtung auf <b>Beliebig</b>, <b>Im Uhrzeigersinn</b> oder <b>Gegen den Uhrzeigersinn</b> fest.</p>

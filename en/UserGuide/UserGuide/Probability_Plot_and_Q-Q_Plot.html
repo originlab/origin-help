@@ -1,0 +1,414 @@
+<h1 class="firstHeading">17.2.4 Probability Plot and Q-Q Plot</h1><p class='urlname' style='display: none'>ProbPlot-QQPlot</p>
+<p>The probability plot is used to test whether a dataset follows a given distribution. It shows a graph with an observed cumulative percentage on the X axis and an expected cumulative percentage on the Y axis. If all the scatter points are close to the reference line, we can say that the dataset follows the given distribution. 
+</p><p>A Q-Q (Quantile-Quantile) plot is another graphic method for testing whether a dataset follows a given distribution. It differs from the probability plot in that it shows observed and expected values instead of percentages on the X and Y axes. If all the scatter points are close to the reference line, we can say that the dataset follows the given distribution.
+</p><p>Origin supports five given distributions (Normal, Lognormal, Exponential, Weibull and Gamma), and five methods for plotting percentile approximations (Blom, Benard, Hazen, Van der Waerden, and Kaplan-Meier).
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Probability_Plot_or_Q-Q_Plot"><span class="tocnumber">1</span> <span class="toctext">Creating Probability Plot or Q-Q Plot</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#The_Dialog_of_plot_prob_X-Function"><span class="tocnumber">2</span> <span class="toctext">The Dialog of plot_prob X-Function</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distributions"><span class="tocnumber">3</span> <span class="toctext">Distributions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Details_for_Constructing_Probability_Plot"><span class="tocnumber">4</span> <span class="toctext">Details for Constructing Probability Plot</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Details_for_Constructing_Q-Q_Plot"><span class="tocnumber">5</span> <span class="toctext">Details for Constructing Q-Q Plot</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Score_Methods"><span class="tocnumber">6</span> <span class="toctext">Score Methods</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Reference"><span class="tocnumber">7</span> <span class="toctext">Reference</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Creating_Probability_Plot_or_Q-Q_Plot"></a><span class="mw-headline">Creating Probability Plot or Q-Q Plot</span></h2>
+<p>To create a probability plot or Q-Q plot:
+</p>
+<ol><li>Highlight one Y column or multiple Y columns as input variable(s). </li>
+<li>Open the probability/Q-Q plot dialog:
+<dl><dd>For a probability plot:  In Origin's main menu, click <b>Plot &gt; Statistical: Probability Plot...</b>.  Alternatively, you can click the Probability Plot button <a  class="image"><img alt="Button Probability Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Probability_Plot.png?v=21823" width="24"  /></a> on the 2D Graphs toolbar.  </dd>
+<dd>For a Q-Q plot:  In Origin's main menu, click '<i><b>Plot &gt; Statistical: Q-Q Plot...</b>.  Alternatively, you can click the Q-Q Plot button <a  class="image"><img alt="Button Q Q Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Q_Q_Plot.png?v=17277" width="21"  /></a> on the 2D Graphs toolbar.</i></dd></dl></li>
+<li>In the plot_prob X-Function dialog, select the grouping column(s), set arrangement of groups and variables, choose a column to split the plot into panels, specify the distribution and method.</li>
+<li>Click <b>OK</b> to create a probability plot or a Q-Q plot.
+<dl><dd><a  class="image"><img alt="Probability Plot and Q Q Plot 2.png" src="../images/Probability_Plot_and_Q-Q_Plot/850px-Probability_Plot_and_Q_Q_Plot_2.png?v=98556" width="850"   /></a></dd></dl></li></ol>
+<p>As you can see, in this example, 
+</p>
+<ul><li> 2 columns selected in <b>Input Data</b> have been plotted into separate graphs through setting <b>Multiple Data</b> to <b>Separate Graphs</b>.</li>
+<li> The grouping column "country" selected in <b>Group</b> box has divided the probability plot into multiple plots overlaid on same graph.</li>
+<li> Another grouping column "Luxury" selected in <b>Split Panels by</b> box has separated the graph into two layers (<b>N</b> and <b>Y</b>).</li>
+<li> A table with statistics results have been added onto the graph.</li></ul>
+<h2><a name="The_Dialog_of_plot_prob_X-Function"></a><span class="mw-headline">The Dialog of plot_prob X-Function</span></h2>
+<dl><dd><a  class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png?v=98552" width="449"  /></a></dd></dl>
+<table class="dialogcontroltable">
+
+<tr>
+<th>
+<p><b>Input Data</b>
+</p>
+</th>
+<td>
+<p>Specify the input data. You can select multiple columns as inout variables.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Group</b>
+</p>
+</th>
+<td>
+<p>Specify the grouping column(s) in order to seperate the input variable(s) into multiple different plots.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Graph Arrangement</b>
+</p>
+</th>
+<td>The controls under this brach will help you arrange the multiple input variables and groups, split the graph into multiple panels and pages.
+<ul><li><b>Multiple Data</b> and <b>Multiple Groups</b>：Use these two options , the plots will be arranged in these four ways:
+<ul><li><b>Overlay All</b>: Both Multple Data and Multiple Group select Overlap on Same Graph.</li>
+<li><b>Overlay Groups, Variables in Different Layers</b>: Multple Data=Separate Layers, Multiple Groups=Overlap on Same Graph</li>
+<li><b>Overlay Variables, Groups in Different Layers</b>: Multiple Groups=Separate Layers, Multple Data=Overlap on Same Graph</li>
+<li><b>Different Layers</b>: Both Multple Data and Multiple Groups select Separate Layers</li></ul></li></ul>
+<ul><li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to separate the graphs into multiple layers. 
+<dl><dd><b>Note:</b> If Multiple Data and Multiple Groups both are set to Separate Layers, the layer order in result sheet should follow the hierarchy of "by Input Data" →"Split Panels by" → "by Groups"</dd></dl></li>
+<li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created probability plots in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
+</td></tr>
+<tr>
+<th>
+<p><b>Share X Scales</b>
+</p>
+</th>
+<td>
+<p>Specify whether share X scales for all layers on same graph. This option is only available when <b>Separate Layers on Same Graph</b> selected in <b>Multiple Data</b> and <b>Multiple Groups</b> or grouping columns selected in <b>Split Panels by</b> box.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Share Y Scales</b>
+</p>
+</th>
+<td>
+<p>Specify whether share Y scales for all layers on same graph. This option is only available for Q-Q plot when <b>Separate Layers on Same Graph</b> selected in <b>Multiple Data</b> and <b>Multiple Groups</b> or grouping columns selected in <b>Split Panels by</b> box.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Distribution</b>
+</p>
+</th>
+<td>
+<p>Select a distribution type for your data. For more information about distributions, please refer to <a href="#Distributions">Distributions section</a>.
+</p>
+<ul><li><b>Distribution</b>
+<dl><dd>14 distributions are available.</dd>
+<dd><a  class="image"><img alt="Distribution PPandQQ.png" src="../images/Probability_Plot_and_Q-Q_Plot/Distribution_PPandQQ.png?v=98570" width="286"  /></a></dd></dl></li>
+<li><b>Estimate from Data</b>
+<dl><dd>Specify whether to estimate distribution parameters from input data. If not, parameters can be specified manually.</dd></dl></li>
+<li> <i><b>Parameters</b></i>: Unchecking the <b>Estimate from Data</b> box activates the <i><b>Parameters</b></i> boxes, where you can enter custom values ​​to draw the curves.
+<dl><dd>You can check more details about <a href="../../UserGuide/UserGuide/Customizing_the_Violin_Plot_Distribution_Tab_Controls.html#Curve_Type" title="UserGuide:Customizing the Violin Plot Distribution Tab Controls">distribution curves</a> in the <b>Distribution</b> tab of <b>Plot Details</b> dialog.</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>
+<p><b>Score Method</b>
+</p>
+</th>
+<td>
+<p>Select a method for plotting percentile approximations. For more information about methods, please refer to <a href="#Score_Methods">Score Methods section</a>.
+</p>
+<ul><li><b>Blom</b></li>
+<li><b>Benard</b></li>
+<li><b>Hazen</b></li>
+<li><b>Van der Waerden</b></li>
+<li><b>Kaplan-Meier</b></li></ul>
+</td></tr>
+<tr>
+<th>
+<p><b>Confidence Band</b>
+</p>
+</th>
+<td>
+<p>Specify whether to output the confidence band in probability plot. For computation details, see <a href="../../UserGuide/UserGuide/Algorithm(Distribution_Fit).html" title="UserGuide:Algorithm(Distribution Fit)">Algorithms</a>. 
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Confidence Level(%)</b>
+</p>
+</th>
+<td>
+<p>Only available when <b>Confidence Band</b> is selected. Specify the confidence level in percentage for the chosen distribution. 
+</p>
+</td></tr>
+<tr>
+<th><b>Exchange X-Y Axes</b>
+</th>
+<td>
+<p>Specify whether to switch X and Y axis positions.
+</p>
+</td></tr>
+<tr>
+<th><b>X Minimum<br />X Maximum</b>
+</th>
+<td>
+<p>By default, <b>Auto</b> boxes are checked, which means the minimum and maximum X values of the <b>Reference Line</b> columns in the result sheet "PlotData#" will be used to created the distribution curves.
+</p><p>Uncheck the <b>Auto</b> check box, you can enter the minimum and/or maximum of the X values for all distribution reference lines. All refence lines will be plotted within this X range.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Output Range</b>
+</p>
+</th>
+<td>
+<p>This determines where the calculated data for the graph is stored.
+</p>
+</td></tr>
+<tr>
+<th>
+<p><b>Output Graphs</b>
+</p>
+</th>
+<td>
+<p>This determines where the result graphs are stored.
+</p>
+</td></tr></table>
+<h2><a name="Distributions"></a><span class="mw-headline">Distributions</span></h2>
+<p>Origin includes four distributions for Probability and Q-Q plots.  The following table lists their density functions:
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Distribution
+</th>
+<th>Density Function <i><b>p(x)</b></i>
+</th>
+<th>Range
+</th>
+<th>Parameters
+</th></tr>
+<tr>
+<td>
+<p><b>Normal</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c4faa7a02ad5fe3d1da6bca377356495.png?v=0" title="\frac 1{\sigma \sqrt{2\pi }}\exp \left( -\frac{\left( x-\mu \right) ^2}{2\sigma ^2}\right)" alt="\frac 1{\sigma \sqrt{2\pi }}\exp \left( -\frac{\left( x-\mu \right) ^2}{2\sigma ^2}\right)" class="tex"/> 
+</p>
+</td>
+<td>all <img src="../images/Probability_Plot_and_Q-Q_Plot/math-9dd4e461268c8034f5c8564e155c67a6.png?v=0" title="x" alt="x" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png?v=0" title="\mu" alt="\mu" class="tex"/>,mean,is the location parameter<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/>,standard deviation, is the scale parameter
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Lognormal</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-834da44fca49f2cf9d71692429625ca3.png?v=0" title="\frac 1{\sigma x\sqrt{2\pi }}\exp \left( -\frac{\left( \ln \left( x\right) -\mu \right) ^2}{2\sigma ^2}\right)" alt="\frac 1{\sigma x\sqrt{2\pi }}\exp \left( -\frac{\left( \ln \left( x\right) -\mu \right) ^2}{2\sigma ^2}\right)" class="tex"/> 
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png?v=0" title="x&gt;0" alt="x&gt;0" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png?v=0" title="\mu" alt="\mu" class="tex"/> is the shape scale parameter <br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter.
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Exponential</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-e69b36eddbad461f453154801c4521d7.png?v=0" title="\frac 1\sigma \exp \left( -\frac x\sigma \right)" alt="\frac 1\sigma \exp \left( -\frac x\sigma \right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png?v=0" title="x&gt;0" alt="x&gt;0" class="tex"/>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter.
+</td></tr>
+<tr>
+<td>
+<p><b>Weibull</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-9c78c3f1b96838bf9ce3cb355f54e447.png?v=0" title="\frac c\sigma \left( \frac x\sigma \right) ^{c-1}\exp \left( -\left( \frac x\sigma \right) ^c\right)" alt="\frac c\sigma \left( \frac x\sigma \right) ^{c-1}\exp \left( -\left( \frac x\sigma \right) ^c\right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png?v=0" title="x&gt;0" alt="x&gt;0" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png?v=0" title="c(&gt;0)" alt="c(&gt;0)" class="tex"/> is the shape parameter
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Gamma</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-621bc77637522f27cf4b536957ab92fb.png?v=0" title="\frac{1}{\Gamma(c)\sigma^c}x^{c -1} exp(-x/\sigma)," alt="\frac{1}{\Gamma(c)\sigma^c}x^{c -1} exp(-x/\sigma)," class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png?v=0" title="x&gt;0" alt="x&gt;0" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png?v=0" title="c(&gt;0)" alt="c(&gt;0)" class="tex"/> is the shape parameter
+</p>
+</td></tr></table>
+<h2><a name="Details_for_Constructing_Probability_Plot"></a><span class="mw-headline">Details for Constructing Probability Plot</span></h2>
+<p>To construct a probability plot, sort the observed dataset from smallest to largest:
+</p>
+<dl><dd><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5624a30d4c678dc72eae5846b1e79702.png?v=0" title="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" alt="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" class="tex"/>, <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png?v=0" title="n" alt="n" class="tex"/> is the total number of the observed dataset.</dd></dl>
+<p>The sorted observed values are represented on the plot by points whose X-coordinates are <img src="../images/Probability_Plot_and_Q-Q_Plot/math-92f8cb93ad9350ca1ab67868f3667559.png?v=0" title="x[i]\ " alt="x[i]\ " class="tex"/> and whose Y-coordinates are calculated using the <a href="#Score_Methods">Score Method</a>. 
+</p>
+<dl><dd><a  class="image"><img alt="Probability Plot and Q Q Plot 7.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_Plot_and_Q_Q_Plot_7.png?v=17436" width="500"  /></a></dd></dl>
+<p><a href="../../UserGuide/UserGuide/The_Scale_Tab.html#Type" title="UserGuide:The Scale Tab">Scale types</a> of probability plot are different according to the distributions
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Distribution
+</th>
+<th>X Scale Type
+</th>
+<th>Y Scale Type
+</th></tr>
+<tr>
+<td>
+<p><b>Normal</b>
+</p>
+</td>
+<td>
+<p>Linear
+</p>
+</td>
+<td>
+<p>Probability
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Lognormal</b>
+</p>
+</td>
+<td>
+<p>Ln
+</p>
+</td>
+<td>
+<p>Probability
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Exponential</b> 
+</p>
+</td>
+<td>
+<p>Ln
+</p>
+</td>
+<td>
+<p>Double Log Reciprocal
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Weibull</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Double Log Reciprocal
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Gamma</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Probability
+</p>
+</td></tr></table>
+<h2><a name="Details_for_Constructing_Q-Q_Plot"></a><span class="mw-headline">Details for Constructing Q-Q Plot</span></h2>
+<p>To construct a Q-Q plot,sort the observed dataset from smallest to largest:
+</p>
+<dl><dd><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5624a30d4c678dc72eae5846b1e79702.png?v=0" title="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" alt="x[1]\le x[2]\le x[3]\le \cdots \le x[n-1]\le x[n]" class="tex"/>, where <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png?v=0" title="n" alt="n" class="tex"/> is the total number of observed values.</dd></dl>
+<p>The Y values are the inverse cumulative distribution functions of the <a href="#Score_Methods">score method</a> used. 
+</p>
+<dl><dd><a  class="image"><img alt="Probability Plot and Q Q Plot 6.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_Plot_and_Q_Q_Plot_6.png?v=17435" width="500"  /></a></dd></dl>
+<h2><a name="Score_Methods"></a><span class="mw-headline">Score Methods</span></h2>
+<p>Input data is ordered from smallest to largest, and then the serial number of the sorted data is scored using one of the methods listed below.  In this table, <img src="../images/Probability_Plot_and_Q-Q_Plot/math-865c0c0b4ab0e063e5caa3387c1a8741.png?v=0" title="i" alt="i" class="tex"/> is the serial number and <img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png?v=0" title="n" alt="n" class="tex"/> is the total number of the nonmissing input data.
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Methods
+</th>
+<th>Plotting Position <img src="../images/Probability_Plot_and_Q-Q_Plot/math-c8fa53605faac83db7e752c47e6eeec8.png?v=0" title="method(i,n)" alt="method(i,n)" class="tex"/>
+</th></tr>
+<tr>
+<td>
+<p><b>Blom</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-6423aaa252ebfee1a082804be56f9f4d.png?v=0" title="(i-0.375)/(n+0.25)" alt="(i-0.375)/(n+0.25)" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Benard</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-1feec0f57bdfaecb34f50235f0a6f9c2.png?v=0" title="(i-0.3)/(n+0.4)" alt="(i-0.3)/(n+0.4)" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Hazen</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ac145606f998415e28771ab11f186044.png?v=0" title="(i-0.5)/n" alt="(i-0.5)/n" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Van der Waerden</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c630e4e41d2607d776d8f231d882dbec.png?v=0" title="i/(n+1)" alt="i/(n+1)" class="tex"/>
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Kaplan-Meier</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-85acff6614271d07af7131b456124db4.png?v=0" title="i/n" alt="i/n" class="tex"/>
+</p>
+</td></tr></table>
+<h2><a name="Reference"></a><span class="mw-headline">Reference</span></h2>
+<ul><li>Samuel Kotz , Campbell B. Read , N. Balakrishnan, Brani Vidakovic, 2005. <i>Encyclopedia of statistical sciences.</i>, NewYork: John Wiley &amp; Sons, Inc.</li>
+<li>Thode, Henry C. 2002, <i>Testing for Normality</i>, CRC Press</li></ul>
+
+
+
+
+
+

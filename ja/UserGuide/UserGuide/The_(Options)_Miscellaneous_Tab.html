@@ -1,0 +1,347 @@
+﻿<h1 class="firstHeading">(オプション) 「その他のオプション」タブ</h1><p class='urlname' style='display: none'>Options-Dialog-Misc-Tab</p>
+<p><br />
+</p>
+<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png" width="743"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Proxy_Group"><span class="tocnumber">1</span> <span class="toctext">プロキシグループ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Custom_Dates_Formats_Group"><span class="tocnumber">2</span> <span class="toctext">カスタム日時フォーマットグループ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Custom_Dates_Examples"><span class="tocnumber">2.1</span> <span class="toctext">カスタム日時のサンプル</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Import_Group"><span class="tocnumber">3</span> <span class="toctext">インポートグループ</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Print_Group"><span class="tocnumber">4</span> <span class="toctext">印刷グループ</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Additional_Controls"><span class="tocnumber">5</span> <span class="toctext">追加のコントロール</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#First_Day_of_Week"><span class="tocnumber">6</span> <span class="toctext">週の最初の日</span></a></li>
+</ul>
+</div>
+<h2><a name="Proxy_Group"></a><span class="mw-headline">プロキシグループ</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>直接接続
+</th>
+<td>
+<p>デフォルトの設定です。 
+</p>
+</td></tr>
+<tr>
+<th> システム設定を使用する
+</th>
+<td>
+<p>Windowsオペレーティングシステムで指定されたプロキシ設定を使用します。
+</p>
+</td></tr>
+<tr>
+<th> HTTPプロキシサーバを使う
+</th>
+<td>
+<p>付属の編集ボックスを使用してアドレスを入力します。 
+</p><p>認証が必要なプロキシサーバーを使用している場合は、<a class="external text" href="../../QuickHelp/QuickHelp/Download_check_for_updates_and_data_connectors.html"><b>FAQ-1003: Originがインターネットに接続してアップデートのチェックなどができないのはなぜですか？を</b></a>参照してください。
+</p>
+</td></tr></table>
+<h2><a name="Custom_Dates_Formats_Group"></a><span class="mw-headline">カスタム日時フォーマットグループ</span></h2>
+<p>このグループではユーザ自身のカスタム日時フォーマットを作ることができます。設定されたカスタム日時フォーマットは、ワークシート列をダブルクリックして、<span class="db">列プロパティ</span>ダイアログボックスの<b>列のデータ型</b>ドロップダウンリストで<b>日付</b>が選ばれた時に、<b>表示フォーマット</b>ドロップダウンリストの項目として現れます。しかし、このカスタム日時フォーマットはプロジェクトまたはOrigin.iniに保存できません。これらは、ローカルユーザによって定義されたプロジェクトを表示する時にのみ適用します。プロジェクトをそれぞれのコンピュータで開くと、同じディスプレイを見るわけではありません。 
+</p><p>カスタム日時フォーマットでは、その定義の日付文字列は60バイトを越えることはできません。TIME-DATE-TIMEやDATE-TIME-DATEのような、いわばサンドイッチ形式とすることは禁止されています。 
+</p><p><br />
+</p>
+<table class="simple">
+<tr>
+<th> テキストボックスの入力...
+</th>
+<th> 意味...
+</th>
+<th> Originでの表示
+</th></tr>
+<tr>
+<td>
+<p>M  
+</p>
+</td>
+<td>
+<p>月  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>M = 月を示す数字 (例えば、1月の1)。この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>MM =  2桁の月（例えば January = 01)。 </li>
+<li>MMM = 月の3文字略称（例えば Jan) </li>
+<li>MMMM =月の完全な名前（例：January）この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>d  
+</p>
+</td>
+<td>
+<p>日  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>d = 月の日を表示（例：1）。この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>dd = 2桁の日（例：01） </li>
+<li>ddd = 曜日の3文字略称（例：Mon） </li>
+<li>dddd = 曜日の完全な名前（例：Monday）。この要素の後には区切り文字が必要です。この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>y  
+</p>
+</td>
+<td>
+<p>年  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>y = 年の下1～2桁（例：1901 → 1）。この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>yy = 年の下2桁（例：1901 → 01）
+ </li>
+<li>yyyy = 年の全4桁（例：1901 → 1901） </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>h 
+</p>
+</td>
+<td>
+<p>時  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>h = 12時間制。1桁の時間に先頭ゼロを付けない（例：3）
+この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>hh = 12時間制。1桁の時間に先頭ゼロを付ける（例：03） </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>H  
+</p>
+</td>
+<td>
+<p>時  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>H = 24時間制。1桁の時間に先頭ゼロを付けないこの要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>HH = 24時間制。1桁の時間に先頭ゼロを付ける </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>m  
+</p>
+</td>
+<td>
+<p>分  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>m = 1桁の分に先頭ゼロを付けないこの要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>mm = 1桁の分に先頭ゼロを付ける </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>s  
+</p>
+</td>
+<td>
+<p>秒  
+</p>
+</td>
+<td>
+<dl><dd><ul><li>s =1桁の秒に先頭ゼロを付けないこの要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<li>ss = 1桁の秒に先頭ゼロを付ける </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>#  
+</p>
+</td>
+<td>秒の小数点以下
+</td>
+<td>
+<dl><dd><ul><li># = 秒の小数第1位まで表示 </li>
+<li>## = 秒の小数第2位まで </li>
+<li>### = 小数第3位まで </li>
+<li>#### = 小数第4位まで </li></ul></dd></dl>
+</td></tr>
+<tr>
+<td>
+<p>t  
+</p>
+</td>
+<td>
+<p>時間マーカー 
+</p>
+</td>
+<td>
+<dl><dd><ul><li>t = 1文字の時刻マーカー（例：A または P） </li>
+<li>tt = 複数文字の時刻マーカー（例：AM または PM） </li></ul></dd></dl>
+</td></tr></table>
+<h3><a name="Custom_Dates_Examples"></a><span class="mw-headline">カスタム日時のサンプル</span></h3>
+<p>フォーマットに表示するカスタム日時フォーマットを設定してみましょう。 
+</p><p><b>Saturday, September 5, 1998</b> 
+</p><p>以下のように入力します。 
+</p><p>&apos;<b>dddd&apos;, &apos;MMM&apos; &apos;d&apos;, &apos;yyyy&apos;</b> 
+</p><p>日付フォーマット内の要素（M, d, y など）は、正しい大文字・小文字で記述する必要があります（例：「MM」は月、「mm」は分）。要素同士の区切りには、ここまでに紹介された文字以外の任意の英数字記号を使用できます。要素の後に何文字の入力を想定するかが不明確な場合、その要素の後にはシングルクォートで囲まれた区切り文字が必要です。フォーマット文字列の末尾であれば、区切り文字はシングルクォートで囲む必要はありません。区切り文字は、ワークシート上の表示にもそのまま反映されます。ただし、シングルクォート自体は表示されません。シングルクォートで囲まれた区切り文字を2つ続けて配置することはできません。例えば &quot;ddd &apos;|&apos; &apos;-&apos;MMM&quot; は無効です。 
+</p><p>また、区切りのスペースが、シングルクォート(&apos;)で囲まれている時、指定されたスペースが必ずそこに来るものとして解釈されます。つまり、そのセルにデータを入力する時、シングルクォート(&apos;)で囲まれたスペースと同じだけの文字数のスペースで要素が区切られる必要があります。もし、データがスペースで区切られていないような場合は、フォーマットの方の区切りのスペースにもシングルクォートを付けないでください。このシングルクォートのないフォーマット区切りは、単にピクチャ文字列の並びを間違いなく解釈するためだけに使われます。例として次の表をご覧ください。 
+</p>
+<table class="simple">
+<tr>
+<th>カスタム日時
+</th>
+<th>入力
+</th>
+<th>出力
+</th>
+<th>メモ
+</th></tr>
+<tr>
+<td>
+<p>MM dd  
+</p>
+</td>
+<td>
+<p>0416  
+</p>
+</td>
+<td>
+<p>04 16  
+</p>
+</td>
+<td>
+<p>クォートなしのスペースは無視されます。入力値が連続していても正しく解析されます。 
+</p>
+</td></tr>
+<tr>
+<td>
+<p>MM&apos; &apos;dd  
+</p>
+</td>
+<td>
+<p>02 12  
+</p>
+</td>
+<td>
+<p>02 12  
+</p>
+</td>
+<td>
+<p>1つのスペースで月と日を区切ります。入力文字列に余分なスペースがあっても構いません。
+</p>
+</td></tr>
+<tr>
+<td>
+<p>MM&apos; &apos;dd  
+</p>
+</td>
+<td>
+<p>0212  
+</p>
+</td>
+<td>
+<p>--  
+</p>
+</td>
+<td>
+<p>1つの区切り用のスペースが必要ですが、入力にはスペースが無いため解釈できません。  
+</p>
+</td></tr></table>
+<h2><a name="Import_Group"></a><span class="mw-headline">インポートグループ</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>複数ASCIIインポートのワークシート用標準テンプレート
+</th>
+<td>
+<p>このコンボボックスは、複数のASCIIファイルを複数のワークブックにインポートするときに使われるデフォルトのワークブックテンプレートを指定します。
+</p>
+</td></tr>
+<tr>
+<th>複数ASCIIインポートの作図用標準XY属性
+</th>
+<td>
+<p>このコンボボックスは、<b>複数ASCIIのインポート</b>ダイアログボックスの下側のパネルで、<b>列のXY属性列</b>のリストのデフォルトの設定を制御します(このダイアログボックスは、グラフをアクティブにして、<b>標準</b>ツールバーの<a  class="image"><img alt="Button Import Multiple ASCII.png" src="../images/The_(Options)_Miscellaneous_Tab/Button_Import_Multiple_ASCII.png" width="23"  /></a>ボタンをクリックすると開きます。)。この値は、グラフに直接データをインポートするときのデフォルトのXY属性を指定します。
+</p>
+<dl><dd><ul><li><b>XY1</b> </li></ul>
+<dl><dd>Originは、すべての列をインポートします。最初の列をX値とし、残りずべての列をY値として扱います。この場合、「1」は最後の文字「Y」が残りすべての列に対して適用されるということを示しています。 </dd></dl>
+<ul><li><b>DXY1</b> </li></ul>
+<dl><dd>Originは、データの最初の列を無属性にし、XY1のルールに従ってファイルの残りをインポートします。 </dd></dl>
+<ul><li><b>XY</b> </li></ul>
+<dl><dd>Originは、最初の列をX値、2列目をY値として扱います。 </dd></dl>
+<ul><li><b>XY2</b> </li></ul>
+<dl><dd>Originは、すべての列をインポートします。しかし、この場合、Originは、最初の列をX1、2列目をY1、3列目をX2、4列目をY2のように扱います。この場合、「2」は最後の2文字「X」「Y」が残りすべての列に対して順に適用されるということを示しています。 </dd></dl>
+<ul><li><b>XYE</b> </li></ul>
+<dl><dd>Originは、最初の列をX値、2列目をY値、3列目をYエラー値として扱います。 </dd></dl>
+<ul><li><b>XYZ</b> </li></ul>
+<dl><dd>Originは、最初の列をX値、2列目をY値、3列目をZ値として扱います。  </dd></dl></dd></dl>
+</td></tr></table>
+<h2><a name="Print_Group"></a><span class="mw-headline">印刷グループ</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>Xの縮尺倍率
+</th>
+<td>
+<p>このコンボボックス内の値で、印刷時のX軸の長さを調整することできます。プリンタが、レイヤの<span class="db">｢作図の詳細｣</span>ダイアログの<b>レイヤの大きさ</b>タブで<b>幅</b>のテキストボックスで設定した長さでグラフを作成しない場合、デフォルト値を変更して下さい。 
+</p><p>例えば、この<b>幅</b>のテキストボックスで6インチと設定したにもかかわらず、印刷されるグラフの幅が6.0625インチであった場合、<b> Xの縮尺倍率</b>内の数値を1010と設定して下さい｡ここでの1010という数値は次の計算から求められます： (6.0625*1000)/6=1010 
+</p>
+</td></tr>
+<tr>
+<th> Yの縮尺倍率
+</th>
+<td>
+<p>このコンボボックス内の値で、印刷時のY軸の長さを調整することできます。プリンタが、レイヤの<span class="db">｢作図の詳細｣</span>ダイアログの<b>レイヤの大きさ</b>タブで<b>幅</b>のテキストボックスでせていした大きさでグラフを作成しない場合、デフォルト値を変更して下さい。 
+</p>
+</td></tr></table>
+<h2><a name="Additional_Controls"></a><span class="mw-headline">追加のコントロール</span></h2>
+<table class="dialogcontroltable">
+<tr>
+<th>列データ型として数値型を基本とする
+</th>
+<td>
+<p>このチェックボックスは、すべての新しいワークシートのすべての列を「数値」または「文字と数値」(デフォルト)にします。通常このオプションを指定しなければならない必然性はあまりないかもしれませんが、もし後で、<b>Origin 4.1</b>でそのデータの処理をすることが考えられる場合には、このチェックボックスにチェックをする必要があります。それをしないと、プロジェクトがOriginのバージョン4.1で開けられた時、そのデータが失われる可能性があります。 
+</p>
+</td></tr>
+<tr>
+<th>ツールバー･スペーサの利用
+</th>
+<td>
+<p>このチェックボックスを選択すると、メニュバーの下にツールバースペーサを表示することができます。アクティブなウィンドウを変更した際でも、ツールバー用の領域サイズを固定することができます。ツールバースペーサの高さは、プロジェクト中のウィンドウそれぞれにあわせて選択されたツールバー全てを表示できる、最大の高さに設定されます。（一旦表示されたツールバースペーサを隠すには、ツールバースペーサ内でマウスの右クリックし、ショートカットメニューから<b>スペーサを隠す</b>を選択します。） 
+</p>
+</td></tr>
+<tr>
+<th>可能な場合ロングネームを使用
+</th>
+<td>
+<p>このチェックをつけると、作図のセットアップダイアログ（<b>グラフ操作：作図のセットアップ</b>）のプロットリストに、Originは列のロングネーム（定義されている場合）を表示します。これは、<b>データ</b>メニューの下部にあるデータリスト、および、作図の詳細ダイアログボックスの左パネルに表示されます。
+</p>
+</td></tr>
+<tr>
+<th>アイコンをメニューに表示
+</th>
+<td>
+<p>このチェックボックスは、メニューコマンドの隣にビットマップアイコンを表示するかどうかを制御します。ツールバーボタンになっているメニューコマンドにはコマンドの左側にビットマップアイコンを表示します。
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/The_(Options)_Miscellaneous_Tab/Tip_icon.png" width="57"  border="0" /></td><td><p><b>Origin 2018b</b>から、システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a>を使用して、<b>作図</b>メニューアイコンのサイズを変更できます。システム変数の値を変更する方法については、<a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">システム変数を使ってOriginを設定</a>を参照してください。
+</p></td></tr></table>
+</td></tr>
+<tr>
+<th>自動更新でページショートネームをロングネームに倣う
+</th>
+<td>
+<p>このチェックボックスにチェックが付いていると、Originは自動的にワークブックのようなページのショートネームをロングネームに従って変更します。ロングネームは切り詰められ、その中の特殊文字が削除され、ショートネームとして有効なものになります。
+</p>
+</td></tr>
+<tr>
+<th>メニューの折りたたみの利用
+</th>
+<td>
+<p>Originのメインメニューとコンテキストメニューは、デフォルトで折りたたまれて表示されます。このチェックボックスで折りたたみをオン/オフできます。メニューの折りたたみついての詳細は、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_customize_the_collapsible_menu.html">このFAQ</a>をご参照ください。
+</p>
+</td></tr></table>
+<h2><a name="First_Day_of_Week"></a><span class="mw-headline">週の最初の日</span></h2>
+<p><i>yyyy</i>-<b>W</b><i>ww</i>-<i>D</i>形式で日付を表示する際に使用される週の開始日を指定します。
+</p>
+<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="444"  /></a></dd></dl>
+
+
+    

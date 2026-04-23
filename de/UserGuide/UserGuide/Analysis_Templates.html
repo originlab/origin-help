@@ -1,0 +1,261 @@
+﻿<h1 class="firstHeading">Analysevorlagen</h1>
+
+  <p class='urlname' style='display: none'>Analysis-Templates</p>
+
+  <p>&#160;</p>
+
+  <div style="text-align: left; direction: ltr; margin-left: 1em;">
+    <p><a class="image"><img alt="Video Image.png" src="../images/Analysis_Templates/Video_Image.png" width="33"></a> Weitere relevante Videos:<a class="external text" href="http://www.originlab.com/Index.aspx?go=Support/VideoTutorials&amp;ss=chm&amp;pid=1171" target="_blank">Eine Analysevorlage erstellen</a></p>
+  </div>
+
+  <div id="toc" class="toc">
+    <div id="toctitle">
+      <h2>Inhalt</h2>
+    </div>
+
+    <ul>
+      <li class="toclevel-1 tocsection-1">
+        <a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Einführung</span></a>
+
+        <ul>
+          <li class="toclevel-2 tocsection-2"><a href="#Saving_Analysis_Operations_into_a_Template"><span class="tocnumber">1.1</span> <span class="toctext">Analyseoperationen in eine Vorlage speichern</span></a></li>
+
+          <li class="toclevel-2 tocsection-3"><a href="#Using_Saved_Template_to_Handle_Repetitive_Tasks"><span class="tocnumber">1.2</span> <span class="toctext">Gespeicherte Vorlage zur Verarbeitung wiederkehrender Aufgaben verwenden</span></a></li>
+
+          <li class="toclevel-2 tocsection-4"><a href="#Use_Active_Workbook_as_Template_to_Handle_Repetitive_Tasks"><span class="tocnumber">1.3</span> <span class="toctext">Aktive Arbeitsmappe als Vorlage zur Verarbeitung wiederkehrender Aufgaben verwenden</span></a></li>
+
+          <li class="toclevel-2 tocsection-5">
+            <a href="#Reporting_Batch_Analyzed_Results"><span class="tocnumber">1.4</span> <span class="toctext">Ergebnisse der Stapelanalyse berichten</span></a>
+
+            <ul>
+              <li class="toclevel-3 tocsection-6"><a href="#Create_a_custom_summary_report_sheet"><span class="tocnumber">1.4.1</span> <span class="toctext">Benutzerdefinierten Zusammenfassungsbericht erstellen</span></a></li>
+
+              <li class="toclevel-3 tocsection-7"><a href="#To_output_batch_analysis_results_to_Word_template"><span class="tocnumber">1.4.2</span> <span class="toctext">Stapelanalyseergebnisse in Word-Vorlage ausgeben</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="toclevel-1 tocsection-8"><a href="#Example"><span class="tocnumber">2</span> <span class="toctext">Beispiel</span></a></li>
+
+      <li class="toclevel-1 tocsection-9"><a href="#Other_Materials"><span class="tocnumber">3</span> <span class="toctext">Sonstige Materialien</span></a></li>
+    </ul>
+  </div>
+
+  <h2><a name="Introduction"></a><span class="mw-headline">Einführung</span></h2>
+
+  <p>Die Origin-Arbeitsmappe kann Rohdaten, Metadaten, mathematische Formeln, Skripte und Analyseergebnisse (einschließlich Diagrammen und Matrix) speichern. Kombinieren Sie diese Möglichkeit, komplexe Informationen zu speichern, mit der Funktion <a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="UserGuide:Recalculating Analysis Results">Neu Berechnen</a>, um eine <b>Analysevorlage</b> zu erstellen.</p>
+
+  <p>Das Konzept der Analysevorlage unterscheidet sich vom Konzept der <a href="../../UserGuide/UserGuide/What_is_Saved_with_the_Workbook_Template.html" title="UserGuide:What is Saved with the Workbook Template">Arbeitsmappenvorlage</a> mindestens in einem wichtigen Punkt: Wenn Sie eine Arbeitsmappenvorlage speichern (<b>Datei: Vorlage speichern unter</b>) und die Datei als eine OTW(U)-Datei speichern, werden <i>alle</i> Daten zerstört. Wenn Sie im Gegensatz dazu einige Operationen durchführen und eine Analysevorlage als OGW(U)-Datei speichern (<b>Datei: Arbeitsmappe als Analysevorlage speichern</b>), behält die Arbeitsmappe nicht nur die Informationen über die Anzahl der Spalten und Blätter, Spaltenzuweisung und -reihenfolge, Format- und Stiloptionen -- die Art von Infos also, die mit der OTW(U)-Datei gespeichert werden --, Sie speichern darüber hinaus auch die Informationen darüber, welche Art von Analysen Sie durchgeführt haben und welche Art von Ausgabe Sie erzeugen wollten. Wird eine Analysevorlage mit passenden Daten ausgestattet, werden Ihre Zahlen verarbeitet und automatisch eine Ausgabe in der Form von Arbeitsblattdaten, Matrixdaten und Analyseberichtsblättern erstellt, die Ihre Ergebnisse mit einer Kombination aus Tabellen und Diagrammen zusammenfassen. Die Analysevorlage kann ein integraler Teil Ihrer Origin-<a class="external text" href="../../UserGuide/UserGuide/Batch_Processing.html">Stapeloperationen</a> sein.</p>
+
+  <dl>
+    <dd>
+      <dl>
+        <dd><a class="image"><img alt="Product Page BatchProcessing 04.png" src="../images/Analysis_Templates/Product_Page_BatchProcessing_04.png" width="702"></a></dd>
+      </dl>
+    </dd>
+  </dl>
+
+  <h3><a name="Saving_Analysis_Operations_into_a_Template"></a><span class="mw-headline">Analyseoperationen in eine Vorlage speichern</span></h3>
+
+  <p>Wenn all Ihre Analyseoperationen in einer Arbeitsmappe zusammengefasst sind, können Sie im Menü <b>Datei: Arbeitsmappe als Analysevorlage speichern...</b> wählen, um die Arbeitsmappe als eine Analysevorlage (*.OGW(U)-Datei) zu speichern. Sie können diese OGW(U)-Datei direkt in Origin ziehen, um sie zu öffnen. Sie werden sehen, dass alle Ihre mit der Analyse verbundenen Daten gelöscht sind, aber die Analyseoperationen durch grüne Schlösser gekennzeichnet beibehalten wurden.</p>
+
+  <ul>
+    <li style="list-style: none">Wenn Ihre Analyseoperationen auch mit Matrixmappen oder unabhängigen Diagrammfenstern verbunden sind, können Sie</li>
+
+    <li><a href="../../UserGuide/UserGuide/Adding_Existing_Graphs_Matrixs_as_Sheets.html" title="UserGuide:Adding Existing Graphs Matrixs as Sheets">diese Matrixmappe/Diagrammfenster als neue Blätter</a> in die Quellarbeitsmappe einzufügen (diese Option besteht seit Origin 2018b) und die Arbeitsmappe als eine Analysevorlage speichern, wie unten gezeigt.</li>
+
+    <li>wählen, das gesamte Projekt als eine Analysevorlage auf Projektebene zu speichern. Das gespeicherte Projekt wird dann die "Vorlage", zu der Sie neue Daten hinzufügen. Um das aktuelle Projekt als eine Vorlage zu speichern, klicken Sie auf <b>Datei: Aktuelles Projekt klonen</b>. Die aktuelle Projektdatei mit allen Fenstern und Operationen wird <i>dupliziert</i>, alle importierten Daten dabei jedoch gelöscht. Wenn die Projektdatei seit dem Öffnen modifiziert wurde, wird der Anwender aufgefordert, die Operationen und Diagrammanpassungen in der Projektdatei vor dem Klonen zu speichern. Eine neue <b>UNTITLED.opju</b> wird erstellt und sofort nach dem Duplizieren geöffnet.</li>
+  </ul>
+
+  <h3><a name="Using_Saved_Template_to_Handle_Repetitive_Tasks"></a><span class="mw-headline">Gespeicherte Vorlage zur Verarbeitung wiederkehrender Aufgaben verwenden</span></h3>
+
+  <p>Wenn Sie die gespeicherte Vorlage nur zum Bearbeiten eines anderen Datensatzes verwenden möchten, dann funktioniert Arbeitsmappe-als-Vorlage auf die gleiche Weise wie Projekt-als-Vorlage, da beides das Importieren von neuen Daten in die Vorlage erfordert, um alle mit der Analyse verbundenen Diagramme und Ergebnisse zu aktualisieren.</p>
+
+  <p>Der zusätzliche Vorteil der Arbeitsmappe-als-Vorlage-Methode besteht darin, dass der Dialog <a href="../../UserGuide/UserGuide/Batch_Processing.html" title="UserGuide:Batch Processing"><b>Stapelverarbeitung</b></a>, der geöffnet wird, indem Sie auf die Schaltfläche <a class="image"><img alt="Button Batch Processing.png" src="../images/Analysis_Templates/Button_Batch_Processing.png" width="23"></a> oder im Menü auf <b>Datei: Stapelverarbeitung</b> klicken, verwendet werden kann, um mehrere Dateien oder Datensätze automatisch zu verarbeiten.</p>
+
+  <h3><a name="Use_Active_Workbook_as_Template_to_Handle_Repetitive_Tasks"></a><span class="mw-headline">Aktive Arbeitsmappe als Vorlage zur Verarbeitung wiederkehrender Aufgaben verwenden</span></h3>
+
+  <p>Wenn Sie eine Ihrer Datendateien innerhalb einer Arbeitsmappe analysiert haben, können Sie einfach die gleiche Analyse für alle anderen Dateien durchführen, indem Sie sie in die Arbeitsmappen importieren, die auf Grundlage der aktiven Arbeitsmappe geklont wurden. Dies wird gemacht, indem <b>Vorlagenname</b> im Importdialog des Dateityps auf <i>&lt;Klon&gt;</i> gesetzt wird.</p>
+
+  <dl>
+    <dd>
+      <dl>
+        <dd><a class="image"><img alt="Analysis Template clone worksheet.png" src="../images/Analysis_Templates/Analysis_Template_clone_worksheet.png" width="600"></a></dd>
+      </dl>
+    </dd>
+  </dl>
+
+  <h3><a name="Reporting_Batch_Analyzed_Results"></a><span class="mw-headline">Ergebnisse der Stapelanalyse berichten</span></h3>
+
+  <p>Um Analyseergebnisse zusammenzufassen und einen Bericht zu erstellen,</p>
+
+  <ul>
+    <li>können Sie ein <a class="external text" href="../../Tutorial/Tutorial/Creating_a_Custom_Report_Sheet.html">benutzerdefiniertes Berichtsblatt</a> erstellen, das Tabellen, Diagramme, externe Bilder (z. B. Logos) etc. enthält, und all diese Elemente mit der Ausgabe der Analyseoperationen in einer Analysevorlage verknüpfen.<br>
+    <i>Alternativ:</i></li>
+
+    <li>Sie können die Ergebnisse, die aus einer Analysevorlage direkt in eine vorkonfigurierte Word-Vorlage ausgeben, um eine Word- oder PDF-Datei für den Bericht zu erstellen.</li>
+  </ul>
+
+  <h4><a name="Create_a_custom_summary_report_sheet"></a><span class="mw-headline">Benutzerdefinierten Zusammenfassungsbericht erstellen</span></h4>
+
+  <p>Neben dem manuellen Kopieren der gewünschten Analyseergebnisse und <a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" title="UserGuide:Copying and pasting Worksheet Data">ihrem Einfügen als Link</a> ins Zusammenfassungsblatt führt Origin 2025 ein interaktives und benutzerfreundliches Hilfsmittel ein, dass Anwendern hilft, ihr Zusammefassungsblatt schnell in der Analysevorlage zu erstellen.</p>
+
+  <p><span class='headerInParagraph'>Um dieses Hilfsmittel zu öffnen:</span></p>
+
+  <ul>
+    <li>Nachdem Sie die gewünschten Analyseoperationen durchgeführt und alle relevanten Blätter in einer Arbeitsmappe gesammelt haben, klicken Sie mit der rechten Maustaste auf einen Arbeitsblattreiter und wählen Sie <b>Zusammenfassungsblatt für Stapelanalyse hinzufügen</b>.</li>
+  </ul>
+
+  <p><a class="image"><img alt="Add Summary Sheet for Batch Analysis.gif" src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis.gif" width="908"></a></p>
+
+  <ul>
+    <li>Klicken Sie bei offenem Dialog <b>Zusammenfassungsblatt erstellen</b> auf die gewünschte Zelle, egal ob im einfachen Arbeitsblatt (sowohl Beschriftungszeilen- und Datenbereich) oder im hierarchischen Berichtsblatt. Der Zelleninhalt wird kopiert und in die Spalte Wert im Dialog <a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" title="UserGuide:Copying and pasting Worksheet Data">als Link eingefügt</a>. Falls die angeklickte Zelle aus einer Tabelle im Berichtsblatt stammt, wird der entsprechende Tabellenkopf automatisch als Link in die Spalte Beschriftung eingefügt. Bei Tabellen mit mehreren Kopfzeilen wird jede Zeile einzeln als separate Beschriftungsspalte extrahiert.</li>
+
+    <li>Neben den automatisch extrahierten Beschriftungen können Sie auch (1) doppelt in die Spalte Beschriftung klicken, um den Beschriftungstext manuell zu öffnen, oder (2) die Schaltfläche <a class="image"><img alt="Create Summary Sheet Copy label from worksheet button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Copy_label_from_worksheet_button.png" width="28"></a> verwenden, um eine gewünschte Beschriftungszelle interaktiv im Arbeitsblatt auszuwählen.</li>
+
+    <li>Sie können auch klicken, um ein Diagramm auszuwählen, egal ob das Diagramm ins Zusammenfassungsblatt eingebettet ist, als separates Blatt hinzugefügt wurde oder ein frei bewegliches Diagramm ist.</li>
+
+    <li>Sie können zusammenhängende Zellen zusammen als Block ziehen und sie auf einmal hinzufügen.</li>
+  </ul>
+
+  <p><a class="image"><img alt="Add Summary Sheet for Batch Analysis contiguous selection.gif" src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis_contiguous_selection.gif" width="876"></a></p>
+
+  <ul>
+    <li>Verwenden Sie die Schaltflächen oberhalb der Tabelle, um eine neue Zeile einzufügen, eine bestehende Zeile zu löschen oder Zeilen neu zu ordnen.</li>
+  </ul>
+
+  <table class="simple" style="border: 2px solid #FFFFFF">
+    <tr>
+      <td>
+        <p><a class="image"><img alt="Add Summary Sheet for Batch Analysis.png" src="../images/Analysis_Templates/Add_Summary_Sheet_for_Batch_Analysis.png" width="382"></a></p>
+      </td>
+
+      <td>
+        <table class="simple">
+          <tr>
+            <th>
+              <center>
+                <a class="image"><img alt="Create Summary Sheet Insert button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Insert_button.png" width="28"></a>
+              </center>
+            </th>
+
+            <td>Fügen Sie eine neue Zeile vor der ausgewählten ein.</td>
+          </tr>
+
+          <tr>
+            <th>
+              <center>
+                <a class="image"><img alt="Create Summary Sheet Delete button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Delete_button.png" width="28"></a>
+              </center>
+            </th>
+
+            <td>Löschen Sie die ausgewählte Zeile.</td>
+          </tr>
+
+          <tr>
+            <th><a class="image"><img alt="Create Summary Sheet Move to top button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_top_button.png" width="28"></a><a class="image"><img alt="Create Summary Sheet Move up button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_up_button.png" width="28"></a><br>
+            <a class="image"><img alt="Create Summary Sheet Move down button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_down_button.png" width="28"></a><a class="image"><img alt="Create Summary Sheet Move to bottom button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_bottom_button.png" width="28"></a></th>
+
+            <td>
+              Ordnen Sie die Zeilen neu.
+
+              <p><a class="image"><img alt="Create Summary Sheet Move to top button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_top_button.png" width="28"></a>/<a class="image"><img alt="Create Summary Sheet Move to bottom button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_to_bottom_button.png" width="28"></a>: Die ausgewählte Zeile an Anfang/Ende verschieben;<br>
+              <a class="image"><img alt="Create Summary Sheet Move up button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_up_button.png" width="28"></a>/<a class="image"><img alt="Create Summary Sheet Move down button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Move_down_button.png" width="28"></a>: Die ausgewählte Zeile zum Vorherigen/Nächsten verschieben</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              <center>
+                <a class="image"><img alt="Create Summary Sheet Copy label from worksheet button.png" src="../images/Analysis_Templates/Create_Summary_Sheet_Copy_label_from_worksheet_button.png" width="28"></a>
+              </center>
+            </th>
+
+            <td>
+              Klicken Sie auf diese Schaltfläche, um die Beschriftung aus dem Arbeitsblatt zu kopieren. Klicken Sie auf diese Schaltfläche, um den Auswahlmodus der Beschriftung zu öffnen und wählen Sie dann eine Beschriftungszelle im Arbeitsblatt. Auf diese Weise wird die Auswahl kopiert und als Link in die Spalte Beschriftung eingefügt.
+
+              <p>Durch Klicken auf die Spalte Wert wird der Beschriftungsauswahlmodus verlassen.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Tabelle in Zusammenfassungsblatt transponieren:</th>
+
+            <td>Durch Aktivieren dieses Kontrollkästchens wird der <b>Wert</b> Spalte für Spalte ins Zusammenfassungsblatt ausgegeben und die <b>Beschriftung</b> wird in die Spaltenbeschriftungszeilen ausgegeben (erste Beschriftungsspalte in Langname und der Rest in die benutzerdefinierten Parameter).</td>
+          </tr>
+
+          <tr>
+            <th>
+              <center>
+                Ausgabeblatt
+              </center>
+            </th>
+
+            <td>Falls ein bestehendes Arbeitsblatt als <b>Ausgabeblatt</b> ausgewählt wird, werden die Stapelergebnisse an die letzte nicht-leere Spalte angehängt (falls Tabelle transponieren aktiviert ist) oder an die letzte nicht-leere Zeile (falls Tabelle transponieren nicht aktiviert ist). </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>Wenn Sie bereits ein Zusammenfassungsblatt erstellt haben und später mehr Eigenschaften hinzufügen möchten, können Sie das Hilfsmittel <b>Zusammenfassungsblatt für Stapelanalyse hinzufügen</b> verwenden, mit dem neue Elemente an das bestehende Zusammenfassungsblatt angehängt werden können statt ein neues Blatt zu erstellen. Dazu ist <b>Ausgabearbeitsblatt</b> standardmäßig auf <i>Zusammenfassung</i> gesetzt.</li>
+  </ul>
+
+  <h4><a name="To_output_batch_analysis_results_to_Word_template"></a><span class="mw-headline">Stapelanalyseergebnisse in Word-Vorlage ausgeben</span></h4>
+
+  <p>Dazu müssen Sie zuerst eine Word-Vorlage bestimmten mit Lesezeichen versehenen Zellen vorbereiten. Die Lesezeichen können zu einer Analysevorlage in einem speziellen Arbeitsblatt mit dem Namen <i><b>Lesezeichen</b></i> hinzufügen, indem Sie im Menü <b>Datei: Word-Lesezeichen zu Analysevorlage hinzufügen</b> wählen, um den Dialog <a href="../../UserGuide/UserGuide/Add_Word_Bookmarks_to_Analysis_Template_Dialog.html" title="UserGuide:Add Word Bookmarks to Analysis Template Dialog">Word-Lesezeichen zu Analysevorlage hinzufügen</a> zu öffnen.</p>
+
+  <p>Um Analyseergebnisse über Word-Lesezeichen an die Word-Vorlage weiterzuleiten, müssen Sie die Ergebnisse aus der Analysevorlage kopieren und sie als Links in die entsprechenden Zellen einfügen, in denen sich die Word-Lesezeichen befinden. Wenn Sie damit fertig sind, können Sie die aktuelle Analysevorlage erneut speichern und zusammen mit der Word-Vorlage verwenden, um die Ergebnisse der Stapelanalyse direkt in eine Word- oder PDF-Datei zu exportieren.</p>
+
+  <h2><a name="Example"></a><span class="mw-headline">Beispiel</span></h2>
+
+  <p>Dieses einfache Beispiel soll das Konzept erläutern:</p>
+
+  <ol>
+    <li>Öffnen Sie ein neues Origin-Projekt, klicken Sie auf die Schaltfläche <b>Einzelnes ASCII importieren</b> <a class="image"><img alt="Button Import Single ASCII.png" src="../images/Analysis_Templates/Button_Import_Single_ASCII.png" width="23"></a> und öffnen Sie die Datei \Samples\Curve Fitting\Linear Fit.dat. Die Datei wird in das aktive Arbeitsblatt importiert. Das Blatt wird in <b>Linear Fit</b> umbenannt.</li>
+
+    <li>Markieren Sie die Spalten <b>B</b> bis <b>D</b>, wählen Sie <b>Analyse: Anpassen: Linearer Fit</b> im Menü und öffnen Sie den Dialog <b>Lineare Anpassung</b>.</li>
+
+    <li>Setzen Sie <b>Neu Berechnen</b> auf <b>Auto</b>.</li>
+
+    <li>Übernehmen Sie die Standardeinstellungen und klicken Sie auf <b>OK</b>, um die lineare Anpassung durchzuführen. Sie können auf die Warnmeldung mit "Nein" antworten.</li>
+
+    <li>Klicken Sie mit der rechten Maustaste in die graue Fläche auf der rechten Seite des Arbeitsblatts <b>Linear Fit</b> und wählen Sie <b>Arbeitsblatt löschen</b> im Kontextmenü aus. Klicken Sie auf <b>OK</b>, um zu bestätigen, dass Sie alle Daten entfernen möchten. Dies löscht auch alle Ausgabedaten (Sie können dies bestätigen, indem Sie auf die Blätter FitLinear1 und FitLinearCurve1 klicken), da diese Ausgabe "abhängig" von dem Vorhandensein der Daten des linearen Fits ist. Beachten Sie, dass Sie Ihre <b>Analysevorlage</b> zu diesem Zeitpunkt noch nicht gespeichert haben (Sie arbeiten lediglich in einem unbenannten Origin-Projekt). Es gibt, abhängig von Ihren Anforderungen, verschiedene Optionen zum Speichern:
+
+      <ul>
+        <li>Wenn Sie eine reduzierte Analysevorlage -- die kleinste funktionierende Einheit -- speichern möchten und Ihre gesamten Ein- und Ausgabedaten in einer Arbeitsmappe gespeichert werden können, können Sie eine Origin-<b>Fenster</b>datei speichern. Wählen Sie <b>Datei: Fenster speichern unter</b> -- nicht <b>Template speichern unter</b> -- und speichern Sie Ihre Arbeitsmappe als <b>OGW(U)</b>-Datei.</li>
+
+        <li>Falls Sie Ihre Analysevorlage in einem komplexeren Projekt, das möglicherweise mehrere Diagramm-, Matrix- oder Layoutfenster besitzt, einbinden möchten, können Sie Ihre Arbeitsmappe als Teil Ihrer <b>Projekt</b>datei speichern (<b>Datei: Projekt speichern unter</b>). Beachten Sie aber, dass, wenn Sie Ihre Arbeitsmappe, wie oben beschrieben, als <b>OGW(U)</b>-Datei speichern, Sie diese jederzeit zu einer Origin-Projektdatei hinzufügen können, indem Sie den Menübefehl <b>Datei: Öffnen</b> verwenden.</li>
+      </ul>
+    </li>
+
+    <li>Wenn Sie eine Speicheroption gewählt haben, können Sie eine Darstellung der Analysevorlage sehen, indem Sie auf die Schaltfläche <b>ASCII importieren</b> <a class="image"><img alt="Button Import Single ASCII.png" src="../images/Analysis_Templates/Button_Import_Single_ASCII.png" width="23"></a> klicken und die Datei \Samples\Curve Fitting\Linear Fit.dat erneut importieren. Die Datei wird in das aktive Arbeitsblatt importiert, die Kurvenanpassung wird ausgeführt und die Ergebnisse werden in die Arbeitsblätter <b>FitLinear</b> und <b>FittedValues</b> geschrieben.</li>
+  </ol>
+
+  <table class="note">
+    <tr>
+      <td>
+        <p><b>Hinweis für erfahrene Anwender:</b> Falls der Prozess Ihrer Analysevorlage durch eine benutzerdefinierte X-Funktion ausgeführt wird und Sie die Vorlage als <b>OGW(U)</b>-Datei speichern möchten, um sie mit Ihren Kollegen gemeinsam zu nutzen, müssen Sie das Kontrollkästchen <b>Mit Objekt speichern</b> aktivieren (<b>X-Funktionen erstellen</b> &gt; <b>Baumansicht</b>), wenn Sie die X-Funktion erstellen.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2><a name="Other_Materials"></a><span class="mw-headline">Weitere Materialien</span></h2>
+
+  <table class="noborder">
+    <tr>
+      <td style="vertical-align:top" width="60"><img src="../images/Analysis_Templates/Tutorial_icon.png" width="57" border="0" alt=""></td>
+
+      <td>
+        <p>Das Tutorial <a class="external text" href="../../Tutorial/Tutorial/Importing_Multiple_Files_into_Workbooks_Cloned_from_Active_Workbook.html">Mehrere Dateien in Arbeitsmappen importieren, die auf Grundlage der aktiven Arbeitsmappe geklont wurden</a> bietet Ihnen eine Schritt-für-Schritt-Anleitung für die Verwendung der aktuellen Arbeitsmappe als Analysevorlage, um mehrere Dateien stapelweise zu verarbeiten.</p>
+
+        <p>Das Tutorial <a class="external text" href="../../Tutorial/Tutorial/Creating_and_Using_Analysis_Templates.html">Analysevorlagen erstellen und verwenden</a> gibt Ihnen einen schnellen Überblick über die Verwendung von Analysevorlagen.</p>
+
+        <p>Das Tutorial <a class="external text" href="../../Tutorial/Tutorial/Batch_Processing_with_Word_Template_for_Reporting.html">Stapelverarbeitung mit Word-Vorlage zum Erzeugen von Berichten</a> stellt Ihnen eine Schritt-für-Schritt-Anweisung zur Verfügung, um Word- und Analysevorlagen zum Erstellen von Word-/PDF-Berichten zu verwenden.</p>
+
+        <p>&#160;</p>
+      </td>
+    </tr>
+  </table>

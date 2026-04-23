@@ -1,0 +1,137 @@
+﻿<h1 class="firstHeading">変動性管理図</h1><p class='urlname' style='display: none'>Variability-Chart</p>
+<dl><dd><a  class="image"><img alt="Variability Chart.png" src="../images/Variability_Chart/700px-Variability_Chart.png" width="700"   /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">要求されるデータ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">グラフ作成</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_vari_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext"><b>plot_vari</b>ダイアログボックス</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Input_tab"><span class="tocnumber">2.1.1</span> <span class="toctext">入力タブ</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Quantities_tab"><span class="tocnumber">2.1.2</span> <span class="toctext">値タブ</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#SD_Chart_tab"><span class="tocnumber">2.1.3</span> <span class="toctext">SDチャートタブ</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Display_tab"><span class="tocnumber">2.1.4</span> <span class="toctext">表示タブ</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Example"><span class="tocnumber">4.1</span> <span class="toctext">サンプル</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
+<p>少なくとも1つの因子列を持つY列を1つ選択します（因子は最大4つ）。
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
+<p>変動性管理図を作成するには
+</p>
+<ol><li>少なくとも1つのワークシート列（あるいはその部分領域）を選択します。 </li>
+<li><span class="menu">作図 &gt; 統計&nbsp;: 変動性管理図</span>を選択して<b>plot_vari</b>ダイアログを開きます。</li></ol>
+<h3><a name="The_plot_vari_Dialog_Box"></a><span class="mw-headline"><b>plot_vari</b>ダイアログボックス</span></h3>
+<dl><dd><a  class="image"><img alt="Variability Chart Dialog.png" src="../images/Variability_Chart/850px-Variability_Chart_Dialog.png" width="1024"   /></a></dd></dl>
+<h4><a name="Input_tab"></a><span class="mw-headline">入力タブ</span></h4>
+<table class="dialogcontroltable">
+<tr>
+<td><b>データ</b>
+</td>
+<td>プロットするソースデータ列を選択します。
+</td></tr>
+<tr>
+<td><b>因子</b>
+</td>
+<td>因子として列を選択します。これらの列はグループ化情報として扱われます。複数の列が選択されている場合、グループ化はネストされます。
+</td></tr></table>
+<h4><a name="Quantities_tab"></a><span class="mw-headline">値タブ</span></h4>
+<table class="dialogcontroltable">
+<tr>
+<td><b>セル平均を接続</b>
+</td>
+<td>最後の因子の平均値をに接続するかどうかを指定します。
+</td></tr>
+<tr>
+<td><b>因子の平均線を表示</b>
+</td>
+<td>因子の平均線を表示するかどうかを指定します。
+<p>ここにリストされている因子は、<b>入力</b>タブでチェックした因子と同じ編成です。平均線を表示する因子を選択できます。
+</p>
+</td></tr>
+<tr>
+<td><b>総平均線を表示</b>
+</td>
+<td>グラフに総平均線を表示するかどうかを指定します。これにチェックを入れると<i><b>Mean(plot(*,y))</b></i>で参照線が表示されます。
+</td></tr>
+<tr>
+<td><b>グランドメディアン線を表示</b>
+</td>
+<td>グラフにグランドメディアン線を表示するかどうかを指定します。これにチェックを入れると<i><b>Meandian(plot(*,y))</b></i>で参照線が表示されます。
+</td></tr></table>
+<h4><a name="SD_Chart_tab"></a><span class="mw-headline">SDチャートタブ</span></h4>
+<table class="dialogcontroltable">
+<tr>
+<td><b>標準偏差チャートを表示</b>
+</td>
+<td>変動性管理図の下にSDチャートを表示するかどうかを指定します。
+</td></tr>
+<tr>
+<td><b>SDの平均を表示</b>
+</td>
+<td>最後の因子の標準偏差値の平均を表示するかどうかを指定します。
+</td></tr>
+<tr>
+<td><b>因子の平均線を表示</b>
+</td>
+<td>SDチャートに平均線を表示する因子を選択します。ここでは、入力の因子がリストされます。
+</td></tr></table>
+<h4><a name="Display_tab"></a><span class="mw-headline">表示タブ</span></h4>
+<table class="dialogcontroltable">
+<tr>
+<td><b>個々のデータポイントを表示</b>
+</td>
+<td>ヒゲ線のみ表示するのではなく、個別のデータポイントを表示するかどうかを指定します。チェックすると、<b>ボックスの種類</b>が<b>ボックス+点列 重複</b>に設定され、<b>ボックスの表示</b>がオフの場合、<b>スタイル</b>は<b>ボックスなし</b>に設定されます。
+</td></tr>
+<tr>
+<td><b>ボックスを表示</b>
+</td>
+<td>グループごとにボックスプロットを表示するかどうかを指定します。チェックすると、<b>ボックスのスタイル</b>は<b>ボックス</b>に設定されます。
+</td></tr>
+<tr>
+<td><b>範囲線を表示</b>
+</td>
+<td>グループごとに範囲ヒゲ線を表示するかどうかを指定します。
+</td></tr>
+<tr>
+<td><b>テンプレート</b>
+</td>
+<td>デフォルトでは、テンプレート「variability」が自動的に使用されます。別のテンプレートを使用する場合は、「自動」のチェックを外し、テンプレートを参照して選択します。
+</td></tr>
+<tr>
+<td><b>出力プロットデータ/出力グラフ</b>
+</td>
+<td>プロットデータとグラフを別のシートに出力します。
+<p><b>OK</b>ボタンをクリックしてグラフを作成すると、プロットデータと結果グラフを指定したシートに出力できます。デフォルトでは、プロットデータと結果グラフを格納するために、現在のワークブックに2つの新しいシートが作成され、&quot;VariabilityPlotData#&quot; と &quot;VariabilityGraph#&quot;という名前が付けられています。
+</p>
+</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
+<p>variability.optu（Originのプログラムフォルダにインストールされています）
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<p>変動性管理図は、因子と応答の関係を調査し、変動の根本原因を分析するために使用できます。変動性管理図は、グループ化因子の各レベルのデータと平均をプロットし、すべてのプロットを横に並べて、パネルごとにプロットします。
+</p><p>Originは最大4つの因子の変動性管理図を描画できます。標準偏差チャートを変動性管理図に描画することもでき、各因子レベルの組み合わせの標準偏差を表示することができます。
+</p><p><b>Note:</b> ダイアログ下の<b>関連するアプリ</b>ボタンをクリックして関連アプリである<a class="external text" href="https://www.originlab.com/FileExchange/details.aspx?fid=354" target="_blank">&quot;Gage Study&quot;</a>アプリを確認/インストール可能です。
+</p>
+<h3><a name="Example"></a><span class="mw-headline">サンプル</span></h3>
+<p><a  class="image"><img alt="Variability Chart Example.png" src="../images/Variability_Chart/850px-Variability_Chart_Example.png" width="850"   /></a>
+</p><p>この例では、plot_variダイアログの<b>因子</b>ボックスで、&quot;Identification.Classification&quot;および&quot;Identification.Year&quot;の2つの因子を選択します(画像中で赤いボックスで示しています)。
+</p><p>因子2のソースデータ列を列因子1を含めてアンスタックします（画像中でピンクのボックスで示しています）。&nbsp;4つのアンスタック列を使用して、ボックスプロットは範囲ひげと接続された平均値の点のみを使用して作図されます。<b>作図の詳細</b>ダイアログで、<b>区分</b>タブの<b>水平区分</b>で、列に係数1を設定し、プロットを2つのパネルに分割します。
+</p>
+<dl><dd><a  class="image"><img alt="Variability Chart PD Panel.png" src="../images/Variability_Chart/Variability_Chart_PD_Panel.png" width="343"  /></a></dd></dl>
+<p>また、グループ化列を使用して、ソースの応答列&quot;City mpg&quot;を8つのグループに分離し、各グループの標準偏差を計算します。変動制管理図の下に折れ線+シンボル図としてSD値をプロットします。この例での標準偏差は、因子1の2つの値（&quot;Automatic transmission&quot; および &quot;Manual transmission&quot;）の間で比較的一貫して変化していることが確認できます。
+</p>
+
+
+
+    

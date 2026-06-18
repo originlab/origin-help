@@ -67,12 +67,21 @@ Also, be sure to see <a class="external text" href="../../GettingStarted/OriginL
 </p>
 <ol>
 <li>Use mini toolbar. Column label row mini toolbar is introduced in recent versions. Single click on a row label row header or multiple row headers will see mini toolbar. Hide, move up and Move down selected row(s), click <b>P</b> button there to add user-defined paramater row.
+
 <li>Use context menu. Right click on a column label row header or multiple row headers to show/hide, set as Long Name, Unit, or add user-defined parameter, etc. 
 <dl><dd> <a  class="image"><img alt="Column label row minitoolbar.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_minitoolbar.png?v=94509" width="265"  /></a></dd></dl>
+
 <li>Use <b>Column Labe Rows</b> dialog. Right-click on any column label row header and choose <b>Edit Column Label Rows...</b> context menu. Turn on/off header rows, drag to reorder label rows, create, rename or delete <b>UserDefined</b> parameters, delete.
 <dl><dd><a  class="image"><img alt="Edit column label rows5.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Edit_column_label_rows5.png?v=94073" width="691"  /></a></dd></dl>
+
 <li>Use View: context menu. Right-clicking on (a) the window's title bar or (b) the empty space to the right of the worksheet columns (but inside the workbook window) and choose <b>View</b> from the shortcut menu (see the picture below) and uncheck your row heading display selections.
 <dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-02.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-02.png?v=82346" width="676"  /></a></dd></dl>
+
+<table class="note">
+
+<tr>
+<td><b>Note:</b> From Origin 2026b, this context menu will not close when click on a item to toggle check. You can check or uncheck  multiple items in this fly-out menu at the same time. Then click outside of the menu, it will close.
+</td></tr></table>
 </ol>
 <h2><a name="Set_Styles"></a><span class="mw-headline">Set Styles</span></h2>
 <p>Use Mini toolbar or Worksheet Properties dialog to set column label rows styles or use context menu to set styles. 
@@ -310,7 +319,7 @@ Note that each sparkline is an <b>editable embedded graph</b> which can be opene
 <p>You can add a user-parameter row to the worksheet expressly for the purpose of calculating some column statistic, such as mean or standard deviation.
 </p>
 <ol><li> Right-click on the column label row headings and choose <b>Add User Parameters</b> from the shortcut menu.</li>
-<li> In the <b>Add User Parameters</b> dialog that opens, enter a name for your user-defined row, then click the flyout menu to pick from a list of <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">common statistics</a>. The statistic will be calculated for each data-containing column in the worksheet.
+<li> In the <b>Add User Parameters</b> dialog that opens, enter a name for your user-defined row, then click the flyout menu to pick from a list of <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">common statistics</a>. The statistic will be calculated for each data-containing column in the worksheet (note that Text column and Categorical column will be skipped).
 <dl><dd><a  class="image"><img alt="User parameter define formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/User_parameter_define_formula.png?v=98829" width="756"  /></a></dd></dl>
 <ul><li>You can select <b>More...</b> to open the <b>Custom Formual</b> dialog, edit your user-defined formula and <b>Save</b> it. The user-defined formula will then appear in the <a  class="image"><img alt="Triangle button.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Triangle_button.png?v=41681" width="15"  /></a> list for re-use.</li></ul>
 <dl><dd><a  class="image"><img alt="Custom Formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Custom_Formula.png?v=98827" width="494"  /></a></dd></dl></li>

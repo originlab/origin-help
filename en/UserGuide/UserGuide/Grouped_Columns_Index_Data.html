@@ -1,4 +1,4 @@
-<h1 class="firstHeading">29.10.2 Grouped Columns</h1><p class='urlname' style='display: none'>grouped-column-index-data</p><a  class="image"><img alt="Grouped Column Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Indexed_Data.png?v=37810" width="575"  /></a>
+<h1 class="firstHeading">30.10.2 Grouped Columns</h1><p class='urlname' style='display: none'>grouped-column-index-data</p><a  class="image"><img alt="Grouped Column Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Indexed_Data.png?v=37810" width="575"  /></a>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
@@ -33,11 +33,11 @@
 </p>
 <h3><a name="The_plot_gindexed_Dialog_Box"></a><span class="mw-headline">The plot_gindexed Dialog Box</span></h3>
 <p><span class='headerInParagraph'>To plot the graph from Summarized Data</span><br />
-<a  class="image"><img alt="Plot gindexed dialog box 01.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_01.png?v=98952" width="750"   /></a>
+<a  class="image"><img alt="Plot gindexed dialog box 01.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_01.png?v=99478" width="750"   /></a>
 </p><p>In this example, all sales data will be plotted as bars against the groups(on X axis) selected in Group Columns.
 </p><p><br />
 <span class='headerInParagraph'>To plot the graph from Raw Data</span><br />
-<a  class="image"><img alt="Plot gindexed dialog box 02.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_02.png?v=98953" width="750"   /></a>
+<a  class="image"><img alt="Plot gindexed dialog box 02.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_02.png?v=99479" width="750"   /></a>
 </p><p>In this example, the mean values of height and weight data will be plotted as bars against the groups(on X axis) selected in Group Columns.
 </p>
 <h4><a name="For_Summarized_Data"></a><span class="mw-headline">For Summarized Data</span></h4>
@@ -69,8 +69,15 @@
 <ul><li> <b>Multiple Data</b>&#160;:Choose how to arrange the multiple input data. 
 <ul><li> <b>Overlay on Same Graph</b>: Plot the seleted input data as overlapping plots on the same graph layer.</li>
 <li> <b>Seperate Layers on Same Graph</b>:Plot the seleted input data into seperate layers on the same graph layer.</li>
-<li> <b>Seperate Graphs</b>:Plot the seleted input data on the seperate graph windows.</li></ul></li></ul>
-<ul><li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped column plot for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default. When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</li>
+<li> <b>Seperate Graphs</b>:Plot the seleted input data on the seperate graph windows.</li></ul></li>
+<li> <b>Data Scaling Level</b>: When there is multiple data with groups, you can use this option to put data variable info in inner of groups or outer of groups.
+<dl><dd><a  class="image"><img alt="Data Scaling Level 02.png" src="../images/Grouped_Columns_Index_Data/680px-Data_Scaling_Level_02.png?v=99415" width="680"   /></a></dd></dl></li>
+<li> <b>Horizontal Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped column chart for each grouping value seperately. 
+<dl><dd>If <b>Vertical Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
+<li> <b>Vertical Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertical panels</a> which show a grouped column chart for each grouping value seperately. 
+<dl><dd>If <b>Horizontal Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
 <li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created grouped columns in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
 </td></tr>
 <tr>
@@ -87,6 +94,11 @@
 <th> Graph Template
 </th>
 <td> Specify a user template if needed. By default, the Auto check box is checked and the built-in template GBOX is used.
+</td></tr>
+<tr>
+<th>Output To
+</th>
+<td>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
 </td></tr>
 <tr>
 <th>Output Data
@@ -119,7 +131,7 @@
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Grouped_Columns_Index_Data/Tutorial_icon.png?v=9654" width="57"  border="0" />
 	</td>
-	<td><ol><li>Create a new workbook and click the <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Columns_Index_Data/Button_Import_Single_ASCII.png?v=1806" width="23"  /></a> button to import the <b>Categorical Data.dat</b> file under <i>&lt;Origin EXE Folder&gt;\Samples\Graphing</i> path.</li>
+	<td><ol><li>Create a new workbook and click the <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Columns_Index_Data/Button_Import_Single_ASCII.png?v=99692" width="16"  /></a> button to import the <b>Categorical Data.dat</b> file under <i>&lt;Origin EXE Folder&gt;\Samples\Graphing</i> path.</li>
 <li>Highlight column B and select <b>Plot &gt; Categorical: Grouped Columns...</b> from top menu to open the <b>plot_gindexed</b> dialog.</li>
 <li>In the <b>Group Column(s)</b> section, click the <b>Add</b> button <a  class="image"><img alt="Button Group List Add.png" src="../images/Grouped_Columns_Index_Data/Button_Group_List_Add.png?v=38531" width="17"  /></a> in the top right corner and add column D as the first grouping range, then similarly add column C as the second grouping range.</li>
 <li>Click <b>OK</b> to output the plot data and graphs into the newly generated sheets.

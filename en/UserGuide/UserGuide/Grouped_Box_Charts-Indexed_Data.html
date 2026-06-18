@@ -1,4 +1,4 @@
-<h1 class="firstHeading">29.10.4 Grouped Box Charts-Indexed Data</h1><p class='urlname' style='display: none'>GroupedBoxCharts-IndexedData</p><a  class="image"><img alt="Grouped Box Charts-Indexed Data.png" src="../images/Grouped_Box_Charts-Indexed_Data/Grouped_Box_Charts-Indexed_Data.png?v=37753" width="341"  /></a>
+<h1 class="firstHeading">30.10.4 Grouped Box Charts-Indexed Data</h1><p class='urlname' style='display: none'>GroupedBoxCharts-IndexedData</p><a  class="image"><img alt="Grouped Box Charts-Indexed Data.png" src="../images/Grouped_Box_Charts-Indexed_Data/Grouped_Box_Charts-Indexed_Data.png?v=37753" width="341"  /></a>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
@@ -25,7 +25,7 @@
 </p><p>Please see more details on creating and customizing box charts in <a href="../../UserGuide/UserGuide/Creating_Box_Charts.html" title="UserGuide:Creating Box Charts">the <b>Creating Box Charts</b> page</a>.
 </p>
 <h3><a name="The_plot_gboxindexed_Dialog_Box"></a><span class="mw-headline">The plot_gboxindexed Dialog Box</span></h3>
-<p><a  class="image"><img alt="Plot gboxindexed dialog box.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Plot_gboxindexed_dialog_box.png?v=98175" width="750"   /></a>
+<p><a  class="image"><img alt="Plot gboxindexed dialog box.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Plot_gboxindexed_dialog_box.png?v=99474" width="750"   /></a>
 </p>
 <table class="dialogcontroltable">
 
@@ -60,15 +60,41 @@
 <li> <b>Separate Graphs</b>:Plot these data seperately into different graph pages</li></ul>
 </td></tr>
 <tr>
+<th>Split Data by
+</th>
+<td>When Multiple Data is not set to Separate Graphs, this control will show. You can choose a column label row to split multiple data into different data groups.
+</td></tr>
+<tr>
+<th>Multiple Data Groups
+</th>
+<td>When any column label row has been selected for <b>Split Data by</b>, you can choose how to arrange the data groups: <b>Separate Layers</b> or <b>Separate Graphs</b>.
+</td></tr>
+<tr>
+<th>Data Scaling Level
+</th>
+<td>When there is multiple data with groups, you can use this option to put data variable info in inner of groups or outer of groups.
+<p><a  class="image"><img alt="Data Scaling Level 01.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Data_Scaling_Level_01.png?v=99393" width="750"   /></a>
+</p>
+</td></tr>
+<tr>
 <th>Share Y
 </th>
 <td>This option only shows when <b>Multiple Data</b> has been set to <b>Separate Layers on Same Graph</b>. It is used to make the Y scale shared between different layers.
 </td></tr>
 <tr>
-<th>Split Panels by
+<th>Horizontal Panels by
 </th>
-<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped box chart for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
-<p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.
+<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped box chart for each grouping value seperately.
+<p>If <b>Vertical Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
+</p><p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.
+</p>
+</td></tr>
+<tr>
+<th>Vertical Panels by
+</th>
+<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertical panels</a> which show a grouped box chart for each grouping value seperately.
+<p>If <b>Horizontal Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
+</p><p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.
 </p>
 </td></tr>
 <tr>
@@ -103,6 +129,11 @@
 <td>"; each notation will be shown in different table rows. All these info will be shown after group info table rows.
 </td></tr>
 <tr>
+<th>Output To
+</th>
+<td>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
+</td></tr>
+<tr>
 <th>Output Plot Data
 </th>
 <td>Specify where to <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">output the calculated data</a>.
@@ -125,18 +156,18 @@
 	<td style="vertical-align:top" width="60"><img src="../images/Grouped_Box_Charts-Indexed_Data/Tutorial_icon.png?v=9654" width="57"  border="0" />
 	</td>
 	<td><ol><li>Create a new workbook. </li>
-<li>Click the <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Box_Charts-Indexed_Data/Button_Import_Single_ASCII.png?v=1806" width="23"  /></a> button to import the <b>automobile_categorical.dat</b> file under <i>&lt;Origin EXE Folder&gt;\Samples\Statistics</i> path.</li>
+<li>Click the <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Box_Charts-Indexed_Data/Button_Import_Single_ASCII.png?v=99692" width="16"  /></a> button to import the <b>automobile_categorical.dat</b> file under <i>&lt;Origin EXE Folder&gt;\Samples\Statistics</i> path.</li>
 <li>Highlight column C~G and select <b>Plot: Categorical: Grouped Box Charts - Indexed Data</b> from top menu to open the <b>plot_gboxindexed</b> dialog.</li>
 <li>In the <b>Group Plots by</b> section, click the triangle button at the top right corner and select Col(I). </li>
 <li>Select <b>Seperate Layers On Same Graph</b> from the <b>Multiple Data</b> drop-down list.</li>
-<li>Check the check box before <b>Split Panels by</b> option, in the following box, click the triangle button at the top right corner and select Col(H).</li>
+<li>Check the check box before <b>Horizontal Panels by</b> option, in the following box, click the triangle button at the top right corner and select Col(H).</li>
 <li>Check the check box before <b>Split Pages by</b> option, in the following box, click the triangle button at the top right corner and select Col(A).</li>
 <li>Select <b>&lt;Original&gt;</b> for <b>Graph Theme</b>. Please note, if you have already saved a graph template and wants to use them on your graph, you can uncheck <b>Auto</b> box and click <b>...</b> button to browse and select the template in the <b>Graph Template</b> option.</li>
 <li>Select <b>Between Subgroup</b> radio box for <b>Color Increment</b> option.</li>
 <li>Make sure the <b>Output Plot Data</b> and <b>Output Graph</b> are set to <b>[&lt;input&gt;]&lt;new&gt;</b> and <b>[&lt;same&gt;]&lt;new&gt;</b>.
-<dl><dd><a  class="image"><img alt="Plot gboxindexed dialog settings.png" src="../images/Grouped_Box_Charts-Indexed_Data/Plot_gboxindexed_dialog_settings.png?v=98182" width="592"  /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Plot gboxindexed dialog settings.png" src="../images/Grouped_Box_Charts-Indexed_Data/Plot_gboxindexed_dialog_settings.png?v=99422" width="573"  /></a></dd></dl></li>
 <li> Click <b>OK</b> to create the plot. You will get two new sheets: One for plot data and another one for result graphs by years. You can double-click on the graph in sheet "GBoxGraph1" to open the graph window.
-<dl><dd><a  class="image"><img alt="Grouped Box Indexed Data EX.png" src="../images/Grouped_Box_Charts-Indexed_Data/700px-Grouped_Box_Indexed_Data_EX.png?v=98180" width="700"   /></a></dd></dl></li></ol>
+<dl><dd><a  class="image"><img alt="Grouped Box Indexed Data EX.png" src="../images/Grouped_Box_Charts-Indexed_Data/700px-Grouped_Box_Indexed_Data_EX.png?v=99423" width="700"   /></a></dd></dl></li></ol>
 </td></tr></table>
 <h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
 <p>gBox.otp (installed to the EXE folder of Origin)
@@ -145,7 +176,7 @@
 <ul><li>If there are more than 1 grouping range selected for <b>Group Plots by</b> option, the X axis tick label will be by default displayed as tables, you can control this format in the <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Table_Tab" title="UserGuide:Tick Labels 2"><b>Table</b> tree node</a> in the <b>Tick Labels</b> page of the <b>Axis</b> dialog. The information row added by <b>Additional Info in Tick Labels</b> option will also be shown as table row(s). </li>
 <li>By default <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="UserGuide:The (Plot Details) Group Tab">Subgrouping</a> will be turned on based on the calculation from grouping range selected for <b>Group Plots by</b> option, and you can control the gap between or within subgroups separately in the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="UserGuide:The (Plot Details) Spacing Tab"><b>Spacing</b> tab</a>.</li>
 <li>If multiple columns have been selected as input Data Column(s), you can decide how to arrange these input data: Overlay on same graph; seperate these plots into different layers on same graph; or sepreate these plots into different graphs. You can check <b>Share Y</b> if the plots are in different layers on same graph.</li>
-<li> <b>Split Panels by</b> option will help you split the source data and plot them into different panels in same graph page by the selected grouping column(s). Panel banners will show the grouping info; </li>
+<li> <b>Horizontal Panels by</b> and <b>Vertical Panels by</b> option will help you split the source data and plot them into different panels in same graph page by the selected grouping column(s). Panel banners will show the grouping info; When you choose <b>Separate Layer On Graph</b> for <b>Multiple Data</b>, only <b>Horizontal Panels by</b> will show.</li>
 <li> <b>Split Pages by</b> option will help you split the source data and plot them into different graph pages by the selected grouping column(s). Grouping info will be shown as page titles. All pages will be output to result sheet "GBoxGraph#".</li>
 <li>You can create/customize the legend specified for box chart components by selecting <b>Graph:Legend:Box Chart Components...</b> menu items when the box chart graph is active. </li>
 <li>It is also possible to <a href="../../UserGuide/UserGuide/Grouped_Box_Charts-Raw_Data.html" title="UserGuide:Grouped Box Charts-Raw Data">create grouped box chart from raw data</a>.</li>

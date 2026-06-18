@@ -91,6 +91,7 @@ This opens a Connector-specific dialog box where you can configure your import o
 </li>
 <li> You can sort the whole worksheet by a selected column (right-click and select <b>Sort Worksheet</b>) after importing data by <b>CSV Data Connector</b>.
 <li> If you want to import multiple CSV files in to the same worksheet and append them by rows, you can use LabTalk scripts to do it. Please refer to "EX2" on <a class="external text" href="../../LabTalk/Category/Wks.DC_(object).html#Examples">this LabTalk document page</a>.
+<li> From Origin 2026b, CSV Connector correctly detects complex data and automatically set the imported data format to <b>Complex(16)</b>.
 </ul>
 <h3><a name="Extract_variable_from_data_cells"></a><span class="mw-headline">Extract variable from data cells</span></h3>
 <p>To extract information from a data cell and store it in a worksheet variable, you can use <b>Post Import LabTalk Script</b> dialog.
@@ -271,7 +272,7 @@ CSV Connector<span style="color: #000080;">=</span><span style="color: #000080;"
 <dl><dd><ul><li>Select <b>Yes</b> to open the <a href="../../UserGuide/UserGuide/Connecting_to_Web.html#Basic_operation" title="UserGuide:Connecting to Web"><b>Connect to Web</b> dialog</a> and enter a Google sheet share link.</li>
 <li>Select <b>No</b> to open the Google Drive browser and select a Google sheet. </li></ul></dd></dl>
 <ul><li> Select menu <b>Data: Connect to File: Google Sheet</b> to select a Google sheet from Google Drive browser.</li>
-<li> Select menu <a href="../../UserGuide/UserGuide/Connecting_to_Cloud.html#Connecting_to_the_Files_on_Cloud" title="UserGuide:Connecting to Cloud"><b>Data: Connect from Cloud</b></a> or click the <b>Open From Cloud</b> button <a  class="image"><img alt="Button Open From Cloud.png" src="../images/Connecting_to_File/Button_Open_From_Cloud.png?v=90009" width="21"  /></a> on the <b>Standard</b> toolbar to select a Google sheet from Google Drive Browser.</li></ul>
+<li> Select menu <a href="../../UserGuide/UserGuide/Connecting_to_Cloud.html#Connecting_to_the_Files_on_Cloud" title="UserGuide:Connecting to Cloud"><b>Data: Connect from Cloud</b></a> or click the <b>Open From Cloud</b> button <a  class="image"><img alt="Button Open From Cloud.png" src="../images/Connecting_to_File/Button_Open_From_Cloud.png?v=99639" width="16"  /></a> on the <b>Standard</b> toolbar to select a Google sheet from Google Drive Browser.</li></ul>
 <h2><a name="Connect_Multiple_Files"></a><span class="mw-headline">Connect Multiple Files</span></h2>
 <p>Use this menu to connect to multiple files of identical file type and structure.
 </p>

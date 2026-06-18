@@ -1,0 +1,248 @@
+<h1 class="firstHeading">4.6.6 Mirror Columns</h1><p class='urlname' style='display: none'>Mirror-Columns</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What.27s_Mirror_Column.3F"><span class="tocnumber">1</span> <span class="toctext">What's Mirror Column?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Source_Column"><span class="tocnumber">1.1</span> <span class="toctext">Source Column</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Mirror_Column"><span class="tocnumber">1.2</span> <span class="toctext">Mirror Column</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Copy_Paste_Columns_as_Mirrors"><span class="tocnumber">2</span> <span class="toctext">Copy Paste Columns as Mirrors</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Mirror_to_Whole_Sheet.2FBook"><span class="tocnumber">3</span> <span class="toctext">Mirror to Whole Sheet/Book</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_Whole_Sheet_as_Mirrors"><span class="tocnumber">3.1</span> <span class="toctext">Copy Whole Sheet as Mirrors</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Duplicate_Whole_Book_as_Mirror"><span class="tocnumber">3.2</span> <span class="toctext">Duplicate Whole Book as Mirror</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Batch_Create_Mirror_Columns_from_Similar_Sheets"><span class="tocnumber">4</span> <span class="toctext">Batch Create Mirror Columns from Similar Sheets</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Convert_column_formula_to_Mirror_Column"><span class="tocnumber">5</span> <span class="toctext">Convert column formula to Mirror Column</span></a></li>
+</ul>
+</div>
+
+<h2><a name="What.27s_Mirror_Column.3F"></a><span class="mw-headline">What's Mirror Column?</span></h2>
+<p>"Mirror Column" is introduced from Origin2026b. As the name implies, a mirror column refers to another column like a mirror - any changes to the source column (e.g., adding, deleting, modifying or masking data) is instantly reflected in the mirror column. It sounds similar to <a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" title="UserGuide:Copying and pasting Worksheet Data"><b>Paste Link</b></a> but minimizes memory overhead even with large datasets, and thus provides a faster and more efficient method in data synchronization. It also integrates tools and menus to streamline this workflow.
+</p><p><i><b>Note:</b></i>
+</p>
+<ul>
+<li>Please always keep in mind that the mirror does not "see through" to the source's dependencies; it simply reflects whatever the source displays - just like a real mirror.<br />
+Even if the source column contains a (column/cell) formula that involves other columns, the mirror column still reflects the source exactly. This means the formula in the mirror points to the same columns as the source formula. For example, in the screenshot below, col(A) of Book2 mirrors col(C) in Book1, and [Book1]1!col(C) itself is calculated by the sum of col(A) and col(B) in the same sheet. Although the formula in mirror (Book2) shows <code>=A1+B1</code>, same as that in source (Book1), <code>A1</code> and <code>B1</code> in the mirror (Book2) still refer to col(A) and col(B) in Book1 (the source), not Book2.
+<dl><dd><a  class="image"><img alt="Mirror Souce with Formula.png" src="../images/Mirror_Column/Mirror_Souce_with_Formula.png?v=99206" width="560"  /></a> </li></dd></dl>
+<li>When the source column has a sampling interval, its mirror column shares the same interval.
+</li></ul>
+<p><br />
+<br />
+The miorr column and its source have a distinctive appearance allowing you to spot them instantly among normal columns.
+</p>
+<h3><a name="Source_Column"></a><span class="mw-headline">Source Column</span></h3>
+<ul>
+<li>A source column displays a <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png?v=99090" width="13"  /></a> icon at the top-left corner. 
+<li>Clicking on the <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png?v=99090" width="13"  /></a> icon brings up a menu list:
+<dl><dd><a  class="image"><img alt="Source context menu.png" src="../images/Mirror_Column/Source_context_menu.png?v=98986" width="676"  /></a></dd></dl>
+<table class="simple" style="width: 90%">
+<tr>
+<th width="30%">Remove All Mirrors/<br />Remove All Mirrors in Sheet/<br />Remove All Mirrors in Book
+</th>
+<td>Unlink all its mirroors in the current project/worksheet/workbook. The contents in the mirror columns are kept.
+</td></tr>
+<tr>
+<th>Mirror columns List
+</th>
+<td>List all mirror columns at the bottom. Click any item to jump to the corresponding mirror column.
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Mirror_Column/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Mouse-over the <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png?v=99090" width="13"  /></a> icon also pops up the list of mirror columns.
+</p>
+<dl><dd><a  class="image"><img alt="Source popup mirror list.png" src="../images/Mirror_Column/Source_popup_mirror_list.png?v=98987" width="280"  /></a></dd></dl>
+</td></tr></table>
+</td></tr></table>
+<p><br /><b>Note</b>: Deleting the source column breaks the link to its mirror column(s), which then become plain numbers/text.
+</p>
+</li>
+</ul>
+<h3><a name="Mirror_Column"></a><span class="mw-headline">Mirror Column</span></h3>
+<ul>
+<li>A mirror column is distinguished by a light-green header and a <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png?v=99089" width="13"  /></a> icon at the top-left corner. 
+<li>Clicking the <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png?v=99089" width="13"  /></a> icon brings up a menu list:
+<dl><dd><a  class="image"><img alt="Mirror context menu.png" src="../images/Mirror_Column/Mirror_context_menu.png?v=98995" width="746"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="28.5%">Source
+</th>
+<td>Display its source column at the top. Click it to jump to the source column.
+ <table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Mirror_Column/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li>Mouse-over the <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png?v=99089" width="13"  /></a> icon also shows the souce column.</li>
+<li>Source column path also shows in <b>F(x)</b>, prefixed with "&lt;". See next bullet for more info.</li></ul>
+<dl><dd><a  class="image"><img alt="Show source in mirror column.png" src="../images/Mirror_Column/450px-Show_source_in_mirror_column.png?v=99106" width="450"   /></a></dd></dl>
+</td></tr></table>
+</td></tr>
+<tr>
+<th>Use Source Column Labels
+</th>
+<td>Copy column label rows (e.g. LongName, Comment,...) from the source. These label rows are then protected. Uncheck this item to remove the protection for free-editting.
+</td></tr>
+<tr>
+<th>Apply Use Source Labels to Other Columns
+</th>
+<td>Apply <b>Use Souce Column Labels</b> to all mirror columns in the same sheet.
+</td></tr>
+<tr>
+<th>Remove Mirroring
+</th>
+<td>Unlink the current mirror column from its source. The contents are kept.
+<p>You can also right-click a mirror column and select <b>Remove Mirroring</b> from the context menu.
+</p>
+</td></tr>
+<tr>
+<th>Convert to Column Formula/<br />Convert All Mirrors in Sheet to Formula
+</th>
+<td>Convert the current mirror or all mirrors in the current worksheet to column formula for post-processing, such as filtering the source.
+<p><b>Note</b>: <a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="UserGuide:Column Short Name Restriction"><b>SCN</b></a> of the source workbook must be enable for this function.
+</p>
+</td></tr></table>
+</li>
+<li>Right now, if you enter a column formula in <b>F(x)</b> to refer to another column, you are prompted to convert it to a mirror column instead. <br />
+You can also create a mirror directly by entering  syntax "<b>&lt;</b><i>ColumnName</i>" in <b>F(x)</b>. <i>ColumnName</i> syntax such as 
+<ul><li><code>&lt;A</code> (refer to column A in the same sheet), </li>
+<li><code>&lt;col(A)</code> (works even if <a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="UserGuide:Column Short Name Restriction"><b>SCN</b></a> is off), </li>
+<li><code>&lt;Book1_A</code> (column A in the first sheet of Book1), </li>
+<li><code>&lt;[Book1]A</code> (refer to column A in the active sheet of Book1, sheet name can be omitted) </li></ul>
+are supported.
+</li>
+</ul>
+<h2><a name="Copy_Paste_Columns_as_Mirrors"></a><span class="mw-headline">Copy Paste Columns as Mirrors</span></h2>
+<p><span class='headerInParagraph'>To copy and paste column(s) as mirror:</span>
+</p>
+<ol><li> Highlight the source column(s), right click and select <b>Copy: Copy</b> from the context menu.</li>
+<li> Go to the destination column, right click and select <b>Paste as Mirror Column(s)...</b>
+<dl><dd><a  class="image"><img alt="Paste as Mirror Columns Context Menu.png" src="../images/Mirror_Column/Paste_as_Mirror_Columns_Context_Menu.png?v=99002" width="396"  /></a></dd></dl></li></ol>
+<h2><a name="Mirror_to_Whole_Sheet.2FBook"></a><span class="mw-headline">Mirror to Whole Sheet/Book</span></h2>
+<h3><a name="Copy_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">Copy Whole Sheet as Mirrors</span></h3>
+<p><span class='headerInParagraph'>To creat mirror for a worksheet:</span>
+</p>
+<ol><li> Righ click on the source worksheet tab and select <b>Mirror to New Book</b> from the context menu.</li></ol>
+<p><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/870px-Mirror_to_New_Book.png?v=99204" width="870"   /></a>
+</p>
+<h3><a name="Duplicate_Whole_Book_as_Mirror"></a><span class="mw-headline">Duplicate Whole Book as Mirror</span></h3>
+<p><span class='headerInParagraph'>To creat mirror for a workbook:</span>
+</p>
+<ol><li> Click on the <b>Mirror to New Book</b> button <a  class="image"><img alt="Button Mirror to New Book.png" src="../images/Mirror_Column/Button_Mirror_to_New_Book.png?v=99672" width="15"  /></a> on the <b>Standard</b> toolbar.</li></ol>
+<h2><a name="Batch_Create_Mirror_Columns_from_Similar_Sheets"></a><span class="mw-headline">Batch Create Mirror Columns from Similar Sheets</span></h2>
+<p><b>Create Mirror Columns from Similar Sheets</b> tool auto-scans all the candidate columns and mirrors them in a single operation. Simply choose a source column as a reference, and set up matching rules (including the search scope and column matching restrictions), this tool will then search across similar-structure worksheets to find the matching columns, and batch-create mirror columns into one destination worksheet.
+</p><p>It is a handy tool when your expermental data is scattered across multiple books and you need to collect the interested datasets into one place for processing, plotting or side-by-side comparison.
+</p><p><span class='headerInParagraph'>To create mirror columns from similra sheets,</span>
+</p>
+<ol><li> Select menu <b>Worksheet: Create Mirror Columns from Similar Sheets</b></li></ol>
+<dl><dd><a  class="image"><img alt="Create Mirror Columns from Similar Sheets Dialog.png" src="../images/Mirror_Column/Create_Mirror_Columns_from_Similar_Sheets_Dialog.png?v=99188" width="514"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="23%">Source Column
+</th>
+<td>
+<p>Select one source column. Base on this column, all similar columns will be collected as sources and mirrors will be created from each of them. 
+</p><p>Specify how to define a "similar" column in <b>Other Source Columns</b> and <b>Column Matching Restrictions</b> branches.
+</p>
+</td></tr>
+<tr>
+<th>Destination Column
+</th>
+<td>
+<p>By default, mirror columns output to a new workbook. You can specify the destination column beginning from which the mirrors will be output.
+</p>
+</td></tr>
+<tr>
+<th>Add X Column
+</th>
+<td>
+<p>If the <b>Source Colulmn</b> is a Y column, which is the typical case, use this option to control whether to copy its corresponding X column. 
+</p>
+<ul><li><b>None</b>
+<dl><dd>Do not copy the X column.</dd></dl></li>
+<li><b>Common X Column</b>
+<dl><dd>Copy the <b>Source Column'</b>s X column and use it as the common X for all mirror columns. The output structure should be <i>XYYY...</i> </dd></dl></li>
+<li><b>From Each Sheet</b>
+<dl><dd>Copy each sheet's own X column for each mirror column. The output structure should be <i>XYXYXY...</i></dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>Other Source Columns
+</th>
+<td>
+<p>Define how and where to search for other "similar" columns to use as source columns.
+</p>
+<ul><li><b>From Similar Sheets</b>
+<dl><dd>This checkbox requires worksheets with the same number of columns and format as the source sheet. Only columns meeting the conditions in <b>Column Matching Restrictions</b> branch will be used as mirror sources.</dd></dl></li>
+<li><b>Find Similar Sheets in</b>
+<dl><dd>Search scope: <b>Active Book</b> / <b>Active Folder</b> (open or recursive) / <b>Project</b>.</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>Column Matching Restrictions
+</th>
+<td>
+<p>Determines how other source columns are matched to the <b>Source Column</b>:
+</p>
+<ul><li><b>Must Match Column Label</b> 
+<dl><dd>Must match by column <b>Long Name</b> or <b>Comment</b>. Select <b>None</b> to match by column index.</dd></dl></li>
+<li><b>Must Match Units</b></li>
+<li><b>Match <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">Column Designations</a></b></li></ul>
+<p>Once configured, the <b>Total Columns to Mirror</b> is listed below for confirmation.
+</p>
+</td></tr>
+<tr>
+<th>Create Mirror Options
+</th>
+<td>
+<p>Additional settings for the output mirror columns.
+</p>
+<ul><li><b>Use Source Column Labels</b>
+<dl><dd>Copy label rows (Long Name, Unit, Comment, etc.) from the source columns. </dd></dl></li>
+<li><b>Add Label Row for Sheet/Book Names</b>
+<dl><dd>Add a "Sheet Name" or "Book Name" label row to show the source sheet/book.</dd></dl></li></ul>
+</td></tr></table>
+<h2><a name="Convert_column_formula_to_Mirror_Column"></a><span class="mw-headline">Convert column formula to Mirror Column</span></h2>
+<p>Prior to Origin 2026b, users linked columns via <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">column formula</a> or <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Copy Column to</b></a> tool to link columns. Converting these legacy linking to mirrors improves performance and provides a better overall experience.
+</p><p><br />
+<span class='headerInParagraph'>A column can be converted to mirror column if it meets one of the following conditions:</span>
+</p>
+<ul>
+<li> <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Copy Column to</b></a> output.
+<br /><b>Notes</b>: 
+<ul><li> the output must be Unsorted.</li></li></ul>
+<li> <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">Column formula</a> referencing a single column without calculation. 
+<br /><b>Notes</b>: 
+<ul><li> <b>Recalculation Mode</b> must be <b>Auto</b> or <b>Manual</b>. </li>
+<li> The formula must link to a column NOT in the same worksheet. </li></ul>
+</li></ul>
+<p><br />
+<span class='headerInParagraph'>To convert a linking column to a mirror column:</span>
+</p>
+<ol><li> Select menu <b>Worksheet: Convert to Mirror Columns...</b></li></ol>
+<dl><dd><a  class="image"><img alt="Convert to Mirror Columns Dialog.png" src="../images/Mirror_Column/Convert_to_Mirror_Columns_Dialog.png?v=99011" width="400"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="25%">Column Formula/<br />Column Copy Output
+</th>
+<td>Select the types of columns to convert:
+<ul><li> Columns filled by <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">column formula</a> referencing to a single column without calculation; <br /><i>and/or,</i></li>
+<li> Output of <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Copy Column to</b></a><br /></li></ul>
+<p>See "A column can be converted to mirror column if it meets one of the following conditions" section above for more information.
+</p>
+</td></tr>
+<tr>
+<th>Convert Scope
+</th>
+<td>Specify where to search and conversion columns:
+<dl><dd>current worksheet / current workbook / current folder (open or recursive) / entire project.</dd></dl>
+</td></tr>
+<tr>
+<th>Use Source Column Labels
+</th>
+<td>When <b>Column Formula</b> is checked, select this checkbox to copy label rows (Long Name, Unit, Comment,...) from the source column.
+<p>For <b>Column Copy Output</b>, whether to use the source labels is controlled by the <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Copy Column to</b></a> dialog &gt; <b>Copy Labels</b> branch.
+</p>
+</td></tr>
+<tr>
+<th>Output List of Converted Columns
+</th>
+<td>Specify  where to output a list of converted columns
+<dl><dd>not output / Message Log / Notes Window / Notepad.</dd></dl>
+</td></tr></table>
+
+

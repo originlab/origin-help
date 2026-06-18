@@ -17,7 +17,7 @@ The Linear Regression dialog can be used to fit the simple linear model to your 
 </li>
 <li class="toclevel-1 tocsection-6"><a href="#Fit_Control"><span class="tocnumber">4</span> <span class="toctext">Fit Control</span></a></li>
 <li class="toclevel-1 tocsection-7"><a href="#Quantities"><span class="tocnumber">5</span> <span class="toctext">Quantities</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Residual_Analysis"><span class="tocnumber">6</span> <span class="toctext">Residual Analysis</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Diagnostics"><span class="tocnumber">6</span> <span class="toctext">Diagnostics</span></a></li>
 <li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
 <li class="toclevel-1 tocsection-10"><a href="#Fitted_Curves_Plot"><span class="tocnumber">8</span> <span class="toctext">Fitted Curves Plot</span></a></li>
 <li class="toclevel-1 tocsection-11"><a href="#Find_X.2FY"><span class="tocnumber">9</span> <span class="toctext">Find X/Y</span></a></li>
@@ -305,44 +305,54 @@ The Linear Regression dialog can be used to fit the simple linear model to your 
 </p>
 </td></tr>
 <tr>
+<th>Indicate Outliers in Fitted Curve
+</th>
+<td>
+<p>When check <b>Outliers</b>, this option will be shown in the dialog.  Check it to mark the outliers in the fitted curve.
+</p>
+</td></tr>
+<tr>
 <th>X Intercept
 </th>
 <td>
 <p>Intercept of the fitted curve with line Y = 0.
 </p>
 </td></tr></table>
-<h2><a name="Residual_Analysis"></a><span class="mw-headline">Residual Analysis</span></h2>
-<p>Select methods to calculate and output residuals. For more information, see <a class="external text" href="../../UserGuide/UserGuide/Graphic_Residual_Analysis.html">Graphical Residual Analysis</a>
+<h2><a name="Diagnostics"></a><span class="mw-headline">Diagnostics</span></h2>
+<p>Select methods to calculate and output residuals and influence &amp; distance.  For more information, see <a class="external text" href="../../UserGuide/UserGuide/Graphic_Residual_Analysis.html">Graphical Residual Analysis</a>
 </p>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Regular
+<th>Residuals
 </th>
 <td>
-<p>Output the regular residuals. 
+<p><b>Regular</b>  
 </p>
+<dl><dd>Output the regular residuals. </dd></dl>
+<p><b>Standardized</b>
+</p>
+<dl><dd>Output the standardized residuals. </dd></dl>
+<p><b>Studentized</b>
+</p>
+<dl><dd>Output the studentized (internally studentized ) residuals. </dd></dl>
+<p><b>Studentized Deleted </b>
+</p>
+<dl><dd>Output studentized deleted (externally studentized) residuals. </dd></dl>
 </td></tr>
 <tr>
-<th>Standardized
+<th>Influence &amp; Distance
 </th>
 <td>
-<p>Output the standardized residuals. 
+<p><b>Leverages</b>
 </p>
-</td></tr>
-<tr>
-<th>Studentized
-</th>
-<td>
-<p>Output the studentized (internally studentized ) residuals. 
+<dl><dd>Output the Leverages value. It is used to measure how far an observation's predictor values (X values) are from those of the other observations.</dd></dl>
+<p><b>Cook's Distance</b>
 </p>
-</td></tr>
-<tr>
-<th>Studentized Deleted
-</th>
-<td>
-<p>Output studentized deleted (externally studentized) residuals.  
+<dl><dd>Output the Cook's Distance.  It is used to estimate the overall influence of a single data point on the entire regression model.</dd></dl>
+<p><b>Atkinson's T</b>
 </p>
+<dl><dd>Out the Atkinson's T value. It is a variation or refinement of Cook’s Distance, designed to increase sensitivity toward potential influential points.</dd></dl>
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
 <table class="dialogcontroltable">
@@ -376,7 +386,7 @@ The Linear Regression dialog can be used to fit the simple linear model to your 
 <dl><dd> If this check box is selected, plots of the same type will be arranged in one graph.</dd></dl>
 <p><b>Arrange Residual Plots in One Graph</b>
 </p>
-<dl><dd>If this check box is selected, all residual plots will be arranged in one graph.</dd></dl>
+<dl><dd>If this check box is selected, all residual plots will be arranged in one graph. <br /> From version 2026b, <b>Arrange Plots of Same Type in One Graph</b> and <b>Arrange Residual Plots in One Graph</b> two options can be checked at the same time.</dd></dl>
 </td></tr>
 <tr>
 <th>Fitted Results Sheet Arrangement

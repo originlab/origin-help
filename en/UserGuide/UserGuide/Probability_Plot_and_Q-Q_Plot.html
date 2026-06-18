@@ -32,7 +32,7 @@
 <li> Another grouping column "Luxury" selected in <b>Split Panels by</b> box has separated the graph into two layers (<b>N</b> and <b>Y</b>).</li>
 <li> A table with statistics results have been added onto the graph.</li></ul>
 <h2><a name="The_Dialog_of_plot_prob_X-Function"></a><span class="mw-headline">The Dialog of plot_prob X-Function</span></h2>
-<dl><dd><a  class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png?v=98552" width="449"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png?v=99494" width="485"  /></a></dd></dl>
 <table class="dialogcontroltable">
 
 <tr>
@@ -150,6 +150,11 @@
 </p>
 </td></tr>
 <tr>
+<th><b>Output To</b>
+</th>
+<td>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
+</td></tr>
+<tr>
 <th>
 <p><b>Output Range</b>
 </p>
@@ -215,6 +220,23 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3-parameter Lognormal</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ff5d90fc1b5f0fc80b0b049487b2e757.png?v=0" title="\frac{1}{(x - \gamma)\sigma\sqrt{2\pi}} \exp\left(-\frac{[\ln(x - \gamma) - \mu]^2}{2\sigma^2}\right)" alt="\frac{1}{(x - \gamma)\sigma\sqrt{2\pi}} \exp\left(-\frac{[\ln(x - \gamma) - \mu]^2}{2\sigma^2}\right)" class="tex"/> 
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-531fdfc56b8d29edd13fd444fd463bda.png?v=0" title="x &gt; \gamma" alt="x &gt; \gamma" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ae539dfcc999c28e25a0f3ae65c1de79.png?v=0" title="\gamma" alt="\gamma" class="tex"/> is Minimum value of the distribution<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png?v=0" title="\mu" alt="\mu" class="tex"/> is Mean of the logarithm of (X−γ)<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-a4788ab5dc66b5568b75044285c9c9de.png?v=0" title="\sigma &gt;0" alt="\sigma &gt;0" class="tex"/> is Standard deviation of ln(X−γ).
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>Exponential</b>
 </p>
 </td>
@@ -225,6 +247,21 @@
 <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png?v=0" title="x&gt;0" alt="x&gt;0" class="tex"/>
 </td>
 <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter.
+</td></tr>
+<tr>
+<td>
+<p><b>2-parameter Exponential</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-799a1bc48197582bf201f7f9620fcae9.png?v=0" title="\lambda e^{-\lambda(x - \mu)}" alt="\lambda e^{-\lambda(x - \mu)}" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-450cd0c402e1572f20eaae803f543887.png?v=0" title="x&gt;\mu" alt="x&gt;\mu" class="tex"/>
+</td>
+<td>λ&gt;0  is the rate parameter (inverse scale)<br />
+<p>μ  is the location parameter (minimum value, threshold).
+</p>
 </td></tr>
 <tr>
 <td>
@@ -244,6 +281,23 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3-parameter Weibull</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-fd28766d8714f5f3b134a5f2016e13a2.png?v=0" title="\frac{k}{\lambda} \left(\frac{x - \gamma}{\lambda}\right)^{k-1} \exp\left[-\left(\frac{x - \gamma}{\lambda}\right)^k\right]" alt="\frac{k}{\lambda} \left(\frac{x - \gamma}{\lambda}\right)^{k-1} \exp\left[-\left(\frac{x - \gamma}{\lambda}\right)^k\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5163961cb46ccddd3ef1795f30783184.png?v=0" title="\quad x \geq \gamma" alt="\quad x \geq \gamma" class="tex"/>
+</td>
+<td>
+<p>k&gt;0  is the shape parameter (Weibull modulus)<br />
+λ&gt;0  is the scale parameter (characteristic life)<br />
+γ  is the location parameter (minimum life/threshold)
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>Gamma</b>
 </p>
 </td>
@@ -256,6 +310,101 @@
 <td>
 <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png?v=0" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/> is the scale parameter<br />
 <img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png?v=0" title="c(&gt;0)" alt="c(&gt;0)" class="tex"/> is the shape parameter
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Smallest Extreme Value</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-6f79a454df12d61a9b175c6820f67473.png?v=0" title="\frac{1}{\sigma} \exp\left[\frac{x-\mu}{\sigma} - \exp\left(\frac{x-\mu}{\sigma}\right)\right]" alt="\frac{1}{\sigma} \exp\left[\frac{x-\mu}{\sigma} - \exp\left(\frac{x-\mu}{\sigma}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-976cd636e0f687d2895fdb868ad30d0b.png?v=0" title="\quad -\infty &lt; x &lt; \infty" alt="\quad -\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  = location parameter (mode, also median)<br />
+σ&gt;0  = scale parameter
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Largest Extreme Value</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-36ef007a50beffe3207b87334be2d2ce.png?v=0" title="\frac{1}{\sigma} \exp\left[-\frac{x-\mu}{\sigma} - \exp\left(-\frac{x-\mu}{\sigma}\right)\right]" alt="\frac{1}{\sigma} \exp\left[-\frac{x-\mu}{\sigma} - \exp\left(-\frac{x-\mu}{\sigma}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-982ba133caf1fa101f22472a03e9ad50.png?v=0" title="-\infty &lt; x &lt; \infty" alt="-\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  = location parameter (mode)<br />
+σ&gt;0  = scale parameter
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Logistic</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-b0f8fea0bd253d1624c2a2cf93ff2a61.png?v=0" title="\frac{\exp\left(-\frac{x-\mu}{s}\right)}{s\left[1 + \exp\left(-\frac{x-\mu}{s}\right)\right]^2} = \frac{1}{4s} \text{sech}^2\left(\frac{x-\mu}{2s}\right)" alt="\frac{\exp\left(-\frac{x-\mu}{s}\right)}{s\left[1 + \exp\left(-\frac{x-\mu}{s}\right)\right]^2} = \frac{1}{4s} \text{sech}^2\left(\frac{x-\mu}{2s}\right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-1db19867debccae3967ae703bd2728b2.png?v=0" title=" -\infty &lt; x &lt; \infty" alt=" -\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  = location parameter (mean, median, mode)<br />
+s&gt;0  = scale parameter (related to standard deviation)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Loglogistic</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c0e7f5d9cc6a6361410349ceb1a078e1.png?v=0" title="\frac{(\beta/\alpha)(t/\alpha)^{\beta-1}}{\left[1 + (t/\alpha)^\beta\right]^2}" alt="\frac{(\beta/\alpha)(t/\alpha)^{\beta-1}}{\left[1 + (t/\alpha)^\beta\right]^2}" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-230aab57abce22285fb273b1b2f1b0a4.png?v=0" title="t &gt; 0" alt="t &gt; 0" class="tex"/>
+</td>
+<td>
+<p>α&gt;0  = scale parameter (median = α )<br />
+β&gt;0  = shape parameter (controls skewness and tail behavior)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Folded Normal</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-bd08ae43171d75ffbf2edbd041709759.png?v=0" title="\frac{1}{\sigma\sqrt{2\pi}} \left[\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) + \exp\left(-\frac{(x+\mu)^2}{2\sigma^2}\right)\right]" alt="\frac{1}{\sigma\sqrt{2\pi}} \left[\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) + \exp\left(-\frac{(x+\mu)^2}{2\sigma^2}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-0ae946a990b8fb199c7f60f2bc27706b.png?v=0" title="x \geq 0" alt="x \geq 0" class="tex"/>
+</td>
+<td>
+<p>μ is location of underlying normal<br />
+σ&gt;0 (scale)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Rayleigh</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-433563c883e5cc3d5148b605883c5b7f.png?v=0" title="\frac{x}{\sigma^2} \exp\left(-\frac{x^2}{2\sigma^2}\right)" alt="\frac{x}{\sigma^2} \exp\left(-\frac{x^2}{2\sigma^2}\right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-0ae946a990b8fb199c7f60f2bc27706b.png?v=0" title="x \geq 0" alt="x \geq 0" class="tex"/>
+</td>
+<td>
+<p>σ&gt;0  is the scale parameter.
 </p>
 </td></tr></table>
 <h2><a name="Details_for_Constructing_Probability_Plot"></a><span class="mw-headline">Details for Constructing Probability Plot</span></h2>
@@ -304,6 +453,19 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3-parameter Lognormal</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Probability
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>Exponential</b> 
 </p>
 </td>
@@ -313,6 +475,19 @@
 </td>
 <td>
 <p>Double Log Reciprocal
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>2-parameter Exponential</b> 
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Double Log Reciprocal(Weibull)
 </p>
 </td></tr>
 <tr>
@@ -330,6 +505,19 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3-parameter Weibull</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Double Log Reciprocal(Weibull)
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>Gamma</b>
 </p>
 </td>
@@ -339,6 +527,84 @@
 </td>
 <td>
 <p>Probability
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Smallest Extreme Value</b>
+</p>
+</td>
+<td>
+<p>Linear
+</p>
+</td>
+<td>
+<p>Double Log Reciprocal(Weibull)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Largest Extreme Value</b>
+</p>
+</td>
+<td>
+<p>Linear
+</p>
+</td>
+<td>
+<p>Custom Formula
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Logistic</b>
+</p>
+</td>
+<td>
+<p>Linear
+</p>
+</td>
+<td>
+<p>Logit
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Loglogistic</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Logit
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Folded Normal</b>
+</p>
+</td>
+<td>
+<p>Linear
+</p>
+</td>
+<td>
+<p>Custom Formula
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>Rayleigh</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>Custom Formula
 </p>
 </td></tr></table>
 <h2><a name="Details_for_Constructing_Q-Q_Plot"></a><span class="mw-headline">Details for Constructing Q-Q Plot</span></h2>

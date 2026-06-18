@@ -1,7 +1,7 @@
 <h1 class="firstHeading">6.10 Exporting Worksheets and Matrices</h1><p class='urlname' style='display: none'>Export-Wks-Mat</p>
 <p><br />
-Origin worksheet data can be exported as the following five formats: <b>ASCII</b>, <b>Excel</b>, <b>NI TDM (TDM, TDMS)</b>, <b>Sound (WAV)</b>, <b>ESRI shapefile (SHP)</b>. And Origin worksheet can be exported as one-page PDF file, multi-page PDF file or image file.
-</p><p>Origin matrix data can be exported as the following two formats: <b>ASCII</b> and <b>Image</b>.
+Origin worksheet data can be exported as the following five formats: <b>ASCII</b> (<b>Text/CSV</b>), <b>Excel</b>, <b>NI TDM (TDM, TDMS)</b>, <b>Sound (WAV)</b>, <b>ESRI shapefile (SHP)</b>. And Origin worksheet can be exported as one-page PDF file, multi-page PDF file or image file.
+</p><p>Origin matrix data can be exported as the following two formats: <b>ASCII</b> (<b>Text/CSV</b>) and <b>Image</b>.
 </p>
 <table class="simple" width="50%">
 
@@ -15,7 +15,7 @@ Origin worksheet data can be exported as the following five formats: <b>ASCII</b
 <tr>
 <td rowspan="9">Worksheet(s)
 </td>
-<td> ASCII
+<td> Text/CSV
 </td>
 <td><a class="external text" href="../../XFunction/X-Function/ExpASC.html">expASC</a>
 </td></tr>
@@ -80,7 +80,7 @@ Origin worksheet data can be exported as the following five formats: <b>ASCII</b
 </td></tr></table>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Exporting_worksheet_data_as_ASCII_file"><span class="tocnumber">1</span> <span class="toctext">Exporting worksheet data as ASCII file</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Exporting_worksheet_data_as_Text.2FCSV_file"><span class="tocnumber">1</span> <span class="toctext">Exporting worksheet data as Text/CSV file</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Exporting_worksheet.2Fworkbook_as_Excel_file"><span class="tocnumber">2</span> <span class="toctext">Exporting worksheet/workbook as Excel file</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Exporting_worksheet.2Fworkbook_as_an_SQLite_file"><span class="tocnumber">3</span> <span class="toctext">Exporting worksheet/workbook as an SQLite file</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Exporting_worksheet_data_as_National_Instruments_TDM_file"><span class="tocnumber">4</span> <span class="toctext">Exporting worksheet data as National Instruments TDM file</span></a></li>
@@ -95,13 +95,13 @@ Origin worksheet data can be exported as the following five formats: <b>ASCII</b
 </ul>
 </div>
 
-<h2><a name="Exporting_worksheet_data_as_ASCII_file"></a><span class="mw-headline">Exporting worksheet data as ASCII file</span></h2>
-<p>The ASCII export is limited to data-only worksheets. Complex documents containing embedded information, such as report sheets, worksheets with embedded or linked graphs (including sparklines), cannot be fully exported to ASCII files. If the worksheet data to be exported has embedded images and graphs, those images and graphs will be ignored during exporting. 
-</p><p><i><b>To export worksheet data as an ASCII file:</b></i>
+<h2><a name="Exporting_worksheet_data_as_Text.2FCSV_file"></a><span class="mw-headline">Exporting worksheet data as Text/CSV file</span></h2>
+<p>The Text/CSV export is limited to data-only worksheets. Complex documents containing embedded information, such as report sheets, worksheets with embedded or linked graphs (including sparklines), cannot be fully exported to Text/CSV files. If the worksheet data to be exported has embedded images and graphs, those images and graphs will be ignored during exporting. 
+</p><p><i><b>To export worksheet data as an Text/CSV file:</b></i>
 </p>
-<ol><li>With the worksheet active, select Origin main menu <b>File: Export: ASCII...</b> to bring up the <a class="external text" href="../../XFunction/X-Function/ExpASC.html"><b>expASC</b></a> dialog box.</li>
+<ol><li>With the worksheet active, select Origin main menu <b>File: Export: Text/CSV...</b> to bring up the <a class="external text" href="../../XFunction/X-Function/ExpASC.html"><b>expASC</b></a> dialog box.</li>
 <li>Specify the options for file type, path, separator, header, etc. in the dialog and click the <b>OK</b> button.</li></ol>
-<p>Key options for exporting worksheet data as ASCII file:
+<p>Key options for exporting worksheet data as Text/CSV file:
 </p>
 <ul><li>Support DAT, TXT and CSV file types.  If CSV is selected, quotes are inserted, as needed, to protect cell contents.</li>
 <li>Support export of selected data only.  Note that selections may be non-contiguous.</li>

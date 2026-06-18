@@ -29,7 +29,7 @@
 </p>
 <ul><li> Data are not editable in books that contain Data Connectors, by default. This protects against accidental modification and deletion.</li>
 <li> Data imported using Text/CSV or Excel Connector can be sorted, by default (select column, the <b>Worksheet: Sort Worksheet</b>), but is otherwise not editable. <br />While data imported via Connector types other than Text/CSV and Excel, are not sortable by default (not editable, not sortable). </li>
-<li> You can change both editing and sorting behaviors of Connector-imported data by manipulating the value of <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#H.2CI.2CJ.2CK">LabTalk system variable <b>@IPDC</b></a>, BEFORE you import data via Connector.</li>
+<li> You can change both editing and sorting behaviors of Connector-imported data using the <a class="external text" href="../../QuickHelp/QuickHelp/How_to_allow_changing_data_when_data_connector_is_used.html"><b>Preference: Options</b> dialog</a>, BEFORE you import data via Connector.</li>
 <li> Routine post-processing of connected data can be set up by <a href="#Run_Script_After_Import">embedding script</a> in the worksheet.  Post-processing may overcome any need to remove edit protections from connected data, thus helping to secure data.</li></ul>
 <table class="noborder">
 	<tr>
@@ -42,9 +42,9 @@
 <h2><a name="Adding_a_Connector_to_the_Sheet"></a><span class="mw-headline">Adding a Connector to the Sheet</span></h2>
 <p>Adding a Connector to a worksheet or matrix adds a Connector object to the top-left corner of the sheet. This object stores information used to maintain the connection to the data source. 
 </p><p><br />
-<i><b>To add a Connector to the active worksheet or matrix, do one of the following:</b></i>
+<span class='headerInParagraph'>To add a Connector to the active worksheet or matrix, do one of the following:</span>
 </p>
-<ul><li> Click <b>Data</b>: <b>Connect to File</b>, <b>Connect to Web</b> or <b>Connect to Database</b>.</li>
+<ul><li> Click <b>Data: Connect to File</b>, <b>Connect to Cloud</b>, <b>Connect to Web</b> or <b>Connect to Database</b>.</li>
 <li> Click the <b>Connectors</b> tab in the Apps Gallery and choose a Connector.</li>
 <li> <a href="../../UserGuide/Category/Importing_Data_by_Drag_and_Drop.html" title="Category:Importing Data by Drag and Drop">Drag-and-drop a Connector-supported file</a> onto an Origin worksheet or matrix.</li></ul>
 <p><br />
@@ -103,22 +103,16 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 <td> Open dialog to select or change data source
 <p>For data source from a disk file, the <b>Data Source File Path</b> dialog is opened.
 </p>
-<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/400px-Dadta_connector_file_path.png?v=82225" width="400"   /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/Dadta_connector_file_path.png?v=99761" width="480"  /></a></dd></dl>
 <p>You can choose to browse and then save the data source path as
 </p>
-<dl><dd><ul><li>an absolute path</li>
-<li>a relative path to the project saved folder. The current project must be saved before.</li>
-<li>a relative path to the common data path you have set by <b>Common Data Path</b> context menu.</li></ul></dd></dl>
-</td></tr>
-<tr>
-<th> Import Options/<br />Select(Options)
-</th>
-<td> Reopen dialog to adjust the import settings or select the branch to import.
-</td></tr>
-<tr>
-<th> Options
-</th>
-<td> Available only for <a href="../../UserGuide/UserGuide/Connecting_to_Web.html#HTML_Connector_Options" title="UserGuide:Connecting to Web"><b>HTML Table Connector</b> (<b>Connect to File/Web</b>)</a> and <a href="../../UserGuide/UserGuide/Connecting_to_File.html#NetCDF" title="UserGuide:Connecting to File"><b>NetCDF Connector</b></a>. Open dialog to change the import settings.
+<ul>
+<li>an <b>Absolute Path</b>
+<li><b>Relative to Project Path</b>. The current project must be saved before.
+<li><b>Relative to Common Data Path</b>. See <b>Common Data Path</b> menu below for details.
+</ul>
+<p>Check <b>Show Options Dialog</b> will force <a href="../../UserGuide/UserGuide/Connecting_to_File.html" title="UserGuide:Connecting to File"><b>Import Options</b> dialog</a> to open when you change the source file.
+</p>
 </td></tr>
 <tr>
 <th> Post Import Scripts
@@ -128,9 +122,9 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 <tr>
 <th> Import<br />Import All Books
 </th>
-<td> Import the source data into
-<ul><li> the active data-connected sheet (<b>Import</b>)</li>
-<li> all data-connected sheets in the project file (<b>Import All Books</b>)</li></ul>
+<td>
+<ul><li> <b>Import</b>: Import/Re-import to the active data-connected sheet</li>
+<li> <b>Import All Books</b>: Import/Re-import all data-connected sheets in the project file </li></ul>
 </td></tr>
 <tr>
 <th> Auto Refresh<br />Pause Periodic Refresh
@@ -147,7 +141,7 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 <tr>
 <th> Reset Post Import Actions
 </th>
-<td> After importing, if you have some actions on imported data, e.g. delete some imported columns, you will need to select this menu to reset the actions before you can re-import data.
+<td> After importing, if you have some actions on imported data, e.g. delete some imported columns, you can check this menu to reset to the original settings before re-import, otherwise the post-actions will be kept.
 </td></tr>
 <tr>
 <th> Disconnect Sheet
@@ -165,7 +159,7 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 </td></tr>
 
 <tr>
-<th> Exclude Imported When Saving<sup>&#8224;</sup>
+<th> Exclude Imported When Saving
 </th>
 <td> Check it to clear the imported data but keep the connection when saving the workbook or project, which helps to decrease the project size, and allows to simply re-import the data when needed. If a graph is plotted from the imported data, there is also a download button appearing on the graph after the imported data has been cleared.
 <table class="noborder">
@@ -185,15 +179,29 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 <tr>
 <th> Pause Check File
 </th>
-<td> If the source file is found not existed after checking a few times, data connector will not check anymore, and this menu <b>Pause Check File</b> will show as checked. You will need to actively uncheck this menu to start the idle checking again.
+<td> If the source file is found not existed after checking a few times, data connector will not check anymore, and this menu  will show as checked. You will need to actively uncheck this menu to start the idle checking again.
 </td></tr>
 <tr>
-<th> Duplicate Sheet with More Files
+<th> Duplicate with More Files
 </th>
-<td> Clone the current worksheet, e.g. import settings (including <b>Post Import Scripts</b>) and any analysis actions, and import new files selected in the pop-up dialog.
-<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png?v=94175" width="566"  /></a>
-</p><p>See also <b>Clone Import</b> in the <a href="#Other_sub-menus_under_Data_menu:">next section</a>.
+<td> Use the active sheet (including import settings - even <b>Post Import Scripts</b> - and any analysis actions) as template to import new files. In the duplicated book, the analysis recalculation is triggered automatically, regardless of the analysis tool's <b>Recalculate</b> mode.
+<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png?v=99760" width="544"  /></a>
+</p><p>Specify the new data files by
 </p>
+<ul>
+<li><b>Source</b> = <b>Files in Specified Folder</b>
+<br />&#160; &#160; &#160; Specify a <b>Folder</b> and all files in that path will be imported.
+<li><b>Source</b> = <b>Specified Files</b> 
+<br />&#160; &#160; &#160; Click <b>...</b> button next to <b>File Name</b> to select files.
+</ul>
+<p>Chooce to <b>Duplicate to</b>
+</p>
+<ul>
+<li><b>New Sheets</b>
+<br />&#160; &#160; &#160; Each new file is imported into a new sheet in the active book.
+<li><b>New Books with Entire Book</b>
+<br />&#160; &#160; &#160; Each new file is imported into a new book. If the active workbook contains multiple sheets but only one is import sheet, the entire book is treated as a unit and all sheets are duplicated in the new books. See also <b>Clone Import</b> in the <a href="#Other_sub-menus_under_Data_menu:">next section</a>.</li>
+</ul>
 </td></tr></table></dd></dl>
 <h3><a name="Other_sub-menus_under_Data_menu:"></a><span class="mw-headline">Other sub-menus under Data menu:</span></h3>
 <dl><dd><table class="simple">
@@ -205,13 +213,15 @@ Once a Connector is added, click the sheet's Connector icon to manage the connec
 <tr>
 <th> Clone Import
 </th>
-<td> Available for data imported by <b>Data: Import from File</b> menu. After you import a data file by <b>Import from File</b> menu, <b>Clone Import</b> will use the active workbook (including import settings) as template to import new file into a duplicate of current workbook. If the current workbook contains analysis, recalculation in the duplicate is triggered automatically regardless of the analysis tool's <b>Recalculate</b> mode. If the current workbook contains <i>N</i> import sheets, <b>Clone Import</b> will group every <i>N</i> data files in order of selection and import the same group in one book accordingly.
+<td> After import a data file, <b>Clone Import</b> will use the active workbook (including import settings) as template to import new file into a duplicate of current workbook. If the current workbook contains analysis, recalculation in the duplicate is triggered automatically regardless of the analysis tool's <b>Recalculate</b> mode. If the current workbook contains <i>N</i> import sheets, <b>Clone Import</b> will group every <i>N</i> data files in order of selection and import the same group in one book accordingly.
 <table class="noborder">
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Data_Connector/Tutorial_icon.png?v=9654" width="57"  border="0" />
 	</td>
 	<td><p>For an example, open sample project <i>Batch Processing - Clone Import</i> by <b>Help: Learning Center</b> and set <b>Samples in</b> = Batch Processing in Analysis Samples tab. Activate workbook and try menu "Data: Clone Import" and choose another data. See how the active workbook is cloned with the new data.  
 </p></td></tr></table>
+<p><b>Note:</b> <b>Clone Import</b> is also available for data imported by <b>Data: Import from File</b> menu. 
+</p>
 </td></tr></table></dd></dl>
 <h2><a name="Refresh_imported_data"></a><span class="mw-headline">Refresh imported data</span></h2>
 <p>Click on Connector icon <a  class="image"><img alt="Dadta connector icon connect.png" src="../images/Data_Connector/Dadta_connector_icon_connect.png?v=87163" width="16"  /></a> / <a  class="image"><img alt="Button database connector icon.png" src="../images/Data_Connector/Button_database_connector_icon.png?v=98224" width="16"  /></a> (for Database Connector) and select <b>Auto Refresh...</b>:

@@ -1,0 +1,129 @@
+<h1 class="firstHeading">17.9.9.1 Sample Size for Estimation Dialog Box</h1><p class='urlname' style='display: none'>Sample-Size-Estimation-Dialog</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Parameter"><span class="tocnumber">2</span> <span class="toctext">Parameter</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Parameter_Value"><span class="tocnumber">3</span> <span class="toctext">Parameter Value</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Calculate"><span class="tocnumber">4</span> <span class="toctext">Calculate</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Margins_of_Error"><span class="tocnumber">5</span> <span class="toctext">Margins of Error</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Sample_Sizes"><span class="tocnumber">6</span> <span class="toctext">Sample Sizes</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Confidence_Level_.28.25.29"><span class="tocnumber">7</span> <span class="toctext">Confidence Level (%)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Confidence_Interval"><span class="tocnumber">8</span> <span class="toctext">Confidence Interval</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Assume_population_standard_deviation_is_known"><span class="tocnumber">9</span> <span class="toctext">Assume population standard deviation is known</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Exposure"><span class="tocnumber">10</span> <span class="toctext">Exposure</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Output_Results"><span class="tocnumber">11</span> <span class="toctext">Output Results</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
+<ul><li> <a href="../../UserGuide/Category/Sample_Size_for_Estimation.html" title="Category:Sample Size for Estimation">Introduction:Sample Size for Estimation</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/Power_and_Sample_Size.html">Tutorial</a></li></ul>
+<h2><a name="Parameter"></a><span class="mw-headline">Parameter</span></h2>
+<p>Select a following statistic as parameter:
+</p>
+<ul><li> <b>Mean (Normal)</b></li>
+<li> <b>Standard Deviation (Normal</b>)</li>
+<li><b>Variance (Normal)</b> </li>
+<li><b>Proportion (Binomial)</b> </li>
+<li><b>Rate (Poisson)</b> </li>
+<li><b>Mean (Poisson)</b> </li></ul>
+<p>Parameters are descriptive measures of an entire population used as the inputs.
+</p>
+<h2><a name="Parameter_Value"></a><span class="mw-headline">Parameter Value</span></h2>
+<p>After select <b>Parameter</b> in the above drop-down list, enter the value of select parameter.
+</p>
+<table class="simple" style="width: 50%">
+
+<tr>
+<th style="width: 50%">Parameter
+</th>
+<th style="width: 50%">Valve
+</th></tr>
+<tr>
+<td>Mean (Normal)
+</td>
+<td>Standard Deviation
+</td></tr>
+<tr>
+<td>Standard Deviation (Normal)
+</td>
+<td>Standard Deviation
+</td></tr>
+<tr>
+<td>Variance (Normal)
+</td>
+<td>Variance
+</td></tr>
+<tr>
+<td>Proportion (Binomial)
+</td>
+<td>Proportion
+</td></tr>
+<tr>
+<td>Rate (Poisson)
+</td>
+<td>Rate
+</td></tr>
+<tr>
+<td>Mean (Poisson)
+</td>
+<td>Mean
+</td></tr></table>
+<h2><a name="Calculate"></a><span class="mw-headline">Calculate</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Sample Sizes
+</th>
+<td>Compute sample size for the desired margin of error(s).
+</td></tr>
+<tr>
+<th>Margins of Error
+</th>
+<td>Compute margins of error for the given sample size(s).
+</td></tr></table>
+<h2><a name="Margins_of_Error"></a><span class="mw-headline">Margins of Error</span></h2>
+<p>When select <b>Sample Sizes</b> in the <b>Calculate</b> drop-down list, the <b>Margins of Error</b> box will show in this dialog. 
+</p><p>You can specify a value for the desired margin of error. Entering multiple values, it can evaluate the effect of different marginal errors. Usually when enter the margin of error is smaller, the sample sizes are larger.
+</p>
+<h2><a name="Sample_Sizes"></a><span class="mw-headline">Sample Sizes</span></h2>
+<p>When select <b>Margins of Error	</b> in the <b>Calculate</b> drop-down list, the <b>Sample Sizes</b> box will show in this dialog.
+</p><p>You can specify a value for the sample size. Entering multiple values. it can evaluate the effect of different sample sizes. Usually when enter the sample sizes are larger, the margins of error are smaller.
+</p>
+<h2><a name="Confidence_Level_.28.25.29"></a><span class="mw-headline">Confidence Level (%)</span></h2>
+<p>Specify the level of confidence for the confidence interval. Usually, it will set confidence level to 95%. But you need to consider to change confidence level to other value depending on the sample size. If the sample size is large, it requires a large confidence level.
+</p>
+<h2><a name="Confidence_Interval"></a><span class="mw-headline">Confidence Interval</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Two-sided
+</th>
+<td> Use the two-sided test to determine whether the population parameter differs from the hypothesized value.
+</td></tr>
+<tr>
+<th>Lower Bound
+</th>
+<td> Use the one-sided test to determine whether the population parameter is less than the hypothesized value.
+</td></tr>
+<tr>
+<th>Upper Bound
+</th>
+<td> Use the one-sided test to determine whether the population parameter is greater than the hypothesized value.
+</td></tr></table>
+<h2><a name="Assume_population_standard_deviation_is_known"></a><span class="mw-headline">Assume population standard deviation is known</span></h2>
+<p>This option is only available when <b>Parameter</b> is <b>Mean(Normal)</b>. If the value of the population standard deviation is known, and hope to estimate the sample size or margin of error for 1-Sample Z, you can select check this option.
+</p>
+<h2><a name="Exposure"></a><span class="mw-headline">Exposure</span></h2>
+<p>The <b>Exposure</b> box is only available when <b>Parameter</b> is <b>Rate(Poisson)</b>.  Enter a value to divide the sample rate of occurrence into a more useful form.
+</p>
+<h2><a name="Output_Results"></a><span class="mw-headline">Output Results</span></h2>
+<p>Determine where to create the output report worksheet. For more information, see <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="UserGuide:Analysis Report Sheets and Columns">Analysis Report Sheets</a>.
+</p>
+
+
+
+
+

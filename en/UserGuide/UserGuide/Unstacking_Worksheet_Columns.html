@@ -26,13 +26,6 @@ This function is used to unstack grouped data into multiple columns. During unst
 <table class="dialogcontroltable">
 
 <tr>
-<th>Recalculate
-</th>
-<td>
-<p>Specify how to recalculate the results. See details in <a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="UserGuide:Recalculating Analysis Results">Recalculating Analysis Results</a>.
-</p>
-</td></tr>
-<tr>
 <th>Data to be Unstacked
 </th>
 <td>
@@ -43,8 +36,10 @@ This function is used to unstack grouped data into multiple columns. During unst
 <th>Group Column(s)
 </th>
 <td>
-<p>Multiple grouping columns contains grouping information can be inserted into the <b>Group Column(s)</b> box. Unstacking columns is in accordance with this group. You can add, remove, order grouping columns via controlling buttons: <b>Move Up</b> button <a  class="image"><img alt="Button Group List Move Up.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Move_Up.png?v=38533" width="16"  /></a>, <b>Move Down</b> button <a  class="image"><img alt="Button Group List Move Down.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Move_Down.png?v=38534" width="13"  /></a>, <b>Remove</b> button <a  class="image"><img alt="Button Group List Remove.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Remove.png?v=38532" width="14"  /></a>, <b>Select All</b> button <a  class="image"><img alt="Button Group List Select All.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Select_All.png?v=45398" width="18"  /></a>, <b>Select</b> button <a  class="image"><img alt="Button Group List Add.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Add.png?v=38531" width="17"  /></a> in toolbar <a  class="image"><img alt="Group List Toolbar.png" src="../images/Unstacking_Worksheet_Columns/Group_List_Toolbar.png?v=47304" width="160"  /></a>.
-<br />The grouping columns are set as categorical if most of the column values are text. So you can easily reorder the output columns.
+<p>Specify column(s) containing grouping information by which <b>Data to be Unstacked</b> columns are unstacked. Multiple columns can be added into the <b>Group Column(s)</b> box by the <b>Select</b> button <a  class="image"><img alt="Button Group List Add.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Add.png?v=38531" width="17"  /></a>. Use the toolbar to reorder or remove column(s).
+</p>
+<dl><dd><a  class="image"><img alt="Group Columns List Toolbar.png" src="../images/Unstacking_Worksheet_Columns/Group_Columns_List_Toolbar.png?v=99445" width="334"  /></a></dd></dl>
+<p><b>Note:</b>Group columns are set as categorical if most of the column values are text.
 </p>
 </td></tr>
 <tr>
@@ -53,23 +48,23 @@ This function is used to unstack grouped data into multiple columns. During unst
 <td>
 <p><b>Include Other Column(s)</b>
 </p>
-<dl><dd>Specify whether to include those non-unstack columns in the original sheet to the result sheet. </dd></dl>
+<dl><dd>Specify whether to include those non-unstack columns in the source worksheet to the result sheet. </dd></dl>
 <p><b>Other Column(s)</b>
 </p>
-<dl><dd>Specify the data range(s) which will be the non-unstack column(s) to output to the result sheet. It is available when <b>Include Other Column(s)</b> is checked. </dd></dl>
+<dl><dd>Specify the non-unstack column(s) to output to be output to the result sheet when <b>Include Other Column(s)</b> is checked. </dd></dl>
 <p><b>Extract Rule for Other Columns Values</b>
 </p>
-<dl><dd>Specify how to arrange the data in <b>Other Column(s)</b>. It is available when <b>Include Other Column(s)</b> is checked.
+<dl><dd>Specify how to arrange the data in <b>Other Column(s)</b> when <b>Include Other Column(s)</b> is checked.
 <ul><li><b>Matching Longest Group</b>
-<dl><dd>Use this option when there are an equal number of individuals for each value of the grouping variable(s) (<b>Group Column(s)</b>) and an equal number of individuals for each value of non-grouped variables (<b>Other Column(s)</b>). For example, suppose that there are 6 individuals to be unstacked to two columns, G1 and G2. For our non-grouping variable there are 3 values -- g1, g2 and g3.  To use this option, G1 and G2 should have three individuals each and the non-grouped variable should have 2 individuals in g1, two in g2 and two in g3. <b>Note</b> that before choosing this option, you should be perform a <a href="../../UserGuide/UserGuide/Sorting_Worksheet_Data.html#Nested_Sorting" title="UserGuide:Sorting Worksheet Data">nested sort</a> (primarily sorted by <b>Group Column(s)</b> and secondarily sorted by <b>Other Column(s)</b>).</dd></dl></li>
+<dl><dd>Use this option when there are an equal number of individuals for each value of the grouping variable(s) (<b>Group Column(s)</b>) and an equal number of individuals for each value of non-grouped variables (<b>Other Column(s)</b>). For example, suppose that there are 6 individuals to be unstacked to two columns, G1 and G2. For non-grouping variable there are 3 values - g1, g2 and g3. To use this option, G1 and G2 should have three individuals each and the non-grouped variable should have 2 individuals in g1, two in g2 and two in g3. <b>Note</b> that before choosing this option, you should perform a <a href="../../UserGuide/UserGuide/Sorting_Worksheet_Data.html#Nested_Sorting" title="UserGuide:Sorting Worksheet Data">nested sort</a> (primarily sorted by <b>Group Column(s)</b> and secondarily sorted by <b>Other Column(s)</b>).</dd></dl></li>
 <li><b>Combining All Groups</b>
-<dl><dd>This option combines the data in <b>Group Column(s)</b> and the data in <b>Other Column(s)</b> and uses it as the index for the unstacked data. When the combination of the data in <b>Group Column(s)</b> and the data in <b>Other Column(s)</b> have duplicates, the order follows the appreance in the source worksheet.</dd></dl></li></ul></dd></dl>
+<dl><dd>Combines data in <b>Group Column(s)</b> and data in <b>Other Column(s)</b> and uses it as the index for the unstacked data. When the combination of the data in <b>Group Column(s)</b> and in <b>Other Column(s)</b> have duplicates, the order follows the appreance in the source worksheet.</dd></dl></li></ul></dd></dl>
 <p><b>Include Missing as One Group</b>
 </p>
 <dl><dd>Specify whether to consider missing values as one group. </dd></dl>
 </td></tr>
 <tr>
-<th>Output Settings
+<th>Output
 </th>
 <td>
 <p><b>Sort Output Columns By</b>
@@ -82,30 +77,27 @@ This function is used to unstack grouped data into multiple columns. During unst
 <p><b>Output Worksheet</b>
 </p>
 <dl><dd>Specify where to store the output unstacked results. </dd></dl>
+<p><b>Output to Data Table</b>
+</p>
+<dl><dd>Check this checkbox to output unstacked results to a <a href="../../UserGuide/UserGuide/Life_Science_Mode&amp;action=edit&amp;redlink=1.html" class="new" title="UserGuide:Life Science Mode (page does not exist)">Data Table</a>. Available only when one of the following conditions is met:
+<ul><li>number of <b>Group Column(s)</b> &lt;= 2, <b>Include Other Column(s)</b> has 1 column selected, <br />&#10238; output to a <a href="../../UserGuide/UserGuide/Life_Science_Mode&amp;action=edit&amp;redlink=1.html" class="new" title="UserGuide:Life Science Mode (page does not exist)">Grouped (Two-Way) table</a>;</li>
+<li>number of <b>Data to be Unstacked</b> = 1 , number of <b>Group Column(s)</b> = 1, <b>Include Other Column(s)</b> is unchecked, <br />&#10238; output to a <a href="../../UserGuide/UserGuide/Life_Science_Mode&amp;action=edit&amp;redlink=1.html" class="new" title="UserGuide:Life Science Mode (page does not exist)">Column (One-Way) table</a>;</li>
+<li>number of <b>Data to be Unstacked</b> = 1, number of <b>Group Column(s)</b> = 3, <b>Include Other Column(s)</b> has 1 column selected, <br />&#10238; output to a <a href="../../UserGuide/UserGuide/Life_Science_Mode&amp;action=edit&amp;redlink=1.html" class="new" title="UserGuide:Life Science Mode (page does not exist)">Grouped (Two-Way) table</a>.</li></ul></dd></dl>
 <p><b>Put Grouping Info. to</b>
 </p>
 <dl><dd>Specify where to put the grouping information. 
-<ul><li><b>Long Name</b>
-<dl><dd>Output the grouping information to the Long Name row.</dd></dl></li>
-<li><b>Comments</b>
-<dl><dd>Output the grouping information to the Comments row. </dd></dl></li>
-<li><b>Append to Data Column's Long Name</b>
-<dl><dd>Append the grouping information to the Long Name row. </dd></dl></li>
+<ul><li><b>Long Name</b></li>
+<li><b>Comments</b></li>
+<li><b>Append to Data Column's Long Name</b></li>
 <li><b>User Defined Parameters</b>
-<dl><dd>Output the grouping information to the user defined parameter row. This row's name is specified by <b>From Group Columns</b>.</dd></dl></li>
+<dl><dd>Output the grouping information to the user defined parameter row. Specify the user defined parameter name in <b>From Group Columns</b>.</dd></dl></li>
 <li><b>Custom</b>
-<dl><dd>Fill <a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">label abbreviation</a> for every grouping column. The number of labels should be equal to number of group columns. Information of each group column will be put in the one label row. For example, if we have two group columns in input, fill <b>LC</b> in the option. Info of group1 will be set as Long Name and  and info. of group2 will be set as Comment</dd></dl></li></ul></dd></dl>
-<p><b>From Group Columns</b>
+<dl><dd>Fill <a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">label abbreviation</a> for every grouping column. The number of labels should be equal to that of <b>Group Columns</b>. Information of each group column will be put into one label row. For example, suppose there are two group columns, entering <b>LC</b> in <b>Custom</b> will put Info of group1 to Long Name and info. of group2 to Comment</dd></dl></li></ul></dd></dl>
+<p><b>From Group Columns</b>/<b>Dataset Identifier</b>
 </p>
-<dl><dd>This drop-down list is only available when <b>Put Group Info. to</b> is set as <b>User Defined Parameters</b>. It is used to name the user defined parameter row for storing grouping information. The name is from the label row of the Group column in the source worksheet. The selected label row must contain string for naming the user defined parameter row, or there will be an error message. In GUI, the possible options include (depends on which label row is shown in the source worksheet):
-<ul><li><b>Short Name</b>
-<dl><dd>From the Short Name of the group columns.</dd></dl></li>
-<li><b>Long Name</b>
-<dl><dd>From the Long Name row of the group columns.</dd></dl></li>
-<li><b>Units</b>
-<dl><dd>From the Units row of the group columns.</dd></dl></li>
-<li><b>Comments</b>
-<dl><dd>From the Comments row of the group columns.</dd></dl></li></ul></dd></dl>
+<dl><dd>Select a label row (<b>Short Name</b>, <b>Long Name</b>, <b>Units</b>, or <b>Comments</b>) to:
+<ul><li>Name the user defined parameter row for grouping information when <b>Put Group Info. to</b> = <b>User Defined Parameters</b>;</li>
+<li>Name replicates when <b>Output to Data Table</b> is checked</li></ul></dd></dl>
 </td></tr></table>
 <h2><a name="How_to_Unstack_Columns"></a><span class="mw-headline">How to Unstack Columns</span></h2>
 <p>This function is the inverse operation of <a href="../../UserGuide/UserGuide/Stacking_Worksheet_Columns.html" title="UserGuide:Stacking Worksheet Columns">stack columns</a>. During unstacking columns, it allows including other non-unstacked columns into the unstacked result.

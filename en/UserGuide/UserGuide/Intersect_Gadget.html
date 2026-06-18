@@ -1,7 +1,7 @@
 <h1 class="firstHeading">11.10 The Intersect Gadget</h1><p class='urlname' style='display: none'>Gadget-Intersect</p>
 <p><br />
-</p><p>Use the <b>Intersect</b> gadget to calculate the intersection points of the input curves in the ROI.  This gadgt is available in the <b>Gadgets</b> menu when a graph window is active.
-</p><p><a  class="image"><img alt="Curve Intersection 001.png" src="../images/Intersect_Gadget/Curve_Intersection_001.png?v=25785" width="799"  /></a>
+Use the <b>Intersect</b> gadget to calculate the intersection points of the input curves in the ROI.  This gadgt is available in the <b>Gadgets</b> menu when a graph window is active.
+</p><p><a  class="image"><img alt="Curve Intersection 001.png" src="../images/Intersect_Gadget/Curve_Intersection_001.png?v=99247" width="860"  /></a>
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -66,7 +66,36 @@
 <th>Type
 </th>
 <td>Indicate type of label (e.g., X, Y, or (X,Y))
+</td></tr>
+<tr>
+<th>Rotate(deg.)
+</th>
+<td>Select the rotation degree of the labels in the drop-down list.
+</td></tr>
+<tr>
+<th>Digits
+</th>
+<td>Customize the digits of the label.
+<ul><li> Default Decimal Digits: Display all digits for the intersection label (By default)</li>
+<li> Set Decimal Places =&#160;: The number of digits that display after the decimal place. Type the value in the associated text box.</li>
+<li> Significant Digits =&#160;: The number of digits displayed. Type the value in the associated text box.</li></ul>
 </td></tr></table>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Intersect_Gadget/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ol>
+<li>After click <b>Tag Points</b>, the intersection labels are added on the graph. And <b>RectIntersectMarker</b> object item will be added in the <a href="../../UserGuide/UserGuide/Object_Manager.html" title="UserGuide:Object Manager"><b>Object Manager</b></a> (<b>Show Graph Objects</b> Mode ). Tag points multiple times will add multiple marker objects.
+<dl><dd><a  class="image"><img alt="Tag Points two times.png" src="../images/Intersect_Gadget/Tag_Points_two_times.png?v=99220" width="699"  /></a></dd></dl>
+<li>If you want to customize these labels, you can 
+<ul><li>Double click on them to open the <b>Maker Properties</b> dialog.</li></ul>
+<p>or
+</p>
+<ul><li>Right-click on the <b>RectIntersectMarker</b> in <b>Object Manager</b> and select <b>Properties</b> in the context menu to open the <b>Maker Properties</b> dialog.</li></ul>
+<dl><dd><a  class="image"><img alt="Maker Properties.png" src="../images/Intersect_Gadget/Maker_Properties.png?v=99221" width="314"  /></a></dd></dl>
+<li>Click and select arbitrary intersection label to dray can move the position for all intersection labels. If the labels are not tagged point at the same time, they will not be moved together. If you just want to move one label, you can press and hold the <b>Ctrl</b> key and click and select the label to move it. 
+
+<li>Click and select arbitrary intersection label and select <b>Delete</b> in the context menu to delete these labels. Right-click on the <b>RectIntersectMarker</b> in <b>Object Manager</b> and select <b>Delete</b> also can delete the labels.
+</ol>
+<p><br />
+</p></td></tr></table>
 <h3><a name="Interpolation_Settings"></a><span class="mw-headline">Interpolation Settings</span></h3>
 <table class="dialogcontroltable">
 
@@ -153,9 +182,5 @@
 </th>
 <td> Open the <b>Intersect Preferences</b> dialog.
 </td></tr></table>
-
-
-
-
 
 

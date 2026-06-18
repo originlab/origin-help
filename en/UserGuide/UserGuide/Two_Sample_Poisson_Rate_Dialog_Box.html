@@ -1,0 +1,176 @@
+<h1 class="firstHeading">17.3.11.1 Two-Sample Poisson Rate Test Dialog Box</h1><p class='urlname' style='display: none'>Two-Poisson-Rate-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input_Data"><span class="tocnumber">2</span> <span class="toctext">Input Data</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Poisson_Rate_Test"><span class="tocnumber">3</span> <span class="toctext">Poisson Rate Test</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Test_Method"><span class="tocnumber">4</span> <span class="toctext">Test Method</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Output</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
+<p>To open the Two-Sample Poisson Rate Test Dialog:
+</p>
+<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Two-Sample Poisson Rate Test...</b></li></ol>
+<p><br />
+<i><b>See Also:</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Two_Sample_Poisson_Rate_(Pro_Only).html" title="Category:Two Sample Poisson Rate (Pro Only)">Introduction to Two-Sample Poisson Rate Test</a></li></ul>
+<p><br />
+</p>
+<h2><a name="Input_Data"></a><span class="mw-headline">Input Data</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Input Data Form
+</th>
+<td>
+<ul><li> <b>Summarized</b></li></ul>
+<dl><dd> Perform the test using summary statistics not the actual sample data in the worksheet. And you can enter them into the dialog box manually.</dd></dl>
+<ul><li> <b>Raw</b></li></ul>
+<dl><dd> Perform the test dataset that each group of sample is in a separate column.</dd></dl>
+<ul><li> <b>Indexed</b></li></ul>
+<dl><dd> Perform the test on input data consisting of one sample data column and one "grouping" column. The grouping column should contain information on the two populations of interest, indexed (by row number) to the sample data column.</dd></dl>
+</td></tr>
+<tr>
+<th>Input Data
+<p>(<i>Summarized</i>)
+</p>
+</th>
+<td>
+<ul><li> <b>Sample Size of Sample1</b></li></ul>
+<dl><dd> The total number of sample1 .</dd></dl>
+<ul><li> <b>Total Occurrence of Sample1</b></li></ul>
+<dl><dd> The number of times an event occurs in the sample1.</dd></dl>
+<ul><li> <b>Sample Size of Sample2</b></li></ul>
+<dl><dd> The total number of sample2.</dd></dl>
+<ul><li> <b>Total Occurrence of Sample2</b></li></ul>
+<dl><dd> The number of times an event occurs in the sample2.</dd></dl>
+</td></tr>
+<tr>
+<th>Input Data
+<p>(<i>Raw</i>)
+</p>
+</th>
+<td>
+<ul><li> <b>Sample1</b></li></ul>
+<dl><dd> Specify a column as the sample1 dataset.</dd></dl>
+<ul><li> <b>Frequency of Sample1</b></li></ul>
+<dl><dd>  Frequency column summarize the number of times that the value of the Sample1 column.</dd></dl>
+<ul><li> <b>Sample2</b></li></ul>
+<dl><dd> Specify a column as the sample2 dataset.</dd></dl>
+<ul><li> <b>Frequency of Sample2</b></li></ul>
+<dl><dd> Frequency column summarize the number of times that the value of the Sample2 column.</dd></dl>
+</td></tr>
+<tr>
+<th>Input Data
+<p>(<i>Indexed</i>)
+</p>
+</th>
+<td>
+<ul><li> <b>Sample</b></li></ul>
+<dl><dd> Specify a column as sample. This column includes sample data for two groups.</dd></dl>
+<ul><li> <b>Group Range</b></li></ul>
+<dl><dd> Specify the group column.</dd></dl>
+<ul><li> <b>Frequency</b></li></ul>
+<dl><dd>  Frequency column summarize the number of times that the value of the sample column in the corresponding group . </dd></dl>
+</td></tr>
+<tr>
+<th>Exposure(s)
+</th>
+<td>
+<p>Specify the observation period for the count data, such as time, area, volume, number of items, and so on. By default, it is set to 1.
+</p>
+</td></tr></table>
+<p><br />
+</p>
+<h2><a name="Poisson_Rate_Test"></a><span class="mw-headline">Poisson Rate Test</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Test Difference
+</th>
+<td>The hypothetical difference to be tested
+</td></tr>
+<tr>
+<th>Null Hypothesis
+</th>
+<td>Rate1 - Rate2 = <i>Test Difference</i>
+</td></tr>
+<tr>
+<th>Alternative Hypothesis
+</th>
+<td>Options:
+<dl><dd><b>Rate1 - Rate2 &lt;&gt; <i>Test Difference</i></b> </dd></dl>
+<dl><dd>A two-tailed Poisson rate test that seeks to answer whether <i>Rate1 - Rate2</i> = <i>Test Difference</i>. </dd></dl>
+<dl><dd><b>Rate1 - Rate2 &gt; <i>Test Difference</i></b> </dd></dl>
+<dl><dd>An upper-tailed Poisson rate test that seeks to answer whether <i>Rate1 - Rate2</i> is larger than the <i>Test Difference</i>. </dd></dl>
+<dl><dd><b>Rate1 - Rate2 &lt; <i>Test Difference</i></b> </dd></dl>
+<dl><dd>A lower-tailed Poisson rate test that seeks to answer whether <i>Rate1 - Rate2</i> is less than the  <i>Test Difference</i> . </dd></dl>
+</td></tr>
+<tr>
+<th>Significance Level
+</th>
+<td>The significance level of the test.
+</td></tr>
+<tr>
+<th>Confidence Interval(s)
+</th>
+<td>Compute confidence interval for the true (population) rate.
+</td></tr>
+<tr>
+<th>Confidence Level(s) in&#160;%
+</th>
+<td>Specifies the confidence levels for which the confidence intervals will be computed. This option is only available when <b>Confidence Interval(s)</b> is selected.
+</td></tr></table>
+<p><br />
+</p>
+<h2><a name="Test_Method"></a><span class="mw-headline">Test Method</span></h2>
+<p>Origin uses two methods for computing p values and confidence intervals for two-sample poisson rate tests: 
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Exact
+</th>
+<td>There is not requirement for the sample size when use Exact method. It is ideal for small samples and low-frequency events.
+</td></tr>
+<tr>
+<th>Normal Approximation
+</th>
+<td>The Normal Approximation is always calculated. The quality of the approximation tends to improve as sample size increases.
+</td></tr>
+<tr>
+<th>Use pooled p for test
+</th>
+<td>Specify to use a pooled estimate of p for the test when <b>Test Difference</b> is 0
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<p>For help with the range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Output Results</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Create a the graphical summary report, and result tables will also been attached to the graph to show the statistical values.
+<p>The footnote after the summary graph will diagnose these statistical results.
+</p>
+</td></tr>
+<tr>
+<th>Output Results
+</th>
+<td>Specify the worksheet for output of test results
+</td></tr>
+<tr>
+<th>Output Plot Data
+</th>
+<td>Specify a worksheet for output of plotted data (Origin generates tabular data when plots are created).
+</td></tr></table>
+
+
+
+
+
+

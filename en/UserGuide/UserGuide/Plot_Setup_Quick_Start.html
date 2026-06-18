@@ -1,0 +1,89 @@
+<h1 class="firstHeading">8.13.8.4 Plot Setup Quick Start</h1><p class='urlname' style='display: none'>Plot-Setup</p>
+<p><br />
+To open <b>Plot Setup</b> dialog, you can 
+</p>
+<ul>
+<li>activate the worksheet, do not highlight any data, then choose any available plot type menu items below <b>Plot</b>. </li>
+</ul>
+<p><i>Or</i>
+</p>
+<ul>
+<li>activate the graph, right click on the layer icon at the top-left corner and select <b>Plot Setup...</b></li>
+</ul>
+<p>This dialog allows you to create graphs, modify plot type, add/remove plots, group/ungroup plots, and change the plot range.
+</p>
+<h2><a name="What_can_I_do_with_the_Plot_Setup_dialog.3F"></a><span class="mw-headline">What can I do with the Plot Setup dialog?</span></h2>
+<h4><a name="To_create.2Fadd_new_plot"></a><span class="mw-headline">To create/add new plot</span></h4>
+<dl><dd><a  class="image"><img alt="Plot setup quickstart 01.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_01.png?v=68532" width="726"  /></a></dd></dl>
+<ol><li>With the <b>Plot Setup</b> dialog open, specify the source worksheet(s) location in the <b>Available Data</b> list, and further select the source worksheet(s) in the upper panel.</li>
+<li>In the middle panel, select/change plot type if needed. </li>
+<li>Select the desired plot designation for each column.</li>
+<li>In the lower panel, select the target layer. Click <b>Add</b> button to add the selected column(s) to the lower panel.</li></ol>
+<h4><a name="To_modify_plot.28s.29"></a><span class="mw-headline">To modify plot(s)</span></h4>
+<h5><a name="To_change_plot_order"></a><span class="mw-headline"><a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_change_the_order_of_data_plotted_in_a_graph_layer.html">To change plot order</a></span></h5>
+<p><a  class="image"><img alt="Plot setup quickstart 03.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_03.png?v=68533" width="596"  /></a>
+</p><p>See Also <a class="external text" href="../../Tutorial/Tutorial/Plotting_using_Plot_Setup.html#Change_Plot_Order_with_Plot_Setup">a quick example</a>.
+</p>
+<h5><a name="To_change_the_plot_type"></a><span class="mw-headline"><a class="external text" href="../../QuickHelp/QuickHelp/How_to_change_the_plot_type.html">To change the plot type</a></span></h5>
+<p><a  class="image"><img alt="Plot setup quickstart 05.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_05.png?v=68534" width="787"  /></a>
+</p><p>See Also <a class="external text" href="../../Tutorial/Tutorial/Plotting_using_Plot_Setup.html#Change_Plot_Type_with_Plot_Setup">a quick example</a>.
+</p>
+<h5><a name="To_group.2Fungroup_plots"></a><span class="mw-headline">To group/ungroup plots</span></h5>
+<p><a  class="image"><img alt="Plot setup quickstart 04.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_04.png?v=63158" width="788"  /></a>
+</p><p>To group a set of plots,
+</p>
+<ol><li>With the <b>Plot Setup</b> dialog opens, select the desired plots, right click and select <b>Group</b></li></ol>
+<p>To upgroup a set of plots,
+</p>
+<ol><li>With the <b>Plot Setup</b> dialog opens, right click on the Group branch and select <b>Ungroup</b>.</li></ol>
+<p>See a quick example of <a class="external text" href="../../Tutorial/Tutorial/Plotting_using_Plot_Setup.html#Group.2FUngroup_plots_with_Plot_Setup">grouping plots</a>.
+</p>
+<h5><a name="To_change_the_plot_range"></a><span class="mw-headline">To change the plot range</span></h5>
+<p><a  class="image"><img alt="Plot setup quickstart 02.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_02.png?v=68535" width="710"  /></a>
+</p>
+<ol><li>With the <b>Plot Setup</b> dialog open, select the plot of which you want to change range in the lower panel. Click the <b>Range</b> cell and the <b>...</b> button show up. Click the <b>...</b> button to open the <b>Range</b> dialog.</li>
+<li>Uncheck <b>Auto</b> for <b>From</b> or <b>To</b>, and then specify the new range. Note that the range here is by raw index, not Y values.</li></ol>
+<p>See also <a class="external text" href="../../Tutorial/Tutorial/Plotting_using_Plot_Setup.html#Change_Plot_Display_Range_with_Plot_Setup">a quick example</a>.
+</p>
+<h2><a name="Why_Plot_Setup.3F"></a><span class="mw-headline">Why Plot Setup?</span></h2>
+<p>Origin provides plenty of buttons and several dialog tools to plot data. Among them the <b>Plot Setup</b> dialog has particular advantages in some cases.
+</p>
+<h3><a name="To_plot_from_multiple_sheets"></a><span class="mw-headline">To plot from multiple sheets</span></h3>
+<p>You may want to create a group of plots from multiple sheets. These sheets usually have the same or similar data structure. Using the <b>Plot Setup</b> dialog, you can select columns from multiple sheets and plot them at one time. Below is a simple example showing how to create a stacked histogram from multiple worksheets.
+</p>
+<ol><li> Use the <a class="external text" href="../../XFunction/X-Function/ImpASC.html"><b>ImpASC</b></a> dialog to import file <i>\Samples\Statistics\automobile.dat</i>. Then perform <a class="external text" href="../../XFunction/X-Function/Wunstackcol.html"><b>Unstack Columns</b></a>, setting <b>Year</b> column as <b>Group Column(s)</b> and <b>Engine Displacement</b> column as <b>Data to be Unstacked</b>. We then have a worksheet with 13 columns, one for a year.</li>
+<li> Highlight the whole UnstackCols worksheet and create a group of histograms. Double click on the histograms to open the <b>Plot Details</b> dialog. Go to the <b>Data</b> tab. Click the <b>Go</b> button in the <b>Bin Worksheet</b> group. Now we get 13 bin worksheets appended to the source workbook. They have the same structure.</li>
+<li> Click <b>New Graph</b> button <a  class="image"><img alt="Button New Graph.png" src="../images/Plot_Setup_Quick_Start/Button_New_Graph.png?v=99634" width="16"  /></a> on the <b>Standard</b> toolbar to create a blank graph window. Right click on the <a  class="image"><img alt="Layer 1 icon.png" src="../images/Plot_Setup_Quick_Start/Layer_1_icon.png?v=63949" width="22"  /></a> icon at the top-right corner of the graph window and select <b>Plot Setup...</b> to bring up the <b>Plot Setup</b> dialog.</li>
+<li> In the upper panel, select <b>Worksheets in Folder</b> for <b>Available Data</b> on the left. Press CTRL or SHIFT+CTRL keys to select all 13 bin worksheets on the right-side table.</li>
+<li> In the middle panel, select <b>Stacked Column / Bar</b> for <b>Plot Type</b> on the left.</li>
+<li> On the right hand side, only the common columns in all 13 worksheets show in the available column table. Select Col(A) for <b>X</b> and Col(B) for <b>Y</b>.</li>
+<li> In the lower panel, select the target layer, Layer 1 and click <b>Add</b> button to add the 13 plots into Layer 1. The plots added this way are grouped automatically.</li>
+<li> Click <b>OK</b> button to create the stacked histogram.</li></ol>
+<dl><dd><a  class="image"><img alt="Plot setup quickstart 06.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_06.png?v=68536" width="701"  /></a></dd></dl>
+<p>See also another tutorial <a class="external text" href="../../Tutorial/Tutorial/Graphing_Data_From_Multiple_Sheets.html#Create_a_Plot_using_Plot_Setup">here</a>
+</p>
+<h3><a name="Switch_between_different_layers_easily"></a><span class="mw-headline">Switch between different layers easily</span></h3>
+<h3><a name="Make_plot_assignment_quickly"></a><span class="mw-headline">Make plot assignment quickly</span></h3>
+<p>Generally, the plot designation has already been set in the source worksheet. To quickly make the plot designation in <b>Plot Setup</b>: 
+</p>
+<ul>
+<dl><dd><li>click <a  class="image"><img alt="Plotsetup dialog-mode change.png" src="../images/Plot_Setup_Quick_Start/Plotsetup_dialog-mode_change.png?v=2225" width="24"  /></a> button to show the Y column only. This way you select the Y column and the associated X column will be used for plotting automatically.</li></dd></dl>
+</ul>
+<p>For example, to plot a Scatter+ErrorBar graph from <i>Sheet 1</i> below,
+</p>
+<dl><dd><a  class="image"><img alt="Plot setup quickstart 07e.png" src="../images/Plot_Setup_Quick_Start/Plot_setup_quickstart_07e.png?v=78027" width="329"  /></a></dd></dl>
+<ol>
+<li>With the <b>Plot Setup</b> open, specify <i>Sheet 1</i> location on the upper panel.</li>
+<li>On the middle panel, select Scatter for the plot type on the left.</li>
+<li>On the right side, click <a  class="image"><img alt="Plotsetup dialog-mode change.png" src="../images/Plot_Setup_Quick_Start/Plotsetup_dialog-mode_change.png?v=2225" width="24"  /></a> to switch to <b>Customer Designation Mode</b> to use designation in the source worksheet. Highlight all columns in the table and click Add to add them to the lower panel.</li>
+<li>Click <b>OK</b> button to create a Scatter+Error Bar graph.</li>
+</ol>
+<h2><a name="See_Also"></a><span class="mw-headline">See Also</span></h2>
+<ul><li> <a href="../../UserGuide/Category/Plot_Setup.html" title="Category:Plot Setup">Setup dialog Help</a></li>
+<li> <a  class="image"><img alt="Video Image 2016.png" src="../images/Plot_Setup_Quick_Start/Video_Image_2016.png?v=61345" width="20"  /></a> <a class="external text" href="http://originlab.com/Index.aspx?go=Support/VideoTutorials&amp;pid=1207" target="_blank">Add, Remove, Replace or Reorder Data Plots</a></li></ul>
+
+
+
+
+
+

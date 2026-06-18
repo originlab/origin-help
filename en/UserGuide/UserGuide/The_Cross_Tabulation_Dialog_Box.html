@@ -5,10 +5,15 @@
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Recalculate</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Input_Data"><span class="tocnumber">3</span> <span class="toctext">Input Data</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Statistics"><span class="tocnumber">4</span> <span class="toctext">Statistics</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Tests"><span class="tocnumber">5</span> <span class="toctext">Tests</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input_Data"><span class="tocnumber">3</span> <span class="toctext">Input Data</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Cross-tab"><span class="tocnumber">3.1</span> <span class="toctext">Cross-tab</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Contingency_Table"><span class="tocnumber">3.2</span> <span class="toctext">Contingency Table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Statistics"><span class="tocnumber">4</span> <span class="toctext">Statistics</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Tests"><span class="tocnumber">5</span> <span class="toctext">Tests</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Output</span></a></li>
 </ul>
 </div>
 
@@ -34,8 +39,9 @@
 </p>
 </td></tr></table>
 <h2><a name="Input_Data"></a><span class="mw-headline">Input Data</span></h2>
-<p>Select data for <b>Cross Tabulation and Chi-square</b>.
+<p>Select data for <b>Cross Tabulation and Chi-square</b>. Origin supports two types of data layout: <b>Cross-tab</b> (Cross Tabulation) and  <b>Contingency Table</b>. Comparing with Cross-tab layout, Contingency Table is a summarized and unstack by column factor layout.
 </p>
+<h4><a name="Cross-tab"></a><span class="mw-headline">Cross-tab</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
@@ -57,6 +63,24 @@
 <th>Frequencies
 </th>
 <td>If data is summarized as <a href="../../UserGuide/Category/Cross_Tabulation.html#Preparing_Analysis_Data" title="Category:Cross Tabulation">frequency data mode</a>, select the frequency column to specify frequencies variable.
+</td></tr></table>
+<h4><a name="Contingency_Table"></a><span class="mw-headline">Contingency Table</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Row Factor
+</th>
+<td>Select data from a column to specify row variable.
+</td></tr>
+<tr>
+<th>Frequencies by Column
+</th>
+<td> Select the frequencies by column to specify frequencies variable. (At least select two columns.)
+</td></tr>
+<tr>
+<th>Layer
+</th>
+<td>Select data from a column to specify layer variable. When a layer variable is specified, the Cross Tabulation between the row and column variable will be created at each level of the layer variable.
 </td></tr></table>
 <h2><a name="Statistics"></a><span class="mw-headline">Statistics</span></h2>
 <table class="dialogcontroltable">

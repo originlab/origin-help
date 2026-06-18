@@ -64,7 +64,7 @@
 <h2><a name="Importing_Excel_Data_using_the_impMSExcel_X-Function_Dialog"></a><span class="mw-headline">Importing Excel Data using the impMSExcel X-Function Dialog</span></h2>
 <table class="noborder">
 	<tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Working_with_Microsoft_Excel/Alert_icon.png?v=9649" width="57"  border="0" /></td><td><p>Beginning with <b>Origin 2021b</b>, clicking the <b>Import Excel</b> button <a  class="image"><img alt="Button Import Excel.png" src="../images/Working_with_Microsoft_Excel/Button_Import_Excel.png?v=87520" width="25"  /></a> will open the <b>Excel Import Options</b> Data Connector dialog box. To revert to previous behavior where this button opened the <b>impExcel</b> dialog box, set LabTalk system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#T"><b>@TIB</b> = <i>2</i></a>. To change the value of a system variable, see <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">this FAQ</a>.
+	<td style="vertical-align:top" width="60"><img src="../images/Working_with_Microsoft_Excel/Alert_icon.png?v=9649" width="57"  border="0" /></td><td><p>Beginning with <b>Origin 2021b</b>, clicking the <b>Import Excel</b> button <a  class="image"><img alt="Button Import Excel.png" src="../images/Working_with_Microsoft_Excel/Button_Import_Excel.png?v=99694" width="16"  /></a> will open the <b>Excel Import Options</b> Data Connector dialog box. To revert to previous behavior where this button opened the <b>impExcel</b> dialog box, set LabTalk system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#T"><b>@TIB</b> = <i>2</i></a>. To change the value of a system variable, see <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">this FAQ</a>.
 </p>
 	</td>
 	</tr>
@@ -242,28 +242,32 @@ The Excel workbook dataset naming convention is similar to the Origin workbook d
 <dl><dd><ol><li> Open the external Excel file in Excel.</li>
 <li> Copy data from the Excel file and <b>Paste Link</b> to Origin workbook</li>
 <li> Change data in Excel</li>
-<li> Data in Origin will be updated dynamically.</li></ol>
-<dl><dd><b>Notes:</b> Please note that data from absolute external path is "path dependent". Whenever the Excel file is moved to a different folder, or the related OPJ is opened on a different computer, There is always a dialog pops up to remind you that the DDE Link is broken. </dd></dl></dd></dl>
-<h5><a name="To_Copy_from_Excel_with_Formula"></a><span class="mw-headline">To Copy from Excel with Formula</span></h5>
-<dl><dd><ol><li> Open the external Excel file in Excel.</li>
-<li> Select Formula tab. Select <b>Show Formula</b>. <br /><a  class="image"><img alt="Show Formula in Excel.png" src="../images/Working_with_Microsoft_Excel/Show_Formula_in_Excel.png?v=98333" width="460"  /></a></li>
-<li> Copy data from the Excel file.</li>
-<li> Right click on the Origin worksheet cell (not in label rows), and choose <b>Paste (Keep Excel Formula).</b></li></ol>
-<dl><dd><b>Notes:</b>  Some Excel formula are different/missing in Origin, which will return "#NAME?" (missing value). See <a href="../../UserGuide/UserGuide/Excel_and_Origin_Functions_Comparison.html" title="UserGuide:Excel and Origin Functions Comparison">Excel and Origin Functions Comparison</a> for reference</dd></dl></dd></dl>
-<p><br />
-</p>
+<li> Data in Origin will be updated dynamically.</li></ol></dd></dl>
 <table class="note">
 
 <tr>
 <td><b>Notes:</b>
-<ul><li>Copying data/text from the external Excel file in Excel and then pasting it to Origin graph directly (use <b>Paste</b> menu or <b>Ctrl</b>+<b>V</b>) will paste as text instead of Excel object. If you want to paste as Excel file, please use <b>Paste Link</b>.</li>
+<ul><li>Please keep in mind that data from absolute external path is "path dependent". Whenever the Excel file is moved to a different folder, or the related OPJ is opened on a different computer, There is always a dialog pops up to remind you that the DDE Link is broken. </li>
+<li>Copying data/text from the external Excel file in Excel and then pasting it to Origin graph directly (use <b>Paste</b> menu or <b>Ctrl</b>+<b>V</b>) will paste as text instead of Excel object. If you want to paste as Excel file, please use <b>Paste Link</b>.</li>
 <li>The system variables, <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DDES</b></a> and <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>DDEL</b></a>, can be used to turn off the <b>DDE related messages</b> which remind you the file location is changed.</li>
 <li>The system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DDEN</b></a> can be used to depress the <b>Start DDE Link</b> dialog. Refer to <a class="external text" href="../../QuickHelp/QuickHelp/How_to_remove_DDE_links_in_a_project.html">this FAQ</a> for details.</li>
-<li>Copying "TURE" and "FALSE" from Excel will paste as numeric value "1" and "0" in Origin</li></ul>
+<li>Copying "TURE" and "FALSE" from Excel will paste as numeric value "1" and "0" in Origin.</li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<h5><a name="To_Copy_from_Excel_with_Formula"></a><span class="mw-headline">To Copy from Excel with Formula</span></h5>
+<dl><dd><ol><li> Open the external Excel file in Excel.</li>
+<li> Select Formula tab. Select <b>Show Formula</b>. <br /><a  class="image"><img alt="Show Formula in Excel.png" src="../images/Working_with_Microsoft_Excel/Show_Formula_in_Excel.png?v=98333" width="460"  /></a></li>
+<li> Copy data from the Excel file.</li>
+<li> Right click on the Origin worksheet cell (not in label rows), and choose <b>Paste (Keep Excel Formula).</b></li></ol></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Working_with_Microsoft_Excel/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li> Some Excel formula has different name in Origin, which will return missing value (error code  "#NAME?") after pasting. See <a href="../../UserGuide/UserGuide/Excel_and_Origin_Functions_Comparison.html" title="UserGuide:Excel and Origin Functions Comparison">Excel and Origin Functions Comparison</a> for reference. <br />You can use <a href="#Edit_Bad_Formula"><b>Edit: Edit Bad Cell Formula</b></a> menu to correct them.</li>
+<li> Some Excel function names are localized (e.g., <code>AVERAGE</code> becomes <code>MITTELWERT</code> in German). When you copy such a formula from Excel and use <b>Paste (Keep Excel Formula)</b>, Origin automatically translates the name back to English. Set the system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#T">@TGN</a> to disable this translation.</li></ul>
 </td></tr></table>
 <h2><a name="Edit_Bad_Cell_Formula"></a><span class="mw-headline">Edit Bad Cell Formula</span></h2>
-<p>Since Origin supports <a href="../../UserGuide/UserGuide/Importing_from_Excel.html#Importing_Excel_Data_using_the_Import_Excel_Data_Connector_Dialog" title="UserGuide:Importing from Excel">importing</a> and <a href="#To_Copy_from_Excel_with_Formula">copy-pasting Excel formulas</a>, any syntax that doesn’t fully translate or any unsupported function will cause the formula to fail in Origin and be flagged as a "bad formula."
-</p><p>Origin highlights cell formula with background colors. To show the colors, choose <b>View: Highlight Formula/Linked Cells</b>. The bad formulas are distinguished in different colors:
+<p>Since Origin supports <a href="../../UserGuide/UserGuide/Importing_from_Excel.html#Importing_Excel_Data_using_the_Import_Excel_Data_Connector_Dialog" title="UserGuide:Importing from Excel">importing</a> and <a href="#To_Copy_from_Excel_with_Formula">copy-pasting Excel formulas</a>, any syntax that doesn't fully translate or any unsupported function will cause the formula to fail in Origin and be flagged as a "bad formula."
+</p><p>Origin highlights cell formula with background colors. To show the colors, choose <b>View: Highlight Formula/Linked Cells</b>. 
+</p><p>The bad formulas are distinguished by error codes with different colors:
 </p>
 <table class="simple">
 
@@ -302,9 +306,11 @@ The Excel workbook dataset naming convention is similar to the Origin workbook d
 <p><b>e.g.</b> formula <code>=(A1+4)exp(A1-5)</code> is missing the operator "*" between "(A1+4)" and "exp(A1-5)", so <code>#ERROR!</code> is returned.
 </p>
 </td></tr></table>
+<p><b>Note:</b> These background colors always show if the <b>Show Formulas</b> mode is turned on (by <b>View: Show Formulas</b>, or <b>Show Formulas</b> button <a  class="image"><img alt="Popup Show Formulas.png" src="../images/Working_with_Microsoft_Excel/Popup_Show_Formulas.png?v=85098" width="24"  /></a> on the worksheet-level mini toolbar).
+</p>
 <h5><a name="To_batch-edit_bad_formulas"></a><span class="mw-headline">To batch-edit bad formulas</span></h5>
 <ul><li> select menu <b>Edit: Edit Bad Cell Formula</b></li></ul>
-<dl><dd><a  class="image"><img alt="Edit Bad Cell Formula Dialog.png" src="../images/Working_with_Microsoft_Excel/Edit_Bad_Cell_Formula_Dialog.png?v=98852" width="451"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Edit Bad Cell Formula Dialog.png" src="../images/Working_with_Microsoft_Excel/Edit_Bad_Cell_Formula_Dialog.png?v=98966" width="447"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th> Edit bad formula in

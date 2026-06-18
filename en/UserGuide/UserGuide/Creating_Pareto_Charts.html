@@ -18,12 +18,14 @@
 <li class="toclevel-2 tocsection-5"><a href="#Multiple_Groups"><span class="tocnumber">2.1</span> <span class="toctext">Multiple Groups</span></a></li>
 <li class="toclevel-2 tocsection-6"><a href="#Show_Cumulative_Percent_Plot"><span class="tocnumber">2.2</span> <span class="toctext">Show Cumulative Percent Plot</span></a></li>
 <li class="toclevel-2 tocsection-7"><a href="#Show_Symbol_at_Right_Side_of_Bar"><span class="tocnumber">2.3</span> <span class="toctext">Show Symbol at Right Side of Bar</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.4</span> <span class="toctext">Combine Smaller Counts in One Category</span></a>
+<li class="toclevel-2 tocsection-8"><a href="#Show_Table_for_Count_and_Cumulative_Percent"><span class="tocnumber">2.4</span> <span class="toctext">Show Table for Count and Cumulative Percent</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.5</span> <span class="toctext">Combine Smaller Counts in One Category</span></a>
 <ul>
-<li class="toclevel-3 tocsection-9"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.4.1</span> <span class="toctext">Combine Smaller Values</span></a></li>
-<li class="toclevel-3 tocsection-10"><a href="#Threshold"><span class="tocnumber">2.4.2</span> <span class="toctext">Threshold</span></a></li>
-<li class="toclevel-3 tocsection-11"><a href="#Threshold_value"><span class="tocnumber">2.4.3</span> <span class="toctext">Threshold value</span></a></li>
-<li class="toclevel-3 tocsection-12"><a href="#Tick_Label"><span class="tocnumber">2.4.4</span> <span class="toctext">Tick Label</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.5.1</span> <span class="toctext">Combine Smaller Values</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Threshold"><span class="tocnumber">2.5.2</span> <span class="toctext">Threshold</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Threshold_value"><span class="tocnumber">2.5.3</span> <span class="toctext">Threshold value</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Tick_Label"><span class="tocnumber">2.5.4</span> <span class="toctext">Tick Label</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Output_To"><span class="tocnumber">2.5.5</span> <span class="toctext">Output To</span></a></li>
 </ul>
 </li>
 </ul>
@@ -38,11 +40,11 @@
 <li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Raw_Data.html" title="UserGuide:Pareto Chart - Raw Data">Pareto Chart - Raw Data</a></li></ul>
 <h3><a name="Input_Data:_Binned_Data"></a><span class="mw-headline">Input Data: Binned Data</span></h3>
 <p>If you have already had binned data, you can create a pareto chart from it by using the <b>Plot &gt; Statistical: Pareto: Pareto Chart - Binned Data</b> menu command, or click the <b>Pareto Chart - Binned Data</b> button <a  class="image"><img alt="Button Pareto Chart-Binned Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Binned_Data.png?v=21670" width="21"  /></a> on the <b>2D Graphs</b> toolbar. This will bring up the <a class="external text" href="../../XFunction/X-Function/Plot_paretobin.html">plot_paratobin</a> dialog.
-</p><p><a  class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png?v=98580" width="700"   /></a>
+</p><p><a  class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png?v=99491" width="700"   /></a>
 </p>
 <h3><a name="Input_Data:_Raw_Data"></a><span class="mw-headline">Input Data: Raw Data</span></h3>
 <p>If you have raw data, you can create a pareto chart from it by using the <b>Plot &gt; Statistical: Pareto: Pareto Chart - Raw Data</b> menu command, or click the <b>Pareto Chart - Raw Data</b> button <a  class="image"><img alt="Button Pareto Chart-Raw Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Raw_Data.png?v=21671" width="21"  /></a> on the <b>2D Graphs</b> toolbar. This will bring up the <a class="external text" href="../../XFunction/X-Function/Plot_paretoraw.html">plot_paratoraw</a> dialog.
-</p><p><a  class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png?v=98581" width="700"   /></a>
+</p><p><a  class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png?v=99492" width="700"   /></a>
 </p>
 <h2><a name="Controls_for_Plotting"></a><span class="mw-headline">Controls for Plotting</span></h2>
 <h3><a name="Multiple_Groups"></a><span class="mw-headline">Multiple Groups</span></h3>
@@ -56,6 +58,10 @@
 <h3><a name="Show_Symbol_at_Right_Side_of_Bar"></a><span class="mw-headline">Show Symbol at Right Side of Bar</span></h3>
 <p>Specify whether show the scatter symbol at the right side of bar. <b>Note:</b> This line+scatter plot will start from the Origin(0,0) and put the scatter point at the right-side of bar if you checked this check box.
 </p><p><a  class="image"><img alt="Pareto Charts Symbol At Right.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Symbol_At_Right.png?v=96710" width="750"   /></a>
+</p>
+<h3><a name="Show_Table_for_Count_and_Cumulative_Percent"></a><span class="mw-headline">Show Table for Count and Cumulative Percent</span></h3>
+<p>Show a table below the pareto chart. There are three rows: <b>Count</b>, <b>Percent</b> and <b>Cum%</b> which show frequncy count, the percents of factors and the cumulative percents. Once this table is shown, data labels for cumulative percent plot at the points will be hidden.
+</p><p>This control is not available when there are multiple groups in <b>Group</b> option and <b>Multiple Groups</b> is set to <b>Separate Panels in Same Graph</b>.
 </p>
 <h3><a name="Combine_Smaller_Counts_in_One_Category"></a><span class="mw-headline">Combine Smaller Counts in One Category</span></h3>
 <p>Specify whether to combine the data of which the counts are below a threshold. 
@@ -74,7 +80,10 @@
 <p>Enter the threshold value according to the selection of <b>Threshold</b> drop-dwon list.
 </p>
 <h4><a name="Tick_Label"></a><span class="mw-headline">Tick Label</span></h4>
-<p>Enter a label text for the combination bar.
+<p>Enter a label text for the combination bar. 
+</p>
+<h4><a name="Output_To"></a><span class="mw-headline">Output To</span></h4>
+<p>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
 </p>
 
 

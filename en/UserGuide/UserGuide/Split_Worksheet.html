@@ -41,7 +41,9 @@ Origin has a tool for splitting a worksheet into multiple worksheets. You can sp
 <li><b>By Column Label</b>
 <dl><dd>Columns sharing a specified header row label will be split into a new worksheet. Specify <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows">the label-containing header row</a> in the <b>By Column Label</b> box.</dd></dl></li>
 <li><b>By Reference Columns</b>
-<dl><dd>Columns will be split into new worksheets by values or conditions in Reference Columns. Note that list order is important when splitting by values in multiple reference columns.</dd></dl></li></ul>
+<dl><dd>Columns will be split into new worksheets by values or conditions in Reference Columns. Note that list order is important when splitting by values in multiple reference columns.</dd></dl></li>
+<li><b>By Various Rows</b>
+<dl><dd>Columns will be split by various numbers of rows.  Specify the rows in the <b>Custom Rows</b> edit box.</dd></dl></li></ul>
 </td></tr>
 <tr>
 <th>Number of Columns
@@ -74,7 +76,7 @@ When single column is chosen, a further control <b>Split</b> drop-down list will
 <tr>
 <th>Split
 </th>
-<td>This control is only available for single reference column selected. Specify how to split the worksheet according to the selected reference column:
+<td>This control is only available for <b>Split Mode = Reference Columns</b> and single reference column selected. Specify how to split the worksheet according to the selected reference column:
 <ul><li><b>By Value</b>
 <dl><dd>Split the worksheet rows according to the values in reference column. The rows with same value in reference column will be split and extracted into a new worksheet. Tolerance is allowed for numeric values. This is the default selection for the <b>Split</b> control of selected single reference column.</dd></dl></li>
 <li><b>By Direction Change</b>
@@ -83,7 +85,7 @@ When single column is chosen, a further control <b>Split</b> drop-down list will
 <dl><dd>Split the worksheet rows when the reference values finished going up/down and have been reset to the base. </dd></dl></li>
 <li><b>By Value Change</b>
 <dl><dd>Split the worksheet rows when the reference value changes. Tolerance is allowed for numeric values. Reference values will be used as identifier and set as <a href="../../UserGuide/UserGuide/Basic_Operations_on_Worksheet.html#Name_and_Notes" title="UserGuide:Basic Operations on Worksheet">sheet label</a> of each result sheet.</dd></dl></li></ul>
-<p><a  class="image"><img alt="Split By Reference Columns.png" src="../images/Split_Worksheet/Split_By_Reference_Columns.png?v=86455" width="803"  /></a>
+<p><a  class="image"><img alt="Split By Reference Columns.png" src="../images/Split_Worksheet/750px-Split_By_Reference_Columns.png?v=86455" width="750"   /></a>
 </p>
 </td></tr>
 <tr>
@@ -114,9 +116,17 @@ When single column is chosen, a further control <b>Split</b> drop-down list will
 <td>Exclude empty cells or cells containing Origin's missing value character (<b>"--"</b>), from split result (applies to <b>By Reference Columns</b> only).
 </td></tr>
 <tr>
+<th>Custom Rows
+</th>
+<td> Available when <b>Split Mode</b> = <b>By Various Rows</b>. Specify various number of rows for splitting the worksheet.
+<p><i><b>Example: 10 2(2 20) 30=10 2 20 2 20 30…</b></i>
+<br /> Worksheet will be split to 1st sheet contains 10 rows, the 2nd and the 4th sheet contain 2 rows, the 3rd and the 5th sheet contains 20 rows, the 6th sheet contains 30 rows, and the rest will put to the 7th sheet.
+</p>
+</td></tr>
+<tr>
 <th>Copy Column Formula to Result
 </th>
-<td>If the source worksheet contains column formjula, control how to deal with the formula.
+<td>If the source worksheet contains column formula, control how to deal with the formula.
 <ul><li><b>None</b>
 <dl><dd>Do not copy the column formula</dd></dl></li>
 <li><b>Copy and Execute</b>

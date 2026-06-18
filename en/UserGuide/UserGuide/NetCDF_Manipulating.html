@@ -89,6 +89,9 @@
 <li> Give the ROI a meaningful (unique) name and click OK.</li></ol>
 <p><br />
 </p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/NetCDF_Manipulating/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>If you’ve zoomed in the matrix and thus the ROI has scrolled out of view, you can locate the ROI in the Object Manager (docked top-right by default), right click on it and select <b>Scroll To</b> to bring the ROI back to the center instantly. 
+</p></td></tr></table>
 <h4><a name="Copy_and_Paste_Positions"></a><span class="mw-headline">Copy and Paste Positions</span></h4>
 <p>Copy the position of the selected ROI. Then paste the position of the selected ROI to another ROI (width, height...all). 
 </p>
@@ -99,9 +102,9 @@
 </p>
 <dl><dd><a  class="image"><img alt="NetCDF Export Import ROI.gif" src="../images/NetCDF_Manipulating/NetCDF_Export_Import_ROI.gif?v=89291" width="852"  /></a></dd></dl>
 <h4><a name="Create_ROI_from_XY"></a><span class="mw-headline">Create ROI from XY</span></h4>
-<p>Add ROI on the matrix, right-click on the ROI in the Matrix, select <b>Create ROI from XY</b>, and use <b>xy2roi</b> tool to import the Worksheet XY data for defining the ROI.
+<p>Right-click inside the matrix or on a ROI box, select <b>Create ROI from XY</b>, then use the <a class="external text" href="../../XFunction/X-Function/Xy2roi.html"><b>xy2roi</b></a> dialog to choose the XY boundary and index data from worksheet for defining the ROI. Optionally specify the ROI name and group info.
 <br /><br />
-<i>For example, there is a dataset from shapefiles, you can import it into the NetCDF matrix.</i>
+<i>For example, the image below shows how to use a shapefile boundary to craeate a ROI.</i>
 </p>
 <dl><dd><a  class="image"><img alt="NetCDF Create ROI from XY.gif" src="../images/NetCDF_Manipulating/NetCDF_Create_ROI_from_XY.gif?v=89292" width="852"  /></a></dd></dl>
 <h4><a name="Create_New"></a><span class="mw-headline">Create New</span></h4>
@@ -112,13 +115,10 @@
 <p>Use the <b>mroi2xyz</b> tool to generate a new worksheet of XYZ values in the ROI.
 </p>
 <h4><a name="Intensity_Profile"></a><span class="mw-headline">Intensity Profile</span></h4>
-<p>Use the <b>mroiprofile</b> tool to generate the descriptive statistics value (<b>Mean</b>, <b>SD</b>, <b>Min</b>, <b>Max</b>, <b>Median</b>, <b>Sum</b>, <b>XY of Min</b> and <b>XY of Max</b>) for the ROI. The <b>Intensity Profile</b> dialog gets a <b>Weighted ROI</b> check box. When this option is selected, each pixel is weighted by the area of the intersection of the pixel rectangle and the ROI polygon. This is to improve results when the ROI coordinates do not fully cover a pixel.
-</p><p>For example, after add a shapefiles dataset as the ROI (<a href="../../UserGuide/UserGuide/NetCDF_Manipulating.html#Create_ROI_from_XY" title="UserGuide:NetCDF Manipulating"><b>Create ROI from XY</b></a> tool), you can use use Intensity Profile tool to analysis the ROI dataset.
+<p>Right click on the ROI box and select <b>Intensity  Profile</b>, then use the <a class="external text" href="../../XFunction/X-Function/Mroiprofile.html"><b>mroiprofile</b></a> dialog to get the descriptive statistics ( <b>Mean</b>, <b>SD</b>, <b>Min</b>, <b>Max</b>, <b>Median</b>, <b>Sum</b>, etc.) for the ROI. The <b>Weighted ROI</b> checkbox will apply a weight to the pixels on the boundary, where each pixel (a rectangle point) is weighted by the area inside the ROI polygon. This improves accuracy when the ROI coordinates do not fully cover a pixel. 
+</p><p>The image below shows how to perform Intensity Profile on a ROI created from a shapefiles dataset (<a href="#Create_ROI_from_XY"><b>Create ROI from XY</b></a>.
 </p>
 <dl><dd><a  class="image"><img alt="NetCDF Intensity Profile.gif" src="../images/NetCDF_Manipulating/NetCDF_Intensity_Profile.gif?v=89293" width="852"  /></a></dd></dl>
-<p><br />
-Refer to the X-Function <a class="external text" href="../../XFunction/X-Function/Mroiprofile.html">Mroiprofile</a> to know more about this dialog.
-</p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/NetCDF_Manipulating/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>There can be a speed issue when there are many ROIs, <b>Profile on</b> = <b>All ROIs on Matrix</b> and <b>Data Layout</b> = <b>Matrix Rowwise</b>. The slowness is caused by maintaining output columns of Report Data. In such cases, if the original output has number of columns greater than <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#R%7C"><b>@RDRC</b></a>, output will simply remove all original columns. However, it should be noted that removing all output columns will also cause plots made from output, to be destroyed.
 </p></td></tr></table>

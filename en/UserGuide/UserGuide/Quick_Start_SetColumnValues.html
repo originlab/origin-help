@@ -1,4 +1,4 @@
-<h1 class="firstHeading">4.6.8.1 Quick Start</h1><p class='urlname' style='display: none'>Wks-SetColVal-QuickStart</p>
+<h1 class="firstHeading">4.6.9.1 Quick Start</h1><p class='urlname' style='display: none'>Wks-SetColVal-QuickStart</p>
 <p><br />
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
@@ -242,8 +242,11 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 <td><b>Note:</b> When using <b>i</b> and <b>j</b> in <b>Set Values</b> or in the <a class="external text" href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D"><b>F(x)=</b> column label row</a>, <i>you must refer to them using lowercase letters</i>. Uppercase <b>I</b> and <b>J</b> will be interpreted as worksheet column short names.
 </td></tr></table>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Use "end" or "0" to define the last cell in a column, e.g. <code>total(A[10:end])-B[i]</code> or <code>total(A[10:0])-B[i]</code>.
-</p></td></tr></table>
+	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Refer to the last row or column:
+</p>
+<ul><li> Use "end" or "0" to define the last cell in a column, e.g. <code>total(A[10:end])-B[i]</code> or <code>total(A[10:0])-B[i]</code>.</li>
+<li> Use "0" to define the last column in a worksheet, e.g. <code>[Book1]Sheet1!wcol(10):wcol(0)</code></li></ul>
+</td></tr></table>
 <h3><a name="Autocomplete"></a><span class="mw-headline">Autocomplete</span></h3>
 <p>Starting with <b>Origin 2022</b>, the column formula box in <b>Set Values</b> and <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows"><b>F(x)=</b> label row</a> get autocompletion support for <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html">LabTalk-supported functions</a> and <a href="../../UserGuide/UserGuide/Named_Range.html" title="UserGuide:Named Range">named ranges</a>. 
 </p><p>If you do not wish to use the feature, you can disable it for column and/or <a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="UserGuide:Using Formulae to Set Cell Values">cell formulas</a>/F(x)=:
@@ -298,10 +301,10 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 <p>The following short tutorial will show you how to use this dialog to set values for multiple columns simultaneously.
 </p>
 <ol>
-<li> Create a new project by clicking the <b>New Project</b> button <a  class="image"><img alt="Button New Project.png" src="../images/Quick_Start_SetColumnValues/Button_New_Project.png?v=1846" width="22"  /></a> on the <b>Standard</b> toolbar.
-<li> Click the <b>Import Multiple ASCII</b> button <a  class="image"><img alt="Button Import Multiple ASCII.png" src="../images/Quick_Start_SetColumnValues/Button_Import_Multiple_ASCII.png?v=1805" width="23"  /></a> to import the files <i>F1,dat</i> and <i>F2.dat</i> in the <i>&lt;Origin Folder&gt;\Samples\Import and Export\</i> path. In the <b>impASC</b> dialog, set <b>Multi-File (except 1st) Import Mode</b> to <b>Start New Books</b> and click <b>OK</b>.
+<li> Create a new project by clicking the <b>New Project</b> button <a  class="image"><img alt="Button New Project.png" src="../images/Quick_Start_SetColumnValues/Button_New_Project.png?v=99632" width="14"  /></a> on the <b>Standard</b> toolbar.
+<li> Click the <b>Import Multiple ASCII</b> button <a  class="image"><img alt="Button Import Multiple ASCII.png" src="../images/Quick_Start_SetColumnValues/Button_Import_Multiple_ASCII.png?v=99693" width="16"  /></a> to import the files <i>F1,dat</i> and <i>F2.dat</i> in the <i>&lt;Origin Folder&gt;\Samples\Import and Export\</i> path. In the <b>impASC</b> dialog, set <b>Multi-File (except 1st) Import Mode</b> to <b>Start New Books</b> and click <b>OK</b>.
 <li> Two workbooks will be created, named as F1 and F2. Click the <b>New Workbook</b> button <a  class="image"><img alt="New Workbook.png" src="../images/Quick_Start_SetColumnValues/New_Workbook.png?v=305" width="25"  /></a> on the <b>Standard</b> toolbar to create another workbook.
-<li> With the 3rd workbook active, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Quick_Start_SetColumnValues/Button_Add_New_Columns.png?v=23250" width="22"  /></a> to add a column. Highlight all columns, select <b>Column: Set Multiple Columns Values</b> from the main menu or right-click the columns to select <b>Set Multiple Columns Values</b> in the context menu to open the <b>Set Values</b> dialog.
+<li> With the 3rd workbook active, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Quick_Start_SetColumnValues/Button_Add_New_Columns.png?v=99295" width="16"  /></a> to add a column. Highlight all columns, select <b>Column: Set Multiple Columns Values</b> from the main menu or right-click the columns to select <b>Set Multiple Columns Values</b> in the context menu to open the <b>Set Values</b> dialog.
 <li> Expand the bottom panel by clicking the Show Scripts button <a  class="image"><img alt="Button Show Scripts.png" src="../images/Quick_Start_SetColumnValues/Button_Show_Scripts.png?v=36233" width="23"  /></a>. Enter below scripts in the <b>Before Formula Scripts</b> edit box, 
 <pre class="lt" style="font-family:monospace;">range r1<span style="color: #000080;">=</span><span style="color: #000000;">&#91;</span>F1<span style="color: #000000;">&#93;</span>F1<span style="color: #000080;">!</span>wcol<span style="color: #000000;">&#40;</span>j<span style="color: #000000;">&#41;</span>; <span style="color: #008000;">//&quot;j&quot; is the column index.</span>
 range r2<span style="color: #000080;">=</span><span style="color: #000000;">&#91;</span>F2<span style="color: #000000;">&#93;</span>F2<span style="color: #000080;">!</span>wcol<span style="color: #000000;">&#40;</span>j<span style="color: #000000;">&#41;</span>;</pre>
@@ -333,9 +336,9 @@ For more information on using Python in the Set Values dialog see <a class="exte
 <p>This simple tutorial will show you how to define a function on the <b>Python Function</b> tab and call it in the <b>Column Formula</b> box:
 </p>
 <ol>
-<li> Starting with a new workbook, click the <b>Import Single ASCII</b> button <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Quick_Start_SetColumnValues/Button_Import_Single_ASCII.png?v=1806" width="23"  /></a> on the <b>Import</b> toolbar.
+<li> Starting with a new workbook, click the <b>Import Single ASCII</b> button <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Quick_Start_SetColumnValues/Button_Import_Single_ASCII.png?v=99692" width="16"  /></a> on the <b>Import</b> toolbar.
 <li> Browse to and open the file &lt;Origin Program Folder&gt;\Samples\Signal Processing\Signal with High Frequency Noise.dat.
-<li> Click the <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Quick_Start_SetColumnValues/Button_Add_New_Columns.png?v=23250" width="22"  /></a> on the Standard toolbar.
+<li> Click the <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Quick_Start_SetColumnValues/Button_Add_New_Columns.png?v=99295" width="16"  /></a> on the Standard toolbar.
 <li> Click on the new column heading to select the column, then right-click and choose <b>Set Column Values</b>.
 <li> If it is not displayed, expand the bottom panel by clicking the <b>Show Scripts</b> button <a  class="image"><img alt="Button Show Scripts.png" src="../images/Quick_Start_SetColumnValues/Button_Show_Scripts.png?v=36233" width="23"  /></a>.
 <li> Click the <b>Python Functions</b> tab and copy and paste the following:

@@ -1,4 +1,4 @@
-<h1 class="firstHeading">29.4.14 Frequency Chart</h1><p class='urlname' style='display: none'>Frequency-Chart</p>
+<h1 class="firstHeading">30.4.14 Frequency Chart</h1><p class='urlname' style='display: none'>Frequency-Chart</p>
 <dl><dd><a  class="image"><img alt="Frequency Chart 01.png" src="../images/Frequency_Chart/Frequency_Chart_01.png?v=98454" width="787"  /></a></dd></dl>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -22,7 +22,7 @@
 </p><p>From the menu, choose <span class="menu">Plot &gt; Bar, Pie, Area: Frequency Chart</span>. The dialog <b>plot_frequency</b> will pop up.
 </p>
 <h3><a name="The_.22plot_frequency.22_dialog_box"></a><span class="mw-headline">The "plot_frequency" dialog box</span></h3>
-<p><a  class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png?v=98540" width="800"   /></a>
+<p><a  class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png?v=99484" width="800"   /></a>
 </p>
 <table class="dialogcontroltable">
 
@@ -50,10 +50,19 @@
 <li> <b>Nested Count in Same Graph</b>:Count the nested counts of last input column based on all selected columns, and then plot them on the same graph.</li></ul>
 </td></tr>
 <tr>
-<th>Split Panels by
+<th>Horizontal Panels by
 </th>
-<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a frequency chart for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
-<p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma; Meanwhile, if <b>Multiple Data</b> is set to <b>Nested Count in Same Graph</b>, this option will be hidden.
+<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a frequency chart for each grouping value seperately.
+<p>If <b>Vertical Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
+</p><p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.
+</p>
+</td></tr>
+<tr>
+<th>Vertical Panels by
+</th>
+<td>Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertical panels</a> which show a frequency chart for each grouping value seperately.
+<p>If <b>Horizontal Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.
+</p><p>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.
 </p>
 </td></tr>
 <tr>
@@ -91,6 +100,11 @@
 <th>Graph Template
 </th>
 <td>This option will show default template to create the different plot types. You can uncheck <b>Auto</b> box to choose another template, such as user-defined templates.
+</td></tr>
+<tr>
+<th>Output To
+</th>
+<td>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
 </td></tr>
 <tr>
 <th>Output Plot Data

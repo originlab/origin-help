@@ -2,12 +2,10 @@
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">Results Log Output</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Input_Data_Form"><span class="tocnumber">3</span> <span class="toctext">Input Data Form</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Proportion_Test"><span class="tocnumber">4</span> <span class="toctext">Proportion Test</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Test_Methods"><span class="tocnumber">5</span> <span class="toctext">Test Methods</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Power Analysis</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Outputs"><span class="tocnumber">7</span> <span class="toctext">Outputs</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Proportion_Test"><span class="tocnumber">3</span> <span class="toctext">Proportion Test</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">Power Analysis</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Output</span></a></li>
 </ul>
 </div>
 
@@ -19,29 +17,21 @@
 </p>
 <ul><li> <a href="../../UserGuide/Category/Two_Sample_Proportion_Test(Pro_Only).html" title="Category:Two Sample Proportion Test(Pro Only)">Introduction: Two-Sample Proportion Test</a></li>
 <li> <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">Algorithms: Two-Sample Proportion Test</a></li></ul>
-<h2><a name="Results_Log_Output"></a><span class="mw-headline">Results Log Output</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>Results Log Output</b>
-</th>
-<td>
-<p>Select to output results to the Results Log.
+<p><br />
 </p>
-</td></tr></table>
-<h2><a name="Input_Data_Form"></a><span class="mw-headline">Input Data Form</span></h2>
+<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
 <th>Summarized
 </th>
 <td>Perform the test using summary statistics that you enter into the dialog box manually.
-<dl><dd><b>Number of Success of Sample1</b></dd></dl>
-<dl><dd>The number of observed "successes" in sample 1</dd></dl>
+<dl><dd><b>Number of Events of Sample1</b></dd></dl>
+<dl><dd>The number of observed "events" in sample 1</dd></dl>
 <dl><dd><b>Sample Size of Sample1</b></dd></dl>
 <dl><dd>The total number of observations in sample 1</dd></dl>
-<dl><dd><b>Number of Success of Sample2</b></dd></dl>
-<dl><dd>The number of observed "successes" in sample 2</dd></dl>
+<dl><dd><b>Number of Events of Sample2</b></dd></dl>
+<dl><dd>The number of observed "events" in sample 2</dd></dl>
 <dl><dd><b>Sample Size of Sample2</b></dd></dl>
 <dl><dd>The total number of observations in sample 2</dd></dl>
 </td></tr>
@@ -55,8 +45,8 @@
 <dd>Specify the data ranges of sample 1 and sample 2</dd></dl>
 <dl><dd><dl><dd><b>1st Data Range</b></dd></dl></dd></dl>
 <dl><dd><dl><dd><b>2nd Data Range</b></dd></dl></dd></dl>
-<dl><dd><b>Success</b></dd></dl>
-<dl><dd>The dataset value that denotes success.</dd></dl>
+<dl><dd><b>Event</b></dd></dl>
+<dl><dd>The dataset value that denotes event.</dd></dl>
 </td></tr>
 <tr>
 <th>Index
@@ -68,8 +58,8 @@
 <dd>Specify one sample data column and one grouping column.</dd></dl>
 <dl><dd><dl><dd><b>Group Range</b></dd></dl></dd></dl>
 <dl><dd><dl><dd><b>Data Range</b></dd></dl></dd></dl>
-<dl><dd><b>Success</b></dd></dl>
-<dl><dd>The dataset value that denotes success.</dd></dl>
+<dl><dd><b>Event</b></dd></dl>
+<dl><dd>The dataset value that denotes even.</dd></dl>
 </td></tr></table>
 <h2><a name="Proportion_Test"></a><span class="mw-headline">Proportion Test</span></h2>
 <table class="dialogcontroltable">
@@ -109,26 +99,17 @@
 <th>Confidence Level(s) in&#160;%
 </th>
 <td>Specifies the confidence levels for which the confidence intervals will be computed. This option is only available when <b>Confidence Interval(s)</b> is selected.
-</td></tr></table>
-<h2><a name="Test_Methods"></a><span class="mw-headline">Test Methods</span></h2>
-<p>To learn more about test methods, see the <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">algorithms page</a>. 
-</p>
-<table class="dialogcontroltable">
-
-<tr>
-<th>Normal Approximation
-</th>
-<td>Compute the p value and confidence interval in result with normal approximation normal distribution
 </td></tr>
 <tr>
-<th>Use pooled p for test
+<th>Test Methods
 </th>
-<td>Specify to use a <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html#P_Value" title="UserGuide:Algorithm (Two sample proportion test)">pooled estimate of p</a> for the test when <b>Test Difference</b> is 0
-</td></tr>
-<tr>
-<th>Fisher's Exact Test
-</th>
-<td>Compute the p value and confidence interval with the Fisher's exact test, which is based on the Binomial Test .
+<td>To learn more about test methods, see the <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">algorithms page</a>.
+<ul><li> <b>Normal Approximation</b></li></ul>
+<dl><dd>Compute the p value and confidence interval in result with normal approximation normal distribution </dd></dl>
+<ul><li> <b>Use pooled p for test</b></li></ul>
+<dl><dd>Specify to use a <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html#P_Value" title="UserGuide:Algorithm (Two sample proportion test)">pooled estimate of p</a> for the test when <b>Test Difference</b> is 0</dd></dl>
+<ul><li><b>Fisher's Exact Test</b></li></ul>
+<dl><dd>Compute the p value and confidence interval with the Fisher's exact test, which is based on the Binomial Test .</dd></dl>
 </td></tr></table>
 <h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
 <p>Power Analysis check box: If checked, power will be computed for the porportion test.
@@ -155,13 +136,35 @@
 </th>
 <td>Specifies the hypothetical sample size(s), for which power will be computed. This option is only available when <i>Hypothetical Power</i> is checked.
 </td></tr></table>
-<h2><a name="Outputs"></a><span class="mw-headline">Outputs</span></h2>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<p>For help with the range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Output Results</a>
+</p>
 <table class="dialogcontroltable">
 
 <tr>
+<th> Results Log Output
+</th>
+<td>Select to output results to the Results Log.
+</td></tr>
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Specify whether to display the graphical summary report
+</td></tr>
+<tr>
+<th>Graphical Power Analysis Report
+</th>
+<td>Specify whether to display the graphical Power Analysis report. The power curve shows how the statistical power of the test changes as the difference in proportions varies. Power is the probability of rejecting the null hypothesis when the true difference differs from 0.
+</td></tr>
+<tr>
 <th>Output Results
 </th>
-<td>Specify the output worksheet for test results
+<td>Specify the worksheet for output of test results
+</td></tr>
+<tr>
+<th>Output Plot Data
+</th>
+<td>Specify the worksheet for output the plot datasets.
 </td></tr></table>
 
 

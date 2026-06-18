@@ -1,0 +1,46 @@
+<h1 class="firstHeading">4.6.12 Add/Insert to Other Sheets</h1><p class='urlname' style='display: none'>Add-to-Other-Sheets</p>
+<p>The <b>Add to Other Sheets</b>/<b>Insert to Other Sheets</b> context menu are used to batch-add selected column(s) to multiple worksheets. This is typically useful when you have many sheets with similar structures, and after you have done some operations to add new column(s) in one sheet, this handy tool helps you "copy" the new column(s) to other sheets. This quick "copy" operation can include label rows, sampling interval, and plot designation. The following image shows a short exmaple: suppose there are multiple sensor files (XY data) requiring calibration. After adding a third column and performing first-point subtraction in one sheet, you can propagate this column to other sheets.
+</p>
+<dl><dd><a  class="image"><img alt="Add to Other Sheets EX.gif" src="../images/Add_to_Other_Sheets/Add_to_Other_Sheets_EX.gif?v=99122" width="597"  /></a></dd></dl>
+<p><br />
+<span class='headerInParagraph'>To add column(s) to other sheets:</span>
+</p>
+<ul>
+<li> Select the target column(s) - you can select one single column or several consecutive columns, right click, and choose <b>Add to Other Sheets</b>/<b>Insert to Other Sheets</b> from the context menu.
+<br />The selected column(s) must meet one of the following conditions:
+<ul>
+<li> NOT be the output of an analysis (e.g. results from <b>Smooth</b> or <b>Interpolation</b>), i.e., plain number or text; <i>or, </i>
+<li> be the output of <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues"><b>Set Column Values</b></a>. 
+</ul></li></ul>
+<p><br />
+<a  class="image"><img alt="Add to Other Sheets Dialog.png" src="../images/Add_to_Other_Sheets/Add_to_Other_Sheets_Dialog.png?v=99724" width="557"  /></a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th style="width:20%">Add Columns to
+</th>
+<td>Choose the scope to search: <b>Applicable Sheets in Book/Folder/Project</b>.
+</td></tr>
+<tr>
+<th>Limit to Similar Worksheets
+</th>
+<td>This checkbox requires worksheets with the same number of columns excluding the selected column(s) and matching data types and Short Name. Check it to only add column(s) to matched sheets and specify the matching rules.
+<ul><li> <b>Must Match Column Label</b> 
+<dl><dd>Match by column <b>Long Name</b> or <b>Comment</b>. Select <b>None</b> to match by Short Name.</dd></dl></li>
+<li> <b>Must Match Units</b> </li>
+<li> <b>Match <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">Column Designations</a></b>.</li></ul>
+<p>Once configured, the number of <b>Applicable Sheets in Book/Folder/Other Folders</b> is listed at the bottom for confirmation.
+</p>
+</td></tr>
+<tr>
+<th>Copy Data if <br />no Column Formula
+</th>
+<td>If the selected columns are plain number/text, check this checkbox to also copy the contents. Otherwise only the column label rows will be copied.
+</td></tr></table>
+
+
+
+
+
+

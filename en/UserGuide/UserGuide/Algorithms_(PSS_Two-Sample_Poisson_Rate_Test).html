@@ -1,0 +1,28 @@
+<h1 class="firstHeading">17.9.11.2 Algorithms (PSS: Two-Sample Poisson Rate Test)</h1><p class='urlname' style='display: none'>PSS-Two-PoissonRate-Algorithm</p>
+<h3><a name="Power"></a><span class="mw-headline">Power</span></h3>
+<p><b>One-sided power</b>:<img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-401ef2b79d8b999062a9c3b08a41c17a.png?v=0" title="H_0:\lambda_1\le \lambda_2" alt="H_0:\lambda_1\le \lambda_2" class="tex"/>
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-a50593686323c0af5033bf1d52279007.png?v=0" title="Power =1-F\left(\frac{\lambda_2-\lambda_1+z_{\alpha }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" alt="Power =1-F\left(\frac{\lambda_2-\lambda_1+z_{\alpha }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" class="tex"/>
+</p><p><b>One-sided power</b>:<img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-898559c6f66a2a3fd8953fbe23bebf1b.png?v=0" title="H_0:\lambda_1\ge \lambda_2" alt="H_0:\lambda_1\ge \lambda_2" class="tex"/>
+</p><p><br />
+<img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-e47fd059d526fe2eb702157deff5e3e9.png?v=0" title="Power =F\left(\frac{\lambda_2-\lambda_1-z_{\alpha }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" alt="Power =F\left(\frac{\lambda_2-\lambda_1-z_{\alpha }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" class="tex"/>
+</p><p><br />
+<b>Two-sided power</b> <img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-796f76f10625c0220ccedfb8543c7276.png?v=0" title="H_0: \lambda_1=\lambda_2\!" alt="H_0: \lambda_1=\lambda_2\!" class="tex"/> 
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-8c94d3a383a49991b4b9b89aa7307cda.png?v=0" title="Power =1-F\left(\frac{\lambda_2-\lambda_1+z_{\frac{\alpha}{2} }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)+F\left(\frac{\lambda_2-\lambda_1-z_{\frac{\alpha}{2} }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" alt="Power =1-F\left(\frac{\lambda_2-\lambda_1+z_{\frac{\alpha}{2} }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)+F\left(\frac{\lambda_2-\lambda_1-z_{\frac{\alpha}{2} }\sqrt{\frac{\lambda_c}{n}\left(\frac{1}{T_1}+\frac{1}{T_2}\right)}}{\sqrt{\frac{\lambda_1}{nT_1}+\frac{\lambda_2}{nT_2}}}\right)" class="tex"/>
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-7b8b965ad4bca0e41ab51de7b31363a1.png?v=0" title="n" alt="n" class="tex"/>: The sample size of each group
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-ef8865f6e97b1f942ba13021e6302cb4.png?v=0" title="\lambda_1" alt="\lambda_1" class="tex"/>: The rate of 1st population
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-fa114695aec226f8062b6702f7c89dd8.png?v=0" title="\lambda_2" alt="\lambda_2" class="tex"/>: The rate of 2nd population
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-c87cdceab10b84fb120fca2e77b27593.png?v=0" title="\lambda_c =\frac{T_1\lambda_{1}+T_2\lambda_{2}}{T_1+T_2}" alt="\lambda_c =\frac{T_1\lambda_{1}+T_2\lambda_{2}}{T_1+T_2}" class="tex"/>
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-3abc4a58be38c24030120ec6c3464783.png?v=0" title="z_{\alpha }" alt="z_{\alpha }" class="tex"/>: The <img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-7b7f9dbfea05c83784f8b85149852f08.png?v=0" title="\alpha" alt="\alpha" class="tex"/>-level upper critical value of Normal distribution
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-1cf3a44a9e37199f38d0e49c787182c9.png?v=0" title="z_{\frac{\alpha}{2} }" alt="z_{\frac{\alpha}{2} }" class="tex"/>: The <img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-d10e63f9fadfc68af5748d918bc9915d.png?v=0" title="\frac{\alpha}{2}" alt="\frac{\alpha}{2}" class="tex"/>-level two-side critical value of Normal distribution
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-800618943025315f869e4e1f09471012.png?v=0" title="F" alt="F" class="tex"/>: The cumulative distribution function of the standard normal distribution
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-2452fee413f58bb9509e88d80d4b9f8d.png?v=0" title="T_1" alt="T_1" class="tex"/>: Exposure of 1st group
+</p><p><img src="../images/Algorithms_(PSS_Two-Sample_Poisson_Rate_Test)/math-6a058d102910f33a7d4cf9ea23067b8c.png?v=0" title="T_2" alt="T_2" class="tex"/>: Exposure of 2nd group
+</p>
+<h3><a name="Sample_Size"></a><span class="mw-headline">Sample Size</span></h3>
+<p>Origin uses an iterative algorithm with the power equation. At each iteration, the power is evaluated for a candidate sample size. The iteration stops when the computed power reaches the target value. The reported sample size is then the smallest integer greater than or equal to this value (i.e., the nearest larger integer).
+</p>
+
+
+
+
+

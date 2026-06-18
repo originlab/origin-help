@@ -1,7 +1,7 @@
 <h1 class="firstHeading">27.7.3.5 The (Options) Miscellaneous Tab</h1><p class='urlname' style='display: none'>Options-Dialog-Misc-Tab</p>
 <p><br />
 </p>
-<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png?v=97659" width="622"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png?v=99875" width="622"  /></a></dd></dl>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Proxy_Group"><span class="tocnumber">1</span> <span class="toctext">Proxy Group</span></a></li>
@@ -257,23 +257,26 @@
 </p>
 </td></tr>
 <tr>
-<th>Default Multi-ASCII Import Plot XY
+<th>Data Connector
 </th>
 <td>
-<p>This combo list controls the default setting in the <b>Plot Designation Column</b> list on the lower panel of the <b>Import Multiple ASCII</b> dialog box (One can open this dialog box by activating a graph and then clicking the <a  class="image"><img alt="Button Import Multiple ASCII.png" src="../images/The_(Options)_Miscellaneous_Tab/Button_Import_Multiple_ASCII.png?v=1805" width="23"  /></a> button on the <b>Standard</b> toolbar). This value specifies the default plotting desinatiions for data imported into the graph directly.
+<p>This combo list controls how the Data Connector behaves during and after the import process
 </p>
-<dl><dd><ul><li><b>XY1</b> </li></ul>
-<dl><dd>Origin will import all the columns. Origin assumes the first column contains X values and all remaining columns contain Y values. In this case, the "1" indicates that the last character "Y" is repeated for all remaining columns. </dd></dl>
-<ul><li><b>DXY1</b> </li></ul>
-<dl><dd>Origin will disregard the first column of data, then import the rest of the file according to the rules of XY1. </dd></dl>
-<ul><li><b>XY</b> </li></ul>
-<dl><dd>Origin will import the first and second columns as X and Y values respectively. </dd></dl>
-<ul><li><b>XY2</b> </li></ul>
-<dl><dd>Origin will import all the columns. However, in this case Origin assumes the first column contains X1 values, the second column contains Y1 values, the third column contains X2 values, the fourth column contains Y2 values, and so on. In this case, the "2" indicates that the last two characters "X" and "Y" are repeated for all remaining columns. </dd></dl>
-<ul><li><b>XYE</b> </li></ul>
-<dl><dd>Origin will import the first, second, and third columns as X, Y, and Y error values respectively. </dd></dl>
-<ul><li><b>XYZ</b> </li></ul>
-<dl><dd>Origin will import the first, second, and third columns as X, Y, and Z values respectively.  </dd></dl></dd></dl>
+<dl><dd><ul><li><b>Lock imported data</b> </li></ul>
+<dl><dd>Imported data is locked and cannot be sorted or edited.</dd></dl>
+<ul><li><b>Allow data sorting</b> </li></ul>
+<dl><dd>Imported data can be sorted but not edited.</dd></dl>
+<ul><li><b>Unlock data after import</b> </li></ul>
+<dl><dd>Imported data is fully unlocked and can be freely edited and sorted.</dd></dl>
+<ul><li><b>Remove connector after import</b> </li></ul>
+<dl><dd>The Data Connector is removed once the import is complete.</dd></dl></dd></dl>
+</td></tr>
+<tr>
+<th>Exclude Imported when Saving
+</th>
+<td>It controls whether save imported data when saving the workbook/project.
+<dl><dd><ul><li> When check this option, and by default the System Variable <i><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D">@DNS=0</a></i> (<i>@FSE</i> (for local data) and <i>@FSEW</i> (for web data) is turned on ), if the file size is more than the threshold size, the imported data will be excluded.  Otherwise, file size is less than the threshold size, the imported data will be saved.</li>
+<li> When uncheck this option, it will always save imported data whatever that is less or more that the threshold size.</li></ul></dd></dl>
 </td></tr></table>
 <h2><a name="Print_Group"></a><span class="mw-headline">Print Group</span></h2>
 <table class="dialogcontroltable">

@@ -1,4 +1,4 @@
-<h1 class="firstHeading">29.10.3 Grouped Histogram</h1><p class='urlname' style='display: none'>grouped-histogram</p><a  class="image"><img alt="Grouped Histogram.png" src="../images/Grouped_Histogram/600px-Grouped_Histogram.png?v=98576" width="600"   /></a>
+<h1 class="firstHeading">30.10.3 Grouped Histogram</h1><p class='urlname' style='display: none'>grouped-histogram</p><a  class="image"><img alt="Grouped Histogram.png" src="../images/Grouped_Histogram/600px-Grouped_Histogram.png?v=98576" width="600"   /></a>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
@@ -23,7 +23,7 @@
 </p><p>You can refer to the section below for the detailed dialog controls:
 </p>
 <h3><a name="The_plot_ghist_Dialog_Box"></a><span class="mw-headline">The plot_ghist Dialog Box</span></h3>
-<p><a  class="image"><img alt="Plot ghist dialog box.png" src="../images/Grouped_Histogram/Plot_ghist_dialog_box.png?v=98485" width="498"  /></a>
+<p><a  class="image"><img alt="Plot ghist dialog box.png" src="../images/Grouped_Histogram/Plot_ghist_dialog_box.png?v=99481" width="589"  /></a>
 </p>
 <table class="dialogcontroltable">
 
@@ -45,8 +45,17 @@
 <dl><dd> <b>Overlay on Same Graph</b>: Plot the seleted input data as overlapping plots on the same graph layer.</dd>
 <dd> <b>Seperate Layers on Same Graph</b>:Plot the seleted input data into seperate layers on the same graph layer.</dd>
 <dd> <b>Seperate Graphs</b>:Plot the seleted input data on the seperate graph windows.</dd></dl></li>
+<li><b>Split Data by</b>
+<ul><li> When Multiple Data is not set to Separate Graphs, this control will show. You can choose a column label row to split multiple data into different data groups.</li></ul></li>
+<li> <b>Multiple Data Groups</b>
+<ul><li> When any column label row has been selected for <b>Split Data by</b>, you can choose how to arrange the data groups: <b>Separate Layers</b> or <b>Separate Graphs</b>. </li></ul></li>
 <li><b>Stack Plots in Same Layer</b>: Check this box will stack all plots divided by grouping columns in same layer.</li>
-<li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped column plot for each grouping value seperately. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default. When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</li>
+<li> <b>Horizontal Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a grouped histogram plot for each grouping value seperately. 
+<dl><dd>If <b>Vertical Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
+<li> <b>Vertical Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertical panels</a> which show a grouped histogram plot for each grouping value seperately. 
+<dl><dd>If <b>Horizontal Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
 <li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created grouped columns in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
 </td></tr>
 <tr>
@@ -83,6 +92,11 @@
 <th> Graph Template
 </th>
 <td> Specify a user template if needed. By default, the Auto check box is checked and the built-in template Hist is used.
+</td></tr>
+<tr>
+<th>Output To
+</th>
+<td>Specify where to output the graph(s), as separate graph window(s) or embed within the report sheet.
 </td></tr>
 <tr>
 <th>Output Plot Data

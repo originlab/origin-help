@@ -1,0 +1,47 @@
+<h1 class="firstHeading">31.1.223 ThermDena</h1><p class='urlname' style='display: none'>ThermDena-FitFunc</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Script_Access"><span class="tocnumber">5</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Function_File"><span class="tocnumber">6</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Category"><span class="tocnumber">7</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><b>Upper baseline:</b> <img src="../images/ThermDena/math-5dd37e4b37c98d0315a89d5f525a535f.png?v=0" title="r_b=r_i+r_sx" alt="r_b=r_i+r_sx" class="tex"/>
+</p><p><b>Lower baseline:</b> <img src="../images/ThermDena/math-4745e38fd1cd3dab17a0e9d157e2ea37.png?v=0" title="l_b=l_i+l_sx" alt="l_b=l_i+l_sx" class="tex"/>
+</p><p><img src="../images/ThermDena/math-064966c74a3d9c36450655d4f6a71036.png?v=0" title="\Delta G = \Delta H \left( \frac{T_m-x}{T_m+273}\right)- \Delta C_p(T_m-x)+(x+273) \Delta C_p ln \left(\frac{T_m+273}{x+273} \right)" alt="\Delta G = \Delta H \left( \frac{T_m-x}{T_m+273}\right)- \Delta C_p(T_m-x)+(x+273) \Delta C_p ln \left(\frac{T_m+273}{x+273} \right)" class="tex"/>
+</p><p><img src="../images/ThermDena/math-05952e416978207d18633d6bd8ecc33a.png?v=0" title="K=e^{\frac{\Delta G}{RT}}" alt="K=e^{\frac{\Delta G}{RT}}" class="tex"/>
+</p><p><img src="../images/ThermDena/math-2bdfbab6970ad47a2666769717a0e8cd.png?v=0" title="y=\frac{K}{1+K}\left(u_b-l_b \right) + l_b" alt="y=\frac{K}{1+K}\left(u_b-l_b \right) + l_b" class="tex"/>
+</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>Thermal denaturation function
+</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="ThermDena Funcion.png" src="../images/ThermDena/ThermDena_Funcion.png?v=99597" width="355"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameters</span></h2>
+<p>Number:  7
+</p><p>Names:  ri, rs, li, ls, Tm, dh, dcp 
+</p><p>Meanings:  upper baseline intercept, upper baseline slope, lower baseline intercept, lower baseline slope, denaturant dependence of g, delta G (free energy) of folding
+</p><p>Lower Bounds:   Tm &gt; 0, dh &gt; 0, dcp &gt; 0
+</p><p>Upper Bounds:  none
+</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_ThermDena<span style="color: #000000;">&#40;</span>x,ri,rs,li,ls,Tm,dh,dcp<span style="color: #000000;">&#41;</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>ThermDena.fdf
+</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Enzyme Kinetics2
+</p>
+
+
+
+
+

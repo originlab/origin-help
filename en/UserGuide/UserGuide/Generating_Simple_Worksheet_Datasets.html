@@ -1,21 +1,5 @@
-<h1 class="firstHeading">4.6.7 Generating Simple Worksheet Datasets</h1><p class='urlname' style='display: none'>Wks-GenerateDataset</p>
-<p><br />
-</p><p>There several ways to fill one or more worksheet columns with data:
-</p>
-<ul><li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_Row_Numbers" title="UserGuide:Generating Simple Worksheet Datasets">Row Numbers</a></li>
-<li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_Uniform_Random_Numbers" title="UserGuide:Generating Simple Worksheet Datasets">Uniform Random Numbers</a></li>
-<li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_Normal_Random_Numbers" title="UserGuide:Generating Simple Worksheet Datasets">Normal Random Numbers</a></li>
-<li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_a_Set_of_Numbers" title="UserGuide:Generating Simple Worksheet Datasets">A set of Numbers</a></li>
-<li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_Date_Time_Values" title="UserGuide:Generating Simple Worksheet Datasets">A set of Date Time values</a></li>
-<li><a href="../../UserGuide/UserGuide/Generating_Simple_Worksheet_Datasets.html#Fill_with_Arbitrary_Text_Numeric_Values" title="UserGuide:Generating Simple Worksheet Datasets">Arbitrary set of Text Numeric values</a></li></ul>
-<p><br />
-</p>
-<table class="note">
-
-<tr>
-<td><b>Note:</b> The seeding algorithm for Origin's GUI methods of random number generation was changed for version 2016. For more information, see documentation for <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#R">the system variable @ran</a>.
-</td></tr></table>
-<p><br />
+<h1 class="firstHeading">4.6.8 Generating Simple Worksheet Datasets</h1><p class='urlname' style='display: none'>Wks-GenerateDataset</p>
+<p>There several ways to fill one or more worksheet columns with data:
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -40,18 +24,23 @@
 </ul>
 </div>
 
+<table class="note">
+
+<tr>
+<td><b>Note:</b> The seeding algorithm for Origin's GUI methods of random number generation was changed for version 2016. For more information, see documentation for <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#R">the system variable @ran</a>.
+</td></tr></table>
 <h2><a name="Fill_with_Row_Numbers"></a><span class="mw-headline">Fill with Row Numbers</span></h2>
 <p>This simple procedure creates a dataset from row index numbers.
 </p><p>Select the column(s) you would like to fill, then do one of the following:
 </p>
-<ul><li>Click the <b>Set Column Values According to Row Number</b> <a  class="image"><img alt="Button Set Col Values Index.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Index.png?v=1919" width="23"  /></a> button on the <b>Worksheet Data</b> toolbar. </li>
+<ul><li>Click the <b>Set Column Values According to Row Number</b> <a  class="image"><img alt="Button Set Col Values Index.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Index.png?v=99299" width="16"  /></a> button on the <b>Worksheet Data</b> toolbar. </li>
 <li>Select <b>Column: Fill Column With: Row Numbers</b>.</li>
 <li>Right-click and select <b>Fill Column With: Row Numbers</b>.</li></ul>
 <h2><a name="Fill_with_Uniform_Random_Numbers"></a><span class="mw-headline">Fill with Uniform Random Numbers</span></h2>
 <p>This menu command fills the worksheet column with uniformly distributed numbers between 0 and 1.  
 </p><p>Select the column(s) you would like to fill, then do one of the following:
 </p>
-<ul><li>Click the <b>Set Column Values with Uniform Random Numbers</b> <a  class="image"><img alt="Button Set Col Values Uniform Random.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Uniform_Random.png?v=1921" width="23"  /></a> button on the Worksheet Data toolbar. </li>
+<ul><li>Click the <b>Set Column Values with Uniform Random Numbers</b> <a  class="image"><img alt="Button Set Col Values Uniform Random.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Uniform_Random.png?v=99303" width="16"  /></a> button on the Worksheet Data toolbar. </li>
 <li>Select <b>Column: Fill Column With: Uniform Random Numbers</b>.</li>
 <li>Right-click and select <b>Fill Column With: Uniform Random Numbers</b>.  </li></ul>
 <p>Filled minimum and maximum values are determined by the UNIFORM_MIN and UNIFORM_MAX variables in the [FillColumn] section of the ORIGIN.INI file. By default, these variables are set to 0 and 1, respectively.
@@ -60,7 +49,7 @@
 <p>This menu command fills the worksheet column with normally distributed random numbers.
 </p><p>Select the column(s) you would like to fill, then do one of the following:
 </p>
-<ul><li>Click the <b>Set Column Values with Normal Random Numbers</b> <a  class="image"><img alt="Button Set Col Values Normal Random.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Normal_Random.png?v=1920" width="23"  /></a> button on the Worksheet Data toolbar. </li>
+<ul><li>Click the <b>Set Column Values with Normal Random Numbers</b> <a  class="image"><img alt="Button Set Col Values Normal Random.png" src="../images/Generating_Simple_Worksheet_Datasets/Button_Set_Col_Values_Normal_Random.png?v=99301" width="16"  /></a> button on the Worksheet Data toolbar. </li>
 <li>Select <b>Column: Fill Column With: Normal Random Numbers</b>. </li>
 <li>Right-click and select <b>Fill Column With: Normal Random Numbers</b>.  </li></ul>
 <p>For the normal random number fill, the mean and the standard deviation are controlled by the NORMAL_MEAN and NORMAL_SIGMA variables in the [FillColumn] section of the ORIGIN.INI file. By default, these variables are set to 0 and 1, respectively.

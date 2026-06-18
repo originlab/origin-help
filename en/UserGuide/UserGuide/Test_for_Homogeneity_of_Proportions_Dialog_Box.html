@@ -1,0 +1,198 @@
+<h1 class="firstHeading">17.3.9.1 Test for Homogeneity of Proportions Dialog Box</h1><p class='urlname' style='display: none'>Test-Homogeneity-Prop-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Statistics"><span class="tocnumber">3</span> <span class="toctext">Statistics</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Pairwise_Comparison"><span class="tocnumber">4</span> <span class="toctext">Pairwise Comparison</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Power Analysis</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
+<p>To open the Two-Sample Poisson Rate Test Dialog:
+</p>
+<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Two-Sample Poisson Rate Test...</b></li></ol>
+<p><br />
+<i><b>See Also:</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Test_for_Homogeneity_of_Proportions_(Pro_Only).html" title="Category:Test for Homogeneity of Proportions (Pro Only)">Introduction to Test for Homogeneity of Proportions</a></li></ul>
+<p><br />
+</p>
+<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Data Form
+</th>
+<td>
+<ul><li> <b>Summarized</b></li></ul>
+<dl><dd> Perform the test using summary statistics that you enter into the dialog box manually.</dd></dl>
+<ul><li> <b>Raw</b></li></ul>
+<dl><dd> Perform the test using a dataset in a column.</dd></dl>
+</td></tr>
+<tr>
+<th>Input Data (Summarized)
+</th>
+<td>
+<ul><li> <b>Sample Name</b></li></ul>
+<dl><dd> Specify name of the samples. You can specify a column as sample name, or enter space separated strings.</dd></dl>
+<ul><li> <b>Sample Size</b></li></ul>
+<dl><dd>The total number of observations.  You can specify a column dataset, or enter space separated value. (At least 3 samples.)</dd></dl>
+<ul><li> <b>Number of Events</b></li></ul>
+<dl><dd> Specify the value for number of events. You can specify a column dataset, or enter space separated value. (At least 3 samples.)</dd></dl>
+</td></tr>
+<tr>
+<th>Input Data (Raw)
+</th>
+<td>
+<ul><li><b>Sample</b></li></ul>
+<dl><dd>Specify columns as the sample dataset. (at least 3 columns.)</dd></dl>
+<ul><li><b>Event</b></li></ul>
+<dl><dd> Specify number of event.</dd></dl>
+</td></tr></table>
+<h2><a name="Statistics"></a><span class="mw-headline">Statistics</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Contingency Table
+</th>
+<td>This branch determines which statistics to calculate and output in the Contingency Table.
+<ul><li><b>Count</b></li></ul>
+<dl><dd>The observed frequency for each cell </dd></dl>
+<ul><li><b>Expected Counts</b></li></ul>
+<dl><dd>The observed frequency for each cell under the assumption that the column and row variable are independent </dd></dl>
+<ul><li><b>Residuals</b></li></ul>
+<dl><dd>The difference between the observed count and the expected count. </dd></dl>
+<ul><li><b>Standardized Residuals</b></li></ul>
+<dl><dd>Also called Pearson residual. It standardizes the residuals by dividing by the square root of the expected count. </dd></dl>
+<ul><li><b>Adjusted Residuals</b></li></ul>
+<dl><dd>It is further standardized by taking into account of overall size of the sample. The most useful residual for comparing residual between different cells. </dd></dl>
+</td></tr>
+<tr>
+<th>Effect Size
+</th>
+<td>
+<ul><li> <b>Cramer's V</b></li></ul>
+<dl><dd>A statistic which adjusts the chi-square by both the sample size and the dimension of table(n*m). It is commonly used for comparing the association between tables which have different dimensions. </dd></dl>
+</td></tr>
+<tr>
+<th>Significat  Level
+</th>
+<td>The significance level of the test.
+</td></tr></table>
+<h2><a name="Pairwise_Comparison"></a><span class="mw-headline">Pairwise Comparison</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Bonferroni
+</th>
+<td>The Bonferroni method controls the overall Type I error and is more conservative than Tukey. The method is commonly used for all pairwise comparisons tests.
+</td></tr>
+<tr>
+<th>Dunn-Sidak
+</th>
+<td>This is a more powerful method than the Dunnett test method, especially when the number of comparisons is large.
+</td></tr>
+<tr>
+<th>Dunnett
+</th>
+<td>Dunnett is a powerful test when comparing each treatment to a control and it is more capable to detect real differences.
+</td></tr>
+<tr>
+<th>Holm-Bonferroni
+</th>
+<td>This method is less conservative and more powerful than the Bonferroni method. Hence you have more chances to reject null hypotheses with the Bonferroni-Holm method.
+</td></tr>
+<tr>
+<th>Holm-Sidak
+</th>
+<td>The method is more powerful than Holm test. However, it can not be used to compute a set of confidence intervals.
+</td></tr>
+<tr>
+<th>Grouping Letters Table
+</th>
+<td>Showed difference of mean value with letters. Same letter means no significant difference, while different letter mean significant difference between two groups.
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Minimal Difference of Interest
+</th>
+<td>Specify the minimum difference from the Test Mean you are interested in. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
+</td></tr>
+<tr>
+<th>Difference(s) for Specified Power
+</th>
+<td>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. If it is selected, it will use the default power levels.
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Difference(s) for Specified Power</b> option, in this edit box enter the power levels separated by space.
+</td></tr>
+<tr>
+<th>Actual Power
+</th>
+<td>When Specify the <b>Minimal Difference of Interest</b>, this option is available. Compute the power of the test (the probability of rejecting the null hypothesis when it is false).
+</td></tr>
+<tr>
+<th>Hypothetical Power
+</th>
+<td>When Specify the <b>Minimal Difference of Interest</b>, this option is available. Compute the power of the test at various sample sizes. When check this option, it will add corresponding curve to power curve.
+</td></tr>
+<tr>
+<th>Hypothetical Sample Size(s)
+</th>
+<td>Only available when <b>Hypothetical Power</b> is checked. Specify hypothetical sample size(s) for power computation.
+</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">Plots</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Confidence Interval Plot
+</th>
+<td>Specify whether to display Confidence Interval plot
+</td></tr>
+<tr>
+<th>Mosaic Plot
+</th>
+<td>Specify whether to display Mosaic Plot whose area of each rectangle is proportional to the proportions of the Y variable in each level of the X variable.
+</td></tr>
+<tr>
+<th>Pairwise Comparison Plot
+</th>
+<td>Output a Pairwise Comparison plot. This option is checked default
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Specify whether to display the graphical summary report
+</td></tr>
+<tr>
+<th>Graphical Power Analysis Report
+</th>
+<td>Specify whether to display the graphical Power Analysis report. The power curve shows how the statistical power of the test changes as the difference in proportions varies. Power is the probability of rejecting the null hypothesis when the true difference differs from 0.
+</td></tr>
+<tr>
+<th>Plot Data
+</th>
+<td>Specify the worksheet for output the plot datasets.
+</td></tr>
+<tr>
+<th>Result
+</th>
+<td>Specify the worksheet for output of test results
+</td></tr></table>
+
+
+
+
+
+

@@ -1,0 +1,374 @@
+<h1 class="firstHeading">28.1 Data Table</h1><p class='urlname' style='display: none'>Data-Table</p>
+<p><br />
+<span class='headerInParagraph'>To create a new data table,</span>
+</p>
+<ul><li>Click <b>New Data Table</b> button <a  class="image"><img alt="New Data Table button.png" src="../images/Data_Table/New_Data_Table_button.png?v=99287" width="16"  /></a> on the Standard toolbar,</li></ul>
+<p><i>Or,</i>
+</p>
+<ul><li>Right click empty place inside Origin workspace and select <b>New Data Table</b>,</li></ul>
+<p><i>Or,</i>
+</p>
+<ul><li>Select menu <b>File: New: New Data Table</b>.</li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Table_Types"><span class="tocnumber">1</span> <span class="toctext">Table Types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Free_Form_.28Worksheet.29"><span class="tocnumber">1.1</span> <span class="toctext">Free Form (Worksheet)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#XY"><span class="tocnumber">1.2</span> <span class="toctext">XY</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Column"><span class="tocnumber">1.3</span> <span class="toctext">Column</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Grouped"><span class="tocnumber">1.4</span> <span class="toctext">Grouped</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Contingency"><span class="tocnumber">1.5</span> <span class="toctext">Contingency</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Survival"><span class="tocnumber">1.6</span> <span class="toctext">Survival</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Basic_Manipulates"><span class="tocnumber">2</span> <span class="toctext">Basic Manipulates</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Summary_Data_.26_Plot_Summary_Data"><span class="tocnumber">2.1</span> <span class="toctext">Summary Data &amp; Plot Summary Data</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Normalize"><span class="tocnumber">2.2</span> <span class="toctext">Normalize</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Transform_X"><span class="tocnumber">2.3</span> <span class="toctext">Transform X</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Nonlinear_Fit"><span class="tocnumber">2.4</span> <span class="toctext">Nonlinear Fit</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Linear_Fit"><span class="tocnumber">2.5</span> <span class="toctext">Linear Fit</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Restructure_Table"><span class="tocnumber">2.6</span> <span class="toctext">Restructure Table</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Convert_to_Free_Form"><span class="tocnumber">2.7</span> <span class="toctext">Convert to Free Form</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Table_Types"></a><span class="mw-headline">Table Types</span></h2>
+<h3><a name="Free_Form_.28Worksheet.29"></a><span class="mw-headline">Free Form (Worksheet)</span></h3>
+<p>classic Origin worksheet. No structure. Refer to <a href="../../UserGuide/UserGuide/Creating_Child_Window.html#By_New_Workbook_dialog" title="UserGuide:Creating Child Window">this page</a> for detailed informatioin.
+</p>
+<h3><a name="XY"></a><span class="mw-headline">XY</span></h3>
+<p>This table type follows the <i>XYYY...</i> structure: one single X column paired with multiple Y columns. It can include an optional <b>Row Title</b> column (Text column for labeling rows) and an <b>X Error</b> column. Each <b>Y Dataset</b> represents a distinct group with multiple <b>Replicates</b>.
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png?v=99288" width="503"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Data Format
+</th>
+<td>Select the table data format:
+<ul><li><b>Raw Data</b></li>
+<li><b>Summary (Mean)</b></li>
+<li><b>Summary (Meadian)</b></li></ul>
+</td></tr>
+<tr>
+<th>Number of Groups (Y Datasets)
+</th>
+<td>Select or enter the number of groups to compare. Each Y dataset has the same number of replicate columns.
+<p><b>Note</b>: You can add or remove datasets anytime after creating the table. 
+</p>
+<ul><li>To add one or more datasets, click on table type icon <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png?v=99645" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
+<li>To insert a new Y dataset before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
+<li>To delete a Y dataset, right click on the dataset title bar and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Group Names
+</th>
+<td>Enter semicolon-separated names for groups (Y datasets).
+</td></tr>
+<tr>
+<th>Row Title
+</th>
+<td>Select this checkbox to add a Text column for row labels.
+</td></tr>
+<tr>
+<th>X Error
+</th>
+<td>Select this checkbox to add an error bar column for X.
+</td></tr>
+<tr>
+<th>Replicate Values per Group
+</th>
+<td>Select or enter the number of replicate sub-columns per Y dataset. Enter 1 for no replicates.
+<p><b>Note:</b> You can add or remove a sub-column anytime after creating the table. 
+</p>
+<ul><li>To add a sub-column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>. New replicate is added to all datasets with the same <b>Name</b>. </li>
+<li>To insert a sub-column, click the <b>Name</b> cell of a sub-column to select that replicate, right click and select <b>Insert</b>. New replicate is added to all datasets in the same position. </li>
+<li>To delete an existing sub-column from all datasets, click the <b>Name</b> cell of a sub-column to select that replicate, right click and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>X Title
+</th>
+<td>Label used for X column title.
+</td></tr></table>
+<p><br />
+XY tables are widely used in experiment data such as dose-response or inhibition assays where you have one measured variable and multiple outcomes in response.
+</p>
+<dl><dd><a  class="image"><img alt="XY Table Ex.gif" src="../images/Data_Table/XY_Table_Ex.gif?v=99289" width="601"  /></a></dd></dl>
+<h3><a name="Column"></a><span class="mw-headline">Column</span></h3>
+<p>This table type follows the <i>YYY...</i> structure: multiple Y columns and no X column. Each Y column represents an independent group, and replicates are arranged in each column. It can include an optional <b>Row Title</b> column (Text column for labeling replicates) 
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Column One Way dialog.png" src="../images/Data_Table/New_Data_Table_Column_One_Way_dialog.png?v=99647" width="401"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Number of Groups
+</th>
+<td>Select or enter the number of groups to compare. One Y column per group.
+<p><b>Note</b>: You can add or remove Y columns anytime after creating the table. 
+</p>
+<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>.  </li>
+<li>To insert a new column before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
+<li>To delete a column, right click on the column title bar and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Group Names
+</th>
+<td>Enter semicolon-separated names for groups (Y columns).
+</td></tr>
+<tr>
+<th>Row Title
+</th>
+<td>Select this checkbox to add a Text column for row labels.
+</td></tr></table>
+<p><br />
+Column tables are mainly used for One Way ANOVA raw data and other analyses comparing independent groups measured on the same variable (e.g., t-tests, nonparametric tests). 
+</p>
+<dl><dd><a  class="image"><img alt="Column One Way Table Ex.gif" src="../images/Data_Table/Column_One_Way_Table_Ex.gif?v=99340" width="633"  /></a></dd></dl>
+<h3><a name="Grouped"></a><span class="mw-headline">Grouped</span></h3>
+<p>This table type follows the Row Titles + Y columns structure: a <b>Title</b> column for row labels, followed by multiple Y columns organized into <b>Groups</b>. Each <b>Group</b> represents a level of Factor A, and the Y columns within each <b>Group</b> represent the levels of Factor B. 
+</p><p>You can optionally enable <b>Subgroups</b> to add the third factor for Three Way ANOVA. <b>Subgroups</b> divide each <b>Group</b> (Factor A) into additional levels that represent Factor B, while the Y columns within each <b>Subgroup</b> represent Factor C. 
+</p><p><b>Note</b> that all factors (Two way and Three way) are crossed (all combinations present).  
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Grouped Two Way dialog.png" src="../images/Data_Table/New_Data_Table_Grouped_Two_Way_dialog.png?v=99650" width="401"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Number of Groups
+</th>
+<td>Select or enter the number of groups to compare across two (or three) categorical dimensions.
+<p><b>Note</b>: You can add or remove groups anytime after creating the table. 
+</p>
+<ul><li>To add one or more groups, click on table type icon <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png?v=99651" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
+<li>To insert a new group before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
+<li>To delete a group, right click on the group title bar and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Group Names
+</th>
+<td>Enter semicolon-separated names for groups.
+</td></tr>
+<tr>
+<th>Number of Subgroups
+</th>
+<td>For three-way ANOVA, select or enter the <b>Number of Subgroups</b> rather than 0 to add the third factor. Subgroups divide each <b>Group</b> into additional levels that represent Factor B, while the Y columns within each <b>Subgroup</b> represent Factor C. This creates a three-factor crossed design where Factor A (Groups), Factor B (Subgroups), and Factor C (Y columns) are all crossed with each other.
+</td></tr>
+<tr>
+<th>Replicate Values per Group
+</th>
+<td>Select or enter the number of replicate Y columns per group. Enter 1 for no replicates.
+<p><b>Note:</b> You can add or remove a Ycolumn anytime after creating the table. 
+</p>
+<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>. New replicate is added to all groups with the same <b>Name</b>. </li>
+<li>To insert a Y column, click the <b>Name</b> cell of a Y column to select that single column, right click and select <b>Insert</b>. New replicate is added to all groups in the same position. </li>
+<li>To delete an existing Y column from all groups, click the <b>Name</b> cell of a Y column to select that single column, right click and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Row Title
+</th>
+<td>Select this checkbox to add a Text column for row labels.
+</td></tr></table>
+<p><br />
+Grouped tables are mainly used for two-way ANOVA and analyses with two independent categorical variables (factors). Each factor has two or more levels.
+</p>
+<dl><dd><a  class="image"><img alt="Grouped Two Way Table Ex.gif" src="../images/Data_Table/Grouped_Two_Way_Table_Ex.gif?v=99941" width="675"  /></a></dd></dl>
+<h3><a name="Contingency"></a><span class="mw-headline">Contingency</span></h3>
+<p>This table type follows a two-way contingency structure: one Text column for row category labels, paired with multiple Numeric columns containing frequency counts. The first Text column contains labels for the first categorical variable. The following Numeric columns contain integer counts for each level of the second categorical variable. 
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Contingency dialog.png" src="../images/Data_Table/New_Data_Table_Contingency_dialog.png?v=99799" width="779"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Column Categories
+</th>
+<td>Enter semicolon-separated labels for the second categorical variable.
+</td></tr></table>
+<p><br />
+Contingency tables are designed for categorical data analysis such as chi-square tests and Fisher's exact test.
+<a  class="image"><img alt="Contingency Table Ex.gif" src="../images/Data_Table/Contingency_Table_Ex.gif?v=99800" width="688"  /></a>
+</p>
+<h3><a name="Survival"></a><span class="mw-headline">Survival</span></h3>
+<p>This table type follows the Time + Status structure: one X column for elapsed time, paired with one or more Y columns for event status. The X column contains the "Elapsed Time" from start of observation until event or censoring. Y columns contain "Status" indicating whether an event occurred: typically 0 = Censored (no event/withdrawn), 1 = Event (death/failure/specified outcome occurred). An optional <b>Row Title</b> column can be added for individual subject labels.
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png?v=99984" width="824"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Number of Groups
+</th>
+<td>Select or enter the number of groups for comparison. One Y column per group.
+<p><b>Note</b>: You can add or remove groups (Y columns) anytime after creating the table. 
+</p>
+<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>.  </li>
+<li>To insert a new column before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
+<li>To delete a column, right click on the column title bar and select <b>Delete</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Group Names
+</th>
+<td>Enter semicolon-separated names for Y columns.
+</td></tr>
+<tr>
+<th>Row Title
+</th>
+<td>Select this checkbox to add a Text column for subject labels.
+</td></tr>
+<tr>
+<th>Elapsed Time in
+</th>
+<td>By default, the unit of “Elapsed Time” (X column) is “Days”. Use this editbox to change the unit, Months, Years, etc.
+</td></tr></table>
+<p><br />
+Survival table is designed for survival analysis and reliability studies, such as Kaplan-Meier Estimator and Reliability and Survival Analysis.
+</p>
+<h2><a name="Basic_Manipulates"></a><span class="mw-headline">Basic Manipulates</span></h2>
+<p>Click the table icon at the top-left corner of the table, a list of menus pops up providing quick access to frequently used operations:
+</p>
+<dl><dd><a  class="image"><img alt="Basic Operation Data Table.gif" src="../images/Data_Table/Basic_Operation_Data_Table.gif?v=99400" width="609"  /></a></dd></dl>
+<p>Available menus vary by table typs.
+</p>
+<h3><a name="Summary_Data_.26_Plot_Summary_Data"></a><span class="mw-headline">Summary Data &amp; Plot Summary Data</span></h3>
+<p>Choose to plot statistics summary data with <b>Scatter</b>, <b>Line</b>, <b>Line + Scatter</b>, or <b>Column</b> charts. Y values can be <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Mean</b>, <b>Median</b> and <b>Geometric Mean</b></a>, with optional error bars from <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Standard Deviation</b>, <b>SEM</b> (SE of Mean), <b>95% CI</b> (Upper 95% CI of Mean - Lower 95% CI of Mean)</a>, or <b>Range</b> (Max-Min).
+</p>
+<dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png?v=99399" width="290"  /></a></dd></dl>
+<p>The summary data is output to a "Summary Stats" worksheet. You can also choose to output the total number N.
+</p>
+<h3><a name="Normalize"></a><span class="mw-headline">Normalize</span></h3>
+<p>Rescale data to a common relative scale, 0% to 100% or 0.0 to 1.0, for comparison across groups or subcolumns.
+</p>
+<dl><dd><a  class="image"><img alt="Normalize Data Table.png" src="../images/Data_Table/Normalize_Data_Table.png?v=99426" width="408"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Subcolumns
+</th>
+<td>Specify how to treate subcolumns in the groups when normalize.
+<ul><li><b>Normalize Subcolumns by Group</b>: Normalize all subcolumns within each group together, using group-level statistics (row means).</li>
+<li><b>Normalize each Subcolumn Separately</b>: Normalize each subcolumn individually using its own values.</li></ul>
+</td></tr>
+<tr>
+<th>0% is Defined As
+</th>
+<td>Specify how to define 0%:
+<ul><li>If <b>Normalize Subcolumns by Group</b>, choose to define 0% as <b>Smallest row mean</b>, <b>First row mean (or last, whichever is smaller), or </b>Fixed value<b> specified in </b>0% Fixed At<b> edit box.</b></li>
+<li>If <b>Normalize each Subcolumn Separately</b>, choose to define 0% as <b>Smallest value in each subcolumn</b>, <b>First value in each subcolumn (or last, whichever is smaller)</b>, or <b>Fixed value</b> specified in <b>0% Fixed At</b> edit box.</li></ul>
+</td></tr>
+<tr>
+<th>100% is Defined As
+</th>
+<td>Specify how to define 100%:
+<ul><li>If <b>Normalize Subcolumns by Group</b>, choose to define 100% as <b>Largest row mean</b>, <b>Last row mean (or first, whichever is larger), </b>Fixed value<b> specified in </b>0% Fixed At<b> edit box, </b>Sum of all row means<b>, or </b>Average of all row means<b>.</b></li>
+<li>If <b>Normalize each Subcolumn Separately</b>, choose to define 100% as <b>Largest value in each subcolumn</b>, <b>Last value in each subcolumn (or first, whichever is larger)</b>, <b>Fixed value</b> specified in <b>100% Fixed At</b> edit box, <b>Sum of values in each subcolumn</b>, or <b>Average of values in each subcolumn</b>.</li></ul>
+</td></tr>
+<tr>
+<th>Show Results as
+</th>
+<td>Specify output format of normalized data.
+<ul><li><b>Fractions</b>: decimal value from 0.0 to 1.0</li>
+<li><b>Percentages</b>: percentages from 0% to 100% </li></ul>
+</td></tr></table>
+<h3><a name="Transform_X"></a><span class="mw-headline">Transform X</span></h3>
+<p>Transform concentration values (X data) for dose-response analysis. This is typically a required preprocessing step for sigmoidal dose-response curve fitting.
+</p>
+<dl><dd><a  class="image"><img alt="Transform X data table.png" src="../images/Data_Table/Transform_X_data_table.png?v=99402" width="348"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="25%">Replace X=0 with different value
+</th>
+<td>If X contains zero concentrations (e.g., vehicle controls), check this checkbox to substitute "0" with a specified small value. Required before log transformation, as log(0) is undefined.
+<p>Enter the replacement value in the <b>Value to Replace X=0</b> edit box. A common practice is to replace 0 with 1/10 of the lowest non-zero concentration.
+</p>
+</td></tr>
+<tr>
+<th>Change Units
+</th>
+<td>Convert concentration units by multiplication or division.
+<p>Select <b>None</b> for no units conversion. If <b>Multiply</b> or <b>Divide</b> is selected, enter the factor in the <b>Constant to Apply</b> edit box. For example, to convert "uM" to "mM", select <b>Divide</b> and 1000 in <b>Constant to Apply</b>. 
+</p>
+</td></tr>
+<tr>
+<th>Transform to Logarithms
+</th>
+<td>Convert linear X values to log scale for sigmoidal curve fitting.
+<p>Select the logarithm from <b>Base of Log</b> drop-down: log10 (base 10), ln (base e), and log2 (base 2).
+</p>
+</td></tr></table>
+<h3><a name="Nonlinear_Fit"></a><span class="mw-headline">Nonlinear Fit</span></h3>
+<p>Perform nonlinear curve fitting on XY data. The <a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="Category:The NLFit Dialog Box"><b>Nonlinear Curve Fit</b> dialog</a> will open, giving you full control over the fitting process.
+</p>
+<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png?v=99702" width="434"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Select Function
+</th>
+<td>Refer to <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">this page</a> for full info. about fitting <b>Function</b> (although the available <b>Category</b> may differ from the default mode). Click  <a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png?v=99703" width="18"  /></a> button to search the function you need.
+<p>To access the full set of fitting functions, switch to the default mode (<b>Preferences: GUI Mode: default</b>) and restart Origin. 
+</p>
+</td></tr>
+<tr>
+<th>Fitting Method
+</th>
+<td>Specify whether to fit using <b>Raw Data</b> or summary statistics: <b>Mean + SD</b> (SD used as weight), <b>Mean + SE</b> (SE used as weight), or <b>Mean only</b>. If summary statistics is selected, a "Summary Stats" worksheet is auto-generated to use as input data.
+</td></tr>
+<tr>
+<th>Global Fit
+</th>
+<td>Check this checkbox to share parameters in the fitting function among all datasets (groups), yielding the same parameter values for all datasets.
+<p>Uncheck to fit each dataset independently and yield separate results for each dataset (although they will be compiled into a single report).
+</p><p>Refer to <a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="UserGuide:Global fitting with parameter sharing">this page</a> for details about <b>Global Fit</b>.
+</p>
+</td></tr></table>
+<h3><a name="Linear_Fit"></a><span class="mw-headline">Linear Fit</span></h3>
+<p>Perform linear regression on XY data. Each group is fitted independently, and all fitting results are compiled into a single report. The <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html" title="UserGuide:Linear Regression Dialog"><b>Linear Fit</b> dialog</a> will open, giving you full control over the fitting process.
+</p>
+<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png?v=99417" width="290"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">Fitting Method
+</th>
+<td>Specify whether to fit with original data or summary data.
+<ul><li> <b>Raw Data</b> <br />Each group is fitted independently. Replicates within each group are concatenated and fitted as one dataset.</li>
+<li> <b>Mean</b> <br />A "Summary Stats" worksheet is auto-generated to calculate the mean of replicates within each group. Each group is then fitted independently using mean as input.</li>
+<li> <b>Mean + SD</b> <br />A "Summary Stats" worksheet is auto-generated to calculate the mean and standard deviation of replicates within each group. Each group is then fitted independently using its mean as input, with the inverse of the variance (1/SD^2) as weight.</li></ul>
+</td></tr>
+<tr>
+<th>Fix Intercept
+</th>
+<td>Restrict the intercept to the value specified in <b>Fix Intercept at</b>.
+</td></tr>
+<tr>
+<th>Lack of Fit test
+</th>
+<td>Check to output the "Lack-of-Fit" results for replicate data, which is used to assess the model adequacy.
+<p>Refer to <a href="../../UserGuide/UserGuide/Linear_Regression_Results.html#Lack_of_fit_table" title="UserGuide:Linear Regression Results">this page</a> for more info.
+</p>
+</td></tr>
+<tr>
+<th>Find XY Value
+</th>
+<td>Check to generate "FindXfromY" and/or "FindYfromX" worksheets: enter an independent variable value to obtain the corresponding dependent variable value, or vice versa. The 95% Confidence Interval is also calculated in the sheet.
+<p>Refer to <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Find_X.2FY" title="UserGuide:Linear Regression Dialog">this page</a> for more info.
+</p>
+</td></tr>
+<tr>
+<th>Show Errors
+</th>
+<td>Check to add confidence bands and/or prediction bands to the fitted curve plot.
+<p>Refer to <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Fitted_Curves_Plot" title="UserGuide:Linear Regression Dialog">this page</a> for more info. 
+</p>
+</td></tr>
+<tr>
+<th>Residual Analysis
+</th>
+<td>Check to calculate and output residuals.
+<p>Refer to <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Residual_Analysis" title="UserGuide:Linear Regression Dialog">this page</a> for more info.
+</p>
+</td></tr></table>
+<h3><a name="Restructure_Table"></a><span class="mw-headline">Restructure Table</span></h3>
+<p>Restructure data table, i.e. add or remove groups or replicates.
+</p>
+<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png?v=99398" width="295"  /></a></dd></dl>
+<h3><a name="Convert_to_Free_Form"></a><span class="mw-headline">Convert to Free Form</span></h3>
+<p>Convert current data table into typical <a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html">Origin worksheet</a> form.
+</p>
+
+
+
+
+

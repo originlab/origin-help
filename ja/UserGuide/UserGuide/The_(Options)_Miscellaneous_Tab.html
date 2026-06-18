@@ -1,7 +1,5 @@
 ﻿<h1 class="firstHeading">(オプション) 「その他のオプション」タブ</h1><p class='urlname' style='display: none'>Options-Dialog-Misc-Tab</p>
-<p><br />
-</p>
-<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png" width="743"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png" width="622"  /></a></dd></dl>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Proxy_Group"><span class="tocnumber">1</span> <span class="toctext">プロキシグループ</span></a></li>
@@ -16,8 +14,10 @@
 <li class="toclevel-1 tocsection-7"><a href="#First_Day_of_Week"><span class="tocnumber">6</span> <span class="toctext">週の最初の日</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Proxy_Group"></a><span class="mw-headline">プロキシグループ</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th>直接接続
 </th>
@@ -94,8 +94,7 @@
 </td>
 <td>
 <dl><dd><ul><li>y = 年の下1～2桁（例：1901 → 1）。この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
-<li>yy = 年の下2桁（例：1901 → 01）
- </li>
+<li>yy = 年の下2桁（例：1901 → 01） </li>
 <li>yyyy = 年の全4桁（例：1901 → 1901） </li></ul></dd></dl>
 </td></tr>
 <tr>
@@ -108,8 +107,7 @@
 </p>
 </td>
 <td>
-<dl><dd><ul><li>h = 12時間制。1桁の時間に先頭ゼロを付けない（例：3）
-この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
+<dl><dd><ul><li>h = 12時間制。1桁の時間に先頭ゼロを付けない（例：3）この要素の後には、区切り文字（シングルクォートで囲む）が必要です。 </li>
 <li>hh = 12時間制。1桁の時間に先頭ゼロを付ける（例：03） </li></ul></dd></dl>
 </td></tr>
 <tr>
@@ -248,6 +246,7 @@
 </td></tr></table>
 <h2><a name="Import_Group"></a><span class="mw-headline">インポートグループ</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th>複数ASCIIインポートのワークシート用標準テンプレート
 </th>
@@ -273,9 +272,17 @@
 <dl><dd>Originは、最初の列をX値、2列目をY値、3列目をYエラー値として扱います。 </dd></dl>
 <ul><li><b>XYZ</b> </li></ul>
 <dl><dd>Originは、最初の列をX値、2列目をY値、3列目をZ値として扱います。  </dd></dl></dd></dl>
+</td></tr>
+<tr>
+<th>保存時にインポートデータを除外
+</th>
+<td>ブック/プロジェクトを保存するときにインポートしたデータを保存するかどうかを制御します。
+<dl><dd><ul><li> このオプションにチェックを入れると、デフォルトでシステム変数<i><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D">@DNS=0</a></i> (<i>@FSE</i> (ローカルデータ)と<i>@FSEW</i> (Webデータ)がオン) になっている場合、ファイルサイズがしきい値サイズより大きいと、インポートされたデータは除外されます。  それ以外の場合、ファイルサイズがしきい値サイズより小さい場合は、インポートされたデータは保存されます。</li>
+<li> このオプションのチェックを外すと、インポートされたデータは、しきい値サイズより小さいか大きいかに関わらず、常に保存されます。</li></ul></dd></dl>
 </td></tr></table>
 <h2><a name="Print_Group"></a><span class="mw-headline">印刷グループ</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th>Xの縮尺倍率
 </th>
@@ -288,11 +295,12 @@
 <th> Yの縮尺倍率
 </th>
 <td>
-<p>このコンボボックス内の値で、印刷時のY軸の長さを調整することできます。プリンタが、レイヤの<span class="db">｢作図の詳細｣</span>ダイアログの<b>レイヤの大きさ</b>タブで<b>幅</b>のテキストボックスでせていした大きさでグラフを作成しない場合、デフォルト値を変更して下さい。 
+<p>このコンボボックス内の値で、印刷時のY軸の長さを調整することできます。プリンタが、レイヤの｢<span class="db">作図の詳細</span>｣ダイアログの<b>レイヤの大きさ</b>タブで<b>幅</b>のテキストボックスで設定した大きさでグラフを作成しない場合、デフォルト値を変更して下さい。 
 </p>
 </td></tr></table>
 <h2><a name="Additional_Controls"></a><span class="mw-headline">追加のコントロール</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th>列データ型として数値型を基本とする
 </th>
@@ -341,7 +349,8 @@
 <h2><a name="First_Day_of_Week"></a><span class="mw-headline">週の最初の日</span></h2>
 <p><i>yyyy</i>-<b>W</b><i>ww</i>-<i>D</i>形式で日付を表示する際に使用される週の開始日を指定します。
 </p>
-<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="444"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="490"  /></a></dd></dl>
+
 
 
     

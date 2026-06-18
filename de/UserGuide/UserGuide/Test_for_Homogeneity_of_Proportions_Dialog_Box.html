@@ -1,0 +1,150 @@
+﻿<h1 class="firstHeading">Dialog Test auf Homogenit&auml;t der Anteile</h1><p class='urlname' style='display: none'>Test-Homogeneity-Prop-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Statistics"><span class="tocnumber">3</span> <span class="toctext">Statistik</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Pairwise_Comparison"><span class="tocnumber">4</span> <span class="toctext">Paarweise Vergleich</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Diagramme</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog Ereignisrate in Poisson-Modellen bei zwei Stichproben zu &ouml;ffnen:</p>
+<ol><li>Klicken Sie bei aktivem Arbeitsblatt auf <b>Statistik: Hypothesentests: Ereignisrate in Poisson-Modellen bei zwei Stichproben</b>.</li></ol>
+<p><br /> <i><b>Siehe auch:</b></i></p>
+<ul><li><a href="../../UserGuide/Category/Test_for_Homogeneity_of_Proportions_(Pro_Only).html" title="Category:Test for Homogeneity of Proportions (Pro Only)">Einf&uuml;hrung in den Test auf Homogenit&auml;t der Anteile</a></li></ul>
+<p><br /></p>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Datenform</th>
+<td>
+<ul><li><b>Zusammengefasst</b></li></ul>
+<dl><dd>F&uuml;hren Sie den Test mit Hilfe einer zusammenfassenden Statistik durch, die Sie manuell in den Dialog eingeben.</dd></dl>
+<ul><li><b>Roh</b></li></ul>
+<dl><dd>F&uuml;hren Sie den Test anhand eines Datensatzes in einer Spalte durch.</dd></dl>
+</td></tr>
+<tr>
+<th>Eingabedaten (Zusammengefasst)</th>
+<td>
+<ul><li><b>Stichprobenname</b></li></ul>
+<dl><dd>Legen Sie den Namen der Stichprobe fest. Sie k&ouml;nnen eine Spalte als Sticprobenname festlegen oder durch Leerzeichen getrennte Zeichenketten eingeben.</dd></dl>
+<ul><li><b>Sample Size</b></li></ul>
+<dl><dd>Die Gesamtanzahl der Beobachtungen Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Werte. (Mindestens 3 Stichproben.)</dd></dl>
+<ul><li><b>Anzahl der Ereignisse</b></li></ul>
+<dl><dd>Legen Sie den Wert f&uuml;r die Anzahl der Ereignisse fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Werte. (Mindestens 3 Stichproben.)</dd></dl>
+</td></tr>
+<tr>
+<th>Eingabedaten (Roh)</th>
+<td>
+<ul><li><b>Stichprobe</b></li></ul>
+<dl><dd>Legen Sie Spalten als den Stichprobendatensatz fest. (Mindestens 3 Spalten.)</dd></dl>
+<ul><li><b>Ereignis</b></li></ul>
+<dl><dd>Legen Sie die Anzahl der Ereignisse fest.</dd></dl>
+</td></tr></table>
+<h2><a name="Statistics"></a><span class="mw-headline">Statistik</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Kontingenztabelle</th>
+<td>Dieser Zweig bestimmt, welche Statistiken in der Kontigenztabelle berechnet und ausgegeben werden.<ul><li><b>Anzahl</b></li></ul>
+<dl><dd>Die beobachtete H&auml;ufigkeit f&uuml;r jede Zelle</dd></dl>
+<ul><li><b>Erwartete Anzahlen</b></li></ul>
+<dl><dd>Die beobachtete H&auml;ufigkeit f&uuml;r jede Zelle unter der Annahme, dass die Spalten- und Zeilenvariable unabh&auml;ngig sind</dd></dl>
+<ul><li><b>Residuen</b></li></ul>
+<dl><dd>Die Differenz zwischen dem beobachteten Wert und dem erwarteten Wert.</dd></dl>
+<ul><li><b>Standardisierte Residuen</b></li></ul>
+<dl><dd>Auch als Residuum nach Pearson bezeichnet. Die Option standardisiert Residuen, indem sie durch die Quadratwurzel der erwarteten Anzahl geteilt werden.</dd></dl>
+<ul><li><b>Korrigierte Residuen</b></li></ul>
+<dl><dd>Es wird weiter standardisiert, indem der Gesamtumfang der Stichprobe ber&uuml;cksichtigt wird. Es ist das n&uuml;tzlichste Residuum zum Vergleichen von Residuen zwischen verschiedenen Zellen.</dd></dl>
+</td></tr>
+<tr>
+<th>Effektgr&ouml;&szlig;e</th>
+<td>
+<ul><li><b>Cram&eacute;rs V</b></li></ul>
+<dl><dd>Eine Statistik, die das Chi-Quadrat korrigiert, sowohl mit dem Stichprobenumfang als auch mit der Dimension der Tabelle (n*m). Sie wird gemeinhin verwendet, um die Assoziation zwischen Tabellen, die verschiedene Dimensionen haben, zu vergleichen.</dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Das Signifikanzniveau des Tests</td></tr></table>
+<h2><a name="Pairwise_Comparison"></a><span class="mw-headline">Paarweiser Vergleich</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Bonferroni</th>
+<td>Die Bonferroni-Method pr&uuml;ft den gesamten Fehler 1. Art und ist konservativer als Tukey. Die Methode wird im Allgemeinen f&uuml;r alle paarweisen Vergleichstests verwendet.</td></tr>
+<tr>
+<th>Dunn-Sidak</th>
+<td>Dies ist eine leistungsst&auml;rkere Methode als der Dunnett-Test, insbesondere wenn die Anzahl der Vergleich hoch ist.</td></tr>
+<tr>
+<th>Dunnett</th>
+<td>Dunnett ist ein leistungsstarker Test, um Behandlungen mit einem Kontrollwert zu vergleichen. Mit ihm ist es besser m&ouml;glich, wirkliche Differenzen zu erkennen.</td></tr>
+<tr>
+<th>Holm-Bonferroni</th>
+<td>Diese Methode ist weniger konservativ und daf&uuml;r leistungsst&auml;rker als die Bonferroni-Methode. Dadurch wird die Chance gr&ouml;&szlig;er, Nullhypothesen mit der Bonferroni-Holm-Methode zur&uuml;ckzuweisen.</td></tr>
+<tr>
+<th>Holm-Sidak</th>
+<td>Die Methode ist leistungsst&auml;rker als der Holm-Test. Sie kann jedoch nicht dazu verwendet werden, eine Reihe von Konfidenzintervallen zu berechnen.</td></tr>
+<tr>
+<th>Tabelle der Gruppenbuchstaben</th>
+<td>Die Differenz des Mittelwerts wird mit Buchstaben gezeigt. Der gleiche Buchstabe bedeutet, dass keine signifikante Differenz besteht. Ein unterschiedlicher Buchstabe bedeutet, dass es eine signifikante Differenz zwischen den zwei Gruppen gibt.</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Analyse der Trennsch&auml;rfe</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Mindestdifferenz von Interesse</th>
+<td>Legen Sie die Mindestdifferenz vom Testmittelwert fest, f&uuml;r den Sie sich interessieren. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.</td></tr>
+<tr>
+<th>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Die Differenzen f&uuml;r die festlegten Trennsch&auml;rfen werden ausgegeben. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve. Wenn die Option aktiviert ist, wird der Standardwert der Trennsch&auml;rfe verwendet.</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, geben Sie in dieses Bearbeitungsfeld die Trennsch&auml;rfewerte, getrennt durch ein Leerzeichen, ein.</td></tr>
+<tr>
+<th>Tats&auml;chliche Trennsch&auml;rfe</th>
+<td>Wenn <b>Mindestdifferenz von Interesse</b> festgelegt ist, wird diese Option verf&uuml;gbar. Berechnen Sie die Trennsch&auml;rfe eines Tests (die Wahrscheinlichkeit, die Nullhypothese abzulehnen, wenn sie falsch ist).</td></tr>
+<tr>
+<th>Hypothetische Trennsch&auml;rfe</th>
+<td>Wenn <b>Mindestdifferenz von Interesse</b> festgelegt ist, wird diese Option verf&uuml;gbar. Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge. Wenn diese Option aktiviert ist, wird die entsprechende Kurve zur Trennsch&auml;rfekurve hinzugef&uuml;gt.</td></tr>
+<tr>
+<th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
+<td>Nur verf&uuml;gbar, wenn <b>Hypothetische Trennsch&auml;rfe</b> aktiviert ist. Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">Diagramme</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Konfidenzintervalldiagramm</th>
+<td>Legen Sie fest, ob das Konfidenzintervalldiagramm angezeigt werden soll.</td></tr>
+<tr>
+<th>Mosaikdiagramm</th>
+<td>Legen Sie fest, ob ein Mosaikdiagramm, bei dem die Fl&auml;che jedes Rechtecks proportional zu den Anteilen der Y-Variable auf jeder Stufe der X-Variable ist, angezeigt werden soll.</td></tr>
+<tr>
+<th>Paarweise Vergleichsdiagramm</th>
+<td>Es wird ein paarweises Vergleichsdiagramm ausgegeben. Diese Option wird standardm&auml;&szlig;ig aktiviert.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Bericht der grafischen Zusammenfassung</th>
+<td>Legen Sie fest, ob der grafische Zusammenfassungsbericht angezeigt werden soll.</td></tr>
+<tr>
+<th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
+<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.</td></tr>
+<tr>
+<th>Zeichnungsdaten</th>
+<td>Legen Sie das Arbeitsblatt f&uuml;r die Ausgabe der Zeichnungsdatens&auml;tze fest.</td></tr>
+<tr>
+<th>Ergebnis</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr></table>
+
+
+
+
+
+
+
+    

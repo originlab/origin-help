@@ -47,10 +47,16 @@
 <li class="toclevel-2 tocsection-28"><a href="#To_Copy_from_Excel_with_Formula"><span class="tocnumber">5.3</span> <span class="toctext">数式付きでExcelからコピーする</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-29"><a href="#FAQs"><span class="tocnumber">6</span> <span class="toctext">FAQ</span></a></li>
-<li class="toclevel-1 tocsection-30"><a href="#See_Also"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Edit_Bad_Cell_Formula"><span class="tocnumber">6</span> <span class="toctext">不正なセル式を編集</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#To_batch-edit_bad_formulas"><span class="tocnumber">6.1</span> <span class="toctext">不正な数式をバッチ編集するには</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#FAQs"><span class="tocnumber">7</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#See_Also"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Importing_Excel_Data_using_the_Import_Excel_Data_Connector_Dialog"></a><span class="mw-headline">Excelデータコネクタのインポートダイアログを使用したExcelデータのインポート</span></h2>
 <p><a href="../../UserGuide/Category/Data_Connector.html" title="カテゴリ：データコネクタ"><b>データコネクタ</b></a>はＯriginの新しいデータインポートメカニズムです。OriginLabでは、MSExcelデータのインポートに<b>Excelコネクタ</b>を使用することをお勧めします。 
 </p><p>Excelコネクタを使用したインポートの詳細については、<a href="../../UserGuide/UserGuide/Importing_from_Excel.html#Importing_Excel_Data_using_the_Import_Excel_Data_Connector_Dialog" title="ユーザガイド：Excelからのインポート">Excelデータコネクタのインポートダイアログを使用したExcelデータのインポート</a>を参照してください。
@@ -78,13 +84,14 @@
 	</table>
 <p><i><b>このセクションの残りの部分では、ExcelファイルおよびウィンドウへのOriginメニューが復元されていることを前提としています。</b></i>
 </p><p>ExcelのOLEインスタンスをOrigin内で開いている場合、以下の画像のように、OriginとExcelの両方の標準ツールバーが表示されます。Excelワークブックウィンドウがアクティブな場合、Originのメニューは、<b>ファイル</b>、<b>作図</b>、<b>ウィンドウ</b>のみ利用できます。Excelワークブックに保存されているデータは、データ分析と操作するためのOriginワークシートにアクセスできません。 
-<br /><a  class="image"><img alt="Working with Excel 01a.png" src="../images/Working_with_Microsoft_Excel/Working_with_Excel_01a.png" width="798"  /></a><br />
+<br /><a  class="image"><img alt="Working with Excel 01a.png" src="../images/Working_with_Microsoft_Excel/Working_with_Excel_01a.png" width="800"  /></a><br />
 </p><p>ExcelワークブックウィンドウからOriginワークブックウィンドウに切り替える場合は、Originツールバーにあるツールバースペーサーをご確認ください。このスペーサーで、ExcelウィンドウからOriginのウィンドウに切り替えるときに、ツールバー範囲を動かないようにします。スペーサーの上で右クリックして、ショートカットメニューから<b>ツールバースペーサーを非表示</b>を選択します。
 </p><p>Excelワークブックは専用のOrigin子ウィンドウで管理します。Excelワークブックウィンドウは名前を変える、並び替える、保存する、あるいは削除することができます。ひとつのOriginプロジェクト内で複数のExcelワークブックウィンドウを開くこともできます。Originのワークブックと同様にExcelのワークブックウィンドウではテキストや数値データが表示され、Originのグラフウィンドウでグラフが表示されます。
 </p><p>Excel内でのデータは、Origin内のデータに単一方向で接続することができます。Originで開いたExcelからデータをコピーする場合は、Originワークシートの中のデータに、リンクとして貼り付ける選択をすることができます。そして、Excelファイルのデータが変更されると、Originワークシート内のデータも対応してアップデートされます。
 </p><p>Excelワークブックのメニューは、Excelワークブックウィンドウのタイトルバーを右クリックして使用できます。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th> 保存
 </th>
@@ -235,23 +242,99 @@ Excelブックのデータセットの命名規則は、Originブックのデー
 <dl><dd><ol><li> Excelで外部エクセルファイルを開きます。</li>
 <li> Excelファイルからデータをコピーし、Originワークブックに<b>リンクを貼り付け</b></li>
 <li> Excelでデータを変更</li>
-<li> Origin内データが動的に更新されます。</li></ol>
-<dl><dd><b>Note:</b> 絶対的外部パスからのデータは &quot;パスに依存する&quot;ことに注意してください。Excelファイルが別のフォルダに移動さ​​れるか、または関連するOPJが別のコンピュータで開かれるたびに、DDEリンクが壊れていることを知らせるダイアログが常に表示されます。 </dd></dl></dd></dl>
-<h5><a name="To_Copy_from_Excel_with_Formula"></a><span class="mw-headline">数式付きでExcelからコピーする</span></h5>
-<dl><dd><ol><li> Excelで外部エクセルファイルを開きます。</li>
-<li> 数式タブを選択します。<b>数式の表示</b>を選択します。 <br /><a  class="image"><img alt="Show Formula in Excel.png" src="../images/Working_with_Microsoft_Excel/Show_Formula_in_Excel.png" width="600"  /></a></li>
-<li> Excelファイルからデータをコピーします。</li>
-<li> （ラベル行ではなく）Originワークシートセルを右クリックし、<b>貼り付け (Excel数式の保持)</b>を選択します。</li></ol>
-<dl><dd><b>Note:</b> 一部のExcel数式で、Originでは異なっている/サポート外の場合、&quot;#NAME?&quot;(欠損値) を返します。<a href="../../UserGuide/UserGuide/Excel_and_Origin_Functions_Comparison.html" title="ユーザガイド: Excel と Origin の関数比較">ExcelとOrigin関数の比較</a>を参照してください。</dd></dl></dd></dl>
-<p><br />
-</p>
+<li> Origin内データが動的に更新されます。</li></ol></dd></dl>
 <table class="note">
+
 <tr>
 <td><b>Note:</b>
-<ul><li>Excelの外部Excelファイルからデータ/テキストをコピーし、それを直接Originグラフに貼り付ける（<b>貼り付け</b>メニューや<b>Ctrl</b>+<b>V</b>を使う）と、Excelオブジェクトの代わりにテキストとして貼り付けられます。Excelファイルとして貼り付けたい場合、<b>リンクの貼り付け</b>を選択します。</li>
+<ul><li>絶対的外部パスからのデータは &quot;パスに依存する&quot;ことに注意してください。Excelファイルが別のフォルダに移動さ​​れるか、または関連するOPJが別のコンピュータで開かれるたびに、DDEリンクが壊れていることを知らせるダイアログが常に表示されます。 </li>
+<li>Excelの外部Excelファイルからデータ/テキストをコピーし、それを直接Originグラフに貼り付ける（<b>貼り付け</b>メニューや<b>Ctrl</b>+<b>V</b>を使う）と、Excelオブジェクトの代わりにテキストとして貼り付けられます。Excelファイルとして貼り付けたい場合、<b>リンクの貼り付け</b>を選択します。</li>
 <li><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DDES</b></a>と<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>DDEL</b></a>というシステム変数を使用して、ファイルの場所が変更されたことを通知する<b>DDE関連のメッセージ</b>を無効にすることができます。</li>
 <li>システム変数 <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DDEN</b></a>を使って<b>DDEリンクの開始</b>ダイアログを強制的に開けます。詳細は<a class="external text" href="../../QuickHelp/QuickHelp/How_to_remove_DDE_links_in_a_project.html">このFAQ</a>を参照してください。</li>
 <li>Excelから「True」と「False」をコピーしてOrigin上にペーストすると、1と0の数値で表されます。</li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<h5><a name="To_Copy_from_Excel_with_Formula"></a><span class="mw-headline">数式付きでExcelからコピーする</span></h5>
+<dl><dd><ol><li> Excelで外部エクセルファイルを開きます。</li>
+<li> 数式タブを選択します。<b>数式の表示</b>を選択します。 <br /><a  class="image"><img alt="Show Formula in Excel.png" src="../images/Working_with_Microsoft_Excel/Show_Formula_in_Excel.png" width="460"  /></a></li>
+<li> Excelファイルからデータをコピーします。</li>
+<li> （ラベル行ではなく）Originワークシートセルを右クリックし、<b>貼り付け (Excel数式の保持)</b>を選択します。</li></ol></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Working_with_Microsoft_Excel/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> 一部のExcel関数はOriginに異なる名前がついているため、貼り付け後に欠損値（エラーコード「#NAME?」）が返されることがあります。<a href="../../UserGuide/UserGuide/Excel_and_Origin_Functions_Comparison.html" title="ユーザガイド: Excel と Origin の関数比較">ExcelとOrigin関数の比較</a>を参照してください。<br /><a href="#Edit_Bad_Formula"><b>編集：不正なセル式を編集</b></a>メニューを使用して、それらを修正できます。</li>
+<li> 一部のExcel関数名はローカライズされています（例えば、<code>AVERAGE</code>関数はドイツ語の<code>MITTELWERT</code> になる）。Excelからそのような数式をコピーして<b>貼り付け (Excel数式の保持)</b>を使用すると、Originは自動的に名前を英語に変換します。システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#T">@TGN</a>を設定するとこの変換は無効になります。</li></ul>
+</td></tr></table>
+<h2><a name="Edit_Bad_Cell_Formula"></a><span class="mw-headline">不正なセル式を編集</span></h2>
+<p>Originは<a href="#To_Copy_from_Excel_with_Formula">Excel数式のコピー&amp;ペースト</a>の<a href="../../UserGuide/UserGuide/Importing_from_Excel.html#Importing_Excel_Data_using_the_Import_Excel_Data_Connector_Dialog" title="ユーザガイド：Excelからのインポート">インポート</a>をサポートしているため、完全に変換されない構文やサポートされていない関数はOriginで数式が失敗し、「不正な数式」としてフラグが付けられます。
+</p><p>Originでは、セル内の数式を背景色で強調表示できます。色を表示するには、<b>表示：数式/リンクされたセルを強調表示</b>を選択します。 
+</p><p>不正な数式は、エラーコードごとに異なる色で区別されます。
+</p>
+<table class="simple">
+
+<tr style="vertical-align: center;">
+<td style="width: 10%"> <a  class="image"><img alt="Bad Cell Formula Error NUM .png" src="../images/Working_with_Microsoft_Excel/Bad_Cell_Formula_Error_NUM_.png" width="70"  /></a>
+</td>
+<td> 無効な数値演算。
+<p><b>例</b>：<code>A1</code>に数値「1」、<code>B1</code>に文字列「GOOD」が入っている場合、数式 <code>=A1+B1</code> は無意味なため、<code>#NUM!</code> が返されます。
+</p>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Bad Cell Formula Error VALUE.png" src="../images/Working_with_Microsoft_Excel/Bad_Cell_Formula_Error_VALUE.png" width="70"  /></a>
+</td>
+<td> 関数に渡された引数の数または型が不正。
+<p><b>例</b>：式<code>=sin(A1,5)</code>は <code>sin</code> に2つの引数（A1 と 5）を渡していますが、1つしか受け取らないため、<code>#VALUE!</code>が返されます。
+</p>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Bad Cell Formula Error NAME.png" src="../images/Working_with_Microsoft_Excel/Bad_Cell_Formula_Error_NAME.png" width="70"  /></a>
+</td>
+<td> 関数名または変数が未定義。
+<p><b>例</b>：式<code>=Junk(A1)</code>は「Junk」という関数が存在しないため、<code>#NAME?</code> が返されます。
+</p>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Bad Cell Formula Error REF.png" src="../images/Working_with_Microsoft_Excel/Bad_Cell_Formula_Error_REF.png" width="70"  /></a>
+</td>
+<td> 無効な参照。
+<p><b>例</b>：式<code>=[Junk]1!A1</code> は、「Junk」というブックが存在しないため、<code>#REF!</code> を返します。
+</p>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Bad Cell Formula Error ERROR.png" src="../images/Working_with_Microsoft_Excel/Bad_Cell_Formula_Error_ERROR.png" width="70"  /></a>
+</td>
+<td>その他の構文または解析エラー。
+<p><b>例</b>：式<code>=(A1+4)exp(A1-5)</code> には、「(A1+4)」と「exp(A1-5)」の間に演算子「*」が欠けているため、<code>#ERROR!</code> が返されます。
+</p>
+</td></tr></table>
+<p><b>Note:</b> 数式の表示モード（<b>表示：数式を表示</b>またはワークシートのミニツールバーの<b>式を表示</b>ボタン<a  class="image"><img alt="Popup Show Formulas.png" src="../images/Working_with_Microsoft_Excel/Popup_Show_Formulas.png" width="24"  /></a>）をオンにすると、これらの背景色は常に表示されます。
+</p>
+<h5><a name="To_batch-edit_bad_formulas"></a><span class="mw-headline">不正な数式をバッチ編集するには</span></h5>
+<ul><li> <b>編集：不正なセル式を編集</b>メニューを選択します</li></ul>
+<dl><dd><a  class="image"><img alt="Edit Bad Cell Formula Dialog.png" src="../images/Working_with_Microsoft_Excel/Edit_Bad_Cell_Formula_Dialog.png" width="447"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th> 不正な数式を編集
+</th>
+<td> 不正な数式を検索・編集する範囲を指定します：<b>現在の選択範囲/アクティブシート/アクティブブック/プロジェクト</b>
+</td></tr>
+<tr>
+<th> 式を保持し、&quot;=&quot;の前に挿入
+</th>
+<td> 現在の数式はそのまま保持し、「=」の直前に<b>&quot;=&quot;の前に挿入</b>で入力した内容を追加します。
+<p>たとえば、元のExcel関数を保持して表示するには、&quot;=&quot;の前に&quot;&apos;&quot;を追加します。
+</p>
+</td></tr>
+<tr>
+<th> セル全体を置き換え
+</th>
+<td> <b>置換</b>に入力したテキストでセル全体を上書きします。
+<p>たとえば、不正な数式を欠損値「--」に置き換えます。 
+</p>
+</td></tr>
+<tr>
+<th> 数式エラー
+</th>
+<td> チェックボックスをオンにして、不正な数式を見つけて編集するときに含めるエラーコードを選択します。<b>#VALUE!</b> はリストに表示されないため、常に含まれていることに注意してください。
 </td></tr></table>
 <h2><a name="FAQs"></a><span class="mw-headline">FAQ</span></h2>
 <ul><li> <u><a class="external text" href="../../QuickHelp/QuickHelp/How_to_paste_date_time_from_Excel.html"><b>MS Excelから日時データをコピーして貼り付けるにはどうすればよいですか？</b></a></u> </li>
@@ -265,6 +348,7 @@ Excelブックのデータセットの命名規則は、Originブックのデー
 <li> <a  class="image"><img alt="Video Image 2016.png" src="../images/Working_with_Microsoft_Excel/Video_Image_2016.png" width="20"  /></a> <a class="external text" href="http://www.originlab.com/index.aspx?go=Support/VideoTutorials&amp;ss=chm&amp;pid=1558" target="_blank">Excelとの連携</a> </li>
 <li> <a  class="image"><img alt="Video Image 2016.png" src="../images/Working_with_Microsoft_Excel/Video_Image_2016.png" width="20"  /></a> <a class="external text" href="http://www.originlab.com/index.aspx?go=Support/VideoTutorials&amp;ss=chm&amp;pid=1517" target="_blank">Origin 8のデータをコピーして、Excelに貼り付け</a></li>
 <li> <a  class="image"><img alt="Video Image 2016.png" src="../images/Working_with_Microsoft_Excel/Video_Image_2016.png" width="20"  /></a> <a class="external text" href="http://www.originlab.com/index.aspx?go=Products/Origin/ImportingData/TP&amp;ss=chm&amp;pid=1217" target="_blank">Excelのデータをコピーして、Origin 8に貼り付け</a></li></ul>
+
 
 
     

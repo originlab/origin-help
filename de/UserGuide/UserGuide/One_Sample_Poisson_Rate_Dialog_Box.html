@@ -1,0 +1,110 @@
+﻿<h1 class="firstHeading">Dialog Ereignisrate in Poisson-Modellen bei einer Stichprobe</h1><p class='urlname' style='display: none'>One-Poisson-Rate-Dialog</p>
+<p><br /></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input_Data"><span class="tocnumber">2</span> <span class="toctext">Eingabedaten</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Poisson_Rate_Test"><span class="tocnumber">3</span> <span class="toctext">Ereignisrate in Poisson-Modellen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Test_Method"><span class="tocnumber">4</span> <span class="toctext">Testmethode</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog Ereignisrate in Poisson-Modellen bei einer Stichprobe zu &ouml;ffnen:</p>
+<ol><li>Klicken Sie bei aktivem Arbeitsblatt auf <b>Statistik: Hypothesentests: Ereignisrate in Poisson-Modellen bei einer Stichprobe</b>.</li></ol>
+<p><br /> <i><b>Siehe auch:</b></i></p>
+<ul><li><a href="../../UserGuide/Category/One_Sample_Poisson_Rate_(Pro_Only).html" title="Category:One Sample Poisson Rate (Pro Only)">Einf&uuml;hrung in Ereignisrate in Poisson-Modellen bei einer Stichprobe</a></li></ul>
+<p><br /></p>
+<h2><a name="Input_Data"></a><span class="mw-headline">Eingabedaten</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Form der Eingabedaten</th>
+<td>
+<ul><li><b>Zusammengefasst</b></li></ul>
+<dl><dd>F&uuml;hren Sie den Test mit Hilfe der Zusammenfassungsstatistik und nicht den tats&auml;chlichen Stichprobendaten im Arbeitsblatt durch. Sie k&ouml;nnen sie manuell im Dialog eingeben.</dd></dl>
+<ul><li><b>Roh</b></li></ul>
+<dl><dd>F&uuml;hren Sie den Test anhand eines Datensatzes in einer Spalte durch.</dd></dl>
+</td></tr>
+
+<tr>
+<th>Eingabedaten<p>(<i>Zusammengefasst</i>)</p>
+</th>
+<td>
+<ul><li><b>Sample Size</b></li></ul>
+<dl><dd>Die Gesamtanzahl der Beobachtungen</dd></dl>
+<ul><li><b>Gesamtvorkommen</b></li></ul>
+<dl><dd>Die Anzahl der Male, die ein Ereignis in der Stichprobe vorkommt.</dd></dl>
+</td></tr>
+<tr>
+<th>Eingabedaten<p>(<i>Roh</i>)</p>
+</th>
+<td>
+<ul><li><b>Stichprobe</b></li></ul>
+<dl><dd>Legen Sie eine Spalte als Stichprobendatensatz fest.</dd></dl>
+<ul><li><b>H&auml;ufigkeit</b></li></ul>
+<dl><dd>Dies ist eine optionale Option. Die H&auml;ufigkeitsspalte fasst die Anzahl der Vorkommen des Wert in der Stichprobenspalte zusammen.</dd></dl>
+</td></tr>
+<tr>
+<th>Exposition</th>
+<td>Legen Sie den Beobachtungszeitraum f&uuml;r die Mengendaten, wie Zeit, Fl&auml;che, Volumen, Anzahl der Elemente usw., fest. Der Standardwert ist 1.</td></tr></table>
+<h2><a name="Poisson_Rate_Test"></a><span class="mw-headline">Ereignisrate in Poisson-Modellen</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Testrate</th>
+<td>Die zu testende hypothetische Rate</td></tr>
+<tr>
+<th>Nullhypothese</th>
+<td>Die zu testende Nullhypothese (Rate = <i>Testrate</i>).</td></tr>
+<tr>
+<th>Alternativhypothese</th>
+<td>Optionen:<dl><dd><b>Rate &lt;&gt; <i>Testrate</i></b></dd></dl>
+<dl><dd>Eine beidseitige Ereignisrate in Poisson-Modellen, die zu beantworten versucht, ob die Rate der Stichprobe = <i>Testrate</i>.</dd></dl>
+<dl><dd><b>Rate &gt; <i>Testrate</i></b></dd></dl>
+<dl><dd>Eine einseitige Ereignisrate in Poisson-Modellen nach oben, die zu beantworten versucht, ob die Rate der Stichprobe gr&ouml;&szlig;er ist als die <i>Testrate</i>.</dd></dl>
+<dl><dd><b>Rate &lt; <i>Testrate</i></b></dd></dl>
+<dl><dd>Eine einseitige Ereignisrate in Poisson-Modellen nach unten, die zu beantworten versucht, ob die Rate der Stichprobe kleiner ist als die hypothetische Rate.</dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Das Signifikanzniveau des Tests</td></tr>
+<tr>
+<th>Kondenzintervall(e)</th>
+<td>Berechnen Sie das Konfidenzintervall f&uuml;r die wahre (Grundgesamtheit) Rate.</td></tr>
+<tr>
+<th>Konfidenzniveau(s) in %</th>
+<td>Legen Sie die Konfidenzniveaus fest, f&uuml;r die die Konfidenzintervalle berechnet werden. Diese Option ist nur verf&uuml;gbar, wenn <b>Konfidenzintervall(e)</b> aktiviert ist.</td></tr></table>
+<h2><a name="Test_Method"></a><span class="mw-headline">Testmethode</span></h2>
+<p>Origin verwendet zwei Methoden zum Berechnen der p-Werte und Konfidenzintervalle f&uuml;r Ereignisraten in Poisson-Modellen bei einer Stichprobe:</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Exakt</th>
+<td>Es gibt keine Anforderung an den Stichprobenumfang, wenn die exakte Methode verwendet wird. Sie ist ideal f&uuml;r kleine Stichproben und Ereignisse mit geringer H&auml;ufigkeit.</td></tr>
+<tr>
+<th>Normal-Approximation</th>
+<td>Die Approximation der Normalverteilung wird immer berechnet. Die Qualit&auml;t der Approximation neigt dazu, sich mit zunehmendem Stichprobenumfang zu verbessern.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Bericht der grafischen Zusammenfassung</th>
+<td>Erstellen Sie einen grafischen Zusammenfassungsbericht. Die Ergebnistabellen werden an das Diagramm angeh&auml;ngt, um die statistischen Werte zu zeigen.<p>Die Fu&szlig;note nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p>
+</td></tr>
+<tr>
+<th>Ergebnisse ausgeben</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr>
+<tr>
+<th>Zeichnungsdaten ausgeben</th>
+<td>Legen Sie ein Arbeitsblatt f&uuml;r die Ausgabe der gezeichneten Daten fest (Origin erzeugt beim Erstellen von Zeichnungen tabellarische Daten).</td></tr></table>
+
+
+
+
+
+
+
+    

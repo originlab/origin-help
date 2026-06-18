@@ -1,7 +1,7 @@
 ﻿<h1 class="firstHeading">分析結果の再計算</h1><p class='urlname' style='display: none'>アナリダイアログ-再計算</p>
 <p>全ての分析ツール及び、その他のほとんどのデータ処理ダイアログボックスには、<b><b>再計算</b></b>コントロールがあります。通常は、入力データを指定するダイアログボックスの上部付近にあります。
 </p>
-<dl><dd><a  class="image"><img alt="Image1002.png" src="../images/Recalculating_Analysis_Results/Image1002.png" width="187"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Image1002.png" src="../images/Recalculating_Analysis_Results/Image1002.png" width="277"  /></a></dd></dl>
 <p>この特有な制御により、ソフトウェアが入力データへの変更をどのように処理するかを決定します。<b><b>なし</b></b>、<b><b>自動</b></b>、<b>手動</b>の3つのモードの何れかを選択します（下の表を参照）。それぞれ、<b>なし</b>=再計算なし、<b>自動</b>=自動で再計算、<b>手動</b>=手動で再計算します。 
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
@@ -13,10 +13,15 @@
 </ul>
 </li>
 <li class="toclevel-1 tocsection-4"><a href="#Remove_Locked_Operations"><span class="tocnumber">2</span> <span class="toctext">ロック操作の削除</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Hide_Recalculation_Locks"><span class="tocnumber">3</span> <span class="toctext">再計算ロックの非表示</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Change_the_Position_of_Locks_on_a_Graph"><span class="tocnumber">4</span> <span class="toctext">グラフ上のロック位置の変更</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Reopen_Analysis_Dialog_by_Output_Curves"><span class="tocnumber">5</span> <span class="toctext">出力カーブから解析ダイアログを再度開く</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Modes_for_Recalculate"></a><span class="mw-headline">再計算モード</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th>なし
 </th>
@@ -85,13 +90,13 @@
 <td align="center"><a  class="image"><img alt="Operation lock auto.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto.png" width="14"  /></a>
 </td>
 <td> 関連する操作は<b><b>再計算</b></b>=<b><b>自動</b></b>に設定されています。保留中の操作はありません。メイン操作の錠前アイコンは、最も左の列に表示されます<a  class="image"><img alt="Operation lock auto.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto.png" width="14"  /></a>。メイン操作の右側にある関連する操作の列には、「+」アイコン<a  class="image"><img alt="Operation lock auto related.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related.png" width="11"  /></a>が表示されます。関連する錠前アイコンにカーソルを合わせると、錠前アイコンを示すツールチップがポップアップ表示されます。
-<dl><dd><a  class="image"><img alt="Operation lock auto related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related_tooltip.png" width="378"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Operation lock auto related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related_tooltip.png" width="379"  /></a></dd></dl>
 </td></tr>
 <tr>
 <td align="center"><a  class="image"><img alt="Operation lock manual.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual.png" width="13"  /></a>
 </td>
 <td> 関連する操作は<b><b><b><b>再計算</b></b></b>=<b>手動</b></b>に設定されています。保留中の操作はありません。最初は、すべての手動再計算が緑色で表示されます。メイン操作の右側にある最新の関連する操作の列には、「+」アイコン<a  class="image"><img alt="Operation lock auto related.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto_related.png" width="11"  /></a>が表示されます。関連する錠前アイコンにカーソルを合わせると、錠前アイコンを示すツールチップがポップアップ表示されます。
-<dl><dd><a  class="image"><img alt="Operation lock manual related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_related_tooltip.png" width="374"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Operation lock manual related tooltip.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_related_tooltip.png" width="379"  /></a></dd></dl>
 </td></tr>
 <tr>
 <td align="center"><a  class="image"><img alt="Operation lock manual pending.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual_pending.png" width="14"  /></a>
@@ -124,8 +129,9 @@
 <h3><a name="Context_Menu_for_Locked_Operations"></a><span class="mw-headline">ロック操作のコンテキストメニュー</span></h3>
 <p>グラフまたはレポートシートのカギのアイコンをクリックして、コンテキストメニューを開くことができます。メニューオプションについては次の表で説明しています。操作によってメニュー表示は異なります。
 </p>
-<dl><dd><dl><dd><a  class="image"><img alt="Recalculate icon context menu.png" src="../images/Recalculating_Analysis_Results/Recalculate_icon_context_menu.png" width="366"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="Recalculate icon context menu.png" src="../images/Recalculating_Analysis_Results/Recalculate_icon_context_menu.png" width="425"  /></a></dd></dl></dd></dl>
 <table class="dialogcontroltable">
+
 <tr>
 <th>再計算
 </th>
@@ -239,6 +245,15 @@
 </p>
 </td></tr>
 <tr>
+<th>指定したシートの操作を複製
+</th>
+<td>
+<p>現在の解析（同じパラメータ設定）を、指定したワークシートに適用します。このメニューは、現在のプロジェクト内の複数シートを一括処理する際に最適です。実行すると<b>操作を複製</b>ダイアログが開き、対象となるシート（非表示シートも含む）や、列の一致方法（<b>列インデックス</b>または<b>ロングネーム</b>）を指定できます。
+<br /><b>Note:</b> 行列/仮想行列/画像を対象とした解析にも対応しています。
+</p>
+<dl><dd><a  class="image"><img alt="Duplicate Operation Dialog.png" src="../images/Recalculating_Analysis_Results/Duplicate_Operation_Dialog.png" width="495"  /></a></dd></dl>
+</td></tr>
+<tr>
 <th>全てのグラフ/Y列に対してこれを繰り返す
 </th>
 <td>
@@ -270,11 +285,39 @@
 メニューから<b>編集：操作を削除</b>を選択する</li>
 </ul>
 <table class="note">
+
 <tr>
 <td><b>Notes： </b>
 <ul><li> 操作が複数のシート/レイヤに関連している場合、アクティブなシート/レイヤから削除すると、関連するすべてのシート/レイヤから削除されます。</li>
 <li> すべての操作オブジェクトが削除されたため、削除アクションは回復できません。</li></ul>
 </td></tr></table>
+<p><br />
+</p>
+<h2><a name="Hide_Recalculation_Locks"></a><span class="mw-headline">再計算ロックの非表示</span></h2>
+<p>ページレベルのミニツールバーにある鍵アイコンを表示非表示ボタンを使って、アクティブ化されたグラフの再計算ロックを非表示にすることができます。<br /><a  class="image"><img alt="Recalculating Analysis Results Hide 01.png" src="../images/Recalculating_Analysis_Results/550px-Recalculating_Analysis_Results_Hide_01.png" width="550"   /></a><br />
+<br />または、<b>表示: 表示様式: 錠前アイコン</b>メニューを選択します。 
+</p><p><br />
+<span class='headerInParagraph'>再計算のアイコンをグローバルにオフにするには</span>
+</p>
+<ul><li> <b>表示：表示様式：すべてのグラフの錠前アイコンを非表示</b>を選択して、ダイアログを開きます。<br /></li></ul>
+<p><a  class="image"><img alt="Recalculating Analysis Results Hide 02.png" src="../images/Recalculating_Analysis_Results/Recalculating_Analysis_Results_Hide_02.png" width="422"  /></a><br />
+<br />ダイアログでは、数値を入力でき、グラフ内の錠前アイコンの数がこの値を超えると、そのグラフのすべての錠前アイコンが自動的に非表示になります。
+</p>
+<h2><a name="Change_the_Position_of_Locks_on_a_Graph"></a><span class="mw-headline">グラフ上のロック位置の変更</span></h2>
+<p>メニュー<b>表示：表示様式：ロック位置を順に切り替え</b>を選択すると、ロックアイコンの表示位置を切り替えることができます（「レイヤアイコン」→「最初の点」→「最後の点」の順に切り替え）。
+</p><p>または、<b>データ: 錠前アイコンの位置: レイヤアイコン/最初のポイント/最後のポイント</b>を選択して、再計算ロックの位置を変更することも可能です。
+</p>
+<h2><a name="Reopen_Analysis_Dialog_by_Output_Curves"></a><span class="mw-headline">出力カーブから解析ダイアログを再度開く</span></h2>
+<p>出力曲線を選択して、対応する解析ダイアログを再度開き、再計算を行うには以下の方法があります。
+</p>
+<ul><li> グラフの角にある緑色の錠前アイコン（<a  class="image"><img alt="Operation lock auto.png" src="../images/Recalculating_Analysis_Results/Operation_lock_auto.png" width="14"  /></a> または <a  class="image"><img alt="Operation lock manual.png" src="../images/Recalculating_Analysis_Results/Operation_lock_manual.png" width="13"  /></a>）にマウスを合わせてクリックし、表示されるメニューから<b>パラメータを変更</b>を選択します。</li></ul>
+<p><i>または、</i>
+</p>
+<ul><li>  出力カーブをクリックし、ミニツールバーに表示される<b>パラメータの変更</b>ボタンをクリックします。</li></ul>
+<p><i>または、</i>
+</p>
+<ul><li>  出力カーブを右クリックし、コンテキストメニューから<b>パラメータの変更</b>ボタンをクリックします。</li></ul>
+
 
 
     

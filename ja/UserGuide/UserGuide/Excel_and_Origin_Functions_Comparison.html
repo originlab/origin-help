@@ -19,6 +19,9 @@
 
 <p>以下の表では、<a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="ユーザガイド：数式を使用してセル値を設定する">セル値の設定</a>に使用できるOrigin関数と一般的なExcel関数を比較します。
 </p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Excel_and_Origin_Functions_Comparison/Tip_icon.png" width="57"  border="0" /></td><td><p>Origin 2026から、関数を含むExcelデータをコピーし、<a href="../../UserGuide/UserGuide/Working_with_Microsoft_Excel.html#To_Copy_from_Excel_with_Formula" title="ユーザガイド:Microsoft Excelと操作"><b>貼り付け（Excel数式の保持）</b></a>コンテキストメニューを使用してOriginに貼り付けることができます。一部のExcel関数名はローカライズされています（例えば、英語の<code>AVERAGE</code>関数はドイツ語の<code>MITTELWERT</code> になる）。そのような関数をExcelからOriginにコピーすると、関数名は自動的に英語に翻訳されます。システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#T">@TGN</a>を設定するとこの変換は無効になります。
+</p></td></tr></table>
 <h2><a name="Data_References"></a><span class="mw-headline">データ参照</span></h2>
 <p>Excelと同様、Originも<a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html#Extending_Formulas_Across_Rows_or_Columns" title="ユーザガイド：数式を使用してセル値を設定する">ドラッグ&amp;ドロップによる行や列をまたがった式の拡張</a>が可能です。また、相対参照と絶対参照の2種類を導入しています。相対参照は、セル式を他の行または列にドラッグアンドドロップして拡張すると内容が変更されます。一方、絶対参照は一定のままです。
 </p>
@@ -159,6 +162,8 @@
 </p></td></tr></table>
 <h2><a name="Most_Popular_Functions"></a><span class="mw-headline">よく使用される関数</span></h2>
 <table class="simple" style="width: 95%">
+<caption> <font color="green"><b>異なる関数</b></font>
+</caption>
 <tr>
 <th width="40%">説明
 </th>
@@ -169,7 +174,7 @@
 <tr>
 <td>範囲の平均を返す
 </td>
-<td><b>mean(A1:A6)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Mean_(function).html">1</a></sup>
+<td><b>average(A1:A6)</b> または <b>mean(A1:A6)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Mean_(function).html">1</a></sup>
 </td>
 <td><b>average(A1:A6)</b>
 </td></tr>
@@ -274,9 +279,29 @@
 <tr>
 <td>一様分布の標本から0から1の間の乱数を返します。
 </td>
-<td><b>rnd()</b> または <b>ran()</b>
+<td><b>rand()</b> または <b>rnd()</b> または <b>ran()</b>
 </td>
-<td><b>RAND()</b>
+<td><b>rand()</b>
+</td></tr></table>
+<p><br />
+</p>
+<table class="simple" style="width: 95%">
+<caption> <font color="green"><b>同じ表記法</b></font>
+</caption>
+<tr>
+<th width="70%">説明
+</th>
+<th width="30%">Origin＆Excelの表記法
+</th></tr>
+<tr>
+<td>範囲の平均を返す
+</td>
+<td><b>average(A1:A6)</b>
+</td></tr>
+<tr>
+<td>一様分布の標本から0から1の間の乱数を返します。
+</td>
+<td><b>rand()</b>
 </td></tr></table>
 <h2><a name="Date_and_Time"></a><span class="mw-headline">日付と時間</span></h2>
 <table class="simple" style="width: 95%">
@@ -592,7 +617,7 @@
 <th width="30%">Excel表記法
 </th></tr>
 <tr>
-<td>A列の2を検索し、同じ行のB列の値を返す<br /><b>Note</b>: Originでは、戻り値の型に応じて、lookup()$またはlookup()を使用します。
+<td>A列の2を検索し、同じ行のB列の値を返す<br /><b>注意</b>: Originでは、戻り値の型に応じて、lookup()$またはlookup()を使用します。
 </td>
 <td><b>lookup(2, A, B)$</b><sup><a class="external text" href="../../LabTalk/LabTalk/Lookup_(function).html">1</a></sup>
 </td>
@@ -862,21 +887,21 @@
 <tr>
 <td>範囲の平均を返す
 </td>
-<td><b>mean(A1:A6)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Mean_(function).html">1</a></sup>
+<td><b>average(A1:A6)</b> または <b>mean(A1:A6)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Mean_(function).html">1</a></sup>
 </td>
 <td><b>average(A1:A6)</b>
 </td></tr>
 <tr>
 <td>標本の標準偏差を返す(計算にはn-1を使用)
 </td>
-<td><b>stddev(A2:A11)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Stddev_(function).html">1</a></sup>
+<td><b>stdev.s(A2:A11)</b> または <b>stddev(A2:A11)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Stddev_(function).html">1</a></sup>
 </td>
 <td><b>stdev.s(A2:A11)</b>
 </td></tr>
 <tr>
 <td>母集団の標準偏差を返す(計算にはnを使用)
 </td>
-<td><b>stddevp(A2:A11)</b><sup><a class="external text" href="../../LabTalk/LabTalk/StdDevP_(function).html">1</a></sup>
+<td><b>stdev.p(A2:A11)</b> または <b>stddevp(A2:A11)</b><sup><a class="external text" href="../../LabTalk/LabTalk/StdDevP_(function).html">1</a></sup>
 </td>
 <td><b>stdev.p(A2:A11)</b>
 </td></tr>
@@ -1006,14 +1031,21 @@
 </td>
 <td><b>gauss(2)</b>
 </td></tr></table>
+<p><br />
+</p>
 <table class="simple" style="width: 95%">
 <caption> <font color="green"><b>同じ表記法</b></font>
 </caption>
 <tr>
-<th width="40%">説明
+<th width="70%">説明
 </th>
-<th width="60%">Origin＆Excelの表記法
+<th width="30%">Origin＆Excelの表記法
 </th></tr>
+<tr>
+<td>範囲の平均を返す
+</td>
+<td><b>average(A1:A6)</b>
+</td></tr>
 <tr>
 <td>2.5 (1.329)のガンマ関数値を返す
 </td>
@@ -1043,6 +1075,16 @@
 <td>分布の歪度を返す
 </td>
 <td><b>skew(A1:A4)</b><sup><a class="external text" href="../../LabTalk/LabTalk/Skew_(function).html">1</a></sup>
+</td></tr>
+<tr>
+<td>標本の標準偏差を返す(計算にはn-1を使用)
+</td>
+<td><b>stdev.s(A2:A11)</b>
+</td></tr>
+<tr>
+<td>母集団の標準偏差を返す(計算にはnを使用)
+</td>
+<td><b>stdev.p(A2:A11)</b>
 </td></tr></table>
 <h2><a name="Text"></a><span class="mw-headline">テキスト</span></h2>
 <table class="simple" style="width: 95%">

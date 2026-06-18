@@ -14,13 +14,14 @@
 <li class="toclevel-1 tocsection-7"><a href="#Reference"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Creating_Probability_Plot_or_Q-Q_Plot"></a><span class="mw-headline">確率プロット/Q-Qプロットを作成するには</span></h2>
 <p>確率プロット、または、Q-Qプロットを作成するには、
 </p>
 <ol><li>1つのY列または複数のY列を入力変数として選択します。 </li>
 <li>確率/Q-Qプロットダイアログを開きます。
 <dl><dd>確率プロット：Originのメインメニューで、<b>作図 &gt; 統計：確率プロット（P-P図）</b>を選択します。  または、2Dグラフギャラリーツールバーの確率プロットボタン<a  class="image"><img alt="Button Probability Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Probability_Plot.png" width="24"  /></a>をクリックします。  </dd>
-<dd>Q-Qプロット：Originのメインメニューで、作図 &gt; 統計：Q-Qプロットを選択します。  <i>または、2DグラフギャラリーツールバーのQ-Qプロットボタン<a  class="image"><img alt="Button Q Q Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Q_Q_Plot.png" width="21"  /></a>をクリックします。</i></dd></dl></li>
+<dd>Q-Qプロット：Originのメインメニューで、<i><b>作図 &gt; 統計：Q-Qプロット</b>を選択します。  または、2DグラフギャラリーツールバーのQ-Qプロットボタン<a  class="image"><img alt="Button Q Q Plot.png" src="../images/Probability_Plot_and_Q-Q_Plot/Button_Q_Q_Plot.png" width="21"  /></a>をクリックします。</i></dd></dl></li>
 <li>plot_prob Xファンクションダイアログで、グループ化列を選択、グループと変数の配置の設定、プロットを各パネルに分割する列、分布および手法を指定します。</li>
 <li><b>OK</b>をクリックして確率プロット、または、Q-Qプロットを作成します。
 <dl><dd><a  class="image"><img alt="Probability Plot and Q Q Plot 2.png" src="../images/Probability_Plot_and_Q-Q_Plot/850px-Probability_Plot_and_Q_Q_Plot_2.png" width="850"   /></a></dd></dl></li></ol>
@@ -31,8 +32,9 @@
 <li> <b>パネルの分割</b>で選択された別のグループ列 &quot;Luxury&quot; により、グラフが2つのレイヤ(<b>N</b>と<b>Y</b>)に分割されます。</li>
 <li> 統計結果を含む表がグラフに追加されます。</li></ul>
 <h2><a name="The_Dialog_of_plot_prob_X-Function"></a><span class="mw-headline">plot_probXファンクションのダイアログ</span></h2>
-<dl><dd><a  class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png" width="439"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Probability plot 03.png" src="../images/Probability_Plot_and_Q-Q_Plot/Probability_plot_03.png" width="485"  /></a></dd></dl>
 <table class="dialogcontroltable">
+
 <tr>
 <th>
 <p><b>入力データ</b>
@@ -94,7 +96,7 @@
 </p>
 <ul><li><b>分布</b>
 <dl><dd>14の分布から選択します。</dd>
-<dd><a  class="image"><img alt="Distribution PPandQQ.png" src="../images/Probability_Plot_and_Q-Q_Plot/Distribution_PPandQQ.png" width="276"  /></a></dd></dl></li>
+<dd><a  class="image"><img alt="Distribution PPandQQ.png" src="../images/Probability_Plot_and_Q-Q_Plot/Distribution_PPandQQ.png" width="286"  /></a></dd></dl></li>
 <li><b>データより推定</b>
 <dl><dd>入力データから分布パラメータを推定するかどうかを指定します。チェックを付けない場合、パラメータを手動で指定することができます。</dd></dl></li>
 <li> <i><b>パラメータ</b></i>:<b>データより推定</b>ボックスのチェックを外すと、<i><b>パラメータ</b></i>ボックスがアクティブになり、カスタム値を入力して曲線を描くことができます。
@@ -143,11 +145,14 @@
 <th><b>X最小<br />X最大</b>
 </th>
 <td>
-<p><i>自動</i>の値は、<b>X最小</b> = <i>1</i> および <b>X最大</b> = <i>99.5</i>です。<i>自動</i>のチェックを外すと、出力の<b>参照線</b>列の最小および最大値を使用します。
-</p><p>X最大が<i>自動</i>の値より大きい場合、<b>X最大</b>のパーセント値p1を計算して、 パーセンタイル列には、デフォルトリストにp1およびp1より大きい値のみ含める必要があります。<b>X最大</b>が<i>自動</i>の値より小さい場合、X最大のパーセント値p2を計算して、 パーセンタイル列には、デフォルトリストにp2およびp2より小さい値のみ含める必要があります。
-</p><p>X最小が<i>自動</i>の値よりも小さい場合、X最小値のパーセンタイル値p1を計算します。p1&lt;1e-5, p1=1e-5の場合、p1よりも大きい最小値10^(-m)を見つけ、パーセンタイル列には p1, 10^(-m), 10^(-m+1), ,,,,1, 2,...が含まれます。
-</p><p>X最大が<i>自動</i>の値よりも大きい場合、X最大値のパーセンタイル値p2を計算します。p2&gt;99.99, p2=99.99の場合、リスト (99.9, 99.99) から2より小さい最大値をみつけ、パーセンタイル列には99, 99.5, 99.9,..p2.が含まれます。
+<p>デフォルトでは、<b>自動</b>チェックボックスがオンになっています。この場合、結果シート PlotData# の <b>Reference Line</b> 列における X 値の最小値と最大値が、分布曲線の作成に使用されます。
+</p><p><b>自動</b>チェックボックスをオフにすると、すべての分布参照線に使用する X 値の最小値および/または最大値を入力できます。すべての参照線は、この X 範囲内にプロットされます。
 </p>
+</td></tr>
+<tr>
+<th><b>出力先</b>
+</th>
+<td>グラフを出力する場所として、別のグラフウィンドウまたはレポートシート内に埋め込む場所を指定します。
 </td></tr>
 <tr>
 <th>
@@ -171,6 +176,7 @@
 <p>Originには4つの確率分布とQ-Qプロットが含まれます。  次の表に、密度関数を示します。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>分布
 </th>
@@ -212,6 +218,23 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3パラメータ対数正規</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ff5d90fc1b5f0fc80b0b049487b2e757.png" title="\frac{1}{(x - \gamma)\sigma\sqrt{2\pi}} \exp\left(-\frac{[\ln(x - \gamma) - \mu]^2}{2\sigma^2}\right)" alt="\frac{1}{(x - \gamma)\sigma\sqrt{2\pi}} \exp\left(-\frac{[\ln(x - \gamma) - \mu]^2}{2\sigma^2}\right)" class="tex"/> 
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-531fdfc56b8d29edd13fd444fd463bda.png" title="x &gt; \gamma" alt="x &gt; \gamma" class="tex"/>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-ae539dfcc999c28e25a0f3ae65c1de79.png" title="\gamma" alt="\gamma" class="tex"/> は分布の最小値<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-c9faf6ead2cd2c2187bd943488de1d0a.png" title="\mu" alt="\mu" class="tex"/> は (X−γ)の対数の平均<br />
+<img src="../images/Probability_Plot_and_Q-Q_Plot/math-a4788ab5dc66b5568b75044285c9c9de.png" title="\sigma &gt;0" alt="\sigma &gt;0" class="tex"/> はln(X−γ)の標準偏差
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>指数分布</b>
 </p>
 </td>
@@ -222,6 +245,21 @@
 <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-887fb68a10cbd4369b27c90bee0334d8.png" title="x&gt;0" alt="x&gt;0" class="tex"/>
 </td>
 <td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/>はscaleパラメータです。
+</td></tr>
+<tr>
+<td>
+<p><b>2パラメータ指数</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-799a1bc48197582bf201f7f9620fcae9.png" title="\lambda e^{-\lambda(x - \mu)}" alt="\lambda e^{-\lambda(x - \mu)}" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-450cd0c402e1572f20eaae803f543887.png" title="x&gt;\mu" alt="x&gt;\mu" class="tex"/>
+</td>
+<td>λ&gt; 0はレートパラメータ（スケールの逆数）<br />
+<p>μ は位置パラメータ（最小値、しきい値）
+</p>
 </td></tr>
 <tr>
 <td>
@@ -240,6 +278,23 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3パラメータワイブル</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-fd28766d8714f5f3b134a5f2016e13a2.png" title="\frac{k}{\lambda} \left(\frac{x - \gamma}{\lambda}\right)^{k-1} \exp\left[-\left(\frac{x - \gamma}{\lambda}\right)^k\right]" alt="\frac{k}{\lambda} \left(\frac{x - \gamma}{\lambda}\right)^{k-1} \exp\left[-\left(\frac{x - \gamma}{\lambda}\right)^k\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-5163961cb46ccddd3ef1795f30783184.png" title="\quad x \geq \gamma" alt="\quad x \geq \gamma" class="tex"/>
+</td>
+<td>
+<p>k&gt;0 形状パラメータ（ワイブル係数）<br />
+λ&gt;0 スケールパラメータ（特性寿命）<br />
+γ は位置パラメータ（最小寿命／しきい値）
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>ガンマ</b>
 </p>
 </td>
@@ -252,6 +307,101 @@
 <td>
 <p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-76fec96d27b39c2a31847043afea1ac1.png" title="\sigma(&gt;0)" alt="\sigma(&gt;0)" class="tex"/>はスケールパラメータ、<br /> <img src="../images/Probability_Plot_and_Q-Q_Plot/math-770e1ec61d2bdf4b87b2fdabdba6503f.png" title="c(&gt;0)" alt="c(&gt;0)" class="tex"/> は形状パラメータです。
 </p>
+</td></tr>
+<tr>
+<td>
+<p><b>最小極値分布</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-6f79a454df12d61a9b175c6820f67473.png" title="\frac{1}{\sigma} \exp\left[\frac{x-\mu}{\sigma} - \exp\left(\frac{x-\mu}{\sigma}\right)\right]" alt="\frac{1}{\sigma} \exp\left[\frac{x-\mu}{\sigma} - \exp\left(\frac{x-\mu}{\sigma}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-976cd636e0f687d2895fdb868ad30d0b.png" title="\quad -\infty &lt; x &lt; \infty" alt="\quad -\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  = 位置パラメータ（最頻値、中央値でもある）<br />
+σ&gt;0  = スケールパラメータ
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>最大極値分布</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-36ef007a50beffe3207b87334be2d2ce.png" title="\frac{1}{\sigma} \exp\left[-\frac{x-\mu}{\sigma} - \exp\left(-\frac{x-\mu}{\sigma}\right)\right]" alt="\frac{1}{\sigma} \exp\left[-\frac{x-\mu}{\sigma} - \exp\left(-\frac{x-\mu}{\sigma}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-982ba133caf1fa101f22472a03e9ad50.png" title="-\infty &lt; x &lt; \infty" alt="-\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  =位置パラメータ（最頻値）<br />
+σ&gt;0  = スケールパラメータ
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>ロジスティック</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-b0f8fea0bd253d1624c2a2cf93ff2a61.png" title="\frac{\exp\left(-\frac{x-\mu}{s}\right)}{s\left[1 + \exp\left(-\frac{x-\mu}{s}\right)\right]^2} = \frac{1}{4s} \text{sech}^2\left(\frac{x-\mu}{2s}\right)" alt="\frac{\exp\left(-\frac{x-\mu}{s}\right)}{s\left[1 + \exp\left(-\frac{x-\mu}{s}\right)\right]^2} = \frac{1}{4s} \text{sech}^2\left(\frac{x-\mu}{2s}\right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-1db19867debccae3967ae703bd2728b2.png" title=" -\infty &lt; x &lt; \infty" alt=" -\infty &lt; x &lt; \infty" class="tex"/>
+</td>
+<td>
+<p>μ  = 位置パラメータ（平均、中央値、最頻値）<br />
+s&gt;0  = スケールパラメータ（標準偏差に関連）
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>対数ロジスティック</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-c0e7f5d9cc6a6361410349ceb1a078e1.png" title="\frac{(\beta/\alpha)(t/\alpha)^{\beta-1}}{\left[1 + (t/\alpha)^\beta\right]^2}" alt="\frac{(\beta/\alpha)(t/\alpha)^{\beta-1}}{\left[1 + (t/\alpha)^\beta\right]^2}" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-230aab57abce22285fb273b1b2f1b0a4.png" title="t &gt; 0" alt="t &gt; 0" class="tex"/>
+</td>
+<td>
+<p>α&gt;0  = スケールパラメータ（中央値 = α）<br />
+β&gt;0  = 形状パラメータ（歪度および裾の挙動を制御）
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>折りたたみ正規分布</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-bd08ae43171d75ffbf2edbd041709759.png" title="\frac{1}{\sigma\sqrt{2\pi}} \left[\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) + \exp\left(-\frac{(x+\mu)^2}{2\sigma^2}\right)\right]" alt="\frac{1}{\sigma\sqrt{2\pi}} \left[\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) + \exp\left(-\frac{(x+\mu)^2}{2\sigma^2}\right)\right]" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-0ae946a990b8fb199c7f60f2bc27706b.png" title="x \geq 0" alt="x \geq 0" class="tex"/>
+</td>
+<td>
+<p>μ は基礎となる正規分布の位置パラメータ<br />
+σ&gt;0 (スケール)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>レイリー</b>
+</p>
+</td>
+<td>
+<p><img src="../images/Probability_Plot_and_Q-Q_Plot/math-433563c883e5cc3d5148b605883c5b7f.png" title="\frac{x}{\sigma^2} \exp\left(-\frac{x^2}{2\sigma^2}\right)" alt="\frac{x}{\sigma^2} \exp\left(-\frac{x^2}{2\sigma^2}\right)" class="tex"/>
+</p>
+</td>
+<td><img src="../images/Probability_Plot_and_Q-Q_Plot/math-0ae946a990b8fb199c7f60f2bc27706b.png" title="x \geq 0" alt="x \geq 0" class="tex"/>
+</td>
+<td>
+<p>σ&gt;0  はスケールパラメータです。
+</p>
 </td></tr></table>
 <h2><a name="Details_for_Constructing_Probability_Plot"></a><span class="mw-headline">確率プロット作成の詳細</span></h2>
 <p>確率プロットを作成するために、観測されたデータセットを最小から最大にソートします。
@@ -263,6 +413,7 @@
 <p>確率プロットの<a href="../../UserGuide/UserGuide/The_Scale_Tab.html#Type" title="ユーザガイド:『スケール』タブ">スケールタイプ</a>は、分布により異なります。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>分布
 </th>
@@ -298,6 +449,19 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3パラメータ対数正規</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>確率
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>指数分布</b> 
 </p>
 </td>
@@ -307,6 +471,19 @@
 </td>
 <td>
 <p>二重対数逆数
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>2パラメータ指数</b> 
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>二重対数逆数(ワイブル)
 </p>
 </td></tr>
 <tr>
@@ -324,6 +501,19 @@
 </td></tr>
 <tr>
 <td>
+<p><b>3パラメータワイブル</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>二重対数逆数(ワイブル)
+</p>
+</td></tr>
+<tr>
+<td>
 <p><b>ガンマ</b>
 </p>
 </td>
@@ -333,6 +523,84 @@
 </td>
 <td>
 <p>確率
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>最小極値分布</b>
+</p>
+</td>
+<td>
+<p>線形
+</p>
+</td>
+<td>
+<p>二重対数逆数(ワイブル)
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>最大極値分布</b>
+</p>
+</td>
+<td>
+<p>線形
+</p>
+</td>
+<td>
+<p>カスタム数式
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>ロジスティック</b>
+</p>
+</td>
+<td>
+<p>線形
+</p>
+</td>
+<td>
+<p>ロジット
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>対数ロジスティック</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>ロジット
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>折りたたみ正規分布</b>
+</p>
+</td>
+<td>
+<p>線形
+</p>
+</td>
+<td>
+<p>カスタム数式
+</p>
+</td></tr>
+<tr>
+<td>
+<p><b>レイリー</b>
+</p>
+</td>
+<td>
+<p>Log10
+</p>
+</td>
+<td>
+<p>カスタム数式
 </p>
 </td></tr></table>
 <h2><a name="Details_for_Constructing_Q-Q_Plot"></a><span class="mw-headline">Q-Qプロット作成の詳細</span></h2>
@@ -346,6 +614,7 @@
 <p>入力データが最小から最大の順に並べられ、ソートされたデータのシリアル番号が以下のいずれかの方法で採点されます。  この表では、<img src="../images/Probability_Plot_and_Q-Q_Plot/math-865c0c0b4ab0e063e5caa3387c1a8741.png" title="i" alt="i" class="tex"/>はシリアル番号で、<img src="../images/Probability_Plot_and_Q-Q_Plot/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"/>は欠損なしの入力データの総数です。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>メソッド
 </th>
@@ -399,6 +668,9 @@
 <h2><a name="Reference"></a><span class="mw-headline">参考文献</span></h2>
 <ul><li>Samuel Kotz , Campbell B. Read , N. Balakrishnan, Brani Vidakovic, 2005.<i>Encyclopedia of statistical sciences.</i>, NewYork: John Wiley &amp; Sons, Inc.</li>
 <li>Thode, Henry C. 2002, <i>Testing for Normality</i>, CRC Press</li></ul>
+
+
+
 
 
 

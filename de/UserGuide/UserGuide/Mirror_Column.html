@@ -1,0 +1,165 @@
+﻿<h1 class="firstHeading">Spiegelspalten</h1><p class='urlname' style='display: none'>Mirror-Columns</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What.27s_Mirror_Column.3F"><span class="tocnumber">1</span> <span class="toctext">Was ist eine Spiegelspalte?</span></a><ul>
+<li class="toclevel-2 tocsection-2"><a href="#Source_Column"><span class="tocnumber">1.1</span> <span class="toctext">Quellspalte</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Mirror_Column"><span class="tocnumber">1.2</span> <span class="toctext">Spiegelspalte</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Copy_Paste_Columns_as_Mirrors"><span class="tocnumber">2</span> <span class="toctext">Spalten als Spiegel kopieren und einf&uuml;gen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Mirror_to_Whole_Sheet.2FBook"><span class="tocnumber">3</span> <span class="toctext">Ganze/s Blatt/Mappe spiegeln</span></a><ul>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_Whole_Sheet_as_Mirrors"><span class="tocnumber">3.1</span> <span class="toctext">Ganzes Blatt als Spiegel kopieren</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Duplicate_Whole_Book_as_Mirror"><span class="tocnumber">3.2</span> <span class="toctext">Ganze Mappe als Spiegel duplizieren</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Batch_Create_Mirror_Columns_from_Similar_Sheets"><span class="tocnumber">4</span> <span class="toctext">Spiegelspalten aus entsprechenden Bl&auml;ttern per Stapelverarbeitung erstellen</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Convert_column_formula_to_Mirror_Column"><span class="tocnumber">5</span> <span class="toctext">Spaltenformel in Spiegelspalte umwandeln</span></a></li>
+</ul>
+</div>
+
+<h2><a name="What.27s_Mirror_Column.3F"></a><span class="mw-headline">Was ist eine Spiegelspalte?</span></h2>
+<p>&quot;Spiegelspalten&quot; werden in Origin 2026b eingef&uuml;hrt. Wie der Name impliziert, stellt eine Spiegelspalte f&uuml;r eine andere Spalte so etwas wie einen Spiegel dar - jedwede &Auml;nderung an der Quellspalte (z. B. Daten hinzuf&uuml;gen, l&ouml;schen, modifizieren oder maskieren) wird sofort in der Spiegelspalte wiedergegeben. Dies scheint, der Funktion <a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" title="UserGuide:Copying and pasting Worksheet Data"><b>Verkn&uuml;pfung einf&uuml;gen</b></a> sehr &auml;hnlich zu sein, minimiert aber den Bedarf an zus&auml;tzlichem Arbeitsspeicher sogar bei gro&szlig;en Datens&auml;tzen und bietet daher eine schnellere und effizientere Methode der Datensynchronisation. Es integriert auch Werkzeuge und Men&uuml;s, um dieses Arbeitsablauf reibungsloser zu machen.</p><p><i><b>Hinweis:</b></i></p>
+<ul>
+<li>Bitte denke Sie immer daran, dass der Spiegel nicht bis auf die Abh&auml;ngigkeiten der Quelle &quot;durchsehen&quot; kann. Er gibt einfach wieder, was die Quelle anzeigt - wie ein wirklicher Spiegel.<br /> Auch wenn die Quellspalte eine (Spalten-/Zellen-) Formel enth&auml;lt, die andere Spalten einbezieht, gibt die Spiegelspalte die Quelle genau wieder. Das bedeutet, dass die Formel im Spiegel auf die gleichen Spalten verweist wie die Quellformel. Im Screenshot unten spiegelt zum Beispiel Spalte col(A) von Book2 Spalte col(C) in Book1 und [Book1]1!col(C) selbst wird durch die Summe von Spalte col(A) und Spalte col(B) im gleichen Blatt berechnet. Obwohl die Formel im Spiegel (Book2) <code>=A1+B1</code> anzeigt, genau wie in der Quelle (Book1), verweisen <code>A1</code> und <code>B1</code> im Spiegel (Book2) noch immer auf die Spalten col(A) und col(B) in Book1 (die Quelle), nicht Book2.<dl><dd><a  class="image"><img alt="Mirror Souce with Formula.png" src="../images/Mirror_Column/Mirror_Souce_with_Formula.png" width="560"  /></a></li></dd></dl>
+<li>Wenn die Quellspalte ein Abtastintervall hat, teilt die Spiegelspalte das gleiche Intervall.</li></ul>
+<p><br /> <br /> Die Spiegelspalte und ihre Quelle haben ein eindeutiges Erscheinungsbild, das es Ihnen erm&ouml;glicht, sie sofort unter den normalen Spalten zu erkennen.</p>
+<h3><a name="Source_Column"></a><span class="mw-headline">Quellspalten</span></h3>
+<ul>
+<li>Eine Quellspalte zeigt ein <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>-Symbol in der oberen linken Ecke an.<li>Durch Klicken auf das <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>-Symbol wird eine Men&uuml;liste aufgerufen:<dl><dd><a  class="image"><img alt="Source context menu.png" src="../images/Mirror_Column/Source_context_menu.png" width="676"  /></a></dd></dl>
+<table class="simple" style="width: 90%">
+<tr>
+<th width="30%">Alle Spiegel entfernen/<br />Alle Spiegel in Blatt entfernen/<br />Alle Spiegel in Mappe entfernen</th>
+<td>Alle Spiegel im/in der aktuellen Projekt/Arbeitsblatt/Arbeitsmappe werden entfernt. Die Inhalte in den Spiegelspalten werden beibehalten.</td></tr>
+<tr>
+<th>Liste der Spiegelspalten</th>
+<td>Alle Spiegelspalten werden unten aufgef&uuml;hrt. Klicken Sie auf ein beliebiges Element, um zur entsprechenden Spiegelspalte zu springen.<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Mirror_Column/Tip_icon.png" width="57"  border="0" /></td><td><p>Durch Bewegen der Maus &uuml;ber das <a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>-Symbol wird auch die Liste der Spiegelspalten angezeigt.</p>
+<dl><dd><a  class="image"><img alt="Source popup mirror list.png" src="../images/Mirror_Column/Source_popup_mirror_list.png" width="280"  /></a></dd></dl>
+</td></tr></table>
+</td></tr></table>
+<p><br /><b>Hinweis</b>: Durch L&ouml;schen der Quellspalte wird die Verkn&uuml;pfung zu ihren Spiegelspalten aufgel&ouml;st. Diese werden dann zu reinen/m Zahlen/Text.</p>
+</li>
+</ul>
+<h3><a name="Mirror_Column"></a><span class="mw-headline">Spiegelspalte</span></h3>
+<ul>
+<li>Eine Spiegelspalte unterscheidet sich durch einen hellgr&uuml;nen Header und ein <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png" width="13"  /></a>-Symbol oben links.<li>Durch Klicken auf das <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png" width="13"  /></a>-Symbol wird eine Men&uuml;liste aufgerufen:<dl><dd><a  class="image"><img alt="Mirror context menu.png" src="../images/Mirror_Column/Mirror_context_menu.png" width="746"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="28.5%">Quelle</th>
+<td>Die Quellspalte wird oben angezeigt. Durch Klicken springen Sie zur Quellspalte.<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Mirror_Column/Tip_icon.png" width="57"  border="0" /></td><td><ul><li>Durch Bewegen der Maus &uuml;ber das <a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png" width="13"  /></a>-Symbol wird auch die Spiegelspalte angezeigt.</li>
+<li>Die Pfad der Quellspalte wird auch in <b>F(x)</b> gezeigt mit dem Pr&auml;fix &quot;&lt;&quot;. Mehr Informationen finden Sie unter dem n&auml;chsten Punkt.</li></ul>
+<dl><dd><a  class="image"><img alt="Show source in mirror column.png" src="../images/Mirror_Column/450px-Show_source_in_mirror_column.png" width="450"   /></a></dd></dl>
+</td></tr></table>
+</td></tr>
+<tr>
+<th>Beschriftungen der Quellspalten verwenden</th>
+<td>Die Spaltenbeschriftungszeilen (z. B. Langname, Kommentar, ...) werden aus der Quelle kopiert. Diese Beschriftungszeilen werden dann gesch&uuml;tzt. Deaktivieren Sie dieses Element, um den Schutz zum freien Bearbeiten zu entfernen.</td></tr>
+<tr>
+<th>Quellbeschriftungen auf andere Spalten verwenden anwenden</th>
+<td>Wenden Sie <b>Beschriftungen der Quellspalten verwenden</b> auf alle Spiegelspalten im gleichen Blatt an.</td></tr>
+<tr>
+<th>Spiegelung entfernen</th>
+<td>Die Verbindung der aktuellen Spiegelspalte wird von ihrer Quelle gel&ouml;st. Die Inhalte werden beibehalten.<p>Sie k&ouml;nnen auch mit der rechten Maustaste auf eine Spalte klicken und die Option <b>Spiegelung entfernen</b> im Kontextmen&uuml; ausw&auml;hlen.</p>
+</td></tr>
+<tr>
+<th>In Spaltenformel umwandeln/<br />Alle Spiegel im Blatt in Formel umwandeln</th>
+<td>Der aktuelle Spiegel oder alle Spiegel im aktuellen Arbeitsblatt wird f&uuml;r die Nachbearbeitung, wie das Filtern der Quelle, in die Spaltenformel umgewandelt.<p><b>Hinweis</b>: <a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="UserGuide:Column Short Name Restriction"><b>SCN</b></a> (vereinfachte Zellennotation) der Quellarbeitsmappe muss f&uuml;r diese Funktion aktiviert sein.</p>
+</td></tr></table>
+</li>
+<li>Wenn Sie jetzt eine Spaltenformel in <b>F(x)</b> eingeben, um auf eine andere Spalte zu verweisen, werden Sie aufgefordert, sie stattdessen in eine Spiegelspalte umzuwandeln. <br /> Sie k&ouml;nnen einen Spiegel auch direkt erstellen, indem Sie die Syntax &quot;<b>&lt;</b><i>Spaltenname</i>&quot; in <b>F(x)</b> eingeben. <i>Spaltennamen</i>syntax wie<ul><li><code>&lt;A</code> (bezieht sich auf Spalte A im gleichen Blatt),</li>
+<li><code>&lt;col(A)</code> (funktioniert sogar, wenn die <a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="UserGuide:Column Short Name Restriction"><b>SCN</b></a> ausgeschaltet ist),</li>
+<li><code>&lt;Book1_A</code> (Spalte A im ersten Blatt von Book1),</li>
+<li><code>&lt;[Book1]A</code> (bezieht sich auf Spalte A im aktiven Blatt von Book1, der Blattname kann ausgelassen werden)</li></ul>wird unterst&uuml;tzt.</li>
+</ul>
+<h2><a name="Copy_Paste_Columns_as_Mirrors"></a><span class="mw-headline">Spalten als Spiegel kopieren und einf&uuml;gen</span></h2>
+<p><span class='headerInParagraph'>Spalte(n) als Spiegel kopieren und einf&uuml;gen:</span></p>
+<ol><li>Markieren Sie die Quellspalte(n), klicken Sie mit der rechten Maustaste und w&auml;hlen Sie <b>Kopieren: Kopieren</b> im Kontextmen&uuml;.</li>
+<li>Gehen Sie zur Zielspalte, klicken Sie mit der rechten Maustaste und w&auml;hlen Sie <b>Als Spiegelspalte(n) einf&uuml;gen</b>.<dl><dd><a  class="image"><img alt="Paste as Mirror Columns Context Menu.png" src="../images/Mirror_Column/Paste_as_Mirror_Columns_Context_Menu.png" width="396"  /></a></dd></dl></li></ol>
+<h2><a name="Mirror_to_Whole_Sheet.2FBook"></a><span class="mw-headline">Ganze/s Blatt/Mappe spiegeln</span></h2>
+<h3><a name="Copy_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">Ganzes Blatt als Spiegel kopieren</span></h3>
+<p><span class='headerInParagraph'>Um einen Spiegel f&uuml;r ein Arbeitsblatt zu erstellen:</span></p>
+<ol><li>Klicken Sie mit der rechten Maustaste auf den Reiter des Quellarbeitsblatts und w&auml;hlen Sie <b>Spiegel in neuer Mappe</b> im Kontextmen&uuml;.</li></ol>
+<p><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/870px-Mirror_to_New_Book.png" width="870"   /></a></p>
+<h3><a name="Duplicate_Whole_Book_as_Mirror"></a><span class="mw-headline">Ganze Mappe als Spiegel duplizieren</span></h3>
+<p><span class='headerInParagraph'>Um einen Spiegel f&uuml;r eine Arbeitsmappe zu erstellen:</span></p>
+<ol><li>Klicken Sie auf die Schaltfl&auml;che <b>In neue Mappe spiegeln</b> <a  class="image"><img alt="Button Mirror to New Book.png" src="../images/Mirror_Column/Button_Mirror_to_New_Book.png" width="15"  /></a> auf der Symbolleiste <b>Standard</b>.</li></ol>
+<h2><a name="Batch_Create_Mirror_Columns_from_Similar_Sheets"></a><span class="mw-headline">Spiegelspalten aus entsprechenden Bl&auml;ttern per Stapelverarbeitung erstellen</span></h2>
+<p>Das Hilfsmittel <b>Spiegelspalten aus entsprechenden Bl&auml;tern erstellen</b> scannt automatisch alle Kandidatenspalten und spiegelt sie in einer einzelnen Operation. W&auml;hlen Sie einfach eine Quellspalte als Referenz und bestimmen Sie &Uuml;bereinstimmungsregeln (einschlie&szlig;lich den Suchbereich und Beschr&auml;nkungen beim Abstimmen der Spalten). Dieses Hilfsmittel sucht dann in den entsprechend strukturierten Arbeitsbl&auml;ttern, um &uuml;bereinstimmende Spalten zu finden, und erstellt per Stapelverarbeitung Spiegelspalten in einem Zielarbeitsblatt.</p><p>Es handelt sich um ein praktisches Hilfsmittel, wenn Ihre Versuchsdaten &uuml;ber mehrere Mappen verstreut sind und Sie die passenden Datens&auml;tze zusammenstellen m&uuml;ssen - zum Weiterverarbeiten, Zeichnen oder Vergleichen.</p><p><span class='headerInParagraph'>Um Spiegelspalten aus entsprechenden Bl&auml;ttern zu erstellen:</span></p>
+<ol><li>W&auml;hlen Sie im <b>Men&uuml; Arbeitsblatt: Spiegelspalten aus entsprechenden Bl&auml;tern erstellen</b>.</li></ol>
+<dl><dd><a  class="image"><img alt="Create Mirror Columns from Similar Sheets Dialog.png" src="../images/Mirror_Column/Create_Mirror_Columns_from_Similar_Sheets_Dialog.png" width="514"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="23%">Quellspalte</th>
+<td>
+<p>W&auml;hlen Sie eine Quellspalte. Basierend auf dieser Spalte werden alle entsprechenden Spalten als Quellen gesammelt und Spiegel aus jeder einzelnen von ihnen erstellt.</p><p>Legen Sie fest, wie eine &quot;entsprechende&quot; Spalte in den Zweigen <b>Andere Quellspalten</b> und <b>&Uuml;bereinstimmungseinschr&auml;nkungen der Spalten</b> definiert wird.</p>
+</td></tr>
+<tr>
+<th>Zielspalte</th>
+<td>
+<p>Standardm&auml;&szlig;ig werden Spiegelspalten in einer neuen Arbeitsmappe ausgegeben. Sie k&ouml;nnen die Zielspalte festlegen, ab der die Spiegel ausgegeben werden sollen.</p>
+</td></tr>
+<tr>
+<th>X-Spalte hinzuf&uuml;gen</th>
+<td>
+<p>Wenn die <b>Quellspalte</b> eine Y-Spalte ist, was typischerweise der Fall ist, verwenden Sie diese Option, um zu bestimmen, ob die entsprechende X-Spalte kopiert werden soll.</p>
+<ul><li><b>Kein</b><dl><dd>Die X-Spalte wird nicht kopiert.</dd></dl></li>
+<li><b>Gemeinsame X-Spalte</b><dl><dd>Die X-Spalte der <b>Quellspalte</b> wird kopiert und als das gemeinsame X f&uuml;r alle Spiegelspalten verwendet. Die Ausgabestruktur sollte <i>XYYY...</i> sein.</dd></dl></li>
+<li><b>Aus jedem Blatt</b><dl><dd>Aus jedem Blatt wird die jeweils eigene X-Spalte f&uuml;r jede Spiegelspalte kopiert. Die Ausgabestruktur sollte <i>XYXYXY...</i> sein.</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>Andere Quellspalten</th>
+<td>
+<p>Definieren Sie, wie und wo nach anderen &bdquo;entsprechenden&ldquo; Spalten gesucht werden soll, um diese als Quellspalten zu verwenden.</p>
+<ul><li><b>Aus entsprechenden Bl&auml;ttern</b><dl><dd>Dieses Kontrollk&auml;stchen erfordert Arbeitsbl&auml;tter mit der gleichen Anzahl von Spalten und dem Format wie im Quellblatt. Nur Spalten, die die Bedingungen im Zweig <b>&Uuml;bereinstimmungseinschr&auml;nkungen der Spalten</b> erf&uuml;llen, werden als Spiegelquellen verwendet.</dd></dl></li>
+<li><b>Entsprechende Bl&auml;tter suchen in</b><dl><dd>Suchbereich: <b>Aktive Mappe</b> / <b>Aktiver Ordner</b> (offen oder rekursiv) / <b>Projekt</b></dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>&Uuml;bereinstimmungseinschr&auml;nkungen der Spalten</th>
+<td>
+<p>Diese Option bestimmt, wie andere Quellspalten mit der <b>Quellspalte</b> abgestimmt werden:</p>
+<ul><li><b>Muss mit Spaltenbeschriftung &uuml;bereinstimmen</b><dl><dd>Der <b>Langname</b> oder <b>Kommentar</b> der Spalte stimmt &uuml;berein. W&auml;hlen Sie <b>Kein</b>, um die Spalte nach dem Spaltenindex abzustimmen.</dd></dl></li>
+<li><b>Muss mit Einheiten &uuml;bereinstimmen</b></li>
+<li><b><a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="UserGuide:Set Column Designation">Spaltenzuordnung</a> stimmt &uuml;berein mit</b></li></ul>
+<p>Wenn die Konfiguration beendet ist, wird die <b>Gesamtheit der zu spiegelnden Spalten</b> unten zur Best&auml;tigung aufgef&uuml;hrt.</p>
+</td></tr>
+<tr>
+<th>Spiegeloptionen erstellen</th>
+<td>
+<p>Zus&auml;tzliche Einstellungen f&uuml;r die Ausgabespiegelspalten</p>
+<ul><li><b>Beschriftungen der Quellspalten verwenden</b><dl><dd>Die Beschriftungszeilen (Langname, Einheit, Kommentar etc.) werden aus den Quellspalten kopiert.</dd></dl></li>
+<li><b>Beschriftungszeile f&uuml;r Blatt-/Mappennamen hinzuf&uuml;gen</b><dl><dd>Es wird eine Beschriftungszeile f&uuml;r &quot;Blattname&quot; oder &quot;Mappenname&quot; hinzugef&uuml;gt, um das Quellblatt oder die Quellmappe zu zeigen.</dd></dl></li></ul>
+</td></tr></table>
+<h2><a name="Convert_column_formula_to_Mirror_Column"></a><span class="mw-headline">Spaltenformel in Spiegelspalte umwandeln</span></h2>
+<p>Vor Origin 2026b verkn&uuml;pften Anwender Spalten per <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">Spaltenformel</a> oder &uuml;ber die Funktion <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Spalte kopieren in</b></a>. Das Konvertieren dieser Altverkn&uuml;pfungen in Spiegel verbessert die Performance und bietet eine generell bessere Erfahrung.</p><p><br /> <span class='headerInParagraph'>Eine Spalte kann in eine Spiegelspalte umgewandelt werden, wenn eine der folgenden Bedingungen erf&uuml;llt ist:</span></p>
+<ul>
+<li><a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Spalte kopieren in</b></a> und zwar in die Ausgabe. <br /><b>Hinweise:</b><ul><li>Die Ausgabe muss Unsortiert sein.</li></li></ul>
+<li>Die <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">Spaltenformel</a> verweist auf eine einzelne Spalte ohne Berechnung. <br /><b>Hinweise:</b><ul><li>Der <b>Neuberechnungsmodus</b> muss <b>Auto</b> oder <b>Manuell</b> sein.</li>
+<li>Die Formel muss mit einer Spalte verkn&uuml;pft sein, die sich NICHT im gleichen Arbeitsblatt befindet.</li></ul>
+</li></ul>
+<p><br /> <span class='headerInParagraph'>Um eine verkn&uuml;pfte Spalte in eine Spiegelspalte umzuwandeln:</span></p>
+<ol><li>W&auml;hlen Sie im Men&uuml; <b>Arbeitsblatt: In Spiegelspalten umwandeln ...</b>.</li></ol>
+<dl><dd><a  class="image"><img alt="Convert to Mirror Columns Dialog.png" src="../images/Mirror_Column/Convert_to_Mirror_Columns_Dialog.png" width="400"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="25%">Spaltenformel/<br />Ausgabespalte kopieren</th>
+<td>W&auml;hlen Sie die umzuwandelnden Spaltentypen:<ul><li>Spalten, die durch eine <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">Spaltenformel</a> gef&uuml;llt werden und ohne Berechnung auf eine einzelne Spalte verweisen, <br /><i>und/oder</i></li>
+<li>die Ausgabe von <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Spalte kopieren in</b></a><br /></li></ul>
+<p>Siehe den Abschnitt &quot;Eine Spalte kann in eine Spiegelspalte umgewandelt werden, wenn eine der folgenden Bedingungen erf&uuml;llt ist&ldquo; oben f&uuml;r weitere Informationen.</p>
+</td></tr>
+<tr>
+<th>Umwandlungsbereich</th>
+<td>Legen Sie fest, wo Spalten gesucht und umgewandelt werden sollen:<dl><dd>Aktuelles Arbeitsblatt / aktuelle Arbeitsmappe / aktueller Ordner (offen oder rekursiv) / gesamtes Projekt</dd></dl>
+</td></tr>
+<tr>
+<th>Beschriftungen der Quellspalten verwenden</th>
+<td>Wenn <b>Spaltenformel</b> aktiviert ist, aktivieren Sie dieses Kontrollk&auml;stchen, um Beschriftungszeilen (Langname, Einheit, Kommentar, ...) aus der Quellspalte zu kopieren.<p>F&uuml;r <b>Ausgabespalte kopieren</b>: Ob die Verwendung der Quellbeschriftungen &uuml;ber den Dialog <a href="../../UserGuide/UserGuide/Copy_Columns_to_New_Destination.html" title="UserGuide:Copy Columns to New Destination"><b>Spalte kopieren in</b></a> &gt; Zweig <b>Beschriftungen kopieren</b> gesteuert wird.</p>
+</td></tr>
+<tr>
+<th>Liste der umgewandelten Spalten ausgeben</th>
+<td>Legen Sie fest, wo eine Liste der umgewandelten Spalten ausgegeben werden soll.<dl><dd>Nicht ausgeben / Meldungsprotokoll / Notizfenster / Notepad</dd></dl>
+</td></tr></table>
+
+
+
+    

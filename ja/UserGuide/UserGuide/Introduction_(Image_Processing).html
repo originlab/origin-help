@@ -1,4 +1,4 @@
-﻿<h1 class="firstheading">はじめに</h1><p class='urlname' style='display: none'>Intro-Image-Processing</p>
+﻿<h1 class="firstHeading">はじめに</h1><p class='urlname' style='display: none'>Intro-Image-Processing</p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Image_window"><span class="tocnumber">1</span> <span class="toctext">イメージウィンドウ</span></a>
@@ -23,7 +23,7 @@
 </li>
 <li class="toclevel-2 tocsection-11"><a href="#Create_Graph_from_Image"><span class="tocnumber">2.5</span> <span class="toctext">画像からグラフを作成</span></a>
 <ul>
-<li class="toclevel-3 tocsection-12"><a href="#Plot_Image_as_Background"><span class="tocnumber">2.5.1</span> <span class="toctext">画像を背景としてプロットする</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Plot_Image_as_Background"><span class="tocnumber">2.5.1</span> <span class="toctext">画像を背景としてプロット</span></a></li>
 <li class="toclevel-3 tocsection-13"><a href="#Plot_Menu"><span class="tocnumber">2.5.2</span> <span class="toctext">作図メニュー</span></a></li>
 </ul>
 </li>
@@ -33,6 +33,7 @@
 </li>
 </ul>
 </div>
+
 <h2><a name="Image_window"></a><span class="mw-headline">イメージウィンドウ</span></h2>
 <p>バージョン2021bより、Originは画像をロードおよび保存するための新しい画像ウィンドウを導入しました。処理および解析ルーチンにOpenCVを採用しています。新しい画像ウィンドウは、以下のような単一レイヤのウィンドウです。上部に情報バーがあり（表示されない場合は、<b>表示：情報を表示</b>を選択して表示できます）、動画またはマルチフレーム画像の場合は、下部にナビゲーションバー（<b>表示：ナビゲーション表示</b>を選択して表示します）があります。これはほとんどすべての画像処理の性能に影響します。 
 </p>
@@ -76,7 +77,7 @@
 <dd><b>シングルフレーム画像</b></dd>
 <dd><a  class="image"><img alt="Minitoolbar image window.png" src="../images/Introduction_(Image_Processing)/Minitoolbar_image_window.png" width="551"  /></a></dd>
 <dd><b>動画</b> </dd>
-<dd><a  class="image"><img alt="Minitoolbar image window2.png" src="../images/Introduction_(Image_Processing)/Minitoolbar_image_window2.png" width="522"  /></a></dd>
+<dd><a  class="image"><img alt="Minitoolbar image window2.png" src="../images/Introduction_(Image_Processing)/Minitoolbar_image_window2.png" width="493"  /></a></dd>
 <dd><b>マルチフレームスタック画像</b> </dd>
 <dd><a  class="image"><img alt="Minitoolbar image window3.png" src="../images/Introduction_(Image_Processing)/Minitoolbar_image_window3.png" width="477"  /></a></dd></dl>
 <h4><a name="Applying_Palettes_to_Grayscale_Images"></a><span class="mw-headline">グレースケール画像へのパレットの適用</span></h4>
@@ -89,7 +90,7 @@
 	<td style="vertical-align:top" width="60"><img src="../images/Introduction_(Image_Processing)/Tip_icon.png" width="57"  border="0" /></td><td><p>スタイルツールバーの<b>パレット</b>リストで、<b>さらに他のパレット</b>をクリックして<a href="../../UserGuide/UserGuide/Color_Manager.html" title="ユーザガイド:カラーマネージャー"><b>カラーマネージャ</b></a>を開くと、他のパレットを追加できます。
 </p></td></tr></table>
 <h3><a name="Context_Menu"></a><span class="mw-headline">コンテキストメニュー</span></h3>
-<p><a  class="image"><img alt="Save reload image.png" src="../images/Introduction_(Image_Processing)/Save_reload_image.png" width="407"  /></a>
+<p><a  class="image"><img alt="Save reload image.png" src="../images/Introduction_(Image_Processing)/Save_reload_image.png" width="325"  /></a>
 </p>
 <table class="simple">
 <tr>
@@ -134,9 +135,9 @@
 <p><i><b>ROIボックスを追加するには</b></i>
 </p>
 <dl><dd><ul><li>ミニツールバーから<b>ROIを追加</b>ボタン<a  class="image"><img alt="Add ROI Button.png" src="../images/Introduction_(Image_Processing)/Add_ROI_Button.png" width="18"  /></a>をクリックします。（ROIボックスの形は<i>&lt;前回どおり&gt;</i>になります）</li></ul></dd>
-<dd><i>または、</i> 
+<dd><i>または</i>、 
 <ul><li><b>プロット操作・オブジェクト作成</b>ツールバー内、<b>四角形ツール</b> ボタン<a  class="image"><img alt="Rectangle Tool Button.png" src="../images/Introduction_(Image_Processing)/Rectangle_Tool_Button.png" width="19"  /></a>の隣にある▼をクリックし、 サブリストからいずれかの形 (<b>四角形</b>、<b>円</b>、 <b>多角形</b>、 <b>自由閉曲線</b>) を選択します。画像上で領域をドラッグします。 </li></ul></dd>
-<dd><i>または、</i>
+<dd><i>または</i>、
 <ul><li>イメージウィンドウ内で右クリックし<b>ROI追加</b>コンテクストメニューを選択します。（ROIボックスの形は<i>&lt;前回どおり&gt;</i>のものになります。）</li></ul></dd></dl>
 <p><i><b>単一のイメージウィンドウに複数のROIボックスを追加する場合</b></i>
 </p>
@@ -144,18 +145,18 @@
 <ul><li>ミニツールバーにある<b>ROIを追加</b>ボタン<a  class="image"><img alt="Add ROI Button.png" src="../images/Introduction_(Image_Processing)/Add_ROI_Button.png" width="18"  /></a>をクリックする、または </li>
 <li>右クリックしてコンテクストメニューの<b>ROI追加</b>を選択する </li></ul></li></ol>
 <dl><dd>ことでもう1つROIボックスを追加できます。</dd>
-<dd><i>または、</i></dd></dl>
+<dd><i>または</i>、</dd></dl>
 <ol><li>画像にROIボックスを追加したあと、ROIをダブルクリックして<b>ROI位置</b>ダイアログボックスを開きます。&quot;<i>ROI1</i>&quot;のような名前に変更します。</li>
 <li>先に述べた3つのうちいずれかの方法で新しいROIボックスを追加します。</li></ol>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Introduction_(Image_Processing)/Tip_icon.png" width="57"  border="0" /></td><td><p>追加すると、<a href="../../UserGuide/UserGuide/Object_Manager.html#Interaction_between_Object_Manager_and_Image_Window" title="ユーザガイド:オブジェクトマネージャ">オブジェクトマネージャ</a>で全てのROIを確認でき、基本的な操作を行うことができます。
+	<td style="vertical-align:top" width="60"><img src="../images/Introduction_(Image_Processing)/Tip_icon.png" width="57"  border="0" /></td><td><p>追加すると、<a href="../../UserGuide/UserGuide/Object_Manager.html#Interaction_between_Object_Manager_and_Image_Window" title="ユーザガイド：オブジェクトマネージャ">オブジェクトマネージャ</a>で全てのROIを確認でき、基本的な操作を行うことができます。
 </p></td></tr></table>
 <p><br />
 </p>
 <dl><dd><i><b>ROIをダブルクリックして、</b></i>
 <dl><dd><ul><li>ROIの名前を変更できます</li>
 <li>左上と右下のアンカーポイントのXY座標を指定して、ROIを再配置します。</li></ul></dd>
-<dd><a  class="image"><img alt="Image window ROI Position.png" src="../images/Introduction_(Image_Processing)/Image_window_ROI_Position.png" width="658"  /></a></dd></dl></dd></dl>
+<dd><a  class="image"><img alt="Image window ROI Position.png" src="../images/Introduction_(Image_Processing)/Image_window_ROI_Position.png" width="569"  /></a></dd></dl></dd></dl>
 <p><br />
 </p>
 <dl><dd><i><b>ROIを右クリックして、</b></i>
@@ -174,6 +175,12 @@
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Introduction_(Image_Processing)/Tip_icon.png" width="57"  border="0" /></td><td><p>イメージウィンドウROIの外側の、画像の暗さの度合いは、システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#H.2CI.2CJ.2CK"><b>@IMGDI</b></a>によって制御されます。@IMGDI = <i>1000</i>に設定すると、外側の領域が黒く表示されます。 @IMGDI = <i>0</i>にすると、暗くされません。システム変数の値を変更する方法については、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">このFAQ</a>を参照してください。
 </p></td></tr></table>
+<p><i><b>オブジェクトマネージャでのROI</b></i>
+</p><p>ミニツールバーや右クリックメニューに加えて、<b>オブジェクトマネージャ</b>（デフォルトでは右上にドッキング）に表示されるROIからも、日常的な操作に使用できるメニュー項目にアクセスできます。
+</p><p>これらの項目の多くは右クリックメニューにも表示されますが、特に注目すべき項目があります。
+</p>
+<ul><li> <b>スクロール</b>：選択したROIが画像の中央に表示されるように移動します。  イメージウィンドウをズームして（実際のサイズで表示するなど）、ROIが表示からスクロールアウトされている場合、このメニューを使用するとすぐに元に戻すことができます。</li></ul>
+<dl><dd><a  class="image"><img alt="ROI OM.png" src="../images/Introduction_(Image_Processing)/ROI_OM.png" width="260"  /></a></dd></dl>
 <h4><a name="Intensity_Profile_on_ROI"></a><span class="mw-headline">ROIの強度プロファイル</span></h4>
 <p>ROIボックスを右クリックして、コンテクストメニューから<b>強度プロファイル</b>を選択します。
 </p><p><b>cvroiprofile</b>ダイアログが開きます。 
@@ -181,17 +188,18 @@
 <ul><li> 単一のROI (<b>アクティブROI</b>) または複数のROI (<b>イメージ上のすべてのROI</b>) でプロファイルを取得することを選択できます。イメージウィンドウに複数のフレームが含まれている場合、すべてのフレームの結果が出力されます。 </li>
 <li> <b>統計</b>ブランチで出力する記述統計値を選択します: <b>平均、SD（標準偏差）、最小、最大、中央値、合計、最小のXY、最大のXY</b>。 </li>
 <li> <b>重み付けROI</b>チェックボックスが選択されている場合、ROI 境界上またはその近くのピクセル（ROIは1つのピクセルを完全にカバーすることはできません）は、ROI内の領域のパーセンテージによって重み付けされます。ROIが小さい場合、このチェックボックスは役に立ちません。その場合、エッジピクセルがROI全体に大きな影響を与えます。</li></ul>
-<dl><dd><a  class="image"><img alt="Image Intensity Profile Dialog.png" src="../images/Introduction_(Image_Processing)/Image_Intensity_Profile_Dialog.png" width="412"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Image Intensity Profile Dialog.png" src="../images/Introduction_(Image_Processing)/Image_Intensity_Profile_Dialog.png" width="426"  /></a></dd></dl>
 <p>詳細については、X-ファンクション <a class="external text" href="../../XFunction/X-Function/Cvroiprofile.html">cvroiprofile</a> を参照してください。
 </p>
 <h3><a name="Create_Graph_from_Image"></a><span class="mw-headline">画像からグラフを作成</span></h3>
-<h4><a name="Plot_Image_as_Background"></a><span class="mw-headline">画像を背景としてプロットする</span></h4>
+<h4><a name="Plot_Image_as_Background"></a><span class="mw-headline">画像を背景としてプロット</span></h4>
 <ul>
 <li>メニューの<b>イメージ：背景として画像をプロット</b>を選択します。
 <dl><dd><ul><li>新しいグラフウィンドウが作成され、現在の画像が背景として設定されます。</li>
 <li>作成されたグラフウィンドウは自動で、レイヤレベルの<b>作図の詳細</b>ダイアログのレイヤの大きさタブにある<b>軸の長さをリンクするX：Yの比率</b>が1に設定され、等尺の表示になります。</li>
 <li>グラフページはレイヤサイズに合うように自動で再スケールされます。</li>
 <li>画像のXY座標が変更された場合 (たとえば、別の画像のROIボックスから作成されたリンク画像でROI が再配置された場合など)、それに応じてグラフが再スケーリングされます。この機能をオフにするには、レイヤレベルのミニツールバーの<b>背景画像を自動再スケール</b>ボタン<a  class="image"><img alt="Popup Auto Rescale Background Image.png" src="../images/Introduction_(Image_Processing)/Popup_Auto_Rescale_Background_Image.png" width="18"  /></a>をクリックします。</li></ul></dd></dl>
+
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Introduction_(Image_Processing)/Tip_icon.png" width="57"  border="0" /></td><td><p>グラフへの画像の挿入についての詳細は、<a href="../../UserGuide/UserGuide/Copying_and_Pasting_Image_into_Graph.html#Insert_an_Image" title="ユーザガイド：グラフへの画像のコピーと貼り付け">このページ</a>を参照してください。
 </p></td></tr></table></li>
@@ -202,18 +210,18 @@
 <ul>
 <li><b>統計</b>：<a href="../../UserGuide/UserGuide/Histogram_Graph.html" title="ユーザガイド:ヒストグラム"><b>ヒストグラム</b></a>
 <dl><dd><ul><li>ヒストグラムグラフは、画像内の各レベルのピクセル数を反映します。</li>
-<li>ヒストグラムのビンデータには、<a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Bin_Worksheet" title="ユーザガイド:ボックスチャートのデータタブの編集オプション"><b>作図の詳細</b>ダイアログのデータタブ</a>の<b>ビンワークシート</b>欄の下にある<b>ジャンプ</b>ボタンをクリックしてアクセスできます。</li></ul></dd></dl>
-<li><b>等高線図</b>：<a href="../../UserGuide/UserGuide/Color_Fill_Contour.html" title="ユーザガイド：カラーマップ等高線図"><b>カラーマップ等高線図</b></a>, <a href="../../UserGuide/UserGuide/Gray_Scale_Map_Contour.html" title="ユーザガイド：グレースケール等高線図"><b>グレースケール等高線図</b></a>, <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ"><b>ヒートマップ</b></a>, <a href="../../UserGuide/UserGuide/Profile2.html" title="ユーザガイド:Profile2"><b>等高線プロファイル</b></a>, <a href="../../UserGuide/UserGuide/Profiles.html" title="ユーザガイド：プロファイル"><b>イメージプロファイル</b></a>, <a href="../../UserGuide/UserGuide/Image_Plot.html" title="ユーザガイド: イメージプロット"><b>イメージプロット</b></a>, <a href="../../UserGuide/UserGuide/Image_as_Background.html" title="ユーザガイド：背景としての画像"><b>背景としての画像</b></a>（上述の<b>イメージ：背景として画像をプロット</b>メニューと同じです）
-<li><b>3D</b>：<a href="../../UserGuide/UserGuide/Color_Map_Surface.html" title="ユーザガイド：カラーマップ曲面図"><b>3Dカラーマップ曲面</b></a>、<a href="../../UserGuide/UserGuide/Color_Map_Surface_with_Projection.html" title="ユーザガイド：投影図付きの3Dカラーマップ曲面"><b>投影図付きの3Dカラーマップ曲面図</b></a>
-</ul></ul></li>
-<li>マルチフレームのイメージウィンドウから、<br /><b><a href="../../UserGuide/UserGuide/Histogram_Graph.html" title="ユーザガイド:ヒストグラム">ヒストグラム</a>, <a href="../../UserGuide/UserGuide/Color_Fill_Contour.html" title="ユーザガイド：カラーマップ等高線図">カラーマップ等高線図</a>, <a href="../../UserGuide/UserGuide/Gray_Scale_Map_Contour.html" title="ユーザガイド：グレースケール等高線図">グレースケール等高線図</a>, <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ">ヒートマップ</a></b>, <a href="../../UserGuide/UserGuide/Profile2.html" title="ユーザガイド:Profile2"><b>等高線プロファイル</b></a>, <a href="../../UserGuide/UserGuide/Profiles.html" title="ユーザガイド：プロファイル"><b>イメージプロファイル</b></a><br />のグラフタイプをプロットすると、<a href="../../UserGuide/UserGuide/Browser_Graph.html" title="ユーザガイド：ブラウザグラフ">ブラウザグラフ</a>が作成されます。 
+<li>ヒストグラムのビンデータは、<a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Bin_Worksheet" title="ユーザガイド:ボックスチャートのデータタブの編集オプション"><b>作図の詳細</b>ダイアログのデータタブ</a>にある<b>ビン設定</b>コントロールグループの<b>ジャンプ</b>ボタンをクリックすると参照できます。</li></ul></dd></dl>
+<li><b>等高線図</b>: <a href="../../UserGuide/UserGuide/Color_Fill_Contour.html" title="ユーザガイド：カラーマップ等高線図"><b>等高線図 - 色付き</b></a>, <a href="../../UserGuide/UserGuide/Gray_Scale_Map_Contour.html" title="ユーザーガイ：:グレースケール等高線図"><b>グレースケール等高線</b></a>, <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ"><b>ヒートマップ</b></a>, <a href="../../UserGuide/UserGuide/Profile2.html" title="ユーザガイド:Profile2"><b>等高線プロファイル</b></a>, <a href="../../UserGuide/UserGuide/Profiles.html" title="ユーザーガイド：プロファイル"><b>イメージプロファイル</b></a>, <a href="../../UserGuide/UserGuide/Image_Plot.html" title="ユーザガイド：イメージプロット"><b>イメージプロット</b></a>, <a href="../../UserGuide/UserGuide/Image_as_Background.html" title="ユーザガイド：背景としての画像"><b>背景としての画像</b></a> (<b>イメージ: イメージを背景としてプロット</b>メニューと同じ)
+<li><b>3D</b>: <a href="../../UserGuide/UserGuide/Color_Map_Surface.html" title="ユーザガイド：カラーマップ曲面図"><b>3Dカラーマップ曲面</b></a>, <a href="../../UserGuide/UserGuide/Color_Map_Surface_with_Projection.html" title="ユーザーガイド:投影図付きカラーマップ曲面"><b>投影図付き曲面</b></a>
+</ul></li>
+<li>マルチフレームのイメージウィンドウから以下のグラフタイプを作成した場合<br /><b><a href="../../UserGuide/UserGuide/Histogram_Graph.html" title="ユーザガイド:ヒストグラム">ヒストグラム</a>, <a href="../../UserGuide/UserGuide/Color_Fill_Contour.html" title="ユーザガイド：カラーマップ等高線図">等高線図 - 色付き</a>, <a href="../../UserGuide/UserGuide/Gray_Scale_Map_Contour.html" title="ユーザーガイ：:グレースケール等高線図">グレースケール等高線</a>, <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ">ヒートマップ</a></b>, <a href="../../UserGuide/UserGuide/Profile2.html" title="ユーザガイド:Profile2"><b>等高線プロファイル</b></a>, <a href="../../UserGuide/UserGuide/Profiles.html" title="ユーザーガイド：プロファイル"><b>イメージプロファイル</b></a>, <br />ブラウザグラフが作成されます。 
 <dl><dd><ul><li>ページレベルのミニツールバーから<b>ブラウザグラフの列入れ替え</b>ボタン<a  class="image"><img alt="Popup Graph Browser.png" src="../images/Introduction_(Image_Processing)/Popup_Graph_Browser.png" width="24"  /></a>をクリックして、ナビゲーションパネルを開くことができます。</li>
 <li>コンテキストメニューの<b>めくる</b>を選択し、指定したステップごとにフレームをめくって表示します。</li></ul>
 <dl><dd><a  class="image"><img alt="Multi Frame Image Plot Browser Graph.png" src="../images/Introduction_(Image_Processing)/Multi_Frame_Image_Plot_Browser_Graph.png" width="731"  /></a></dd></dl>
 <ul><li>詳細については、各グラフタイプのハイパーリンクをクリックしてください。</li></ul></dd></dl>
 </li>
 <li>編集したグラフをテンプレートとして保存すると、<b>作図：ユーザテンプレート</b>メニューからグラフをプロットできます。
-</ul></ul>
+</ul>
 <h3><a name="Adjustments_and_Conversion"></a><span class="mw-headline">調整と変換</span></h3>
 <p>上述のボタンとメニューに加えて、Originは画像処理と解析に役立つツールのセットを提供します。次のようにサブカテゴリがあります：
 </p>
@@ -271,6 +279,7 @@ iw<span style="color: #000080;">=</span>op.<span style="color: #000080;">new_ima
 iw.<span style="color: #000080;">setup</span><span style="color: #000000;">(</span><span style="color: #0000dd;">1</span>,True<span style="color: #000000;">)</span>
 iw.<span style="color: #000080;">from_np</span><span style="color: #000000;">(</span>a<span style="color: #000000;">)</span>
 iw.<span style="color: #000080;">set_int</span><span style="color: #000000;">(</span><span style="color: #ff00ff;">&apos;NAV&apos;</span>,<span style="color: #0000dd;">1</span><span style="color: #000000;">)</span></pre>
+
 
 
     

@@ -1,0 +1,46 @@
+﻿<h1 class="firstHeading">他のシートに追加</h1><p class='urlname' style='display: none'>Add-to-Other-Sheets</p>
+<p>このコンテキストメニューは、<i><b>最後の列</b></i>が選択されている場合にのみ使用でき、最後の1列または複数列を選択した時も使用できます。選択した列は、次のいずれかの条件を満たす必要があります。
+</p>
+<ul><li> 解析の出力（左上に錠前アイコンがない）ではない、つまり普通の数値やテキストの列 </li>
+<li> <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定"><b>列値の設定</b></a>の出力である </li></ul>
+<p>この機能を使用すると、指定した列（ユーザ定義ラベル行、サンプリング間隔、プロット属性を含む）を、対応するワークシートへすばやくコピーできます。例えば、複数のセンサーファイル（XYデータ）に対してキャリブレーションが必要な場合を考えます。1つのシートで第3列を追加し、最初のポイントの減算処理を行った後、この列を他のシートにも展開することができます。
+</p>
+<dl><dd><a  class="image"><img alt="Add to Other Sheets EX.gif" src="../images/Add_to_Other_Sheets/Add_to_Other_Sheets_EX.gif" width="597"  /></a></dd></dl>
+<p><br />
+<span class='headerInParagraph'>他のシートに列を追加するには</span>
+</p>
+<ol><li> 最後の<i><b>n</b></i>列を選択し、右クリックして<b>他のシートに追加...</b>を選択します。</li></ol>
+<dl><dd><a  class="image"><img alt="Add to Other Sheets Dialog.png" src="../images/Add_to_Other_Sheets/Add_to_Other_Sheets_Dialog.png" width="537"  /></a></dd></dl>
+<table class="dialogcontroltable">
+
+<tr>
+<th style="width:20%">列を追加
+</th>
+<td><b>ブック/フォルダ/プロジェクトで適用対象シート</b>を検索する範囲を選択します。
+</td></tr>
+<tr>
+<th>類似ワークシートに限定
+</th>
+<td>このチェックボックスは、選択した列を除いた列数が同じワークシートを対象とします。チェックを付けると、条件に一致するシートのみに列を追加し、その一致条件を指定できます。
+<ul><li> <b>列ラベル一致</b> 
+<dl><dd>列のロングネームまたはコメントで一致。「なし」を選択すると、列インデックスで一致。</dd></dl></li>
+<li> <b>単位一致</b> 
+<dl><dd>列の単位で一致</dd></dl></li>
+<li> <b>列属性一致</b>
+<dl><dd><a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">プロット属性</a>による一致。</dd></dl></li></ul>
+<p>設定後、<b>ブック/フォルダ/他のフォルダ内の適用対象シート</b>の数が下部に表示され、確認できます。
+</p>
+</td></tr>
+<tr>
+<th>列式がない場合にデータをコピー
+</th>
+<td>選択した列が通常の数値またはテキストの場合、このチェックボックスをオンにするとデータ内容もコピーされます。オフの場合は、列ラベル行のみがコピーされます。
+</td></tr></table>
+
+
+
+
+
+
+
+    

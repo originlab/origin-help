@@ -7,7 +7,7 @@
 <li> メニューから<b>データ整形：列アンスタッキング</b>を選び、<b>wunstackcol</b>ダイアログボックスを開きます。 </li></ol>
 <p>実際には、Xファンクション<a class="external text" href="../../XFunction/X-Function/Wunstackcol.html">wunstackcol</a>が呼び出されて操作を行います。 
 </p>
-<dl><dd><a  class="image"><img alt="UnstackColumnsDialog.png" src="../images/Unstacking_Worksheet_Columns/UnstackColumnsDialog.png" width="849"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="UnstackColumnsDialog.png" src="../images/Unstacking_Worksheet_Columns/UnstackColumnsDialog.png" width="787"  /></a></dd></dl>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Dialog_Controls"><span class="tocnumber">1</span> <span class="toctext">ダイアログの設定</span></a></li>
@@ -21,15 +21,10 @@
 </li>
 </ul>
 </div>
+
 <h2><a name="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h2>
 <table class="dialogcontroltable">
-<tr>
-<th>再計算
-</th>
-<td>
-<p>結果を再計算する方法を指定します。詳細は<a href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html" title="ユーザガイド：分析結果の再計算">分析結果の再計算</a>を確認してください。
-</p>
-</td></tr>
+
 <tr>
 <th>アンスタックされるデータ
 </th>
@@ -41,8 +36,10 @@
 <th>グループ列
 </th>
 <td>
-<p>グループ情報を含む複数のグループ列を、<b><b>グループ列</b></b>ボックスに入力します。このグループに従って列のアンスタックが実行されます。ツールバー<a  class="image"><img alt="Group List Toolbar.png" src="../images/Unstacking_Worksheet_Columns/Group_List_Toolbar.png" width="160"  /></a>の、<b>上へ移動</b><a  class="image"><img alt="Button Group List Move Up.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Move_Up.png" width="16"  /></a>、<b>下へ移動</b><a  class="image"><img alt="Button Group List Move Down.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Move_Down.png" width="13"  /></a>、<b>削除</b><a  class="image"><img alt="Button Group List Remove.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Remove.png" width="14"  /></a>、<b>すべて選択</b><a  class="image"><img alt="Button Group List Select All.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Select_All.png" width="18"  /></a>、<b>選択</b><a  class="image"><img alt="Button Group List Add.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Add.png" width="17"  /></a>ボタンでグループ列の追加や削除、順序変更が可能です。
-<br />列の大部分がテキストの場合、グループ列はプロット後にカテゴリーとして設定されます。そのため、出力列の順序を簡単に変更できます。
+<p><b>アンスタックされるデータ</b>列をアンスタックするためのグループ情報を含む列を指定します。<b>選択</b>ボタン<a  class="image"><img alt="Button Group List Add.png" src="../images/Unstacking_Worksheet_Columns/Button_Group_List_Add.png" width="17"  /></a>を使用して、複数の列を<b>グループ列</b>ボックスに追加できます。ツールバーを使用して、列の順序を変更したり、列を削除したりできます。
+</p>
+<dl><dd><a  class="image"><img alt="Group Columns List Toolbar.png" src="../images/Unstacking_Worksheet_Columns/Group_Columns_List_Toolbar.png" width="334"  /></a></dd></dl>
+<p><b>Note:</b> 列の大部分がテキストの場合、グループ列はプロット後にカテゴリーとして設定されます。
 </p>
 </td></tr>
 <tr>
@@ -51,23 +48,23 @@
 <td>
 <p><b>他の列を含める</b>
 </p>
-<dl><dd>元のシートのアンスタックしない列を結果シートに含めるかどうかを指定します。 </dd></dl>
+<dl><dd>ソースワークシートのアンスタックしない列を結果シートに含めるかどうかを指定します。 </dd></dl>
 <p><b>他の列</b>
 </p>
-<dl><dd>結果シートに出力するアンスタックしない列のデータ範囲を指定します。これは、<b>他の列を含める</b>にチェックが付いている場合のみ利用できます。 </dd></dl>
+<dl><dd><b>他の列を含める</b>がオンの場合に、結果シートに出力するアンスタック対象ではない列を指定します。 </dd></dl>
 <p><b>他の列の値の抽出ルール</b>
 </p>
-<dl><dd><b>他の列</b>のデータの配置方法を指定します。これは、<b>他の列を含める</b>にチェックが付いている場合のみ利用できます。
+<dl><dd><b>他の列を含める</b>がオンの場合に、<b>他の列</b>のデータをどのように配置するかを指定します。
 <ul><li><b>最長グループ一致</b>
-<dl><dd>このオプションは、グループ化変数 (<b>グループ列</b>) の各値の個数が等しく、グループ化されていない変数 (<b>他の列</b>) の各値の個数が等しい場合に使用します。例えば、G1 と G2 の 2 つの列にアンスタックされる6つの個体があるとします。非グループ化変数には、g1、g2、g3 の 3 つの値があります。  このオプションを使用するには、G1とG2にそれぞれ3つの個体があり、グループ化されていない変数のg1に2つの個体、g2に2つ、g3に2 つの個体が必要です。このオプションを選択する前に、<a href="../../UserGuide/UserGuide/Sorting_Worksheet_Data.html#Nested_Sorting" title="ユーザガイド:ワークシートデータのソート">ネストソート</a>を実行する必要があることに<b>注意してください</b> (最初に<b>グループ列</b>で並べ替え、次に<b>他の列</b>で並べ替えます)。</dd></dl></li>
+<dl><dd>このオプションは、グループ化変数 (<b>グループ列</b>) の各値の個数が等しく、グループ化されていない変数 (<b>他の列</b>) の各値の個数が等しい場合に使用します。例えば、G1 と G2 の 2 つの列にアンスタックされる6つの個体があるとします。非グループ化変数には、g1、g2、g3 の 3 つの値があります。このオプションを使用するには、G1とG2にそれぞれ3つの個体があり、グループ化されていない変数のg1に2つの個体、g2に2つ、g3に2 つの個体が必要です。<b>Note</b>: このオプションを選択する前に、<a href="../../UserGuide/UserGuide/Sorting_Worksheet_Data.html#Nested_Sorting" title="ユーザガイド:ワークシートデータのソート">ネストソート</a>を実行する必要があることに<b>注意してください</b> (最初に<b>グループ列</b>で並べ替え、次に<b>他の列</b>で並べ替えます)。</dd></dl></li>
 <li><b>全てのグループを統合する</b>
-<dl><dd>このオプションは、<b>グループ列</b>のデータと<b>他の列</b>のデータを組み合わせて、アンスタックデータのインデックスとして使用します。<b>グループ列</b>のデータと<b>他の列</b>のデータを組み合わせに重複がある場合、順序はソースワークシートでの表示に従います。</dd></dl></li></ul></dd></dl>
+<dl><dd><b>グループ列</b>のデータと<b>他の列</b>のデータを組み合わせて、アンスタックデータのインデックスとして使用します。<b>グループ列</b>のデータと<b>他の列</b>のデータを組み合わせに重複がある場合、順序はソースワークシートでの表示に従います。</dd></dl></li></ul></dd></dl>
 <p><b>欠損データを単一グループとして含める</b>
 </p>
 <dl><dd>欠損値を一つのグループとするか指定します。 </dd></dl>
 </td></tr>
 <tr>
-<th>出力設定
+<th>出力
 </th>
 <td>
 <p><b>出力列のソート</b>
@@ -80,30 +77,30 @@
 <p><b>出力ワークシート</b>
 </p>
 <dl><dd>アンスタックした結果を出力する場所を指定します。 </dd></dl>
+<p><b>データテーブルを出力</b>
+</p>
+<dl><dd>このチェックボックスをオンにすると、アンスタック結果を<a href="../../UserGuide/UserGuide/Life_Science_Mode.html#Data_Table" title="ユーザーガイド:ライフサイエンスモード">データテーブル</a>に出力します。次のいずれかの条件を満たす場合にのみ使用できます。
+<ul><li><b>グループ列</b>の数 &lt;= 2、<b>他の列を含める</b>で1列が選択されている場合、<br />
+⟾ <a href="../../UserGuide/UserGuide/Life_Science_Mode.html#Grouped_.28Two_Way.29" title="ユーザーガイド:ライフサイエンスモード">グループ化 (2元) テーブル</a>に出力されます。</li>
+<li><b>アンスタックされるデータ</b>の数 = 1、<b>グループ列の数</b>= 1、<b>他の列を含める</b>がオフの場合、<br />
+⟾<a href="../../UserGuide/UserGuide/Life_Science_Mode.html#Column_.28One_Way.29" title="ユーザーガイド:ライフサイエンスモード"> 列 (1元)</a> テーブルに出力されます。</li>
+<li><b>アンスタックされるデータの数</b> = 1、<b>グループ列</b>の数 = 3、<b>他の列を含める</b>で1列が選択されている場合、<br />
+⟾ <a href="../../UserGuide/UserGuide/Life_Science_Mode.html#Grouped_.28Two_Way.29" title="ユーザーガイド:ライフサイエンスモード">グループ化 (2元)</a>テーブルに出力されます。</li></ul></dd></dl>
 <p><b>グループ情報の出力先</b>
 </p>
 <dl><dd>グループ情報の出力先を指定します。 
-<ul><li><b>ロングネーム</b>
-<dl><dd>グループ情報をロングネーム行に出力します。</dd></dl></li>
-<li><b>コメント</b>
-<dl><dd>グループ情報をコメント行に出力します。 </dd></dl></li>
-<li><b>データ列のロングネームに追加する</b>
-<dl><dd>グループ情報をロングネーム行に追加します。 </dd></dl></li>
+<ul><li><b>ロングネーム</b></li>
+<li><b>コメント</b></li>
+<li><b>データ列のロングネームに追加する</b></li>
 <li><b>ユーザ定義パラメータ</b>
-<dl><dd>グループ情報をユーザ定義パラメータ行に出力します。行の名前は<b>グループ情報名の引用元</b>で指定します。</dd></dl></li>
+<dl><dd>グループ情報をユーザ定義パラメータ行に出力します。<b>グループ情報名の引用元</b>でユーザ定義パラメータ名を指定します。</dd></dl></li>
 <li><b>カスタム</b>
-<dl><dd>すべてのグループ化列に<a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">ラベルの省略形</a>を入力します。ラベルの数は、グループ列の数と同じにする必要があります。各グループ列の情報は、1つのラベル行に格納されます。たとえば、入力に2つのグループ列がある場合、オプションに<b>LC</b>を入力します。group1の情報がロングネームとして、group2の情報がコメントとして設定されます</dd></dl></li></ul></dd></dl>
-<p><b>グループ情報名の引用元</b>
+<dl><dd>すべてのグループ化列に<a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">ラベルの省略形</a>を入力します。ラベルの数は、<b>グループ列</b>の数と同じにする必要があります。各グループ列の情報は、1つのラベル行に格納されます。たとえば、2つのグループ列がある場合、<b>カスタム</b> に <b>LC</b> と入力すると、グループ1の情報はロングネームに、グループ2の情報はコメントに入力されます。</dd></dl></li></ul></dd></dl>
+<p><b>グループ情報名の引用元</b>/<b>データセット識別子</b>
 </p>
-<dl><dd><b>グループ情報の出力先</b>を<b>ユーザ定義パラメータ</b>に設定したときに利用できるドロップダウンリストです。グループ情報を格納するユーザ定義パラメータ行の名前付けに使用されます。ソースワークシートのグループ列のラベル行から名前を付けます。選択したラベル行には、ユーザ定義パラメータ行の名前用の文字列が必要で、ない場合はエラーメッセージが表示されます。GUIでは、ソースワークシートにそのラベル行が表示されているかに応じて利用可能なオプションが表示されます。
-<ul><li><b>ショートネーム</b>
-<dl><dd>グループ列のショートネームから</dd></dl></li>
-<li><b>ロングネーム</b>
-<dl><dd>グループ列のロングネーム行から</dd></dl></li>
-<li><b>単位</b>
-<dl><dd>グループ列の単位行から</dd></dl></li>
-<li><b>コメント</b>
-<dl><dd>グループ列のコメント行から</dd></dl></li></ul></dd></dl>
+<dl><dd>次の場合に使用するラベル行（<b>ショートネーム</b>、<b>ロングネーム</b>、<b>単位</b>、<b>コメント</b>）を選択します。
+<ul><li><b>グループ情報の出力先</b>=<b>ユーザ定義パラメータ</b>の場合、グループ情報用のユーザ定義パラメータ行に名前を付けます。</li>
+<li><b>データテーブルを出力</b>がオンの場合、反復データに名前を付ける。</li></ul></dd></dl>
 </td></tr></table>
 <h2><a name="How_to_Unstack_Columns"></a><span class="mw-headline">列をアンスタッキングするには</span></h2>
 <p><a href="../../UserGuide/UserGuide/Stacking_Worksheet_Columns.html" title="ユーザガイド: ワークシート列のスタッキング">列スタッキング</a>と反対の操作をする機能です。列のアンスタッキングでは、他のアンスタックしていない列をアンスタックした列の結果に追加できます。
@@ -128,7 +125,7 @@
 <li><b>オプション</b>で、<b>他の列を含める</b>にチェックを付けます。<b>他の列</b>では、デフォルトの範囲を使用します。</li>
 <li><b>他の列の値の抽出ルール</b>ドロップダウンリストで<b>全てのグループを統合する</b>を選択します。</li>
 <li><b>出力</b>設定の<b>グループ情報の出力先</b>で<b>ユーザ定義パラメータ</b>を選択して、<b>グループ情報名の引用元</b>で<b>ロングネーム</b>を選択します。他の設定はデフォルトのままです。
-<dl><dd><a  class="image"><img alt="Wunstackcol example 2.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_2.png" width="643"  /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Wunstackcol example 2.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_2.png" width="562"  /></a></dd></dl></li>
 <li><b>OK </b>ボタンをクリックし、列をアンスタックします。結果は下図のようになります。
 <dl><dd><a  class="image"><img alt="Wunstackcol example 3.png" src="../images/Unstacking_Worksheet_Columns/400px-Wunstackcol_example_3.png" width="400"   /></a></dd></dl></li></ol>
 <h3><a name="Example_2:_Unstacking_by_Date_or_Time"></a><span class="mw-headline">例2: 日付や時間でアンスタッキング</span></h3>
@@ -146,26 +143,29 @@ dd.MM.yyyy HH:mm:ss.##
 <li>データシートをスクロールして確認すると、文字列の時刻部分（<i>HH:mm:ss.##</i>）から、
 測定値が09時から短い間隔で記録されていることがわかります。ここで仮に、B(Y)列のデータを「時」と「分」でグループ分けしたいとします。  再度 A(X) 列を選択し、右クリックして <b>列フォーマット</b> を選び、<b>プロパティ</b>タブで<b>フォーマット</b>を<b>時間</b>に設定し、<b>表示</b>のドロップダウンリストから<i>HH:mm</i>を選択します。<br />
 これで、ワークシートは次のようになります。</li>
-<p><a  class="image"><img alt="Wunstackcol example 4.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_4.png" width="326"  /></a><br />
+<p><a  class="image"><img alt="Wunstackcol example 4.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_4.png" width="333"  /></a><br />
 </p>
 <li>ワークシート内の両列を選択し、<b>データ整形:列アンスタッキング: ダイアログを開く</b>を選びます。</li>
 <li><b>グループ列</b>をA(X)に設定します。デフォルト設定のまま、<b><b>OK</b></b>ボタンをクリックします。データは <code>HH:mm</code> 単位でグループ化され、新しいワークシートの<b>コメント</b>ラベル行にグループ情報が保存されます。</li>
-<p><a  class="image"><img alt="Wunstackcol example 5.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_5.png" width="734"  /></a>
+<p><a  class="image"><img alt="Wunstackcol example 5.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_5.png" width="738"  /></a>
 </p>
 </ol>
-<h3><a name="Example_3:_Reorder_Unstacked_Columns"></a><span class="mw-headline">例3:スタックされていない列の並べ替え</span></h3>
+<h3><a name="Example_3:_Reorder_Unstacked_Columns"></a><span class="mw-headline">例3: アンスタッキングした列を並び替える</span></h3>
 <p>この例では、<b>&lt;Originプログラムディレクトリ&gt;\Samples\Statistics\automobile.dat</b>の<b>Power</b>列を <b>make</b>別にアンスタックし、出力を並べ替えます。 
 </p>
 <ol><li><i>&lt;Originプログラムディレクトリ&gt;\Samples\Statistics\automobile.dat</i>ファイルを新しいワークブックにインポートします。</li>
 <li>列Cを選択し、<b>データ整形：列アンスタッキング</b>を選択し、<b>wunstackcol</b> ダイアログを開きます。</li>
 <li><b>グループ列</b>の項目にある三角形のボタンをクリックし、<b>B(Y): Make</b>を選択します。 </li>
 <li><b>再計算</b>を<b>自動</b>に変更し、デフォルト設定のまま実行します。
-<dl><dd><a  class="image"><img alt="Wunstackcol example 6.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_6.png" width="622"  /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Wunstackcol example 6.png" src="../images/Unstacking_Worksheet_Columns/Wunstackcol_example_6.png" width="499"  /></a></dd></dl></li>
 <li><b>OK </b>ボタンをクリックし、列をアンスタックします。ここで、列 (B) はカテゴリカル（カテゴリデータ）として設定されていることに注意してください。</li>
 <li><i>UnstackCols1</i>シート内の全データを選択し、メニューから<b>作図&gt;複数区分、複数軸: ラベルから複数パネルを一括作成...</b>を選択します。 </li>
-<li><b>グループ識別子</b>を<b>コメント</b>に設定します。<b><b>OK</b></b> をクリックして複数パネルグラフを作成します。ここで、パネルの順序は <i>UnstackCol1</i> シートの列順序に従います。 </li>
+<li><b>グループ</b>を<b>コメント</b>に設定します。<b><b>OK</b></b> をクリックして複数パネルグラフを作成します。ここで、パネルの順序は <i>UnstackCol1</i> シートの列順序に従います。 </li>
 <li>パネルの順序を調整したい場合（たとえばメーカー名をアルファベット順に並べたい場合）は、元のワークシートでカテゴリカル順序を調整するのが最適です。<i>automobile</i> シートに戻ります。列Bのカテゴリー行のヘッダセルをダブルクリックします。 </li>
 <li><b>カテゴリー</b>ダイアログで、<b>カテゴリの編集(追加、削除、任意の順)</b>にチェックを付けます。テーブルのカテゴリヘッダをクリックして、アルファベット順にソートします。<b>OK</b>をクリックすると、<br /><b>UnstackCols1</b>シートの列順序とグラフ内のパネル順序が更新されます。</li></ol>
+
+
+
 
 
 

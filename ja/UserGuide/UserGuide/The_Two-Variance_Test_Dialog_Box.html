@@ -1,116 +1,118 @@
-﻿<h1 class="firstheading">(PSS) 2母分散の検定ダイアログボックス</h1>
-<table id="toc" class="toc">
-<tr>
-<td>
-<div id="toctitle">
-<h2>内容</h2>
-</div>
-<ol>
-<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
+﻿<h1 class="firstHeading">(PSS) 2標本分散検定ダイアログボックス</h1><p class='urlname' style='display: none'>PSS-Two-Var-Dialog</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">結果ログの出力</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Calculate"><span class="tocnumber">3</span> <span class="toctext">計算</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Test_Specification"><span class="tocnumber">4</span> <span class="toctext">検定設定</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Options"><span class="tocnumber">5</span> <span class="toctext">オプション</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Power_Curve"><span class="tocnumber">6</span> <span class="toctext">検出力曲線</span></a></li>
 <li class="toclevel-1 tocsection-7"><a href="#Output_Results"><span class="tocnumber">7</span> <span class="toctext">出力結果</span></a></li>
-</ol>
-</td>
-</tr>
-</table>
-<p>&#160;</p>
-<h2><a name="Supporting_Information" id="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
-<ul>
-<li><a href="../../UserGuide/Category/(PSS)_Two-Variance_Test.html" title="カテゴリー：(PSS) 2分散の検定">イントロダクション：(PSS) 2母分散の検定</a></li>
-<li><a href="../../UserGuide/UserGuide/Algorithms(PSS_Two_Variances_Test).html" title="ユーザガイド：アルゴリズム(PSS: 2分散の検定)">アルゴリズム：(PSS) 2母分散の検定</a></li>
 </ul>
-<h2><a name="Results_Log_Output" id="Results_Log_Output"></a><span class="mw-headline">結果ログの出力</span></h2>
-<p>このチェックがついていると、結果は<b>結果ログ</b>(さらに<b>出力結果</b>で指定した場所)に出力されます。</p>
-<h2><a name="Calculate" id="Calculate"></a><span class="mw-headline">計算</span></h2>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<ul><li> <a href="../../UserGuide/Category/(PSS)_Two-Variance_Test.html" title="カテゴリ:(PSS) 2標本分散検定">はじめに: (PSS) 2標本分散検定</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithms(PSS_Two_Variances_Test).html" title="UserGuide:アルゴリズム (2標本分散検定)">アルゴリズム:(PSS)2標本分散検定</a></li></ul>
+<h2><a name="Results_Log_Output"></a><span class="mw-headline">結果ログの出力</span></h2>
+<p>結果を、<b>出力結果</b> で指定した出力先に加えて、<b>結果ログ</b>にも出力するには、このボックスを選択します。
+</p>
+<h2><a name="Calculate"></a><span class="mw-headline">計算</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
-<th>検出力</th>
-<td>指定したサンプルサイズでの検出力を計算します。</td>
-</tr>
+<th>検出力
+</th>
+<td>指定したサンプルサイズに対する検出力を計算します。
+</td></tr>
 <tr>
-<th>標本サイズ</th>
-<td>提案された検出力でサンプルサイズを求めます。</td>
-</tr>
-</table>
-<h2><a name="Test_Specification" id="Test_Specification"></a><span class="mw-headline">検定設定</span></h2>
+<th>サンプルサイズ
+</th>
+<td>提案された検出力に基づいてサンプルサイズを計算します。
+</td></tr></table>
+<h2><a name="Test_Specification"></a><span class="mw-headline">検定設定</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
-<th>第1グループの分散</th>
-<td>第1グループの母分散の値</td>
-</tr>
+<th>第1グループの分散
+</th>
+<td>第1母分散の値です。
+</td></tr>
 <tr>
-<th>第2グループの分散</th>
-<td>第2グループの母分散の値</td>
-</tr>
+<th>第2グループの分散
+</th>
+<td>第2母分散の値です。
+</td></tr>
 <tr>
-<th>アルファ値</th>
-<td>真であるときの帰無仮説を棄却する確率</td>
-</tr>
+<th>Alpha
+</th>
+<td>帰無仮説が真であるときに帰無仮説を棄却する確率。
+</td></tr>
 <tr>
-<th>仮説の検出力</th>
-<td>仮説の検出力をスペースで区切って指定します。<b>計算</b>が<b>標本サイズ</b>のときに利用できます。</td>
-</tr>
+<th>仮説の検出力
+</th>
+<td>仮定の検出力をスペース区切りで指定します。<b>計算</b> = <b>サンプルサイズ</b>の場合に使用可能です。
+</td></tr>
 <tr>
-<th>仮説のサンプルサイズ</th>
-<td>仮説のサンプルサイズをスペースで区切って指定します。<b>計算</b>が<b>検出力</b>のときに利用できます。</td>
-</tr>
+<th>仮説のサンプルサイズ
+</th>
+<td>仮定のサンプルサイズをスペース区切りで指定します。<b>計算</b>=<b>検出力</b>の場合に使用可能です。
+</td></tr>
 <tr>
-<th>対立仮説</th>
+<th>対立仮説
+</th>
 <td>
-<p>片側または両側検定を実行</p>
-<dl>
-<dd><b style="font-weight: bold;">不等</b>
-<dl>
-<dd>両側の分散検定を使用する事を示します</dd>
-</dl>
-</dd>
-</dl>
-<dl>
-<dd><b style="font-weight: bold;">より小さい</b>
-<dl>
-<dd>下側の片側分散検定を使用する事を示します</dd>
-</dl>
-</dd>
-</dl>
-<dl>
-<dd><b style="font-weight: bold;">より大きい</b>
-<dl>
-<dd>上側の片側分散検定を使用する事を示します</dd>
-</dl>
-</dd>
-</dl>
-</td>
-</tr>
-</table>
-<h2><a name="Options" id="Options"></a><span class="mw-headline">オプション</span></h2>
-<p>ワークシートデータセットによる追加の検出力または、サンプルサイズを取得するときに使用します。</p>
-<p>検出力を計算するとき(<b>計算＝検出力</b>)</p>
+<p>片側検定または両側検定を実行します。
+</p>
+<dl><dd><b>等しくない</b>
+<dl><dd>両側分散検定を使用することを示します。</dd></dl></dd></dl>
+<dl><dd><b>より小さい</b>
+<dl><dd>下側片側分散検定を使用することを示します。</dd></dl></dd></dl>
+<dl><dd><b>より大きい</b>
+<dl><dd>上側片側分散検定を使用することを示します。</dd></dl></dd></dl>
+</td></tr></table>
+<h2><a name="Options"></a><span class="mw-headline">オプション</span></h2>
+<p>ワークシートデータセットによって追加の検出力またはサンプルサイズの値を提供する際に使用されるコントロールです。
+</p><p>検出力を計算する場合(<b>計算</b> = <b>検出力</b>):
+</p>
 <table class="dialogcontroltable">
+
 <tr>
-<th>仮説のサンプルサイズの詳細</th>
-<td>チェックすると、<b>仮説の検出力の列</b>オプションがアクティブになります。</td>
-</tr>
+<th>仮説のサンプルサイズの詳細
+</th>
+<td>これを選択すると、<b>仮定のサンプルサイズの列</b>の入力コントロールが有効になります。
+</td></tr>
 <tr>
-<th>仮説のサンプルサイズの列</th>
-<td>サンプルサイズ値の列を指定します。<b>仮説のサンプルサイズの詳細</b>にチェックが付いている場合のみ利用できます。</td>
-</tr>
-</table>
-<p>標本サイズを計算するとき(<b>計算＝標本サイズ</b>)</p>
+<th>仮説のサンプルサイズの列
+</th>
+<td>サンプルサイズの値の列を指定します。<b>仮説のサンプルサイズの詳細</b>が選択されている場合に使用可能です。
+</td></tr></table>
+<p>サンプルサイズを計算する場合 (<b>計算</b>=<b>サンプルサイズ </b>)：
+</p>
 <table class="dialogcontroltable">
+
 <tr>
-<th>仮説の検出力の詳細...</th>
-<td>チェックすると、<b>仮説の検出力の列</b>オプションがアクティブになります。</td>
-</tr>
+<th>仮説の検出力の詳細
+</th>
+<td>これを選択すると、<b>仮想の検出力の列</b>の入力コントロールを有効になります。
+</td></tr>
 <tr>
-<th>仮説の検出力の列</th>
-<td>検出力値の列を指定します。<b>仮説の検出力の詳細</b>にチェックが付いている場合のみ利用できます。</td>
-</tr>
-</table>
-<h2><a name="Power_Curve" id="Power_Curve"></a><span class="mw-headline">出力曲線</span></h2>
-<p>選択して検出力曲線を出力します。検出力曲線は、全ての検出力v.s.代替比率の組み合わせで作図されます。検出力曲線は、検定の検出力やサンプルサイズを決定する際に便利です。</p>
-<h2><a name="Output_Results" id="Output_Results"></a><span class="mw-headline">結果の出力</span></h2>
-<p>出力レポートを作成する場所を指定します。詳細情報は、 <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="ユーザガイド：分析レポートシートと列">分析レポートシート</a>をご覧下さい。</p>
+<th>仮説の検出力の列
+</th>
+<td>検出力値の列を指定します。<b>仮説の検出力の詳細</b>が選択されている場合に使用可能です。
+</td></tr></table>
+<h2><a name="Power_Curve"></a><span class="mw-headline">検出力曲線</span></h2>
+<p>仮定条件を使用して検出力曲線を出力するには選択します。  検出力曲線は、検出力と対立比率のすべての組み合わせをプロットします（分散1/分散2）。検出力曲線は、この検定に適したサンプルサイズまたは検出力を決定するのに役立ちます。
+</p>
+<h2><a name="Output_Results"></a><span class="mw-headline">結果を出力</span></h2>
+<p>出力レポートワークシートの作成場所を決定します。詳細情報は、 <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="ユーザガイド：分析レポートシートと列">分析レポートシート</a>を参照してください。
+</p>
+
+
+
+
+
+
+    

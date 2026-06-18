@@ -9,8 +9,10 @@
 </li>
 <li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">バージョン情報</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
 <p>入力データとして最低1つのY列を選択します。さらに、1つ以上の列がグループ情報である必要があります。
 </p>
@@ -23,14 +25,15 @@
 <br />
 </p>
 <ul><li><b>2Dグラフギャラリー</b>ツールバーの<a  class="image"><img alt="Button Grouped Scatter-Indexed Data.png" src="../images/Grouped_Scatter_Index_Data/Button_Grouped_Scatter-Indexed_Data.png" width="23"  /></a>ボタンをクリックします。
-<dl><dd><a  class="image"><img alt="Grouped Scatter Index Data Button From Toolbar.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Index_Data_Button_From_Toolbar.png" width="310"  /></a></dd></dl></li></ul>
+<dl><dd><a  class="image"><img alt="Grouped Scatter Index Data Button From Toolbar.png" src="../images/Grouped_Scatter_Index_Data/Grouped_Scatter_Index_Data_Button_From_Toolbar.png" width="309"  /></a></dd></dl></li></ul>
 <p><b>plot_gscatter</b>ダイアログが開きます。
 </p>
-<dl><dd><a  class="image"><img alt="Plot grouped scatter dialog box.png" src="../images/Grouped_Scatter_Index_Data/Plot_grouped_scatter_dialog_box.png" width="567"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Plot grouped scatter dialog box.png" src="../images/Grouped_Scatter_Index_Data/Plot_grouped_scatter_dialog_box.png" width="583"  /></a></dd></dl>
 <p>開いたダイアログで、入力データ範囲を選択します。最低でも1つのグループ列を追加し、必要に応じてページ/区分を分割する列を選択し、フィット曲線を追加し、プロットデータとグラフを配置する場所を決定します。<b>プレビュー</b>または<b>OK</b>をクリックして作図し、ダイアログを閉じます。 
 </p>
 <h3><a name="The_.22plot_gscatter.22_dialog_box"></a><span class="mw-headline">plot_gscatter ダイアログボックス</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th>データ列
 </th>
@@ -48,8 +51,17 @@
 <ul><li> <b>複数データ</b>：複数入力データの配置方法を選択します。 
 <ul><li> <b>同じグラフ上で重ね合わせ</b>: 選択した入力データを、同じグラフレイヤ上に重なり合ったプロットとしてプロットします。</li>
 <li> <b>同じグラフ内でレイヤを分ける</b>：選択された入力データを同じグラフページ上の別々のレイヤに個別にプロットします。</li>
-<li> <b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</li></ul></li></ul>
-<ul><li> <b>パネルの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</li>
+<li> <b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</li></ul></li>
+<li><b>データを分割</b>
+<ul><li> 複数データがグラフを分けるに設定されていない場合、このコントロールが表示されます。列ラベル行を選択して、複数のデータを異なるデータグループに分割することができます。</li></ul></li>
+<li> <b>複数データグループ</b>
+<ul><li> <b>データを分割</b>で列ラベル行を選択した場合、データグループの配置方法を<b>個別のレイヤ</b>または<b>グラフを分ける</b>から選択できます。 </li></ul></li>
+<li> <b>水平パネルに分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別の散布図が表示されます。 
+<dl><dd><b>垂直パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
+<li> <b>垂直パネルに分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">縦方向にパネルを分割</a>できます。各グループ値に対して、個別の散布図が表示されます。 
+<dl><dd><b>水平パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
 <li> <b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにグループ化棒グラフを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。 </li></ul>
 </td></tr>
 <tr>
@@ -84,6 +96,11 @@
 <li> <b>信頼楕円(予測)</b>: グラフ上に信頼楕円を表示するかどうかを指定します。</li></ul>
 </td></tr>
 <tr>
+<th>出力先
+</th>
+<td>グラフを出力する場所として、別のグラフウィンドウまたはレポートシート内に埋め込む場所を指定します。
+</td></tr>
+<tr>
 <th>出力データ
 </th>
 <td><a href="../../UserGuide/UserGuide/Output_Results.html" title="ユーザガイド：出力結果">計算したデータの出力</a>先を指定します。
@@ -94,15 +111,27 @@
 <td>結果グラフを出力するシートを指定します。
 </td></tr></table>
 <table class="note">
+
 <tr>
 <td><b>Note:</b> グループ化範囲はデフォルトではアルファベット順でソートされます。変更する場合は、ワークシートの列を選択し、右クリックしてカテゴリとして設定します。設定したら、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>カテゴリー</b>タブ</a>でリストの順序を変更できる。
 </td></tr></table>
 <h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
 <p>SCATTER.OPTU（Originのプログラムフォルダにインストールされています）
 </p>
-<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<h2><a name="Notes"></a><span class="mw-headline">メモ</span></h2>
 <ul><li> <b>Yを共有</b>を選択すると、同じグラフの複数のレイヤでは、左側のレイヤの同じ行にY軸のみが表示されます。<b>Xを共有</b>を選択すると、同じグラフの複数のレイヤでは、下部レイヤの同じ列に下のX軸のみが表示されます。 </li>
 <li> 複数の入力データに対して同じグラフに複数のパネルがある場合、<b>パネルの分割</b>オプションで列を選択すると、各変数を異なる行に配置し、各パネル因子の組み合わせを異なる列に配置します。変数またはパネル因子のみが存在する場合は、レイヤをceil(sqrt(N))で折り返します。Nはレイヤの数です。</li></ul>
+<h2><a name="Version_Information"></a><span class="mw-headline">バージョン情報</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>利用可能なバージョン</b>: Origin 2019b以降
+</td>
+<td><b>最終更新</b>: Origin 2026
+</td></tr></table>
+
+
+
 
 
 

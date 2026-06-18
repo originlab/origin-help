@@ -23,6 +23,7 @@
 <li class="toclevel-1 tocsection-11"><a href="#Other_Manipulation"><span class="tocnumber">7</span> <span class="toctext">その他の操作</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Data_Integrity"></a><span class="mw-headline">データの整合性</span></h2>
 <p>データコネクタは、従来のインポート機能よりも高度なデータ保護が可能です。
 </p>
@@ -94,7 +95,7 @@
 コネクタを追加したら、シートのコネクタアイコンをクリックして接続を管理できます。
 </p>
 <h3><a name="Connector_menu:"></a><span class="mw-headline">コネクタメニュー：</span></h3>
-<dl><dd><dl><dd><a  class="image"><img alt="Data connector contextmenu.png" src="../images/Data_Connector/Data_connector_contextmenu.png" width="316"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="Data connector contextmenu.png" src="../images/Data_Connector/Data_connector_contextmenu.png" width="448"  /></a></dd></dl></dd></dl>
 <dl><dd><table class="simple">
 <tr>
 <th style="width: 25%"> データソース
@@ -102,7 +103,7 @@
 <td> ダイアログが開き、データソース選択と変更が可能です。
 <p>データソースがディスクファイルの場合、<b>データソースファイルパス</b>ダイアログが開きます。
 </p>
-<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/400px-Dadta_connector_file_path.png" width="787"   /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/400px-Dadta_connector_file_path.png" width="400"   /></a></dd></dl>
 <p>選択して参照し、データソースパスを以下のいずれかの方法で保存します。
 </p>
 <dl><dd><ul><li>絶対パス</li>
@@ -110,14 +111,14 @@
 <li>共通データパスコンテキストメニューで設定した<b>共通データパス</b>からの相対パス</li></ul></dd></dl>
 </td></tr>
 <tr>
-<th> 選択
+<th> インポートオプション/<br />選択（オプション）
 </th>
 <td> ダイアログを再度開いてインポート設定を調整するか、インポートするブランチを選択します。
 </td></tr>
 <tr>
 <th> オプション
 </th>
-<td> <b>HTML表コネクタ</b>(<b>ファイル/Webに接続</b>)でのみ利用可能です。詳細は<a href="../../UserGuide/UserGuide/Connecting_to_Web.html#HTML_Connector_Options" title="ユーザガイド: Webに接続">このページ</a>を参照してください。
+<td> <a href="../../UserGuide/UserGuide/Connecting_to_Web.html#HTML_Connector_Options" title="ユーザガイド: Webに接続"><b>HTML表コネクタ</b>(<b>ファイル/Webに接続</b></a>)と <a href="../../UserGuide/UserGuide/Connecting_to_File.html#NetCDF" title="ユーザガイド: ファイルに接続"><b>NetCDFコネクタ</b></a>でのみ利用可能です。インポート設定を変更するダイアログを開きます。
 </td></tr>
 <tr>
 <th> インポート後に実行するスクリプト
@@ -141,7 +142,7 @@
 <tr>
 <th> インポートしたデータのロック解除
 </th>
-<td> チェックをつけるとインポートしたデータの編集が可能です。コネクタアイコンをクリックし、<b>インポート</b>を選択してデータを再インポートすると、ロックが解除された状態が維持されます。編集保護を復元するには、<b>選択...</b>を選択して再インポートします。
+<td> チェックをつけるとインポートしたデータの編集が可能です。コネクタアイコンをクリックし、<b>インポート</b>を選択してデータを再インポートすると、ロックが解除された状態が維持されます。編集保護を復元するには、<b>インポートオプション.../選択（オプション）...</b>を選択してデータを再インポートします。
 </td></tr>
 <tr>
 <th> インポート後のアクションをリセット
@@ -162,6 +163,7 @@
 <p>全シートから編集保護を削除します。さらに、<b>保存時にインポートデータを除外</b>チェックマークも外します。
 </p>
 </td></tr>
+
 <tr>
 <th> 保存時にインポートデータを除外<sup>&dagger;</sup>
 </th>
@@ -189,7 +191,7 @@
 <th> 他のファイルでシートを複製
 </th>
 <td> インポート設定 (<b>インポート後に実行するスクリプト</b>を含む) や解析操作などを含めて現在のワークシートを複製し、ポップアップダイアログで選択した新しいファイルをインポートします。
-<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png" width="761"  /></a>
+<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png" width="566"  /></a>
 </p><p><a href="#Other_sub-menus_under_Data_menu:">次のセクション</a>の<b>クローンインポート</b>も参照してください。
 </p>
 </td></tr></table></dd></dl>
@@ -214,7 +216,7 @@
 <h2><a name="Refresh_imported_data"></a><span class="mw-headline">インポートされたデータの更新</span></h2>
 <p>コネクタアイコン <a  class="image"><img alt="Dadta connector icon connect.png" src="../images/Data_Connector/Dadta_connector_icon_connect.png" width="16"  /></a> / <a  class="image"><img alt="Button database connector icon.png" src="../images/Data_Connector/Button_database_connector_icon.png" width="16"  /></a> （データベースコネクタ）をクリックし、<b>自動更新...</b>を選択します：
 </p>
-<dl><dd><a  class="image"><img alt="Auto Refresh Settings.png" src="../images/Data_Connector/Auto_Refresh_Settings.png" width="469"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Auto Refresh Settings.png" src="../images/Data_Connector/Auto_Refresh_Settings.png" width="428"  /></a></dd></dl>
 <p>データコネクタは、ソースからのデータの再インポートをサポート： 
 </p>
 <ul>
@@ -226,7 +228,7 @@
 </ul>
 <p>「定期的に更新」を有効にすると、コネクタアイコンが<a  class="image"><img alt="Data connector icon timer.png" src="../images/Data_Connector/Data_connector_icon_timer.png" width="16"  /></a>になります。  アイコン上にマウスを置くとツールチップがポップアップ表示され、更新間隔や次の更新までの残り時間などの自動更新情報が表示されます。
 </p>
-<dl><dd><a  class="image"><img alt="Auto Refresh Tooltips.png" src="../images/Data_Connector/Auto_Refresh_Tooltips.png" width="300"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Auto Refresh Tooltips.png" src="../images/Data_Connector/Auto_Refresh_Tooltips.png" width="396"  /></a></dd></dl>
 <p>次の再インポートまでのカウントダウンがステータスバーの右隅に表示されます。ステータスバーを右クリックし、<b>テーマ</b>項目のチェックをオフ/オンすることでカウントダウンを非表示/表示することができます。
 </p>
 <dl><dd><a  class="image"><img alt="Status Bar Countdown.png" src="../images/Data_Connector/Status_Bar_Countdown.png" width="647"  /></a></dd></dl>
@@ -251,7 +253,7 @@
 <p><span class='headerInParagraph'>インポート後に実行するsukriダイアログを開き、</span>
 </p>
 <ul><li> インポート後、コネクタアイコン<a  class="image"><img alt="Dadta connector icon connect.png" src="../images/Data_Connector/Dadta_connector_icon_connect.png" width="16"  /></a>をクリックして<b>インポート後に実行するスクリプト</b>を選択します。 </li></ul>
-<dl><dd><a  class="image"><img alt="Post Import Scripts Dialog.png" src="../images/Data_Connector/Post_Import_Scripts_Dialog.png" width="810"  /></a></dd>
+<dl><dd><a  class="image"><img alt="Post Import Scripts Dialog.png" src="../images/Data_Connector/Post_Import_Scripts_Dialog.png" width="756"  /></a></dd>
 <dd><b>OKでインポート</b>はデフォルトでオンになっており、<b>OK</b>ボタンをクリックした後にデータを再インポートしてスクリプトを実行します。</dd></dl>
 <table class="noborder">
 	<tr>
@@ -261,7 +263,7 @@
 </p>
 <pre class="lt" style="font-family:monospace;">wks.<span style="color: #000080;">userparam</span><span style="color: #000000;">(</span><span style="color: #000080;">++</span>Mean<span style="color: #000000;">)</span>;
 loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</span>,wks.<span style="color: #000080;">dc</span>.<span style="color: #000080;">c2</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span> wcol<span style="color: #000000;">(</span>i<span style="color: #000000;">)</span><span style="color: #000000;">[</span>Mean<span style="color: #000000;">]</span><span style="color: #000080;">$</span><span style="color: #000080;">=</span><span style="color: #ff00ff;">&quot;=Mean(this)&quot;</span>;<span style="color: #000000;">}</span></pre>
-<dl><dd><a  class="image"><img alt="Post Import Script Example 1.png" src="../images/Data_Connector/Post_Import_Script_Example_1.png" width="630"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Post Import Script Example 1.png" src="../images/Data_Connector/Post_Import_Script_Example_1.png" width="641"  /></a></dd></dl>
 <p>そして、（ドラッグして）ナビゲーションパネルにある複数の表を選択し、<b>アクティブシートを複製して接続</b>のコンテクストメニューを使ってアクティブシートの設定を利用し、12か月の表全てをインポートします。
 <a  class="image"><img alt="Post Import Script Example 2.png" src="../images/Data_Connector/Post_Import_Script_Example_2.png" width="600"  /></a>
 </p></td></tr></table>
@@ -278,7 +280,7 @@ loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</spa
 	</td>
 	<td><p>以下の例は、<b>wdeldup</b> X-ファンクションを呼び出して、他の列の関連する値を平均することにより、参照列（列1）の重複する値を削除する方法を示しています。 
 </p>
-<dl><dd><dl><dd><a  class="image"><img alt="DC run script after import.png" src="../images/Data_Connector/DC_run_script_after_import.png" width="428"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="DC run script after import.png" src="../images/Data_Connector/DC_run_script_after_import.png" width="345"  /></a></dd></dl></dd></dl>
 <p>他の例は<a class="external text" href="http://blog.originlab.com/worksheet-script-after-data-connector-to-modify-data" target="_blank">このOriginLabのブログ記事</a>で参照してください。
 </p></td></tr></table>
 <p><br />
@@ -302,6 +304,7 @@ loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</spa
 <li> <b>データ: ファイル/Webに接続: 新規追加</b>を選択します。 
 <li>これにより、<b>アプリセンター</b>で利用可能な<b>データコネクタ</b>が表示されます。使用したいファイルタイプを探し、ダウンロードします。ダウンロードすると、<b>データ</b>メニューに自動的に追加され、使用できるようになります  。このアプリは、アプリギャラリーの<b>コネクタ</b>タブにも表示されます。 
 </ol>
+
 
 
     

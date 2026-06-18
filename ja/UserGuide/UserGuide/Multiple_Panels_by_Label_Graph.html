@@ -8,6 +8,7 @@
 <li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
 <p>少なくとも1つのY列、あるいは、その部分領域を選択する必要があります。各Y列において、関連付けられたX列がある場合はそれを使用し、そうでない場合は、Y列のサンプリング間隔または行番号が使用されます。
 </p>
@@ -17,22 +18,26 @@
 </p><p>または、 
 </p><p><b>2Dグラフギャラリー</b>ツールバーの<b>複数区分...</b>ボタンをクリックします。 
 </p>
-<dl><dd><a  class="image"><img alt="Multiple panels by label 02.png" src="../images/Multiple_Panels_by_Label_Graph/Multiple_panels_by_label_02.png" width="352"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Multiple panels by label 02.png" src="../images/Multiple_Panels_by_Label_Graph/Multiple_panels_by_label_02.png" width="311"  /></a></dd></dl>
 <p>これにより<span class="db">plotbylabel</span>ダイアログが開きます。
 </p>
-<dl><dd><a  class="image"><img alt="Multiple panels by label 03.png" src="../images/Multiple_Panels_by_Label_Graph/Multiple_panels_by_label_03.png" width="591"  /></a></dd></dl>
-<p>選択されたデータセットのグループ識別子、グラフタイプ、グラフテンプレート、パネル配置、間隔を指定します。<b>OK </b>をクリックして、グラフを作成します。このダイアログの詳細は、<a class="external text" href="../../XFunction/X-Function/Plotbylabel.html">このページ</a>を参照してください。
+<dl><dd><a  class="image"><img alt="Multiple panels by label 03.png" src="../images/Multiple_Panels_by_Label_Graph/Multiple_panels_by_label_03.png" width="626"  /></a></dd></dl>
+<p>選択されたデータセットのグループ識別子、グラフタイプ、グラフテンプレート、グループ配置、パネル配置、間隔を指定します。<b>OK </b>をクリックして、グラフを作成します。このダイアログの詳細は、<a class="external text" href="../../XFunction/X-Function/Plotbylabel.html">このページ</a>を参照してください。
 </p>
 <h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
 <p>MGROUPS.OTPU (Originプログラムフォルダにインストールされています)
 </p>
 <h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
-<ul><li> Origin 2026以降、<b>グループ識別子</b>ドロップダウンリストで<b>プロット数</b>を選択して、入力プロットを別々のレイヤに分割するためのグループの数を使用できます。</li>
+<ul><li> <b>グループ識別子</b>ドロップダウンリストで<b>プロット数</b>を選択すると、各グループに含めるプロット数を使用して、入力プロットを別々のレイヤに分割できます。</li>
+<li> <b>すべてのグループを1つのレイヤに表示</b>を選択すると、異なるグループのすべてのプロットを同じレイヤに配置できます。このチェックボックスをオンにすると、その下にあるすべてのノードは編集できなくなります。</li>
 <li> 複数の連続X列があり、次にXXXY列などの隣接するY列が1つある場合は、フライアウトメニューから<b>Xによりワークシートから選択</b>を選択して、入力として複数のXY範囲を選択できます。
-<dl><dd><a  class="image"><img alt="Multiple panels by label 04.png" src="../images/Multiple_Panels_by_Label_Graph/500px-Multiple_panels_by_label_04.png" width="650"   /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Multiple panels by label 04.png" src="../images/Multiple_Panels_by_Label_Graph/500px-Multiple_panels_by_label_04.png" width="500"   /></a></dd></dl></li>
 <li> ラベルによる複数区分グラフでは、複数のレイヤが含まれています。レイヤ数は入力データのグループ数で決まります。入力データは、<b>グループ識別子</b>で選択された列ラベル行またはX列に従ってグループ化されます。 </li>
 <li> 作図の詳細<b>共通の表示</b>コントロールを使用して、複数レイヤグラフでレイヤ、プロット、および軸のプロパティを同時に編集できます。詳細については、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Layers_Tab.html" title="ユーザガイド：（作図の詳細）レイヤタブ">(作図の詳細)<b>レイヤ</b>タブコントロール</a>を参照してください。</li>
 <li> <b>グラフテンプレート</b>コントロールを使用してグラフテンプレートを指定し、テンプレートとともに保存されたフォーマットをパネルに適用することができます。デフォルトでは、組み込みのテンプレート<i>mgroups.optu</i>がパネルで使用されます。</li></ul>
+
+
+
 
 
 

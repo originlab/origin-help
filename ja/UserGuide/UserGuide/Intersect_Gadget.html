@@ -1,7 +1,6 @@
-﻿<h1 class="firstheading">交差ガジェット</h1><p class='urlname' style='display: none'>ガジェット：交差</p>
-<p><br />
-</p><p>交差ガジェットを使用して、ROI内にある入力曲線の交点を計算します。  このガジェットは、グラフウィンドウがアクティブなときに、メニューの<b><b>ガジェット</b></b>から使用できます。
-</p><p><a  class="image"><img alt="Curve Intersection 001.png" src="../images/Intersect_Gadget/Curve_Intersection_001.png" width="853"  /></a>
+﻿<h1 class="firstHeading">交差ガジェット</h1><p class='urlname' style='display: none'>Gadget-Intersect</p>
+<p><b>交差</b>ガジェットを使用して、ROI内にある入力曲線の交点を計算します。  このガジェットは、グラフウィンドウがアクティブなときに、メニューの<b><b>ガジェット</b></b>から使用できます。
+</p><p><a  class="image"><img alt="Curve Intersection 001-vNext.png" src="../images/Intersect_Gadget/Curve_Intersection_001.png" width="860"  /></a>
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
@@ -21,10 +20,12 @@
 <li class="toclevel-1 tocsection-8"><a href="#Fly-out_Menu"><span class="tocnumber">4</span> <span class="toctext">フライアウトメニュー</span></a></li>
 </ul>
 </div>
+
 <h2><a name="ROI_Box"></a><span class="mw-headline">ROIボックス</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
-<th><b>位置と大きさ</b>
+<th><b>図形の位置</b>
 </th>
 <td>X1とX2の値を使用してX方向の範囲を指定し、Y1とY2の値を使用してY方向の範囲を指定します。
 </td></tr>
@@ -36,19 +37,20 @@
 <tr>
 <th><b>塗り色</b>
 </th>
-<td>グラフに追加する矩形の色を指定します。<a class="external text" href="../../LabTalk/LabTalk/List_of_Colors.html">色リスト</a>をご覧下さい。
+<td>グラフに追加する矩形の色を指定します。<a class="external text" href="../../LabTalk/LabTalk/List_of_Colors.html">色リスト</a>を参照してください。
 </td></tr></table>
 <h2><a name="Options"></a><span class="mw-headline">オプション</span></h2>
 <h3><a name="Intersection_Display"></a><span class="mw-headline">交点の表示</span></h3>
 <p>交点の表示方法を指定します。
 </p>
 <h4><a name="Intersection_Marker"></a><span class="mw-headline">交点のマーカー</span></h4>
-<p>交点にマークするシンボルを選択します。  シンボルの色、形状、サイズを編集します。
+<p>交点にマークするシンボルを選択します。  シンボルの色、形、サイズを編集できます。
 </p>
 <h4><a name="Intersection_Label"></a><span class="mw-headline">交点のラベル</span></h4>
 <p>このチェックボックスにチェックを入れると、交点にラベルが追加されます。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>色
 </th>
@@ -62,14 +64,44 @@
 <tr>
 <th>タイプ
 </th>
-<td>ラベルの種類（X、Y、（X、Y）など）を指定します。
+<td>ラベルの種類（X、Y、(X,Y)など）を指定します。
+</td></tr>
+<tr>
+<th>回転(度)
+</th>
+<td>ドロップダウンリストから回転角度を選択します。
+</td></tr>
+<tr>
+<th>桁数
+</th>
+<td>ラベルの桁数を設定します。
+<ul><li> デフォルト桁数: 交点ラベルですべての桁を表示（デフォルト）</li>
+<li> 少数桁数 =&nbsp;: 小数点の後に表示される桁数を指定します。テキストボックスに値を入力します。</li>
+<li> 有効桁数 =&nbsp;: 表示する桁数です。テキストボックスに値を入力します。</li></ul>
 </td></tr></table>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Intersect_Gadget/Tip_icon.png" width="57"  border="0" /></td><td><ol>
+<li><b>タグポイント</b>メニューをクリックすると、交点ラベルがグラフに追加されます。<a href="../../UserGuide/UserGuide/Object_Manager.html" title="ユーザガイド：オブジェクトマネージャ"><b>オブジェクトマネージャ</b></a>に<b>RectIntersectMarker</b>オブジェクト項目が追加されます(<b>グラフオブジェクトの表示</b>モード)。タグポイントを複数回追加すると、複数のマーカーオブジェクトが追加されます。
+<dl><dd><a  class="image"><img alt="Tag Points two times.png" src="../images/Intersect_Gadget/Tag_Points_two_times.png" width="699"  /></a></dd></dl>
+<li>ラベルを編集したい場合は、以下の方法があります。 
+<ul><li>ダブルクリックして<b>マーカーのプロパティ</b>ダイアログを開きます。</li></ul>
+<p>または、
+</p>
+<ul><li><b>オブジェクトマネージャー</b>で<b>RectIntersectMarker</b>を右クリックし、コンテキストメニューの<b>プロパティ</b>を選択して<b>マーカーのプロパティ</b>ダイアログを開きます。</li></ul>
+<dl><dd><a  class="image"><img alt="Maker Properties.png" src="../images/Intersect_Gadget/Maker_Properties.png" width="314"  /></a></dd></dl>
+<li>任意の交点ラベルをクリックして選択すると、ラベルの位置を移動できます。複数ラベルで同時にポイントにタグ付けしていない場合、それらは一緒に移動されません。ラベルを1つだけ移動したい場合は、<b>Ctrl</b>キーを押しながらクリックしてラベルを選択し、移動します。 
+
+<li>クリックして任意の交差ラベルを選択し、右クリックメニューの<b>削除</b>を選択すると、これらのラベルを削除できます。<b>オブジェクトマネージャ</b>で<b>RectIntersectMarker</b>を右クリックし、<b>削除</b>を選択しても削除できます。
+</ol>
+<p><br />
+</p></td></tr></table>
 <h3><a name="Interpolation_Settings"></a><span class="mw-headline">補間の設定</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
-<th>補間の手法
+<th>補間法
 </th>
-<td>入力曲線を補完する手法を指定します。これらの手法についての情報は、<a href="../../UserGuide/UserGuide/Interpolate_Extrapolate_Y_from_X.html" title="ユーザガイド:XからYを補間/補外">補間補外</a>のヘルプページを確認してください。
+<td>入力曲線の補間方法を指定します。3つの方法の詳細については、<a href="../../UserGuide/UserGuide/Interpolate_Extrapolate_Y_from_X.html" title="ユーザガイド:XからYを補間/補外">補間/補外</a>のヘルプページを参照してください。
 </td></tr>
 <tr>
 <th>サンプルポイント
@@ -78,22 +110,24 @@
 </td></tr></table>
 <h2><a name="Output_To"></a><span class="mw-headline">出力先</span></h2>
 <table class="dialogcontroltable">
+
 <tr>
 <th> スクリプトウィンドウ
 </th>
-<td>チェックを付けると結果をスクリプトウィンドウに出力します。
+<td>結果をスクリプトウィンドウに出力する場合チェックを付けます。
 </td></tr>
 <tr>
 <th> 結果ワークシート名
 </th>
-<td> 出力結果のワークシートを指定します。
-<ul><li> 結果は、デフォルトで<b>[%H-Intersect]Result</b>に出力されますが、ほかのブックやシートを指定することもできます（ここで、<b>%H</b>はソースグラフのショートネームです）。指定したブックやシートがない場合、作成して出力します。</li>
-<li> もう一つの方法として、<b>結果ワークシート名</b>の右側にあるフライアウトボタン<a  class="image"><img alt="Gadget flyout button.png" src="../images/Intersect_Gadget/Gadget_flyout_button.png" width="18"  /></a>をクリックして、<b>入力ブック内のシート</b>を選択します。これにより、編集ボックスには<b>[&lt;input&gt;]Result</b>が入力されます。結果は、元データのワークシート<b>Result</b>に出力されます。</li></ul>
+<td> 結果出力ワークシートを指定します。
+<ul><li> 結果は、デフォルトで<b>[%H-Intersect]Result</b>に出力されますが、ほかのブックやシートを指定することもできます（ここで、<b>%H</b>はソースグラフのショートネームです）。指定したブックやシートが存在しない場合は、出力時に作成されます。</li>
+<li> もう一つの方法として、<b>結果ワークシート名</b>の右側にあるフライアウトボタン<a  class="image"><img alt="Gadget flyout button.png" src="../images/Intersect_Gadget/Gadget_flyout_button.png" width="18"  /></a>をクリックして、<b>入力ブックのシート</b>を選択できます。これにより、編集ボックスには<b>[&lt;input&gt;]Result</b>が入力されます。新しい出力を生成すると、結果はソースブックに<b>Result</b>という名前のシートで出力されます。</li></ul>
 </td></tr></table>
 <h2><a name="Fly-out_Menu"></a><span class="mw-headline">フライアウトメニュー</span></h2>
-<p>ROIボックスの右上角にある三角形のボタン<a  class="image"><img alt="ROI menu.png" src="../images/Intersect_Gadget/ROI_menu.png" width="21"  /></a>をクリックして、メニューを開きます。メニューは以下の通りです。
+<p>ROIボックスの右上角にある三角形のボタン<a  class="image"><img alt="ROI menu.png" src="../images/Intersect_Gadget/ROI_menu.png" width="21"  /></a>をクリックして、フライアウトメニューを開きます。メニューは以下の通りです。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th> 新しい出力
 </th>
@@ -112,12 +146,12 @@
 <tr>
 <th> タグポイント
 </th>
-<td> ROIの中で見つかった交点をタグ付けします。
+<td> ROIで検出された交点にタグを付けます。
 </td></tr>
 <tr>
 <th> データ変更
 </th>
-<td> フィットデータ/プロットを変更します。デフォルトでは、現在のレイヤ内にあるすべてのプロットが選択されます。
+<td> フィットデータ/プロットを変更します。デフォルトでは、現在のレイヤのすべてのプロットが選択されます。
 <ul><li> <b>全てのプロット</b>についているチェックを外すと、全て未選択になります。</li>
 <li> 各プロットにチェックを付けて、そのプロットを選択します。</li>
 <li> <b>選択...</b>または、<b>詳細...</b>をクリックすると<b>プロットを選択</b>ダイアログが開きます。</li></ul>
@@ -145,9 +179,8 @@
 <tr>
 <th> 設定...
 </th>
-<td> <b>交点 設定</b>ダイアログを開きます。
+<td> <b>交点設定</b>ダイアログを開きます。
 </td></tr></table>
-
 
 
 

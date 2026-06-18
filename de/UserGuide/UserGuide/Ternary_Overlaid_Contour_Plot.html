@@ -1,0 +1,36 @@
+﻿<h1 class="firstHeading">Tern&auml;res &uuml;berlagertes Konturdiagramm</h1><p class='urlname' style='display: none'>ernary-Overlaid-Contour-Plot</p>
+<dl><dd><a  class="image"><img alt="Ternary Overlaid Contour Plot 1.png" src="../images/Ternary_Overlaid_Contour_Plot/Ternary_Overlaid_Contour_Plot_1.png" width="534"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#Axis_Range_by_Data_Range"><span class="tocnumber">2.1</span> <span class="toctext">Achsenbereich nach Datenbereich</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>W&auml;hlen Sie 1 oder mehrere S&auml;tze XYZZ-Spalten aus, um ein &uuml;berlagertes Konturdiagramm im tern&auml;ren Koordinatensystem, basierend auf festgelegten niedrigen und hohen Schwellenwerten, zu erstellen.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <span class="menu">Zeichnen &gt; Kontur: Tern&auml;res &uuml;berlagertes Konturdiagramm</span>.</p><p><a  class="image"><img alt="Ternary Overlaid Contour Plot 02.png" src="../images/Ternary_Overlaid_Contour_Plot/Ternary_Overlaid_Contour_Plot_02.png" width="499"  /></a></p><p>Die ausgew&auml;hlten Antwortvariablen werden im Dialog aufgelistet, um die <b>tiefen</b> und <b>hohen</b> Konturebenen festzulegen. Innerhalb dieses Bereich befindet sich die zul&auml;ssige Region, au&szlig;erhalb die nicht zul&auml;ssige Region.</p>
+<h3><a name="Axis_Range_by_Data_Range"></a><span class="mw-headline">Achsenbereich nach Datenbereich</span></h3>
+<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um einen geeigneten Skalierungsbereich f&uuml;r tern&auml;re Daten zu finden und die Skalierung festzulegen. In Anbetracht wie Origin einen geeigneten Skalierungsbereich bestimmt, ist der Prozess, wie folgt:</p>
+<ol><li>Zuerst ermitteln Sie den Wert f&uuml;r das Minimum aus den ersten 3 Spalten (XYZ) der Eingabe.</li>
+<li>Folgen Sie den Berechnungen unten:<dl><dd>Zmax=Total-(Xmin+Ymin) //Total is 100 or 1, base on X+Y+Z in original data or normalized data</dd>
+<dd>Ymax=Total-(Xmin+Zmin)</dd>
+<dd>Xmax=Total-(Ymin+Zmin)</dd></dl></li>
+<li>Am Ende erhalten wir den neuen XYZ-Bereich.</li></ol>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>glOverlaidContourTernary.OTPU (installiert im Origin-Programmordner)</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+<p>Ein tern&auml;res &uuml;berlagertes Konturdiagramm kann als ein <a href="../../UserGuide/UserGuide/Overlaid_Contour_Plot.html" title="UserGuide:Overlaid Contour Plot">&uuml;berlagertes Konturdiagramm</a>, das in einem tern&auml;ren Koordinatensystem gezeichnet wurde, betrachtet werden: Die ersten 3 Spalten XYZ (Faktoren) entscheiden &uuml;ber den tern&auml;ren Skalierungsbereich und die anderen Z-Spalten (Antworten) werden als die Regionen gezeichnet.</p>
+
+
+
+
+
+
+    

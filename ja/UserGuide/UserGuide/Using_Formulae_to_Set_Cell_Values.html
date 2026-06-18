@@ -20,6 +20,7 @@
 <li class="toclevel-1 tocsection-12"><a href="#See_Also"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Cell_Formula"></a><span class="mw-headline">セル式</span></h2>
 <p>Origin 2018以降、Originはワークシートのデータセルとユーザ定義の列ラベルセルの両方でセル式をサポートしています。
 </p>
@@ -32,7 +33,7 @@
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Using_Formulae_to_Set_Cell_Values/Tip_icon.png" width="57"  border="0" /></td><td><p>数式セルを一目で区別するには、<b>表示：数式/リンクされたセルを強調表示</b>を選択して、セルが異なる背景色で強調表示されるようにします。 
 </p>
-<dl><dd><a  class="image"><img alt="Highlight Fromula Cells.png" src="../images/Using_Formulae_to_Set_Cell_Values/Highlight_Fromula_Cells.png" width="366"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Highlight Fromula Cells.png" src="../images/Using_Formulae_to_Set_Cell_Values/Highlight_Fromula_Cells.png" width="423"  /></a></dd></dl>
 </td></tr></table>
 <h2><a name="Column_Cell_Reference_Syntaxes"></a><span class="mw-headline">列セル参照構文</span></h2>
 <p>Excel と同様の表記法で列とセルを参照できるようにするには、<a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="ユーザガイド：列ショートネームの制限"><b>スプレッドシートセル表記(SCN)</b>を有効にする</a>必要があります。
@@ -259,7 +260,7 @@
 </p><p>次の例では、ブックのショートネームを列Aに配置し、セル数式を使用して列Bに各ブックのB2値を入力する方法が示されています。
 </p><p>B1セルに、 ==&quot;[&quot;+A1$+&quot;]&quot;+&quot;Sheet1!B2&quot; と入力します。B1セルの右下角から12行目まで下にドラッグして、12ブックの B2を埋めます。 
 </p>
-<dl><dd><a  class="image"><img alt="Cell formula relative book double quote.png" src="../images/Using_Formulae_to_Set_Cell_Values/Cell_formula_relative_book_double_quote.png" width="651"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Cell formula relative book double quote.png" src="../images/Using_Formulae_to_Set_Cell_Values/Cell_formula_relative_book_double_quote.png" width="706"  /></a></dd></dl>
 <h2><a name="Flash_Fill"></a><span class="mw-headline">フラッシュフィル</span></h2>
 <p>左側の列に明確なパターンが表示されており、ターゲット列の最初のセルに予想される結果を入力すると、Originはそのパターンを自動的に検出し、文字列や数値の抽出、結合、再構築の方法を推測します。そして、ポップアッププレビューで可能な関数や数式を提案します。その後、次の方法で列を入力できます。
 </p>
@@ -276,6 +277,18 @@
 <dl><dd><a  class="image"><img alt="Flash Fill EX2 Combine.gif" src="../images/Using_Formulae_to_Set_Cell_Values/Flash_Fill_EX2_Combine.gif" width="692"  /></a></dd></dl>
 <ul><li> いくつかの種類の書式変更</li></ul>
 <dl><dd><a  class="image"><img alt="Flash Fill EX3 Reformat.gif" src="../images/Using_Formulae_to_Set_Cell_Values/Flash_Fill_EX3_Reformat.gif" width="707"  /></a></dd></dl>
+<p><br />
+特に、余分な空白をトリミングするためにも使用できるので、1回押すだけできれいに整形されたテーブルを得ることができます。
+</p>
+<dl><dd><a  class="image"><img alt="Flash Fill Ex3 TrimSpaces.gif" src="../images/Using_Formulae_to_Set_Cell_Values/Flash_Fill_Ex3_TrimSpaces.gif" width="621"  /></a></dd></dl>
+<p><br />
+</p>
+<table class="note">
+<tr>
+<td>
+<p><b>Note:</b> フラッシュフィルを使用するには、<a href="../../UserGuide/UserGuide/Column_Short_Name_Restriction.html" title="ユーザガイド：列ショートネームの制限">列のショートネームの制限</a>が有効になっていることを確認してください。
+</p>
+</td></tr></table>
 <h2><a name="Limitations"></a><span class="mw-headline">制限</span></h2>
 <p>セル数式を使用する場合の既知の問題をいくつか示します。
 </p>
@@ -306,7 +319,7 @@
 </p>
 <dl><dd><a  class="image"><img alt="HeaderRowLookup1.gif" src="../images/Using_Formulae_to_Set_Cell_Values/HeaderRowLookup1.gif" width="912"  /></a></dd></dl>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Using_Formulae_to_Set_Cell_Values/Tip_icon.png" width="57"  border="0" /></td><td><p>ミニツールバーの<b>ユーザパラメータに適用</b>ボタン<a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Using_Formulae_to_Set_Cell_Values/Popup_Apply_User_Parameters_to.png" width="21"  /></a>を使用して、式で定義されたユーザパラメータ行を複数のワークシートにコピーできます。詳細は、<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#Define_a_Formula_when_you_Add_User_Parameters" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ">こちら</a>をご覧下さい<a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Using_Formulae_to_Set_Cell_Values/Apply_User_Parameters_to_Other_Sheets.png" width="471"  /></a>
+	<td style="vertical-align:top" width="60"><img src="../images/Using_Formulae_to_Set_Cell_Values/Tip_icon.png" width="57"  border="0" /></td><td><p>ミニツールバーの<b>ユーザパラメータに適用</b>ボタン<a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Using_Formulae_to_Set_Cell_Values/Popup_Apply_User_Parameters_to.png" width="21"  /></a>を使用して、式で定義されたユーザパラメータ行を複数のワークシートにコピーできます。詳細は、<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#Define_a_Formula_when_you_Add_User_Parameters" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ">こちら</a>をご覧下さい<a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Using_Formulae_to_Set_Cell_Values/Apply_User_Parameters_to_Other_Sheets.png" width="417"  /></a>
 </p></td></tr></table>
 <h2><a name="Related_System_Variables"></a><span class="mw-headline">関連するシステム変数</span></h2>
 <ul><li> @esc</li></ul>
@@ -329,6 +342,7 @@
 <li> <a class="external text" href="../../UserGuide/UserGuide/Inserting_Links_into_Worksheet_Cells.html">他のセルからリンクを挿入</a></li>
 <li> <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#String_Functions">LabTalkがサポートする文字列関数</a> </li>
 <li> <a class="external text" href="../../LabTalk/Category/String_and_Characters_(Labtalk).html">文字列関数と文字関数のそれぞれのマニュアル</a></li></ul>
+
 
 
     

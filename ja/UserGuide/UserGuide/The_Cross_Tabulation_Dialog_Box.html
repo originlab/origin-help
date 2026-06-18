@@ -1,20 +1,25 @@
-﻿<h1 class="firstheading">クロス集計とカイ二乗ダイアログボックス</h1><p class='urlname' style='display: none'>Crosstab-Dialog</p>
+﻿<h1 class="firstHeading">クロス集計とカイ二乗ダイアログボックス</h1><p class='urlname' style='display: none'>Crosstab-Dialog</p>
 <p><br />
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Input_Data"><span class="tocnumber">3</span> <span class="toctext">入力データ</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Statistics"><span class="tocnumber">4</span> <span class="toctext">統計</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Tests"><span class="tocnumber">5</span> <span class="toctext">多変量解析</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input_Data"><span class="tocnumber">3</span> <span class="toctext">入力データ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Cross-tab"><span class="tocnumber">3.1</span> <span class="toctext">クロス集計表</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Contingency_Table"><span class="tocnumber">3.2</span> <span class="toctext">分割表</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Statistics"><span class="tocnumber">4</span> <span class="toctext">統計</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Tests"><span class="tocnumber">5</span> <span class="toctext">検定</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">出力</span></a></li>
 </ul>
 </div>
 
 <h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
-<ul><li> <a href="../../UserGuide/Category/Cross_Tabulation.html" title="カテゴリー：クロス集計">イントロダクション：クロス集計とカイ二乗</a></li>
-<li> <a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム：クロス集計とカイ二乗 </a></li>
+<ul><li> <a href="../../UserGuide/Category/Cross_Tabulation.html" title="Category:クロス集計">イントロダクション：クロス集計とカイ二乗</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム：クロス集計とカイ二乗 </a></li>
 <li> <a class="external text" href="../../Tutorial/Tutorial/Cross_Tabulation.html">チュートリアル：クロス集計とカイ二乗</a></li></ul>
 <p><br />
 </p>
@@ -35,8 +40,9 @@
 </td></tr></table>
 <h2><a name="Input_Data"></a><span class="mw-headline">入力データ</span></h2>
 <p><b>統計: 記述統計: クロス集計とカイ二乗
-</b>を選択します。
+</b>を選択します。Origin は、<b>クロス集計表</b>と<b>分割表</b>の2種類のデータレイアウトに対応しています。クロス集計表レイアウトと比較すると、分割表は、列因子ごとに集計され、アンスタックされたレイアウトです。
 </p>
+<h4><a name="Cross-tab"></a><span class="mw-headline">クロス集計表</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
@@ -45,19 +51,37 @@
 <td>列からデータを選択して、行変数を指定します。
 </td></tr>
 <tr>
-<th>縦棒
+<th>列
 </th>
 <td>列からデータを選択して、列変数を指定します。
 </td></tr>
 <tr>
 <th>レイヤ
 </th>
-<td>列からデータを選択して、レイヤ変数を指定します。レイヤ変数を指定すると、行と列変数のクロス集計がレイヤ変数の各レベルで作成されます。
+<td>列からデータを選択して、レイヤ変数を指定します。レイヤ変数を指定すると、行変数と列変数のクロス集計が、レイヤ変数の各水準で作成されます。
 </td></tr>
 <tr>
 <th>度数
 </th>
-<td><a href="../../UserGuide/Category/Cross_Tabulation.html#Preparing_Analysis_Data" title="カテゴリー：クロス集計">度数データモード</a>としてデータを集計する場合、度数の列を選択して、度数の変数を指定します。
+<td>データが<a href="../../UserGuide/Category/Cross_Tabulation.html#Preparing_Analysis_Data" title="Category:クロス集計">度数データモード</a>として集計されている場合、度数列を選択して度数変数を指定します。
+</td></tr></table>
+<h4><a name="Contingency_Table"></a><span class="mw-headline">分割表</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>行因子
+</th>
+<td>列からデータを選択して、行変数を指定します。
+</td></tr>
+<tr>
+<th>列ごとの度数
+</th>
+<td> 度数変数を指定するために、列ごとの度数を選択します。（少なくとも2列を選択してください。）
+</td></tr>
+<tr>
+<th>レイヤ
+</th>
+<td>列からデータを選択して、レイヤ変数を指定します。レイヤ変数を指定すると、行変数と列変数のクロス集計が、レイヤ変数の各水準で作成されます。
 </td></tr></table>
 <h2><a name="Statistics"></a><span class="mw-headline">統計</span></h2>
 <table class="dialogcontroltable">
@@ -65,17 +89,17 @@
 <tr>
 <th>分割表
 </th>
-<td>このブランチは、どの統計で計算して分割表に出力を決定します。
+<td>このブランチでは、分割表で計算して出力する統計量を指定します。
 <ul><li>度数：度数、期待度数</li>
 <li>パーセント：行度数、列度数のパーセント、総度数のパーセント</li>
-<li>残差：残差、標準残差、調整済残差</li></ul>
-<p><b>Note:</b>これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="カテゴリー：クロス集計">イントロダクション</a>と<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="カテゴリー：クロス集計">アルゴリズム</a>のページをご覧ください。
+<li>残差：残差、標準化残差、調整済み残差。</li></ul>
+<p><b>Note:</b>これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="Category:クロス集計">イントロダクション</a>と<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="Category:クロス集計">アルゴリズム</a>のページをご覧ください。
 </p>
 </td></tr>
 <tr>
-<th>有意レベル
+<th>有意水準
 </th>
-<td>以下の仮説検定には、有意水準を指定します。デフォルトの値は0.05です。
+<td>以下の仮説検定で使用する有意水準を指定します。デフォルトの値は0.05です。
 </td></tr></table>
 <h2><a name="Tests"></a><span class="mw-headline">検定</span></h2>
 <table class="dialogcontroltable">
@@ -83,52 +107,52 @@
 <tr>
 <th>カイ二乗検定
 </th>
-<td>カイ二乗検定を行うかどうかを指定して、分割表内の変数間で有意な関連があるか決定します。
-<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Test_of_Independence" title="カテゴリー：クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Chi-Square_Tests" title="ユーザガイド：クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
+<td>分割表内の変数間に有意な関係があるかどうかを判定するために、カイ二乗検定を実行するかどうかを指定します。
+<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Test_of_Independence" title="Category:クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Chi-Square_Tests" title="ユーザーガイド:クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
 </p>
 </td></tr>
 <tr>
-<th>フィッシャーの正確確率検定
+<th>Fisher の正確確率検定
 </th>
-<td>フィッシャーの正確確率検定を行うかどうかを指定して、分割表内の変数間で有意な関連があるか決定します。
-<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Test_of_Independence" title="カテゴリー：クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Fisher.27s_Exact_Table" title="ユーザガイド：クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
+<td>分割表内の変数間に有意な関係があるかどうかを判定するために、Fisher の正確確率検定を実行するかどうかを指定します。
+<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Test_of_Independence" title="Category:クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Fisher.27s_Exact_Table" title="ユーザーガイド:クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
 </p>
 </td></tr>
 <tr>
-<th>関連性の尺度
+<th>関連性の度合い
 </th>
-<td>このブランチは、どの統計で計算して、分割表の変数間の関連の強さを評価をするのかを決定します。このブランチは以下のチェックボックスを含みます。
+<td>このブランチでは、分割表内の変数間の関係の強さを評価するために計算する統計量を指定します。このブランチは以下のチェックボックスを含みます。
 <ul><li>ガンマ</li>
-<li>ケンドールのタウbタウc</li>
+<li>Kendall の tau-b、tau-c</li>
 <li>Phi</li>
-<li>クラマーのV</li>
-<li>C係数</li>
-<li>Somer&apos;s D</li>
+<li>CramerのV</li>
+<li>分割係数</li>
+<li>SomerのD</li>
 <li>ラムダ</li>
-<li>不確かさの係数</li></ul>
-<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Measuring_Association" title="カテゴリー：クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Measures_of_Association" title="ユーザガイド：クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
+<li>不確定性係数</li></ul>
+<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Measuring_Association" title="Category:クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Measures_of_Association" title="ユーザーガイド:クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
 </p>
 </td></tr>
 <tr>
-<th>一致
+<th>一致性
 </th>
-<td>このブランチは、どの検定を実行して、一致対データの一致を計測して検定するのかを決定します。このブランチは以下のチェックボックスを含みます。
+<td>このブランチでは、対応のあるペアデータの一致度を測定および検定するために実行する検定を指定します。このブランチは以下のチェックボックスを含みます。
 <ul><li>カッパ</li>
-<li>Bowker検定(Mcnemar検定[2*2])</li></ul>
-<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Measuring_Agreement" title="カテゴリー：クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Agreement_Statistic" title="ユーザガイド：クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
+<li>Bowkerの検定([2*2]の場合はマクマネー)</li></ul>
+<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Methods_for_Measuring_Agreement" title="Category:クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Agreement_Statistic" title="ユーザーガイド:クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
 </p>
 </td></tr>
 <tr>
-<th>他の測定
+<th>その他
 </th>
-<td>他の検定を実行するかどうか、および、他の統計を計算するかどうかを指定します。このブランチは以下のチェックボックスを含みます。
+<td>その他の検定を実行し、その他の統計量を計算するかどうかを指定します。このブランチは以下のチェックボックスを含みます。
 <ul><li>Cochran-Mantel-Haenszel
-<dl><dd>条件付独立性検定、オッズ比の均一性検定、共通オッズ比を含む、複数分割表の関係を分析するかどうかを指定します。</dd></dl></li>
-<li>相対危険度：
-<dl><dd>相対危険度を計算して、比較グループでイベントが発生するオッズに対する1つのグループでイベントが発生するオッズの割合を計測するかどうかを指定します。</dd></dl></li>
-<li>オッズ比：
-<dl><dd>オッズ比を計算して、イベントが発生するオッズに対するイベントまたは結果が発生するオッズの割合を計測するかどうかを指定します。</dd></dl></li></ul>
-<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Other_Measures" title="カテゴリー：クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム（クロス集計）">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Odds_Radio_.26_Relative_Risk" title="ユーザガイド：クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
+<dl><dd>複数の分割表の関係を解析するかどうかを指定します。これには、条件付き独立性の検定、オッズ比の均質性検定、共通オッズ比が含まれます。</dd></dl></li>
+<li>相対危険度
+<dl><dd>あるグループでイベントが発生するリスクと、比較グループでイベントが発生するリスクの比である相対リスクを計算するかどうかを指定します。</dd></dl></li>
+<li>オッズ比
+<dl><dd>イベントまたは結果が発生するオッズと、イベントが発生しないオッズの比であるオッズ比を計算するかどうかを指定します。</dd></dl></li></ul>
+<p><b>Note:</b> これらの統計についての詳細は、<a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Other_Measures" title="Category:クロス集計">イントロダクション</a>、<a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="ユーザガイド:アルゴリズム(CrossTabs)">アルゴリズム</a>、<a href="../../UserGuide/UserGuide/Interpreting_Results_of_Crosstab.html#Odds_Radio_.26_Relative_Risk" title="ユーザーガイド:クロス集計の結果の解釈">結果の解釈</a>のページをご覧ください。
 </p>
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
@@ -142,17 +166,17 @@
 <tr>
 <th>モザイクプロット
 </th>
-<td>モザイクプロットを表示するかどうかを指定します。モザイクプロットのそれぞれの矩形の面積は、X変数の各レベルにおけるY変数の割合に比例します。
+<td>モザイクプロットを表示するかどうかを指定します。モザイクプロットでは、各四角形の面積が、X 変数の各水準における Y 変数の割合に比例します。
 </td></tr>
 <tr>
-<th>クロスタブレポート
+<th>クロス集計レポート
 </th>
-<td>クロスタブ結果のためのシートを指定します。デフォルトは入力データがあるワークブックに新しいシートを作成して表示します。
+<td>累積の結果の出力範囲を指定します。クロス集計結果を出力するシートを指定します。デフォルト値は、入力データのワークブック内の新しいシートです。
 </td></tr>
 <tr>
 <th>プロットデータ
 </th>
-<td>モザイクプロットデータのためのシートを指定します。デフォルトは入力データがあるワークブックに新しいシートを作成して表示します。
+<td>モザイクプロット用データを出力するシートを指定します。クロス集計結果を出力するシートを指定します。デフォルト値は、入力データのワークブック内の新しいシートです。
 </td></tr></table>
 
 

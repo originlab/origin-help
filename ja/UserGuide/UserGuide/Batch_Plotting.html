@@ -1,215 +1,257 @@
-﻿<h1 class="firstheading">バッチ作図</h1><p class='urlname' style='display: none'>Graphing-Batch-Plotting</p>
-<p><br />
-Originでは、様々な方法でグラフの編集が行え、編集内容を他のデータセットで再度使用できます。 
+﻿<h1 class="firstHeading">バッチ作図</h1><p class='urlname' style='display: none'>Graphing-Batch-Plotting</p>
+<p>Originでは、グラフの編集を新しいデータで再度使用する方法がいくつか用意されています。
 </p>
-<ul><li> カスタム設定は<a href="../../UserGuide/UserGuide/Graph_Template_Basics.html" title="ユーザガイド: グラフテンプレートの基本">グラフテンプレート</a>として保存できます。</li>
-<li> 編集内容は<a href="../../UserGuide/UserGuide/Saving_a_Format_as_a_Theme.html" title="ユーザガイド：テーマとしてフォーマットを保存">グラフテーマ</a>として保存できます。 </li>
-<li> グラフからフォーマットをコピーし、<a href="../../UserGuide/UserGuide/Copying_and_Pasting_Formats.html" title="ユーザーガイド: フォーマットのコピーと貼り付け">他のグラフに貼り付ける</a>ことができます。</li>
-<li> ここで説明する、Originのバッチ作図または<b><b>ワークシートを変更</b></b>機能を使用できます。 </li></ul>
-<p><b>グラフテンプレート</b>や<b>グラフテーマ</b>を使用する場合、事前に編集内容を保存したファイルが必要です。<b>フォーマットのコピー/貼り付け</b>と<b>バッチ作図</b>は、事前に保存されたファイルは必要ありません。  すべてがアプリケーションを持っていますが、バッチ作図は複数の列/シート/ブックデータを扱う場合に特に便利です。このセクションでは、同じ構造または、識別子が一致する列/シート/ブックをもつ、新しい列/シート/ブックでバッチ作図を行います。
+<ul><li> 編集したグラフを<a href="../../UserGuide/UserGuide/Graph_Template_Basics.html" title="ユーザガイド: グラフテンプレートの基本">グラフテンプレート</a>として保存する</li>
+<li> カスタム設定を<a href="../../UserGuide/UserGuide/Saving_a_Format_as_a_Theme.html" title="ユーザガイド：テーマとしてフォーマットを保存">グラフテーマ</a>として保存する </li>
+<li> グラフからフォーマットをコピーし、<a href="../../UserGuide/UserGuide/Copying_and_Pasting_Formats.html" title="ユーザーガイド: フォーマットのコピーと貼り付け">他のグラフに貼り付ける</a></li>
+<li> 指定したグラフと新しいデータセットを使用したバッチ作図 </li>
+<li> コンテキストメニューから<b>X/Y/ワークシートを変更</b>を使用します。 </li></ul>
+<p>グラフの<b>テンプレート</b>と<b>テーマ</b>は編集内容を外部ファイルに保存する必要がありますが、<b>フォーマットのコピー/貼り付け</b>と<b>バッチ作図</b>は必要ありません。  ここで説明する<b>バッチ作図</b>は、同じ構造に配置された複数のデータセット間でカスタマイズしたグラフを複製したい場合に特に効率的です。 
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Supported_graph_types"><span class="tocnumber">1</span><span class="toctext">サポートしているグラフ形式</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Four_Cases_of_Batch_Plotting"><span class="tocnumber">2</span> <span class="toctext">バッチ作図の4つのケース</span></a>
+<li class="toclevel-1 tocsection-1"><a href="#Supported_Graph_Types_and_Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">サポートされているグラフタイプとデータ要件</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Batch_Plotting_Dialog"><span class="tocnumber">2</span> <span class="toctext">バッチ作図ダイアログ</span></a>
 <ul>
-<li class="toclevel-2 tocsection-3"><a href="#Duplicate_with_new_books"><span class="tocnumber">2.1</span> <span class="toctext">新しいブックで複製</span></a>
+<li class="toclevel-2 tocsection-3"><a href="#Duplicate_from_Current_Graph_or_Multi-Graphs"><span class="tocnumber">2.1</span> <span class="toctext">現在のグラフまたは複数のグラフからの複製</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#How_to_Match_Datasets"><span class="tocnumber">2.2</span> <span class="toctext">データセットの一致条件</span></a>
 <ul>
-<li class="toclevel-3 tocsection-4"><a href="#Settings_for_matching_conditions"><span class="tocnumber">2.1.1</span><span class="toctext">一致条件の設定</span></a></li>
-<li class="toclevel-3 tocsection-5"><a href="#List_the_matching_books"><span class="tocnumber">2.1.2</span><span class="toctext">一致したブックのリスト</span></a></li>
-<li class="toclevel-3 tocsection-6"><a href="#Settings_for_result_graph"><span class="tocnumber">2.1.3</span><span class="toctext">結果グラフの設定</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Batch_Plot_with_Book"><span class="tocnumber">2.2.1</span> <span class="toctext">ブックからバッチ作図</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Batch_Plot_with_Sheet"><span class="tocnumber">2.2.2</span> <span class="toctext">シートからバッチ作図</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Batch_Plot_with_Column"><span class="tocnumber">2.2.3</span> <span class="toctext">列からバッチ作図</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Batch_Plot_with_Column_Offset"><span class="tocnumber">2.2.4</span> <span class="toctext">列オフセットからバッチ作図</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-7"><a href="#Duplicate_with_new_sheets"><span class="tocnumber">2.2</span> <span class="toctext">新しいシートで複製</span></a>
-<ul>
-<li class="toclevel-3 tocsection-8"><a href="#Settings_for_matching_conditions_2"><span class="tocnumber">2.2.1</span><span class="toctext">一致条件の設定</span></a></li>
-<li class="toclevel-3 tocsection-9"><a href="#List_the_matching_sheets"><span class="tocnumber">2.2.2</span><span class="toctext">一致したシートのリスト</span></a></li>
-<li class="toclevel-3 tocsection-10"><a href="#Settings_for_result_graph_2"><span class="tocnumber">2.2.3</span><span class="toctext">結果グラフの設定</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-11"><a href="#Duplicate_with_new_columns"><span class="tocnumber">2.3</span><span class="toctext">新しい列で複製</span></a>
-<ul>
-<li class="toclevel-3 tocsection-12"><a href="#Settings_for_matching_conditions_3"><span class="tocnumber">2.3.1</span><span class="toctext">一致条件の設定</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-13"><a href="#Duplicate_with_column_offset"><span class="tocnumber">2.4</span> <span class="toctext">指定されたオフセット列で複製</span></a>
-<ul>
-<li class="toclevel-3 tocsection-14"><a href="#Settings_for_matching_conditions_4"><span class="tocnumber">2.4.1</span><span class="toctext">一致条件の設定</span></a></li>
-</ul>
-</li>
+<li class="toclevel-2 tocsection-9"><a href="#Output_Settings_for_New_Plots"><span class="tocnumber">2.3</span> <span class="toctext">新規プロットの出力設定</span></a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2><a name="Supported_graph_types"></a><span class="mw-headline">サポートしているグラフ形式</span></h2>
-<ul><li>バッチ作図は同じプロジェクトにある2Ｄ/3D/等高線グラフで同じデータソースタイプのものでのみ有効です。<br /><b>注記:</b> プロットメニューから作成されたほとんどのグループ化2Dグラフではグループ化情報列はデータ列ではなく修飾子列として扱われます。 </li>
-<li>新しい列で複製する時、それぞれの列は<b><b>列のXY属性</b></b>の<b><b>Y</b></b>(2D)や<b><b>Z</b></b>(3D、等高線図) をもち、同一シート内にある必要があります。</li>
+
+<h2><a name="Supported_Graph_Types_and_Data_Requirements"></a><span class="mw-headline">サポートされているグラフタイプとデータ要件</span></h2>
+<ul>
+<li><span class='headerInParagraph'>サポートされているグラフ形式</span>
+<ul><li>2Ｄ/3D/等高線グラフ<br /><b>Note:</b> <b>作図</b>メニューから作成されるほとんどのグループ化2Dグラフではグループ情報列はデータ列ではなく修飾子列として扱われます。 </li></li></ul>
+<li><span class='headerInParagraph'>新しいデータセットは、同じプロジェクトで開かれ、元のデータセットと同様の構造を持つ必要があります。</span>
+<ul><li>新しい列で複製する時、新しい列は<b><b>列属性</b></b>の<b><b>Y</b></b>(2D)や<b><b>Z</b></b>(3D、等高線図) をもち、同一シート内にある必要があります。</li>
 <li>新しいシートで複製する時、各シートは同じ列の構造を持つ必要があります。</li>
 <li>新しいブックで複製する時、各ブックは同じシートと列の構造を持つ必要があります。</li></ul>
-<h2><a name="Four_Cases_of_Batch_Plotting"></a><span class="mw-headline">Four Cases of Batch Plotting</span></h2>
-<p><span class='headerInParagraph'>
-バッチ作図のツールを開く方法</span>
+</li></ul>
+<h2><a name="Batch_Plotting_Dialog"></a><span class="mw-headline">バッチ作図ダイアログ</span></h2>
+<p><span class='headerInParagraph'>バッチ作図を実行するには：</span>
 </p>
-<ul><li> グラフのタイトルバーか、グラフレイヤ枠の空白部分を右クリックして、<b>バッチ作図…</b>を選択します。</li></ul>
-<dl><dd><a  class="image"><img alt="Dialog Batch Plotting 01.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_01.png" width="511"  /></a></dd></dl>
-<p><b>バッチ作図するデータ</b>ドロップダウンリストで現在のグラフを複製するソースデータを以下より選択します。
-</p>
-<ul><li> <a href="#Duplicate_with_new_books">ワークブック/行列ブックから</a></li>
-<li> <a href="#Duplicate_with_new_sheets">ワークシート/行列シートから</a></li>
-<li> <a href="#Duplicate_with_new_columns"><b>ワークシート列から</b></a></li>
-<li> <a href="#Duplicate_with_column_offset">列オフセットから</a></li></ul>
-<p><b>バッチ作図するデータ</b>で<b>ブック/シート/列</b>を選択したら、利用可能なブック/シート/列がダイアログの中央部分に一覧表示されます。
-</p>
-<h3><a name="Duplicate_with_new_books"></a><span class="mw-headline">新しいブックで複製</span></h3>
-<p>グラフ内の全プロットが1つのブックから作成されている場合、バッチ作図機能を使用して他のブックを使って同じグラフを複製できます。この時、<b>バッチ作図するデータ</b>で<b>ブック</b>を選択します。すると、バッチ作図ダイアログのタイトルバーに、<b>ワークブックを選択</b>と表示されます。
-</p>
-<dl><dd><a  class="image"><img alt="Dialog Batch Plotting.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting.png" width="524"  /></a></dd></dl>
-<h5><a name="Settings_for_matching_conditions"></a><span class="mw-headline">一致条件の設定</span></h5>
-<table class="dialogcontroltable">
-<tr>
-<th> 正確
-</th>
-<td> 選択すると（デフォルト）、アクティブグラフと同様のシートと列の構造であるブックのみを一覧表示します。ブックに追加のシートまたは列（特定のシート内）が含まれている場合、グラフのクローンを作成するときにそれらは無視されます。アクティブなグラフを作成するために必要なシートよりもブックに含まれるシートが少ない場合、そのブックはリストされません。<br /><br /><b>正確</b>を外すと、設定による<b>プロット列の一致条件</b>によっては、シート数が最小で、アクティブなグラフの作成に必要な列数より少ないブックが表示される場合があります（次の項目を参照）。
-</td></tr>
-<tr>
-<th> プロット列/シートの一致条件
-</th>
-<td> <b>プロット列の一致条件</b>フィルタで<b><b>ロングネーム</b></b><b>、<b>ショートネーム</b>、<b><b>列インデックス</b></b></b>と、<b>シートの一致条件</b>フィルタで、<b><b>ロングネーム</b></b><b>、<b>ショートネーム</b>、<b>列インデックス</b></b>を選択すると、同じ構造があるワークブックに、バッチ作図を実行できます。
-</td></tr>
-<tr>
-<th>次の修飾語句で一致
-</th>
-<td>選択したワークブックでバッチ処理を実行する際、このリストを使って、どの様に修飾語句(プロットの編集に使う値のワークブックシート列-例えば、プロットの色）を一致させるかを指定します。デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。もちろん、ご自身の設定もご利用いただけます。
-</td></tr></table>
-<h5><a name="List_the_matching_books"></a><span class="mw-headline">一致したブックのリスト</span></h5>
-<p>最初の部分のフィルター条件に従って、プロジェクト内の一致するブックが中央のボックスに一覧表示されます。1つまたは複数のブックのデータセットを選択して、バッチ作図を実行できます。
-</p>
-<h5><a name="Settings_for_result_graph"></a><span class="mw-headline">結果グラフの設定</span></h5>
-<table class="dialogcontroltable">
-<tr>
-<th>軸の再スケール
-</th>
-<td>このチェックボックスは、デフォルトで選択されています。入力データの変更による軸再スケールが不要な場合、チェックを外します。
-</td></tr>
-<tr>
-<th>カラーマップがある場合再スケール
-</th>
-<td>このチェックボックスは、デフォルトで選択されています。入力データの変更によるカラーマップの再スケールが不要な場合、チェックを外します。
-</td></tr>
-<tr>
-<th> 選択データの作図方法
-</th>
-<td> このリストは選択されたブックが作図される場所の指定に使用されます。このオプションを使用して以下が可能です。
-<dl><dd><ul><li> 選択されたブックをアクティブグラフにプロット </li>
-<li> 各選択を個々のグラフにプロット </li>
-<li> 選択されたブックを新しい1つのグラフにプロット </li></ul></dd></dl>
-</td></tr>
-<tr>
-<th> グラフのショートネーム
-</th>
-<td> この編集ボックスは、複製されたグラフのショートネームを定義するのに使用します。
-<dl><dd><ul><li> デフォルトの&lt;auto&gt;の場合、グラフ<i>n</i> が複製グラフのショートネームになります。なお、 <i>n</i> は、グラフウィンドウの番号です。 </li>
-<li> フォーマットの文字列/Labtalkスクリプトを入力することが可能で、必要に応じて、複数表記と任意の固定文字を結びつけることができます。編集ボックスの右にあるボタン<a  class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"  /></a>にて、いくつかの<a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">よく使用される表記</a>やシンタックス例を作ることが出来ます。 </li></ul></dd></dl>
-</td></tr>
-<tr>
-<th> グラフのロングネーム
-</th>
-<td> この編集ボックスは複製されたグラフのロングネームを定義するのに使用します。
-<dl><dd><ul><li> デフォルトの&lt;auto&gt;では、元のワークブックとシート名に「コピー」を付けてたものをロングネームとして設定します。</li>
-<li> フォーマットの文字列/Labtalkスクリプトを入力することが可能で、必要に応じて、複数表記と任意の固定文字を結びつけることができます。編集ボックスの右にあるボタン<a  class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"  /></a>にて、いくつかの<a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">よく使用される表記</a>やシンタックス例を作ることが出来ます。 </li></ul></dd></dl>
-</td></tr></table>
+<ol>
+<li>グラフのタイトルバーを右クリックし、<b>バッチ作図...</b>を選択または、<b>標準</b>ツールバーの<b>バッチ作図</b>ボタン<a  class="image"><img alt="Button Duplicate with New Data.png" src="../images/Batch_Plotting/Button_Duplicate_with_New_Data.png" width="16"  /></a>をクリックします。 
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting 01.png" src="../images/Batch_Plotting/500px-Dialog_Batch_Plotting_01.png" width="500"   /></a></li></dd></dl>
+<li>開いたダイアログで、
+<dl><dd><a  class="image"><img alt="Batch Plotting Dialog.png" src="../images/Batch_Plotting/Batch_Plotting_Dialog.png" width="768"  /></a></dd></dl>
+<ul><li><b>バッチ作図対象</b>：編集内容を新しいプロットに再利用するグラフを指定します。詳細は、<a href="#Duplicate_from_Current_Graph_or_Multi-Graphs">「現在のグラフまたは複数のグラフからの複製」項</a>を参照ください。</li>
+<li><b>バッチ作図するデータ</b>：作図する新しいデータを指定します。次に、<b>プロット列の一致条件 / シートの一致条件 / 次の修飾語句で一致</b>を指定して、オリジナルとの一致条件を指定します。詳細は<a href="#How_to_Match_Datasets">「データセットの一致条件」</a>を参照ください。</li>
+<li>利用可能なデータセットが中央のリストボックスに表示されます。プロットする1つ以上を選択します。</li>
+<li><b>プロット選択先</b>：新しいプロットの送信先を指定する。詳細は<a href="#Output_Settings_for_New_Plots">「新規プロットの出力設定」セクション</a>を参照ください。</li></ul>
+<li><b>OK </b>をクリックして、新しいグラフを作成します。
+</ol>
 <p><br />
 </p>
-<h3><a name="Duplicate_with_new_sheets"></a><span class="mw-headline">新しいシートで複製</span></h3>
-<p>グラフ内の全プロットが1つのシートから作成されている場合、バッチ作図機能を使用して他のシートを使って同じグラフを複製できます。この時、<b>バッチ作図するデータ</b>で<b>シート</b>を選択します。  すると、バッチ作図ダイアログのタイトルバーに、<b>ワークブックを選択</b>と表示されます。
-</p>
-<dl><dd><a  class="image"><img alt="Dialog Batch Plotting Sheet.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Sheet.png" width="524"  /></a></dd></dl>
-<h5><a name="Settings_for_matching_conditions_2"></a><span class="mw-headline">一致条件の設定</span></h5>
+<h3><a name="Duplicate_from_Current_Graph_or_Multi-Graphs"></a><span class="mw-headline">現在のグラフまたは複数のグラフからの複製</span></h3>
+<ul><li><b>バッチ作図対象</b>ドロップダウンリストから選択します。</li></ul>
+<dl><dd><a  class="image"><img alt="Batch Plotting Batch Plot for Dropdown.png" src="../images/Batch_Plotting/Batch_Plotting_Batch_Plot_for_Dropdown.png" width="390"  /></a></dd></dl>
 <table class="dialogcontroltable">
+
 <tr>
-<th> 正確
+<th style="width:30%"> 現在のページ
 </th>
-<td> 選択すると（デフォルト）、アクティブなグラフのような列の構造であるシートのみを一覧表示します。シートに追加の列が含まれている場合、グラフのクローンを作成するときにそれらは無視されます。アクティブなグラフを作成するために必要な列よりもシートに含まれる列が少ない場合、そのシートはリストされません。<br /><br /><b>正確</b>を外すと、設定による<b>プロット列の一致条件</b>によっては、アクティブなグラフの作成に必要な列数より少ないシートが表示される場合があります（次の項目を参照）。これは、<b>アクティブグラフ</b>に新しいプロットを追加する1つの方法であることに注意してください（<b>選択データの作図方法</b>を参照）。
+<td>現在のグラフの編集内容を使用して、新しいグラフを作図します。
+</td></tr>
+<tr>
+<th>現フォルダ中の全て/<br />現フォルダ中の全て(再帰的に適用)/<br />現フォルダ中の全て(オープンのもの)/<br />現フォルダ中の全て(埋め込みを含む)
+</th>
+<td>すべてのグラフウィンドウをループ処理します。
+<ul><li> アクティブフォルダ：サブフォルダを含まない</li>
+<li> アクティブフォルダ(再帰)：サブフォルダを含む</li>
+<li> アクティブフォルダ(オープン)：開いているグラフウィンドウのみを含む</li>
+<li> アクティブフォルダ(埋め込みを含む)：埋め込みグラフを含む</li></ul>
+<p>一致する新しいデータセットで各グラフを複製します。
+</p>
+</td></tr>
+<tr>
+<th>プロジェクト中のすべて
+</th>
+<td>プロジェクト全体のすべてのグラフウィンドウをループし、一致する新しいデータセットで各グラフを複製します。
+</td></tr>
+<tr>
+<th>指定
+</th>
+<td>プロジェクト内の特定のグラフウィンドウを手動で選択し、一致する新しいデータセットで各ウィンドウを複製します。
+</td></tr></table>
+<h3><a name="How_to_Match_Datasets"></a><span class="mw-headline">データセットの一致条件</span></h3>
+<dl><dd><a  class="image"><img alt="Batch Plotting Batch Plot with Dropdown.png" src="../images/Batch_Plotting/Batch_Plotting_Batch_Plot_with_Dropdown.png" width="282"  /></a></dd></dl>
+<h4><a name="Batch_Plot_with_Book"></a><span class="mw-headline">ブックからバッチ作図</span></h4>
+<p>元のグラフ内のすべてのプロットが1つのブックからのものである場合は、<b>バッチ作図するデータ</b>ドロップダウンリストから<b>ブック</b>を選択して、他の新しいブックからグラフを複製します。 
+</p>
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting.png" width="555"  /></a></dd></dl>
+<p>一致条件の次の項目を設定します。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th> 正確なデータ構造
+</th>
+<td> このチェックボックスをオンにすると（デフォルト）、ソースとまったく同じシートおよび列構造を持つブックのみがプロットに使用されます。もしブックがソース以上に追加のシートや列を含んでいるならば、その追加は無視されます。もしブックがグラフをプロットするのに必要なシート数より少ない場合、そのブックは除外されます。
+<p>チェックを外すと、シート数が最小で、アクティブなグラフの作成に必要な列数より少ないブックが表示される場合があります。これは、<b>プロット列の一致基準</b>オプションによって異なります（次の項目を参照）。 
+</p>
+</td></tr>
+<tr>
+<th> プロット列/<br />シートの一致条件
+</th>
+<td> ワークブック内のシートを、ワークシートの<b>ロングネーム</b>、<b>ショートネーム</b>、または<b>インデックス</b>に基づいてどのように<b>シートの一致条件</b>を決定するか、また、<b>ロングネーム</b>、<b>ショートネーム</b>、または<b>列インデックス</b>に基づいてソースワークブックとどのように<b>プロット列の一致条件</b>を決定するかを決定します。
+</td></tr>
+<tr>
+<th>一致条件
+</th>
+<td>元のグラフがグループ化情報を使用する場合、たとえば、シンボルの色や線のスタイルにマップするとき、修飾子の一致方法を指定します。デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
+</td></tr></table>
+<h4><a name="Batch_Plot_with_Sheet"></a><span class="mw-headline">シートからバッチ作図</span></h4>
+<p>元のグラフ内のすべてのプロットが1つのワークシートからのものである場合は、<b>バッチ作図するデータ</b>ドロップダウンリストから<b>シート</b>を選択して、他の新しいワークシートからグラフを複製します。 
+</p>
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting Sheet.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Sheet.png" width="555"  /></a></dd></dl>
+<p>一致条件の次の項目を設定します。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th> 正確なデータ構造
+</th>
+<td> このチェックボックスをオンにすると（デフォルト）、ソースとまったく同じシ列構造を持つシートのみがプロットに使用されます。もしワークシートがソース以上に追加の列を含んでいるならば、その追加は無視されます。もしシートがグラフをプロットするのに必要な列数より少ない場合、そのシートは除外されます。
+<p>チェックを外すと、<b>プロット列の一致基準</b>オプションに応じて、最小要件よりも列数が少ないシートが表示される場合があります（例えば、元のグラフにプロットを追加する場合など）。 
+</p>
 </td></tr>
 <tr>
 <th> プロット列の一致条件
 </th>
-<td> フィルタの種類として<b><b>ロングネーム</b></b><b>、<b>ショートネーム</b>、<b>列インデックス</b></b>から選択でき、元となるワークシートと同じ<b><b>ロングネーム</b></b><b>、<b>ショートネーム</b>、<b>列インデックス</b></b>構造があるワークシートに適用できます。
+<td> ワークブック内のシートを、ワークシートの<b>ロングネーム</b>、<b>ショートネーム</b>、または<b>インデックス</b>に基づいてどのように<b>シートの一致条件</b>を決定するか、また、<b>ロングネーム</b>、<b>ショートネーム</b>、または<b>列インデックス</b>に基づいてソースワークブックとどのように<b>プロット列の一致条件</b>を決定するかを決定します。
 </td></tr>
 <tr>
 <th>一致条件
 </th>
-<td>選択したワークシートでバッチ処理を実行する際、このリストを使って、どの様に修飾語句(プロットの編集に使う値のワークブックシート列　-　例えば、プロットの色）を一致させるかを指定します。デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。もちろん、ご自身の設定もご利用いただけます。
+<td>元のグラフがグループ化情報を使用する場合、たとえば、シンボルの色や線のスタイルにマップするとき、修飾子の一致方法を指定します。デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
 </td></tr></table>
-<h5><a name="List_the_matching_sheets"></a><span class="mw-headline">一致したシートのリスト</span></h5>
-<p>最初の一致条件によってプロジェクト内の条件が一致したシートが中央のボックスに一覧表示されます。1つまたは複数のシートのデータセットを選択して、バッチ作図を実行できます。
+<h4><a name="Batch_Plot_with_Column"></a><span class="mw-headline">列からバッチ作図</span></h4>
+<p>元のグラフのすべてのプロットが1つのワークシートから作成され、プロットする新しい列 (2Dグラフの場合は<b>Y</b>列、3Dグラフまたは等高線図の場合は<b>Z</b>列) もすべて同じワークシートに含まれている場合は、<b>バッチ作図</b>ドロップダウンリストから<b>列</b>を選択して、グラフを複製します。 
 </p>
-<h5><a name="Settings_for_result_graph_2"></a><span class="mw-headline">結果グラフの設定</span></h5>
-<p>新しいブックで複製の<a href="../../UserGuide/UserGuide/Batch_Plotting.html#Settings_for_result_graph" title="ユーザガイド：バッチ作図"><b>結果グラフの設定</b></a>と同じオプションです。
-</p>
-<table class="note">
-<tr>
-<td><b>Note</b>： <a href="../../UserGuide/Category/Managing_Data_Plots_in_Layers.html#Changing_the_datasets_associated_with_a_plot" title="カテゴリ: レイヤ内のデータプロットの管理"><b>ワークシートを変更</b></a>は既存の2Dグラフを別のシート内のデータを使って再計算させる機能です<b><b>新しいシートでバッチ作図</b></b>と<b><b>ワークシートを変更</b></b>は全く同じ列の構造で、ショートネーム、列のXY属性、インデックス等を含む必要があります。<b><b>ワークシートを変更</b></b>は(右クリック後の)ショートカットメニューコマンドを使う事でレイヤ内で素早くデータプロットを変更できます。<b><b>ワークシートを変更</b></b>は複数レイヤの中でもひとつひとつのプロットを作図する事が可能です。この機能はグループ化していないプロットで有効です。複数プロット<i>が</i>グループ化されている場合、1度クリックして一時停止し、2回クリックするとこの機能が使用可能になります。（このモードではプロットグループ全体ではなく1つのプロットのみを置き換えることに注意してください）
-</td></tr></table>
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting Column.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Column.png" width="495"  /></a></dd></dl>
 <p><br />
+一致条件の次の項目を設定します。
 </p>
-<h3><a name="Duplicate_with_new_columns"></a><span class="mw-headline">新しい列で複製</span></h3>
-<p>プロットがワークシートのY/Z列から作成されている場合、同じシート内の他のY/Z列を使用してプロットを複製できます。この時、<b>バッチ作図するデータ</b>で<b>列</b>を選択します。  すると、バッチ作図ダイアログのタイトルバーに、<b>列を選択</b>と表示されます。 <br />
-</p>
-<dl><dd><a  class="image"><img alt="Dialog Batch Plotting Column.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_Column.png" width="524"  /></a></dd></dl>
-<h5><a name="Settings_for_matching_conditions_3"></a><span class="mw-headline">一致条件の設定</span></h5>
 <table class="dialogcontroltable">
+
 <tr>
-<th> 関連するXを使用/関連するXとYを使用
+<th style="width:20%"> X/エラーマッピング方法
 </th>
-<td> これはデフォルトでチェックされ、新しいプロットが<a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">選択されたY列に対応するX列</a>を使用してプロットされます。このボックスのチェックを外すと、新規のプロットは 、複製されるプロットのX または X&amp;Y 列を使用します。
+<td> 複製されたプロットのX列またはエラー列の取得方法を選択します。
+<ul><li> <b>元の列を使用</b> <br />元のプロットのX/エラー列をすべての複製プロットに使用します。</li>
+<li> <b>関連列を使用</b><br /> <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">選択したYに関連付けられたX列（2D）、または選択したZに関連付けられたX&amp;Y列（3D および等高線）</a>を使用して作図します。 </li>
+<li> <b>列オフセットで一致</b><br />元のプロットと同じ列オフセットの X/エラー列を使用します（つまり、X 列が Y 列からどれだけ離れているかに基づきます）。  </li></ul>
 </td></tr>
 <tr>
 <th>次の修飾語句で一致
 </th>
-<td>選択した列でバッチ作図するときに、このチェックボックスとドロップダウンリストを使って、一致条件を指定します。（列はプロットの色やプロット属性をコントロールします。）デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
-<p>バッチ処理の場合、選択したプロット列から始まっている同じ列のオフセットで、列を編集するオプションには、<i>&lt;オフセット&gt;</i> を選択することを推奨します。これは、選択している列ラベルが、常にプロット属性を現在のワークシートの最初の列にしているためです。
+<td>元のグラフがグループ化情報を使用している場合に、修飾子を一致させる方法を指定します（たとえば、シンボルの色、線のスタイル、または他のプロット属性にマップなど）。デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
+<p><b>列からバッチ作図</b>の場合、<i>&lt;オフセット&gt;</i>を選択するのがおすすめです。これにより、元のプロットでのXY列に対する修飾子列の位置関係、つまりXY列から修飾子列がどれだけ離れているかに基づいて、同じ列オフセットの列が修飾子として選択されます。一方、列ラベル（例：<b>ロングネーム</b>、<b>コメント</b>）を使用すると、プロット属性は常にワークシート内の最初に条件を満たす列に割り当てられます。
 </p>
 </td></tr></table>
-<h3><a name="Duplicate_with_column_offset"></a><span class="mw-headline">指定されたオフセット列で複製</span></h3>
-<p>プロットがワークシートのY/Z列から作成されている場合、同じシート内の他のY/Z列を使用してプロットを複製できます。この時、<b>バッチ作図するデータ</b>で<b>列オフセット</b>を選択します。  すると、バッチ作図ダイアログのタイトルバーに、<b>列オフセットを設定</b>と表示されます。 <br />
+<h4><a name="Batch_Plot_with_Column_Offset"></a><span class="mw-headline">列オフセットからバッチ作図</span></h4>
+<p>プロットしたい列が、元のグラフで使用した列に対して一定のオフセット（列間隔）を持っている場合は、<b>バッチ作図するデータ</b>ドロップダウンリストから<b>列オフセット</b>を選択します。これにより、新しい列を使ってグラフを複製できます。 
 </p>
-<dl><dd><a  class="image"><img alt="Dialog Batch Plotting ColumnOffset.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_ColumnOffset.png" width="524"  /></a></dd></dl>
-<h4><a name="Settings_for_matching_conditions_4"></a><span class="mw-headline">一致条件の設定</span></h4>
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting ColumnOffset.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_ColumnOffset.png" width="555"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Batch_Plotting/Tip_icon.png" width="57"  border="0" /></td><td><p><b>列</b> vs. <b>列オフセット</b>
+</p>
+<ul><li><b>列</b>は同じシートのすべての列を必要とします。列が同じラベルセットを共有している場合(ロングネームやコメントなど)、またはXYYY...の列構造の場合に効率的なツールです。 </li>
+<li>一方、<b>列オフセット</b>はより柔軟です。列は同じシートからのものである必要はありません。例えば、元のグラフが異なる2つのシートからそれぞれプロットを作成しており、両方のシートで後続の列を使ってグラフを複製したい場合、<b>バッチ作図するデータ</b>＝<b>列オフセット</b>、<b>列オフセット</b>＝2 を指定します。</li></ul>
+<dl><dd><a  class="image"><img alt="Dialog Batch Plotting ColumnOffset ex.png" src="../images/Batch_Plotting/Dialog_Batch_Plotting_ColumnOffset_ex.png" width="700"  /></a></dd></dl>
+</td></tr></table>
+<p>一致条件の次の項目を設定します。
+</p>
 <table class="dialogcontroltable">
+
+<tr>
+<th style="width:20%"> ターゲット列でオフセットを指定
+</th>
+<td> このチェックで、列オフセットをスマートに決定できます。リストボックスには、ソースシートの使用可能な列が表示されます。最初に複製するグラフに使用する列を選択すると、<b>オフセットの数</b>が自動的に更新されます。
+<p><b>列オフセット</b>を手動で指定するには、チェックを外します。リストボックスには、最初に複製されたグラフの列が表示されます。
+</p>
+</td></tr>
 <tr>
 <th> 列オフセット
 </th>
-<td> ソースグラフで使用される列から何列オフセットするか指定して、バッチ作図をします。例えば、ソースグラフのYデータがD・E列の散布図がある場合、<b>列オフセット</b> = <i>+2</i>は、新しいプロット列が列F・Gであることを意味し、<b>列オフセット</b> = <i>-2</i>は、新しいプロット列が列B・Cであることを意味します。
+<td> 新しい列が元の列からどれだけ移動するかを指定します。「+」は右方向、「-」は左方向を表します。たとえば、ソースワークシートにA～G列があり、プロット属性がXYY…で、元のグラフがY列DとEを使用している場合、<b>列オフセット</b>=+2は列F&amp;Gをプロットし、<b>列オフセット</b>=-2は列B&amp;Cをプロットします。
 </td></tr>
 <tr>
 <th> オフセットの数
 </th>
-<td> バッチ作図を何回行うのか指定します。デフォルトでは、バッチ作図を最大何回実行するかを計算するために<b>自動</b>がチェックされています。
-<p><b>自動</b>チェックボックスをオフにして、自動計算された値より小さい値を入力できます。例えば、ソースグラフのYデータがD・E列の散布図がある場合、<b>オフセットの数</b>を1に設定しなければ、以降の列でバッチ作図を繰り返すことを意味します。YデータがB・C列のソースグラフで<b>列オフセット</b> = <i>+ 2</i>および<b>オフセット数</b> = <i>3</i>に設定した場合、新しいプロットの列は列D・E、F・G、H・Iであることを意味します。
-</p><p>このオプションの自動計算は以下のルールに従います。
+<td> バッチ作図するセット数を指定します。<b>自動</b>（デフォルト）をチェックすると、以下のルールで自動計算されます。
+<ul><li> <b>関連するXを使用</b>のチェックを外し、<b>Xをオフセットで一させる</b>がチェックされている場合、各セットがそれぞれ独自のX列を持つようにします。</li>
+<li> <b>次の修飾語句で一致</b> =<b>&lt;オフセット&gt;</b>の場合、各セットがそれぞれ独自の修飾子列を持つようにします。 </li></ul>
+<p>より小さい値を手動入力するには、<b>自動</b>チェックボックスをオフにします。例えば、元のグラフがY列B&amp;Cを使っているとします。<b>列オフセット</b>=+2、<b>オフセット数</b>= 3とすると、D&amp;E、F&amp;G、H&amp;I列を使ってグラフを複製します。
 </p>
-<ul><li> <b>一致条件</b>が<i>&lt;オフセット&gt;</i>のとき、<b>オフセットの数</b>は識別子の列を考慮して、各コピーデータにその識別子の列が含まれるようにします。 </li>
-<li> <b>関連するX</b>のチェックが入っておらず、<b>Ｘをオフセットで一致させる</b>が選択されている場合、<b>オフセットの数</b>はX列を考慮して、各データコピーにそのX列を含むようにします。</li></ul>
 </td></tr>
 <tr>
-<th> 関連するXを使用/関連するXとYを使用
+<th> X/エラーマッピング方法
 </th>
-<td> これはデフォルトでチェックされ、新しいプロットが<a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">選択されたY列に対応するX列</a>を使用してプロットされます。このボックスのチェックを外すと、新規のプロットは 、複製されるプロットのX または X&amp;Y 列を使用します。
-</td></tr>
-<tr>
-<th> Ｘをオフセットで一致させる
-</th>
-<td> このチェックボックスはデフォルトでグレーアウトしており、選択されていません。<b>関連するＸを使用</b>にチェックがない場合にのみ利用できます。チェックしない場合、元のグラフのＸを使用します。チェックした場合、オフセットを使用してＸを決定します。<b>関連するＸを使用</b> オプションと同様に、<b>Ｘをオフセットで一致させる</b>は、エラー、ラベル、Y (Z と一緒にプロット) 列に適用されます。
+<td> 複製されたプロットのX列またはエラー列の取得方法を選択します。
+<ul><li> <b>元の列を使用</b> <br />元のプロットのX/エラー列をすべての複製プロットに使用します。</li>
+<li> <b>関連列を使用</b><br /> <a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">選択したYに関連付けられたX列（2D）、または選択したZに関連付けられたX&amp;Y列（3D および等高線）</a>を使用して作図します。 </li>
+<li> <b>列オフセットで一致</b><br />元のプロットと同じ列オフセットの X/エラー列を使用します（つまり、X 列が Y 列からどれだけ離れているかに基づきます）。  </li></ul>
 </td></tr>
 <tr>
 <th>一致条件
 </th>
-<td>選択した列でバッチ作図するときに、このチェックボックスとドロップダウンリストを使って、一致条件を指定します。（列はプロットの色やプロット属性をコントロールします。）デフォルトで、<b>作図の詳細</b>ダイアログの<b>その他のオプション</b>タブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
-<p>この種類のバッチ作図では、<b>一致条件</b>がオフセットに設定されている場合、Originは同じ列オフセットを修飾子列に適用することに注意してください。 一致条件が他のものに設定されている場合、Originは現在の一致ルールを使用して修飾子を検索します。ほとんどの場合、それらはソースグラフと同じになります。
+<td>元のグラフがグループ化情報を使用している場合に、修飾子を一致させる方法を指定します（たとえば、シンボルの色、線のスタイル、または他のプロット属性にマップなど）。デフォルトで、<b>作図の詳細</b>ダイアログのその他のオプションタブにある<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Miscellaneous_Tab.html#Match_Modifier_by_.28for_template_and_copy_format.29" title="ユーザガイド:(作図の詳細)その他のオプションタブ"><b>一致条件</b></a>の設定が選択されています。
+<p>なお、<b>一致条件</b>＝<b>＜オフセット＞</b>の場合、指定した<b>列オフセット</b>は修飾子にも適用されます。一方、列ラベル（例：<b>ロングネーム</b>や<b>コメント</b>）を指定した場合は、常にワークシート内で最初に条件を満たす列にプロット属性が割り当てられます。
 </p>
 </td></tr></table>
+<h3><a name="Output_Settings_for_New_Plots"></a><span class="mw-headline">新規プロットの出力設定</span></h3>
+<dl><dd><a  class="image"><img alt="Batch Plotting Plot Selected to.png" src="../images/Batch_Plotting/Batch_Plotting_Plot_Selected_to.png" width="555"  /></a></dd></dl>
+<table class="dialogcontroltable">
 
+<tr>
+<th style="width:23%">軸の再スケール
+</th>
+<td>チェック（デフォルト）すると、新しく追加/作成されたプロットを表示するときに軸を再スケールします。元のグラフの軸スケールを使用する場合は、チェックを外します。
+</td></tr>
+<tr>
+<th>カラーマップがある場合再スケール
+</th>
+<td>カラーマップを再スケールして、新しいプロットのフルカラー範囲を表示するには、チェック（デフォルト）します。
+</td></tr>
+<tr>
+<th> 選択データの作図方法
+</th>
+<td> 新しいグラフを出力する場所を指定します。
+<ul><li> <b>元のグラフ</b><br />元のグラフウィンドウに新しいプロットを追加。なお、元のグラフに複数のレイヤがある場合は、各レイヤのソース構造に従って新しいプロットが追加されます。 </li>
+<li> <b>個別にプロット</b><br />各プロットを個別のグラフウィンドウに出力 </li>
+<li> <b>新規グラフにまとめてプロット</b><br />すべての新しいプロットを単一の新しいグラフウィンドウに出力</li>
+<li> <b>元のグラフの新しいレイヤ</b> <br />元のグラフの追加レイヤとしてすべての新規プロットを出力。元のグラフが複数のプロットを持つ単一のレイヤを持っている場合、プロットは全体として扱われ、新しいレイヤは同じ構造を複製することに注意してください。<br />レイヤは<b>行数</b>X<b>列数</b>レイアウトで配置されます。</li></ul>
+</td></tr>
+<tr>
+<th> グラフのショートネーム
+</th>
+<td> 新しいグラフのショートネームを事前定義します。<b>プロット選択先</b>が<b>元のグラフ</b>に設定されていない場合に利用可能です。
+<ul><li> デフォルトの <b>&lt;auto&gt;</b>はショートネームを <b>Graph<i>n</i></b>として設定し、 <i>n</i>はシーケンスインデックスです。 </li>
+<li> フォーマット文字列とLabTalkスクリプトがサポートされています。必要に応じて、任意に表記法と固定文字列を組み合わせてください。編集ボックスの<a  class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"  /></a>ボタンをクリックすると、<a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">頻繁に使用される表記</a>と例のリストが表示されます。 </li></ul>
+</td></tr>
+<tr>
+<th> グラフのロングネーム
+</th>
+<td> 新しいグラフのロングネームを事前定義します。<b>プロット選択先</b>が<b>元のグラフ</b>に設定されていない場合に利用可能です。
+<ul>
+<li>デフォルトの <b>&lt;auto&gt;</b>では、ロングネームが 
+<ul><li><b>バッチ作図するデータ＝ブック/シート</b>の場合、<i>元のブック名およびシート名</i>+「で複製」 </li>
+<li><b>バッチ作図するデータ＝列/列オフセット</b>の場合、<i>元のグラフ名</i>＋「-コピー」</li></li></ul>
+<li>フォーマット文字列とLabTalkスクリプトがサポートされています。必要に応じて、任意に表記法と固定文字列を組み合わせてください。編集ボックスの<a  class="image"><img alt="Triangle button 01.png" src="../images/Batch_Plotting/Triangle_button_01.png" width="26"  /></a>ボタンをクリックすると、<a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">頻繁に使用される表記</a>と例のリストが表示されます。 
+</ul>
+</td></tr></table>
 
 
 

@@ -12,6 +12,7 @@
 <li class="toclevel-1 tocsection-6"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
 <p>入力データとして少なくとも1つの列を選択し、少なくとも1つのカテゴリ列を準備してグループ化ボックスチャートを作成します。
 </p>
@@ -24,9 +25,10 @@
 </p><p>ボックスチャートの作成とカスタマイズについての詳細は <a href="../../UserGuide/UserGuide/Creating_Box_Charts.html" title="ユーザガイド：ボックスチャートの作成"><b>ボックスチャートの作成</b> ページ</a>を参照してください。
 </p>
 <h3><a name="The_plot_gboxindexed_Dialog_Box"></a><span class="mw-headline">plot_gboxindexedダイアログボックス</span></h3>
-<p><a  class="image"><img alt="Plot gboxindexed dialog box.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Plot_gboxindexed_dialog_box.png" width="976"   /></a>
+<p><a  class="image"><img alt="Plot gboxindexed dialog box.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Plot_gboxindexed_dialog_box.png" width="750"   /></a>
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>データ列
 </th>
@@ -58,15 +60,41 @@
 <li> <b>グラフを分ける</b>：これらのデータを別々のグラフページにプロットします</li></ul>
 </td></tr>
 <tr>
+<th>データを分割
+</th>
+<td>複数データがグラフを分けるに設定されていない場合、このコントロールが表示されます。列ラベル行を選択して、複数のデータを異なるデータグループに分割することができます。
+</td></tr>
+<tr>
+<th>複数データグループ
+</th>
+<td><b>データを分割</b>で列ラベル行を選択した場合、データグループの配置方法を<b>個別のレイヤ</b>または<b>グラフを分ける</b>から選択できます。
+</td></tr>
+<tr>
+<th>データスケーリングレベル
+</th>
+<td>グループを持つ複数のデータがある場合、このオプションを使用して、データ変数情報をグループの内側またはグループの外側に置くことができます。
+<p><a  class="image"><img alt="Data Scaling Level 01.png" src="../images/Grouped_Box_Charts-Indexed_Data/750px-Data_Scaling_Level_01.png" width="750"   /></a>
+</p>
+</td></tr>
+<tr>
 <th>Yを共有
 </th>
 <td>このオプションは、<b>複数データ</b>が<b>同じグラフ内でレイヤを分ける</b>に設定されている場合にのみ表示されます。これは異なるレイヤ間でYスケールを共有するために使用されます。
 </td></tr>
 <tr>
-<th>パネルの分割
+<th>水平パネルに分割
 </th>
-<td>このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化ボックスチャートが表示されます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。
-<p>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。
+<td>このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化ボックスチャートが表示されます。
+<p><b>垂直パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。
+</p><p>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。
+</p>
+</td></tr>
+<tr>
+<th>垂直パネルに分割
+</th>
+<td>このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">縦方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化ボックスチャートが表示されます。
+<p><b>水平パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。
+</p><p>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。
 </p>
 </td></tr>
 <tr>
@@ -88,7 +116,7 @@
 <th>データポイントの色
 </th>
 <td><b>グラフテーマ</b>にデータポイントの表示 (<i>Box_Column_Scatter</i> など) を含む場合は、データポイントを列の値で色分けするための<b>データポイントの色</b>が追加されます。オプションです。
-<dl><dd><a  class="image"><img alt="UG gbox indexed data points color by.png" src="../images/Grouped_Box_Charts-Indexed_Data/UG_gbox_indexed_data_points_color_by.png" width="557"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="UG gbox indexed data points color by.png" src="../images/Grouped_Box_Charts-Indexed_Data/UG_gbox_indexed_data_points_color_by.png" width="504"  /></a></dd></dl>
 </td></tr>
 <tr>
 <th>色の増分
@@ -99,6 +127,11 @@
 <th>目盛ラベルの追加情報
 </th>
 <td>各表記が別々の表の行として表示されます。これらの追加情報は、グループ情報の表の行の後に表示されます。
+</td></tr>
+<tr>
+<th>出力先
+</th>
+<td>グラフを出力する場所として、別のグラフウィンドウまたはレポートシート内に埋め込む場所を指定します。
 </td></tr>
 <tr>
 <th>プロットデータ出力
@@ -127,23 +160,23 @@
 <li>列C～Gを選択して、メニューから<b><b>作図: カテゴリカル: グループボックスチャート‐インデックスデータ</b></b>と操作し、<b>plot_gboxindexed</b>ダイアログを開きます。</li>
 <li><b>プロットをグループ化</b>のセクションで、右上にある三角形のボタンをクリックして列Iを選択します。 </li>
 <li><b>複数データ</b>ドロップダウンリストから[<b>同じグラフ内でレイヤを分ける</b>を選択します。</li>
-<li><b>パネルの分割</b>オプションにチェックを付け、次のボックスで右上の三角形ボタンをクリックして列(H)を選択します。</li>
+<li><b>水平パネルに分割</b>オプションにチェックを付け、次のボックスで右上の三角形ボタンをクリックして列(H)を選択します。</li>
 <li><b>ページの分割</b>オプションにチェックを付け、次のボックスで右上の三角形ボタンをクリックして列(A)を選択します。</li>
 <li><b><b>グラフテーマ</b></b>として<b>&lt;オリジナル&gt;</b> を選択します。既にグラフテンプレートを保存していて、グラフに使用したい場合、<b>自動</b>のチェックを外し <b>...</b>ボタンをクリックして<b>グラフテンプレート</b>オプションでテンプレートを参照・選択することができます。</li>
 <li><b>色の増分</b>オプションの<b>サブグループ間</b>ラジオボタンを選択します。</li>
 <li><b>プロットデータ出力</b>と<b>グラフ出力</b>が<b>[&lt;入力&gt;]&lt;新規&gt;</b>と<b>[&lt;同じもの&gt;]&lt;新規&gt;</b>に設定されていることを確認します。
-<dl><dd><a  class="image"><img alt="Plot gboxindexed dialog settings.png" src="../images/Grouped_Box_Charts-Indexed_Data/Plot_gboxindexed_dialog_settings.png" width="556"  /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Plot gboxindexed dialog settings.png" src="../images/Grouped_Box_Charts-Indexed_Data/Plot_gboxindexed_dialog_settings.png" width="573"  /></a></dd></dl></li>
 <li> <b>OK </b>をクリックして、グラフを作成します。プロットデータ用と年ごとの結果グラフ用の2つの新しいシートが得られます。&quot;GBoxGraph1&quot;シートのグラフをダブルクリックするとグラフウィンドウで開けます。
 <dl><dd><a  class="image"><img alt="Grouped Box Indexed Data EX.png" src="../images/Grouped_Box_Charts-Indexed_Data/700px-Grouped_Box_Indexed_Data_EX.png" width="700"   /></a></dd></dl></li></ol>
 </td></tr></table>
 <h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
 <p>gBox.otp (EXEフォルダにインストールされています。)
 </p>
-<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<h2><a name="Notes"></a><span class="mw-headline">メモ</span></h2>
 <ul><li><b>プロットをグループ化</b>で1つ以上のグループ化範囲がある場合、X 軸目盛ラベルはデフォルトで表のように表示されます。表示に関してのフォーマットは<b>軸</b>ダイアログの<b>目盛ラベル</b>ページにある<a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Table_Tab" title="ユーザガイド:目盛ラベル2"><b>表</b>ツリーノード</a>から変更できます。<b>目盛ラベルの追加情報</b>オプションによって追加された情報行もテーブル行として表示されます。 </li>
 <li><b>プロットをグループ化</b>で選択したグループ化範囲に基づき、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="ユーザガイド：（作図の詳細）グループタブ">サブグループ化</a>はデフォルトで有効になります。サブグループ間/内部の間隔は、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="ユーザガイド:(作図の詳細)「間隔」タブ"><b>間隔</b>タブ</a>で個別に調整できます。</li>
 <li>複数の列が入力データ列として選択されている場合、同じグラフ内で重ねる、同じグラフ内でレイヤを分ける、別々のグラフに分割する、というように入力データの配置方法を決定することができます。プロットが同じグラフ上の異なるレイヤにある場合は、<b>Yを共有</b>にチェックを付けます。</li>
-<li> <b>パネルの分割</b>オプションを使用すると、選択したグループ化列に基づいてデータを分割し、1つのグラフページ内に複数のパネルとしてプロットできます。パネルバナーにグループ化情報が表示されます。 </li>
+<li> <b>水平パネルに分割</b>および<b>垂直パネルに分割</b>オプションを使用すると、選択したグループ化列に基づいてデータを分割し、1つのグラフページ内に複数のパネルとしてプロットできます。パネルバナーにはグループ化情報が表示されます。<b>複数のデータ</b>に対して<b>グラフ上でレイヤを分離</b>が選択すると、<b>水平パネル</b>のみが表示されます。</li>
 <li> <b>ページの分割</b>オプションを使用すると、グループごとに異なるグラフページに分けてデータをプロットできます。グループ化情報はページタイトルとして表示されます。すべてのページはGBoxGraph#という結果シートに出力されます。</li>
 <li>ボックスチャートの内容に適した凡例は作成/編集できます。これには、ボックスチャートがアクティブな状態で<b><b>グラフ操作:凡例：ボックスチャートの内容</b></b>とメニューから操作します。 </li>
 <li>また、<a href="../../UserGuide/UserGuide/Grouped_Box_Charts-Raw_Data.html" title="ユーザガイド：グループ化ボックスチャート(素データ)">素データからグループ化ボックスチャートを作成する</a>事も可能です。</li>
@@ -151,6 +184,7 @@
 <li><b>グラフテーマ</b>として<b>Box_Connect Mean Line</b>を選択すると、平均値接続線付きのグループ化ボックスチャートを作成できます。</li>
 <li><b>グラフテーマ</b>として<b>Box_Interval Plot</b>を選択すると、グループ化したインターバルグラフを作図できます。</li>
 <li><b>グラフテーマ</b>として<b>Box_Mean Bar with SE</b>を選択すると、SEエラーバーを含む統計棒グラフを作成できます。</li></ul>
+
 
 
     

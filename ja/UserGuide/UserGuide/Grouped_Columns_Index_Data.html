@@ -15,8 +15,10 @@
 </li>
 <li class="toclevel-1 tocsection-7"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">テンプレート</span></a></li>
 <li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">ノート</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">バージョン情報</span></a></li>
 </ul>
 </div>
+
 <h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
 <p>入力データとして最低1つY列が必要です。オプションで、各Y列に対応するYエラー列を持たせることもできます。他の列はグループ化情報を提供します。
 </p>
@@ -25,17 +27,24 @@
 </p>
 <ul><li>メニューから，<b>作図&gt; カテゴリカル：グループ縦棒グラフ</b>を選択します。</li>
 <li><b>2Dグラフギャラリー</b>ツールバーの<a  class="image"><img alt="Button Grouped Column-Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Button_Grouped_Column-Indexed_Data.png" width="23"  /></a>ボタンをクリックします。
-<dl><dd><a  class="image"><img alt="Grouped Column Index Data Button From Toolbar.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Index_Data_Button_From_Toolbar.png" width="310"  /></a></dd></dl></li></ul>
+<dl><dd><a  class="image"><img alt="Grouped Column Index Data Button From Toolbar.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Index_Data_Button_From_Toolbar.png" width="308"  /></a></dd></dl></li></ul>
 <p>開いたダイアログで、入力データ範囲を選択します。最低でも1つのグループ列を追加し、計算データの出力先を指定します。すると、グループ化縦棒グラフが生成されます。 
 </p><p>ダイアログの内容に関する詳細は、次のセクションを参照してください。
 </p>
 <h3><a name="The_plot_gindexed_Dialog_Box"></a><span class="mw-headline">plot_gindexedダイアログボックス</span></h3>
-<p><a  class="image"><img alt="Plot gindexed dialog box.png" src="../images/Grouped_Columns_Index_Data/850px-Plot_gindexed_dialog_box.png" width="850"   /></a>
+<p><span class='headerInParagraph'>要約データからグラフをプロットする場合</span><br />
+<a  class="image"><img alt="Plot gindexed dialog box 01.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_01.png" width="750"   /></a>
+</p><p>この例では、すべての売上データが、グループリストで選択したグループ（X軸）に対する棒としてプロットされます。
+</p><p><br />
+<span class='headerInParagraph'>素データからグラフをプロットする場合</span><br />
+<a  class="image"><img alt="Plot gindexed dialog box 02.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_02.png" width="750"   /></a>
+</p><p>この例では、身長データと体重データの平均値が、グループリストで選択したグループ（X軸）に対する棒としてプロットされます。
 </p>
 <h4><a name="For_Summarized_Data"></a><span class="mw-headline">要約データの場合</span></h4>
 <p>デフォルトでは、<b>データ形式</b>は<b>要約データ</b>に設定されています。これは、入力データがインデックスデータであることを意味します。
 </p>
 <table class="dialogcontroltable">
+
 <tr>
 <th>データ列
 </th>
@@ -60,8 +69,15 @@
 <ul><li> <b>複数データ</b>：複数入力データの配置方法を選択します。 
 <ul><li> <b>同じグラフ上で重ね合わせ</b>: 選択した入力データを、同じグラフレイヤ上に重なり合ったプロットとしてプロットします。</li>
 <li> <b>同じグラフ内でレイヤを分ける</b>：選択された入力データを同じグラフページ上の別々のレイヤに個別にプロットします。</li>
-<li> <b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</li></ul></li></ul>
-<ul><li> <b>パネルの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が自動で有効になり、目盛やラベルは、左右交互に表示されるのが初期設定です。複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</li>
+<li> <b>グラフを分ける</b>: 選択した入力データを別のグラフウィンドウにプロットします。</li></ul></li>
+<li> <b>データスケールラベル</b>：グループを持つ複数のデータがある場合、このオプションを使用して、データ変数情報をグループの内側またはグループの外側に置くことができます。
+<dl><dd><a  class="image"><img alt="Data Scaling Level 02.png" src="../images/Grouped_Columns_Index_Data/680px-Data_Scaling_Level_02.png" width="680"   /></a></dd></dl></li>
+<li> <b>水平パネルに分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。 
+<dl><dd><b>垂直パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
+<li> <b>垂直パネルに分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">縦方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化棒グラフが表示されます。 
+<dl><dd><b>水平パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
 <li> <b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにグループ化棒グラフを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。 </li></ul>
 </td></tr>
 <tr>
@@ -80,6 +96,11 @@
 <td> 必要に応じてユーザテンプレートを指定します。デフォルトでは、自動チェックボックスがオンになっており、組み込みテンプレートGBOXが使用されています。
 </td></tr>
 <tr>
+<th>出力先
+</th>
+<td>グラフを出力する場所として、別のグラフウィンドウまたはレポートシート内に埋め込む場所を指定します。
+</td></tr>
+<tr>
 <th>出力データ
 </th>
 <td><a href="../../UserGuide/UserGuide/Output_Results.html" title="ユーザガイド：出力結果">計算したデータの出力</a>先を指定します。
@@ -92,6 +113,7 @@
 <p>さらに、このダイアログでは作成されるグラフをプレビュー出来ます。
 </p>
 <table class="note">
+
 <tr>
 <td><b>Note:</b> グループ範囲はデフォルトでアルファベット順にソートされますが、変更したい場合、列をカテゴリーとして設定し、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>カテゴリー</b>タブ</a>で順序を編集します。
 </td></tr></table>
@@ -121,7 +143,7 @@
 <h2><a name="Template"></a><span class="mw-headline">テンプレート</span></h2>
 <p>gColumn.otpu (OriginのEXEフォルダにインストールされています。)
 </p>
-<h2><a name="Notes"></a><span class="mw-headline">ノート</span></h2>
+<h2><a name="Notes"></a><span class="mw-headline">メモ</span></h2>
 <ul><li>1つ以上のグループ範囲がある場合（ <b>グループ列</b>ボックス で）、X 軸目盛ラベルはデフォルトで表として表示されます。軸目盛表の表示とフォーマットは、一般に、 <b>軸</b>ダイアログの <b>目盛ラベル</b>タブにある<a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Table_Tab" title="ユーザガイド:目盛ラベル2"><b>表</b>タブ</a>から変更できます。</li>
 <li>このプロットでは、 <b>インデックス</b> が色塗りの初期設定になっていますが、他にも選択肢があります。次の図は、同じグラフでの3つのバリエーションを示しています。それぞれの違いは、棒グラフに適用されている色の設定によります。</li></ul>
 <dl><dd><ul><li> 左のグラフでは、棒の色は、<b>インデックス</b> により、サブグループ(Gender) によって分けられています。これはデフォルトであり、不均衡なプロットを含むほとんどの状況で機能するはずです。</li>
@@ -135,6 +157,15 @@
 <ul><li>棒やグループ化された棒の間隔は、作図の詳細ダイアログの<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="ユーザガイド:(作図の詳細)「間隔」タブ"><b>間隔</b>タブ</a>でコントロールできます。</li>
 <li>グループ化した横棒グラフを作成するには、<b>plot_gindexed</b>ダイアログで <b>プロットタイプ</b>を<b>横棒</b>に設定します。あるいは、メニューからグループ化縦棒グラフを作図し、<b>グラフ操作: X軸とY軸の交換</b>を選択します。</li>
 <li>グループ化した横棒グラフを作成するには、<b>plot_gindexed</b>ダイアログで<b>プロットタイプ</b>を<b>散布図</b>に設定します。ソースデータは、グループ列に従ってグループ化されます。</li></ul>
+<h2><a name="Version_Information"></a><span class="mw-headline">バージョン情報</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>必要なバージョン</b>: Origin 9.1以降
+</td>
+<td><b>最終更新</b>: Origin 2026
+</td></tr></table>
+
 
 
     

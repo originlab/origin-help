@@ -6,7 +6,9 @@
 <li class="toclevel-1 tocsection-3"><a href="#Calculate"><span class="tocnumber">3</span> <span class="toctext">計算</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Test_Specification"><span class="tocnumber">4</span> <span class="toctext">検定設定</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Options"><span class="tocnumber">5</span> <span class="toctext">オプション</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Output_Results"><span class="tocnumber">6</span> <span class="toctext">出力結果</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Power_Curve"><span class="tocnumber">6</span> <span class="toctext">検出力曲線</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output_Results"><span class="tocnumber">7</span> <span class="toctext">出力結果</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output_Plot_Data"><span class="tocnumber">8</span> <span class="toctext">プロットデータ出力</span></a></li>
 </ul>
 </div>
 
@@ -28,7 +30,7 @@
 <tr>
 <th>サンプルサイズ
 </th>
-<td>提案された検出力に基づいてサンプルサイズを計算します。
+<td>指定した検出力に対するサンプルサイズを、実際の検出力を含めて計算します。
 </td></tr></table>
 <h2><a name="Test_Specification"></a><span class="mw-headline">検定設定</span></h2>
 <table class="dialogcontroltable">
@@ -49,7 +51,7 @@
 <td>対応のあるサンプルの差の標準偏差。
 </td></tr>
 <tr>
-<th>アルファ値
+<th>Alpha
 </th>
 <td>帰無仮説が真であるときに帰無仮説を棄却する確率。
 </td></tr>
@@ -106,8 +108,14 @@
 </th>
 <td>検出力値の列を指定します。<b>仮説の検出力の詳細</b>が選択されている場合に使用可能です。
 </td></tr></table>
-<h2><a name="Output_Results"></a><span class="mw-headline">結果の出力</span></h2>
+<h2><a name="Power_Curve"></a><span class="mw-headline">検出力曲線</span></h2>
+<p>t 検定の検出力曲線を出力するかどうかを指定します。このグラフでは、<b>X</b> は差、<b>Y</b>は 検出力です。 
+</p>
+<h2><a name="Output_Results"></a><span class="mw-headline">結果を出力</span></h2>
 <p>出力レポートワークシートの作成場所を決定します。詳細情報は、 <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="ユーザガイド：分析レポートシートと列">分析レポートシート</a>を参照してください。
+</p>
+<h2><a name="Output_Plot_Data"></a><span class="mw-headline">プロットデータ出力</span></h2>
+<p>検出力曲線のデータを含むワークシートの出力先を指定します。
 </p>
 
 

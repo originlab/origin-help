@@ -1,4 +1,4 @@
-﻿<h1 class="firstheading">散布図行列</h1><p class='urlname' style='display: none'>Scatter-Matrix-Plot</p>
+﻿<h1 class="firstHeading">散布図行列</h1><p class='urlname' style='display: none'>Scatter-Matrix-Plot</p>
 <p><br />
 散布図行列は、行列形式で表したいくつかの変数の散布図を対として構成したものです。どの変数同士で相関があるかや、相関が正か負かを判断するために使用できます。 
 </p>
@@ -22,6 +22,7 @@
 </li>
 </ul>
 </div>
+
 <h2><a name="Creating_Scatter_Matrices"></a><span class="mw-headline">散布図行列を作成する</span></h2>
 <p>散布図行列を作成するには
 </p>
@@ -33,9 +34,10 @@
 <h2><a name="Setting_in_the_dialog"></a><span class="mw-headline">ダイアログ内の設定</span></h2>
 <p>このダイアログを使用して、散布図行列の設定を行えます。
 </p>
-<dl><dd><a  class="image"><img alt="Scatter Matrices dialog.png" src="../images/Scatter_Matrices/Scatter_Matrices_dialog.png" width="489"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Scatter Matrices dialog.png" src="../images/Scatter_Matrices/Scatter_Matrices_dialog.png" width="537"  /></a></dd></dl>
 <h3><a name="Input"></a><span class="mw-headline">入力</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th>入力
 </th>
@@ -50,6 +52,7 @@
 </td></tr></table>
 <h3><a name="Matrix_Profile"></a><span class="mw-headline">行列プロファイル</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th>行列表示
 </th>
@@ -57,6 +60,7 @@
 <p>行列の形式には4つのオプションがあります。
 </p>
 <table class="noborder">
+
 <tr>
 <td style="width:90px"><b>正方形</b>
 <p><a  class="image"><img alt="Matrix Display Square.png" src="../images/Scatter_Matrices/Matrix_Display_Square.png" width="60"  /></a>
@@ -66,7 +70,7 @@
 <p><a  class="image"><img alt="Matrix Display Upper Triangular.png" src="../images/Scatter_Matrices/Matrix_Display_Upper_Triangular.png" width="60"  /></a>
 </p>
 </td>
-<td style="width:120px"><b>下三角</b>
+<td style="width:120px"><b>上三角</b>
 <p><a  class="image"><img alt="Matrix Display Lower Triangular.png" src="../images/Scatter_Matrices/Matrix_Display_Lower_Triangular.png" width="60"  /></a>
 </p>
 </td>
@@ -79,7 +83,7 @@
 <th>追加の統計情報
 </th>
 <td> <b>行列表示</b>で<b>散布図+統計情報</b>を選択すると利用可能になります。追加の統計情報の表示位置を指定します。
-<ul><li> <b>下三角</b></li></ul>
+<ul><li> <b>上三角</b></li></ul>
 <dl><dd><dl><dd> 追加の統計情報を下三角に表示し、散布図は上三角に表示されます。 </dd></dl></dd></dl>
 <ul><li> <b>上三角</b></li></ul>
 <dl><dd><dl><dd> 追加の統計情報を上三角に表示し、散布図は下三角に表示されます。</dd></dl></dd></dl>
@@ -115,6 +119,7 @@
 <p>目盛とラベルの構成方法を以下のオプションから選択します。
 </p>
 <table class="noborder">
+
 <tr>
 <td style="width:120px"><b>なし</b>
 <p><a  class="image"><img alt="Ticks None.png" src="../images/Scatter_Matrices/Ticks_None.png" width="50"  /></a>
@@ -157,6 +162,7 @@
 </td></tr></table>
 <h3><a name="Options"></a><span class="mw-headline">オプション</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th>信頼楕円
 </th>
@@ -180,6 +186,7 @@
 </td></tr></table>
 <h3><a name="Additional_Info"></a><span class="mw-headline">追加情報</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th style="width:150px">ピアソンのr
 </th>
@@ -198,7 +205,7 @@
 <tr>
 <th>補正R二乗のラベル
 </th>
-<td>補正R二乗のラベルを編集できます。<b>補正R二乗</b>にチェックが付いている場合に有効です。
+<td>補正R二乗のラベルを編集できます。<b>補正  R二乗</b>にチェックが付いている場合に有効です。
 </td></tr>
 <tr>
 <th>フィット式
@@ -226,7 +233,8 @@
 <th> 値によるラベルサイズ
 </th>
 <td> このオプションは、次の場合に使用できます。
-<ul><li> 入力データセットの<b>グループ範囲</b>が設定されていない</li>
+<ul><li> <b>行列表示</b> = <b>散布図+統計情報</b></li>
+<li> 入力データセットの<b>グループ範囲</b>が設定されていない</li>
 <li><b>ピアソンのr</b>および<b>補正R二乗</b>オプションのいずれかが選択されている（両方ではない）</li></ul>
 <p>この場合、値に応じてラベルのサイズが変わります。
 </p>
@@ -237,6 +245,7 @@
 </p>
 <h3><a name="Graph_Templates"></a><span class="mw-headline">グラフテンプレート</span></h3>
 <table class="dialogcontroltable">
+
 <tr>
 <th>散布図
 </th>
@@ -264,6 +273,7 @@
 <p>これにより、<b>ピアソンのr</b>、<b>補正R-二乗</b> と <b>フィット式</b> がどこに保存されるかが決まります。デフォルトの場所は、ソースワークブック（[&lt;input&gt;]）内の新しいワークシート（&lt;new&gt;）です。
 </p>
 <table class="note">
+
 <tr>
 <td>
 <p><b><b>Note</b>：</b>N個のデータセットまたは範囲を選択すると、 N^2-N個のグラフが作成されます。多数のデータセットまたは範囲を選択すると、計算時間が劇的に長くなり、グラフが小さくなります。
@@ -272,6 +282,7 @@
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Scatter_Matrices/Tip_icon.png" width="57"  border="0" /></td><td><p>Origin 2023bから、グループ範囲が指定されている場合、個々のグループでの結果 (信頼楕円、線形フィット、統計情報を含む) が出力されます。対角セルにおけるプロットの色も散布図のグループの色に従います。
 </p></td></tr></table>
+
 
 
     

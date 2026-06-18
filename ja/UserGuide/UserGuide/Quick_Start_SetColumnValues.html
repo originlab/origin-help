@@ -32,14 +32,15 @@
 </li>
 </ul>
 </div>
+
 <h2><a name="Set_Values_Dialog_Box_Key_Features"></a><span class="mw-headline">値の設定ダイアログボックスの主な機能</span></h2>
 <p><b><b>値の設定</b></b>ダイアログボックスは、ユーザが定義した式を1行をとり、この式によって生成された値を、<a href="../../UserGuide/UserGuide/Entering_Expressions_in_the_Set_Column_Dialog.html" title="ユーザガイド:「値の設定」ダイアログボックスに数式を入力する">1つあるいは複数のワークシート列</a>(あるいは列の一部分)に出力します。<b>列の計算式</b>ボックスに入力される式は、演算子、列や行の参照、関数、ユーザ定義変数、定数等を組み込むことができます（詳細は<a href="#What_Can_I_Enter_in_the_Column_Formula_or_Before_Formula_Scripts_Boxes.3F">下記</a>）。値の設定ダイアログには、構文の色付け機能があります。
 </p>
-<dl><dd><a  class="image"><img alt="SCV dialog features8.png" src="../images/Quick_Start_SetColumnValues/SCV_dialog_features8.png" width="821"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="SCV dialog features8.png" src="../images/Quick_Start_SetColumnValues/SCV_dialog_features8.png" width="799"  /></a></dd></dl>
 <p><br />
 <i><b>オプションのスクリプトタブ：</b></i>
 </p>
-<dl><dd><dl><dd><a  class="image"><img alt="SCV BFS Python Tabs.png" src="../images/Quick_Start_SetColumnValues/SCV_BFS_Python_Tabs.png" width="528"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="SCV BFS Python Tabs.png" src="../images/Quick_Start_SetColumnValues/SCV_BFS_Python_Tabs.png" width="532"  /></a></dd></dl></dd></dl>
 <ul><li> <b>実行前の処理スクリプト</b>タブは、複数行のLabTalkスクリプトを取り、このスクリプトは、<b>列の数式</b>ボックスの式が実行される前に実行されます。これにより、<b><b>列の計算式</b></b>で使用する入力データの前処理や、関数、変数、定数の定義などが可能です。実行前の処理スクリプトについての詳しい情報は、<a href="../../UserGuide/UserGuide/Entering_Expressions_in_the_Set_Column_Dialog.html" title="ユーザガイド:「値の設定」ダイアログボックスに数式を入力する">列値の設定ダイアログに数式を入力する</a>をご覧ください。<b>値の設定</b>ダイアログのコントロールについては、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html" title="ユーザガイド:メニューとダイアログのオプション">メニューオプションとダイアログコントロール</a>を参照してください。</li>
 <li> <b>Python関数</b>タブで、列の数式を呼び出すためにPython関数を定義することが出来ます。関数を外部ファイルに保存することもできますが、<b>Python関数</b>タブを使用すると、コードをOriginテンプレートファイルに保存して繰り返し使用できます。さらに、Python関数は<b>列の数式</b>ボックスから直接呼び出すことができます。または、隣の<b>実行前の処理スクリプト</b>タブのLabTalkスクリプトから呼び出すことができます。<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html#The_Python_Function_Tab" title="ユーザーガイド：クイックスタート 列の設定">簡単な例/チュートリアル</a>での<b>Python関数</b>タブ使用の実例は、以下を参照してください。PythonとOriginのより詳細な情報については、<a class="external text" href="../../Python/Category/Python_(Python).html">OriginのPythonのドキュメント</a>を参照してください。 </li></ul>
 <dl><dd><dl><dd><a  class="image"><img alt="SCV BFS Call Python Tab.png" src="../images/Quick_Start_SetColumnValues/SCV_BFS_Call_Python_Tab.png" width="584"  /></a></dd></dl></dd></dl>
@@ -80,7 +81,7 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 <p><a href="#Column_Formula_Examples">以下</a>の<b>列の計算式サンプル</b>を参照してください。
 </p>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png" width="57"  border="0" /></td><td><p>デフォルトでは、<code>2!a2</code>などの参照を<b>F(x)=</b>行またはセル式に入力したときに、Originはシートのシートネームを自動的に代用しません。この動作は<a href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html#Changing_the_Value_of_a_System_Variable" title="ユーザーガイド:システム変数を使用したOriginのカスタマイズ">LabTalkシステム変数</a><code><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">@SCVU=0</a></code>.の値を変更して、編集できます。
+	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png" width="57"  border="0" /></td><td><p>デフォルトでは、<code>2!a2</code>などの参照を<b>F(x)=</b>行またはセル式に入力したときに、Originはシートのシートネームを自動的に代用しません。この動作は<a href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html#Changing_the_Value_of_a_System_Variable" title="ユーザガイド：システム変数を使ってOriginを設定">LabTalkシステム変数</a><code><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">@SCVU=0</a></code>.の値を変更して、編集できます。
 </p></td></tr></table>
 <h2><a name="What_Can_I_Enter_in_the_Column_Formula_or_Before_Formula_Scripts_Boxes.3F"></a><span class="mw-headline">列の計算式や実行前の処理スクリプトに何を入力すれは良いですか？</span></h2>
 <p>式には以下の項目を含めることができます。<a class="external text" href="../../LabTalk/LabTalk/Range_Notation.html#Types_of_Range_Data">範囲変数</a>は、<b>列の計算式</b>で使用する前に、予め定義しておく（例：<b>実行前の処理スクリプト</b>など）必要があります。
@@ -213,7 +214,7 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 </td>
 <td> N/A
 </td>
-<td> 名前付き範囲「StartTime」値を列Aの値に加算します。
+<td> <a href="../../UserGuide/UserGuide/Named_Range.html" title="UserGuide:名前付き範囲">名前付き範囲</a>「StartTime」値を列Aの値に加算します。
 </td></tr>
 <tr>
 <td> <b>total(A[i-1:i+3])</b>
@@ -235,15 +236,17 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 <td> 変更なし
 </td>
 <td> <i>j </i>番目の列（すべての選択された列）の各値に2を掛けて1を引いて、変換するために使用できます。
-
 </td></tr></table></dd></dl></dd></dl>
 <table class="note">
 <tr>
 <td><b>Note:</b> <b>列値の設定</b>か<a class="external text" href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D"><b>F(x)=</b>列ラベル行</a>で<b>i</b>と<b>j</b>を使う場合、<i>小文字を使います</i>。大文字の<b>I</b>と<b>J</b>は、ワークシート列のショートネームに影響を与えてしまいます。
 </td></tr></table>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png" width="57"  border="0" /></td><td><p>「End」または「0」を使用して、列の最後のセルを定義します。 例 <code>total(A[10:end])-B[i]</code> or <code>total(A[10:0])-B[i]</code>.
-</p></td></tr></table>
+	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png" width="57"  border="0" /></td><td><p>列または行の末尾を参照：
+</p>
+<ul><li> 「End」または「0」を使用して、列の最後のセルを定義します。 例 <code>total(A[10:end])-B[i]</code> or <code>total(A[10:0])-B[i]</code>.</li>
+<li> 「0」を使用して、ワークシートで最後の列を定義します。 例 <code>[Book1]Sheet1!wcol(10):wcol(0)</code></li></ul>
+</td></tr></table>
 <h3><a name="Autocomplete"></a><span class="mw-headline">オートコンプリート</span></h3>
 <p><b>Origin 2022</b>以降、列値の設定の列の数式ボックスおよび<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ"><b>F(x)=</b>ラベル行</a>は、<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html">LabTalkでサポートされている関数</a>と<a href="../../UserGuide/UserGuide/Named_Range.html" title="UserGuide:名前付き範囲">名前付き範囲</a>のオートコンプリートをサポートします。 
 </p><p>この機能を使用したくない場合は、列 および/または <a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="ユーザガイド：数式を使用してセル値を設定する">セルの数式</a>に対して無効にすることができます/ F(x)=：
@@ -284,9 +287,9 @@ Sheet1<span style="color: #000080;">!</span>A; <span style="color: #008000;">// 
 <li>ダイアログを閉じることなく、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Column_First.2FNext.2FPrev.2FLast" title="ユーザガイド:メニューとダイアログのオプション">ナビゲーションボタン</a>のうちの1つを使用して2つ目の列に式を入力します。<b><b>次へ</b></b>ボタン<a  class="image"><img alt="Next Button.png" src="../images/Quick_Start_SetColumnValues/Next_Button.png" width="20"  /></a>をクリックします。列Bがワークシートで選択されるのが分かります。 
 <li><b>列の計算式</b>編集ボックスに<b>1 + (5/(1.5*sqrt(PI/2)))*exp(-2*((A-2)/1.5)^2)</b>と入力し、<b>再計算</b>ドロップダウンリストで<b>自動</b>を選択します。
 <li><b><b>OK</b></b>ボタンをクリックします。<b>値の設定</b>ダイアログが閉じます。次のワークシートのような結果になります。<br />(列Bの折れ線グラフを作成すると、ワークブックの隣にあるようなグラフになります。)
-<dl><dd><a  class="image"><img alt="Quick Start SetColumnValues 1.png" src="../images/Quick_Start_SetColumnValues/Quick_Start_SetColumnValues_1.png" width="750"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Quick Start SetColumnValues 1.png" src="../images/Quick_Start_SetColumnValues/Quick_Start_SetColumnValues_1.png" width="763"  /></a></dd></dl>
 <li>列Bの<b>F(X)</b>列ラベル行をダブルクリックし、数式を<b>1+5/(1.5*sqrt(PI/2))*exp(-2*(A-2)/1.5*2)</b>に変更します。すると、列Bの値は自動的に変換している事がわかります。<br />(<b><b>再計算</b></b>ボタン<a  class="image"><img alt="Button Rescale.png" src="../images/Quick_Start_SetColumnValues/Button_Rescale.png" width="23"  /></a> をクリックすると、グラフも合わせて更新されます。)
-<dl><dd><a  class="image"><img alt="Quick Start SetColumnValues 2.png" src="../images/Quick_Start_SetColumnValues/Quick_Start_SetColumnValues_2.png" width="750"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Quick Start SetColumnValues 2.png" src="../images/Quick_Start_SetColumnValues/Quick_Start_SetColumnValues_2.png" width="763"  /></a></dd></dl>
 </ol>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Quick_Start_SetColumnValues/Tip_icon.png" width="57"  border="0" /></td><td><p>Originは<b><b><b>値の設定</b></b></b>ダイアログで列のサブ範囲を使用して関数の引数に設定できます。
@@ -354,6 +357,7 @@ range r2<span style="color: #000080;">=</span><span style="color: #000000;">[</s
 <pre class="lt" style="font-family:monospace;">py.<span style="color: #000080;">smooth</span><span style="color: #000000;">(</span>B,<span style="color: #0000dd;">101</span>,<span style="color: #0000dd;">3</span><span style="color: #000000;">)</span></pre>
 <li> <b>OK</b>をクリックすると、列に平滑化された値が入力されます。
 </ol>
+
 
 
     

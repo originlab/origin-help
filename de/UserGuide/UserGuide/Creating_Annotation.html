@@ -1,249 +1,126 @@
-﻿<h1 class="firstHeading">Zeichnungen mit Hilfe des Anmerkungstools beschriften</h1>
-
-  <p class='urlname' style='display: none'>Creating_Annotation</p>
-
-  <p><br>
-  Informationen zum globalen Beschriften von 2D-Diagrammen (auch Beschriften von einzelnen Datenpunkte) finden Sie unter <a href="../../UserGuide/UserGuide/Labelling_Data_Points.html" title="UserGuide:Labelling Data Points">Diagramme mit Hilfe der Registerkarte Beschriftung oder den Minisymbolleisten beschriften</a>.</p>
-
-  <p>Zum genauen Auswählen und Beschriften von spezifischen Punkten in 2D- und Konturdiagrammen können Sie das benutzerdefinierbare Tool <b>Anmerkung</b> verwenden.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="OH creating annotation1.png" src="../images/Creating_Annotation/300px-OH_creating_annotation1.png" width="300"></a></dd>
-  </dl>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Eine andere Methode, um Datenpunkte selektiv zu beschriften, ist die Verwendung der Bedienelemente im Dialog Details Zeichnung unter <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Show_at_Specified_Points_Only" title="UserGuide:The (Plot Details) Label2 Tab"><b>Nur bei festgelegten Punkten zeigen</b></a>.</p>
-      </td>
-    </tr>
-  </table>
-
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
-
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Creating_a_standard_annotation"><span class="tocnumber">1</span> <span class="toctext">Eine Standardanmerkung erstellen</span></a></li>
-
-      <li class="toclevel-1 tocsection-2"><a href="#Editing_an_annotation"><span class="tocnumber">2</span> <span class="toctext">Eine Anmerkung bearbeiten</span></a></li>
-
-      <li class="toclevel-1 tocsection-3">
-        <a href="#Custom_annotations"><span class="tocnumber">3</span> <span class="toctext">Benutzerdefinierte Anmerkungen</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-4"><a href="#Example_1:_Show_Formula-Adjusted_value_as_Annotation"><span class="tocnumber">3.1</span> <span class="toctext">Beispiel 1: Formel-angepassten Wert als Anmerkung zeigen</span></a></li>
-
-          <li class="toclevel-2 tocsection-5"><a href="#Example_2:_Show_Image_as_Annotation"><span class="tocnumber">3.2</span> <span class="toctext">Beispiel 2: Bild als Anmerkung zeigen</span></a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <h2><a name="Creating_a_standard_annotation"></a><span class="mw-headline">Eine Standardanmerkung erstellen</span></h2>
-
-  <ol>
-    <li>Klicken Sie auf die Schaltfläche <b>Anmerkung</b> <a class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"></a> auf der Symbolleiste Hilfsmittel.</li>
-
-    <li>Fahren Sie mit der Maus über das Diagrammfenster und <i>verwenden Sie die <b>TAB</b>-Taste</i>, um zwischen den Anmerkungsoptionen zu wechseln (Optionen sind sichtbar im <b>Anmerkung</b>scursor oder auf der Statusleiste links unten im Arbeitsbereich).</li>
-  </ol>
-
-  <dl>
-    <dd><a class="image"><img alt="Status Bar Annotation Form.png" src="../images/Creating_Annotation/Status_Bar_Annotation_Form.png" width="719"></a></dd>
-  </dl>
-
-  <p><br>
-  <i><b>2D-XY-Datenzeichnungen:</b></i></p>
-
-  <dl>
-    <dd>
-      <table class="simple" style="width: 50%">
-        <tr>
-          <th style="width: 40%">Anmerkungsform</th>
-
-          <th style="width: 10%">Cursor</th>
-        </tr>
-
-        <tr>
-          <td>(X-Koordinatenwert, Y-Koordinatenwert)</td>
-
-          <td><a class="image"><img alt="Creating Annotation XY.png" src="../images/Creating_Annotation/Creating_Annotation_XY.png" width="35"></a></td>
-        </tr>
-
-        <tr>
-          <td>(X-Koordinatenwert, Y-Koordinatenwert) [Indexnummer]</td>
-
-          <td><a class="image"><img alt="Creating Annotation XYi.png" src="../images/Creating_Annotation/Creating_Annotation_XYi.png" width="43"></a></td>
-        </tr>
-
-        <tr>
-          <td>X-Koordinatenwert</td>
-
-          <td><a class="image"><img alt="Creating Annotation X.png" src="../images/Creating_Annotation/Creating_Annotation_X.png" width="26"></a></td>
-        </tr>
-
-        <tr>
-          <td>Y-Koordinatenwert</td>
-
-          <td><a class="image"><img alt="Creating Annotation Y.png" src="../images/Creating_Annotation/Creating_Annotation_Y.png" width="25"></a></td>
-        </tr>
-
-        <tr>
-          <td>Indexnummer (Zeilennummer)</td>
-
-          <td><a class="image"><img alt="Creating Annotation i.png" src="../images/Creating_Annotation/Creating_Annotation_i.png" width="25"></a></td>
-        </tr>
-      </table>
-    </dd>
-  </dl>
-
-  <p><br>
-  <i><b>Konturdiagramme:</b></i></p>
-
-  <dl>
-    <dd>
-      <table class="simple" style="width: 80%">
-        <tr>
-          <th style="width: 70%">Anmerkungsform</th>
-
-          <th style="width: 10%">Cursor</th>
-        </tr>
-
-        <tr>
-          <td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert)</td>
-
-          <td><a class="image"><img alt="Creating Annotation XYZ.png" src="../images/Creating_Annotation/Creating_Annotation_XYZ.png" width="38"></a></td>
-        </tr>
-
-        <tr>
-          <td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert) [Zeilenindexnummer]</td>
-
-          <td><a class="image"><img alt="Creating Annotation XYZi.png" src="../images/Creating_Annotation/Creating_Annotation_XYZi.png" width="42"></a></td>
-        </tr>
-
-        <tr>
-          <td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert) [Zeilenindexnummer] [Spaltenindexnummer]</td>
-
-          <td><a class="image"><img alt="Creating Annotation XYZij.png" src="../images/Creating_Annotation/Creating_Annotation_XYZij.png" width="43"></a></td>
-        </tr>
-
-        <tr>
-          <td>X-Koordinatenwert</td>
-
-          <td><a class="image"><img alt="Creating Annotation X.png" src="../images/Creating_Annotation/Creating_Annotation_X.png" width="26"></a></td>
-        </tr>
-
-        <tr>
-          <td>Y-Koordinatenwert</td>
-
-          <td><a class="image"><img alt="Creating Annotation Y.png" src="../images/Creating_Annotation/Creating_Annotation_Y.png" width="25"></a></td>
-        </tr>
-
-        <tr>
-          <td>Z-Koordinatenwert</td>
-
-          <td><a class="image"><img alt="Creating Annotation Z.png" src="../images/Creating_Annotation/Creating_Annotation_Z.png" width="23"></a></td>
-        </tr>
-
-        <tr>
-          <td>Indexnummer (Zeilennummer)</td>
-
-          <td><a class="image"><img alt="Creating Annotation i.png" src="../images/Creating_Annotation/Creating_Annotation_i.png" width="25"></a></td>
-        </tr>
-
-        <tr>
-          <td>(Indexnummer (Zeilennummer), Indexnummer (Spaltennummer))</td>
-
-          <td><a class="image"><img alt="Creating Annotation ij.png" src="../images/Creating_Annotation/Creating_Annotation_ij.png" width="23"></a></td>
-        </tr>
-      </table>
-    </dd>
-  </dl>
-
-  <p>&#160;</p>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Wenn Sie einen Datenpunkt in einer Datenzeichnung markiert haben, können Sie auf die Datenzeichnung klicken und auf der Tastatur auf ← und → drücken, um den gewünschten Datenpunkt auszuwählen.</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="Editing_an_annotation"></a><span class="mw-headline">Eine Anmerkung bearbeiten</span></h2>
-
-  <p>Um eine vorhandene Beschriftung benutzerdefiniert anzupassen, klicken Sie mit der rechten Maustaste auf die Beschriftung und wählen Sie <b>Einstellungen</b>. Der Dialog <b>Anmerkung</b> wird geöffnet:</p>
-
-  <ul>
-    <li>Wie bei jedem anderen Textobjekt können Sie den Text der Anmerkung auf der <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html" title="UserGuide:The (Text Object Properties) Text tab">Registerkarte <b>Text</b></a> und den Rahmen und Hintergrund auf der <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Frame_tab.html" title="UserGuide:The (Text Object Properties) Frame tab">Registerkarte <b>Rahmen</b></a> bearbeiten und formatieren.</li>
-
-    <li>Die Verbindungslinie ist ein Linienobjekt, das ein Anmerkungsobjekt mit seinem Datenpunkt verbindet. Wenn Sie den Stil der Verbindungslinie ändern möchten, gehen Sie zur <a href="../../UserGuide/UserGuide/The_(Annotation_Object)_Leader_Line_tab.html" title="UserGuide:The (Annotation Object) Leader Line tab">Registerkarte <b>Verbindungslinie</b></a>.</li>
-
-    <li>Sobald eine Anmerkung erstellt ist, können Sie sie in eine neue Position auf dieser Diagrammseite ziehen. Die Verbindungslinie zwischen Beschriftung und Datenpunkt folgt.</li>
-
-    <li>Sie können ein Anmerkungsobjekt zu einem anderen Datenpunkt verschieben, indem Sie die ALT-Taste drücken und das Objekt zu einem neuen Datenpunkt ziehen. Die Beschriftung wird automatisch aktualisiert.<br></li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="2017 Hightlights Annotation Drag.png" src="../images/Creating_Annotation/350px-2017_Hightlights_Annotation_Drag.png" width="350"></a></dd>
-  </dl>
-
-  <h2><a name="Custom_annotations"></a><span class="mw-headline">Benutzerdefinierte Anmerkungen</span></h2>
-
-  <p>Zusätzlich zu Standardanmerkungen können Sie eine einzelne benutzerdefinierte Anmerkungszeichenkette hinzufügen, die beliebigen Text und LabTalk-Variablen enthalten kann. Wenn Sie eine benutzerdefinierte Zeichenkette definieren, wird sie zu einer Ihrer Beschriftungsoptionen über TAB-Taste, identifizierbar durch die Kennzeichnung "Custom" ("Benutzerdefiniert").</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Custom Annotation Tooltip.png" src="../images/Creating_Annotation/Custom_Annotation_Tooltip.png" width="254"></a></dd>
-  </dl>
-
-  <p><span class='headerInParagraph'>Um eine benutzerdefinierte Beschriftung zu erstellen:</span></p>
-
-  <ol>
-    <li>Wählen Sie das Hilfsmittel <b>Anmerkung</b> <a class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"></a> und beschriften Sie einen Datenpunkt im Diagramm.</li>
-
-    <li>Wechseln Sie zum Hilfsmittel <b>Zeiger</b> <a class="image"><img alt="Button Pointer.png" src="../images/Creating_Annotation/Button_Pointer.png" width="23"></a>, klicken Sie mit der rechten Maustaste auf das Anmerkungsobjekt und wählen Sie <b>Einstellungen</b>.</li>
-
-    <li>Fügen Sie im Anmerkungsdialog auf der Registerkarte <b>Text</b> Ihre benutzerdefinierte Anmerkungszeichenkette im Bearbeitungsfeld ein. Beachten Sie, dass, während Sie sich im Bearbeitungsfeld befinden, Sie auf die <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html" title="UserGuide:The (Text Object Properties) Text tab">Ausklappschaltfläche</a> rechts vom Feld klicken und LabTalk-Variablen in Ihre Zeichenkette einbinden können.</li>
-
-    <li>Um die benutzerdefinierte Zeichenkette zu speichern und sie zu Ihren Beschriftungsoptionen hinzuzufügen, klicken Sie auf die Schaltfläche <b>Als Standard festlegen</b>, bevor Sie über <b>OK</b> den Dialog schließen.</li>
-  </ol>
-
-  <h3><a name="Example_1:_Show_Formula-Adjusted_value_as_Annotation"></a><span class="mw-headline">Beispiel 1: Formel-angepassten Wert als Anmerkung zeigen</span></h3>
-
-  <p>In diesem Beispiel verwenden wir im Dialog Achsen das Feld <b>Formel</b>, um eine benutzerdefinierte Hilfsstrichsbeschriftung zu erstellen, und passen dann das Anmerkungshilfsmittel benutzerdefiniert an, um den "Formel"wert anstatt des tatsächlichen Werts der Y-Achse anzuzeigen:</p>
-
-  <ol>
-    <li>Öffnen Sie ein neues Arbeitsblatt, markieren Sie beide Spalten, klicken Sie mit der rechten Maustaste und wählen Sie <b>Spalten mit Zufallszahlen füllen</b>.</li>
-
-    <li>Klicken Sie auf die Schaltfläche <b>Punktdiagramm</b> <a class="image"><img alt="Button Scatter.png" src="../images/Creating_Annotation/Button_Scatter.png" width="22"></a> auf der Symbolleiste 2D-Diagramme.</li>
-
-    <li>Klicken Sie doppelt auf die Beschriftungen der Y-Achse und geben Sie auf der Registerkarte <b>Anzeige</b> im Dialog Achsen <code>x*pi</code> in das Feld <b>Formel</b> ein und klicken Sie auf OK. Beachten Sie, dass die Hilfsstrichsbeschriftungen der Y-Achse jetzt angepasst sind, um gemäß Ihrer eingegebenen Formel alles richtig anzuzeigen.</li>
-
-    <li>Klicken Sie auf das Hilfsmittel <b>Anmerkung</b> <a class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"></a>, wählen Sie einen Punkt und klicken Sie doppelt auf den Punkt, um eine Anmerkungsbeschriftung hinzuzufügen.</li>
-
-    <li>Wählen Sie das Hilfsmittel <b>Zeiger</b> <a class="image"><img alt="Button Pointer.png" src="../images/Creating_Annotation/Button_Pointer.png" width="23"></a>, klicken Sie mit der rechten Maustaste auf die Beschriftung und wählen Sie <b>Einstellungen</b>.</li>
-
-    <li>Geben Sie im Textfeld die Zeichenkette <code>$(x), $(y,y)</code> ein und klicken Sie auf die Schaltfläche <b>Als Standard festlegen</b>, bevor Sie mit OK den Dialog schließen. Beachten Sie, dass die Beschriftung jetzt den mit der Formel berechneten Wert der Y-Achse richtig anzeigt. Falls Sie die Beschriftung im <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Numeric_Display_Format.2FFormat_String" title="UserGuide:The (Plot Details) Label2 Tab">Beschriftungsformat der großen Hilfsstriche auf der Y-Achse</a> zeigen möchten, können Sie <code>$(x), $(y,yt)</code> eingeben.</li>
-
-    <li>Wählen Sie erneut das Hilfsmittel <b>Zeiger</b>, halten Sie die ALT-Taste gedrückt und ziehen Sie die benutzerdefinierte Beschriftung zu einem anderen Datenpunkt im Diagramm. Beachten Sie, dass die Anmerkungsbeschriftung mit den neuen Punktkoordinaten aktualisiert wird.</li>
-  </ol>
-
-  <h3><a name="Example_2:_Show_Image_as_Annotation"></a><span class="mw-headline">Beispiel 2: Bild als Anmerkung zeigen</span></h3>
-
-  <p>Neben dem Versehen der Punkte mit Anmerkungen über Zellwerte oder Zeichenketten können Sie auch eingebettete Bilder als Anmerkungsbeschriftungen zeigen.<br>
-  <a class="image"><img alt="Annotation EmbeddedCellImage.png" src="../images/Creating_Annotation/650px-Annotation_EmbeddedCellImage.png" width="650"></a></p>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Beschriftungen, die mit dem <b>Anmerkungstool</b> erstellt wurden, sind Textobjekte, die <a class="external text" href="../../LabTalk/LabTalk/Substitution_Notation.html">Substitution</a> verwenden, um einen numerischen Wert, eine Textzeichenkette oder ein eingebettetes Bild anzuzeigen. Damit unterstützen sie benutzerdefinierte Anpassungen über die hier dargestellten hinaus. Weitere Informationen finden Sie unter <a class="external text" href="../../LabTalk/LabTalk/Syntax_and_notations_used_in_plot_label.html">Notations and syntax used in labeling plotted data</a> und <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">Text Label Substitution</a>, beide in der Anleitung zur LabTalk-Programmierung.</p>
-      </td>
-    </tr>
-  </table>
+﻿<h1 class="firstHeading">Zeichnungen mit Hilfe des Anmerkungstools beschriften</h1><p class='urlname' style='display: none'>Creating_Annotation</p>
+<p><br /> Informationen zum globalen Beschriften von 2D-Diagrammen (auch Beschriften von einzelnen Datenpunkte) finden Sie unter <a href="../../UserGuide/UserGuide/Labelling_Data_Points.html" title="Datenpunkte beschriften">Diagramme mit Hilfe der Registerkarte Beschriftung oder den Minisymbolleisten beschriften</a>.</p><p>Zum genauen Ausw&auml;hlen und Beschriften von spezifischen Punkten in 2D- und Konturdiagrammen k&ouml;nnen Sie das benutzerdefinierbare Tool <b>Anmerkung</b> verwenden. <br /></p>
+<dl><dd><a  class="image"><img alt="OH creating annotation1.png" src="../images/Creating_Annotation/600px-OH_creating_annotation1.png" width="600"   /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57"  border="0" /></td><td><p>Eine andere Methode, um Datenpunkte selektiv zu beschriften, ist die Verwendung der Bedienelemente im Dialog Details Zeichnung unter <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Show_at_Specified_Points_Only" title="UserGuide:The (Plot Details) Label2 Tab"><b>Nur bei festgelegten Punkten zeigen</b></a>.</p></td></tr></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_a_standard_annotation"><span class="tocnumber">1</span> <span class="toctext">Eine Standardanmerkung erstellen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Editing_an_annotation"><span class="tocnumber">2</span> <span class="toctext">Eine Anmerkung bearbeiten</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#Pre-define_the_style_and_label_form_of_annotations"><span class="tocnumber">2.1</span> <span class="toctext">Stil und Beschriftungsformat der Anmerkungen vordefinieren</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#customize_an_existing_annotation"><span class="tocnumber">2.2</span> <span class="toctext">Eine vorhandene Anmerkung benutzerdefiniert anpassen</span></a><ul>
+<li class="toclevel-3 tocsection-5"><a href="#Using_Mini_Toolbar"><span class="tocnumber">2.2.1</span> <span class="toctext">Mit Hilfe der Minisymbolleiste</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Using_Properties.E2.80.A6_dialog"><span class="tocnumber">2.2.2</span> <span class="toctext">Mit Hilfe des Dialogs <b>Eigenschaften</b></span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Using_Other_Controls"><span class="tocnumber">2.2.3</span> <span class="toctext">Mit Hilfe anderer Bedienelemente</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Custom_annotations"><span class="tocnumber">3</span> <span class="toctext">Benutzerdefinierte Anmerkungen</span></a><ul>
+<li class="toclevel-2 tocsection-9"><a href="#Example_1:_Show_Formula-Adjusted_value_as_Annotation"><span class="tocnumber">3.1</span> <span class="toctext">Beispiel 1: Formel-angepassten Wert als Anmerkung zeigen</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Example_2:_Show_Image_as_Annotation"><span class="tocnumber">3.2</span> <span class="toctext">Beispiel 2: Bild als Anmerkung zeigen</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Creating_a_standard_annotation"></a><span class="mw-headline">Eine Standardanmerkung erstellen</span></h2>
+<ol><li>Klicken Sie auf die Schaltfl&auml;che <b>Anmerkung</b> <a  class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"  /></a> auf der Symbolleiste Hilfsmittel.<font color="red">(2025b)</font>Sie k&ouml;nnen den Labtalk-Befehl <code>dotool 100</code> verwenden, um das Hilfsmittel Anmerkung im Diagramm zu aktivieren.</li>
+<li>Im aufgerufenen Dialog <b>Anmerkung</b>, das mit dem Anmerkungscursor gezeigt wird, k&ouml;nnen Sie das Beschriftungsformat, die Schriftart, die Schriftgr&ouml;&szlig;e und die Schriftfarbe f&uuml;r die Beschriftungen w&auml;hlen, die Sie hinzuf&uuml;gen m&ouml;chten.</li>
+<li>Fahren Sie mit der Maus &uuml;ber das Diagrammfenster und verwenden Sie die <b>TAB</b>-Taste, um zwischen den Anmerkungsoptionen zu wechseln (Optionen sind sichtbar auf dem <b>Anmerkung</b>scursor oder auf der Statusleiste links unten im Arbeitsbereich).</li></ol>
+<dl><dd><a  class="image"><img alt="Status Bar Annotation Form.png" src="../images/Creating_Annotation/Status_Bar_Annotation_Form.png" width="719"  /></a></dd></dl>
+<p><br /> <i><b>2D-XY-Datenzeichnungen:</b></i></p>
+<dl><dd><table class="simple" style="width: 50%">
+<tr>
+<th style="width: 40%">Anmerkungsform</th>
+<th style="width: 10%">Cursor</th></tr>
+<tr>
+<td>($(x), $(y)) oder andere benutzerdefinierte Form</td>
+<td><a  class="image"><img alt="Creating Annotation Custom.png" src="../images/Creating_Annotation/Creating_Annotation_Custom.png" width="47"  /></a></td></tr>
+<tr>
+<td>(X-Koordinatenwert, Y-Koordinatenwert)</td>
+<td><a  class="image"><img alt="Creating Annotation XY.png" src="../images/Creating_Annotation/Creating_Annotation_XY.png" width="35"  /></a></td></tr>
+<tr>
+<td>(X-Koordinatenwert, Y-Koordinatenwert) [Indexnummer]</td>
+<td><a  class="image"><img alt="Creating Annotation XYi.png" src="../images/Creating_Annotation/Creating_Annotation_XYi.png" width="43"  /></a></td></tr>
+<tr>
+<td>X-Koordinatenwert</td>
+<td><a  class="image"><img alt="Creating Annotation X.png" src="../images/Creating_Annotation/Creating_Annotation_X.png" width="26"  /></a></td></tr>
+<tr>
+<td>Y-Koordinatenwert</td>
+<td><a  class="image"><img alt="Creating Annotation Y.png" src="../images/Creating_Annotation/Creating_Annotation_Y.png" width="25"  /></a></td></tr>
+<tr>
+<td>Indexnummer (Zeilennummer)</td>
+<td><a  class="image"><img alt="Creating Annotation i.png" src="../images/Creating_Annotation/Creating_Annotation_i.png" width="25"  /></a></td></tr></table></dd></dl>
+<p><br /> <i><b>Konturdiagramme:</b></i></p>
+<dl><dd><table class="simple" style="width: 80%">
+<tr>
+<th style="width: 70%">Anmerkungsform</th>
+<th style="width: 10%">Cursor</th></tr>
+<tr>
+<td>($(x), $(y), $(z)) oder andere benutzerdefinierte Form</td>
+<td><a  class="image"><img alt="Creating Annotation Custom.png" src="../images/Creating_Annotation/Creating_Annotation_Custom.png" width="47"  /></a></td></tr>
+
+<tr>
+<td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert)</td>
+<td><a  class="image"><img alt="Creating Annotation XYZ.png" src="../images/Creating_Annotation/Creating_Annotation_XYZ.png" width="38"  /></a></td></tr>
+<tr>
+<td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert) [Zeilenindexnummer]</td>
+<td><a  class="image"><img alt="Creating Annotation XYZi.png" src="../images/Creating_Annotation/Creating_Annotation_XYZi.png" width="42"  /></a></td></tr>
+<tr>
+<td>(X-Koordinatenwert, Y-Koordinatenwert, Z-Koordinatenwert) [Zeilenindexnummer] [Spaltenindexnummer]</td>
+<td><a  class="image"><img alt="Creating Annotation XYZij.png" src="../images/Creating_Annotation/Creating_Annotation_XYZij.png" width="43"  /></a></td></tr>
+<tr>
+<td>X-Koordinatenwert</td>
+<td><a  class="image"><img alt="Creating Annotation X.png" src="../images/Creating_Annotation/Creating_Annotation_X.png" width="26"  /></a></td></tr>
+<tr>
+<td>Y-Koordinatenwert</td>
+<td><a  class="image"><img alt="Creating Annotation Y.png" src="../images/Creating_Annotation/Creating_Annotation_Y.png" width="25"  /></a></td></tr>
+<tr>
+<td>Z-Koordinatenwert</td>
+<td><a  class="image"><img alt="Creating Annotation Z.png" src="../images/Creating_Annotation/Creating_Annotation_Z.png" width="23"  /></a></td></tr>
+<tr>
+<td>Indexnummer (Zeilennummer)</td>
+<td><a  class="image"><img alt="Creating Annotation i.png" src="../images/Creating_Annotation/Creating_Annotation_i.png" width="25"  /></a></td></tr>
+<tr>
+<td>(Indexnummer (Zeilennummer), Indexnummer (Spaltennummer))</td>
+<td><a  class="image"><img alt="Creating Annotation ij.png" src="../images/Creating_Annotation/Creating_Annotation_ij.png" width="23"  /></a></td></tr></table></dd></dl>
+<p><br /></p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57"  border="0" /></td><td><p>Wenn Sie einen Datenpunkt in einer Datenzeichnung markiert haben, k&ouml;nnen Sie auf die Datenzeichnung klicken und auf der Tastatur auf ← und → dr&uuml;cken, um den gew&uuml;nschten Datenpunkt auszuw&auml;hlen.</p></td></tr></table>
+<h2><a name="Editing_an_annotation"></a><span class="mw-headline">Eine Anmerkung bearbeiten</span></h2>
+<h3><a name="Pre-define_the_style_and_label_form_of_annotations"></a><span class="mw-headline">Stil und Beschriftungsformat der Anmerkungen vordefinieren</span></h3>
+<p>Wenn Sie auf die Schaltfl&auml;che Anmerkung <a  class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"  /></a> geklickt haben, wird ein Minidialog <b>Anmerkung</b> gezeigt, &uuml;ber den Sie ein Beschriftungsformat w&auml;hlen und die Stile der Beschriftungen festlegen k&ouml;nnen.</p><p><a  class="image"><img alt="Creating Annotation minidialog.png" src="../images/Creating_Annotation/800px-Creating_Annotation_minidialog.png" width="800"   /></a></p>
+<h3><a name="customize_an_existing_annotation"></a><span class="mw-headline">Eine vorhandene Anmerkung benutzerdefiniert anpassen</span></h3>
+<p>Um eine vorhandene Anmerkung benutzerdefiniert anzupassen, k&ouml;nnen Sie die Minisymbolleiste oder den Dialog <b>Eigenschaften</b> verwenden:</p>
+<h4><a name="Using_Mini_Toolbar"></a><span class="mw-headline">Mit Hilfe der Minisymbolleiste</span></h4>
+<p><a  class="image"><img alt="Creating Annotation minitoolbar.png" src="../images/Creating_Annotation/Creating_Annotation_minitoolbar.png" width="520"  /></a></p>
+<h4><a name="Using_Properties.E2.80.A6_dialog"></a><span class="mw-headline">Mit Hilfe des Dialogs <b>Eigenschaften</b></span></h4>
+<p>Klicken Sie mit der rechten Maustaste auf die Beschriftung und w&auml;hlen Sie <b>Eigenschaften</b>. Der Dialog <b>Anmerkung</b> wird ge&ouml;ffnet:</p>
+<ul><li>Wie bei jedem anderen Textobjekt k&ouml;nnen Sie den Text der Anmerkung auf der <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Text_tab.html" title="UserGuide:The (Text Object Properties) Text tab">Registerkarte <b>Text</b></a> und den Rahmen und Hintergrund auf der <a href="../../UserGuide/UserGuide/The_(Text_Object_Properties)_Frame_tab.html" title="UserGuide:The (Text Object Properties) Frame tab">Registerkarte <b>Rahmen</b></a> bearbeiten und formatieren.</li>
+<li>Die Verbindungslinie ist ein Linienobjekt, das ein Anmerkungsobjekt mit seinem Datenpunkt verbindet. Wenn Sie den Stil der Verbindungslinie &auml;ndern m&ouml;chten, gehen Sie zur <a href="../../UserGuide/UserGuide/The_(Annotation_Object)_Leader_Line_tab.html" title="UserGuide:The (Annotation Object) Leader Line tab">Registerkarte <b>Verbindungslinie</b></a>.</li></ul>
+<h4><a name="Using_Other_Controls"></a><span class="mw-headline">Mittels anderer Bedienelemente</span></h4>
+<ul><li>Sobald eine Anmerkung erstellt ist, k&ouml;nnen Sie sie in eine neue Position auf dieser Diagrammseite ziehen. Die Verbindungslinie zwischen Beschriftung und Datenpunkt folgt.</li>
+<li>Sie k&ouml;nnen ein Anmerkungsobjekt zu einem anderen Datenpunkt verschieben, indem Sie die <b>ALT</b>-Taste dr&uuml;cken und das Objekt zu einem neuen Datenpunkt ziehen. Die Beschriftung wird automatisch aktualisiert.<br /></li>
+<li>Halten Sie die <b>Strg</b>-Taste gedr&uuml;ckt und ziehen Sie das Anmerkungsobjekt an eine andere Stelle, um eine Kopie des Objekts an der neuen Position zu erstellen. Sie k&ouml;nnen diese Methode verwenden, um einfach mehr Objekte hinzuzuf&uuml;gen.</li></ul>
+<p><a  class="image"><img alt="2017 Hightlights Annotation Drag.png" src="../images/Creating_Annotation/800px-2017_Hightlights_Annotation_Drag.png" width="800"   /></a></p>
+<h2><a name="Custom_annotations"></a><span class="mw-headline">Benutzerdefinierte Anmerkungen</span></h2>
+<p>Zus&auml;tzlich zu den Standardanmerkungen und der vordefinierten benutzerdefinierten Anmerkung in der Liste k&ouml;nnen Sie eine einzelne benutzerdefinierte Anmerkungszeichenkette hinzuf&uuml;gen, die beliebigen Text und LabTalk-Variablen im Feld <b>Beschriftung</b> einbinden kann, und dann die Anmerkung hinzuf&uuml;gen. Oder Sie k&ouml;nnen zuerst eine Standardanmerkung hinzuf&uuml;gen und dann mit der rechten Maustaste auf sie klicken, um den Dialog <b>Anmerkung</b> zu &ouml;ffnen und den Beschriftungsinhalt auf der Registerkarte <b>Text</b> benutzerdefiniert anzupassen.</p>
+<dl><dd><a  class="image"><img alt="Custom Annotation Tooltip.png" src="../images/Creating_Annotation/700px-Custom_Annotation_Tooltip.png" width="700"   /></a></dd></dl>
+<h3><a name="Example_1:_Show_Formula-Adjusted_value_as_Annotation"></a><span class="mw-headline">Beispiel 1: Formel-angepassten Wert als Anmerkung zeigen</span></h3>
+<p>In diesem Beispiel verwenden wir im Dialog Achsen das Feld  <b>Formel</b>, um eine benutzerdefinierte Hilfsstrichsbeschriftung zu erstellen, und passen dann das Anmerkungshilfsmittel benutzerdefiniert an, um den &quot;Formel&quot;wert anstatt des tats&auml;chlichen Werts der Y-Achse anzuzeigen:</p>
+<ol><li>&Ouml;ffnen Sie ein neues Arbeitsblatt, markieren Sie beide Spalten, klicken Sie mit der rechten Maustaste und w&auml;hlen Sie <b>Spalten mit Zufallszahlen f&uuml;llen</b>.</li>
+<li>Klicken Sie auf die Schaltfl&auml;che <b>Punktdiagramm</b> <a  class="image"><img alt="Button Scatter.png" src="../images/Creating_Annotation/Button_Scatter.png" width="22"  /></a> auf der Symbolleiste 2D-Diagramme.</li>
+<li>Klicken Sie doppelt auf die Beschriftungen der Y-Achse und geben Sie im Dialog Achsen auf der Registerkarte <b>Anzeige</b> <code>x*pi</code> im Feld <b>Formel</b> ein und klicken Sie auf OK. Beachten Sie, dass die Hilfsstrichsbeschriftungen der Y-Achse jetzt angepasst sind, um gem&auml;&szlig; Ihrer eingegebenen Formel alles richtig anzuzeigen.</li>
+<li>Klicken Sie auf das Hilfsmittel <b>Anmerkung</b> <a  class="image"><img alt="Button Data Annotation.png" src="../images/Creating_Annotation/Button_Data_Annotation.png" width="22"  /></a>, w&auml;hlen Sie einen Punkt und klicken Sie doppelt auf den Punkt, um eine Anmerkungsbeschriftung hinzuzuf&uuml;gen.</li>
+<li>W&auml;hlen Sie das Hilfsmittel <b>Zeiger</b> <a  class="image"><img alt="Button Pointer.png" src="../images/Creating_Annotation/Button_Pointer.png" width="23"  /></a>, klicken Sie mit der rechten Maustaste auf die Beschriftung und w&auml;hlen Sie <b>Einstellungen</b>.</li>
+<li>Geben Sie im Textfeld die Zeichenkette <code>$(x), $(y,y)</code> ein und klicken Sie auf die Schaltfl&auml;che <b>Als Standard festlegen</b>, bevor Sie mit OK den Dialog schlie&szlig;en. Beachten Sie, dass die Beschriftung jetzt den mit der Formel berechneten Wert der Y-Achse richtig anzeigt. Falls Sie die Beschriftung im <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Label2_Tab.html#Numeric_Display_Format.2FFormat_String" title="UserGuide:The (Plot Details) Label2 Tab">Beschriftungsformat der gro&szlig;en Hilfsstriche auf der Y-Achse</a> zeigen m&ouml;chten, k&ouml;nnen Sie <code>$(x), $(y,yt)</code> eingeben.</li>
+<li>W&auml;hlen Sie erneut das Hilfsmittel <b>Zeiger</b>, halten Sie die ALT-Taste gedr&uuml;ckt und ziehen Sie die benutzerdefinierte Beschriftung zu einem anderen Datenpunkt im Diagramm. Beachten Sie, dass die Anmerkungsbeschriftung mit den neuen Punktkoordinaten aktualisiert wird.</li></ol>
+<h3><a name="Example_2:_Show_Image_as_Annotation"></a><span class="mw-headline">Beispiel 2: Bild als Anmerkung zeigen</span></h3>
+<p>Neben dem Versehen der Punkte mit Anmerkungen &uuml;ber Zellwerte oder Zeichenketten k&ouml;nnen Sie auch eingebettete Bilder als Anmerkungsbeschriftungen zeigen. <br /><a  class="image"><img alt="Annotation EmbeddedCellImage.png" src="../images/Creating_Annotation/650px-Annotation_EmbeddedCellImage.png" width="650"   /></a></p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Creating_Annotation/Tip_icon.png" width="57"  border="0" /></td><td><p>Beschriftungen, die mit dem <b>Anmerkungstool</b> erstellt wurden, sind Textobjekte, die <a class="external text" href="../../LabTalk/Category/Substitution_Notation.html">Substitution</a> verwenden, um einen numerischen Wert, eine Textzeichenkette oder ein eingebettetes Bild anzuzeigen. Damit unterst&uuml;tzen sie benutzerdefinierte Anpassungen &uuml;ber die hier dargestellten hinaus. Weitere Informationen finden Sie unter <a class="external text" href="../../LabTalk/LabTalk/Syntax_and_notations_used_in_plot_label.html">Notations and syntax used in labeling plotted data</a> und <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html#Legend_Text_Customization">Text Label Substitution</a>, beide in der Anleitung zur LabTalk-Programmierung.</p></td></tr></table>
+
+
+
+    

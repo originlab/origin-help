@@ -1,175 +1,97 @@
-﻿<h1 class="firstHeading">Häufigkeitendiagramm</h1>
+﻿<h1 class="firstHeading">Frequenztabelle</h1><p class='urlname' style='display: none'>Frequency-Chart</p>
+<dl><dd><a  class="image"><img alt="Frequency Chart 01.png" src="../images/Frequency_Chart/Frequency_Chart_01.png" width="787"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_.22plot_frequency.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog &quot;plot_frequency&quot;</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Versionsinformationen</span></a></li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>Frequency-Chart</p>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>W&auml;hlen Sie mindestens eine Spalte aus, um einmalige Werte zu z&auml;hlen, und erstellen Sie ein S&auml;ulen-/Balken-/Kreis-/Ring-/Sunburst-Diagramm.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <span class="menu">Zeichnen &gt; Balken, Kreis, Fl&auml;che: Frequenztabelle</span>. Der Dialog <b>plot_frequency</b> wird angezeigt.</p>
+<h3><a name="The_.22plot_frequency.22_dialog_box"></a><span class="mw-headline">Der Dialog &quot;plot_frequency&quot;</span></h3>
+<p><a  class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png" width="800"   /></a></p>
+<table class="dialogcontroltable">
 
-  <dl>
-    <dd><a class="image"><img alt="Frequency Chart 01.png" src="../images/Frequency_Chart/Frequency_Chart_01.png" width="787"></a></dd>
-  </dl>
+<tr>
+<th>Eingabe</th>
+<td>W&auml;hlen Sie mindestens eine Spalte als Quelldaten, um die Frequenztabelle zu berechnen und zu zeichnen.</td></tr>
+<tr>
+<th>H&auml;ufigkeiten</th>
+<td>W&auml;hlen Sie eine oder mehrere Spalten f&uuml;r die H&auml;ufigkeitsdaten als optionale Eingabe.<p>Wenn <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> gesetzt ist, erm&ouml;glicht diese Option, dass mehrere Spalten als H&auml;ufigkeitsdaten ausgew&auml;hlt werden k&ouml;nnen. Die Anzahl der Spalten k&ouml;nnte 1 oder gleich der Anzahl der Eingabespalten sein.</p>
+<ul><li>Wenn Sie nur eine Spalte f&uuml;r diese Option ausgew&auml;hlt haben, dann nimmt jede Eingabespalte diese Spalte als H&auml;ufigkeit.</li>
+<li>Wenn Sie mehrere Spalten f&uuml;r die Option ausgew&auml;hlt haben, nimmt jede Eingabespalte eine ausgew&auml;hlte Spalte der Reihe nach als H&auml;ufigkeitsdaten. Der Y-Wert ist die Summe der H&auml;ufigkeitsdaten nach Eingabekategorie.</li></ul>
+<p>Wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist, kann f&uuml;r diese Option nur eine Spalte gew&auml;hlt werden.</p>
+</td></tr>
+<tr>
+<th>Mehrere Daten</th>
+<td>Legen Sie fest, wie die ausgew&auml;hlten Spalten f&uuml;r mehrere Daten gezeichnet werden sollen.<ul><li><b>Separate Grafiken</b>: Zeichnen Sie mehrere Eingabespalten in separate Grafiken.</li>
+<li><b>Geschachtelte Anzahl in gleicher Grafik</b>: Z&auml;hlen Sie die geschachtelten Anzahlen der letzten Eingabespalte basierend auf allen ausgew&auml;hlten Spalten und zeichnen Sie sie dann auf der gleichen Grafik.</li></ul>
+</td></tr>
+<tr>
+<th>Horizontale Felder nach</th>
+<td>Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontalen Felder</a> zu aktivieren, die eine Frequenztabelle f&uuml;r jeden Gruppierungswert separat zeigen.<p>Wenn <b>Vertikale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</p><p>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</p>
+</td></tr>
+<tr>
+<th>Vertiale Felder nach</th>
+<td>Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertikalen Felder</a> zu aktivieren, die eine Frequenztabelle f&uuml;r jeden Gruppierungswert separat zeigen.<p>Wenn <b>Horizontale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</p><p>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</p>
+</td></tr>
+<tr>
+<th>Seiten teilen nach</th>
+<td>Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die Eingabedaten zu teilen und die Frequenztabelle auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der f&uuml;r die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt f&uuml;hrt alle Seiten auf.</td></tr>
+<tr>
+<th>Diagrammtyp</th>
+<td>W&auml;hlen Sie einen Diagrammtyp, um die H&auml;ufigkeiten der Quelldaten zu pr&auml;sentieren.<ul><li><b>Spalte</b></li>
+<li><b>Balken</b></li>
+<li><b>Kreis</b></li>
+<li><b>Ring</b>: Nur f&uuml;r mehrere Spalten und wenn <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> gesetzt ist.</li>
+<li><b>Sunburst</b>: Nur f&uuml;r mehrere Eingabespalten und wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist.</li>
+<li><b>Sunburst mit Loch</b>: Nur f&uuml;r mehrere Eingabespalten und wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist.</li></ul>
+</td></tr>
+<tr>
+<th>Y teilen</th>
+<td>Diese Option wird nur gezeigt, wenn mehrere Spalten der Quelldaten f&uuml;r das Feld <b>Eingabe</b> ausgew&auml;hlt wurden und <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> f&uuml;r den S&auml;ulen- oder Balkendiagrammtyp gesetzt wurde. Sie wird verwendet, damit verschiedene Grafiken sich die gleiche Y-Skalierung teilen.</td></tr>
+<tr>
+<th>Stapeln</th>
+<td>Das Bedienelement ist nur verf&uuml;gbar, wenn es mehrere Eingabedaten gibt, Mehrere Daten auf Geschachtelte Anzahl in gleicher Grafik und Diagrammtyp auf S&auml;ulen oder Balken gesetzt wurde.<p>Legen Sie fest, wie die geschachtelte Anzahl als S&auml;ulen/Balken gezeichnet werden soll. Es gibt drei M&ouml;glichkeiten, die Anzahl als S&auml;ulen/Balken zu pr&auml;sentieren:</p>
+<ul><li>Nebeneinander</li>
+<li>Gestapelt (Letzte S&auml;ule)</li>
+<li>Gestapelt, 100% (Letzte S&auml;ule)</li></ul>
+</td></tr>
+<tr>
+<th>Diagrammmvorlage</th>
+<td>Diese Option zeigt die Standardvorlage, um unterschiedliche Diagrammtypen zu erstellen. Sie k&ouml;nnen das Kontrollk&auml;stchen <b>Auto</b> deaktivieren, um eine andere Vorlage zu w&auml;hlen, wie eine benutzerdefinierte Vorlage.</td></tr>
+<tr>
+<th>Ausgabe in</th>
+<td>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</td></tr>
+<tr>
+<th>Ausgabezeichnungsdaten</th>
+<td>Legen Sie fest, in welches Blatt die Zeichnungsdaten ausgegeben werden.</td></tr>
+<tr>
+<th>Diagramme ausgeben</th>
+<td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>column.otpu<br /> bar.otpu<br /> Pie2D.otpu<br /> Doughnut.otpu<br /> (installiert im Origin-Programmordner).</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+<p>Wenn die ausgew&auml;hlten Kategoriespalten fehlende Werte enthalten, k&ouml;nnen Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C">die Systemvariable <b>@CATS</b></a> verwenden, um sie auszuschlie&szlig;en.</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
+<table class="tbl">
 
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
+<tr style="vertical-align: top;">
+<td><b>Mindestversion:</b> Origin 2026</td></tr></table>
 
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
 
-      <li class="toclevel-1 tocsection-2">
-        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
 
-        <ul>
-          <li class="toclevel-2 tocsection-3"><a href="#The_.22plot_frequency.22_dialog_box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog "plot_frequency"</span></a></li>
-        </ul>
-      </li>
 
-      <li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
 
-      <li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
-    </ul>
-  </div>
 
-  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
 
-  <p>Wählen Sie mindestens eine Spalte aus, um einmalige Werte zu zählen, und erstellen Sie ein Säulen-/Balken-/Kreis-/Ring-/Sunburst-Diagramm.</p>
-
-  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
-
-  <p>Wählen Sie die gewünschten Daten aus.</p>
-
-  <p>Wählen Sie im Menü <span class="menu">Zeichnen &gt; Balken, Kreis, Fläche: Häufigkeitsdiagramm</span>. Der Dialog <b>plot_frequency</b> wird angezeigt.</p>
-
-  <h3><a name="The_.22plot_frequency.22_dialog_box"></a><span class="mw-headline">Der Dialog "plot_frequency"</span></h3>
-
-  <p><a class="image"><img alt="Frequency Chart 02.png" src="../images/Frequency_Chart/800px-Frequency_Chart_02.png" width="800"></a></p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Eingabe</th>
-
-      <td>Wählen Sie mindestens eine Spalte als Quelldaten, um das Häufigkeitsdiagramm zu berechnen und zu zeichnen.</td>
-    </tr>
-
-    <tr>
-      <th>Häufigkeiten</th>
-
-      <td>
-        Wählen Sie eine oder mehrere Spalten für die Häufigkeitsdaten als optionale Eingabe.
-
-        <p>Wenn <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> gesetzt ist, ermöglicht diese Option, dass mehrere Spalten als Häufigkeitsdaten ausgewählt werden können. Die Anzahl der Spalten könnte 1 oder gleich der Anzahl der Eingabespalten sein.</p>
-
-        <ul>
-          <li>Wenn Sie nur eine Spalte für diese Option ausgewählt haben, dann nimmt jede Eingabespalte diese Spalte als Häufigkeit.</li>
-
-          <li>Wenn Sie mehrere Spalten für die Option ausgewählt haben, nimmt jede Eingabespalte eine ausgewählte Spalte der Reihe nach als Häufigkeitsdaten . Der Y-Wert ist die Summe der Häufigkeitsdaten nach Eingabekategorie.</li>
-        </ul>
-
-        <p>Wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist, kann für diese Option nur eine Spalte gewählt werden.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Mehrere Daten</th>
-
-      <td>
-        Legen Sie fest, wie die ausgewählten Spalten für mehrere Daten gezeichnet werden sollen.
-
-        <ul>
-          <li><b>Separate Grafiken</b>: Zeichnen Sie mehrere Eingabespalten in separate Grafiken.</li>
-
-          <li><b>Geschachtelte Anzahl in gleicher Grafik</b>: Zählen Sie die geschachtelten Anzahlen der letzten Eingabespalte basierend auf allen ausgewählten Spalten und zeichnen Sie sie dann auf der gleichen Grafik.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Felder teilen nach</th>
-
-      <td>
-        Wenn dieses Kontrollkästchen aktiviert ist, können Sie eine andere Gruppierungsspalte auswählen, um die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontalen Felder</a> zu aktivieren, die ein Häufigkeitendiagramm für jeden Gruppierungswert separat zeigen. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> wird aktiviert, Hilfsstriche und Beschriftungen werden standardmäßig auf abwechselnden Seiten gezeigt.
-
-        <p>Wenn mehrere Spalten ausgewählt sind, wird nur eine Beschriftungszeile für die Feldinformation oberhalb gezeigt. Die Zeichenkette des Feldbanners schließt alle Faktoren ein und ist durch Komma getrennt. Falls <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist, wird die Option verborgen.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Seiten teilen nach</th>
-
-      <td>Wenn dieses Kontrollkästchen aktiviert ist, können Sie eine andere Gruppierungsspalte auswählen, um die Eingabedaten zu teilen und das Häufigkeitendiagramm auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der für die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt führt alle Seiten auf.</td>
-    </tr>
-
-    <tr>
-      <th>Diagrammtyp</th>
-
-      <td>
-        Wählen Sie einen Diagrammtyp, um die Häufigkeiten der Quelldaten zu präsentieren.
-
-        <ul>
-          <li><b>Spalte</b></li>
-
-          <li><b>Balken</b></li>
-
-          <li><b>Kreis</b></li>
-
-          <li><b>Ring</b>: Nur für mehrere Spalten und wenn <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> gesetzt ist.</li>
-
-          <li><b>Sunburst</b>: Nur für mehrere Eingabespalten und wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist.</li>
-
-          <li><b>Sunburst mit Loch</b>: Nur für mehrere Eingabespalten und wenn <b>Mehrere Daten</b> auf <b>Geschachtelte Anzahl in gleicher Grafik</b> gesetzt ist.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Y teilen</th>
-
-      <td>Diese Option wird nur gezeigt, wenn mehrere Spalten der Quelldaten für das Feld <b>Eingabe</b> ausgewählt wurden und <b>Mehrere Daten</b> auf <b>Separate Grafiken</b> für den Säulen- oder Balkendiagrammtyp gesetzt wurde. Sie wird verwendet, damit verschiedene Grafiken sich die gleiche Y-Skalierung teilen.</td>
-    </tr>
-
-    <tr>
-      <th>Stapeln</th>
-
-      <td>
-        Das Bedienelement ist nur verfügbar, wenn es mehrere Eingabedaten gibt, Mehrere Daten auf Geschachtelte Anzahl in gleicher Grafik und Diagrammtyp auf Säulen oder Balken gesetzt wurde.
-
-        <p>Legen Sie fest, wie die geschachtelte Anzahl als Säulen/Balken gezeichnet werden soll. Es gibt drei Möglichkeiten, die Anzahl als Säulen/Balken zu präsentieren:</p>
-
-        <ul>
-          <li>Nebeneinander</li>
-
-          <li>Gestapelt (Letzte Säule)</li>
-
-          <li>Gestapelt, 100% (Letzte Säule)</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Diagrammmvorlage</th>
-
-      <td>Diese Option zeigt die Standardvorlage, um unterschiedliche Diagrammtypen zu erstellen. Sie können das Kontrollkästchen <b>Auto</b> deaktivieren, um eine andere Vorlage zu wählen, wie eine benutzerdefinierte Vorlage.</td>
-    </tr>
-
-    <tr>
-      <th>Ausgabezeichnungsdaten</th>
-
-      <td>Legen Sie fest, in welches Blatt die Zeichnungsdaten ausgegeben werden.</td>
-    </tr>
-
-    <tr>
-      <th>Diagramme ausgeben</th>
-
-      <td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
-
-  <p>column.otpu<br>
-  bar.otpu<br>
-  Pie2D.otpu<br>
-  Doughnut.otpu<br>
-  (installiert im Origin-Programmordner).</p>
-
-  <h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
-
-  <p>Wenn die ausgewählten Kategoriespalten fehlende Werte enthalten, können Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C">die Systemvariable <b>@CATS</b></a> verwenden, um sie auszuschließen.</p>
+    

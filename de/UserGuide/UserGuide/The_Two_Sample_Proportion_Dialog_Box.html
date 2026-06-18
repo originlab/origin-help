@@ -1,291 +1,133 @@
-﻿<h1 class="firstHeading">The Two-Sample Proportion Test Dialog Box</h1>
-
-  <p class="urlname" style='display: none'>Two-Prop-Dialog</p>
-
-  <p>&#160;</p>
-
-  <table id="toc" class="toc">
-    <tr>
-      <td>
-        <div id="toctitle">
-          <h2>Contents</h2>
-        </div>
-
-        <ul>
-          <li class="toclevel-1 tocsection-1"><a href="#Results_Log_Output"><span class="tocnumber">1</span> <span class="toctext">Results Log Output</span></a></li>
-
-          <li class="toclevel-1 tocsection-2"><a href="#Input_Data_Form"><span class="tocnumber">2</span> <span class="toctext">Input Data Form</span></a></li>
-
-          <li class="toclevel-1 tocsection-3"><a href="#Proportion_Test"><span class="tocnumber">3</span> <span class="toctext">Proportion Test</span></a></li>
-
-          <li class="toclevel-1 tocsection-4"><a href="#Test_Methods"><span class="tocnumber">4</span> <span class="toctext">Test Methods</span></a></li>
-
-          <li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Power Analysis</span></a></li>
-
-          <li class="toclevel-1 tocsection-6"><a href="#Outputs"><span class="tocnumber">6</span> <span class="toctext">Outputs</span></a></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="Results_Log_Output"></a><span class="mw-headline">Results Log Output</span></h2>
-
-  <p>If this check box is checked, the result will be output to Results log.</p>
-
-  <h2><a name="Input_Data_Form"></a><span class="mw-headline">Input Data Form</span></h2>
-
-  <p>Specify the form of the input data, summarized data or raw.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Summarized</th>
-
-      <td>
-        Perform the test on summarized statistics you enter in the dialog box.
-
-        <dl>
-          <dd><b>Number of Success of Sample1</b></dd>
-        </dl>
-
-        <dl>
-          <dd>The number of observed success data in sample 1</dd>
-        </dl>
-
-        <dl>
-          <dd><b>Sample Size of Sample1</b></dd>
-        </dl>
-
-        <dl>
-          <dd>The total number of observations in sample 1</dd>
-        </dl>
-
-        <dl>
-          <dd><b>Number of Success of Sample2</b></dd>
-        </dl>
-
-        <dl>
-          <dd>The number of observed success data in sample 2</dd>
-        </dl>
-
-        <dl>
-          <dd><b>Sample Size of Sample2</b></dd>
-        </dl>
-
-        <dl>
-          <dd>The total number of observations in sample 2</dd>
-        </dl>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Raw</th>
-
-      <td>
-        <p>Perform the test on the raw data in the form of "failure" and " success"</p>
-
-        <dl>
-          <dd><b>Input Data Form</b></dd>
-
-          <dd>Specify the data range of sample 1 and sample 2</dd>
-        </dl>
-
-        <dl>
-          <dd>
-            <dl>
-              <dd><b>1st Data Range</b></dd>
-            </dl>
-          </dd>
-        </dl>
-
-        <dl>
-          <dd>
-            <dl>
-              <dd><b>2nd Data Range</b></dd>
-            </dl>
-          </dd>
-        </dl>
-
-        <dl>
-          <dd><b>Success</b></dd>
-        </dl>
-
-        <dl>
-          <dd>To specify which value to be success</dd>
-        </dl>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Index</th>
-
-      <td>
-        <p>Perform the test on the input data contains one sample column and one grouping column. The data column is in the form of "failure" and " success"</p>
-
-        <dl>
-          <dd><b>Input Data Form</b></dd>
-
-          <dd>Specify one sample column and one grouping column</dd>
-        </dl>
-
-        <dl>
-          <dd>
-            <dl>
-              <dd><b>Group Range</b></dd>
-            </dl>
-          </dd>
-        </dl>
-
-        <dl>
-          <dd>
-            <dl>
-              <dd><b>Data Range</b></dd>
-            </dl>
-          </dd>
-        </dl>
-
-        <dl>
-          <dd><b>Success</b></dd>
-        </dl>
-
-        <dl>
-          <dd>To specify which value to be success</dd>
-        </dl>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="Proportion_Test"></a><span class="mw-headline">Proportion Test</span></h2>
-
-  <p>Use proportion to determine whether or not two proportions are different</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Test Difference</th>
-
-      <td>The hypothetical proportion difference to be tested.</td>
-    </tr>
-
-    <tr>
-      <th>Null Hypothesis</th>
-
-      <td>The null hypothesis to be tested</td>
-    </tr>
-
-    <tr>
-      <th>Alternative Hypothesis</th>
-
-      <td>
-        Alternative Hypothesis
-
-        <p>Options:</p>
-
-        <dl>
-          <dd><b>Proportion 1 - Proportion2&lt;&gt; <i>Test Difference</i></b></dd>
-        </dl>
-
-        <dl>
-          <dd>If chosen, two-tailed proportion test will be performed. That's to say, the procedure will test if the difference of two proportion is equal to the specified value</dd>
-        </dl>
-
-        <dl>
-          <dd><b>Proportion 1 - Proportion2 &gt; <i>Test Difference</i></b></dd>
-        </dl>
-
-        <dl>
-          <dd>If chosen, upper-tailed proportion test will be performed. That's to say, the procedure will test if the difference of two proportion is larger than the specified value</dd>
-        </dl>
-
-        <dl>
-          <dd><b>Proportion 1 - Proportion2 &lt; <i>Test Difference</i></b></dd>
-        </dl>
-
-        <dl>
-          <dd>If chosen, lower-tailed proportion will be performed. That's to say, the procedure will test if the difference of two proportion is smaller than the specified value</dd>
-        </dl>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Significance Level</th>
-
-      <td>Specify the significance level of the test.</td>
-    </tr>
-
-    <tr>
-      <th>Confidence Interval(s)</th>
-
-      <td>This option determines if confidence intervals for proportion difference should be computed for given confidence levels.</td>
-    </tr>
-
-    <tr>
-      <th>Confidence Level(s) in&#160;%</th>
-
-      <td>Specifies the confidence levels for which the confidence intervals will be computed. This option is only available when <b>Confidence Interval(<i>s</i>)</b> is chosen.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Test_Methods"></a><span class="mw-headline">Test Methods</span></h2>
-
-  <p>To learn more about test methods, see the <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">algorithms page</a>.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Normal Approximation</th>
-
-      <td>Compute the p value and confidence interval in result with normal approximation normal distribution</td>
-    </tr>
-
-    <tr>
-      <th>Use pooled p for test</th>
-
-      <td>Specify to use a <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html#P_Value" title="UserGuide:Algorithm (Two sample proportion test)">pooled estimate of p</a> for the test when <b>Test Difference</b> is 0</td>
-    </tr>
-
-    <tr>
-      <th>Fisher's Exact Test</th>
-
-      <td>Compute the p value and confidence interval with the Fisher's exact test, which is based on the Binomial Test .</td>
-    </tr>
-  </table>
-
-  <h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
-
-  <p>Power Analysis check box: If checked, power will be computed for the porportion test.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Actual Power</th>
-
-      <td>If checked, actual power will be computed</td>
-    </tr>
-
-    <tr>
-      <th>Significance Level</th>
-
-      <td>Specify the significance level (<img src="../images/The_Two_Sample_Proportion_Dialog_Box/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex">) for power computation. This option is only available when either Actual Power or <i>Hypothetical Power</i> is checked.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Power</th>
-
-      <td>If checked, hypothetical power will be computed.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Sample Size(s)</th>
-
-      <td>Specifies the hypothetical sample size(s), for which power will be computed. This option is only available when <i>Hypothetical Power</i> is checked.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Outputs"></a><span class="mw-headline">Outputs</span></h2>
-
-  <p>Customize the output results of this analysis.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Output Results</th>
-
-      <td>Specify the output worksheet for test results</td>
-    </tr>
-  </table>
+﻿<h1 class="firstHeading">Dialog Test von Anteilen bei zwei Stichproben</h1><p class='urlname' style='display: none'>Two-Prop-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Proportion_Test"><span class="tocnumber">3</span> <span class="toctext">Test von Anteilen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog Test von Anteilen Test bei zwei Stichproben zu &ouml;ffnen:</p>
+<ol><li>Klicken Sie bei aktivem Arbeitsblatt auf <b>Statistik: Hypothesentests: Test von Anteilen bei zwei Stichproben</b>.</li></ol>
+<p><i>Siehe auch:</i></p>
+<ul><li><a href="../../UserGuide/Category/Two_Sample_Proportion_Test(Pro_Only).html" title="Category:Two Sample Proportion Test(Pro Only)">Einf&uuml;hrung: Test von Anteilen bei zwei Stichproben</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">Algorithmen: Test von Anteilen bei zwei Stichproben</a></li></ul>
+<p><br /></p>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Zusammengefasst</th>
+<td>F&uuml;hren Sie den Test mit Hilfe einer zusammenfassenden Statistik durch, die Sie manuell in den Dialog eingeben.<dl><dd><b>Anzahl der Ereignisse von Stichprobe1</b></dd></dl>
+<dl><dd>Die Anzahl der beobachteten &quot;Ereignisse&quot; in Stichprobe 1</dd></dl>
+<dl><dd><b>Stichprobenumfang von Stichprobe1</b></dd></dl>
+<dl><dd>Die Gesamtanzahl der Beobachtungen in Stichprobe 1</dd></dl>
+<dl><dd><b>Anzahl der Ereignisse von Stichprobe2</b></dd></dl>
+<dl><dd>Die Anzahl der beobachteten &quot;Ereignisse&quot; in Stichprobe 2</dd></dl>
+<dl><dd><b>Stichprobenumfang von Stichprobe2</b></dd></dl>
+<dl><dd>Die Gesamtanzahl der Beobachtungen in Stichprobe 2</dd></dl>
+</td></tr>
+<tr>
+<th>Roh</th>
+<td>
+<p>F&uuml;hren Sie den Test mit Hilfe zweier Datens&auml;tze durch, die aus &quot;Erfolgs-&quot; bzw. &quot;Fehler&quot;werten bestehen. Die Datens&auml;tze d&uuml;rfen nicht mehr als zwei eindeutige Werte enthalten.</p>
+<dl><dd><b>Form der Eingabedaten</b></dd>
+<dd>Legen Sie die Datenbereiche von Stichprobe 1 und Stichprobe 2 fest.</dd></dl>
+<dl><dd><dl><dd><b>Erster Datenbereich</b></dd></dl></dd></dl>
+<dl><dd><dl><dd><b>Zweiter Datenbereich</b></dd></dl></dd></dl>
+<dl><dd><b>Ereignis</b></dd></dl>
+<dl><dd>Der Datensatzwert, der das Ereignis bezeichnet</dd></dl>
+</td></tr>
+<tr>
+<th>Index</th>
+<td>
+<p>F&uuml;hren Sie den Test auf die Eingabedaten durch, die aus einer Stichprobendatenspalte und einer &bdquo;Gruppierung&ldquo;sspalte bestehen. Die Stichprobendatenspalte sollte in Form von &quot;Erfolg&quot; oder &quot;Fehler&quot; vorliegen und darf nicht mehr als zwei eindeutige Werte enthalten. Die Gruppierungsspalte sollte Informationen f&uuml;r die zwei Grundgesamtheiten von Interesse enthalten, indexiert (nach Zeilennummer) auf die Spalte der Stichprobendaten.</p>
+<dl><dd><b>Form der Eingabedaten</b></dd>
+<dd>Legen Sie eine Spalte f&uuml;r die Stichprobendaten und eine f&uuml;r die Gruppierung fest.</dd></dl>
+<dl><dd><dl><dd><b>Gruppenbereich</b></dd></dl></dd></dl>
+<dl><dd><dl><dd><b>Datenbereich</b></dd></dl></dd></dl>
+<dl><dd><b>Ereignis</b></dd></dl>
+<dl><dd>Der Datensatzwert, der das Ereignis bezeichnet</dd></dl>
+</td></tr></table>
+<h2><a name="Proportion_Test"></a><span class="mw-headline">Test von Anteilen</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Testdifferenz</th>
+<td>Die zu testende hypothetische Anteilsdifferenz (allgemein &quot;0&quot;).</td></tr>
+<tr>
+<th>Nullhypothese</th>
+<td>Die zu testende Nullhypothese</td></tr>
+<tr>
+<th>Alternativhypothese</th>
+<td>Optionen:<dl><dd><b>Anteil 1 - Anteil 2&lt;&gt; <i>Testdifferenz</i></b></dd></dl>
+<dl><dd>F&uuml;hren Sie einen zweiseitigen Test zur Hypothese durch, dass <i>Anteil1</i> - <i>Anteil2</i> = <i>Testdifferenz</i>.</dd></dl>
+<dl><dd><b>Anteil 1 - Anteil 2 &gt; <i>Testdifferenz</i></b></dd></dl>
+<dl><dd>F&uuml;hren Sie einen einseitigen Test nach oben zur Hypothese durch, dass Anteil1 - Anteil2 gr&ouml;&szlig;er ist als <i>Testdifferenz</i>.</dd></dl>
+<dl><dd><b>Anteil 1 - Anteil 2 &lt; <i>Testdifferenz</i></b></dd></dl>
+<dl><dd>F&uuml;hren Sie einen einseitigen Test nach unten zur Hypothese durch, dass Anteil1 - Anteil2 kleiner ist als <i>Testdifferenz</i>.</dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Das Signifikanzniveau des Tests</td></tr>
+<tr>
+<th>Kondenzintervall(e)</th>
+<td>Berechnen Sie die Konfidenzintervalle f&uuml;r die Anteildifferenzen.</td></tr>
+<tr>
+<th>Konfidenzniveau(s) in %</th>
+<td>Legen Sie die Konfidenzniveaus fest, f&uuml;r die die Konfidenzintervalle berechnet werden. Diese Option ist nur verf&uuml;gbar, wenn <b>Konfidenzintervall(e)</b> aktiviert ist.</td></tr>
+<tr>
+<th>Testmethode</th>
+<td>Um mehr &uuml;ber die Testmethoden zu erfahren, siehe die <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html" title="UserGuide:Algorithm (Two sample proportion test)">Seite zu den Algorithmen</a>.<ul><li><b>Normal-Approximation</b></li></ul>
+<dl><dd>Berechnen Sie den p-Wert und das Konfidenzintervall im Ergebnis der Approximation der Normalverteilung.</dd></dl>
+<ul><li><b>Gepooltes p f&uuml;r Test verwenden</b></li></ul>
+<dl><dd>Legen Sie fest, eine <a href="../../UserGuide/UserGuide/Algorithm_(Two_sample_proportion_test).html#P_Value" title="UserGuide:Algorithm (Two sample proportion test)">gepoolte Sch&auml;tzung von p</a> f&uuml;r den Test zu verwenden, wenn die <b>Testdifferenz</b> 0 ist.</dd></dl>
+<ul><li><b>Fishers exakter Test</b></li></ul>
+<dl><dd>Berechnen Sie den p-Wert und das Kondenzintervall mit Fishers exaktem Test, der auf dem Binomialtest beruht.</dd></dl>
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
+<p>Kontrollk&auml;stchen Trennsch&auml;rfeanalyse: Bei Aktivierung wird die Trennsch&auml;rfe f&uuml;r den Test von Anteilen berechnet.</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Tats&auml;chliche Trennsch&auml;rfe</th>
+<td>Ist dieses Kontrollk&auml;stchen aktiviert, wird die Ist-Trennsch&auml;rfe berechnet.</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Legen Sie das Signifikanzniveau (<img src="../images/The_Two_Sample_Proportion_Dialog_Box/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/>) f&uuml;r die Berechnung der Trennsch&auml;rfe fest. Diese Option ist nur verf&uuml;gbar, wenn entweder die tats&auml;chliche Trennsch&auml;rfe oder die <i>Hypothetische Trennsch&auml;rfe</i> aktiviert ist.</td></tr>
+<tr>
+<th>Hypothetische Trennsch&auml;rfe</th>
+<td>Ist dieses Kontrollk&auml;stchen aktiviert, wird die hypothetische Trennsch&auml;rfe berechnet.</td></tr>
+<tr>
+<th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
+<td>Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge fest, f&uuml;r den/die die Trennsch&auml;rfe berechnet wird. Diese Option ist nur verf&uuml;gbar, wenn <i>Hypothetische Trennsch&auml;rfe</i> aktiviert ist.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Ausgabe Ergebnisprotokoll</th>
+<td>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</td></tr>
+<tr>
+<th>Bericht der grafischen Zusammenfassung</th>
+<td>Legen Sie fest, ob der grafische Zusammenfassungsbericht angezeigt werden soll.</td></tr>
+<tr>
+<th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
+<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.</td></tr>
+<tr>
+<th>Ergebnisse ausgeben</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr>
+<tr>
+<th>Zeichnungsdaten ausgeben</th>
+<td>Legen Sie das Arbeitsblatt f&uuml;r die Ausgabe der Zeichnungsdatens&auml;tze fest.</td></tr></table>
+
+
+
+
+
+
+
+    

@@ -1,169 +1,93 @@
-﻿<h1 class="firstHeading">In Projektdateien suchen</h1>
+﻿<h1 class="firstHeading">In Projektdateien suchen</h1><p class='urlname' style='display: none'>Find-in-Project</p>
+<p><br /> Origin unterst&uuml;tzt das Hilfsmittel <b>In Projektdateien suchen</b>, um nach Inhalten innerhalb von Origin-Projektdateien (.opju, opj), wie Blattname, Notizen und Metadaten, zu suchen.</p><p>Um den Dialog <b>In Projektdateien suchen</b> zu &ouml;ffnen:</p>
+<ul><li>W&auml;hlen Sie <b>Bearbeiten: In Projekt suchen</b> im Origin-Men&uuml; aus.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie im oberen Bedienfeld des <b>Projekt Explorers</b> mit der rechten Maustaste und w&auml;hlen Sie <b>In Projektdateien suchen</b> im Kontextmen&uuml;.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie auf die Schaltfl&auml;che <b>In Projektdateien suchen</b> im Dialog <b>Projektbrowser</b>.</li></ul>
+<p>oder</p>
+<ul><li>Dr&uuml;cken Sie auf die Tastenkombination <b>Strg+Shift+F12</b> in der Origin-Projektdatei.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie mit der rechten Maustaste auf die graue Fl&auml;che des Origin-Arbeitsbereichs und w&auml;hlen Sie <b>In Projektdateien suchen</b> im Kontextmen&uuml;.</li></ul>
+<p>oder</p>
+<ul><li>Halten Sie die <b>Alt</b>-Taste und klicken Sie doppelt auf den Arbeitsbereich.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie im Dialog <b>Zuletzt verwendete Origin-Dateien</b> mit der rechten Maustaste auf die Datei und w&auml;hlen Sie <b>In Projektdateien suchen...</b>.</li></ul>
+<dl><dd><a  class="image"><img alt="Find in Project Files 01.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_01.png" width="865"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Find"><span class="tocnumber">1</span> <span class="toctext">Suchen</span></a><ul>
+<li class="toclevel-2 tocsection-2"><a href="#Case_Sensitive_Button"><span class="tocnumber">1.1</span> <span class="toctext">Schaltfl&auml;che Gro&szlig;- und Kleinschreibung beachten</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Match_Whole_Word_Button"><span class="tocnumber">1.2</span> <span class="toctext">Schaltfl&auml;che Ganzes Wort abgleichen</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Include_Data_Cells_.281st_March.29"><span class="tocnumber">1.3</span> <span class="toctext">Datenzellen einschlie&szlig;en (1. M&auml;rz)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Search_In"><span class="tocnumber">2</span> <span class="toctext">Suchen in</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Exclude_Large_Files"><span class="tocnumber">3</span> <span class="toctext">Gro&szlig;e Dateien ausschlie&szlig;en</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Look_In"><span class="tocnumber">4</span> <span class="toctext">Suchen in</span></a><ul>
+<li class="toclevel-2 tocsection-8"><a href="#Recent_Project"><span class="tocnumber">4.1</span> <span class="toctext">Zuletzt verwendete Projekte</span></a><ul>
+<li class="toclevel-3 tocsection-9"><a href="#Limit_Number_of_Recent_Files"><span class="tocnumber">4.1.1</span> <span class="toctext">Anzahl der zuletzt verwendeten Dateien beschr&auml;nken</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#File_Location"><span class="tocnumber">4.2</span> <span class="toctext">Dateispeicherort</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Including_Subfolders"><span class="tocnumber">4,3</span> <span class="toctext">Einschlie&szlig;lich Unterordner</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#List_Box"><span class="tocnumber">5</span> <span class="toctext">Listenfeld</span></a><ul>
+<li class="toclevel-2 tocsection-13"><a href="#Detailed_View"><span class="tocnumber">5.1</span> <span class="toctext">Detailansicht</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Color_Rows_by_File"><span class="tocnumber">5.2</span> <span class="toctext">Farbzeilen nach Datei</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Sort_Columns"><span class="tocnumber">5.3</span> <span class="toctext">Spalten sortieren</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Pause_or_Stop"><span class="tocnumber">6</span> <span class="toctext">Pause oder Stopp</span></a></li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>Find-in-Project</p>
+<h2><a name="Find"></a><span class="mw-headline">Suchen</span></h2>
+<p>Dieses Eingabefeld der Suche unterst&uuml;tzt Platzhalter (* und&nbsp;?).</p>
+<h3><a name="Case_Sensitive_Button"></a><span class="mw-headline">Schaltfl&auml;che Gro&szlig;- und Kleinschreibung beachten</span></h3>
+<p><a  class="image"><img alt="Case Sensitive Button.png" src="../images/Find_in_Project_Files/Case_Sensitive_Button.png" width="26"  /></a> Verwenden Sie diese Schaltfl&auml;che, um festzulegen, ob bei der Suche die Gro&szlig;- und Kleinschreibung ber&uuml;cksichtigt wird oder nicht.</p>
+<h3><a name="Match_Whole_Word_Button"></a><span class="mw-headline">Schaltfl&auml;che Ganzes Wort abgleichen</span></h3>
+<p><a  class="image"><img alt="Match Whole Word Button.png" src="../images/Find_in_Project_Files/Match_Whole_Word_Button.png" width="26"  /></a> Verwenden Sie diese Schaltfl&auml;che, um festzulegen, ob bei der Suche das ganze Wort ber&uuml;cksichtigt wird oder nicht.</p>
+<h3><a name="Include_Data_Cells_.281st_March.29"></a><span class="mw-headline">Datenzellen einschlie&szlig;en (1. M&auml;rz)</span></h3>
+<p>Legen Sie fest, ob der Wert in den Zellen unter den Spalten gesucht werden soll oder nicht. Wenn es mehrere Datenzellen gibt, die mit dem Wert in Suchobjekt &uuml;bereinstimmen, wird nur die eine Information in dem Abschnitt des Ausgabeergebnisses gezeigt.</p><p><br /></p>
+<h2><a name="Search_In"></a><span class="mw-headline">Suchen in</span></h2>
+<p>Legen Sie den Suchbereich in <b>Alle</b> / <b>Dateiname</b> / <b>Mappen</b> (einschlie&szlig;lich Zellennotizen) / <b>Diagramme</b> / <b>Notizen</b> / <b>Ordnernamen</b> fest.</p>
+<h2><a name="Exclude_Large_Files"></a><span class="mw-headline">Gro&szlig;e Dateien ausschlie&szlig;en</span></h2>
+<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um gro&szlig;e Dateien auszuschlie&szlig;en, wenn Sie versuchen, den Suchvorgang zu beschleunigen. Sie k&ouml;nnen die Beschr&auml;nkung der Dateigr&ouml;&szlig;e im Feld auf der rechten Seite eingeben.</p>
+<h2><a name="Look_In"></a><span class="mw-headline">Suchen in</span></h2>
+<h3><a name="Recent_Project"></a><span class="mw-headline">Zuletzt verwendete Projekt</span></h3>
+<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um nach Inhalten in den zuletzt verwendeten Projekten zu suchen.</p>
+<h4><a name="Limit_Number_of_Recent_Files"></a><span class="mw-headline">Anzahl der zuletzt verwendeten Dateien beschr&auml;nken</span></h4>
+<p>Wenn die Option <b>Zuletzt verwendetes Projekt</b> aktiviert ist, kann nur die festgelegte Anzahl der zuletzt verwendeten Projekte durchsucht werden.</p>
+<h3><a name="File_Location"></a><span class="mw-headline">Dateispeicherort</span></h3>
+<p>Sie k&ouml;nnen den Pfad des Dateispeicherorts festlegen. Es wird dann nach Inhalten in den Projektdateien an diesem spezifischen Speicherort gesucht.</p>
+<h3><a name="Including_Subfolders"></a><span class="mw-headline">Einschlie&szlig;lich Unterordner</span></h3>
+<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um nach Inhalten nicht nur in dem Ordner des angegebenen Pfads zu suchen, sondern auch in den entsprechenden Unterordnern.</p>
+<h2><a name="List_Box"></a><span class="mw-headline">Listenfeld</span></h2>
+<p>Wenn der Cursor das Suchergebnis bewegt wird, werden ihre jeweiligen Tooltipps gezeigt.</p>
+<ul><li><b>Pfad</b>/<b>Modifiziert</b>: Zeigt den Inhalt dieses Elements.</li>
+<li><b>Name</b>: Zeigt das Miniaturbild der Datei.</li>
+<li><b>Fundinfo</b> / <b>Gr&ouml;&szlig;e</b>/ <b>Anzahl</b>: Zeigt die Detailinformationen der <b>Fundinfo</b>. Nach Aktivieren der <b>Detailansicht</b> werden durch das Bewegen des Cursors &uuml;ber das Ergebnis von <b>Speicherort</b>/<b>Element</b>/<b>&Uuml;bereinstimmender Typ</b>/<b>Ordner</b>/ <b>&Uuml;bereinstimmung</b> die gleichen Detailinformationen wie f&uuml;r <b>Fundinfo</b> gezeigt.</li></ul>
+<dl><dd><a  class="image"><img alt="Find in Project Files Tooltips.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_Tooltips.png" width="827"  /></a></dd></dl>
+<h3><a name="Detailed_View"></a><span class="mw-headline">Detaillierte Ansicht</span></h3>
+<p>Wenn in der gleichen Projektdatei mehrere Ergebnisse gefunden werden, wird bei deaktivierter Option <b>Detaillierte Ansicht</b> nur ein Element im Listenfeld gezeigt. Es wird auch die Anzahl der im Projekt gefundenen Elemente in <b>Anzahl</b> angezeigt.</p>
+<ul><li>Deaktivieren Sie die Option <b>Detaillierte Ansicht</b>. Sie zeigt die Spalten <b>Pfad</b>/ <b>Name</b> /<b>Modifiziert</b> /<b>Gr&ouml;&szlig;e</b>/ <b>Anzahl</b>/ <b>Fundinfo</b> im Listenfeld.</li></ul>
+<ul><li>Aktivieren Sie die Option <b>Detaillierte Ansicht</b>. Sie zeigt die Spalten <b>Pfad</b>/ <b>Name</b> /<b>Modifiziert</b>/<b>Gr&ouml;&szlig;e</b>/ <b>Speicherort</b>/ <b>Element</b>/ <b>Typ</b>/ <b>Ordner</b>/<b>&Uuml;bereinstimmung</b> im Listenfeld.</li></ul>
+<dl><dd><b>Hinweis</b>: Wenn Text ohne einer Entsprechung des gesamten Wortes gefunden wird, wird das ganze Wort in der Spalte <b>&Uuml;bereinstimmung</b> angegeben.</dd>
+<dd><a  class="image"><img alt="Find in Project Files 02.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_02.png" width="950"  /></a></dd></dl>
+<h3><a name="Color_Rows_by_File"></a><span class="mw-headline">Farbzeilen nach Datei</span></h3>
+<p>Nach dem Aktivieren der Option <b>Detaillierte Ansicht</b> k&ouml;nnen Sie auf dieses Kontrollk&auml;stchen klicken, um die Projektinformation f&uuml;r jede Datei zu unterscheiden.</p>
+<dl><dd><a  class="image"><img alt="Find in Project Files 03.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_03.png" width="901"  /></a></dd></dl>
+<h3><a name="Sort_Columns"></a><span class="mw-headline">Spalten sortieren</span></h3>
+<p>Klicken Sie auf den Header der Spalten im Listenfeld, um die Suchergebnisse nach Spalte zu sortieren.</p>
+<dl><dd><a  class="image"><img alt="Find in Project Files 04.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_04.png" width="470"  /></a></dd></dl>
+<h2><a name="Pause_or_Stop"></a><span class="mw-headline">Pause oder Stopp</span></h2>
+<p>Wenn der Suchvorgang (zu) langsam ist, k&ouml;nnen Sie auf die Schaltfl&auml;che <b>Pause</b> oder <b>Stopp</b> klicken, um ihn anzuhalten. Nach Klicken auf die Schaltfl&auml;che <b>Pause</b> k&ouml;nnen Sie auf die Schaltfl&auml;che <b>Fortsetzen</b> klicken, um den Suchvorgang wieder aufzunehmen.</p>
 
-  <p>Origin unterstützt das Hilfsmittel <b>In Projektdateien suchen</b>, um nach Inhalten innerhalb von Origin-Projektdateien (.opju, opj), wie Blattname, Notizen und Metadaten, zu suchen.</p>
 
-  <p>Um den Dialog <b>In Projektdateien suchen</b> zu öffnen:</p>
 
-  <ul>
-    <li>Wählen Sie <b>Bearbeiten: In Projekt suchen</b> im Origin-Menü aus.</li>
-  </ul>
 
-  <p>oder</p>
 
-  <ul>
-    <li>Klicken Sie im oberen Bedienfeld des <b>Projekt Explorers</b> mit der rechten Maustaste und wählen Sie <b>In Projektdateien suchen</b> im Kontextmenü.</li>
-  </ul>
 
-  <p>oder</p>
-
-  <ul>
-    <li>Klicken Sie auf die Schaltfläche <b>In Projektdateien suchen</b> im Dialog <b>Projektbrowser</b>.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Drücken Sie auf die Tastenkombination <b>Strg+Shift+F12</b> in der Origin-Projektdatei.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Klicken Sie mit der rechten Maustaste auf die graue Fläche des Origin-Arbeitsbereichs und wählen Sie <b>In Projektdateien suchen</b> im Kontextmenü.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Halten Sie die <b>Alt</b>-Taste und klicken Sie doppelt auf den Arbeitsbereich.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Klicken Sie im Dialog <b>Zuletzt verwendete Origin-Dateien</b> mit der rechten Maustaste auf die Datei und wählen Sie <b>In Projektdateien suchen...</b>.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Find in Project Files 01.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_01.png" width="865"></a></dd>
-  </dl>
-
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
-
-    <ul>
-      <li class="toclevel-1 tocsection-1">
-        <a href="#Find"><span class="tocnumber">1</span> <span class="toctext">Suchen</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-2"><a href="#Case_Sensitive_Button"><span class="tocnumber">1.1</span> <span class="toctext">Schaltfläche Groß- und Kleinschreibung beachten</span></a></li>
-
-          <li class="toclevel-2 tocsection-3"><a href="#Match_Whole_Word_Button"><span class="tocnumber">1.2</span> <span class="toctext">Schaltfläche Ganzes Wort abgleichen</span></a></li>
-        </ul>
-      </li>
-
-      <li class="toclevel-1 tocsection-4"><a href="#Search_In"><span class="tocnumber">2</span> <span class="toctext">Suchen in</span></a></li>
-
-      <li class="toclevel-1 tocsection-5"><a href="#Exclude_Large_Files"><span class="tocnumber">3</span> <span class="toctext">Große Dateien ausschließen</span></a></li>
-
-      <li class="toclevel-1 tocsection-6">
-        <a href="#Look_In"><span class="tocnumber">4</span> <span class="toctext">Suchen in</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-7"><a href="#Recent_Project"><span class="tocnumber">4.1</span> <span class="toctext">Zuletzt verwendete Projekte</span></a></li>
-
-          <li class="toclevel-2 tocsection-8"><a href="#File_Location"><span class="tocnumber">4.2</span> <span class="toctext">Dateispeicherort</span></a></li>
-        </ul>
-      </li>
-
-      <li class="toclevel-1 tocsection-9"><a href="#Including_Subfolders"><span class="tocnumber">5</span> <span class="toctext">Einschließlich Unterordner</span></a></li>
-
-      <li class="toclevel-1 tocsection-10">
-        <a href="#List_Box"><span class="tocnumber">6</span> <span class="toctext">Listenfeld</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-11"><a href="#Detailed_View"><span class="tocnumber">6.1</span> <span class="toctext">Detailansicht</span></a></li>
-
-          <li class="toclevel-2 tocsection-12"><a href="#Color_Rows_by_File"><span class="tocnumber">6.2</span> <span class="toctext">Farbzeilen nach Datei</span></a></li>
-
-          <li class="toclevel-2 tocsection-13"><a href="#Sort_Columns"><span class="tocnumber">6.3</span> <span class="toctext">Spalten sortieren</span></a></li>
-        </ul>
-      </li>
-
-      <li class="toclevel-1 tocsection-14"><a href="#Pause_or_Stop"><span class="tocnumber">7</span> <span class="toctext">Pause oder Stopp</span></a></li>
-    </ul>
-  </div>
-
-  <h2><a name="Find"></a><span class="mw-headline">Suchen</span></h2>
-
-  <p>Dieses Eingabefeld der Suche unterstützt Platzhalter (* und&#160;?).</p>
-
-  <h3><a name="Case_Sensitive_Button"></a><span class="mw-headline">Schaltfläche Groß- und Kleinschreibung beachten</span></h3>
-
-  <p><a class="image"><img alt="Case Sensitive Button.png" src="../images/Find_in_Project_Files/Case_Sensitive_Button.png" width="26"></a> Verwenden Sie diese Schaltfläche, um festzulegen, ob bei der Suche die Groß- und Kleinschreibung berücksichtigt wird oder nicht.</p>
-
-  <h3><a name="Match_Whole_Word_Button"></a><span class="mw-headline">Schaltfläche Ganzes Wort abgleichen</span></h3>
-
-  <p><a class="image"><img alt="Match Whole Word Button.png" src="../images/Find_in_Project_Files/Match_Whole_Word_Button.png" width="26"></a> Verwenden Sie diese Schaltfläche, um festzulegen, ob bei der Suche das ganze Wort berücksichtigt wird oder nicht.</p>
-
-  <h2><a name="Search_In"></a><span class="mw-headline">Suchen in</span></h2>
-
-  <p>Legen Sie den Suchbereich in <b>Alle</b>/ <b>Dateiname</b>/ <b>Mappen</b>/ <b>Diagramme</b>/ <b>Notizen</b>/ <b>Ordnernamen</b> fest.</p>
-
-  <h2><a name="Exclude_Large_Files"></a><span class="mw-headline">Große Dateien ausschließen</span></h2>
-
-  <p>Aktivieren Sie dieses Kontrollkästchen, um große Dateien auszuschließen, wenn Sie versuchen, den Suchvorgang zu beschleunigen. Sie können die Beschränkung der Dateigröße im Feld auf der rechten Seite eingeben.</p>
-
-  <h2><a name="Look_In"></a><span class="mw-headline">Suchen in</span></h2>
-
-  <h3><a name="Recent_Project"></a><span class="mw-headline">Zuletzt verwendete Projekt</span></h3>
-
-  <p>Aktivieren Sie dieses Kontrollkästchen, um nach Inhalten in den zuletzt verwendeten Projekten zu suchen.</p>
-
-  <h3><a name="File_Location"></a><span class="mw-headline">Dateispeicherort</span></h3>
-
-  <p>Sie können den Pfad des Dateispeicherorts festlegen. Es wird dann nach Inhalten in den Projektdateien an diesem spezifischen Speicherort gesucht.</p>
-
-  <h2><a name="Including_Subfolders"></a><span class="mw-headline">Einschließlich Unterordner</span></h2>
-
-  <p>Aktivieren Sie dieses Kontrollkästchen, um nach Inhalten nicht nur in dem Ordner des angegebenen Pfads zu suchen, sondern auch in den entsprechenden Unterordnern.</p>
-
-  <h2><a name="List_Box"></a><span class="mw-headline">Listenfeld</span></h2>
-
-  <h3><a name="Detailed_View"></a><span class="mw-headline">Detaillierte Ansicht</span></h3>
-
-  <ul>
-    <li>Deaktivieren Sie die Option <b>Detailansicht</b>. Sie zeigt die Spalten <b>Pfad</b>/ <b>Name</b> /<b>Modifiziert</b> /<b>Größe</b>/ <b>Anzahl</b>/ <b>Fundinfo</b> im Listenfeld.</li>
-  </ul>
-
-  <ul>
-    <li>Aktivieren Sie die Option <b>Detailansicht</b>. Sie zeigt die Spalten <b>Pfad</b>/ <b>Name</b> /<b>Modifiziert</b>/<b>Größe</b>/ <b>Speicherort</b>/ <b>Element</b>/ <b>Typ</b>/ <b>Ordner</b> im Listenfeld.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Find in Project Files 02.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_02.png" width="896"></a></dd>
-  </dl>
-
-  <h3><a name="Color_Rows_by_File"></a><span class="mw-headline">Farbzeilen nach Datei</span></h3>
-
-  <p>Nach dem Aktivieren der Option <b>Detailansicht</b> können Sie auf dieses Kontrollkästchen klicken, um die Projektinformation in jeder Zeile zu unterscheiden.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Find in Project Files 03.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_03.png" width="896"></a></dd>
-  </dl>
-
-  <h3><a name="Sort_Columns"></a><span class="mw-headline">Spalten sortieren</span></h3>
-
-  <p>Klicken Sie auf den Header der Spalten im Listenfeld, um die Suchergebnisse nach Spalte zu sortieren.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Find in Project Files 04.png" src="../images/Find_in_Project_Files/Find_in_Project_Files_04.png" width="470"></a></dd>
-  </dl>
-
-  <h2><a name="Pause_or_Stop"></a><span class="mw-headline">Pause oder Stopp</span></h2>
-
-  <p>Wenn der Suchvorgang (zu) langsam ist, können Sie auf die Schaltfläche <b>Pause</b> oder <b>Stopp</b> klicken, um ihn anzuhalten. Nach Klicken auf die Schaltfläche <b>Pause</b> können Sie auf die Schaltfläche <b>Fortsetzen</b> klicken, um den Suchvorgang wieder aufzunehmen.</p>
+    

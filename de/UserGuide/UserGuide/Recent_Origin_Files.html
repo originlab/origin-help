@@ -1,277 +1,100 @@
-﻿<h1 class="firstHeading">Zuletzt verwendete Origin-Dateien</h1>
-
-  <p class='urlname' style='display: none'>Recent-Origin-Files</p>
-
-  <p><br>
-  Der Dialog Zuletzt verwendete Origin-Dateien zeigt die Origin-Projektdateien (*.opj(u)) und Unterfensterdateien (*.ogw(u);*.ogg(u);*.ogm(u)). Er hilft Ihnen dabei, durch die zuletzt verwendeten Origin-Dateien zu navigieren und sie zu finden.</p>
-
-  <p>Um den Dialog <b>Zuletzt verwendete Origin-Dateien</b> zu öffnen:</p>
-
-  <ul>
-    <li>Wählen Sie <b>Datei: Zuletzt verwendete Projekte: Zuletzt verwendete Origin-Dateien</b> im Origin-Menü.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Klicken Sie doppelt auf den grauen Arbeitsbereich von Origin.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Klicken Sie mit der rechten Maustaste auf die leere Fläche der Origin-Bedienoberfläche und wählen Sie <b>Zuletzt verwendete Origin-Dateien</b> im Kontextmenü.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Drücken Sie die Tastenkombination <b>Strg+F11</b> in Origin.</li>
-  </ul>
-
-  <p>oder</p>
-
-  <ul>
-    <li>Führen Sie das folgende LabTalk-Skript im Skriptfenster aus:.</li>
-  </ul>
-  <pre class="lt" style="font-family:monospace;">
-doc <span style="color: #000080;">-</span>mrf;
-</pre>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Verwenden Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">Systemvariablen</a>, um zu steuern, ob ein Doppelklick in den Arbeitsbereich den Dialog <b>Zuletzt verwendete Origin-Dateien</b> und Strg + Doppelklick den <b>Projektbrowser</b> öffnet.</p>
-
-        <ul>
-          <li><b>@DDW=0</b> (Standard): Beide Doppelklick-Kombis werden unterstützt, um den Dialog <b>Zuletzt verwendete Origin-Dateien</b> und den <b>Projektbrowser</b> zu öffnen.</li>
-
-          <li><b>@DDW=1</b>: Beide Doppelklick-Kombis werden deaktiviert.</li>
-
-          <li><b>@DDW=2</b> (Standard): Der Doppelklick zum Öffnen des Dialogs <b>Zuletzt verwendete Origin-Dateien</b> wird deaktiviert, aber Strg+Doppelklick zum Öffnen des <b>Projektbrowsers</b> ist aktiviert.</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p> </p>
-
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
-
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Previews"><span class="tocnumber">1</span> <span class="toctext">Vorschau</span></a></li>
-
-      <li class="toclevel-1 tocsection-2"><a href="#Open_the_Files"><span class="tocnumber">2</span> <span class="toctext">Dateien öffnen</span></a></li>
-
-      <li class="toclevel-1 tocsection-3"><a href="#Find_in_Project_Files"><span class="tocnumber">3</span> <span class="toctext">In Projektdateien suchen</span></a></li>
-
-      <li class="toclevel-1 tocsection-4"><a href="#Specify_the_displaying_Files"><span class="tocnumber">4</span> <span class="toctext">Angezeigte Dateien festlegen</span></a></li>
-
-      <li class="toclevel-1 tocsection-5"><a href="#Copy_Information_of_the_Recent_Files"><span class="tocnumber">5</span> <span class="toctext">Informationen der zuletzt verwendeten Dateien kopieren</span></a></li>
-
-      <li class="toclevel-1 tocsection-6"><a href="#Remove_the_file_from_this_list"><span class="tocnumber">6</span> <span class="toctext">Datei aus dieser Liste entfernen</span></a></li>
-
-      <li class="toclevel-1 tocsection-7"><a href="#Pin_Files_to_Top"><span class="tocnumber">7</span> <span class="toctext">Dateien oben festpinnen</span></a></li>
-
-      <li class="toclevel-1 tocsection-8"><a href="#Change_the_Display_or_the_Order_of_Columns_for_the_list"><span class="tocnumber">8</span> <span class="toctext">Anzeige oder Ordnung der Spalten für die Liste ändern</span></a></li>
-
-      <li class="toclevel-1 tocsection-9"><a href="#Search_in_Recent_Origin_Files"><span class="tocnumber">9</span> <span class="toctext">In zuletzt verwendete Origin-Dateien suchen</span></a></li>
-
-      <li class="toclevel-1 tocsection-10">
-        <a href="#Recent_Origin_Files_Menu"><span class="tocnumber">10</span> <span class="toctext">Menü der zuletzt verwendeten Origin-Dateien</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-11"><a href="#Customize_the_Fly-out_Menu"><span class="tocnumber">10.1</span> <span class="toctext">Ausklappmenü benutzerdefiniert anpassen</span></a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <h2><a name="Previews"></a><span class="mw-headline">Vorschau</span></h2>
-
-  <p>Wenn der Cursor auf einem Origin-Dateinamen platziert ist, zeigt er eine Popup-Vorschau für die Grafik/Arbeitsmappe in dem Projekt mit dem Projektnamen an.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files preview.png" src="../images/Recent_Origin_Files/830px-Recent_Origin_Files_preview.png" width="830"></a></dd>
-  </dl>
-
-  <h2><a name="Open_the_Files"></a><span class="mw-headline">Dateien öffnen</span></h2>
-
-  <ul>
-    <li>Klicken Sie doppelt auf die Zeile, um die Origin-Datei zu öffnen. Wenn die Datei ein Projekt ist, wird das aktuelle Projekt geschlossen, um diese ausgewählte Datei zu öffnen. Wenn die Datei eine Unterfensterdatei ist, wird sie im aktuellen Projekt geöffnet.</li>
-  </ul>
-
-  <ul>
-    <li>Klicken Sie mit der rechten Maustaste auf die Datei:
-
-      <ul>
-        <li>Wählen Sie <b>Öffnen</b>, um die Datei zu öffnen. Wenn die Datei ein Projekt ist, wird das aktuelle Projekt geschlossen, um diese ausgewählte Datei zu öffnen. Wenn die Datei eine Unterfensterdatei ist, wird sie im aktuellen Projekt geöffnet.</li>
-
-        <li>Wählen Sie <b>Projekt anhängen</b>, um die Datei an den Ordner der ersten Ebene des aktuellen Projekts anzuhängen.</li>
-
-        <li>Wählen Sie <b>In neuer Instanz öffnen</b>, um die Datei in einem neuen Projekt zu öffnen.</li>
-
-        <li>Wählen Sie <b>Übergeordneten Ordner öffnen</b>, um den Ordner zu öffnen, in dem die Datei gespeichert ist.</li>
-      </ul>
-    </li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Open File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Open_File.png" width="750"></a></dd>
-  </dl>
-
-  <h2><a name="Find_in_Project_Files"></a><span class="mw-headline">In Projektdateien suchen</span></h2>
-
-  <p>Klicken Sie mit der rechten Maustaste auf die Datei und wählen Sie <b>In Projektdateien suchen...</b> im Kontextmenü, um den <a href="../../UserGuide/UserGuide/Find_in_Project_Files.html" title="UserGuide:Find in Project Files">Dialog <b>In Projektdateien suchen</b></a> zu öffnen.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Find File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Find_File.png" width="785"></a></dd>
-  </dl>
-
-  <h2><a name="Specify_the_displaying_Files"></a><span class="mw-headline">Angezeigte Dateien festlegen</span></h2>
-
-  <p>Um die angezeigten Dateien festzulegen, können Sie mit der rechten Maustaste auf eine Datei (Dateien) oder auf den leeren Bereich der Dateiliste klicken und dann die folgende Option auswählen oder die Tastenkombination verwenden.</p>
-
-  <ul>
-    <li><b>Nur Projekte zeigen</b> (Strg+P)</li>
-
-    <li><b>Nur Mappen zeigen</b> (Strg+ B)</li>
-
-    <li><b>Nur Grafiken zeigen</b> (Strg+ G)</li>
-
-    <li><b>Fehlende Dateien zeigen</b> (Strg+M): Standardmäßig werden fehlende Dateien nicht im Dialog gezeigt. Aktivieren Sie diese Option, um sie zu zeigen. Im Fall der fehlenden Dateien unterstützt es auch das Öffnen ihres vorherigen Speicherorts.</li>
-  </ul>
-
-  <h2><a name="Copy_Information_of_the_Recent_Files"></a><span class="mw-headline">Informationen der zuletzt verwendeten Dateien kopieren</span></h2>
-
-  <p>Um die Informationen der zuletzt verwendeten Dateien zu kopieren, können Sie mit der rechten Maustaste auf die Datei (Dateien) klicken und dann die folgende Option auswählen oder die Tastenkombination verwenden.</p>
-
-  <ul>
-    <li><b>Dateiname kopieren</b> (Strg+F)</li>
-
-    <li><b>Vollständigen Pfad kopieren</b> (Strg+C)</li>
-
-    <li><b>Ganze Zeile kopieren</b> (Strg+W)</li>
-  </ul>
-
-  <p> </p>
-
-  <h2><a name="Remove_the_file_from_this_list"></a><span class="mw-headline">Datei aus dieser Liste entfernen</span></h2>
-
-  <p>Wählen Sie eine oder mehrere Dateien, klicken Sie mit der rechten Maustaste auf sie und wählen Sie <b>Aus Liste entfernen</b>, um die Datei(en) in diesem Dialog zu entfernen.</p>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Sie können die Tasten <b>Strg+A</b> verwenden, um alle Dateien in der Liste auszuwählen. Es wird auch die Verwendung von <b>Strg+Z</b> und <b>Strg+Y</b> unterstützt, um diese Operation rückgängig zu machen und zu wiederholen.</p>
-      </td>
-    </tr>
-  </table>
-
-  <p> </p>
-
-  <h2><a name="Pin_Files_to_Top"></a><span class="mw-headline">Dateien oben festpinnen</span></h2>
-
-  <p>Wählen Sie eine oder mehrere Dateien, klicken Sie mit der rechten Maustaste auf sie und wählen Sie <b>Oben festpinnen</b>, um die Datei(en) in diesem Dialog oben anzupinnen. Der Hintergrund der Zeilen dieser Dateien wird mit gelber Farbe gefüllt.</p>
-
-  <p>Klicken Sie mit der rechten Maustaste auf die oben festgepinnten Dateien und wählen Sie <b>Lösen</b>. Die Dateien folgen dann der Sortierung nach Spalte in diesem Dialog.</p>
-
-  <p> </p>
-
-  <h2><a name="Change_the_Display_or_the_Order_of_Columns_for_the_list"></a><span class="mw-headline">Anzeige oder Ordnung der Spalten für die Liste ändern</span></h2>
-
-  <ul>
-    <li>Klicken Sie mit der rechten Maustaste auf den Bereich des Spaltenkopfs und aktivieren bzw. deaktivieren Sie eine Überschrift, die angezeigt oder ausgeblendet werden soll.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Header.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Header.png" width="930"></a></dd>
-  </dl>
-
-  <ul>
-    <li>Um die vollständigen Informationen von jeder Zeile in einer Spalte anzuzeigen, können Sie mit der rechten Maustaste auf den Spaltenkopf klicken und <b>Spaltengröße anpassen</b> auswählen. Wenn Sie auf <b>Größe aller Spalten anpassen</b> klicken:</li>
-  </ul>
-
-  <ul>
-    <li>Ziehen Sie an den Spaltenüberschriften, um sie neu zu ordnen.</li>
-  </ul>
-
-  <ul>
-    <li>Das Anpassen der Spaltenköpfe wird für die später Anwendung beibehalten.</li>
-  </ul>
-
-  <h2><a name="Search_in_Recent_Origin_Files"></a><span class="mw-headline">In zuletzt verwendete Origin-Dateien suchen</span></h2>
-
-  <ul>
-    <li>Geben Sie die Zeichenkette ein, um die Dateien nach Dateiname zu suchen.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Search 01.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_01.png" width="771"></a></dd>
-  </dl>
-
-  <ul>
-    <li>Platzhalter (* und ?) werden unterstützt wie <i><b>*abc</b></i>, um nach Ende zu suchen.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Search 02.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_02.png" width="771"></a></dd>
-  </dl>
-
-  <ul>
-    <li>Verwenden Sie <i><b>\Abc,</b></i>, um nach der Zeichenkette im Pfad zu suchen.</li>
-  </ul>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Origin Files Search 03.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_03.png" width="845"></a></dd>
-  </dl>
-
-  <p> </p>
-
-  <h2><a name="Recent_Origin_Files_Menu"></a><span class="mw-headline">Menü der zuletzt verwendeten Origin-Dateien</span></h2>
-
-  <p>Wenn Sie im Menü <b>Datei: Zuletzt verwendete Projekte</b> wählen, finden Sie die 15 zuletzt verwendeten Proejekte aufgelistet im Ausklappmenü. Klicken Sie auf den Projektnamen, um das zuletzt verwendete Projekt einfach erneut zu öffnen. Wenn dieses Menü erweitert ist, können Sie auf die Tastenkombination des Projekts drücken, um es erneut zu öffnen.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Projects menu.png" src="../images/Recent_Origin_Files/Recent_Projects_menu.png" width="826"></a></dd>
-  </dl>
-
-  <h5><a name="Customize_the_Fly-out_Menu"></a><span class="mw-headline">Ausklappmenü benutzerdefiniert anpassen</span></h5>
-
-  <p>Wählen Sie <b>Benutzerdefiniert anpassen...</b> im Kontextmenü, um den Dialog <b>Zuletzt verwendete Projekte</b> zu öffnen. Sie können die Anzahl der zuletzt verwendeten Projekte, die im Menü angezeigt werden, ändern und festlegen, ob der Dateipfad und die Tastenkombination der Dateien gezeigt wird. Alle Änderungen werden beim nächsten Verwenden des Menüs wirksam.</p>
-
-  <dl>
-    <dd><a class="image"><img alt="Recent Projec dialog.png" src="../images/Recent_Origin_Files/Recent_Projec_dialog.png" width="340"></a></dd>
-  </dl>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <ul>
-          <li>Wenn der Dateipfad im Menü verborgen ist, platzieren Sie den Cursor auf dem Dateinamen. Der Pfad sollte dann im Tooltipp und auf der Statusleiste gezeigt werden.</li>
-        </ul>
-
-        <ul>
-          <li>Durch Verwenden der <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">Systemvariablen</a> kann dieses Ausklappmenü auch benutzerdefiniert angepasst werden.
-
-            <ul>
-              <li><b>@MRP</b>: Sie legen die Anzahl der zuletzt verwendeten Projektelemente fest. Standard ist @MRP=15.</li>
-
-              <li><b>@MRPHP</b>: Sie legen fest, ob der Dateipfad gezeigt wird. Standard ist @MRPHP=0, der Dateipfad wird im Menü gezeigt.</li>
-
-              <li><b>@MRPA</b>: Sie legen fest, ob die Tastenkombination gezeigt wird. Standard ist @MRPA=1, die Tastenkombination wird im Menü gezeigt.</li>
-            </ul>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+﻿<h1 class="firstHeading">Zuletzt verwendete Origin-Dateien</h1><p class='urlname' style='display: none'>Recent-Origin-Files</p>
+<p><br /> Der Dialog Zuletzt verwendete Origin-Dateien zeigt die Origin-Projektdateien (*.opj(u)) und Unterfensterdateien (*.ogw(u);*.ogg(u);*.ogm(u)). Er hilft Ihnen dabei, durch die zuletzt verwendeten Origin-Dateien zu navigieren und sie zu finden.</p><p>Um den Dialog <b>Zuletzt verwendete Origin-Dateien</b> zu &ouml;ffnen:</p>
+<ul><li>W&auml;hlen Sie <b>Datei: Zuletzt verwendete Projekte: Zuletzt verwendete Origin-Dateien</b> im Origin-Men&uuml;.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie doppelt auf den grauen Arbeitsbereich von Origin.</li></ul>
+<p>oder</p>
+<ul><li>Klicken Sie mit der rechten Maustaste auf die leere Fl&auml;che der Origin-Bedienoberfl&auml;che und w&auml;hlen Sie <b>Zuletzt verwendete Origin-Dateien</b> im Kontextmen&uuml;.</li></ul>
+<p>oder</p>
+<ul><li>Dr&uuml;cken Sie die Tastenkombination <b>Strg+F11</b> in Origin.</li></ul>
+<p>oder</p>
+<ul><li>F&uuml;hren Sie das folgende LabTalk-Skript im Skriptfenster aus:.</li></ul>
+<pre class="lt" style="font-family:monospace;">doc <span style="color: #000080;">-</span>mrf;</pre>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><p>Verwenden Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">Systemvariablen</a>, um zu steuern, ob ein Doppelklick in den Arbeitsbereich den Dialog <b>Zuletzt verwendete Origin-Dateien</b> und Strg + Doppelklick den <b>Projektbrowser</b> &ouml;ffnet.</p>
+<ul><li><b>@DDW=0</b> (Standard): Beide Doppelklick-Kombis werden unterst&uuml;tzt, um den Dialog <b>Zuletzt verwendete Origin-Dateien</b> und den <b>Projektbrowser</b> zu &ouml;ffnen.</li>
+<li><b>@DDW=1</b>: Beide Doppelklick-Kombis werden deaktiviert.</li>
+<li><b>@DDW=2</b> (Standard): Der Doppelklick zum &Ouml;ffnen des Dialogs <b>Zuletzt verwendete Origin-Dateien</b> wird deaktiviert, aber Strg+Doppelklick zum &Ouml;ffnen des <b>Projektbrowsers</b> ist aktiviert.</li></ul>
+</td></tr></table>
+<p><br /></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Previews"><span class="tocnumber">1</span> <span class="toctext">Vorschau</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Open_the_Files"><span class="tocnumber">2</span> <span class="toctext">Dateien &ouml;ffnen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Find_in_Project_Files"><span class="tocnumber">3</span> <span class="toctext">In Projektdateien suchen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Specify_the_displaying_Files"><span class="tocnumber">4</span> <span class="toctext">Angezeigte Dateien festlegen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Copy_Information_of_the_Recent_Files"><span class="tocnumber">5</span> <span class="toctext">Informationen der zuletzt verwendeten Dateien kopieren</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Remove_the_file_from_this_list"><span class="tocnumber">6</span> <span class="toctext">Datei aus dieser Liste entfernen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Pin_Files_to_Top"><span class="tocnumber">7</span> <span class="toctext">Dateien oben festpinnen</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Change_the_Display_or_the_Order_of_Columns_for_the_list"><span class="tocnumber">8</span> <span class="toctext">Anzeige oder Ordnung der Spalten f&uuml;r die Liste &auml;ndern</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Search_in_Recent_Origin_Files"><span class="tocnumber">9</span> <span class="toctext">In zuletzt verwendete Origin-Dateien suchen</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Recent_Origin_Files_Menu"><span class="tocnumber">10</span><span class="toctext"> Men&uuml; der zuletzt verwendeten Origin-Dateien</span></a><ul>
+<li class="toclevel-2 tocsection-11"><a href="#Customize_the_Fly-out_Menu"><span class="tocnumber">10.1</span> <span class="toctext">Ausklappmen&uuml; benutzerdefiniert anpassen</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Previews"></a><span class="mw-headline">Vorschau</span></h2>
+<p>Wenn der Cursor auf einem Origin-Dateinamen platziert ist, zeigt er eine Popup-Vorschau f&uuml;r die Grafik/Arbeitsmappe in dem Projekt mit dem Projektnamen an.</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files preview.png" src="../images/Recent_Origin_Files/830px-Recent_Origin_Files_preview.png" width="830"   /></a></dd></dl>
+<h2><a name="Open_the_Files"></a><span class="mw-headline">Dateien &ouml;ffnen</span></h2>
+<ul><li>Klicken Sie doppelt auf die Zeile, um die Origin-Datei zu &ouml;ffnen. Wenn die Datei ein Projekt ist, wird das aktuelle Projekt geschlossen, um diese ausgew&auml;hlte Datei zu &ouml;ffnen. Wenn die Datei eine Unterfensterdatei ist, wird sie im aktuellen Projekt ge&ouml;ffnet.</li></ul>
+<ul><li>Klicken Sie mit der rechten Maustaste auf die Datei:<ul><li>W&auml;hlen Sie <b>&Ouml;ffnen</b>, um die Datei zu &ouml;ffnen. Wenn die Datei ein Projekt ist, wird das aktuelle Projekt geschlossen, um diese ausgew&auml;hlte Datei zu &ouml;ffnen. Wenn die Datei eine Unterfensterdatei ist, wird sie im aktuellen Projekt ge&ouml;ffnet.</li>
+<li>W&auml;hlen Sie <b>Projekt anh&auml;ngen</b>, um die Datei an den Ordner der ersten Ebene des aktuellen Projekts anzuh&auml;ngen.</li>
+<li>W&auml;hlen Sie <b>In neuer Instanz &ouml;ffnen</b>, um die Datei in einem neuen Projekt zu &ouml;ffnen.</li>
+<li>W&auml;hlen Sie <b>&Uuml;bergeordneten Ordner &ouml;ffnen</b>, um den Ordner zu &ouml;ffnen, in dem die Datei gespeichert ist.</li></ul></li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Open File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Open_File.png" width="750"  /></a></dd></dl>
+<h2><a name="Find_in_Project_Files"></a><span class="mw-headline">In Projektdateien suchen</span></h2>
+<p>Klicken Sie mit der rechten Maustaste auf die Datei und w&auml;hlen Sie <b>In Projektdateien suchen...</b> im Kontextmen&uuml;, um den <a href="../../UserGuide/UserGuide/Find_in_Project_Files.html" title="UserGuide:Find in Project Files">Dialog <b>In Projektdateien suchen</b></a> zu &ouml;ffnen.</p>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Find File.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Find_File.png" width="785"  /></a></dd></dl>
+<h2><a name="Specify_the_displaying_Files"></a><span class="mw-headline">Angezeigte Dateien festlegen</span></h2>
+<p>Um die angezeigten Dateien festzulegen, k&ouml;nnen Sie mit der rechten Maustaste auf eine Datei (Dateien) oder auf den leeren Bereich der Dateiliste klicken und dann die folgende Option ausw&auml;hlen oder die Tastenkombination verwenden.</p>
+<ul><li><b>Nur Projekte zeigen</b> (Strg+P)</li>
+<li><b>Nur Mappen zeigen</b> (Strg+ B)</li>
+<li><b>Nur Grafiken zeigen</b> (Strg+ G)</li>
+<li><b>Fehlende Dateien zeigen</b> (Strg+M): Standardm&auml;&szlig;ig werden fehlende Dateien nicht im Dialog gezeigt. Aktivieren Sie diese Option, um sie zu zeigen. Im Fall der fehlenden Dateien unterst&uuml;tzt es auch das &Ouml;ffnen ihres vorherigen Speicherorts.</li></ul>
+<h2><a name="Copy_Information_of_the_Recent_Files"></a><span class="mw-headline">Informationen der zuletzt verwendeten Dateien kopieren</span></h2>
+<p>Um die Informationen der zuletzt verwendeten Dateien zu kopieren, k&ouml;nnen Sie mit der rechten Maustaste auf die Datei (Dateien) klicken und dann die folgende Option ausw&auml;hlen oder die Tastenkombination verwenden.</p>
+<ul><li><b>Dateiname kopieren</b> (Strg+F)</li>
+<li><b>Vollst&auml;ndigen Pfad kopieren</b> (Strg+C)</li>
+<li><b>Ganze Zeile kopieren</b> (Strg+W)</li></ul>
+<p><br /></p>
+<h2><a name="Remove_the_file_from_this_list"></a><span class="mw-headline">Datei aus dieser Liste entfernen</span></h2>
+<p>W&auml;hlen Sie eine oder mehrere Dateien, klicken Sie mit der rechten Maustaste auf sie und w&auml;hlen Sie <b>Aus Liste entfernen</b>, um die Datei(en) in diesem Dialog zu entfernen.</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><p>Sie k&ouml;nnen die Tasten <b>Strg+A</b> verwenden, um alle Dateien in der Liste auszuw&auml;hlen. Es wird auch die Verwendung von <b>Strg+Z</b> und <b>Strg+Y</b> unterst&uuml;tzt, um diese Operation r&uuml;ckg&auml;ngig zu machen und zu wiederholen.</p></td></tr></table>
+<p><br /></p>
+<h2><a name="Pin_Files_to_Top"></a><span class="mw-headline">Dateien oben festpinnen</span></h2>
+<p>W&auml;hlen Sie eine oder mehrere Dateien, klicken Sie mit der rechten Maustaste auf sie und w&auml;hlen Sie <b>Oben festpinnen</b>, um die Datei(en) in diesem Dialog oben anzupinnen. Der Hintergrund der Zeilen dieser Dateien wird mit gelber Farbe gef&uuml;llt.</p><p>Klicken Sie mit der rechten Maustaste auf die oben festgepinnten Dateien und w&auml;hlen Sie <b>L&ouml;sen</b>. Die Dateien folgen dann der Sortierung nach Spalte in diesem Dialog.</p><p><br /></p>
+<h2><a name="Change_the_Display_or_the_Order_of_Columns_for_the_list"></a><span class="mw-headline">Anzeige oder Ordnung der Spalten f&uuml;r die Liste &auml;ndern</span></h2>
+<ul><li>Klicken Sie mit der rechten Maustaste auf den Bereich des Spaltenkopfs und aktivieren bzw. deaktivieren Sie eine &Uuml;berschrift, die angezeigt oder ausgeblendet werden soll.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Header.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Header.png" width="930"  /></a></dd></dl>
+<ul><li>Um die vollst&auml;ndigen Informationen von jeder Zeile in einer Spalte anzuzeigen, k&ouml;nnen Sie mit der rechten Maustaste auf den Spaltenkopf klicken und <b>Spaltengr&ouml;&szlig;e anpassen</b> ausw&auml;hlen. Wenn Sie auf <b>Gr&ouml;&szlig;e aller Spalten anpassen</b> klicken:</li></ul>
+<ul><li>Ziehen Sie an den Spalten&uuml;berschriften, um sie neu zu ordnen.</li></ul>
+<ul><li>Das Anpassen der Spaltenk&ouml;pfe wird f&uuml;r die sp&auml;ter Anwendung beibehalten.</li></ul>
+<h2><a name="Search_in_Recent_Origin_Files"></a><span class="mw-headline">In zuletzt verwendete Origin-Dateien suchen</span></h2>
+<ul><li>Geben Sie die Zeichenkette ein, um die Dateien nach Dateiname zu suchen.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 01.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_01.png" width="771"  /></a></dd></dl>
+<ul><li>Platzhalter (* und&nbsp;?) werden unterst&uuml;tzt wie <i><b>*abc</b></i>, um nach Ende zu suchen.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 02.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_02.png" width="771"  /></a></dd></dl>
+<ul><li>Verwenden Sie <i><b>\Abc,</b></i>, um nach der Zeichenkette im Pfad zu suchen.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 03.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_03.png" width="845"  /></a></dd></dl>
+<ul><li>Verwenden Sie <i><b>&lt; abc,</b></i>, um nach der Zeichenkette im Inhalt zu suchen.</li></ul>
+<dl><dd><a  class="image"><img alt="Recent Origin Files Search 04.png" src="../images/Recent_Origin_Files/Recent_Origin_Files_Search_04.png" width="913"  /></a></dd></dl>
+<h2><a name="Recent_Origin_Files_Menu"></a><span class="mw-headline">Men&uuml; der zuletzt verwendeten Origin-Dateien</span></h2>
+<p>Wenn Sie im Men&uuml; <b>Datei: Zuletzt verwendete Projekte</b> w&auml;hlen, finden Sie die 15 zuletzt verwendeten Proejekte aufgelistet im Ausklappmen&uuml;. Klicken Sie auf den Projektnamen, um das zuletzt verwendete Projekt einfach erneut zu &ouml;ffnen. Wenn dieses Men&uuml; erweitert ist, k&ouml;nnen Sie auf die Tastenkombination des Projekts dr&uuml;cken, um es erneut zu &ouml;ffnen.</p>
+<dl><dd><a  class="image"><img alt="Recent Projects menu.png" src="../images/Recent_Origin_Files/Recent_Projects_menu.png" width="826"  /></a></dd></dl>
+<h5><a name="Customize_the_Fly-out_Menu"></a><span class="mw-headline">Ausklappmen&uuml; benutzerdefiniert anpassen</span></h5>
+<p>W&auml;hlen Sie <b>Benutzerdefiniert anpassen...</b> im Kontextmen&uuml;, um den Dialog <b>Zuletzt verwendete Projekte</b> zu &ouml;ffnen. Sie k&ouml;nnen die Anzahl der zuletzt verwendeten Projekte, die im Men&uuml; angezeigt werden, &auml;ndern und festlegen, ob der Dateipfad und die Tastenkombination der Dateien gezeigt wird. Alle &Auml;nderungen werden beim n&auml;chsten Verwenden des Men&uuml;s wirksam.</p>
+<dl><dd><a  class="image"><img alt="Recent Projec dialog.png" src="../images/Recent_Origin_Files/Recent_Projec_dialog.png" width="340"  /></a></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Recent_Origin_Files/Tip_icon.png" width="57"  border="0" /></td><td><ul><li>Wenn der Dateipfad im Men&uuml; verborgen ist, platzieren Sie den Cursor auf dem Dateinamen. Der Pfad sollte dann im Tooltipp und auf der Statusleiste gezeigt werden.</li></ul>
+<ul><li>Durch Verwenden der <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">Systemvariablen</a> kann dieses Ausklappmen&uuml; auch benutzerdefiniert angepasst werden.<ul><li><b>@MRP</b>: Sie legen die Anzahl der zuletzt verwendeten Projektelemente fest. Standard ist @MRP=15.</li>
+<li><b>@MRPHP</b>: Sie legen fest, ob der Dateipfad gezeigt wird. Standard ist @MRPHP=0, der Dateipfad wird im Men&uuml; gezeigt.</li>
+<li><b>@MRPA</b>: Sie legen fest, ob die Tastenkombination gezeigt wird. Standard ist @MRPA=1, die Tastenkombination wird im Men&uuml; gezeigt.</li></ul></li></ul>
+</td></tr></table>
+
+
+
+    

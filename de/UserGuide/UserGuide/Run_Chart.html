@@ -1,139 +1,81 @@
-﻿<h1 class="firstHeading">Verlaufsdiagramm</h1>
+﻿<h1 class="firstHeading">Verlaufsdiagramm</h1><p class='urlname' style='display: none'>Run-Chart</p><a  class="image"><img alt="Run Chart 01.png" src="../images/Run_Chart/Run_Chart_01.png" width="803"  /></a><div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2,1</span> <span class="toctext">Bedienelemente der Dialoge</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Versionsinformationen</span></a></li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>Run-Chart</p><a class="image"><img alt="Run Chart 01.png" src="../images/Run_Chart/Run_Chart_01.png" width="803"></a>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>W&auml;hlen Sie mindestens eine Spalte aus, um ein Verlaufsdiagramm zu erstellen. Jede Zeile ist f&uuml;r mehrere Spalten eine Teilgruppe.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <b>Zeichnen &gt; Statistisch: Verlaufsdiagramm</b>, um den Dialog <b>plot_runchart</b> zu &ouml;ffnen.</p><p><a  class="image"><img alt="Run Chart 02.png" src="../images/Run_Chart/Run_Chart_02.png" width="522"  /></a></p>
+<h3><a name="Dialog_Controls"></a><span class="mw-headline">Bedienelemente des Dialogs</span></h3>
+<table class="dialogcontroltable">
 
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
+<tr>
+<td><b>Datenlayout</b></td>
+<td>W&auml;hlen Sie das Datenlayout gem&auml;&szlig; der Datenanordnung.<ul><li><b>Alle Teilgruppen in einer Spalte</b>: Alle Teilgruppen sind in einer Spalte angeordnet, wobei Stichprobenumfang oder Referenzspalte verwendet werden, um die Teilgruppen festzulegen.</li>
+<li><b>Jede Teilgruppe in Zeile</b>: Jede Teilgruppe wird in einer Zeile angeordnet.</li></ul>
+</td></tr>
+<tr>
+<td><b>Eingabe</b></td>
+<td>W&auml;hlen Sie die Eingabedaten aus.<ul><li>W&auml;hlen Sie f&uuml;r <b>Alle Teilgruppen in einer Spalte</b> mindestens eine Spalte aus. Jede ausgew&auml;hlte Spalte wird als ein Verlaufsdiagramm gezeichnet.</li>
+<li>W&auml;hlen Sie f&uuml;r <b>Jede Teilgruppe in Zeile</b> mehrere Spalten aus. Jede Zeile dieser Spalten wird als ein X-Wert gezeichnet.</li></ul>
+</td></tr>
+<tr>
+<td><b>Teilgruppe nach</b></td>
+<td>Dieses Bedienelement ist nur verf&uuml;gbar f&uuml;r das Layout <b>Alle Teilgruppen in einer Spalte</b>. W&auml;hlen Sie, wie die Eingabespalten in Teilgruppen aufgeteilt werden, nach Stichprobenumfang oder nach den in der Referenzspalte festgelegten Werten.</td></tr>
+<tr>
+<td><b>Umfang</b></td>
+<td>Dieses Bedienelement ist nur verf&uuml;gbar f&uuml;r das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Umfang</b>. Legen Sie die Zeilennummer fest, um die Daten in Teilgruppen zu unterteilen.</td></tr>
+<tr>
+<td><b>Beschriftung der Teilgruppe</b></td>
+<td>Dieses Bedienelement ist nur verf&uuml;gbar f&uuml;r das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Umfang</b>. Legen Sie eine Spalte zum Beschriften der Teilgruppen fest.</td></tr>
+<tr>
+<td><b>Spalte</b></td>
+<td>Dieses Bedienelement ist nur verf&uuml;gbar f&uuml;r das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Spalte</b>. Legen Sie die Referenzspalte fest, um die Eingabedaten in Teilgruppen zu unterteilen.</td></tr>
+<tr>
+<td><b>Verbinden</b></td>
+<td>Verbinden Sie die Mittelwerte oder Medianwerte der Teilgruppen.</td></tr>
+<tr>
+<td><b>Einzelne Datenpunkte zeigen</b></td>
+<td>Legen Sie fest, ob die Rohdatenpunkte im Diagramm in der gleichen Teilgruppe gezeigt werden sollen.</td></tr>
+<tr>
+<td><b>Statistikinfo in Diagrammtabelle zeigen</b></td>
+<td>Legen Sie fest, ob die Statistikergebnisse als eine Tabelle im Diagramm gezeigt werden sollen.</td></tr>
+<tr>
+<td><b>Diagrammmvorlage</b></td>
+<td>Legen Sie die Vorlage zum Zeichnen des Verlaufsdiagramms fest.<p>Per Standard wird die Vorlage <i>Runchart</i> verwendet. Sie k&ouml;nnen das Kontrollk&auml;stchen <b>Auto</b> deaktivieren, um eine Anwendervorlage auszuw&auml;hlen und das Format, das Sie im Voraus  gespeichert haben, anzuwenden.</p>
+</td></tr>
+<tr>
+<td><b>Ausgabe in</b></td>
+<td>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</td></tr>
+<tr>
+<td><b>Ausgabe</b></td>
+<td>Geben Sie die Zeichnungsdaten in ein bestimmtes Blatt aus.</td></tr>
+<tr>
+<td><b>Diagramme ausgeben</b></td>
+<td>Geben Sie die Ergebnisdiagramme in ein bestimmtes Blatt aus.</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>Runchart.otpu (installiert im Origin-Programmordner)</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweis</span></h2>
+<p>Ein Verlaufsdiagramm wird verwendet, um gesammelte Daten &uuml;ber einen spezifischen Zeitraum oder w&auml;hrend eines laufendes Prozesses auf Trends oder Muster zu untersuchen. Sie k&ouml;nnen es zum &Uuml;berwachen von Daten &uuml;ber die Zeit verwenden, um Trends, Shifts oder Zyklen zu entdecken und Nachweise f&uuml;r ein spezielle Ursachenstreuung in Ihrem Prozess zu analysieren.</p><p>Origins Verlaufsdiagramme zeichnen die gesammelten Daten nach festgelegten Teilgruppen. Jede Teilgruppe enth&auml;lt die beobachteten Daten aus dem gleichen Zeitraum. Alle beobachteten Daten werden als vertikal angeordnete Punkte nach Teilgruppen und der Mittelwert oder Median jeder Teilgruppe wird als Punkt-Liniendiagramm gegen die Zeitreihe gezeichnet. Eine horizontale gestrichelte Linie bei Mittelwert oder Median der gesamten Eingabedaten wird als Referenzlinie hinzugef&uuml;gt.</p><p><a  class="image"><img alt="Run Chart 03.png" src="../images/Run_Chart/850px-Run_Chart_03.png" width="850"   /></a></p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
+<table class="tbl">
 
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<tr style="vertical-align: top;">
+<td><b>Mindestversion</b>: Origin 2025b</td></tr></table>
 
-      <li class="toclevel-1 tocsection-2">
-        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
 
-        <ul>
-          <li class="toclevel-2 tocsection-3"><a href="#Dialog_Controls"><span class="tocnumber">2,1</span> <span class="toctext">Bedienelemente der Dialoge</span></a></li>
-        </ul>
-      </li>
 
-      <li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
 
-      <li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
-    </ul>
-  </div>
 
-  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
 
-  <p>Wählen Sie mindestens eine Spalte aus, um ein Verlaufsdiagramm zu erstellen. Jede Zeile ist für mehrere Spalten eine Teilgruppe.</p>
 
-  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
-
-  <p>Wählen Sie die gewünschten Daten aus.</p>
-
-  <p>Wählen Sie im Menü <b>Zeichnen &gt; Statistisch: Verlaufsdiagramm</b>, um den Dialog <b>plot_runchart</b> zu öffnen.</p>
-
-  <p><a class="image"><img alt="Run Chart 02.png" src="../images/Run_Chart/Run_Chart_02.png" width="522"></a></p>
-
-  <h3><a name="Dialog_Controls"></a><span class="mw-headline">Bedienelemente des Dialogs</span></h3>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <td><b>Datenlayout</b></td>
-
-      <td>
-        Wählen Sie das Datenlayout gemäß der Datenanordnung.
-
-        <ul>
-          <li><b>Alle Teilgruppen in einer Spalte</b>: Alle Teilgruppen sind in einer Spalte angeordnet, wobei Stichprobenumfang oder Referenzspalte verwendet werden, um die Teilgruppen festzulegen.</li>
-
-          <li><b>Jede Teilgruppe in Zeile</b>: Jede Teilgruppe wird in einer Zeile angeordnet.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <td><b>Eingabe</b></td>
-
-      <td>
-        Wählen Sie die Eingabedaten aus.
-
-        <ul>
-          <li>Wählen Sie für <b>Alle Teilgruppen in einer Spalte</b> mindestens eine Spalte aus. Jede ausgewählte Spalte wird als ein Verlaufsdiagramm gezeichnet.</li>
-
-          <li>Wählen Sie für <b>Jede Teilgruppe in Zeile</b> mehrere Spalten aus. Jede Zeile dieser Spalten wird als ein X-Wert gezeichnet.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <td><b>Teilgruppe nach</b></td>
-
-      <td>Dieses Bedienelement ist nur verfügbar für das Layout <b>Alle Teilgruppen in einer Spalte</b>. Wählen Sie, wie die Eingabespalten in Teilgruppen aufgeteilt werden, nach Stichprobenumfang oder nach den in der Referenzspalte festgelegten Werten.</td>
-    </tr>
-
-    <tr>
-      <td><b>Umfang</b></td>
-
-      <td>Dieses Bedienelement ist nur verfügbar für das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Umfang</b>. Legen Sie die Zeilennummer fest, um die Daten in Teilgruppen zu unterteilen.</td>
-    </tr>
-
-    <tr>
-      <td><b>Beschriftung der Teilgruppe</b></td>
-
-      <td>Dieses Bedienelement ist nur verfügbar für das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Umfang</b>. Legen Sie eine Spalte zum Beschriften der Teilgruppen fest.</td>
-    </tr>
-
-    <tr>
-      <td><b>Spalte</b></td>
-
-      <td>Dieses Bedienelement ist nur verfügbar für das Layout <b>Alle Teilgruppen in einer Spalte</b> und <b>Teilgruppe nach</b> = <b>Spalte</b>. Legen Sie die Referenzspalte fest, um die Eingabedaten in Teilgruppen zu unterteilen.</td>
-    </tr>
-
-    <tr>
-      <td><b>Verbinden</b></td>
-
-      <td>Verbinden Sie die Mittelwerte oder Medianwerte der Teilgruppen.</td>
-    </tr>
-
-    <tr>
-      <td><b>Statistikinfo in Diagrammtabelle zeigen</b></td>
-
-      <td>Legen Sie fest, ob die Statistikergebnisse als eine Tabelle im Diagramm gezeigt werden sollen.</td>
-    </tr>
-
-    <tr>
-      <td><b>Diagrammmvorlage</b></td>
-
-      <td>
-        Legen Sie die Vorlage zum Zeichnen des Verlaufsdiagramms fest.
-
-        <p>Per Standard wird die Vorlage <i>Runchart</i> verwendet. Sie können das Kontrollkästchen <b>Auto</b> deaktivieren, um eine Anwendervorlage auszuwählen und das Format, das Sie im Voraus gespeichert haben, anzuwenden.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td><b>Ausgabe</b></td>
-
-      <td>Geben Sie die Zeichnungsdaten in ein bestimmtes Blatt aus.</td>
-    </tr>
-
-    <tr>
-      <td><b>Diagramme ausgeben</b></td>
-
-      <td>Geben Sie die Ergebnisdiagramme in ein bestimmtes Blatt aus.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
-
-  <p>Runchart.otpu (installiert im Origin-Programmordner)</p>
-
-  <h2><a name="Notes"></a><span class="mw-headline">Hinweis</span></h2>
-
-  <p>Ein Verlaufsdiagramm wird verwendet, um gesammelte Daten über einen spezifischen Zeitraum oder während eines laufendes Prozesses auf Trends oder Muster zu untersuchen. Sie können es zum Überwachen von Daten über die Zeit verwenden, um Trends, Shifts oder Zyklen zu entdecken und Nachweise für ein spezielle Ursachenstreuung in Ihrem Prozess zu analysieren.</p>
-
-  <p>Origins Verlaufsdiagramme zeichnen die gesammelten Daten nach festgelegten Teilgruppen. Jede Teilgruppe enthält die beobachteten Daten aus dem gleichen Zeitraum. Alle beobachteten Daten werden als vertikal angeordnete Punkte nach Teilgruppen und der Mittelwert oder Median jeder Teilgruppe wird als Punkt-Liniendiagramm gegen die Zeitreihe gezeichnet. Eine horizontale gestrichelte Linie bei Mittelwert oder Median der gesamten Eingabedaten wird als Referenzlinie hinzugefügt.</p>
-
-  <p><a class="image"><img alt="Run Chart 03.png" src="../images/Run_Chart/850px-Run_Chart_03.png" width="850"></a></p>
+    

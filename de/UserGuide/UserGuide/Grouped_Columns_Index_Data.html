@@ -1,255 +1,119 @@
-﻿<h1 class="firstHeading">Gruppiertes Säulendiagramm</h1>
-
-  <p class='urlname' style='display: none'>grouped-column-index-data</p><a class="image"><img alt="Grouped Column Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Indexed_Data.png" width="575"></a>
-
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
-
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
-
-      <li class="toclevel-1 tocsection-2">
-        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-3">
-            <a href="#The_plot_gindexed_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Dialog plot_gindexed</span></a>
-
-            <ul>
-              <li class="toclevel-3 tocsection-4"><a href="#For_Summarized_Data"><span class="tocnumber">2.1.1</span> <span class="toctext">Für zusammengefasste Daten</span></a></li>
-
-              <li class="toclevel-3 tocsection-5"><a href="#For_Raw_Data"><span class="tocnumber">2.1.2</span> <span class="toctext">Für Rohdaten</span></a></li>
-            </ul>
-          </li>
-
-          <li class="toclevel-2 tocsection-6"><a href="#Examples"><span class="tocnumber">2,2</span> <span class="toctext">Beispiele</span></a></li>
-        </ul>
-      </li>
-
-      <li class="toclevel-1 tocsection-7"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
-
-      <li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
-    </ul>
-  </div>
-
-  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
-
-  <p>Sie brauchen mindestens eine Y-Spalte als Eingabedaten. Optional können Sie eine zusätzliche Y-Fehlerspalte für jede Y-Spalte haben. Eine weitere Spalte enthält Gruppierungsinformationen.</p>
-
-  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
-
-  <p>Zum Öffnen des Dialogs <b>plot_gindexed</b> haben Sie drei Möglichkeiten:</p>
-
-  <ul>
-    <li>Wählen Sie <b>Zeichnen &gt; Kategorial: Gruppierte Säulen ...</b> im Menü.</li>
-
-    <li>Klicken Sie auf die Schaltfläche <a class="image"><img alt="Button Grouped Column-Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Button_Grouped_Column-Indexed_Data.png" width="23"></a> auf der Symbolleiste <b>2D-Grafiken</b>.
-
-      <dl>
-        <dd><a class="image"><img alt="Grouped Column Index Data Button From Toolbar.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Index_Data_Button_From_Toolbar.png" width="308"></a></dd>
-      </dl>
-    </li>
-  </ul>
-
-  <p>Wählen Sie in dem aufgerufenen Dialog den Eingabebereich aus. Fügen Sie mindestens eine Gruppenspalte hinzu und bestimmen Sie, wo die berechneten Daten angezeigt werden. Sie können dann ein gruppiertes Säulendiagramm erzeugen.</p>
-
-  <p>Einzelheiten zu den Bedienelementen erhalten Sie im Abschnitt unten:</p>
-
-  <h3><a name="The_plot_gindexed_Dialog_Box"></a><span class="mw-headline">Dialog plot_gindexed</span></h3>
-
-  <p><a class="image"><img alt="Plot gindexed dialog box.png" src="../images/Grouped_Columns_Index_Data/850px-Plot_gindexed_dialog_box.png" width="850"></a></p>
-
-  <h4><a name="For_Summarized_Data"></a><span class="mw-headline">Für zusammengefasste Daten</span></h4>
-
-  <p>Standardmäßig wurde die <b>Datenform</b> auf <b>Zusammengefasste Daten</b> gesetzt. Dies bedeutet, dass die Eingabedaten Indexdaten sind.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Datenspalte(n)</th>
-
-      <td>Dieser Zweig wird zum <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">Festlegen der Eingabedaten</a> verwendet.</td>
-    </tr>
-
-    <tr>
-      <th>Gruppenspalte(n)</th>
-
-      <td>Wählen Sie die Gruppierungsspalte(n).</td>
-    </tr>
-
-    <tr>
-      <th>Beschriftung</th>
-
-      <td>
-        Aktivieren Sie dieses Kontrollkästchen, um eine Spalte oder mehrere Spalten als Beschriftungsspalte(n) auszuwählen.
-
-        <p>Bei Diagrammen mit mehreren Eingabedatenspalten: Wenn nur eine Beschriftungsspalte ausgewählt wurde, teilen all diese Zeichnungen die gleiche Beschriftungsspalte; wenn die gleiche Anzahl der Beschriftungsspalten ausgewählt wurde, hat jede Zeichnung ihre Beschriftungsspalte in Reihenfolge der Auswahl.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Diagrammanordnung</th>
-
-      <td>
-        <ul>
-          <li>
-            <b>Mehrere Daten</b>:&#160;Wählen Sie, wie mehrere Eingabedaten angeordnet werden sollen.
-
-            <ul>
-              <li><b>Überlagerung auf gleicher Grafik</b>: Zeichnen Sie die ausgewählten Eingabedaten als sich überschneidende Zeichnungen im gleichen Diagrammlayer.</li>
-
-              <li><b>Separate Layer auf gleicher Grafik</b>: Zeichnen Sie die ausgewählten Eingabedaten in separate Layer auf der gleichen Grafik.</li>
-
-              <li><b>Separate Grafiken</b>: Zeichnen Sie die ausgewählten Eingabedaten in separate Diagrammfenster.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul>
-          <li><b>Felder teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert wurde, können Sie eine andere Gruppierungsspalte auswählen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontale Felder</a> zu aktivieren, die für jeden Gruppierungswert separat ein gruppiertes Säulendiagramm zeigen. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> wird aktiviert, Hilfsstriche und Beschriftungen werden standardmäßig auf abwechselnden Seiten gezeigt. Wenn mehrere Spalten ausgewählt sind, wird oberhalb nur eine Beschriftungszeile für die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</li>
-
-          <li><b>Seiten teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert ist, können Sie eine andere Gruppierungsspalte auswählen, um die Eingabedaten zu teilen und gruppierte Säulendiagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der für die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt führt alle Seiten auf.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Diagrammtyp</th>
-
-      <td>Legen Sie den Diagrammtyp fest - Säulendiagramm, Balkendiagramm oder Punktdiagramm.</td>
-    </tr>
-
-    <tr>
-      <th>Stapeln</th>
-
-      <td>Legen Sie fest, ob die Säulen/Balken gestapelt werden sollen, wenn sich mehrere Eingabevariablen in der gleichen Grafik überlagern. Sie können <b>Nebeneinander</b>, <b>Gestapelt</b> oder <b>Gestapelt, 100%</b> wählen. Diese Option ist für den Diagrammtyp Punktdiagramm nicht verfügbar.</td>
-    </tr>
-
-    <tr>
-      <th>Diagrammmvorlage</th>
-
-      <td>Legen Sie ggf. eine Anwendervorlage fest. Per Standard ist das Kontrollkästchen Auto aktiviert und die Standardvorlage GBOX wird verwendet.</td>
-    </tr>
-
-    <tr>
-      <th>Daten ausgeben</th>
-
-      <td>Legen Sie fest, wo die <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">berechneten Daten ausgegeben</a> werden.</td>
-    </tr>
-
-    <tr>
-      <th>Diagramme ausgeben</th>
-
-      <td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td>
-    </tr>
-  </table>
-
-  <p>Zusätzlich können Sie sich das finale Diagramm in diesem Dialog anzeigen lassen.</p>
-
-  <table class="note">
-    <tr>
-      <td><b>Hinweis:</b> Um den Gruppierungsbereich nicht mit der alphabetischen Standardreihenfolge zu sortieren, setzen Sie ihn (sie) als kategorial und modifizieren Sie die Reihenfolgen auf der <a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="UserGuide:The (Column Properties) Categories Tab">Registerkarte <b>Kategorien</b></a>.</td>
-    </tr>
-  </table>
-
-  <h4><a name="For_Raw_Data"></a><span class="mw-headline">Für Rohdaten</span></h4>
-
-  <p>Wenn Sie <b>Rohdaten</b> in der Auswahlliste <b>Datenform</b> wählen, werden zwei statistische Optionen gezeigt, mit denen Sie festlegen können, welche statistischen Informationen der ausgewählten Eingabedaten als Säulen oder Balken und ihre Fehlerbalken gezeigt werden. Eine andere Option <b>Daten stapeln</b> wird für die Diagrammtypen <b>Säulen</b> und <b>Balken</b> angezeigt und verwendet, um zu stapelnde Daten festzulegen.</p>
-
-  <ul>
-    <li><b>Statistik Balken</b>: Sie können wählen, dass eine Art von statistischen Werten als Säulen oder Balken gezeigt wird. Die Optionen <b>Mittelwert</b>, <b>N</b>, <b>N fehlend</b>, <b>Median</b>, <b>Min.</b>, <b>Max.</b>, <b>Summe</b>, <b>StdAbw.</b>, <b>Geometrisches Mittel</b>, <b>Harmonisches Mittel</b> und <b>Varianz</b> stehen in der Auswahlliste zur Verfügung.</li>
-
-    <li><b>Statistik Fehlerbalken</b>: Sie können wählen, dass eine Art von statistischen Werten als Fehlerbalken für die Säulen oder Balken gezeigt wird. Die Optionen <b>Kein</b>, <b>StdAbw.</b>, <b>Standardfehler des Mittelwerts</b>, <b>95% KI des Mittelwerts</b>, <b>10%-90%</b>, <b>5%-95%</b>, <b>1%-99%</b>, <b>Q1-Q3</b>, <b>Min-Max</b> und <b>Mittlere absolute Abweichung</b> stehen in der Auswahlliste zur Verfügung.</li>
-
-    <li>
-      <b>Daten stapeln</b>: Legen Sie die zu stapelnden Daten fest. Wenn <b>Variablen</b> ausgewählt sind, werden die Spalten nach Eingabevariablen für jeden Teildatensatz auf Layerebene kumulativ gestapelt. Wenn <b>Letzte Gruppe</b> ausgewählt ist, werden die Spalten nach der letzten Gruppenspalte gestapelt. <b>Hinweis:</b> Das Stapeln der letzten Gruppe wird nur unterstützt, wenn die Anzahl der Gruppenspalten größer als 1 ist.
-
-      <dl>
-        <dd><a class="image"><img alt="Grouped Columns Index Data 01.png" src="../images/Grouped_Columns_Index_Data/800px-Grouped_Columns_Index_Data_01.png" width="800"></a></dd>
-      </dl>
-    </li>
-  </ul>
-
-  <p>Die anderen Optionen sind die gleichen wie bei den <b>Zusammengefassten Daten</b>.</p>
-
-  <h3><a name="Examples"></a><span class="mw-headline">Beispiele</span></h3>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Grouped_Columns_Index_Data/Tutorial_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <ol>
-          <li>Öffnen Sie eine neue Arbeitsmappe und klicken Sie auf die Schaltfläche <a class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Columns_Index_Data/Button_Import_Single_ASCII.png" width="23"></a>, um die Datei <b>Categorical Data.dat</b> aus dem <i>&lt;Origin-Verzeichnis&gt;\Samples\Graphing</i> zu importieren.</li>
-
-          <li>Markieren Sie Spalte B und wählen Sie <b>Zeichnen &gt; Kategorial: Gruppiertes Säulendiagramm ...</b> im Hauptmenü, um den Dialog <b>plot_gindexed</b> zu öffnen.</li>
-
-          <li>Klicken Sie im Abschnitt <b>Gruppenspalte(n)</b> auf die Schaltfläche <b>Hinzufügen</b> <a class="image"><img alt="Button Group List Add.png" src="../images/Grouped_Columns_Index_Data/Button_Group_List_Add.png" width="17"></a> oben rechts und fügen Sie die Spalte D als den ersten Gruppierungsbereich hinzu. Fügen Sie entsprechend Spalte C als den zweiten Gruppierungsbereich hinzu.</li>
-
-          <li>Klicken Sie auf <b>OK</b>, um die Zeichnungsdaten und Diagramme in die neu erzeugten Blätter auszugeben.
-
-            <dl>
-              <dd><a class="image"><img alt="Grouped Box Indexed Data EX.png" src="../images/Grouped_Columns_Index_Data/500px-Grouped_Columns_Indexed_Data_EX.png" width="500"></a></dd>
-            </dl>
-          </li>
-        </ol>
-      </td>
-    </tr>
-  </table>
-
-  <table class="noborder">
-    <tr>
-      <td style="vertical-align:top" width="60"><img src="../images/Grouped_Columns_Index_Data/Tip_icon.png" width="57" border="0" alt=""></td>
-
-      <td>
-        <p>Ein umfangreicheres Tutorial finden Sie unter <a class="external text" href="../../Tutorial/Tutorial/Grouped_Column_with_Error_Bars_and_Data_Labels.html">Gruppiertes Säulendiagramm mit Fehlerbalken und Datenbeschriftungen</a>. Das Tutorial handelt u. a. von Füllmustern und der Verwendung und Anpassung von Tabellen der Hilfsstrichsbeschriftung (wie im obigen Diagramm zu sehen) zum Beschriften der X-Achse.</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
-
-  <p>gColumn.otpu (installiert im EXE-Ordner von Origin)</p>
-
-  <h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
-
-  <ul>
-    <li>Wenn es mehr als einen Gruppierungsbereich (in dem Feld <b>Gruppenspalte(n)</b>) gibt, werden die Hilfsstrichsbeschriftungen der X-Achse standardmäßig als Tabellen angezeigt. Sie können dieses Verhalten und die Formatierung der Tabelle der Hilfsstrichsbeschriftung im Allgemeinen über die <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Table_Tab" title="UserGuide:Tick Labels 2">Registerkarte <b>Tabelle</b></a> auf der Registerkarte <b>Beschriftung der Hilfsstriche</b> des Dialogs <b>Achsen</b> steuern.</li>
-
-    <li>Standardmäßig verwendet dieses Diagramm <b>Index</b> zum Anwenden von Füllfarbe. Es gibt jedoch auch andere Optionen. Die folgende Abbildung zeigt drei Variationen des gleichen Diagramms. Der Unterschied besteht in der Art und Weise, wie Farbe auf die Balken angewendet wird:</li>
-  </ul>
-
-  <dl>
-    <dd>
-      <ul>
-        <li>Im Diagramm links wird die Balkenfarbe auf die Teilgruppe (Gender) <b>indiziert</b>. Dies ist Standard und sollte für die meisten Situationen, einschließlich unbalancierter Zeichnungen, verwendet werden können.</li>
-
-        <li>Im mittleren Diagramm wird Balkenfarbe auf die Hauptgruppe (Drug) <b>indiziert</b>.</li>
-
-        <li>Im Diagramm rechts ist die Balkenfarbe auf <b>Inkrement</b> gesetzt, mit einer Teilgruppengröße von 8.</li>
-      </ul>
-    </dd>
-
-    <dd><a class="image"><img alt="Color variations grouped column 750.png" src="../images/Grouped_Columns_Index_Data/Color_variations_grouped_column_750.png" width="750"></a></dd>
-
-    <dd>
-      Weitere Informationen finden Sie unter:
-
-      <ul>
-        <li><a href="../../UserGuide/UserGuide/Using_a_Dataset_to_Control_Plot_Color.html#Indexing" title="UserGuide:Using a Dataset to Control Plot Color">Index</a></li>
-
-        <li><a href="../../UserGuide/UserGuide/Customizing_Data_Plot_Colors.html#Using_a_Saved_Increment_List" title="UserGuide:Customizing Data Plot Colors">Eine gespeicherte Inkrementliste verwenden</a></li>
-
-        <li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html#Subset" title="UserGuide:The (Plot Details) Spacing Tab">Teildatensatz, Registerkarte Abstände im Dialog Details Zeichnung</a></li>
-      </ul>
-    </dd>
-  </dl>
-
-  <ul>
-    <li>Sie können die Abstände zwischen den Säulen bzw. Säulengruppen mit Hilfe der Bedienelemente auf der <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="UserGuide:The (Plot Details) Spacing Tab">Registerkarte <b>Abstände</b></a> des Dialogs Details Zeichnung modifizieren.</li>
-
-    <li>Wenn Sie ein gruppiertes Balkendiagramm erstellen möchten, können Sie den <b>Diagrammtyp</b> im Dialog <b>plot_gindexed</b> auf <b>Balken</b> setzen. Alternativ können Sie ein gruppiertes Säulendiagramm mit Hilfe des Menübefehls erstellen und dann <b>Grafik: X-Y-Achse austauschen</b> wählen.</li>
-
-    <li>Wenn Sie ein gruppiertes Punktdiagramm erstellen möchten, können Sie den <b>Diagrammtyp</b> im Dialog <b>plot_gindexed</b> auf <b>Punkt</b> setzen. Die Quelldaten werden entsprechend Ihrer Gruppierungsspalte in Untergruppen aufgeteilt.</li>
-  </ul>
+﻿<h1 class="firstHeading">Gruppiertes S&auml;ulendiagramm</h1><p class='urlname' style='display: none'>grouped-column-index-data</p><a  class="image"><img alt="Grouped Column Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Indexed_Data.png" width="575"  /></a><div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_gindexed_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Dialog plot_gindexed</span></a><ul>
+<li class="toclevel-3 tocsection-4"><a href="#For_Summarized_Data"><span class="tocnumber">2.1.1</span> <span class="toctext">F&uuml;r zusammengefasste Daten</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#For_Raw_Data"><span class="tocnumber">2.1.2</span> <span class="toctext">F&uuml;r Rohdaten</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Examples"><span class="tocnumber">2.2</span> <span class="toctext">Beispiele</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Versionsinformationen</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>Sie brauchen mindestens eine Y-Spalte als Eingabedaten. Optional k&ouml;nnen Sie eine zus&auml;tzliche Y-Fehlerspalte f&uuml;r jede Y-Spalte haben. Eine weitere Spalte enth&auml;lt Gruppierungsinformationen.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>Zum &Ouml;ffnen des Dialogs <b>plot_gindexed</b> haben Sie drei M&ouml;glichkeiten:</p>
+<ul><li>W&auml;hlen Sie <b>Zeichnen &gt; Kategorial: Gruppierte S&auml;ulen ...</b> im Men&uuml;.</li>
+<li>Klicken Sie auf die Schaltfl&auml;che <a  class="image"><img alt="Button Grouped Column-Indexed Data.png" src="../images/Grouped_Columns_Index_Data/Button_Grouped_Column-Indexed_Data.png" width="23"  /></a> auf der Symbolleiste <b>2D-Grafiken</b>.<dl><dd><a  class="image"><img alt="Grouped Column Index Data Button From Toolbar.png" src="../images/Grouped_Columns_Index_Data/Grouped_Column_Index_Data_Button_From_Toolbar.png" width="308"  /></a></dd></dl></li></ul>
+<p>W&auml;hlen Sie in dem aufgerufenen Dialog den Eingabebereich aus. F&uuml;gen Sie mindestens eine Gruppenspalte hinzu und bestimmen Sie, wo die berechneten Daten angezeigt werden. Sie k&ouml;nnen dann ein gruppiertes S&auml;ulendiagramm erzeugen.</p><p>Einzelheiten zu den Bedienelementen erhalten Sie im Abschnitt unten:</p>
+<h3><a name="The_plot_gindexed_Dialog_Box"></a><span class="mw-headline">Dialog plot_gindexed</span></h3>
+<p><span class='headerInParagraph'>Diagramm aus den Zusammengefassten Daten zeichnen</span><br /> <a  class="image"><img alt="Plot gindexed dialog box 01.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_01.png" width="750"   /></a></p><p>In diesem Beispiel werden alle Verkaufszahlen als Balken gegen die Gruppen (auf der X-Achse), die in Gruppenspalten ausgew&auml;hlt sind, gezeichnet.</p><p><br /> <span class='headerInParagraph'>Diagramm aus den Rohdaten zeichnen</span><br /> <a  class="image"><img alt="Plot gindexed dialog box 02.png" src="../images/Grouped_Columns_Index_Data/750px-Plot_gindexed_dialog_box_02.png" width="750"   /></a></p><p>In diesem Beispiel werden alle Mittelwerte der Daten f&uuml;r He&ouml;h und Gewicht als Balken gegen die Gruppen (auf der X-Achse), die in Gruppenspalten ausgew&auml;hlt sind, gezeichnet.</p>
+<h4><a name="For_Summarized_Data"></a><span class="mw-headline">F&uuml;r zusammengefasste Daten</span></h4>
+<p>Standardm&auml;&szlig;ig wurde die <b>Datenform</b> auf <b>Zusammengefasste Daten</b> gesetzt. Dies bedeutet, dass die Eingabedaten Indexdaten sind.</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Datenspalte(n)</th>
+<td>Dieser Zweig wird zum <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">Festlegen der Eingabedaten</a> verwendet.</td></tr>
+<tr>
+<th>Gruppenspalte(n)</th>
+<td>W&auml;hlen Sie die Gruppierungsspalte(n).</td></tr>
+<tr>
+<th>Beschriftung</th>
+<td>Aktivieren Sie dieses Kontrollk&auml;stchen, um eine Spalte oder mehrere Spalten als Beschriftungsspalte(n) auszuw&auml;hlen.<p>Bei Diagrammen mit mehreren Eingabedatenspalten: Wenn nur eine Beschriftungsspalte ausgew&auml;hlt wurde, teilen all diese Zeichnungen die gleiche Beschriftungsspalte; wenn die gleiche Anzahl der Beschriftungsspalten ausgew&auml;hlt wurde, hat jede Zeichnung ihre Beschriftungsspalte in Reihenfolge der Auswahl.</p>
+</td></tr>
+<tr>
+<th>Diagrammanordnung</th>
+<td>
+<ul><li><b>Mehrere Daten</b>:&nbsp;W&auml;hlen Sie, wie mehrere Eingabedaten angeordnet werden sollen.<ul><li><b>&Uuml;berlagerung auf gleicher Grafik</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten als sich &uuml;berschneidende Zeichnungen im gleichen Diagrammlayer.</li>
+<li><b>Separate Layer auf gleicher Grafik</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten in separate Layer auf der gleichen Grafik.</li>
+<li><b>Separate Grafiken</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten in separate Diagrammfenster.</li></ul></li>
+<li><b>Datenskalierungsebene</b>: Wenn es mehrere Datens&auml;tze mit Gruppen gibt, k&ouml;nnen Sie diese Option verwenden, um Datenvariableninfos innerhalb und au&szlig;erhalb von Gruppen einzuf&uuml;gen.<dl><dd><a  class="image"><img alt="Data Scaling Level 02.png" src="../images/Grouped_Columns_Index_Data/680px-Data_Scaling_Level_02.png" width="680"   /></a></dd></dl></li>
+<li><b>Horizontale Felder nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine weitere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontale Felder</a> zu aktivieren. Dadurch wird ein gruppiertes S&auml;ulendiagramm f&uuml;r jeden Gruppierungswert separat gezeigt.<dl><dd>Wenn <b>Vertikale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
+<li><b>Vertikale Felder nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine weitere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertikale Felder</a> zu aktivieren. Dadurch wird ein gruppiertes S&auml;ulendiagramm f&uuml;r jeden Gruppierungswert separat angezeigt.<dl><dd>Wenn <b>Horizontale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
+<li><b>Seiten teilen nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die Eingabedaten zu teilen und gruppierte S&auml;ulendiagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der f&uuml;r die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt f&uuml;hrt alle Seiten auf.</li></ul>
+</td></tr>
+<tr>
+<th>Diagrammtyp</th>
+<td>Legen Sie den Diagrammtyp fest - S&auml;ulendiagramm, Balkendiagramm oder Punktdiagramm.</td></tr>
+<tr>
+<th>Stapeln</th>
+<td>Legen Sie fest, ob die S&auml;ulen/Balken gestapelt werden sollen, wenn sich mehrere Eingabevariablen in der gleichen Grafik &uuml;berlagern. Sie k&ouml;nnen <b>Nebeneinander</b>, <b>Gestapelt</b> oder <b>Gestapelt, 100%</b> w&auml;hlen. Diese Option ist f&uuml;r den Diagrammtyp Punktdiagramm nicht verf&uuml;gbar.</td></tr>
+<tr>
+<th>Diagrammmvorlage</th>
+<td>Legen Sie ggf. eine Anwendervorlage fest. Per Standard ist das Kontrollk&auml;stchen Auto aktiviert und die Standardvorlage GBOX wird verwendet.</td></tr>
+<tr>
+<th>Ausgabe in</th>
+<td>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</td></tr>
+<tr>
+<th>Daten ausgeben</th>
+<td>Legen Sie fest, wo die <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">berechneten Daten ausgegeben</a> werden.</td></tr>
+<tr>
+<th>Diagramme ausgeben</th>
+<td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td></tr></table>
+<p>Zus&auml;tzlich k&ouml;nnen Sie sich das finale Diagramm in diesem Dialog anzeigen lassen.</p>
+<table class="note">
+
+<tr>
+<td><b>Hinweis:</b> Um den Gruppierungsbereich nicht mit der alphabetischen Standardreihenfolge zu sortieren, setzen Sie ihn (sie) als kategorial und modifizieren Sie die Reihenfolgen auf der <a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="UserGuide:The (Column Properties) Categories Tab">Registerkarte <b>Kategorien</b></a>.</td></tr></table>
+<h4><a name="For_Raw_Data"></a><span class="mw-headline">F&uuml;r Rohdaten</span></h4>
+<p>Wenn Sie <b>Rohdaten</b> in der Auswahlliste <b>Datenform</b> w&auml;hlen, werden zwei statistische Optionen gezeigt, mit denen Sie festlegen k&ouml;nnen, welche statistischen Informationen der ausgew&auml;hlten Eingabedaten als S&auml;ulen oder Balken und ihre Fehlerbalken  gezeigt werden. Eine andere Option <b>Daten stapeln</b> wird f&uuml;r die Diagrammtypen <b>S&auml;ulen</b> und <b>Balken</b> angezeigt und verwendet, um zu stapelnde Daten festzulegen.</p>
+<ul><li><b>Statistik Balken</b>: Sie k&ouml;nnen w&auml;hlen, dass eine Art von statistischen Werten als S&auml;ulen oder Balken gezeigt wird. Die Optionen <b>Mittelwert</b>, <b>N</b>, <b>N fehlend</b>, <b>Median</b>, <b>Min.</b>, <b>Max.</b>, <b>Summe</b>, <b>StdAbw.</b>, <b>Geometrisches Mittel</b>, <b>Harmonisches Mittel</b> und <b>Varianz</b> stehen in der Auswahlliste zur Verf&uuml;gung.</li>
+<li><b>Statistik Fehlerbalken</b>: Sie k&ouml;nnen w&auml;hlen, dass eine Art von statistischen Werten als Fehlerbalken f&uuml;r die S&auml;ulen oder Balken gezeigt wird. Die Optionen <b>Kein</b>, <b>StdAbw.</b>, <b>Standardfehler des Mittelwerts</b>, <b>95% KI des Mittelwerts</b>, <b>10%-90%</b>, <b>5%-95%</b>, <b>1%-99%</b>, <b>Q1-Q3</b>, <b>Min-Max</b> und <b>Mittlere absolute Abweichung </b> stehen in der Auswahlliste zur Verf&uuml;gung.</li>
+<li><b>Daten stapeln</b>: Legen Sie die zu stapelnden Daten fest. Wenn <b>Variablen</b> ausgew&auml;hlt sind, werden die Spalten nach Eingabevariablen f&uuml;r jeden Teildatensatz auf Layerebene kumulativ gestapelt. Wenn <b>Letzte Gruppe</b> ausgew&auml;hlt ist, werden die Spalten nach der letzten Gruppenspalte gestapelt. <b>Hinweis:</b> Das Stapeln der letzten Gruppe wird nur unterst&uuml;tzt, wenn die Anzahl der Gruppenspalten gr&ouml;&szlig;er als 1 ist.<dl><dd><a  class="image"><img alt="Grouped Columns Index Data 01.png" src="../images/Grouped_Columns_Index_Data/800px-Grouped_Columns_Index_Data_01.png" width="800"   /></a></dd></dl></li></ul>
+<p>Die anderen Optionen sind die gleichen wie bei den <b>Zusammengefassten Daten</b>.</p>
+<h3><a name="Examples"></a><span class="mw-headline">Beispiele</span></h3>
+<table class="noborder">
+	<tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Grouped_Columns_Index_Data/Tutorial_icon.png" width="57"  border="0" /></td>
+	<td><ol><li>&Ouml;ffnen Sie eine neue Arbeitsmappe und klicken Sie auf die Schaltfl&auml;che <a  class="image"><img alt="Button Import Single ASCII.png" src="../images/Grouped_Columns_Index_Data/Button_Import_Single_ASCII.png" width="23"  /></a>, um die Datei <b>Categorical Data.dat</b> aus dem <i>&lt;Origin-Verzeichnis&gt;\Samples\Graphing</i> zu importieren.</li>
+<li>Markieren Sie Spalte B und w&auml;hlen Sie <b>Zeichnen &gt; Kategorial: Gruppiertes S&auml;ulendiagramm ...</b> im Hauptmen&uuml;, um den Dialog <b>plot_gindexed</b> zu &ouml;ffnen.</li>
+<li>Klicken Sie im Abschnitt <b>Gruppenspalte(n)</b> auf die Schaltfl&auml;che <b>Hinzuf&uuml;gen</b> <a  class="image"><img alt="Button Group List Add.png" src="../images/Grouped_Columns_Index_Data/Button_Group_List_Add.png" width="17"  /></a> oben rechts und f&uuml;gen Sie die Spalte D als den ersten Gruppierungsbereich hinzu. F&uuml;gen Sie entsprechend Spalte C als den zweiten Gruppierungsbereich hinzu.</li>
+<li>Klicken Sie auf <b>OK</b>, um die Zeichnungsdaten und Diagramme in die neu erzeugten Bl&auml;tter auszugeben.<dl><dd><a  class="image"><img alt="Grouped Box Indexed Data EX.png" src="../images/Grouped_Columns_Index_Data/500px-Grouped_Columns_Indexed_Data_EX.png" width="500"   /></a></dd></dl></li></ol>
+</td></tr></table>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Grouped_Columns_Index_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>Ein umfangreicheres Tutorial finden Sie unter <a class="external text" href="../../Tutorial/Tutorial/Grouped_Column_with_Error_Bars_and_Data_Labels.html">Gruppiertes S&auml;ulendiagramm mit Fehlerbalken und Datenbeschriftungen</a>. Das Tutorial handelt u. a. von F&uuml;llmustern und der Verwendung und Anpassung von Tabellen der Hilfsstrichsbeschriftung (wie im obigen Diagramm zu sehen) zum Beschriften der X-Achse.</p></td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>gColumn.otpu (installiert im EXE-Ordner von Origin)</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+<ul><li>Wenn es mehr als einen Gruppierungsbereich (in dem Feld <b>Gruppenspalte(n)</b>) gibt, werden die Hilfsstrichsbeschriftungen der X-Achse standardm&auml;&szlig;ig als Tabellen angezeigt. Sie k&ouml;nnen dieses Verhalten und die Formatierung der Tabelle der Hilfsstrichsbeschriftung im Allgemeinen &uuml;ber die <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Table_Tab" title="UserGuide:Tick Labels 2">Registerkarte <b>Tabelle</b></a> auf der Registerkarte <b>Beschriftung der Hilfsstriche</b> des Dialogs <b>Achsen</b> steuern.</li>
+<li>Standardm&auml;&szlig;ig verwendet dieses Diagramm <b>Index</b> zum Anwenden von F&uuml;llfarbe. Es gibt jedoch auch andere Optionen. Die folgende Abbildung zeigt drei Variationen des gleichen Diagramms. Der Unterschied besteht in der Art und Weise, wie Farbe auf die Balken angewendet wird:</li></ul>
+<dl><dd><ul><li>Im Diagramm links wird die Balkenfarbe auf die Teilgruppe (Gender) <b>indiziert</b>. Dies ist Standard und sollte f&uuml;r die meisten Situationen, einschlie&szlig;lich unbalancierter Zeichnungen, verwendet werden k&ouml;nnen.</li>
+<li>Im mittleren Diagramm wird Balkenfarbe auf die Hauptgruppe (Drug) <b>indiziert</b>.</li>
+<li>Im Diagramm rechts ist die Balkenfarbe auf <b>Inkrement</b> gesetzt, mit einer Teilgruppengr&ouml;&szlig;e von 8.</li></ul></dd>
+<dd><a  class="image"><img alt="Color variations grouped column 750.png" src="../images/Grouped_Columns_Index_Data/Color_variations_grouped_column_750.png" width="750"  /></a></dd>
+<dd>Weitere Informationen finden Sie unter:<ul><li><a href="../../UserGuide/UserGuide/Using_a_Dataset_to_Control_Plot_Color.html#Indexing" title="UserGuide:Using a Dataset to Control Plot Color">Index</a></li>
+<li><a href="../../UserGuide/UserGuide/Customizing_Data_Plot_Colors.html#Using_a_Saved_Increment_List" title="UserGuide:Customizing Data Plot Colors">Eine gespeicherte Inkrementliste verwenden</a></li>
+<li><a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html#Subset" title="UserGuide:The (Plot Details) Spacing Tab">Teildatensatz, Registerkarte Abst&auml;nde im Dialog Details Zeichnung</a></li></ul></dd></dl>
+<ul><li>Sie k&ouml;nnen die Abst&auml;nde zwischen den S&auml;ulen bzw. S&auml;ulengruppen mit Hilfe der Bedienelemente auf der <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Spacing_Tab.html" title="UserGuide:The (Plot Details) Spacing Tab">Registerkarte <b>Abst&auml;nde</b></a> des Dialogs Details Zeichnung modifizieren.</li>
+<li>Wenn Sie ein gruppiertes Balkendiagramm erstellen m&ouml;chten, k&ouml;nnen Sie den <b>Diagrammtyp</b> im Dialog <b>plot_gindexed</b> auf <b>Balken</b> setzen. Alternativ k&ouml;nnen Sie ein gruppiertes S&auml;ulendiagramm mit Hilfe des Men&uuml;befehls erstellen und dann <b>Grafik: X-Y-Achse austauschen</b> w&auml;hlen.</li>
+<li>Wenn Sie ein gruppiertes Punktdiagramm erstellen m&ouml;chten, k&ouml;nnen Sie den <b>Diagrammtyp</b> im Dialog <b>plot_gindexed</b> auf <b>Punkt</b> setzen. Die Quelldaten werden entsprechend Ihrer Gruppierungsspalte in Untergruppen aufgeteilt.</li></ul>
+<h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Mindestversion:</b> Origin 9,1</td>
+<td><b>Letzte Aktualisierung</b>: Origin 2026</td></tr></table>
+
+
+
+    

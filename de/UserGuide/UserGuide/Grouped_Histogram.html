@@ -1,159 +1,95 @@
-﻿<h1 class="firstHeading">Gruppiertes Histogramm</h1>
+﻿<h1 class="firstHeading">Gruppiertes Histogramm</h1><p class='urlname' style='display: none'>grouped-histogram</p><a  class="image"><img alt="Grouped Histogram.png" src="../images/Grouped_Histogram/600px-Grouped_Histogram.png" width="600"   /></a><div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_ghist_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog ghist</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Versionsinformationen</span></a></li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>grouped-histogram</p><a class="image"><img alt="Grouped Histogram.png" src="../images/Grouped_Histogram/600px-Grouped_Histogram.png" width="600"></a>
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>Sie brauchen mindestens eine Y-Spalte als Eingabedaten.</p><p>Optional k&ouml;nnen Sie eine zus&auml;tzliche Y-Fehlerspalte f&uuml;r jede Y-Spalte haben.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>W&auml;hlen Sie <b>Zeichnen &gt; Kategorial: Gruppiertes Histogramm...</b>, um den Dialog <b>plot_ghist</b> zu &ouml;ffnen:</p><p>W&auml;hlen Sie in dem aufgerufenen Dialog den Eingabebereich aus. F&uuml;gen Sie mindestens eine Gruppenspalte hinzu und bestimmen Sie, wo die berechneten Daten angezeigt werden. Sie k&ouml;nnen dann ein gruppiertes Histogramm erstellen.</p><p>Einzelheiten zu den Bedienelementen erhalten Sie im Abschnitt unten:</p>
+<h3><a name="The_plot_ghist_Dialog_Box"></a><span class="mw-headline">Der Dialog plot_ghist</span></h3>
+<p><a  class="image"><img alt="Plot ghist dialog box.png" src="../images/Grouped_Histogram/Plot_ghist_dialog_box.png" width="589"  /></a></p>
+<table class="dialogcontroltable">
 
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
+<tr>
+<th>Datenspalte(n)</th>
+<td>Dieser Zweig wird zum <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">Festlegen der Eingabedaten</a> verwendet.</td></tr>
+<tr>
+<th>Gruppe</th>
+<td>W&auml;hlen Sie Gruppierungsspalten, um die Eingabedaten in mehrere Zeichnungen aufzuteilen.</td></tr>
+<tr>
+<th>Diagrammanordnung</th>
+<td>
+<ul><li><b>Mehrere Daten</b>:&nbsp;W&auml;hlen Sie, wie mehrere Eingabedaten angeordnet werden sollen.<dl><dd><b>&Uuml;berlagerung auf gleicher Grafik</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten als sich &uuml;berschneidende Zeichnungen im gleichen Diagrammlayer.</dd>
+<dd><b>Separate Layer auf gleicher Grafik</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten in separate Layer auf der gleichen Grafik.</dd>
+<dd><b>Separate Grafiken</b>: Zeichnen Sie die ausgew&auml;hlten Eingabedaten in separate Diagrammfenster.</dd></dl></li>
+<li><b>Daten aufteilen nach</b><ul><li>Wenn mehrere Datens&auml;tze nicht auf Separate Grafiken gesetzt ist, wird dieses Bedienelemet gezeigt. Sie k&ouml;nnen eine Spaltenbeschriftungszeile w&auml;hlen, um mehrere Datens&auml;tze in verschiedene Datengruppen aufzuteilen.</li></ul></li>
+<li><b>Mehrere Datengruppen</b><ul><li>Wenn eine Spaltenbeschriftungszeile f&uuml;r <b>Daten aufteilen nach</b> ausgew&auml;hlt wurde, k&ouml;nnen Sie w&auml;hlen, wie die Datengruppen angeordnet werden: <b>Separate Layer</b> oder <b>Separate Grafiken</b>.</li></ul></li>
+<li><b>Zeichnungen im gleichen Layer stapeln</b>: Durch Aktivieren dieses Kontrollk&auml;stchens werden alle durch die Gruppierungsspalten geteilten Zeichnungen im gleichen Layer gestapelt.</li>
+<li><b>Horizontale Felder nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine weitere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontale Felder</a> zu aktivieren. Dadurch wird ein gruppiertes Histogramm f&uuml;r jeden Gruppierungswert separat gezeigt.<dl><dd>Wenn <b>Vertikale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
+<li><b>Vertikale Felder nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine weitere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertikale Felder</a> zu aktivieren. Dadurch wird ein gruppiertes Histogramm f&uuml;r jeden Gruppierungswert separat gezeigt.<dl><dd>Wenn <b>Horizontale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
+<li><b>Seiten teilen nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die Eingabedaten zu teilen und gruppierte S&auml;ulendiagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der f&uuml;r die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt f&uuml;hrt alle Seiten auf.</li></ul>
+</td></tr>
+<tr>
+<th>Y teilen</th>
+<td>Wenn mehrere Spalten als Eingabe ausgew&auml;hlt sind und <b>Mehrere Daten</b> auf <b>Separate Layer in gleicher Grafik</b> gesetzt ist, dann k&ouml;nnen Sie dieses Kontrollk&auml;stchen aktivieren, damit sich mehrere Layer auf der gleichen Grafik die Y-Achsenskalierung teilen.</td></tr>
+<tr>
+<th>X und Einteilungen teilen</th>
+<td>Aktivieren Sie dieses Kontrollk&auml;stchen, damit sich verschiedene Layer und verschiedene Diagramme die X-Skalierung und die Einteilungseinstellungen teilen.</td></tr>
+<tr>
+<th>Verteilungskurve</th>
+<td>Legen Sie fest, ob Verteilungskurven auf den Histogrammen hinzugef&uuml;gt werden sollen.<ul><li><b>Verteilung</b>: W&auml;hlen Sie eine Verteilungsfunktion, um die Verteilungskurven als &Uuml;berlagerung auf den Histogrammen zu erstellen.</li>
+<li><b>Aus Daten sch&auml;tzen</b>: Das Aktivieren dieses Kontrollk&auml;stchenserm&ouml;glicht es Origin, die Parameterwerte f&uuml;r die Kurven zu sch&auml;tzen. Deaktivieren Sie es, um in den folgenden Feldern benutzerdefinierte Parameterwerte festzulegen.</li>
+<li><i><b>Parameter</b></i>: Das Deaktivieren des Kontrollk&auml;stchens <b>Aus Daten sch&auml;tzen</b> aktiviert die Felder <i><b>Parameter</b></i>, in die Sie benutzerdefinierte Werte eingeben k&ouml;nnen, um die Kurven zu zeichnen.</li></ul>
+<p>Sie k&ouml;nnen mehr Einzelheiten &uuml;ber die <a href="../../UserGuide/UserGuide/Customizing_the_Violin_Plot_Distribution_Tab_Controls.html#Curve_Type" title="UserGuide:Customizing the Violin Plot Distribution Tab Controls">Verteilungskurven</a> auf der Registerkarte <b>Verteilung</b> im Dialog <b>Details Zeichnung</b> finden.</p>
+</td></tr>
+<tr>
+<th>Einteilungen verbergen</th>
+<td>Wenn die Verteilungskurve hinzugef&uuml;gt wurde, k&ouml;nnen Sie dieses Kontrollk&auml;stchen aktivieren, um die Histogrammbalken zu verbergen.</td></tr>
+<tr>
+<th>Datenh&ouml;he</th>
+<td>Legen Sie einen Datensatz als Balkenh&ouml;he fest. Sie k&ouml;nnen dies mit dem <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Data_Height." title="UserGuide:Customizing the Box Chart Data Tab Controls">Bedienelement <b>Datenh&ouml;he</b></a> auf der Registerkarte <b>Daten</b> des Dialogs <b>Details Zeichnung</b> tun.</td></tr>
+<tr>
+<th>Diagrammmvorlage</th>
+<td>Legen Sie ggf. eine Anwendervorlage fest. Per Standard ist das Kontrollk&auml;stchen Auto aktiviert und die Standardvorlage Hist wird verwendet.</td></tr>
+<tr>
+<th>Ausgabe in</th>
+<td>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</td></tr>
+<tr>
+<th>Ausgabezeichnungsdaten</th>
+<td>Legen Sie fest, wo die <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">berechneten Daten ausgegeben</a> werden.</td></tr>
+<tr>
+<th>Diagramme ausgeben</th>
+<td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td></tr></table>
+<p>Zus&auml;tzlich k&ouml;nnen Sie sich das finale Diagramm in diesem Dialog anzeigen lassen.</p>
+<table class="note">
 
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<tr>
+<td><b>Hinweis:</b> Um den Gruppierungsbereich nicht mit der alphabetischen Standardreihenfolge zu sortieren, setzen Sie ihn (sie) als kategorial und modifizieren Sie die Reihenfolgen auf der <a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="UserGuide:The (Column Properties) Categories Tab">Registerkarte <b>Kategorien</b></a>.</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>Hist.otpu (installiert im EXE-Ordner von Origin)</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+<p>Sie k&ouml;nnen mehrere Spalten f&uuml;r die Felder <b>Gruppe</b>, <b>Felder teilen nach</b> und <b>Seiten teilen nach</b> ausw&auml;hlen.</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
+<table class="tbl">
 
-      <li class="toclevel-1 tocsection-2">
-        <a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a>
+<tr style="vertical-align: top;">
+<td><b>Mindestversion:</b> Origin 2026</td></tr></table>
 
-        <ul>
-          <li class="toclevel-2 tocsection-3"><a href="#The_plot_ghist_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog ghist</span></a></li>
-        </ul>
-      </li>
 
-      <li class="toclevel-1 tocsection-4"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
 
-      <li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
-    </ul>
-  </div>
 
-  <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
 
-  <p>Sie brauchen mindestens eine Y-Spalte als Eingabedaten.</p>
 
-  <p>Optional können Sie eine zusätzliche Y-Fehlerspalte für jede Y-Spalte haben.</p>
 
-  <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
-
-  <p>Wählen Sie <b>Zeichnen &gt; Kategorial: Gruppiertes Histogramm...</b>, um den Dialog <b>plot_ghist</b> zu öffnen:</p>
-
-  <p>Wählen Sie in dem aufgerufenen Dialog den Eingabebereich aus. Fügen Sie mindestens eine Gruppenspalte hinzu und bestimmen Sie, wo die berechneten Daten angezeigt werden. Sie können dann ein gruppiertes Histogramm erstellen.</p>
-
-  <p>Einzelheiten zu den Bedienelementen erhalten Sie im Abschnitt unten:</p>
-
-  <h3><a name="The_plot_ghist_Dialog_Box"></a><span class="mw-headline">Der Dialog plot_ghist</span></h3>
-
-  <p><a class="image"><img alt="Plot ghist dialog box.png" src="../images/Grouped_Histogram/Plot_ghist_dialog_box.png" width="498"></a></p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Datenspalte(n)</th>
-
-      <td>Dieser Zweig wird zum <a href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html" title="UserGuide:Specifying Your Input Data">Festlegen der Eingabedaten</a> verwendet.</td>
-    </tr>
-
-    <tr>
-      <th>Gruppe</th>
-
-      <td>Wählen Sie Gruppierungsspalten, um die Eingabedaten in mehrere Zeichnungen aufzuteilen.</td>
-    </tr>
-
-    <tr>
-      <th>Diagrammanordnung</th>
-
-      <td>
-        <ul>
-          <li>
-            <b>Mehrere Daten</b>:&#160;Wählen Sie, wie mehrere Eingabedaten angeordnet werden sollen.
-
-            <dl>
-              <dd><b>Überlagerung auf gleicher Grafik</b>: Zeichnen Sie die ausgewählten Eingabedaten als sich überschneidende Zeichnungen im gleichen Diagrammlayer.</dd>
-
-              <dd><b>Separate Layer auf gleicher Grafik</b>: Zeichnen Sie die ausgewählten Eingabedaten in separate Layer auf der gleichen Grafik.</dd>
-
-              <dd><b>Separate Grafiken</b>: Zeichnen Sie die ausgewählten Eingabedaten in separate Diagrammfenster.</dd>
-            </dl>
-          </li>
-
-          <li><b>Zeichnungen im gleichen Layer stapeln</b>: Durch Aktivieren dieses Kontrollkästchens werden alle durch die Gruppierungsspalten geteilten Zeichnungen im gleichen Layer gestapelt.</li>
-
-          <li><b>Felder teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert wurde, können Sie eine andere Gruppierungsspalte auswählen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontale Felder</a> zu aktivieren, die für jeden Gruppierungswert separat ein gruppiertes Säulendiagramm zeigen. <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> wird aktiviert, Hilfsstriche und Beschriftungen werden standardmäßig auf abwechselnden Seiten gezeigt. Wenn mehrere Spalten ausgewählt sind, wird oberhalb nur eine Beschriftungszeile für die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</li>
-
-          <li><b>Seiten teilen nach</b>: Wenn dieses Kontrollkästchen aktiviert ist, können Sie eine andere Gruppierungsspalte auswählen, um die Eingabedaten zu teilen und gruppierte Säulendiagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der für die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt führt alle Seiten auf.</li>
-        </ul>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Y teilen</th>
-
-      <td>Wenn mehrere Spalten als Eingabe ausgewählt sind und <b>Mehrere Daten</b> auf <b>Separate Layer in gleicher Grafik</b> gesetzt ist, dann können Sie dieses Kontrollkästchen aktivieren, damit sich mehrere Layer auf der gleichen Grafik die Y-Achsenskalierung teilen.</td>
-    </tr>
-
-    <tr>
-      <th>X und Einteilungen teilen</th>
-
-      <td>Aktivieren Sie dieses Kontrollkästchen, damit sich verschiedene Layer und verschiedene Diagramme die X-Skalierung und die Einteilungseinstellungen teilen.</td>
-    </tr>
-
-    <tr>
-      <th>Verteilungskurve</th>
-
-      <td>
-        Legen Sie fest, ob Verteilungskurven auf den Histogrammen hinzugefügt werden sollen.
-
-        <ul>
-          <li><b>Verteilung</b>: Wählen Sie eine Verteilungsfunktion, um die Verteilungskurven als Überlagerung auf den Histogrammen zu erstellen.</li>
-
-          <li><b>Aus Daten schätzen</b>: Das Aktivieren dieses Kontrollkästchensermöglicht es Origin, die Parameterwerte für die Kurven zu schätzen. Deaktivieren Sie es, um in den folgenden Feldern benutzerdefinierte Parameterwerte festzulegen.</li>
-
-          <li><i><b>Parameter</b></i>: Das Deaktivieren des Kontrollkästchens <b>Aus Daten schätzen</b> aktiviert die Felder <i><b>Parameter</b></i>, in die Sie benutzerdefinierte Werte eingeben können, um die Kurven zu zeichnen.</li>
-        </ul>
-
-        <p>Sie können mehr Einzelheiten über die <a href="../../UserGuide/UserGuide/Customizing_the_Violin_Plot_Distribution_Tab_Controls.html#Curve_Type" title="UserGuide:Customizing the Violin Plot Distribution Tab Controls">Verteilungskurven</a> auf der Registerkarte <b>Verteilung</b> im Dialog <b>Details Zeichnung</b> finden.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Einteilungen verbergen</th>
-
-      <td>Wenn die Verteilungskurve hinzugefügt wurde, können Sie dieses Kontrollkästchen aktivieren, um die Histogrammbalken zu verbergen.</td>
-    </tr>
-
-    <tr>
-      <th>Datenhöhe</th>
-
-      <td>Legen Sie einen Datensatz als Balkenhöhe fest. Sie können dies mit dem <a href="../../UserGuide/UserGuide/Customizing_the_Box_Chart_Data_Tab_Controls.html#Data_Height." title="UserGuide:Customizing the Box Chart Data Tab Controls">Bedienelement <b>Datenhöhe</b></a> auf der Registerkarte <b>Daten</b> des Dialogs <b>Details Zeichnung</b> tun.</td>
-    </tr>
-
-    <tr>
-      <th>Diagrammmvorlage</th>
-
-      <td>Legen Sie ggf. eine Anwendervorlage fest. Per Standard ist das Kontrollkästchen Auto aktiviert und die Standardvorlage Hist wird verwendet.</td>
-    </tr>
-
-    <tr>
-      <th>Ausgabezeichnungsdaten</th>
-
-      <td>Legen Sie fest, wo die <a href="../../UserGuide/UserGuide/Output_Results.html" title="UserGuide:Output Results">berechneten Daten ausgegeben</a> werden.</td>
-    </tr>
-
-    <tr>
-      <th>Diagramme ausgeben</th>
-
-      <td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td>
-    </tr>
-  </table>
-
-  <p>Zusätzlich können Sie sich das finale Diagramm in diesem Dialog anzeigen lassen.</p>
-
-  <table class="note">
-    <tr>
-      <td><b>Hinweis:</b> Um den Gruppierungsbereich nicht mit der alphabetischen Standardreihenfolge zu sortieren, setzen Sie ihn (sie) als kategorial und modifizieren Sie die Reihenfolgen auf der <a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="UserGuide:The (Column Properties) Categories Tab">Registerkarte <b>Kategorien</b></a>.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
-
-  <p>Hist.otpu (installiert im EXE-Ordner von Origin)</p>
-
-  <h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
-
-  <p>Sie können mehrere Spalten für die Felder <b>Gruppe</b>, <b>Felder teilen nach</b> und <b>Seiten teilen nach</b> auswählen.</p>
+    

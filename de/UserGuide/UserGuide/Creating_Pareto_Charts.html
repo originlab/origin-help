@@ -1,129 +1,68 @@
-﻿<h1 class="firstHeading">Pareto-Diagramme erstellen</h1>
+﻿<h1 class="firstHeading">Pareto-Diagramme erstellen</h1><p class='urlname' style='display: none'>Create-Pareto-Chart</p>
+<p><br /></p>
+<dl><dd><a  class="image"><img alt="Pareto Chart.png" src="../images/Creating_Pareto_Charts/450px-Pareto_Chart.png" width="450"   /></a></dd></dl>
+<p>Das Pareto-Diagramm ist ein spezieller Typ des Balkendiagramms, das mit einem Punkt-Liniendiagramm kombiniert wird. Normalerweise sind die vertikalen Balken, deren H&ouml;he durch die H&auml;ufigkeit oder den Einfluss der Probleme wiedergibt, in absteigender Reihenfolge nach Bedeutung geordnet und das Punkt-Liniendiagramm in monotonisch aufsteigender Reihenfolge.</p><p>Pareto-Diagramme k&ouml;nnen verwendet werden, um Faktoren zu identifizieren, die den gr&ouml;&szlig;ten kumulativen Effekt auf das System haben. Deshalb ist es hilfreich, die weniger signifikanten Faktoren in einer Analyse auszulesen.</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"><span class="tocnumber">1</span> <span class="toctext">Pareto-Diagramm aus eingeteilten oder Rohdaten erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-2"><a href="#Input_Data:_Binned_Data"><span class="tocnumber">1.1</span> <span class="toctext">Eingabedaten: Eingeteilte Daten</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Input_Data:_Raw_Data"><span class="tocnumber">1.2</span> <span class="toctext">Eingabedaten: Rohdaten</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_for_Plotting"><span class="tocnumber">2</span> <span class="toctext">Bedienelemente zum Zeichnen</span></a><ul>
+<li class="toclevel-2 tocsection-5"><a href="#Multiple_Groups"><span class="tocnumber">2.1</span> <span class="toctext">Mehrere Gruppen</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Show_Cumulative_Percent_Plot"><span class="tocnumber">2.2</span> <span class="toctext">Diagramm f&uuml;r kumulativen Prozentanteil zeigen</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Show_Symbol_at_Right_Side_of_Bar"><span class="tocnumber">2.3</span> <span class="toctext">Symbol rechts vom Balken zeigen</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Show_Table_for_Count_and_Cumulative_Percent"><span class="tocnumber">2.4</span> <span class="toctext">Tabelle f&uuml;r Anzahl und kumulative Prozent</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.5</span> <span class="toctext">Kleinere Anzahlen in einer Kategorie kombinieren</span></a><ul>
+<li class="toclevel-3 tocsection-10"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.5.1</span> <span class="toctext">Kleinere Werte kombinieren</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Threshold"><span class="tocnumber">2.5.2</span> <span class="toctext">Schwellenwert</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Threshold_value"><span class="tocnumber">2.5.3</span> <span class="toctext">Wert f&uuml;r den Schwellenwert</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Tick_Label"><span class="tocnumber">2.5.4</span> <span class="toctext">Hilfsstrichsbeschriftung</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Output_To"><span class="tocnumber">2.5.5</span> <span class="toctext">Ausgabe in</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>Create-Pareto-Chart</p>
+<h2><a name="Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"></a><span class="mw-headline">Pareto-Diagramm aus eingeteilten oder Rohdaten erstellen</span></h2>
+<p>Gem&auml;&szlig; der verschiedenen Quelldaten unterst&uuml;tzt Origin das Erstellen dieser beiden Pareto-Diagramme:</p>
+<ul><li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Binned_Data.html" title="UserGuide:Pareto Chart - Binned Data">Pareto-Diagramm - Eingeteilte Daten</a></li>
+<li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Raw_Data.html" title="UserGuide:Pareto Chart - Raw Data">Pareto-Diagramm - Rohdaten</a></li></ul>
+<h3><a name="Input_Data:_Binned_Data"></a><span class="mw-headline">Eingabedaten: Eingeteilte Daten</span></h3>
+<p>Wenn Sie bereits eingeteilte Daten haben, k&ouml;nnen Sie ein Pareto-Diagramm aus ihnen erstellen, indem Sie im Men&uuml; <b>Zeichnen &gt; Statistisch: Pareto: Pareto-Diagramm - Eingeteilte Daten</b> w&auml;hlen oder auf die Schaltfl&auml;che <b>Pareto-Diagramm - Eingeteilte Daten</b> <a  class="image"><img alt="Button Pareto Chart-Binned Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Binned_Data.png" width="21"  /></a> auf der Symbolleiste <b>2D-Grafiken</b> klicken. Der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_paretobin.html">plot_paratobin</a> wird ge&ouml;ffnet.</p><p><a  class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png" width="700"   /></a></p>
+<h3><a name="Input_Data:_Raw_Data"></a><span class="mw-headline">Eingabedaten: Rohdaten</span></h3>
+<p>Wenn Sie Rohdaten haben, k&ouml;nnen Sie ein Pareto-Diagramm erstellen, indem Sie im Men&uuml; <b>Zeichnen &gt; Statistisch: Pareto-Diagramm - Rohdaten</b> w&auml;hlen oder auf die Schaltfl&auml;che <b>Pareto-Diagramm - Rohdaten</b> <a  class="image"><img alt="Button Pareto Chart-Raw Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Raw_Data.png" width="21"  /></a> auf der Symbolleiste <b>2D-Grafiken</b> klicken. Der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_paretoraw.html">plot_paratoraw</a> wird ge&ouml;ffnet.</p><p><a  class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png" width="700"   /></a></p>
+<h2><a name="Controls_for_Plotting"></a><span class="mw-headline">Bedienelemente zum Zeichnen</span></h2>
+<h3><a name="Multiple_Groups"></a><span class="mw-headline">Mehrere Gruppen</span></h3>
+<p>Wenn eine Gruppierungsspalte im Feld <b>Diagramm</b> ausgew&auml;hlt wurde, k&ouml;nnen Sie dieses Bedienelement verwenden, um zu entscheiden, wie mehrere Gruppen angeordnet werden sollen: <b>Separate Felder in gleicher Grafik</b> oder <b>Separate Grafiken</b>.</p><p>Wenn Sie <b>Separate Felder in gleicher Grafik</b> w&auml;hlen, werden die Pareto-Diagramme nach Gruppen in separate Felder in der gleichen Grafik gezeichnet. Wenn die Anzahl der Gruppe <b>N</b> ist, werden die Felder durch <i>sqrt(N)</i> umgebrochen.</p><p>Wenn Sie <b>Separate Grafik</b> w&auml;hlen, werden die Pareto-Diagramme nach Gruppen in separate Felder in der gleichen Grafik gezeichnet.</p>
+<h3><a name="Show_Cumulative_Percent_Plot"></a><span class="mw-headline">Diagramm f&uuml;r kumulativen Prozentanteil zeigen</span></h3>
+<p>Legen Sie fest, ob der kumulative Prozentanteil als ein Punkt-Liniendiagramm auf dem Pareto-Diagramm gezeigt werden soll. Dieses Punkt-Liniendiagramm wird in einen anderen neuen Layer gezeichnet.</p>
+<h3><a name="Show_Symbol_at_Right_Side_of_Bar"></a><span class="mw-headline">Symbol rechts vom Balken zeigen</span></h3>
+<p>Legen Sie fest, ob das Punktsymbol rechts vom Balken gezeigt werden soll. <b>Hinweis:</b> Dieses Punkt-Liniendiagramm startet beim Ursprung (0,0) und positioniert den Punkt rechts vom Balken, wenn Sie dieses Kontrollk&auml;stchen aktiviert haben.</p><p><a  class="image"><img alt="Pareto Charts Symbol At Right.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Symbol_At_Right.png" width="750"   /></a></p>
+<h3><a name="Show_Table_for_Count_and_Cumulative_Percent"></a><span class="mw-headline">Tabelle f&uuml;r Anzahl und kumulative Prozent</span></h3>
+<p>Es wird eine Tabelle unter dem Pareto-Diagramm gezeigt. Es gibt drei Zeilen: <b>Anzahl</b>, <b>Prozent</b> und <b>Kumulativ%</b>, die die H&auml;ufigkeitsanzahl, die Prozent der Faktoren und die kumulativen Prozente zeigen. Wenn diese Tabelle gezeigt wird, werden die Datenbeschriftungen im Diagramm der kumulativen Prozent bei diesen Punkten verborgen.</p><p>Dieses Bedienelement ist nicht verf&uuml;gbar, wenn es mehrere Gruppen in der Option <b>Gruppe</b> gibt und <b>Mehrere Gruppen</b> auf <b>Separate Felder in gleicher Grafik</b> gesetzt ist.</p>
+<h3><a name="Combine_Smaller_Counts_in_One_Category"></a><span class="mw-headline">Kleinere Anzahlen in einer Kategorie kombinieren</span></h3>
+<p>Legen Sie fest, ob Sie die Daten kombinieren m&ouml;chten, deren Anzahlen unter einem Schwellenwert liegen.</p><p><a  class="image"><img alt="Pareto Charts Combine By Count.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Combine_By_Count.png" width="750"   /></a></p>
+<h4><a name="Combine_Smaller_Values"></a><span class="mw-headline">Kleinere Werte kombinieren</span></h4>
+<p>Aktivieren Sie das Kombinieren der festgelegten kleineren Anzahlwerte.</p>
+<h4><a name="Threshold"></a><span class="mw-headline">Schwellenwert</span></h4>
+<p>Legen Sie fest, wie der Wert f&uuml;r den Schwellenwert definiert werden soll: <b>Nach Prozent</b>, <b>Nach Anzahl</b> oder <b>Nach Balkenanzahl</b>.</p>
+<ul><li><b>Nach Prozent</b>: Legen Sie einen Prozentwert als den Schwellenwert fest, ab dem die Daten, deren Prozentanteil der Anzahlen unter diesem Wert liegt, kombiniert werden.</li>
+<li><b>Nach Anzahl</b>: Legen Sie einen Anzahlwert als den Schwellenwert fest, ab dem die Daten, deren Anzahlwert unter diesem Wert liegt, kombiniert werden.</li>
+<li><b>Nach Balkenanzahl</b>: Geben Sie eine Balkenanzahl als Schwellenwert ein, um festzulegen, wie viele Balken sich in dieser Zeichnung befinden.</li></ul>
+<h4><a name="Threshold_value"></a><span class="mw-headline">Wert f&uuml;r den Schwellenwert</span></h4>
+<p>Geben Sie den Wert f&uuml;r den Schwellenwert entsprechend der Auswahl in der Liste <b>Schwellenwert</b> ein.</p>
+<h4><a name="Tick_Label"></a><span class="mw-headline">Beschriftung der Hilfsstriche</span></h4>
+<p>Geben Sie einen Beschriftungstext f&uuml;r den Kombinationsbalken ein.</p>
+<h4><a name="Output_To"></a><span class="mw-headline">Ausgabe in</span></h4>
+<p>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</p>
 
-  <p>&#160;</p>
 
-  <dl>
-    <dd><a class="image"><img alt="Pareto Chart.png" src="../images/Creating_Pareto_Charts/450px-Pareto_Chart.png" width="450"></a></dd>
-  </dl>
 
-  <p>Das Pareto-Diagramm ist ein spezieller Typ des Balkendiagramms, das mit einem Punkt-Liniendiagramm kombiniert wird. Normalerweise sind die vertikalen Balken, deren Höhe durch die Häufigkeit oder den Einfluss der Probleme wiedergibt, in absteigender Reihenfolge nach Bedeutung geordnet und das Punkt-Liniendiagramm in monotonisch aufsteigender Reihenfolge.</p>
 
-  <p>Pareto-Diagramme können verwendet werden, um Faktoren zu identifizieren, die den größten kumulativen Effekt auf das System haben. Deshalb ist es hilfreich, die weniger signifikanten Faktoren in einer Analyse auszulesen.</p>
 
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
 
-    <ul>
-      <li class="toclevel-1 tocsection-1">
-        <a href="#Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"><span class="tocnumber">1</span> <span class="toctext">Pareto-Diagramm aus eingeteilten oder Rohdaten erstellen</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-2"><a href="#Input_Data:_Binned_Data"><span class="tocnumber">1.1</span> <span class="toctext">Eingabedaten: Eingeteilte Daten</span></a></li>
-
-          <li class="toclevel-2 tocsection-3"><a href="#Input_Data:_Raw_Data"><span class="tocnumber">1.2</span> <span class="toctext">Eingabedaten: Rohdaten</span></a></li>
-        </ul>
-      </li>
-
-      <li class="toclevel-1 tocsection-4">
-        <a href="#Controls_for_Plotting"><span class="tocnumber">2</span> <span class="toctext">Bedienelemente zum Zeichnen</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-5"><a href="#Multiple_Groups"><span class="tocnumber">2.1</span> <span class="toctext">Mehrere Gruppen</span></a></li>
-
-          <li class="toclevel-2 tocsection-6"><a href="#Show_Cumulative_Percent_Plot"><span class="tocnumber">2.2</span> <span class="toctext">Diagramm für kumulativen Prozentanteil zeigen</span></a></li>
-
-          <li class="toclevel-2 tocsection-7"><a href="#Show_Symbol_at_Right_Side_of_Bar"><span class="tocnumber">2.3</span> <span class="toctext">Symbol rechts vom Balken zeigen</span></a></li>
-
-          <li class="toclevel-2 tocsection-8">
-            <a href="#Combine_Smaller_Counts_in_One_Category"><span class="tocnumber">2.4</span> <span class="toctext">Kleinere Anzahlen in einer Kategorie kombinieren</span></a>
-
-            <ul>
-              <li class="toclevel-3 tocsection-9"><a href="#Combine_Smaller_Values"><span class="tocnumber">2.4.1</span> <span class="toctext">Kleinere Werte kombinieren</span></a></li>
-
-              <li class="toclevel-3 tocsection-10"><a href="#Threshold"><span class="tocnumber">2.4.2</span> <span class="toctext">Schwellenwert</span></a></li>
-
-              <li class="toclevel-3 tocsection-11"><a href="#Threshold_value"><span class="tocnumber">2.4.3</span> <span class="toctext">Wert für den Schwellenwert</span></a></li>
-
-              <li class="toclevel-3 tocsection-12"><a href="#Tick_Label"><span class="tocnumber">2.4.4</span> <span class="toctext">Hilfsstrichsbeschriftung</span></a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <h2><a name="Creating_Pareto_Chart_from_the_Binned_Data_or_Raw_Data"></a><span class="mw-headline">Pareto-Diagramm aus eingeteilten oder Rohdaten erstellen</span></h2>
-
-  <p>Gemäß der verschiedenen Quelldaten unterstützt Origin das Erstellen dieser beiden Pareto-Diagramme:</p>
-
-  <ul>
-    <li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Binned_Data.html" title="UserGuide:Pareto Chart - Binned Data">Pareto-Diagramm - Eingeteilte Daten</a></li>
-
-    <li><a href="../../UserGuide/UserGuide/Pareto_Chart_-_Raw_Data.html" title="UserGuide:Pareto Chart - Raw Data">Pareto-Diagramm - Rohdaten</a></li>
-  </ul>
-
-  <h3><a name="Input_Data:_Binned_Data"></a><span class="mw-headline">Eingabedaten: Eingeteilte Daten</span></h3>
-
-  <p>Wenn Sie bereits eingeteilte Daten haben, können Sie ein Pareto-Diagramm aus ihnen erstellen, indem Sie im Menü <b>Zeichnen &gt; Statistisch: Pareto: Pareto-Diagramm - Eingeteilte Daten</b> wählen oder auf die Schaltfläche <b>Pareto-Diagramm - Eingeteilte Daten</b> <a class="image"><img alt="Button Pareto Chart-Binned Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Binned_Data.png" width="21"></a> auf der Symbolleiste <b>2D-Grafiken</b> klicken. Der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_paretobin.html">plot_paratobin</a> wird geöffnet.</p>
-
-  <p><a class="image"><img alt="Pareto Chart Binned Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Binned_Data.png" width="700"></a></p>
-
-  <h3><a name="Input_Data:_Raw_Data"></a><span class="mw-headline">Eingabedaten: Rohdaten</span></h3>
-
-  <p>Wenn Sie Rohdaten haben, können Sie ein Pareto-Diagramm erstellen, indem Sie im Menü <b>Zeichnen &gt; Statistisch: Pareto-Diagramm - Rohdaten</b> wählen oder auf die Schaltfläche <b>Pareto-Diagramm - Rohdaten</b> <a class="image"><img alt="Button Pareto Chart-Raw Data.png" src="../images/Creating_Pareto_Charts/Button_Pareto_Chart-Raw_Data.png" width="21"></a> auf der Symbolleiste <b>2D-Grafiken</b> klicken. Der Dialog <a class="external text" href="../../XFunction/X-Function/Plot_paretoraw.html">plot_paratoraw</a> wird geöffnet.</p>
-
-  <p><a class="image"><img alt="Pareto Chart Raw Data.png" src="../images/Creating_Pareto_Charts/700px-Pareto_Chart_Raw_Data.png" width="700"></a></p>
-
-  <h2><a name="Controls_for_Plotting"></a><span class="mw-headline">Bedienelemente zum Zeichnen</span></h2>
-
-  <h3><a name="Multiple_Groups"></a><span class="mw-headline">Mehrere Gruppen</span></h3>
-
-  <p>Wenn eine Gruppierungsspalte im Feld <b>Diagramm</b> ausgewählt wurde, können Sie dieses Bedienelement verwenden, um zu entscheiden, wie mehrere Gruppen angeordnet werden sollen: <b>Separate Felder in gleicher Grafik</b> oder <b>Separate Grafiken</b>.</p>
-
-  <p>Wenn Sie <b>Separate Felder in gleicher Grafik</b> wählen, werden die Pareto-Diagramme nach Gruppen in separate Felder in der gleichen Grafik gezeichnet. Wenn die Anzahl der Gruppe <b>N</b> ist, werden die Felder durch <i>sqrt(N)</i> umgebrochen.</p>
-
-  <p>Wenn Sie <b>Separate Grafik</b> wählen, werden die Pareto-Diagramme nach Gruppen in separate Felder in der gleichen Grafik gezeichnet.</p>
-
-  <h3><a name="Show_Cumulative_Percent_Plot"></a><span class="mw-headline">Diagramm für kumulativen Prozentanteil zeigen</span></h3>
-
-  <p>Legen Sie fest, ob der kumulative Prozentanteil als ein Punkt-Liniendiagramm auf dem Pareto-Diagramm gezeigt werden soll. Dieses Punkt-Liniendiagramm wird in einen anderen neuen Layer gezeichnet.</p>
-
-  <h3><a name="Show_Symbol_at_Right_Side_of_Bar"></a><span class="mw-headline">Symbol rechts vom Balken zeigen</span></h3>
-
-  <p>Legen Sie fest, ob das Punktsymbol rechts vom Balken gezeigt werden soll. <b>Hinweis:</b> Dieses Punkt-Liniendiagramm startet beim Ursprung (0,0) und positioniert den Punkt rechts vom Balken, wenn Sie dieses Kontrollkästchen aktiviert haben.</p>
-
-  <p><a class="image"><img alt="Pareto Charts Symbol At Right.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Symbol_At_Right.png" width="750"></a></p>
-
-  <h3><a name="Combine_Smaller_Counts_in_One_Category"></a><span class="mw-headline">Kleinere Anzahlen in einer Kategorie kombinieren</span></h3>
-
-  <p>Legen Sie fest, ob Sie die Daten kombinieren möchten, deren Anzahlen unter einem Schwellenwert liegen.</p>
-
-  <p><a class="image"><img alt="Pareto Charts Combine By Count.png" src="../images/Creating_Pareto_Charts/750px-Pareto_Charts_Combine_By_Count.png" width="750"></a></p>
-
-  <h4><a name="Combine_Smaller_Values"></a><span class="mw-headline">Kleinere Werte kombinieren</span></h4>
-
-  <p>Aktivieren Sie das Kombinieren der festgelegten kleineren Anzahlwerte.</p>
-
-  <h4><a name="Threshold"></a><span class="mw-headline">Schwellenwert</span></h4>
-
-  <p>Legen Sie fest, wie der Wert für den Schwellenwert definiert werden soll: <b>Nach Prozent</b>, <b>Nach Anzahl</b> oder <b>Nach Balkenanzahl</b>.</p>
-
-  <ul>
-    <li><b>Nach Prozent</b>: Legen Sie einen Prozentwert als den Schwellenwert fest, ab dem die Daten, deren Prozentanteil der Anzahlen unter diesem Wert liegt, kombiniert werden.</li>
-
-    <li><b>Nach Anzahl</b>: Legen Sie einen Anzahlwert als den Schwellenwert fest, ab dem die Daten, deren Anzahlwert unter diesem Wert liegt, kombiniert werden.</li>
-
-    <li><b>Nach Balkenanzahl</b>: Geben Sie eine Balkenanzahl als Schwellenwert ein, um festzulegen, wie viele Balken sich in dieser Zeichnung befinden.</li>
-  </ul>
-
-  <h4><a name="Threshold_value"></a><span class="mw-headline">Wert für den Schwellenwert</span></h4>
-
-  <p>Geben Sie den Wert für den Schwellenwert entsprechend der Auswahl in der Liste <b>Schwellenwert</b> ein.</p>
-
-  <h4><a name="Tick_Label"></a><span class="mw-headline">Beschriftung der Hilfsstriche</span></h4>
-
-  <p>Geben Sie einen Beschriftungstext für den Kombinationsbalken ein.</p>
+    

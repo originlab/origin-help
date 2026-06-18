@@ -1,193 +1,84 @@
-﻿<h1 class="firstHeading">Die Registerkarte Anzeige (zu zeigende Zeichnungselemente) (Dialog Details Zeichnung)</h1>
-
-  <p class='urlname' style='display: none'>PD-Dialog-PlotLevel-Display-Tab</p>
-
-  <p><br>
-  Die Bedienelemente auf der Registerkarte <b>Anzeige</b> auf Zeichnungsebene ist nur verfügbar für allgemeine 2D-Diagramme oder 3D-XYY-Balkendiagramme im kartesischen Koordinatensystem.</p>
-
-  <ul>
-    <li><b>2D-Diagramme: Linie, Punkt, Linie + Symbol, Fläche; Box, Histogramm, 3D-XYY-Wand-/-Band-/-Wasserfall</b><br></li>
-  </ul>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab 0a.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a.png" width="427"></a></p>
-
-  <ul>
-    <li><b>Polare oder ternäre Diagramme: Polar Punkt/Linie/Linie+Symbol oder Ternär Punkt/Linie/Linie+Symbol</b><br></li>
-  </ul>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab 0a2.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a2.png" width="411"></a></p>
-
-  <ul>
-    <li><b>3D-Diagramme: 3D-XYZ-Balken, 3D-Punkt<br></b></li>
-  </ul>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab 0a1.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a1.png" width="415"></a></p>
-
-  <ul>
-    <li><b>2D-Diagramme: Säulen, Balken</b><br></li>
-  </ul>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab 0b.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0b.png" width="369"></a></p>
-
-  <ul>
-    <li><b>3D-Diagramme: 3D-YY-Balken</b><br></li>
-  </ul>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab 01.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_01.png" width="410"></a></p>
-
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Inhalt</h2>
-    </div>
-
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Plot_Data_on"><span class="tocnumber">1</span> <span class="toctext">Daten zeichnen auf</span></a></li>
-
-      <li class="toclevel-1 tocsection-2"><a href="#Bar"><span class="tocnumber">2</span> <span class="toctext">Balken</span></a></li>
-
-      <li class="toclevel-1 tocsection-3"><a href="#Symbol"><span class="tocnumber">3</span> <span class="toctext">Symbol</span></a></li>
-
-      <li class="toclevel-1 tocsection-4"><a href="#Connect_Line"><span class="tocnumber">4</span> <span class="toctext">Verbindungslinie</span></a></li>
-
-      <li class="toclevel-1 tocsection-5"><a href="#Drop_Lines"><span class="tocnumber">5</span> <span class="toctext">Ankerlinien</span></a></li>
-
-      <li class="toclevel-1 tocsection-6"><a href="#Bar_Projection_in_XZ_Plane_with_Y_.3D"><span class="tocnumber">6</span> <span class="toctext">Balkenprojektion auf XZ-Ebene mit Y=</span></a></li>
-
-      <li class="toclevel-1 tocsection-7">
-        <a href="#Data_Points_Display_Control"><span class="tocnumber">7</span> <span class="toctext">Bedienelemente der Anzeige von Datenpunkten</span></a>
-
-        <ul>
-          <li class="toclevel-2 tocsection-8"><a href="#No_Skipping_Points"><span class="tocnumber">7.1</span> <span class="toctext">Kein Überspringen von Punkten</span></a></li>
-
-          <li class="toclevel-2 tocsection-9">
-            <a href="#Skip_Points_by_Increment"><span class="tocnumber">7.2</span> <span class="toctext">Punkte nach Inkrement überspringen</span></a>
-
-            <ul>
-              <li class="toclevel-3 tocsection-10"><a href="#No_Line_Break_for_Skipped_Point.28s.29"><span class="tocnumber">7.2.1</span> <span class="toctext">Keine Linienunterbrechung für übersprungene Punkte</span></a></li>
-            </ul>
-          </li>
-
-          <li class="toclevel-2 tocsection-11">
-            <a href="#Smart_Skip"><span class="tocnumber">7.3</span> <span class="toctext">Intelligentes Überspringen</span></a>
-
-            <ul>
-              <li class="toclevel-3 tocsection-12"><a href="#Smart_Skip.28Total_Points_Kept.29"><span class="tocnumber">7.3.1</span> <span class="toctext">Intelligentes Überspringen (Insgesamt beibehaltene Punkte)</span></a></li>
-
-              <li class="toclevel-3 tocsection-13"><a href="#Smart_Skip.28.25_of_Points_Skipped.29"><span class="tocnumber">7.3.2</span> <span class="toctext">Intelligentes Überspringen (% der übersprungenen Punkte)</span></a></li>
-            </ul>
-          </li>
-
-          <li class="toclevel-2 tocsection-14"><a href="#Smart_Skip_Method"><span class="tocnumber">7.4</span> <span class="toctext">Methode des Intelligenten Überspringen</span></a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <h2><a name="Plot_Data_on"></a><span class="mw-headline">Daten zeichnen auf</span></h2>
-
-  <p>Da Origin doppelte Y-Achsen in 2D-Diagrammen und doppelte YZ-Achsen in 3D-Diagrammen unterstützt, können Sie diese Option verwenden, um festzulegen, auf welcher Achse die aktuelle Zeichnung basiert.</p>
-
-  <p>Bei 2D-Diagrammen und 3D-XYY/XYZ-Diagrammen werden alle Zeichnungen standardmäßig auf der linken YZ-Achse gezeichnet (ausschließlich der Zeichnungen, die über spezifische Vorlagen gezeichnet wurden). Sie können diese Option verwenden, um zu entscheiden, auf welcher YZ-Achse die aktuelle Zeichnung gezeichnet werden soll. Wenn zum Beispiel die <b>Rechte YZ-Achse</b> ausgewählt ist, wird die aktuelle Zeichnung auf der rechten YZ-Achse gezeichnet und die Achsenskalierung automatisch angepasst, um den gesamten Datenbereich einzuschließen, und umgekehrt.</p>
-
-  <p><b>Hinweis:</b> Wenn Sie gestapelte 2D- und 3D-Balkendiagramme mit Untergruppierung nach Achse zeichnen möchten, aktivieren Sie die Option <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Stack_Tab.html#Offset_within_Subgroup.28_in_Group_tab_.29_for_Cumulative.2FIncremental" title="UserGuide:The (Plot Details) Stack Tab"><b>Versatz innerhalb der Untergruppierung (auf Registerkarte Gruppe) für kumulative/inkrementelle Daten verwenden</b></a> und setzen Sie <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="UserGuide:The (Plot Details) Group Tab"><b>Untergruppierung</b></a> auf <b>Nach Achse</b> und verwenden Sie dann <b>Daten zeichnen auf</b>, um für jedes Balkendiagramm unterschiedliche Achsen festzulegen.</p>
-
-  <h2><a name="Bar"></a><span class="mw-headline">Balken</span></h2>
-
-  <p>Wenn Sie ein 2D- oder 3D-YY-Balken-/Säulendiagramm erstellt haben, wird dieses Kontrollkästchen standardmäßig aktiviert. Sie können dieses Kontrollkästchen verwenden, um die Balkenanzeige in der Grafik auszuschalten.</p>
-
-  <h2><a name="Symbol"></a><span class="mw-headline">Symbol</span></h2>
-
-  <p>Legen Sie fest, ob Symbole oben in der Mitte der 2D-/3D-Balken/-Säulen gezeigt werden.</p>
-
-  <h2><a name="Connect_Line"></a><span class="mw-headline">Verbindungslinie</span></h2>
-
-  <p>Legen Sie fest, ob die Verbindungslinien, die die Mittelpunkte der Balken in einer Zeichnung verbinden, gezeigt werden. Wenn Sie dieses Kontrollkästchen aktiviert haben, wird die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html" title="UserGuide:The (Plot Details) Line Tab">Registerkarte <b>Linie</b></a> gezeigt, auf der Sie die nachfolgenden Einstellungen des Linienstils vornehmen können.</p>
-
-  <p>Bei 2D-Balkendiagrammen folgt die Farbe der Verbindungslinie per Standard automatisch der Rahmenfarbe der Balken.</p>
-
-  <p>Bei 3D-XYY-Balkendiagrammen folgt die Farbe der Verbindungslinie per Standard automatisch der Musterfüllung der 3D-Balken.</p>
-
-  <p>Wenn es Teildatensätze in Ihrem 2D-Balkendiagramm gibt, ist auf der <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html" title="UserGuide:The (Plot Details) Line Tab">Registerkarte <b>Linie</b></a> das Kontrollkästchen <b>Innerhalb des Teildatensatzes verbinden</b> standardmäßig aktiviert, um Verbindungslinien innerhalb des Teildatensatzes hinzuzufügen.</p>
-
-  <p><b>Beispieldiagramme:</b></p>
-
-  <ul>
-    <li>
-      <b>2D-Säulendiagramm mit Verbindungslinie und Symbolen</b>
-
-      <dl>
-        <dd><a class="image"><img alt="The (Plot Details) Display2 Tab 02.png" src="../images/The_(Plot_Details)_Display2_Tab/450px-The__28Plot_Details_29_Display2_Tab_02.png" width="450"></a></dd>
-      </dl>
-    </li>
-
-    <li>
-      <b>3D-XYY-Balken mit Verbindungslinie</b>
-
-      <dl>
-        <dd><a class="image"><img alt="The (Plot Details) Display2 Tab 03.png" src="../images/The_(Plot_Details)_Display2_Tab/450px-The__28Plot_Details_29_Display2_Tab_03.png" width="450"></a></dd>
-      </dl>
-    </li>
-  </ul>
-
-  <h2><a name="Drop_Lines"></a><span class="mw-headline">Ankerlinien</span></h2>
-
-  <p>Legen Sie fest, ob Ankerlinien von den Mittelpunkten oberhalb der Balken bis zur unteren Achse bzw. zum unteren Feld hinzugefügt werden. Wenn Sie Ankerlinien für die Balken hinzugefügt haben, wird die Registerkarte Ankerlinien gezeigt, damit Sie die Ankerlinien benutzerdefiniert anpassen können.</p>
-
-  <h2><a name="Bar_Projection_in_XZ_Plane_with_Y_.3D"></a><span class="mw-headline">Balkenprojektion auf XZ-Ebene mit Y=</span></h2>
-
-  <p>Legen Sie fest, ob die Projektion des 3D-XYY-Balkens auf XZ-Ebene und die Position (Y=) des Projektionsbalkens gezeigt werden sollen. Per Standard ist <b>Auto</b> ausgewählt, das heißt, die Projektionsbalken werden bei Y = Achsenanfang gezeichnet.</p>
-
-  <p><a class="image"><img alt="The (Plot Details) Display2 Tab Projection.png" src="../images/The_(Plot_Details)_Display2_Tab/800px-The__28Plot_Details_29_Display2_Tab_Projection.png" width="800"></a></p>
-
-  <p><b>Hinweis:</b> In diesen Beispiel beginnt der 3D-Balken bei Y = -1500, so dass die Projektionsbalken in der XZ-Ebene ebenfalls bei Z = -1500 beginnen. Die XY-Ebene, in der die Projektionsbalken sind, befindet sich bei der Position <i>Y=</i> .</p>
-
-  <h2><a name="Data_Points_Display_Control"></a><span class="mw-headline">Elemente der Anzeige von Datenpunkten</span></h2>
-
-  <p>Legen Sie fest, ob und wie Datenpunkte übersprungen werden.</p>
-
-  <h3><a name="No_Skipping_Points"></a><span class="mw-headline">Kein Überspringen von Punkten</span></h3>
-
-  <p>Alle Datenpunkte werden gezeigt, ohne dass Punkte übersprungen werden. Dies ist die Standardauswahl für diese Elementgruppe.</p>
-
-  <h3><a name="Skip_Points_by_Increment"></a><span class="mw-headline">Punkte nach Inkrement überspringen</span></h3>
-
-  <p>Wählen Sie <b>Punkte nach Inkrement überspringen</b> in der Auswahlliste, um eine festgelegte Häufigkeit von Datenpunkten anzuzeigen. Geben Sie dann die Häufigkeit in das zugehörige Textfeld ein. Diese Einstellung beeinflusst auch die Anzeige von <b>Ankerlinien</b>, <b>Symbolen</b>, <b>Fehlerbalken</b> und <b>Datenbeschriftungen</b> der Zeichnungen. Bei einem Vektordiagramm werden die Vektoren auch verborgen, wenn Streupunkte übersprungen werden. Bei der Projektion eines 3D-Punktdiagramms werden die Optionen zum Überspringen von Punkten verborgen und die Projektion überspringt Punkte, indem sie den folgenden Einstellungen der ursprünglichen Zeichnung folgt.</p>
-
-  <p>Wenn <i>n</i> in das Textfeld Punkte auslassen eingegeben wird, dann wird nur der erste von je <i>n</i> Datenpunkten angezeigt; die restlichen <i>n-1</i> Datenpunkte werden übersprungen. Der letzte Datenpunkt jedoch wird immer gezeigt. Wenn Sie den letzten Punkt verbergen möchten, setzen Sie <a class="external text" href="../../LabTalk/LabTalk/Stystem_Variable_List.html#S">@SMEP</a> = 0. <i>n</i> muss ein ganzzahliger Wert größer oder gleich 2 sein. Wenn <i>n</i> = 0 oder 1 ist, wird kein Punkt übersprungen.</p>
-
-  <h4><a name="No_Line_Break_for_Skipped_Point.28s.29"></a><span class="mw-headline">Keine Linienunterbrechung für übersprungene Punkte</span></h4>
-
-  <p>Falls <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Symbol.2FLine_interface" title="UserGuide:The (Plot Details) Line Tab"><b>Abstand zu Symbol</b></a> für ein Punkte-Liniendiagramm aktiviert ist, können Sie über das Kontrollkästchen <b>Keine Linienunterbrechung für übersprungene Punkte</b> bestimmen, die Linie unterbrochen wird, wenn Punkte übersprungen werden. Wenn dieses Kontrollkästchen aktiviert ist, ist die Linie weiterhin kontinuierlich, auch wenn die Datenpunkte ausgelassen werden.<br>
-  <a class="image"><img alt="Drop Lines No Line Break Skipping.png" src="../images/The_(Plot_Details)_Display2_Tab/650px-Drop_Lines_No_Line_Break_Skipping.png" width="650"></a></p>
-
-  <h3><a name="Smart_Skip"></a><span class="mw-headline">Intelligentes Überspringen</span></h3>
-
-  <p>Wählen Sie eine der Optionen des <b>Intelligenten Überspringens</b>, um die Datenpunkte mit einer Berechnung zu überspringen, die auf der Datendichte und der Kurvenform basiert. Diese Einstellung beeinflusst auch die Anzeige von <b>Ankerlinien</b>, <b>Symbolen</b>, <b>Fehlerbalken</b> und <b>Datenbeschriftungen</b> der Zeichnungen.</p>
-
-  <h4><a name="Smart_Skip.28Total_Points_Kept.29"></a><span class="mw-headline">Intelligentes Überspringen (Insgesamt beibehaltene Punkte)</span></h4>
-
-  <p>Intelligentes Überspringen der Datenpunkte durch Festlegen der insgesamt nach dem Überspringen beibehaltenen Datenpunkte.</p>
-
-  <h4><a name="Smart_Skip.28.25_of_Points_Skipped.29"></a><span class="mw-headline">Intelligentes Überspringen (% der übersprungenen Punkte)</span></h4>
-
-  <p>Intelligentes Überspringen der Datenpunkte durch Festlegen, wie viele Datenpunkte mit einem Prozentanteil aller Datenpunkte übersprungen werden.</p>
-
-  <h3><a name="Smart_Skip_Method"></a><span class="mw-headline">Methode des Intelligenten Überspringen</span></h3>
-
-  <p>Basierend auf den verschiedenen Kurvenformen und Datendichten, stehen vier Methoden zum Überspringen von Datenpunkten zur Verfügung:</p>
-
-  <ul>
-    <li><b>Größtes Dreieck</b>: Suchen Sie einen Punkt nahe des Mittelpunkts. Dieser Punkt (1) sollte das größte Dreieck in der Fläche zwischen Anfangs- und Endpunkt sein. Punkt 1 teilt dann die gesamte Kurve in zwei Segmente. Jedes Segment führt die gleiche Berechnung durch, d. h. Punkt 1 finden, um Punkt 2 und Punkt 3 zu finden. Vergleichen Sie den dreieckigen Bereich von Punkt 2 und Punkt 3 in ihrem Segment. Behalten Sie den Punkt mit der größeren Fläche.<br></li>
-  </ul>
-
-  <p>Folgen Sie diesem Algorithmus, um Schritt für Schritt zu suchen. Es wird jedes Mal nur der Punkt mit der größten dreieckigen Fläche (zwischen dem Dreieck mit der aktuell größeren Fläche und dem Dreieck mit der kleineren Fläche auf höherer Ebene) behalten, bis die festgesetzte Anzahl von Punkten erreicht wird.</p>
-
-  <ul>
-    <li><b>Y-Schwellenwert</b>: Abhängig von der Anzahl der Punkte, die Sie finden möchten, berechnen Sie einen Schwellenwert auf der Distanz der Y-Achse mit Hilfe der iterativen Methode. Behalten Sie dann die Punkte unter dem Schwellenwert. Hinweis: Das 3D-Punktdiagramm unterstützt nicht die Methode "Y-Schwellenwert".</li>
-
-    <li><b>Schwellenwert Datendistanz</b>: Abhängig von der Anzahl der Punkte, die Sie finden möchten, berechnen Sie einen Schwellenwert mit der größeren dreieckigen Fläche mittels der iterativen Methode. Behalten Sie dann die Punkte unter dem Schwellenwert.</li>
-
-    <li><b>Douglas Peucker Hull</b>: Verwenden Sie den Douglas–Peucker-Algorithmus, um eine Kurve aus Liniensegmenten in eine ähnliche Kurve mit weniger Punkten zu dezimieren.</li>
-
-    <li><b>Größtes Dreieck für Segmente</b>: Teilen Sie die Kurve in mehrere Segmente und folgen Sie dann dem Algorithmus des größten Dreiecks, um die Punkte zu suchen. Jedes Segment findet eine Anzahl von Datenpunkten.</li>
-  </ul>
+﻿<h1 class="firstHeading">Die Registerkarte Anzeige (zu zeigende Zeichnungselemente) (Dialog Details Zeichnung)</h1><p class='urlname' style='display: none'>PD-Dialog-PlotLevel-Display-Tab</p>
+<p><br /> Die Bedienelemente auf der Registerkarte <b>Anzeige</b> auf Zeichnungsebene ist nur verf&uuml;gbar f&uuml;r allgemeine 2D-Diagramme oder 3D-XYY-Balkendiagramme im kartesischen Koordinatensystem.</p>
+<ul><li><b>2D-Diagramme: Linie, Punkt, Linie + Symbol, Fl&auml;che; Box, Histogramm, 3D-XYY-Wand-/-Band-/-Wasserfall</b> <br /></li></ul>
+<p><a  class="image"><img alt="The (Plot Details) Display2 Tab 0a.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a.png" width="427"  /></a></p>
+<ul><li><b>Polare oder tern&auml;re Diagramme: Polar Punkt/Linie/Linie+Symbol oder Tern&auml;r Punkt/Linie/Linie+Symbol</b><br /></li></ul>
+<p><a  class="image"><img alt="The (Plot Details) Display2 Tab 0a2.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a2.png" width="411"  /></a></p>
+<ul><li><b>3D-Diagramme: 3D-XYZ-Balken, 3D-Punkt<br /></b></li></ul>
+<p><a  class="image"><img alt="The (Plot Details) Display2 Tab 0a1.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0a1.png" width="415"  /></a></p>
+<ul><li><b>2D-Diagramme: S&auml;ulen, Balken</b> <br /></li></ul>
+<p><a  class="image"><img alt="The (Plot Details) Display2 Tab 0b.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_0b.png" width="369"  /></a></p>
+<ul><li><b>3D-Diagramme: 3D-YY-Balken</b><br /></li></ul>
+<p><a  class="image"><img alt="The (Plot Details) Display2 Tab 01.png" src="../images/The_(Plot_Details)_Display2_Tab/The__28Plot_Details_29_Display2_Tab_01.png" width="410"  /></a></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Plot_Data_on"><span class="tocnumber">1</span> <span class="toctext">Daten zeichnen auf</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Bar"><span class="tocnumber">2</span> <span class="toctext">Balken</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Symbol"><span class="tocnumber">3</span> <span class="toctext">Symbol</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Connect_Line"><span class="tocnumber">4</span> <span class="toctext">Verbindungslinie</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Drop_Lines"><span class="tocnumber">5</span> <span class="toctext">Ankerlinien</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Order"><span class="tocnumber">6</span> <span class="toctext">Ordnung</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Bar_Projection_in_XZ_Plane_with_Y_.3D"><span class="tocnumber">7</span> <span class="toctext">Balkenprojektion auf XZ-Ebene mit Y=</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Data_Points_Display_Control"><span class="tocnumber">8</span> <span class="toctext">Bedienelemente der Anzeige von Datenpunkten</span></a><ul>
+<li class="toclevel-2 tocsection-9"><a href="#No_Skipping_Points"><span class="tocnumber">8.1</span> <span class="toctext">Kein &Uuml;berspringen von Punkten</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Skip_Points_by_Increment"><span class="tocnumber">8.2</span> <span class="toctext">Punkte nach Inkrement &uuml;berspringen</span></a><ul>
+<li class="toclevel-3 tocsection-11"><a href="#No_Line_Break_for_Skipped_Point.28s.29"><span class="tocnumber">8.2.1</span> <span class="toctext">Keine Linienunterbrechung f&uuml;r &uuml;bersprungene Punkte</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Smart_Skip"><span class="tocnumber">8.3</span> <span class="toctext">Intelligentes &Uuml;berspringen</span></a><ul>
+<li class="toclevel-3 tocsection-13"><a href="#Smart_Skip.28Total_Points_Kept.29"><span class="tocnumber">8.3.1</span> <span class="toctext">Intelligentes &Uuml;berspringen (Insgesamt beibehaltene Punkte)</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Smart_Skip.28.25_of_Points_Skipped.29"><span class="tocnumber">8.3.2</span> <span class="toctext">Intelligentes &Uuml;berspringen (% der &uuml;bersprungenen Punkte)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Smart_Skip_Method"><span class="tocnumber">8.4</span> <span class="toctext">Methode des Intelligenten &Uuml;berspringen</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Plot_Data_on"></a><span class="mw-headline">Daten zeichnen auf</span></h2>
+<p>Da Origin doppelte Y-Achsen in 2D-Diagrammen und doppelte YZ-Achsen in 3D-Diagrammen unterst&uuml;tzt, k&ouml;nnen Sie diese Option verwenden, um festzulegen, auf welcher Achse die aktuelle Zeichnung basiert.</p><p>Bei 2D-Diagrammen und 3D-XYY/XYZ-Diagrammen werden alle Zeichnungen standardm&auml;&szlig;ig auf der linken YZ-Achse gezeichnet (ausschlie&szlig;lich der Zeichnungen, die &uuml;ber spezifische Vorlagen gezeichnet wurden). Sie k&ouml;nnen diese Option verwenden, um zu entscheiden, auf welcher YZ-Achse die aktuelle Zeichnung gezeichnet werden soll. Wenn zum Beispiel die <b>Rechte YZ-Achse</b> ausgew&auml;hlt  ist, wird die aktuelle Zeichnung auf der rechten YZ-Achse gezeichnet und die Achsenskalierung automatisch angepasst, um den gesamten Datenbereich einzuschlie&szlig;en, und umgekehrt.</p><p><b>Hinweis:</b> Wenn Sie gestapelte 2D- und 3D-Balkendiagramme mit Untergruppierung nach Achse zeichnen m&ouml;chten, aktivieren Sie die Option <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Stack_Tab.html#Offset_within_Subgroup.28_in_Group_tab_.29_for_Cumulative.2FIncremental" title="UserGuide:The (Plot Details) Stack Tab"><b>Versatz innerhalb der Untergruppierung (auf Registerkarte Gruppe) f&uuml;r kumulative/inkrementelle Daten verwenden</b></a> und setzen Sie <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Group_Tab.html#Subgrouping" title="UserGuide:The (Plot Details) Group Tab"><b>Untergruppierung</b></a> auf <b>Nach Achse</b> und verwenden Sie dann <b>Daten zeichnen auf</b>, um f&uuml;r jedes Balkendiagramm unterschiedliche Achsen festzulegen.</p>
+<h2><a name="Bar"></a><span class="mw-headline">Balken</span></h2>
+<p>Wenn Sie ein 2D- oder 3D-YY-Balken-/S&auml;ulendiagramm erstellt haben, wird dieses Kontrollk&auml;stchen standardm&auml;&szlig;ig aktiviert. Sie k&ouml;nnen dieses Kontrollk&auml;stchen verwenden, um die Balkenanzeige in der Grafik auszuschalten.</p>
+<h2><a name="Symbol"></a><span class="mw-headline">Symbol</span></h2>
+<p>Legen Sie fest, ob Symbole oben in der Mitte der 2D-/3D-Balken/-S&auml;ulen gezeigt werden.</p>
+<h2><a name="Connect_Line"></a><span class="mw-headline">Verbindungslinie</span></h2>
+<p>Legen Sie fest, ob die Verbindungslinien, die die Mittelpunkte der Balken in einer Zeichnung verbinden, gezeigt werden. Wenn Sie dieses Kontrollk&auml;stchen aktiviert haben, wird die <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html" title="UserGuide:The (Plot Details) Line Tab">Registerkarte <b>Linie</b></a> gezeigt, auf der Sie die nachfolgenden Einstellungen des Linienstils vornehmen k&ouml;nnen.</p><p>Bei 2D-Balkendiagrammen folgt die Farbe der Verbindungslinie per Standard automatisch der Rahmenfarbe der Balken.</p><p>Bei 3D-XYY-Balkendiagrammen folgt die Farbe der Verbindungslinie per Standard automatisch der Musterf&uuml;llung der 3D-Balken.</p><p>Wenn es Teildatens&auml;tze in Ihrem 2D-Balkendiagramm gibt, ist auf der <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html" title="UserGuide:The (Plot Details) Line Tab">Registerkarte <b>Linie</b></a> das Kontrollk&auml;stchen <b>Innerhalb des Teildatensatzes verbinden</b> standardm&auml;&szlig;ig aktiviert, um Verbindungslinien innerhalb des Teildatensatzes hinzuzuf&uuml;gen.</p><p><b>Beispieldiagramme:</b></p>
+<ul><li><b>2D-S&auml;ulendiagramm mit Verbindungslinie und Symbolen</b><dl><dd><a  class="image"><img alt="The (Plot Details) Display2 Tab 02.png" src="../images/The_(Plot_Details)_Display2_Tab/450px-The__28Plot_Details_29_Display2_Tab_02.png" width="450"   /></a></dd></dl></li>
+<li><b>3D-XYY-Balken mit Verbindungslinie</b><dl><dd><a  class="image"><img alt="The (Plot Details) Display2 Tab 03.png" src="../images/The_(Plot_Details)_Display2_Tab/450px-The__28Plot_Details_29_Display2_Tab_03.png" width="450"   /></a></dd></dl></li></ul>
+<h2><a name="Drop_Lines"></a><span class="mw-headline">Ankerlinien</span></h2>
+<p>Legen Sie fest, ob Ankerlinien von den Mittelpunkten oberhalb der Balken bis zur unteren Achse bzw. zum unteren Feld hinzugef&uuml;gt werden. Wenn Sie Ankerlinien f&uuml;r die Balken hinzugef&uuml;gt haben, wird die Registerkarte Ankerlinien gezeigt, damit Sie die Ankerlinien benutzerdefiniert anpassen k&ouml;nnen.</p>
+<h2><a name="Order"></a><span class="mw-headline">Ordnung</span></h2>
+<p>Diese Option wird nur angezeigt, wenn X automatisch X oder Text f&uuml;r ein S&auml;ulen- oder Balkendiagramm ist. Sie erm&ouml;glicht Ihnen, die Anordungsreihenfolge f&uuml;r alle S&auml;ulen (oder Balken) auszuw&auml;hlen.</p><p><b>Hinweis:</b> Per Standard ist der Typ der Hilfsstrichsbeschriftung f&uuml;r die X-Achse bei S&auml;ulen-/Balkendiagrammen, die &uuml;ber das Men&uuml; Zeichnen erstellt werden, auf <a href="../../UserGuide/UserGuide/Tick_Labels_2.html#Type" title="UserGuide:Tick Labels 2">Text aus Datensatz</a> gesetzt. Wenn Sie die Anordnungsreihenfolge der S&auml;ulen (oder Balken) anpassen, werden die Beschriftungen der Hilfsstriche der X-Achse  daher auch neu geordnet, um sicherzustellen, dass die Entsprechung zwischen den Werten der X-Achse und der Y-Achse konsistent bleibt.</p><p><a  class="image"><img alt="The (Plot Details) Display2 Tab Order.png" src="../images/The_(Plot_Details)_Display2_Tab/750px-The__28Plot_Details_29_Display2_Tab_Order.png" width="750"   /></a></p>
+<h2><a name="Bar_Projection_in_XZ_Plane_with_Y_.3D"></a><span class="mw-headline">Balkenprojektion auf XZ-Ebene mit Y=</span></h2>
+<p>Legen Sie fest, ob die Projektion des 3D-XYY-Balkens auf XZ-Ebene und die Position (Y=) des Projektionsbalkens gezeigt werden sollen. Per Standard ist <b>Auto</b> ausgew&auml;hlt, das hei&szlig;t, die Projektionsbalken werden bei Y = Achsenanfang gezeichnet.</p><p><a  class="image"><img alt="The (Plot Details) Display2 Tab Projection.png" src="../images/The_(Plot_Details)_Display2_Tab/800px-The__28Plot_Details_29_Display2_Tab_Projection.png" width="800"   /></a></p><p><b>Hinweis:</b> In diesen Beispiel beginnt der 3D-Balken bei Y = -1500, so dass die Projektionsbalken in der XZ-Ebene ebenfalls bei Z = -1500 beginnen. Die XY-Ebene, in der die Projektionsbalken sind, befindet sich bei der Position <i>Y=</i> .</p>
+<h2><a name="Data_Points_Display_Control"></a><span class="mw-headline">Elemente der Anzeige von Datenpunkten</span></h2>
+<p>Legen Sie fest, ob und wie Datenpunkte &uuml;bersprungen werden. <br /></p>
+<h3><a name="No_Skipping_Points"></a><span class="mw-headline">Kein &Uuml;berspringen von Punkten</span></h3>
+<p>Alle Datenpunkte werden gezeigt, ohne dass Punkte &uuml;bersprungen werden. Dies ist die Standardauswahl f&uuml;r diese Elementgruppe.</p>
+<h3><a name="Skip_Points_by_Increment"></a><span class="mw-headline">Punkte nach Inkrement &uuml;berspringen</span></h3>
+<p>W&auml;hlen Sie <b>Punkte nach Inkrement &uuml;berspringen</b> in der Auswahlliste, um eine festgelegte H&auml;ufigkeit von Datenpunkten anzuzeigen. Geben Sie dann die H&auml;ufigkeit in das zugeh&ouml;rige Textfeld ein. Diese Einstellung beeinflusst auch die Anzeige von <b>Ankerlinien</b>, <b>Symbolen</b>, <b>Fehlerbalken</b> und <b>Datenbeschriftungen</b> der Zeichnungen. Bei einem Vektordiagramm werden die Vektoren auch verborgen, wenn Streupunkte &uuml;bersprungen werden. Bei der Projektion eines 3D-Punktdiagramms werden die Optionen zum &Uuml;berspringen von Punkten verborgen und die Projektion &uuml;berspringt Punkte, indem sie den folgenden Einstellungen der urspr&uuml;nglichen Zeichnung folgt.</p><p>Wenn <i>n</i> in das Textfeld Punkte auslassen eingegeben wird, dann wird nur der erste von je <i>n</i> Datenpunkten angezeigt; die restlichen <i>n-1</i> Datenpunkte werden &uuml;bersprungen. Der letzte Datenpunkt jedoch wird immer gezeigt. Wenn Sie den letzten Punkt verbergen m&ouml;chten, setzen Sie <a class="external text" href="../../LabTalk/LabTalk/Stystem_Variable_List.html#S">@SMEP</a> = 0. <i>n</i> muss ein ganzzahliger Wert gr&ouml;&szlig;er oder gleich 2 sein. Wenn <i>n</i> = 0 oder 1 ist, wird kein Punkt &uuml;bersprungen.</p>
+<h4><a name="No_Line_Break_for_Skipped_Point.28s.29"></a><span class="mw-headline">Keine Linienunterbrechung f&uuml;r &uuml;bersprungene Punkte</span></h4>
+<p>Falls <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Symbol.2FLine_interface" title="UserGuide:The (Plot Details) Line Tab"><b>Abstand zu Symbol</b></a> f&uuml;r ein Punkte-Liniendiagramm aktiviert ist, k&ouml;nnen Sie &uuml;ber das Kontrollk&auml;stchen <b>Keine Linienunterbrechung f&uuml;r &uuml;bersprungene Punkte</b> bestimmen, die Linie unterbrochen wird, wenn Punkte &uuml;bersprungen werden. Wenn dieses Kontrollk&auml;stchen aktiviert ist, ist die Linie weiterhin kontinuierlich, auch wenn die Datenpunkte ausgelassen werden.<br /> <a  class="image"><img alt="Drop Lines No Line Break Skipping.png" src="../images/The_(Plot_Details)_Display2_Tab/650px-Drop_Lines_No_Line_Break_Skipping.png" width="650"   /></a></p>
+<h3><a name="Smart_Skip"></a><span class="mw-headline">Intelligentes &Uuml;berspringen</span></h3>
+<p>W&auml;hlen Sie eine der Optionen des <b>Intelligenten &Uuml;berspringens</b>, um die Datenpunkte mit einer Berechnung zu &uuml;berspringen, die auf der Datendichte und der Kurvenform basiert. Diese Einstellung beeinflusst auch die Anzeige von <b>Ankerlinien</b>, <b>Symbolen</b>, <b>Fehlerbalken</b> und <b>Datenbeschriftungen</b> der Zeichnungen.</p>
+<h4><a name="Smart_Skip.28Total_Points_Kept.29"></a><span class="mw-headline">Intelligentes &Uuml;berspringen (Insgesamt beibehaltene Punkte)</span></h4>
+<p>Intelligentes &Uuml;berspringen der Datenpunkte durch Festlegen der insgesamt nach dem &Uuml;berspringen beibehaltenen Datenpunkte.</p>
+<h4><a name="Smart_Skip.28.25_of_Points_Skipped.29"></a><span class="mw-headline">Intelligentes &Uuml;berspringen (% der &uuml;bersprungenen Punkte)</span></h4>
+<p>Intelligentes &Uuml;berspringen der Datenpunkte durch Festlegen, wie viele Datenpunkte mit einem Prozentanteil aller Datenpunkte &uuml;bersprungen werden.</p>
+<h3><a name="Smart_Skip_Method"></a><span class="mw-headline">Methode des Intelligenten &Uuml;berspringen</span></h3>
+<p>Basierend auf den verschiedenen Kurvenformen und Datendichten, stehen vier Methoden zum &Uuml;berspringen von Datenpunkten zur Verf&uuml;gung:</p>
+<ul><li><b>Gr&ouml;&szlig;tes Dreieck</b>: Suchen Sie einen Punkt nahe des Mittelpunkts. Dieser Punkt (1) sollte das gr&ouml;&szlig;te Dreieck in der Fl&auml;che zwischen Anfangs- und Endpunkt sein. Punkt 1 teilt dann die gesamte Kurve in zwei Segmente. Jedes Segment f&uuml;hrt die gleiche Berechnung durch, d. h. Punkt 1 finden, um Punkt 2 und Punkt 3 zu finden. Vergleichen Sie den dreieckigen Bereich von Punkt 2 und Punkt 3 in ihrem Segment. Behalten Sie den Punkt mit der gr&ouml;&szlig;eren Fl&auml;che. <br /></li></ul>
+<p>Folgen Sie diesem Algorithmus, um Schritt f&uuml;r Schritt zu suchen. Es wird jedes Mal nur der Punkt mit der gr&ouml;&szlig;ten dreieckigen Fl&auml;che (zwischen dem Dreieck mit der aktuell gr&ouml;&szlig;eren Fl&auml;che und dem Dreieck mit der kleineren Fl&auml;che auf h&ouml;herer Ebene) behalten, bis die festgesetzte Anzahl von Punkten erreicht wird.</p>
+<ul><li><b>Y-Schwellenwert</b>: Abh&auml;ngig von der Anzahl der Punkte, die Sie finden m&ouml;chten, berechnen Sie einen Schwellenwert auf der Distanz der Y-Achse mit Hilfe der iterativen Methode. Behalten Sie dann die Punkte unter dem Schwellenwert. Hinweis: Das 3D-Punktdiagramm unterst&uuml;tzt nicht die Methode &quot;Y-Schwellenwert&quot;.</li>
+<li><b>Schwellenwert Datendistanz</b>: Abh&auml;ngig von der Anzahl der Punkte, die Sie finden m&ouml;chten, berechnen Sie einen Schwellenwert mit der gr&ouml;&szlig;eren dreieckigen Fl&auml;che mittels der iterativen Methode. Behalten Sie dann die Punkte unter dem Schwellenwert.</li>
+<li><b>Douglas Peucker Hull</b>: Verwenden Sie den Douglas&ndash;Peucker-Algorithmus, um eine Kurve aus Liniensegmenten in eine &auml;hnliche Kurve mit weniger Punkten zu dezimieren.</li>
+<li><b>Gr&ouml;&szlig;tes Dreieck f&uuml;r Segmente</b>: Teilen Sie die Kurve in mehrere Segmente und folgen Sie dann dem Algorithmus des gr&ouml;&szlig;ten Dreiecks, um die Punkte zu suchen. Jedes Segment findet eine Anzahl von Datenpunkten.</li></ul>
+
+
+
+
+
+
+
+    

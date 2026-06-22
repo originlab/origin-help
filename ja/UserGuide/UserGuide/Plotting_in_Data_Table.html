@@ -1,0 +1,189 @@
+﻿<h1 class="firstHeading">データテーブルで作図</h1><p class='urlname' style='display: none'>Data-Table-Plotting</p>
+<p>データテーブルから、<b>プロット</b>メニューを介してOriginの強力なグラフ作成機能にアクセスできます。このメニューには数百種類のテンプレートが用意されており、ワンクリックで完全にカスタマイズされたグラフを作成できます。使いやすいユーザインタフェースは、グラフ作成後のインタラクティブな編集もサポートしています。
+</p><p>自由形式ワークシートとは異なり、データテーブルは生データからプロットするだけでなく、要約データ（平均、平均+SDなど）からもプロットできます。後者の場合、<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">Summary Statsシート</a>が自動生成され、この中間シートからグラフがプロットされます。 
+</p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Plotting_in_Data_Table/Tip_icon.png" width="57"  border="0" /></td><td><p>XY、列、グループ化されたテーブルの場合、テーブルアイコンを使用すると、要約データからプロットされる<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">基本的なグラフタイプ</a>（散布図、折れ線、線+シンボル、縦棒）に<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">すばやくアクセス</a>できます。
+</p>
+<dl><dd><a  class="image"><img alt="Icon Plot Summary Data.png" src="../images/Plotting_in_Data_Table/Icon_Plot_Summary_Data.png" width="454"  /></a></dd></dl>
+</td></tr></table> 
+<p><b>プロット</b>メニューは、現在のテーブルのタイプに応じて動的に変化します。このページでは、各テーブルタイプでサポートされているグラフタイプを説明します。詳細は、各URLをクリックしてドキュメントページを参照してください。
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#XY_Table"><span class="tocnumber">1</span> <span class="toctext">XYテーブル</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Column_Table"><span class="tocnumber">2</span> <span class="toctext">列テーブル</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Grouped_Table"><span class="tocnumber">3</span> <span class="toctext">グループ化テーブル</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Contingency_Table"><span class="tocnumber">4</span> <span class="toctext">分割表</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Survival_Table"><span class="tocnumber">5</span> <span class="toctext">生存表</span></a></li>
+</ul>
+</div>
+<h3><a name="XY_Table"></a><span class="mw-headline">XYテーブル</span></h3>
+<table class="simple">
+<tr>
+<th colspan="2">個別データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="XY Table Individual Data.png" src="../images/Plotting_in_Data_Table/XY_Table_Individual_Data.png" width="208"  /></a>
+</td>
+<td>
+<ul><li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:2D散布図">散布図</a></li>
+<li> <a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線グラフ">折れ線</a></li>
+<li> <a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボルグラフ">線+シンボル</a></li></ul>
+</td></tr>
+<tr>
+<th colspan="2">複数区分、複数軸
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="XY Table Multi Panel Axis.png" src="../images/Plotting_in_Data_Table/XY_Table_Multi_Panel_Axis.png" width="354"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> <a href="../../UserGuide/UserGuide/New_Double_Y_Axis_Graph.html" title="ユーザガイド: 新しい二重Y軸グラフ">二重Y軸</a>、<a href="../../UserGuide/UserGuide/3Ys_Y_YY_(3Ys_Y_YY)_Graph.html" title="ユーザーガイド：3Y軸 Y-YYグラフ">3Y軸 Y-YY</a>、<a href="../../UserGuide/UserGuide/3Ys_Y_Y_Y_(3Ys_Y_Y_Y)_Graph.html" title="ユーザーガイド：3Y軸 Y-Y-Yグラフ">3Y軸 Y-Y-Y</a>、<a href="../../UserGuide/UserGuide/4Ys_Y_YYY_(4Ys_Y_YYY)_Graph.html" title="ユーザーガイド：4Y軸 Y-YYYグラフ">4Y軸 Y-YYY</a>、<a href="../../UserGuide/UserGuide/4Ys_YY_YY_(4Ys_YY_YY)_Graph.html" title="ユーザーガイド：4Y軸 YY-YYグラフ">4Y軸 YY-YY</a>、<a href="../../UserGuide/UserGuide/Multiple_Y_Axes_Graph.html" title="ユーザーガイド：複数Y軸グラフ">複数Y軸</a></li>
+<li> <a href="../../UserGuide/UserGuide/New_DoubleY_Column_Graph.html" title="ユーザガイド：二重Y軸縦棒グラフ">二重Y軸縦棒</a>、<a href="../../UserGuide/UserGuide/Double-Y_Column-Line_Symbol_Graph.html" title="ユーザガイド：二重Y軸縦棒-線+シンボル">二重Y軸縦棒-線+シンボル</a></li>
+<li> <a href="../../UserGuide/UserGuide/Vertical_2_Panel_Graph.html" title="ユーザーガイド：垂直2区分グラフ">垂直2区分</a>、<a href="../../UserGuide/UserGuide/Horizontal_2_Panel_Graph.html" title="ユーザーガイド：水平2区分グラフ">水平2区分</a>、<a href="../../UserGuide/UserGuide/4_Panel_Graph.html" title="ユーザーガイド：4区分グラフ">4区分</a>、<a href="../../UserGuide/UserGuide/9_Panel_Graph.html" title="ユーザーガイド：9区分グラフ">9区分</a>、<a href="../../UserGuide/UserGuide/Stack_Graph.html" title="ユーザガイド：積み上げパネルグラフ">積み上げパネル</a>、<a href="../../UserGuide/UserGuide/Multiple_Panels_by_Label_Graph.html" title="ユーザーガイド：ラベルグラフによる複数区分">複数区分</a></li>
+<li> <a href="../../UserGuide/UserGuide/Zoom_Graph.html" title="ユーザガイド：ズームグラフ">ズーム</a></li></ul>
+</td></tr>
+<tr>
+<th colspan="2">要約データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="XY Table Summary Data.png" src="../images/Plotting_in_Data_Table/XY_Table_Summary_Data.png" width="352"  /></a>
+</td>
+<td><font color="blue">統計量（平均、標準偏差など）を計算するために<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">Summary Statsシート</a>が自動生成され、この中間シートからグラフがプロットされます。 </font>
+<ul><li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:散布図">散布図（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線">折れ線（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボル">線+シンボル（要約）</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Column_Graph.html" title="ユーザガイド:縦棒グラフ">縦棒（要約）</a> </li>
+<li> 相関プロット（要約）：<a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=574" target="_blank">Correlation Plotアプリ</a>を開きます。使用方法は<a class="external text" href="../../Tutorial/App/Correlation_Plot.html">このチュートリアル</a>を参照してください。 </li>
+<li> <a href="../../UserGuide/UserGuide/Area_Graph.html" title="ユーザガイド:面グラフ">面</a>、<a href="../../UserGuide/UserGuide/Stack_Area_Graph.html" title="ユーザーガイド：積み上げ面グラフ">積み上げ面</a>、<a href="../../UserGuide/UserGuide/100_Stack_Area_Graph.html" title="ユーザーガイド：100%積み上げ面グラフ">100%積み上げ面</a></li></ul>
+</td></tr></table>
+<h3><a name="Column_Table"></a><span class="mw-headline">列テーブル</span></h3>
+<table class="simple">
+<tr>
+<th colspan="2">個別データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Column Table Individual Data.png" src="../images/Plotting_in_Data_Table/Column_Table_Individual_Data.png" width="354"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> <a href="../../UserGuide/UserGuide/Column_Scatter.html" title="ユーザガイド：列散布図">列散布図</a>、<a href="../../UserGuide/UserGuide/Line_Series_Graph.html" title="ユーザガイド：線系グラフ">線系</a>、<a href="../../UserGuide/UserGuide/Before_After_Graph.html" title="ユーザーガイド：前-後グラフ">前-後</a></li>
+<li> <a href="../../UserGuide/UserGuide/Parallel_Plot.html" title="ユーザガイド：平行座標プロット">平行座標プロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/Bar_Chart.html" title="ユーザガイド：棒グラフ">棒グラフ＋点重複</a>、<a href="../../UserGuide/UserGuide/Bar_Chart.html" title="ユーザガイド：棒グラフ">棒グラフ＋正規曲線</a></li>
+<li> <a href="../../UserGuide/UserGuide/Box_Chart_Graph.html" title="ユーザガイド：ボックスチャート">ボックス＋点重複</a>、<a href="../../UserGuide/UserGuide/Box_Chart_Graph.html" title="ユーザガイド：ボックスチャート">ボックス＋正規曲線</a>、<a href="../../UserGuide/UserGuide/Box_Chart_Graph.html" title="ユーザガイド：ボックスチャート">半ボックス</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Violin_Plot.html" title="ユーザガイド：バイオリンプロット">点列付きバイオリン</a>、<a href="../../UserGuide/UserGuide/Violin_Plot.html" title="ユーザガイド：バイオリンプロット">半バイオリン</a></li>
+<li> <a href="../../UserGuide/UserGuide/Interval_Plot.html" title="ユーザガイド：区間プロット">区間散布図</a></li>
+<li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:2D散布図">散布図</a>、<a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線グラフ">折れ線</a>、<a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボルグラフ">線+シンボル</a></li>
+<li> <a href="../../UserGuide/UserGuide/Column_Graph.html" title="ユーザガイド:縦棒グラフ">縦棒</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Area_Graph.html" title="ユーザガイド:面グラフ">面</a></li>
+<li> <a href="../../UserGuide/UserGuide/Dot_Plot.html" title="ユーザガイド：ドットプロット">ドットプロット</a>、<a href="../../UserGuide/UserGuide/Stacked_Dot_Plots.html" title="ユーザガイド：積み上げドットプロット">積み上げドットプロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/Scatter_Matrices.html" title="ユーザガイド:散布図行列">散布図行列</a></li></ul>
+</td></tr>
+<tr>
+<th colspan="2">統計
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Column Table Statistical.png" src="../images/Plotting_in_Data_Table/Column_Table_Statistical.png" width="355"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> <a href="../../UserGuide/UserGuide/Bar_Chart.html" title="ユーザガイド：棒グラフ">棒グラフ</a></li>
+<li> <a href="../../UserGuide/UserGuide/Interval_Plot.html" title="ユーザガイド：区間プロット">区間プロット</a>、<a href="../../UserGuide/UserGuide/Interval_Plot.html" title="ユーザガイド：区間プロット">接続線付き区間プロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/Box_Chart_Graph.html" title="ユーザガイド：ボックスチャート">ボックスチャート</a></li>
+<li> <a href="../../UserGuide/UserGuide/Violin_Plot.html" title="ユーザガイド：バイオリンプロット">バイオリンプロット</a>、<a href="../../UserGuide/UserGuide/Violin_Plot.html" title="ユーザガイド：バイオリンプロット">ボックス付きバイオリン</a>、<a href="../../UserGuide/UserGuide/Violin_Plot.html" title="ユーザガイド：バイオリンプロット">四分位付きバイオリン</a></li>
+<li> 一対比較プロット：<a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=390" target="_blank">Paired Comparison Plotアプリ</a>を開きます。使用方法は<a class="external text" href="../../Tutorial/App/Paired_Comparison_Plot.html">このチュートリアル</a>を参照してください。</li>
+<li> <a href="../../UserGuide/UserGuide/Histogram_Graph.html" title="ユーザガイド:ヒストグラム">ヒストグラム</a>、<a href="../../UserGuide/UserGuide/Histogram_Rug_Graph.html" title="ユーザガイド:ヒストグラム＋ラググラフ">ヒストグラム+ラグ</a>、<a href="../../UserGuide/UserGuide/Histogram_Probabilities_Graph.html" title="ユーザガイド:ヒストグラム+確率グラフ">ヒストグラム+確率</a>、<a href="../../UserGuide/UserGuide/Multi-Panel_Histogram_Graph.html" title="ユーザーガイド：複数パネルヒストグラム">複数パネルヒストグラム</a>、<a href="../../UserGuide/UserGuide/Histogram_Graph.html" title="ユーザガイド:ヒストグラム">分布</a>、<a href="../../UserGuide/UserGuide/Stacked_Histograms_Graph.html" title="ユーザーガイド：積み上げヒストグラム">積み上げヒストグラム</a></li>
+<li> <a href="../../UserGuide/UserGuide/Ridgeline_Chart.html" title="ユーザガイド: リッジラインプロット">リッジラインプロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/CDF_Plot.html" title="ユーザガイド：CDFプロット">CDFプロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/Probability_Plot.html" title="ユーザガイド：確率プロット">確率プロット</a></li>
+<li> <a href="../../UserGuide/UserGuide/Q-q_Plot.html" title="ユーザガイド：Q-Qプロット">Q-Qプロット</a></li></ul>
+</td></tr>
+<tr>
+<th colspan="2">要約データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Column Table Summary Data.png" src="../images/Plotting_in_Data_Table/Column_Table_Summary_Data.png" width="280"  /></a>
+</td>
+<td><font color="blue">統計量（平均、標準偏差など）を計算するために<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">Summary Statsシート</a>が自動生成され、この中間シートからグラフがプロットされます。 </font>
+<ul><li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:2D散布図">散布図（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線グラフ">折れ線（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボルグラフ">線+シンボル（要約）</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Column_Graph.html" title="ユーザガイド:縦棒グラフ">縦棒（要約）</a> </li></ul>
+</td></tr></table>
+<h3><a name="Grouped_Table"></a><span class="mw-headline">グループ化テーブル</span></h3>
+<table class="simple">
+<tr>
+<th colspan="2">個別データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Grouped Table Individual Data.png" src="../images/Plotting_in_Data_Table/Grouped_Table_Individual_Data.png" width="352"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> 列散布図内側、列散布図外側、列散布図重ね合わせ、線系内側、線系重ね合わせ：<a href="../../UserGuide/UserGuide/Grouped_Column_Scatter-Indexed_Data.html" title="ユーザガイド：グループ化列散布図-インデックスデータ">グループ化列散布図-インデックスデータ</a>のバリエーションです。</li>
+<li> 平均棒内側、平均棒外側、半ボックス内側、半ボックス外側、半バイオリン内側、半バイオリン外側：<a href="../../UserGuide/UserGuide/Grouped_Mean_Bar-Indexed_Data.html" title="ユーザガイド：グループ化平均棒-インデックスデータ">グループ化平均棒-インデックスデータ</a>のバリエーションです。</li></ul>
+</td></tr>
+<tr>
+<th colspan="2">統計
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Grouped Table Statistical.png" src="../images/Plotting_in_Data_Table/Grouped_Table_Statistical.png" width="352"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> 区間プロット内部、区間プロット外側、区間プロット重ね合わせ、接続線付き区間プロット：<a href="../../UserGuide/UserGuide/Grouped_Interval_Plot-Indexed_Data.html" title="ユーザガイド：グループ化区間プロット-インデックスデータ">グループ化区間プロット-インデックスデータ</a>のバリエーションです。</li>
+<li> 棒内側、棒外側、横棒内側、横棒外側：<a href="../../UserGuide/UserGuide/Grouped_Columns_Index_Data.html" title="ユーザガイド：グループ縦棒グラフ - インデックスデータ">グループ化棒グラフ-インデックスデータ</a>のバリエーションです。</li>
+<li> <a href="../../UserGuide/UserGuide/Stack_Column_Graph.html" title="ユーザーガイド：積み上げ縦棒グラフ">積み上げ縦棒</a>、<a href="../../UserGuide/UserGuide/100_Stack_Column_Graph.html" title="ユーザーガイド：100%積み上げ縦棒グラフ">100%積み上げ縦棒</a>、<a href="../../UserGuide/UserGuide/Stack_Bar_Graph.html" title="ユーザーガイド：積み上げ横棒">積み上げ横棒</a>、<a href="../../UserGuide/UserGuide/100_Stack_Bar_Graph.html" title="ユーザーガイド：100%積み上げ横棒">100%積み上げ横棒</a></li>
+<li> 一対比較プロット：<a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=390" target="_blank">Paired Comparison Plotアプリ</a>を開きます。使用方法は<a class="external text" href="../../Tutorial/App/Paired_Comparison_Plot.html">このチュートリアル</a>を参照してください。</li>
+<li> ボックス内側、ボックス外側：<a href="../../UserGuide/UserGuide/Grouped_Box_Charts-Indexed_Data.html" title="ユーザガイド：グループ化ボックスチャート(インデックスデータ)">グループ化ボックスチャート-インデックスデータ</a>のバリエーションです。 </li>
+<li> バイオリン内側、バイオリン外側：<a href="../../UserGuide/UserGuide/Grouped_Violin-Indexed_Data.html" title="ユーザガイド：グループ化バイオリンプロット -インデックスデータ">グループ化バイオリンプロット -インデックスデータ</a>のバリエーションです。</li></ul>
+</td></tr>
+<tr>
+<th colspan="2">要約データ
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Grouped Table Summary Data.png" src="../images/Plotting_in_Data_Table/Grouped_Table_Summary_Data.png" width="352"  /></a>
+</td>
+<td><font color="blue">統計量（平均、標準偏差など）を計算するために<a href="../../UserGuide/UserGuide/Data_Table.html#Summary_Data_.26_Plot_Summary_Data" title="ユーザガイド:データテーブル">Summary Statsシート</a>が自動生成され、この中間シートからグラフがプロットされます。 </font>
+<ul><li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:2D散布図">散布図（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線グラフ">折れ線（要約）</a>、<a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボルグラフ">線+シンボル（要約）</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Column_Graph.html" title="ユーザガイド:縦棒グラフ">縦棒（要約）</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ">ヒートマップ</a></li></ul>
+</td></tr>
+<tr>
+<th colspan="2">三元
+</th></tr>
+<tr>
+<td><a  class="image"><img alt="Grouped Table Three way.png" src="../images/Plotting_in_Data_Table/Grouped_Table_Three_way.png" width="352"  /></a>
+</td>
+<td style="vertical-align:top;">
+<ul><li> 列散布図、列散布図重ね合わせ：<a href="../../UserGuide/UserGuide/Grouped_Column_Scatter-Indexed_Data.html" title="ユーザガイド：グループ化列散布図-インデックスデータ">グループ化列散布図-インデックスデータ</a>のバリエーションです。</li>
+<li> 区間プロット、接続線付き区間プロット：<a href="../../UserGuide/UserGuide/Grouped_Interval_Plot-Indexed_Data.html" title="ユーザガイド：グループ化区間プロット-インデックスデータ">グループ化区間プロット-インデックスデータ</a>のバリエーションです。</li>
+<li> <a href="../../UserGuide/UserGuide/Grouped_Columns_Index_Data.html" title="ユーザガイド：グループ縦棒グラフ - インデックスデータ">縦棒</a></li>
+<li> <a href="../../UserGuide/UserGuide/Grouped_Box_Charts-Indexed_Data.html" title="ユーザガイド：グループ化ボックスチャート-インデックスデータ)">ボックス</a>、<a href="../../UserGuide/UserGuide/Grouped_Violin-Indexed_Data.html" title="ユーザガイド：グループ化バイオリンプロット -インデックスデータ">バイオリン</a>、<a href="../../UserGuide/UserGuide/Grouped_Half_Box-Indexed_Data.html" title="ユーザガイド：グループ化半ボックス-インデックスデータ">半ボックス</a>、<a href="../../UserGuide/UserGuide/Grouped_Half_Violin-Indexed_Data.html" title="ユーザガイド：グループ化半バイオリンプロット -インデックスデータ">半バイオリン</a></li></ul>
+</td></tr></table>
+<h3><a name="Contingency_Table"></a><span class="mw-headline">分割表</span></h3>
+<table class="simple">
+<tr>
+<th colspan="2">分割表
+</th></tr>
+<tr>
+<td width="350px"><a  class="image"><img alt="Contingency Table Contingency.png" src="../images/Plotting_in_Data_Table/Contingency_Table_Contingency.png" width="352"  /></a>
+</td>
+<td>
+<ul><li> 縦棒内側、縦棒外側、横棒内側、横棒外側：<a href="../../UserGuide/UserGuide/Grouped_Columns_Index_Data.html" title="ユーザガイド：グループ棒グラフ - インデックスデータ">グループ化棒グラフ-インデックスデータ</a>のバリエーションです。 </li>
+<li> <a href="../../UserGuide/UserGuide/Stack_Column_Graph.html" title="ユーザーガイド：積み上げ縦棒グラフ">積み上げ縦棒</a>、<a href="../../UserGuide/UserGuide/100_Stack_Column_Graph.html" title="ユーザーガイド：100%積み上げ棒グラフ">100%積み上げ縦棒</a>、<a href="../../UserGuide/UserGuide/Stack_Bar_Graph.html" title="ユーザーガイド：積み上げ横棒">積み上げ横棒</a>、<a href="../../UserGuide/UserGuide/100_Stack_Bar_Graph.html" title="ユーザーガイド：100%積み上げ横棒グラフ">100%積み上げ横棒</a></li>
+<li> <a href="../../UserGuide/UserGuide/Floating_Column_Graph.html" title="ユーザーガイド：浮動縦棒グラフ">浮動縦棒</a>、<a href="../../UserGuide/UserGuide/Floating_Bar_Graph.html" title="ユーザガイド: 浮動横棒グラフ">浮動横棒</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Ribbon_Chart.html" title="ユーザガイド：リボングラフ">リボングラフ</a>、<a href="../../UserGuide/UserGuide/100_Ribbon_Chart.html" title="ユーザーガイド：100%リボングラフ">100%リボングラフ</a></li>
+<li> <a href="../../UserGuide/UserGuide/2D_B_and_W_Pie_Chart.html" title="ユーザーガイド：2Dカラー円グラフ">2D円グラフ</a>、<a href="../../UserGuide/UserGuide/Doughnut_Plot.html" title="ユーザガイド：ドーナツグラフ">ドーナツ</a>、<a href="../../UserGuide/UserGuide/Doughnut_with_Total.html" title="ユーザーガイド：ドーナツ（スライス合計 = 100）">ドーナツ（スライス合計=100）</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Heat_Map.html" title="ユーザガイド：ヒートマップ">ヒートマップ</a>、<a class="external text" href="../../Tutorial/Category/Heat_Map_with_Dendrogram(App).html">樹形図付きヒートマップ</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Population_Pyramid_Graph.html" title="ユーザーガイド：人口ピラミッド">人口ピラミッド</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Lollipop_Plot.html" title="­ユーザガイド：ロリポッププロット">ロリポッププロット</a></li></ul>
+</td></tr></table>
+<h3><a name="Survival_Table"></a><span class="mw-headline">生存表</span></h3>
+<table class="simple">
+<tr>
+<th colspan="2">基本の2Dグラフ
+</th></tr>
+<tr>
+<td width="350px"><a  class="image"><img alt="XY Table Individual Data.png" src="../images/Plotting_in_Data_Table/XY_Table_Individual_Data.png" width="208"  /></a>
+</td>
+<td>
+<ul><li> <a href="../../UserGuide/UserGuide/2D_Scatter_Graph.html" title="ユーザガイド:2D散布図">散布図</a></li>
+<li> <a href="../../UserGuide/UserGuide/Line_Graph.html" title="ユーザガイド:折れ線">折れ線</a></li>
+<li> <a href="../../UserGuide/UserGuide/Line_Symbol_Graph.html" title="ユーザガイド：線+シンボル">線+シンボル図</a></li></ul>
+</td></tr></table>
+
+
+    

@@ -1,0 +1,372 @@
+﻿<h1 class="firstHeading">データテーブル</h1><p class='urlname' style='display: none'>Data-Table</p>
+<p><br />
+<span class='headerInParagraph'>新しいデータテーブルを作成するには、次のいずれかの操作を行います。</span>
+</p>
+<ul><li>標準ツールバーの<b>新しいデータテーブル</b>ボタン<a  class="image"><img alt="New Data Table button.png" src="../images/Data_Table/New_Data_Table_button.png" width="16"  /></a>  をクリックします。</li></ul>
+<p><i>または、</i>
+</p>
+<ul><li>Originワークスペース内の空の場所を右クリックし、<b>新規データテーブル</b>を選択します。</li></ul>
+<p><i>または、</i>
+</p>
+<ul><li>メニューの<b>ファイル：新規作成：データテーブル</b>を選択します。</li></ul>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Table_Types"><span class="tocnumber">1</span> <span class="toctext">テーブルの種類</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Free_Form_.28Worksheet.29"><span class="tocnumber">1.1</span> <span class="toctext">自由形式(ワークシート)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#XY"><span class="tocnumber">1.2</span> <span class="toctext">XY</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Column"><span class="tocnumber">1.3</span> <span class="toctext">列</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Grouped"><span class="tocnumber">1.4</span> <span class="toctext">グループ化</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Contingency"><span class="tocnumber">1.5</span> <span class="toctext">分割表</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Survival"><span class="tocnumber">1.6</span> <span class="toctext">生存</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Basic_Manipulates"><span class="tocnumber">2</span> <span class="toctext">基本の操作</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Summary_Data_.26_Plot_Summary_Data"><span class="tocnumber">2.1</span> <span class="toctext">要約データ &amp; 要約データをプロット</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Normalize"><span class="tocnumber">2.2</span> <span class="toctext">正規化</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Transform_X"><span class="tocnumber">2.3</span> <span class="toctext">Xを変換</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Nonlinear_Fit"><span class="tocnumber">2.4</span> <span class="toctext">非線形曲線フィット</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Linear_Fit"><span class="tocnumber">2.5</span> <span class="toctext">線形フィット</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Restructure_Table"><span class="tocnumber">2.6</span> <span class="toctext">テーブルを再構成</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Convert_to_Free_Form"><span class="tocnumber">2.7</span> <span class="toctext">自由形式に変換</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Table_Types"></a><span class="mw-headline">テーブルの種類</span></h2>
+<h3><a name="Free_Form_.28Worksheet.29"></a><span class="mw-headline">自由形式(ワークシート)</span></h3>
+<p>従来のOrigin ワークシートです。構造はありません。詳細な情報は、<a href="../../UserGuide/UserGuide/Creating_Child_Window.html#By_New_Workbook_dialog" title="ユーザガイド：子ウィンドウの作成">このページ</a>を参照して下さい。
+</p>
+<h3><a name="XY"></a><span class="mw-headline">XY</span></h3>
+<p>このテーブルタイプは、<i>XYYY...</i> 構造に従います。つまり、1つの X 列に複数の Y 列が対応する形式です。オプションで<b>行タイトル</b>列(行にラベルを付けるためのテキスト列)と<b>Xエラー</b>列を含めることができます。各<b>Yデータセットは、</b>複数の<b>反復列</b>を持つ個別のグループを表します。
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png" width="379"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">データ形式
+</th>
+<td>テーブルのデータフォーマットを選択します。
+<ul><li><b>素データ</b></li>
+<li><b>要約 (平均)</b></li>
+<li><b>要約 (中央値)</b></li></ul>
+</td></tr>
+<tr>
+<th>グループ数 (Yデータセット)
+</th>
+<td>比較するグループの数を選択または入力します。各Yデータセットには、同じ数の複製列があります。
+<p><b>Note</b>: テーブルの作成後いつでもデータセットを追加または削除できます。 
+</p>
+<ul><li>1つまたは複数のデータセットを追加するには、テーブルタイプアイコン<a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
+<li>既存のデータセットの前に新しいYデータセットを挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
+<li>Yデータセットを削除するには、データセットのタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>グループ名
+</th>
+<td>グループ名（Yデータセット名）をセミコロン区切りで入力します。
+</td></tr>
+<tr>
+<th>行タイトル
+</th>
+<td>このチェックボックスをオンにすると、行ラベル用のテキスト列が追加されます。
+</td></tr>
+<tr>
+<th>Xエラー
+</th>
+<td>このチェックボックスをオンにすると、X のエラーバー列が追加されます。
+</td></tr>
+<tr>
+<th>グループごとの反復値
+</th>
+<td>各Yデータセットに含める複製サブ列の数を選択または入力します。反復がない場合は 1 を入力します。
+<p><b>Note:</b>テーブルを作成した後でもいつでもサブ列を追加または削除できます。 
+</p>
+<ul><li>サブ列を追加するには、<b>列を追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。同じ<b>名前</b>を持つすべてのデータセットに、新しい複製が追加されます。 </li>
+<li>サブ列を挿入するには、サブ列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのデータセットに新しい複製が追加されます。 </li>
+<li>すべてのデータセットから既存のサブ列を削除するには、サブ列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>Xタイトル
+</th>
+<td>X列タイトルに使用されるラベルを入力します。
+</td></tr></table>
+<p><br />
+XY テーブルは、用量反応試験や阻害試験など、1つの測定変数に対して複数の応答結果がある実験データで広く使用されます。
+</p>
+<dl><dd><a  class="image"><img alt="XY Table Ex.gif" src="../images/Data_Table/XY_Table_Ex.gif" width="601"  /></a></dd></dl>
+<h3><a name="Column"></a><span class="mw-headline">列</span></h3>
+<p>このテーブルタイプは、<i>YYY...</i> 構造に従います。つまり、複数のY列を持ち、X 列はありません。各Y列は独立したグループを表し、複製データは各列に配置されます。オプションで<b>行タイトル</b>列(複製データのラベル用テキスト列) を含めることができます。 
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Column One Way dialog.png" src="../images/Data_Table/New_Data_Table_Column_One_Way_dialog.png" width="369"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">グループ数
+</th>
+<td>比較するグループの数を選択または入力します。1つのグループにつき1つのY列が作成されます。
+<p><b>Note</b>: テーブルの作成後いつでもY列を追加または削除できます。 
+</p>
+<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。  </li>
+<li>既存のデータセットの前に新しいY列を挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
+<li>列を削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>グループ名
+</th>
+<td>グループ名（Y 列名）をセミコロン区切りで入力します。
+</td></tr>
+<tr>
+<th>行タイトル
+</th>
+<td>このチェックボックスをオンにすると、行ラベル用のテキスト列が追加されます。
+</td></tr></table>
+<p><br />
+列テーブルは、主に一元配置分散分析の生データや、同じ変数について独立したグループを比較するその他の解析（t検定、ノンパラメトリック検定など）で使用されます。 
+</p>
+<dl><dd><a  class="image"><img alt="Column One Way Table Ex.gif" src="../images/Data_Table/Column_One_Way_Table_Ex.gif" width="633"  /></a></dd></dl>
+<h3><a name="Grouped"></a><span class="mw-headline">グループ化</span></h3>
+<p>このテーブルタイプは、行タイトル+ Y列構造に従います。行ラベル用の<b>タイトル</b>列に続いて、複数の Y 列が<b>グループ</b>ごとに配置されます。各<b>グループ</b>は因子 A の水準を表し、各<b>グループ</b>内のY列は因子Bの水準を表します。 
+</p><p>オプションで<b>サブグループ</b>を有効にすると、三元配置分散分析用の第3因子を追加できます。<b>サブグループ</b>は各<b>グループ</b>(因子A) をさらに分割し、因子 B の水準を表します。また、各サブグループ内のY列は因子Cを表します。 
+</p><p>二元配置および三元配置のすべての因子は交差している（すべての組み合わせが存在する）ことに<b>注意</b>してください。  
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Grouped Two Way dialog.png" src="../images/Data_Table/New_Data_Table_Grouped_Two_Way_dialog.png" width="369"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">グループ数
+</th>
+<td>2つ（または3つ）のカテゴリ次元で比較するグループの数を選択または入力します。
+<p><b>Note</b>: テーブルの作成後いつでもグループを追加または削除できます。 
+</p>
+<ul><li>1つまたは複数のグループを追加するには、テーブルタイプアイコン<a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
+<li>既存のグループの前に新しいグループを挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
+<li>グループを削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>グループ名
+</th>
+<td>グループ名をセミコロン区切りで入力します。
+</td></tr>
+<tr>
+<th>サブグループの数
+</th>
+<td>三元配置分散分析の場合は、0 ではなく<b>サブグループの数</b>を選択または入力して、第3因子を追加します。サブグループは各<b>グループ</b>をさらに分割し、因子 B の水準を表します。また、各<b>サブグループ</b>内のY列は因子Cを表します。これにより、因子A（グループ）、因子 B（サブグループ）、因子 C（Y列）がすべて互いに交差した3因子の計画になります。
+</td></tr>
+<tr>
+<th>グループごとの反復値
+</th>
+<td>グループごとの複製Y列の数を選択または入力します。反復がない場合は 1 を入力します。
+<p><b>Note:</b>テーブルを作成した後でも、いつでもY列を追加または削除できます。 
+</p>
+<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。新しい複製が同じ<b>名前</b>のすべてのグループに追加されます。 </li>
+<li>Y列を挿入するには、Y列の<b>名前</b>セルをクリックしてその単一列を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのグループに新しい複製が追加されます。 </li>
+<li>すべてのグループから既存のY列を削除するには、Y列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>行タイトル
+</th>
+<td>このチェックボックスをオンにすると、行ラベル用のテキスト列が追加されます。
+</td></tr></table>
+<p><br />
+グループ化テーブルは、主に二元配置分散分析や、2つの独立したカテゴリ変数（因子）を持つ解析で使用されます。各因子には2つ以上の水準があります。
+</p>
+<dl><dd><a  class="image"><img alt="Grouped Two Way Table Ex.gif" src="../images/Data_Table/Grouped_Two_Way_Table_Ex.gif" width="675"  /></a></dd></dl>
+<h3><a name="Contingency"></a><span class="mw-headline">分割表</span></h3>
+<p>このテーブルタイプは、二元分割表の構造に従います。1つのテキスト列に行カテゴリのラベルを入力し、それに続く複数の数値列に度数を入力します。最初のテキスト列には、1つ目のカテゴリ変数のラベルが含まれます。後続の数値列には、2つ目のカテゴリ変数の各水準に対応する整数の度数が含まれます。 
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Contingency dialog.png" src="../images/Data_Table/New_Data_Table_Contingency_dialog.png" width="701"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">列カテゴリ
+</th>
+<td>2つ目のカテゴリ変数のラベルをセミコロン区切りで入力します。
+</td></tr></table>
+<p><br />
+分割表は、カイ二乗検定や Fisher の正確確率検定などのカテゴリデータ解析用に設計されています。
+<a  class="image"><img alt="Contingency Table Ex.gif" src="../images/Data_Table/Contingency_Table_Ex.gif" width="688"  /></a>
+</p>
+<h3><a name="Survival"></a><span class="mw-headline">生存</span></h3>
+<p>このテーブルタイプは、時間 + ステータス構造に従います。つまり、経過時間用の1つの X 列に、イベントステータス用の1つ以上の Y 列が対応します。X 列には、観察開始からイベント発生または打ち切りまでの経過時間（Elapsed Time）が含まれます。Y 列には、イベントが発生したかどうかを示す ステータス が含まれます。通常、0 = 打ち切り（イベントなし／脱落）、1 = イベント（死亡／故障／指定した結果の発生）を表します。オプションで、個々の被験者ラベル用の<b>行タイトル</b>列を追加できます。
+</p>
+<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png" width="438"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">グループ数
+</th>
+<td>比較するグループの数を選択または入力します。1つのグループにつき1つのY列が作成されます。
+<p><b>Note</b>: テーブルの作成後いつでもグループ（Y列）を追加または削除できます。 
+</p>
+<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。  </li>
+<li>既存のデータセットの前に新しいY列を挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
+<li>列を削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
+</td></tr>
+<tr>
+<th>グループ名
+</th>
+<td>Y列名をセミコロン区切りで入力します。
+</td></tr>
+<tr>
+<th>行タイトル
+</th>
+<td>このチェックボックスをオンにすると、被験者ラベル用のテキスト列が追加されます。
+</td></tr>
+<tr>
+<th>経過時間の単位
+</th>
+<td>デフォルトでは、経過時間（X 列）の単位は 日 です。この編集ボックスを使用して、単位を月、年などに変更できます。
+</td></tr></table>
+<p><br />
+生存テーブルはKaplan-Meier 推定や信頼性・生存時間解析など、生存時間解析および信頼性研究用に設計されています。
+</p>
+<h2><a name="Basic_Manipulates"></a><span class="mw-headline">基本の操作</span></h2>
+<p>テーブル左上のテーブルアイコンをクリックすると、よく使用する操作にすばやくアクセスできるメニュー一覧がポップアップ表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="Basic Operation Data Table.gif" src="../images/Data_Table/Basic_Operation_Data_Table.gif" width="609"  /></a></dd></dl>
+<p>使用可能なメニューはテーブルタイプによって異なります。
+</p>
+<h3><a name="Summary_Data_.26_Plot_Summary_Data"></a><span class="mw-headline">要約データ &amp; 要約データをプロット</span></h3>
+<p><b>散布図</b>、<b>折れ線</b>、<b>線+シンボル</b>または<b>縦棒</b>グラフで要約統計データをプロットできます。Y値には、<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>平均値</b>、<b>中央値</b>、<b>幾何平均</b></a>を使用できます。オプションで<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>標準偏差</b>、<b>SEM</b>（平均の標準誤差）、<b>95% CI</b>（平均の上側95%信頼区間 - 平均の下側95%信頼区間）</a>、または<b>範囲</b>（最大値 - 最小値）のエラーバーを追加できます。
+</p>
+<dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png" width="330"  /></a></dd></dl>
+<p>集計データは、Summary Statsワークシートに出力されます。総数Nを出力することもできます。
+</p>
+<h3><a name="Normalize"></a><span class="mw-headline">正規化</span></h3>
+<p>データを共通の相対スケール（0% ～ 100%、または 0.0 ～ 1.0）に再スケールし、グループ間またはサブ列間で比較できるようにします。
+</p>
+<dl><dd><a  class="image"><img alt="Normalize Data Table.png" src="../images/Data_Table/Normalize_Data_Table.png" width="432"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">サブ列
+</th>
+<td>正規化時にグループ内のサブ列をどのように扱うかを指定します。
+<ul><li><b>サブ列をグループごとに正規化</b>: 各グループ内のすべてのサブ列をまとめて正規化します。グループレベルの統計量（行平均）を使用します。</li>
+<li><b>各サブ列を個別に正規化</b>: 各サブ列を、それぞれ自身の値を使用して個別に正規化します。</li></ul>
+</td></tr>
+<tr>
+<th>0%の定義
+</th>
+<td>0%の定義方法を指定します。
+<ul><li><b>サブ列をグループごとに正規化</b>の場合は、0% は、<b>最小の行平均</b>、<b>最初の行平均（または最後の値、どちらか小さい方）</b>、または<b>0%を固定</b> 編集ボックスで指定した<b>固定値</b>として定義できます。</li>
+<li><b>各サブ列を個別に正規化</b>の場合は、<b>各サブ列の最小値</b>、<b>各サブ列の最初の値（または最後の値、どちらか小さい方）</b>、または<b>0%を固定</b>編集ボックスで指定した<b>固定値</b>として定義できます。</li></ul>
+</td></tr>
+<tr>
+<th>100%の定義
+</th>
+<td>100%の定義方法を指定します。
+<ul><li><b>サブ列をグループごとに正規化</b>の場合、100% は、<b>最大の行平均</b>、<b>最後の行平均（または最初の値、どちらか大きい方）</b>、<b>100%を固定</b>編集ボックスで指定した<b>固定値</b>、<b>すべての行平均の合計</b>、または<b>すべての行平均の平均</b>として定義できます。</li>
+<li><b>各サブ列を個別に正規化</b>の場合は、<b>各サブ列の最大値</b>、<b>各サブ列の最後の値（または最初の値、どちらか大きい方）</b>、<b>100パーセントを固定</b>編集ボックスで指定した<b>固定値</b>、<b>各サブ列の値の合計</b>、<b>各サブ列の値の平均</b>として定義できます。</li></ul>
+</td></tr>
+<tr>
+<th>結果の表示形式
+</th>
+<td>正規化データのフォーマットを指定します。
+<ul><li><b>割合</b>：0.0から1.0までの小数値</li>
+<li><b>パーセント</b>：0%から100%までのパーセント値 </li></ul>
+</td></tr></table>
+<h3><a name="Transform_X"></a><span class="mw-headline">Xを変換</span></h3>
+<p>用量反応解析のために、濃度値（X データ）を変換します。これは通常、シグモイド用量反応曲線フィットを行う前に必要な前処理です。
+</p>
+<dl><dd><a  class="image"><img alt="Transform X data table.png" src="../images/Data_Table/Transform_X_data_table.png" width="330"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="25%">X=0を別の値に置換
+</th>
+<td>X にゼロ濃度（例：溶媒対照）が含まれる場合、このチェックボックスをオンにして、「0」を指定した小さい値に置き換えます。log(0) は定義されていないため、対数変換の前に必要です。
+<p><b>X=0 を置換する値</b>を入力します。一般的には、0 を最小の非ゼロ濃度の 1/10 に置き換えます。
+</p>
+</td></tr>
+<tr>
+<th>単位を変更
+</th>
+<td>乗算または除算により、濃度の単位を変換します。
+<p>単位変換を行わない場合は<b>なし</b>を選択します。<b>掛ける</b>または<b>割る</b>を選択した場合は、<b>適用する定数</b>編集ボックスに係数を入力します。例えば、&quot;uM&quot;を&quot;mM&quot;に変換するには、<b>割る</b>を選択して<b>適用する定数</b>で1000を選択します。 
+</p>
+</td></tr>
+<tr>
+<th>対数変換
+</th>
+<td>線形スケールのX値を対数スケールに変換し、シグモイド曲線フィットに使用できるようにします。
+<p><b>対数の底</b>ドロップダウンから、log10（常用対数）、ln（底e、自然対数）、log2（底2）を選択します。
+</p>
+</td></tr></table>
+<h3><a name="Nonlinear_Fit"></a><span class="mw-headline">非線形フィット</span></h3>
+<p>XYデータで非線形曲線フィットを実行します。<a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="カテゴリ:非線形曲線フィットダイアログボックス"><b>非線形回帰</b>ダイアログ</a>が開き、フィット処理を実行できます。
+</p>
+<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png" width="395"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">関数を選択
+</th>
+<td>フィット<b>関数</b>の詳細については、<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">このページ</a>を参照してください（ただし、利用可能な<b>カテゴリ</b>はデフォルトモードとは異なる場合があります）。<a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png" width="18"  /></a>ボタンをクリックして、必要な機能を検索できます。
+<p>フィット関数をすべて利用するには、デフォルトモード（<b>環境設定: GUIモード: デフォルト</b>）に切り替えて、Origin を再起動してください。 
+</p>
+</td></tr>
+<tr>
+<th>フィット方法
+</th>
+<td>素データまたは要約統計量のどちらを使用してフィットするかを指定します。選択肢は、<b>素データ</b>、<b>平均 + SD</b>（SD を重みとして使用）、<b>平均 + SE</b>（SE を重みとして使用）、<b>平均のみ</b>です。集計統計量を選択した場合、入力データとして使用する「サマリー統計」ワークシートが自動生成されます。
+</td></tr>
+<tr>
+<th>グローバルフィット
+</th>
+<td>このチェックボックスをオンにすると、フィット関数のパラメータをすべてのデータセット（グループ）間で共有し、すべてのデータセットに対して同じパラメータ値を求めます。
+<p>オフにすると、各データセットを個別にフィットし、データセットごとに個別の結果を求めます（ただし、結果は1つのレポートにまとめられます）。
+</p><p><b>グローバルフィット</b>の詳細については、<a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="ユーザガイド：パラメータ共有でのグローバルフィット">このページ</a>を参照してください。
+</p>
+</td></tr></table>
+<h3><a name="Linear_Fit"></a><span class="mw-headline">線形フィット</span></h3>
+<p>XYデータに対して線形回帰を実行します。各グループは個別にフィットされ、すべてのフィット結果が1つのレポートにまとめられます。<a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html" title="ユーザガイド：線形回帰のダイアログ"><b>線形回帰</b>ダイアログ</a>が開き、フィット処理を実行できます。
+</p>
+<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png" width="330"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="20%">フィット方法
+</th>
+<td>素データと要約データのどちらを使用してフィットするかを指定します。
+<ul><li> <b>素データ：</b><br />各グループを個別にフィットします。各グループ内の反復データは連結され、1つのデータセットとしてフィットされます。</li>
+<li> <b>平均：</b><br />各グループ内の反復データの平均を計算するSummary Statsワークシートが自動生成されます。各グループは平均を入力として個別にフィットされます。</li>
+<li> <b>平均+ SD：</b><br />各グループ内の反復データの平均標準偏差を計算するSummary Statsワークシートが自動生成されます。各グループは、その平均値を入力として使用し、分散の逆数 (1/SD^2) を重みとして、個別にフィットされます。</li></ul>
+</td></tr>
+<tr>
+<th>切片固定
+</th>
+<td>切片を<b>切片</b>ボックスで指定した値で固定します。
+</td></tr>
+<tr>
+<th>不適合度検定
+</th>
+<td>複製データに対して 不適合度検定（Lack-of-Fit）の結果を出力します。これは、モデルの適合性を評価するために使用されます。
+<p>詳細は<a href="../../UserGuide/UserGuide/Linear_Regression_Results.html#Lack_of_fit_table" title="ユーザガイド：線形回帰の結果">このページ</a>を参照してください。
+</p>
+</td></tr>
+<tr>
+<th>XY値を検索
+</th>
+<td>FindXfromY および/または FindYfromX ワークシートを生成します。独立変数の値を入力して対応する従属変数の値を取得する、またはその逆を行います。95% 信頼区間もシート内で計算されます。
+<p>詳細は<a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Find_X.2FY" title="ユーザガイド：線形回帰のダイアログ">このページ</a>を参照してください。
+</p>
+</td></tr>
+<tr>
+<th>エラーを表示
+</th>
+<td>フィット曲線プロットに信頼帯および/または予測帯を追加します。
+<p>詳細は<a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Fitted_Curves_Plot" title="ユーザガイド：線形回帰のダイアログ">このページ</a>を参照してください。 
+</p>
+</td></tr>
+<tr>
+<th>残差解析
+</th>
+<td>残差を計算して出力します。
+<p>詳細は<a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html#Residual_Analysis" title="ユーザガイド：線形回帰のダイアログ">このページ</a>を参照してください。
+</p>
+</td></tr></table>
+<h3><a name="Restructure_Table"></a><span class="mw-headline">テーブルを再構成</span></h3>
+<p>データテーブルを再構築します（グループまたは複製の追加または削除など）。
+</p>
+<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png" width="295"  /></a></dd></dl>
+<h3><a name="Convert_to_Free_Form"></a><span class="mw-headline">フリーフォームに変換</span></h3>
+<p>現在のデータテーブルを、標準のOrigin<a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html">ワークシート</a>フォームに変換します。
+</p>
+
+
+
+    

@@ -1,4 +1,4 @@
-<h1 class="firstHeading">28.1 Data Table</h1><p class='urlname' style='display: none'>Data-Table</p>
+<h1 class="firstHeading">29.1 Data Table</h1><p class='urlname' style='display: none'>Data-Table</p>
 <p><br />
 <span class='headerInParagraph'>To create a new data table,</span>
 </p>
@@ -58,7 +58,7 @@
 <td>Select or enter the number of groups to compare. Each Y dataset has the same number of replicate columns.
 <p><b>Note</b>: You can add or remove datasets anytime after creating the table. 
 </p>
-<ul><li>To add one or more datasets, click on table type icon <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png?v=99645" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
+<ul><li>To reconstruct groups and replicates, click on table icon <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png?v=99645" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
 <li>To insert a new Y dataset before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
 <li>To delete a Y dataset, right click on the dataset title bar and select <b>Delete</b>.</li></ul>
 </td></tr>
@@ -138,7 +138,7 @@ Column tables are mainly used for One Way ANOVA raw data and other analyses comp
 <td>Select or enter the number of groups to compare across two (or three) categorical dimensions.
 <p><b>Note</b>: You can add or remove groups anytime after creating the table. 
 </p>
-<ul><li>To add one or more groups, click on table type icon <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png?v=99651" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
+<ul><li>To reconstruct groups and replicates, click on table icon <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png?v=99651" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
 <li>To insert a new group before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
 <li>To delete a group, right click on the group title bar and select <b>Delete</b>.</li></ul>
 </td></tr>
@@ -188,7 +188,7 @@ Contingency tables are designed for categorical data analysis such as chi-square
 <h3><a name="Survival"></a><span class="mw-headline">Survival</span></h3>
 <p>This table type follows the Time + Status structure: one X column for elapsed time, paired with one or more Y columns for event status. The X column contains the "Elapsed Time" from start of observation until event or censoring. Y columns contain "Status" indicating whether an event occurred: typically 0 = Censored (no event/withdrawn), 1 = Event (death/failure/specified outcome occurred). An optional <b>Row Title</b> column can be added for individual subject labels.
 </p>
-<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png?v=99984" width="824"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png?v=99987" width="824"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Number of Groups
@@ -197,8 +197,8 @@ Contingency tables are designed for categorical data analysis such as chi-square
 <p><b>Note</b>: You can add or remove groups (Y columns) anytime after creating the table. 
 </p>
 <ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>.  </li>
-<li>To insert a new column before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
-<li>To delete a column, right click on the column title bar and select <b>Delete</b>.</li></ul>
+<li>To insert a new column before an existing one, right click the dataset and select <b>Insert</b>.</li>
+<li>To delete a column, right click the column and select <b>Delete</b>.</li></ul>
 </td></tr>
 <tr>
 <th>Group Names
@@ -216,8 +216,9 @@ Contingency tables are designed for categorical data analysis such as chi-square
 <td>By default, the unit of “Elapsed Time” (X column) is “Days”. Use this editbox to change the unit, Months, Years, etc.
 </td></tr></table>
 <p><br />
-Survival table is designed for survival analysis and reliability studies, such as Kaplan-Meier Estimator and Reliability and Survival Analysis.
+Survival table is designed for survival analysis and reliability studies. For Kaplan-Meier estimator, quick access is available: left-clicking on the table icon <a  class="image"><img alt="Survival Table Icon.png" src="../images/Data_Table/Survival_Table_Icon.png?v=99985" width="16"  /></a> (at the top-left corner) and select <b>Kaplan-Meier Estimator...</b> menu.
 </p>
+<dl><dd><a  class="image"><img alt="Survival Table Ex.gif" src="../images/Data_Table/Survival_Table_Ex.gif?v=99981" width="664"  /></a></dd></dl>
 <h2><a name="Basic_Manipulates"></a><span class="mw-headline">Basic Manipulates</span></h2>
 <p>Click the table icon at the top-left corner of the table, a list of menus pops up providing quick access to frequently used operations:
 </p>

@@ -217,10 +217,10 @@
     <toc_src>UserGuide:Dark_Mode</toc_src>
   </toc>
   <toc>
-    <toc_name>Origin Help &gt; Origin Basics &gt; Stats Mode</toc_name>
-    <toc_link>UserGuide/Stats_Mode.html</toc_link>
-    <toc_url>Origin-Help/Stats-Mode</toc_url>
-    <toc_src>UserGuide:Stats_Mode</toc_src>
+    <toc_name>Origin Help &gt; Origin Basics &gt; Origin GUI Modes</toc_name>
+    <toc_link>UserGuide/Origin_GUI_Modes.html</toc_link>
+    <toc_url>Origin-Help/GUI-Modes</toc_url>
+    <toc_src>UserGuide:Origin_GUI_Modes</toc_src>
   </toc>
   <toc>
     <toc_name>Origin Help &gt; The Origin Project File</toc_name>
@@ -6743,6 +6743,12 @@
     <toc_link>UserGuide/Customizing_Graph_Size_in_Report_Sheet.html</toc_link>
     <toc_url>Origin-Help/Report-Graph-Size</toc_url>
     <toc_src>UserGuide:Customizing_Graph_Size_in_Report_Sheet</toc_src>
+  </toc>
+  <toc>
+    <toc_name>Origin Help &gt; Stats Mode</toc_name>
+    <toc_link>Category/Stats_Mode.html</toc_link>
+    <toc_url>Origin-Help/Stats-Mode</toc_url>
+    <toc_src>Category:Stats_Mode</toc_src>
   </toc>
   <toc>
     <toc_name>Origin Help &gt; Life Science Mode</toc_name>

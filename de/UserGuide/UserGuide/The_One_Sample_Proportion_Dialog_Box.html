@@ -1,12 +1,17 @@
 ﻿<h1 class="firstHeading">Dialog Test von Anteilen bei einer Stichprobe</h1><p class='urlname' style='display: none'>One-Prop-Dialog</p>
+<p><br /></p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Eingabe</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Proportion_Test"><span class="tocnumber">3</span> <span class="toctext">Test von Anteilen</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Test_Methods"><span class="tocnumber">4</span> <span class="toctext">Testmethode</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Ausgabe</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neuberechnen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Proportion_Test"><span class="tocnumber">4</span> <span class="toctext">Test von Anteilen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a><ul>
+<li class="toclevel-2 tocsection-6"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">5.1</span> <span class="toctext">Relevante Mindestdifferenz aufheben</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">5.2</span> <span class="toctext">Relevante Mindestdifferenz festlegen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Ausgabe</span></a></li>
 </ul>
 </div>
 
@@ -17,30 +22,32 @@
 <ul><li><a href="../../UserGuide/Category/One_Sample_Proportion_Test(Pro_Only).html" title="Category:One Sample Proportion Test(Pro Only)">Einf&uuml;hrung: Test von Anteilen bei einer Stichprobe</a></li>
 <li><a href="../../UserGuide/UserGuide/Algorithms_(One_Sample_Proportion_Test).html" title="UserGuide:Algorithms (One Sample Proportion Test)">Algorithmen: Test von Anteilen bei einer Stichprobe</a></li></ul>
 <p><br /></p>
-<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<h2><a name="Recalculate"></a><span class="mw-headline">Neuberechnen</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Form der Eingabedaten</th>
+<th>Neuberechnen</th>
 <td>
-<ul><li><b>Zusammengefasst</b></li></ul>
-<dl><dd>F&uuml;hren Sie den Test mit Hilfe einer zusammenfassenden Statistik durch, die Sie manuell in den Dialog eingeben.</dd></dl>
-<ul><li><b>Roh</b></li></ul>
-<dl><dd>F&uuml;hren Sie den Test mit Hilfe eines Datensatzes durch, der aus &quot;Erfolgs-&quot; bzw. &quot;Fehler&quot;werten besteht. Der Datensatz darf nicht mehr als zwei eindeutige Werte enthalten.</dd></dl>
-</td></tr>
+<p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
+<ul><li><b>Kein</b></li>
+<li><b>Auto</b></li>
+<li><b>Manuell</b></li></ul>
+<p>Weitere Informationen finden Sie unter <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Analyseergebnisse neu berechnen</a>.</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<p>Der Test von Anteilen bei einer Stichprobe unterst&uuml;tzt mit <b>Roh</b> und <b>Zusammengefassten Daten</b> zwei Eingabedatenformen.</p>
+<table class="dialogcontroltable">
+
 <tr>
-<th>Eingabedaten<p>(<i>Zusammengefasst</i>)</p>
-</th>
-<td>
-<ul><li><b>Anzahl der Ereignisse</b></li></ul>
+<th>Zusammengefasst</th>
+<td>F&uuml;hren Sie den Test mit Hilfe einer zusammenfassenden Statistik durch, die Sie manuell in den Dialog eingeben.<ul><li><b>Anzahl der Ereignisse</b></li></ul>
 <dl><dd>Die beobachtete Anzahl der Ereignisse</dd></dl>
-<ul><li><b>Sample Size</b></li></ul>
+<ul><li><b>Stichprobenumfang</b></li></ul>
 <dl><dd>Die Gesamtanzahl der Beobachtungen</dd></dl>
 </td></tr>
 <tr>
-<th>Eingabedaten<p>(<i>Roh</i>)</p>
-</th>
-<td>
+<th>Roh</th>
+<td>F&uuml;hren Sie den Test mit Hilfe eines Datensatzes durch, der aus &quot;Erfolgs-&quot; bzw. &quot;Fehler&quot;werten besteht. Der Datensatz darf nicht mehr als zwei eindeutige Werte enthalten.<p>Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></p>
 <ul><li><b>Stichprobe</b></li></ul>
 <dl><dd>Definieren Sie einen Datenbereich der Stichprobe.</dd></dl>
 <ul><li><b>Ereignis</b></li></ul>
@@ -57,11 +64,11 @@
 <td>Die zu testende Nullhypothese (Stichprobenanteil = <i>Testanteil</i>).</td></tr>
 <tr>
 <th>Alternativhypothese</th>
-<td>Optionen:<dl><dd><b>Proportion &lt;&gt; <i>Testanteil</i></b></dd></dl>
+<td>Optionen:<ul><li><b>Proportion &lt;&gt; <i>Testanteil</i></b></li></ul>
 <dl><dd>Ein beidseitiger Test von Anteilen, der zu beantworten versucht, ob der Anteil der Stichprobe = <i>Testanteil</i>.</dd></dl>
-<dl><dd><b>Proportion &gt; <i>Testanteil</i></b></dd></dl>
+<ul><li><b>Proportion &gt; <i>Testanteil</i></b></li></ul>
 <dl><dd>Ein einseitiger Test von Anteilen nach oben, der zu beantworten versucht, ob der Anteil der Stichprobe gr&ouml;&szlig;er ist als der <i>Testanteil</i>.</dd></dl>
-<dl><dd><b>Proportion &lt; <i>Testanteil</i></b></dd></dl>
+<ul><li><b>Proportion &lt; <i>Testanteil</i></b></li></ul>
 <dl><dd>Ein einseitiger Test von Anteilen nach unten, der zu beantworten versucht, ob der Anteil der Stichprobe kleiner ist als der hypothetische Anteil.</dd></dl>
 </td></tr>
 <tr>
@@ -77,36 +84,58 @@
 <th>Testmethode</th>
 <td>Origin verwendet zwei Methoden zum Berechnen von p-Werten und Konfidenzintervallen f&uuml;r Tests von Anteilen bei einer Stichprobe (Dokumentation zur Approximation der Normalverteilung und zum Binomialtest finden Sie auf der <a href="../../UserGuide/UserGuide/Algorithms_(One_Sample_Proportion_Test).html" title="UserGuide:Algorithms (One Sample Proportion Test)">Seite zum Algorithmus</a>):<ul><li><b>Approximation der Normalverteilung</b></li></ul>
 <dl><dd>Die Approximation der Normalverteilung wird immer berechnet. Im Allgemeinen erhalten Sie ein befriedigendes Ergebnis, wenn <a href="../../UserGuide/UserGuide/Algorithms_(One_Sample_Proportion_Test).html#P_Value" title="UserGuide:Algorithms (One Sample Proportion Test)"><i>Erfolge</i> ≥ 10 und wenn <i>Stichprobenumfang</i> -  <i>Erfolge</i> ≥ 10</a>. Die Qualit&auml;t der Approximation neigt dazu, sich mit zunehmendem Stichprobenumfang zu verbessern.</dd></dl>
-<ul><li><b>Binomialtest</b></li></ul>
-<dl><dd>Der Binomialtest wird verwendet.</dd></dl>
+<dl><dd>Bei kleinen Stichprobenumf&auml;ngen oder extremen zugrunde liegenden Anteilen (<img src="../images/The_One_Sample_Proportion_Dialog_Box/math-4ef9cff2047e04349f6399910a5e1592.png" title="p_{0}" alt="p_{0}" class="tex"/> nahe 0 oder 1) verschlechtert sich die Normal-Approximation.</dd></dl>
+<ul><li><b>Binomialer exakter Test</b></li></ul>
+<dl><dd>Der Binomialtest verwendet direkt die Wahrscheinlichkeitsfunktion der binomialen Verteilung, wobei er nach der oberen und unteren Grenze aufl&ouml;st, indem er die Wahrscheinlichkeit der Enden separat auf <img src="../images/The_One_Sample_Proportion_Dialog_Box/math-08a3a0ab38cac589c7231d171c88091f.png" title="a/2" alt="a/2" class="tex"/> setzt.</dd></dl>
+<dl><dd>Diese Methode verwendet eine ultrakonservative Strategie. Sie erzeugt &uuml;berm&auml;&szlig;ig breite Kondenzintervalle und eine niedrige statistische Trennsch&auml;rfe f&uuml;r Hypothesentests. Sie ist au&szlig;erdem geeignet f&uuml;r Daten mit kleinem Stichprobenumfang.</dd></dl>
+<ul><li><b>Angepasster exakter Blaker-Test</b></li></ul>
+<dl><dd>Blakers exakter Test betrachtet beide Enden gemeinsam und reduziert dabei signifikant die unn&ouml;tige Intervallbreite. Die <i>angepasste</i> Version optimiert die Algorithmen weitergehend und l&ouml;st dabei Probleme der numerischen Grenzen und stellt die strenge &Uuml;bereinstimmung zwischen p-Werten und Konfidenzintervallen sicher.</dd></dl>
+<dl><dd>Verglichen mit der Normal-Approximation und dem exakten Binomialtest kombiniert der angepasste exakte Blaker-Test Exaktheit mit Pr&auml;gnanz: Er bleibt es streng exakte Methode (tats&auml;chliche Abdeckungsrate <img src="../images/The_One_Sample_Proportion_Dialog_Box/math-d9c45e527c2d0f57f920cff90777eb6d.png" title="\ge 1-a" alt="\ge 1-a" class="tex"/>), ergibt jedoch engere Konfidenzintervalle und eine h&ouml;here statistische Trennsch&auml;rfe als der exakte Binomialtest.</dd></dl>
 </td></tr></table>
-<h2><a name="Test_Methods"></a><span class="mw-headline">Testmethode</span></h2>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz aufheben</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Normal-Approximation</th>
-<td>Die Approximation der Normalverteilung wird immer berechnet. Im Allgemeinen erhalten Sie ein befriedigendes Ergebnis, wenn <a href="../../UserGuide/UserGuide/Algorithms_(One_Sample_Proportion_Test).html#P_Value" title="UserGuide:Algorithms (One Sample Proportion Test)"><i>Erfolge</i> ≥ 10 und wenn <i>Stichprobenumfang</i> -  <i>Erfolge</i> ≥ 10</a>. Die Qualit&auml;t der Approximation neigt dazu, sich mit zunehmendem Stichprobenumfang zu verbessern.</td></tr>
+<th>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die <b>Relevante Mindestdifferenz</b> nicht festgelegt ist, ist diese Option verf&uuml;gbar.<p>Die Differenzen f&uuml;r die festlegten Trennsch&auml;rfen werden ausgegeben. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve.</p>
+</td></tr>
 <tr>
-<th>Binomialtest</th>
-<td>Der Binomialtest wird verwendet.</td></tr></table>
-<h2><a name="Power_Analysis"></a><span class="mw-headline">Analyse der Trennsch&auml;rfe</span></h2>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Trennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz festlegen</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Mindestdifferenz von Interesse</th>
-<td>Legen Sie die Mindestdifferenz vom Testmittelwert fest, f&uuml;r den Sie sich interessieren. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.</td></tr>
+<th>Relevante Mindestdifferenz (MDI)</th>
+<td>Legen Sie die Mindestdifferenz fest, f&uuml;r die Sie sich interessieren. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.<table class="note">
+
 <tr>
-<th>Tats&auml;chliche Trennsch&auml;rfe</th>
-<td>Berechnen Sie die Trennsch&auml;rfe eines Tests (die Wahrscheinlichkeit, die Nullhypothese abzulehnen, wenn sie falsch ist).</td></tr>
+<td><b>Hinweis</b>:<p>Bei einem Test von Anteilen bei einer Stichprobe gibt es eine Beschr&auml;nkung f&uuml;r die Einstellung der relvanten Mindestdifferenz (MDI). Das ist verbunden mit dem <i><b>Testanteil</b></i>, der auf der Registerkarte <b>Test von Anteilen</b> festgelegt ist.</p>
+<ul><li>Wen <b>Anteil &lt;&gt; <i>Testanteil</i></b>, sollte der MDI-Wert ein positiver Wert kleiner als der maximale Wert zwischen <i><b>Testanteil</b></i> und <i><b>1-Testanteil</b></i> sein.</li></ul>
+<ul><li>Wenn <b>Anteil &gt; <i>Testanteil</i></b>, sollte der MDI-Wert ein positiver Wert kleiner als der <i><b>1-Testanteil</b></i> sein.</li></ul>
+<ul><li>Wenn <b>Anteil &lt; <i>Testanteil</i></b>, sollte der MDI-Wert ein positiver Wert kleiner als der <i><b>Testanteil</b></i> sein.</li></ul>
+</td></tr></table>
+</td></tr>
 <tr>
-<th>Signifikanzniveau</th>
-<td>Diese Option ist nur verf&uuml;gbar, wenn <i>Hypothetische Trennsch&auml;rfe</i> und/oder <i>Tats&auml;chliche Trennsch&auml;rfe</i> aktiviert ist/sind. Dies ist das Signifikanzniveau (Alpha-Wert) f&uuml;r die Berechnung der Trennsch&auml;rfe.</td></tr>
+<th>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Geben Sie die Stichprobenumf&auml;nge f&uuml;r die festlegten Trennsch&auml;rfen aus. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve. Wenn die Option aktiviert ist, wird der Standardwert der Trennsch&auml;rfe verwendet.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Zieltrennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr>
+<tr>
+<th>Trennsch&auml;rfe basierend auf Testdaten</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe f&uuml;r den Stichprobenumfang der Testdaten. (Wahrscheinlichkeit, die Nullhypothese zur&uuml;ckzuweisen, wenn diese falsch ist)</p>
+</td></tr>
 <tr>
 <th>Hypothetische Trennsch&auml;rfe</th>
-<td>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge.</td></tr>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge. Wenn diese Option aktiviert ist, wird die entsprechende Kurve zur Trennsch&auml;rfekurve hinzugef&uuml;gt.</p>
+</td></tr>
 <tr>
 <th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
-<td>Nur verf&uuml;gbar, wenn <i>Hypothetische Trennsch&auml;rfe</i> aktiviert ist. Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</td></tr></table>
+<td>Wenn <b>Relevante Mindestdifferenz</b> und <b>Hypothetische Trennsch&auml;rfe</b> aktiviert ist, wird diese Option verf&uuml;gbar.<p>Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</p>
+</td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
 <p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
 <table class="dialogcontroltable">
@@ -115,17 +144,23 @@
 <th>Ausgabe Ergebnisprotokoll</th>
 <td>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</td></tr>
 <tr>
-<th>Bericht der grafischen Zusammenfassung</th>
+<th>Grafischer Zusammenfassungsbericht</th>
 <td>Legen Sie fest, ob der grafische Zusammenfassungsbericht angezeigt werden soll.</td></tr>
 <tr>
 <th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
-<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.</td></tr>
+<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.<p>Es wird eine Fu&szlig;note nach dem Trennsch&auml;rfekurvendiagramm hinzugef&uuml;gt, um die Diagnoseergebnisse der Trennsch&auml;rfeanalyse zu zeigen.</p>
+</td></tr>
 <tr>
 <th>Ergebnisse ausgeben</th>
 <td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr>
 <tr>
 <th>Zeichnungsdaten ausgeben</th>
 <td>Legen Sie das Arbeitsblatt f&uuml;r die Ausgabe der Zeichnungsdatens&auml;tze fest.</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Hinweis</b>:<ul><li>Wenn die Eingabedatenform <b>Roh</b> ist, wird die Tabelle <b>Maskierte Daten</b> und <b>Schlechte Daten (fehlender Wert)</b> im Berichtsblatt angezeigt.</li></ul>
+</td></tr></table>
 
 
 

@@ -1,239 +1,190 @@
-﻿<h1 class="firstHeading">Dialog t-Test bei einer Stichprobe</h1>
-
-  <p class='urlname' style='display: none'>tTest-OneSample-Dialog</p>
-
-  <table id="toc" class="toc">
-    <tr>
-      <td>
-        <div id="toctitle">
-          <h2>Inhalt</h2>
-        </div>
-
-        <ul>
-          <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
-
-          <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neu berechnen</span></a></li>
-
-          <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a></li>
-
-          <li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">t-Test f&uuml;r Mittelwert</span></a></li>
-
-          <li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a></li>
-
-          <li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Diagramme</span></a></li>
-
-          <li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <p></p>
-
-  <h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
-
-  <p>Um den Dialog t-Test bei einer Stichprobe zu &ouml;ffnen:</p>
-
-  <ol>
-    <li>Klicken Sie bei einem aktiven Arbeitsblatt auf <b>Statistik: Hypothesentest: t-Test bei einer Stichprobe</b>.</li>
-  </ol>
-
-  <p><i>Siehe auch:</i></p>
-
-  <ul>
-    <li><a href="../../UserGuide/Category/One-Sample_t-Test.html" title="Category:One-Sample t-Test">Einf&uuml;hrung: t-Test bei einer Stichprobe</a></li>
-
-    <li><a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="UserGuide:Algorithm (OneSampletTest)">Algorithmen: t-Test bei einer Stichprobe</a></li>
-
-    <li><a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">Tutorial: Hypothesentests</a></li>
-  </ul>
-
-  <h2><a name="Recalculate"></a><span class="mw-headline">Neu berechnen</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th><b>Neu berechnen</b></th>
-
-      <td>
-        <p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
-
-        <ul>
-          <li><b>Keine</b></li>
-
-          <li><b>Auto</b></li>
-
-          <li><b>Manuell</b></li>
-        </ul>
-
-        <p>Weitere Informationen finden Sie unter <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Analyseergebnisse neu berechnen</a>.</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th><b>Form der Eingabedaten</b></th>
-
-      <td>
-        <p><b>Zusammengefasste Daten</b></p>
-
-        <dl>
-          <dd>Geben Sie den Wert von Mittelwert, Standardabweichung und Stichprobenumfangsdaten f&uuml;r Stichprobe(n) gem&auml;&szlig; der Form  &quot;<i>Mittelwert</i> <i>Std.Abw.</i> <i>N</i>&quot; (durch Leerzeichen getrennte Zahlen) ein.</dd>
-        </dl>
-
-        <p><b>Rohdaten</b></p>
-
-        <dl>
-          <dd>Geben Sie die Spalte mit Bereichsformat ein. Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></dd>
-        </dl>
-      </td>
-    </tr>
-
-    <tr>
-      <th><b>Eingabe</b></th>
-
-      <td>
-        <p>Geben Sie die Eingabedaten ein.</p>
-      </td>
-    </tr>
-  </table>
-
-  <h2><a name="t-Test_for_Mean"></a><span class="mw-headline">t-Test f&uuml;r Mittelwert</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Testmittelwert</th>
-
-      <td>Der zu testende hypothetische Mittelwert Wenn Sie einen Wert eingeben, werden die Null- und Alternativhypothese entsprechend angepasst.</td>
-    </tr>
-
-    <tr>
-      <th>Nullhypothese</th>
-
-      <td>Die zu testende Nullhypothese<p>(Mittelwert = Testmittelwert)</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Alternativhypothese</th>
-
-      <td>Die Alternativhypothese<p>Optionen:</p>
-
-        <p><b>Mittelwert &lt;&gt;Testmittelwert</b></p>
-
-        <dl>
-          <dd>Wird f&uuml;r beidseitigen Test verwendet. Diese Option testet, ob der Stichprobenmittelwert sich von dem hypothetischen Mittelwert unterscheidet.</dd>
-        </dl>
-
-        <p><b>Mittelwert &gt;Testmittelwert</b></p>
-
-        <dl>
-          <dd>Wird f&uuml;r den einseitigen Test nach oben verwendet. Diese Option testet, ob der Stichprobenmittelwert gr&ouml;&szlig;er ist als der hypothetische Mittelwert.</dd>
-        </dl>
-
-        <p><b>Mittelwert &lt; Testmittelwert</b></p>
-
-        <dl>
-          <dd>Wird f&uuml;r den einseitigen Test nach unten verwendet. Diese Option testet, ob der Stichprobenmittelwert kleiner ist als der hypothetische Mittelwert.</dd>
-        </dl>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Signifikanzniveau</th>
-
-      <td>Legen Sie das Signifikanzniveau fest.</td>
-    </tr>
-
-    <tr>
-      <th>Konfidenzintervall(e)</th>
-
-      <td>Legen Sie fest, ob das/die Konfidenzintervall(e) f&uuml;r den Mittelwert berechnet wird/werden.<p>Berechnungseinzelheiten finden Sie unter <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="UserGuide:Algorithm (OneSampletTest)">Algorithmen (t-Test bei einer Stichprobe)</a>.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Konfidenzniveau(s) in %</th>
-
-      <td>Legen Sie die Konfidenzniveaus (durch Komma getrennt) fest, (1-<img src="../images/The_OneSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex">)%. Diese Option ist verf&uuml;gbar, wenn <i>Konfidenzintervall(e)</i> aktiviert wird.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Tats&auml;chliche Trennsch&auml;rfe</th>
-
-      <td>Berechnen Sie die Trennsch&auml;rfe eines Tests (die Wahrscheinlichkeit, die Nullhypothese abzulehnen, wenn sie falsch ist).</td>
-    </tr>
-
-    <tr>
-      <th>Signifikanzniveau</th>
-
-      <td>Diese Option ist nur verf&uuml;gbar, wenn <i>Hypothetische Trennsch&auml;rfe</i> und/oder <i>Tats&auml;chliche Trennsch&auml;rfe</i> aktiviert ist/sind. Dies ist das Signifikanzniveau (Alpha-Wert) f&uuml;r die Berechnung der Trennsch&auml;rfe.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetische Trennsch&auml;rfe</th>
-
-      <td>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
-
-      <td>Nur verf&uuml;gbar, wenn <i>Hypothetische Trennsch&auml;rfe</i> aktiviert ist. Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Plots"></a><span class="mw-headline">Diagramme</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Boxdiagramm</th>
-
-      <td>Sie zeichnen ein Boxdiagramm.</td>
-    </tr>
-
-    <tr>
-      <th>Histogramm</th>
-
-      <td>Sie zeichnen ein Histogramm.</td>
-    </tr>
-
-    <tr>
-      <th>Diagramme des gleichen Typs in einem Graph anordnen</th>
-
-      <td>Beachten Sie, dass Layer f&uuml;r Histogramme vertikal angeordnet werden. F&uuml;r Boxdiagramme werden Layer horizontal angeordnet.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
-
-  <p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th><b>Ausgabe Ergebnisprotokoll</b></th>
-
-      <td>
-        <p>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Ausgabezeichnungsdaten</th>
-
-      <td>Legen Sie ein Arbeitsblatt f&uuml;r die Ausgabe der gezeichneten Daten fest (Origin erzeugt beim Erstellen von Zeichnungen tabellarische Daten).<br><p>Dieses Element ist nur verf&uuml;gbar, wenn das <b>Eingabedatenformat</b> &quot;Roh&quot; ist.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Ergebnisse ausgeben</th>
-
-      <td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td>
-    </tr>
-  </table>
+﻿<h1 class="firstHeading">Dialog t-Test bei einer Stichprobe</h1><p class='urlname' style='display: none'>tTest-OneSample-Dialog</p>
+<p><br /></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neuberechnen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">t-Test f&uuml;r Mittelwert</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a><ul>
+<li class="toclevel-2 tocsection-6"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">5.1</span> <span class="toctext">Relevante Mindestdifferenz aufheben</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">5.2</span> <span class="toctext">Relevante Mindestdifferenz festlegen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Diagramme</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog t-Test bei einer Stichprobe zu &ouml;ffnen:</p>
+<ol><li>Klicken Sie bei einem aktiven Arbeitsblatt auf <b>Statistik: Hypothesentest: t-Test bei einer Stichprobe</b>.</li></ol>
+<p><i>Siehe auch:</i></p>
+<ul><li><a href="../../UserGuide/Category/One-Sample_t-Test.html" title="Category:One-Sample t-Test">Einf&uuml;hrung: t-Test bei einer Stichprobe</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="UserGuide:Algorithm (OneSampletTest)">Algorithmen: t-Test bei einer Stichprobe</a></li>
+<li><a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">Tutorial: Hypothesentests</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">Neuberechnen</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Neuberechnen</th>
+<td>
+<p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
+<ul><li><b>Kein</b></li>
+<li><b>Auto</b></li>
+<li><b>Manuell</b></li></ul>
+<p>Weitere Informationen finden Sie unter <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Analyseergebnisse neu berechnen</a>.</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<p>Der t-Test bei einer Stichprobe unterst&uuml;tzt mit <b>Roh</b> und <b>Zusammengefasste Daten</b> zwei Eingabedatenformen.</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Roh</th>
+<td>F&uuml;hren Sie den Test mit Hilfe einer Spalte/von Spalten mit Bereichsformat durch. Jede Spalte enth&auml;lt Antwortdaten von einer Stufe der Faktorvariablen.<p>Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></p>
+</td></tr>
+<tr>
+<th>Zusammengefasste Daten</th>
+<td>Zusammengefasste Daten sind Mittelwert, Standardabweichung und Stichprobenumfang, vorbereitet f&uuml;r Stichproben. Die Option unterst&uuml;tzt mehrere Zusammengefasste Daten.<p>Geben Sie die folgenden Zusammengefassten Daten durch Auswahl von Spalten aus dem Arbeitsblatt oder manuelle Eingabe im Dialog ein.</p>
+<ul><li><b>Stichprobenname</b></li></ul>
+<dl><dd>Legen Sie den Namen der Stichprobe fest. Sie k&ouml;nnen eine Spalte als Stichprobenname festlegen oder durch Leerzeichen getrennte Zeichenketten eingeben oder sie leer lassen.</dd></dl>
+<ul><li><b>Mittelwert</b></li></ul>
+<dl><dd>Legen Sie den Mittelwert der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben.</dd></dl>
+<ul><li><b>StdAbw.</b></li></ul>
+<dl><dd>Legen Sie die Standardabweichung der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben. (Die StdAbw. sollte gr&ouml;&szlig;er als 0 sein.)</dd></dl>
+<ul><li><b>Stichprobenumfang</b></li></ul>
+<dl><dd>Legen Sie die Gesamtanzahl der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben. (Der Stichprobenumfang sollte gr&ouml;&szlig;er als 0 sein.)</dd></dl>
+</td></tr></table>
+<h2><a name="t-Test_for_Mean"></a><span class="mw-headline">t-Test f&uuml;r Mittelwert</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Testmittelwert</th>
+<td>Der zu testende hypothetische Mittelwert Wenn Sie einen Wert eingeben, werden die Null- und Alternativhypothese entsprechend angepasst.</td></tr>
+<tr>
+<th>Nullhypothese</th>
+<td>Die zu testende Nullhypothese<p>(Mittelwert = Testmittelwert)</p>
+</td></tr>
+<tr>
+<th>Alternativhypothese</th>
+<td>Die Alternativhypothese<p>Optionen:</p><p><b>Mittelwert &lt;&gt;Testmittelwert</b></p>
+<dl><dd>Wird f&uuml;r beidseitigen Test verwendet. Diese Option testet, ob der Stichprobenmittelwert sich von dem hypothetischen Mittelwert unterscheidet.</dd></dl>
+<p><b>Mittelwert &gt;Testmittelwert</b></p>
+<dl><dd>Wird f&uuml;r den einseitigen Test nach oben verwendet. Diese Option testet, ob der Stichprobenmittelwert gr&ouml;&szlig;er ist als der hypothetische Mittelwert.</dd></dl>
+<p><b>Mittelwert &lt; Testmittelwert</b></p>
+<dl><dd>Wird f&uuml;r den einseitigen Test nach unten verwendet. Diese Option testet, ob der Stichprobenmittelwert kleiner ist als der hypothetische Mittelwert.</dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Legen Sie das Signifikanzniveau fest.</td></tr>
+<tr>
+<th>Effektgr&ouml;&szlig;e</th>
+<td>Berechnen Sie den Wert von Cohens d, um die Effektgr&ouml;&szlig;e zu zeigen, die der Differenzbetrag zwischen dem tats&auml;chlichen Mittelwert und dem Testmittelwert ist.</td></tr>
+<tr>
+<th>Kondenzintervall(e)</th>
+<td>Legen Sie fest, ob das/die Konfidenzintervall(e) f&uuml;r den Mittelwert berechnet wird/werden.<p>Berechnungseinzelheiten finden Sie unter <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="UserGuide:Algorithm (OneSampletTest)">Algorithmen (t-Test bei einer Stichprobe)</a>.</p>
+</td></tr>
+<tr>
+<th>Konfidenzniveau(s) in %</th>
+<td>Legen Sie mit Leerzeichen getrennte Konfidenzniveaus fest, (1-<img src="../images/The_OneSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex"/>)%. Diese Option ist verf&uuml;gbar, wenn <i>Konfidenzintervall(e)</i> aktiviert wird.</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz aufheben</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die <b>Relevante Mindestdifferenz</b> nicht festgelegt ist, ist diese Option verf&uuml;gbar.<p>Die Differenzen f&uuml;r die festlegten Trennsch&auml;rfen werden ausgegeben. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Trennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz festlegen</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Relevante Mindestdifferenz (MDI)</th>
+<td>Legen Sie die Mindestdifferenz vom Testmittelwert fest, an dem Sie interessiert sind. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.</td></tr>
+<tr>
+<th>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Geben Sie die Stichprobenumf&auml;nge f&uuml;r die festlegten Trennsch&auml;rfen aus. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Zieltrennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr>
+<tr>
+<th>Trennsch&auml;rfe basierend auf Testdaten</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe f&uuml;r den Stichprobenumfang der Testdaten. (Wahrscheinlichkeit, die Nullhypothese zur&uuml;ckzuweisen, wenn diese falsch ist)</p>
+</td></tr>
+<tr>
+<th>Hypothetische Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge. Wenn diese Option aktiviert ist, k&ouml;nnen Sie hypothetische Stichprobenumfang/Stichprobenumf&auml;nge im Feld unten festlegen. Sie wird eine entsprechende Kurve zur Trennsch&auml;rfekurve hinzuf&uuml;gen.</p>
+</td></tr>
+<tr>
+<th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
+<td>Wenn <b>Relevante Mindestdifferenz</b> und <b>Hypothetische Trennsch&auml;rfe</b> aktiviert ist, wird diese Option verf&uuml;gbar.<p>Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</p>
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Hinweis:</b> Wenn mehrere Daten eingegeben werden (sowohl <b>Roh</b> als auch <b>Zusammengefasste Daten</b>), wird der Bericht der <b>Trennsch&auml;rfe</b> nicht ausgegeben.</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">Diagramme</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Wahrscheinlichkeitsdiagramm</th>
+<td>Zeichnen Sie ein Wahrscheinlichkeitsdiagramm.</td></tr>
+<tr>
+<th>Boxdiagramm</th>
+<td>Sie zeichnen ein Boxdiagramm.<p><b>Hinweis:</b> Wenn in den Datens&auml;tzen Ausrei&szlig;er erkannt werden, wird eine Fu&szlig;note unter dem Boxdiagramm gezeigt, um Sie darauf hinzuweisen, sie zu untersuchen. Wenn Sie die Ausrei&szlig;er ausschlie&szlig;en m&ouml;chten, k&ouml;nnen Sie auf die dreieckige Schaltfl&auml;che am Ende der Fu&szlig;note klicken, um Ausrei&szlig;er zu markieren und neu zu berechnen.</p>
+</td></tr>
+<tr>
+<th>Histogramm</th>
+<td>Sie zeichnen ein Histogramm.</td></tr>
+<tr>
+<th>Diagramme des gleichen Typs in einem Graph anordnen</th>
+<td>Beachten Sie, dass Layer f&uuml;r Histogramme vertikal angeordnet werden. F&uuml;r Boxdiagramme werden Layer horizontal angeordnet.</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Hinweis:</b> Wenn die Eingabedatenform <b>Zusammengefassten Daten</b> ist, werden die obigen Zeichnungen nicht ausgegeben.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Ausgabe Ergebnisprotokoll</th>
+<td>
+<p>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</p>
+</td></tr>
+<tr>
+<th>Grafischer Zusammenfassungsbericht</th>
+<td>Erstellen Sie einen Zusammenfassungsbericht, einschlie&szlig;lich Balken f&uuml;r den p-Wert und die Effektgr&ouml;&szlig;e sowie ein Datenverteilungsdiagramm. Es werden auch die Ergebnistabellen an das Diagramm angeh&auml;ngt, um die statistischen Werte zu zeigen.<p>Die Fu&szlig;note nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p>
+</td></tr>
+<tr>
+<th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
+<td>Erstellen Sie einen grafischen Bericht der Trennsch&auml;rfeanalyse mit Trennsch&auml;rfekurven. Die Ausgabetabelle und Trennsch&auml;rfekurven entsprechen der Einstellung auf der Registerkarte <b>Trennsch&auml;rfeanalyse</b>.<ul><li>Wenn im Bearbeitungsfeld <b>Relevante Mindestdifferenz</b> kein Wert eingegeben wurde, wird nur die Trennsch&auml;rfekurve des aktuellen Stichprobenumfangs ausgegeben. Die Trennsch&auml;rfe bei 60 %, 70 %, 80 % und 90 % (Standardwert) wird gekennzeichnet, um die Differenz bei diesen Trennsch&auml;rfewerten zu zeigen.</li></ul>
+<ul><li>Wenn ein Differenzwert im Bearbeitungsfeld <b>Relevante Mindestdifferenz</b> festgelegt wurde, werden die Trennsch&auml;rfekurven ausgegeben: Die Trennsch&auml;rfekurven bei 60 %, 70 %, 80 % und 90 % und dem aktuellen Stichprobenumfang. Der Stichprobenumfang, mit dem die Mindestdifferenz entdeckt wird, ist dann aufgef&uuml;hrt.</li></ul>
+<p>Es wird eine Fu&szlig;note nach dem Trennsch&auml;rfekurvendiagramm hinzugef&uuml;gt, um die Diagnoseergebnisse der Trennsch&auml;rfeanalyse zu zeigen. Eine Trennsch&auml;rfe von 80 % wird gemeinhin als ausreichend betrachtet.</p>
+</td></tr>
+<tr>
+<th>Zeichnungsdaten ausgeben</th>
+<td>Legen Sie ein Arbeitsblatt f&uuml;r die Ausgabe der gezeichneten Daten fest (Origin erzeugt beim Erstellen von Zeichnungen tabellarische Daten). <br /><p>Dieses Element ist nur verf&uuml;gbar, wenn das <b>Eingabedatenformat</b> &quot;Roh&quot; ist.</p>
+</td></tr>
+<tr>
+<th>Ergebnisse ausgeben</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Hinweis</b>:<ul><li>Wenn die Eingabedatenform <b>Zusammengefassten Daten</b> ist, wird der <b>grafischer Zusammenfassungsbericht</b> nicht ausgegeben.</li>
+<li>Wenn mehrere Daten eingegeben werden (sowohl <b>Roh</b> als auch <b>Zusammengefassten Daten</b>), wird der <b>grafische Bericht der Trennsch&auml;rfeanalyse</b> nicht ausgegeben.</li>
+<li>Wenn die Eingabedatenform <b>Roh</b> ist, wird die Tabelle <b>Maskierte Daten</b> und <b>Schlechte Daten (fehlender Wert)</b> im Berichtsblatt angezeigt.</li></ul>
+</td></tr></table>
+
+
+
+
+
+
+
+    

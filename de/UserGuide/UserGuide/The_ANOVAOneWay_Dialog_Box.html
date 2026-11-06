@@ -6,14 +6,20 @@
 <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neuberechnen</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a><ul>
 <li class="toclevel-2 tocsection-4"><a href="#Descriptive_Statistics"><span class="tocnumber">3.1</span> <span class="toctext">Deskriptive Statistik</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Significance_Level"><span class="tocnumber">3.2</span> <span class="toctext">Signifikanzniveau</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Effect_Size"><span class="tocnumber">3.2</span> <span class="toctext">Effektgr&ouml;&szlig;e</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Significance_Level"><span class="tocnumber">3.3</span> <span class="toctext">Signifikanzniveau</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Equal_Variance_Assumed"><span class="tocnumber">3.4</span> <span class="toctext">Angenommene gleiche Varianz</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-6"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">Mittelwertevergleich</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">Test auf gleiche Varianz</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">Diagramme</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">Mittelwertevergleich</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">Test auf gleiche Varianz</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a><ul>
+<li class="toclevel-2 tocsection-11"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">6.1</span> <span class="toctext">Relevante Mindestdifferenz aufheben</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">6.2</span> <span class="toctext">Relevante Mindestdifferenz festlegen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Ausgabe</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">Diagramme</span></a></li>
 </ul>
 </div>
 
@@ -26,7 +32,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Neuberechnen</b></th>
+<th>Neuberechnen</th>
 <td>
 <p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
 <ul><li><b>Kein</b></li>
@@ -59,9 +65,15 @@
 </td></tr></table>
 <h3><a name="Descriptive_Statistics"></a><span class="mw-headline">Deskriptive Statistik</span></h3>
 <p>Aktivieren Sie diese Option, um Ergebnisse der deskriptiven Statistik im Ausgabebericht zu ber&uuml;cksichtigen.</p>
+<h3><a name="Effect_Size"></a><span class="mw-headline">Effektgr&ouml;&szlig;e</span></h3>
+<p>Legen Sie fest, ob die Tabelle der <b>Effektgr&ouml;&szlig;e</b> im Berichtsblatt ausgegeben wird. In der Berichtstabelle werden die Kennzahlen der Effektgr&ouml;&szlig;e f&uuml;r die einfache ANOVA ausgegeben: <b>Eta-Quadrat</b>, <b>Cohens f</b> und <b>Omega-Quadrat</b>. Sie sind alle Statistiken der standardisierten Effektgr&ouml;&szlig;e, die bei der ANOVA verwendet werden, um den Betrag der Gruppendifferenzen zu quantifizieren.</p><p><b>Eta-Quadrat</b> und <b>Omega-Quadrat</b> sind durch Varianz erkl&auml;rte Kennzahlen, w&auml;hrend <b>Cohens f</b> eine Kennzahl f&uuml;r die standardisierte Mittelwertdifferenz ist.</p>
 <h3><a name="Significance_Level"></a><span class="mw-headline">Signifikanzniveau</span></h3>
 <p>Legen Sie das Signifikanzniveau der einfachen ANOVA fest.</p>
-<h2><a name="Means_Comparison"></a><span class="mw-headline">Mittelwertvergleich</span></h2>
+<h3><a name="Equal_Variance_Assumed"></a><span class="mw-headline">Angenommene gleiche Varianz</span></h3>
+<p>Diese Option ist standardm&auml;&szlig;ig aktiviert. Sie hat Auswirkungen auf die Methoden, die auf der Registerkarte <b>Mittelwertevergleich</b> verf&uuml;gbar sind.</p><p>W&auml;hrend eine Standard-ANOVA annimmt, dass alle Vergleichsgruppen eine gleiche Varianz haben, ist die <b>ANOVA nach Welch</b> eine Alternative zur einfachen Standard-ANOVA, f&uuml;r Situationen, in denen die Annahme der Homogenit&auml;t der Varianzen nicht erf&uuml;llt ist. Es nutzt gewichtete Gruppenvarianzen zur Anpassung der Freiheitsgrade, wodurch die Typ-I-Fehlerrate stabil bleibt, selbst wenn sich die Varianzen und Stichprobenumf&auml;nge zwischen den Gruppen signifikant unterscheiden.</p>
+<ul><li>Wenn diese Option ausgew&auml;hlt ist, wird die Berichtstabelle <b>ANOVA gesamt</b> ausgegeben. Sie stellt zudem die Mittelwertevergleichsmethoden <b>Tukey</b>, <b>Dunnett</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fishers LSD</b>, <b>Scheffe</b>, <b>Holm-Bonferroni</b> und <b>Holm-Sidak</b> zur Verf&uuml;gung.</li></ul>
+<ul><li>Wenn diese Option deaktiviert ist, wird die Berichtstabelle <b>Welch-Test</b> ausgegeben. Die Mittelwertevergleichsmethode <b>Games-Howell</b> ist verf&uuml;gbar. Au&szlig;erdem basiert der p-Wert f&uuml;r das <b>Zusammenfassungsdiagramm</b> des Ergebnisblatts auf dem p der <b>ANOVA nach Welch</b> und die <b>Vergleichsintervalle des Mittelwerts</b> basieren auf der <b>Games-Howell</b>-Methode.</li></ul>
+<h2><a name="Means_Comparison"></a><span class="mw-headline">Mittelwertevergleich</span></h2>
 <p>W&auml;hlen Sie Methoden f&uuml;r den paarweisen Mittelwertevergleich im Nachhinein:</p>
 <table class="dialogcontroltable">
 
@@ -69,10 +81,24 @@
 <th>Signifikanzniveau</th>
 <td>Legen Sie das Signifikanzniveau des paarweisen Mittelwertevergleichs fest.</td></tr>
 <tr>
+<th>Vergleichen</th>
+<td>
+<ul><li><b>Alle Mittelwertpaare</b></li></ul>
+<dl><dd>Vergleichen Sie jede Gruppe mit allen anderen Gruppen.</dd></dl>
+<ul><li><b>Jeder Mittelwert mit einem Kontrollwert</b></li></ul>
+<dl><dd>W&auml;hlt eine spezifische Gruppe als Referenzstandard (Kontrollstufe), und vergleicht alle anderen Gruppen strikt gegen diese spezifische Gruppe. Die nicht festgelegten Gruppen werden nicht mit einer anderen verglichen.</dd></dl>
+</td></tr>
+<tr>
+<th>Kontrollstufe</th>
+<td>Legen Sie die Kontrollstufe f&uuml;r den Mittelwertevergleich fest. Diese Option ist verf&uuml;gbar, wenn <b>Jeder Mittelwert mit einem Kontrollwert</b> unter <b>Vergleichen</b> ausgew&auml;hlt ist.<p>Es gibt zum Beispiel drei Stufen (Gruppen) <i><b>A</b></i>, <i><b>B</b></i> und <i><b>C</b></i> in der Stichprobe. Durch Festlegen der Kontrollstufe auf <i><b>A</b></i>, werden <i><b>B</b></i> und <i><b>C</b></i> jeweils mit <i><b>A</b></i> verglichen, aber <i><b>B</b></i> und <i><b>C</b></i> werden nicht miteinander verglichen.</p>
+</td></tr>
+<tr>
 <th>Tukey</th>
 <td rowspan="8">
-<p>Verschiedene Methoden f&uuml;r den paarweisen Mittelwertvergleich (Weitere Informationen finden Sie unter <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithmen</a>.)</p>
+<p>Verschiedene Methoden f&uuml;r den Mittelwertevergleich.</p><p>Wenn <b>Angenommene gleiche Varianz</b> auf der Registerkarte <b>Eingabe</b> ausgew&auml;hlt ist, werden diese Methoden f&uuml;r den paarweisen Mittelwertevergleich zur Verf&uuml;gung gestellt.</p><p>Falls <b>Alle Mittelwertpaare</b> unter <b>Vergleichen</b> ausgew&auml;hlt ist, wird die <b>Tukey</b>-Methode zur Verf&uuml;gung gestellt. Falls <b>Jeder Mittelwert mit einem Kontrollwert</b> unter <b>Vergleichen</b> ausgew&auml;hlt ist, wird die <b>Dunnett</b>-Methode zur Verf&uuml;gung gestellt. Weitere Methoden sind bei beiden Optionen verf&uuml;gbar.</p><p>(Weitere Informationen finden Sie unter <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithmen</a>.)</p>
 </td></tr>
+<tr>
+<th>Dunnett</th></tr>
 <tr>
 <th>Bonferroni</th></tr>
 <tr>
@@ -82,13 +108,15 @@
 <tr>
 <th>Scheff&eacute;</th></tr>
 <tr>
-<th>Dunnett</th></tr>
-<tr>
 <th>Holm-Bonferroni</th></tr>
 <tr>
 <th>Holm-Sidak</th></tr>
 <tr>
-<th>Tabelle der Gruppierungsbuchstaben</th>
+<th>Games-Howell</th>
+<td>Wenn <b>Angenommene gleiche Varianz</b> auf der Registerkarte <b>Eingabe</b> deaktiviert ist, wird die <b>Game-Howell</b>-Methode f&uuml;r den paarweisen Mittelwertevergleich zur Verf&uuml;gung gestellt.<p>(Weitere Informationen finden Sie unter <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithmen</a>.)</p>
+</td></tr>
+<tr>
+<th>Tabelle der Gruppenbuchstaben</th>
 <td>Die Differenz des Mittelwerts wird mit Buchstaben gezeigt. Der gleiche Buchstabe bedeutet, dass keine signifikante Differenz besteht. Ein unterschiedlicher Buchstabe bedeutet, dass es eine signifikante Differenz zwischen den zwei Gruppen gibt.</td></tr></table>
 <h2><a name="Tests_for_Equal_Variance"></a><span class="mw-headline">Test auf gleiche Varianz</span></h2>
 <p>W&auml;hlen Sie Testmethoden zum Testen der Homogenit&auml;t der Varianz.</p>
@@ -107,25 +135,68 @@
 <tr>
 <th>Brown-Forsythe</th></tr>
 </table>
-<h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Analyse der Trennsch&auml;rfe</span></h2>
 <p>W&auml;hlen Sie diese Option, um die <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Power_Analysis" title="UserGuide:One Way ANOVA Algorithms">Trennsch&auml;rfeanalyse</a> durchzuf&uuml;hren:</p>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz aufheben</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Tats&auml;chliche Trennsch&auml;rfe</th>
-<td>Legen Sie fest, ob ein Test der tats&auml;chlichen Trennsch&auml;rfe durchgef&uuml;hrt wird.</td></tr>
+<th>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die <b>Relevante Mindestdifferenz</b> nicht festgelegt ist, ist diese Option verf&uuml;gbar.<p>Die Differenzen f&uuml;r die festlegten Trennsch&auml;rfen werden ausgegeben. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Trennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz festlegen</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Relevante Mindestdifferenz</th>
+<td>Legen Sie die Mindestdifferenz fest, f&uuml;r die Sie sich interessieren. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.</td></tr>
+<tr>
+<th>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Geben Sie die Stichprobenumf&auml;nge f&uuml;r die festlegten Trennsch&auml;rfen aus. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve. Wenn die Option aktiviert ist, wird der Standardwert der Trennsch&auml;rfe verwendet.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Zieltrennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr>
+<tr>
+<th>Trennsch&auml;rfe basierend auf Testdaten</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe f&uuml;r den Stichprobenumfang der Testdaten. (Wahrscheinlichkeit, die Nullhypothese zur&uuml;ckzuweisen, wenn diese falsch ist)</p>
+</td></tr>
 <tr>
 <th>Hypothetische Trennsch&auml;rfe</th>
-<td>Bestimmt, ob ein Test der hypothetischen Trennsch&auml;rfe durchgef&uuml;hrt wird.</td></tr>
-<tr>
-<th>Signifikanzniveau</th>
-<td>Legen Sie das Signifikanzniveau f&uuml;r den Test der hypothetischen Trennsch&auml;rfe fest.</td></tr>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge. Wenn diese Option aktiviert ist, wird die entsprechende Kurve zur Trennsch&auml;rfekurve hinzugef&uuml;gt.</p>
+</td></tr>
 <tr>
 <th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
-<td>Legen Sie den hypothetischen Stichprobenumfang fest, indem Sie jeden Eintrag durch ein Leerzeichen trennen.</td></tr></table>
+<td>Wenn <b>Relevante Mindestdifferenz </b> und <b>Hypothetische Trennsch&auml;rfe</b> aktiviert ist, wird diese Option verf&uuml;gbar.<p>Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</p>
+</td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
 <table class="dialogcontroltable">
 
+<tr>
+<th>Grafischer Zusammenfassungsbericht</th>
+<td>Legen Sie fest, ob der grafische Zusammenfassungsbericht angezeigt werden soll.</td></tr>
+<tr>
+<th>Mittelwertvergleichsmethode, die im Bericht verwendet wurde</th>
+<td>Wenn <b>Grafischer Zusammenfassungsbericht</b> und <b>Angenommene gleiche Varianz</b> (auf der Registerkarte <b>Eingabe</b>) aktiviert ist, ist diese Option verf&uuml;gbar. W&auml;hlen Sie die Methode f&uuml;r die Vergleichsintervalle der Mittelwerte aus.<ul><li>Tukey / Dunnett</li>
+<li>Bonferroni</li>
+<li>Dunn-Sidak</li>
+<li>Fisher LSD</li>
+<li>Scheff&eacute;</li></ul>
+<p>Wenn der <b>grafische Zusammenfassungsbericht</b> aktiviert ist, wird diese Option nicht gezeigt. Die Methode f&uuml;r die Vergleichsintervalle der Mittelwerte ist <b>Games-Howell</b>.</p>
+</td></tr>
+<tr>
+<th>Grafischer Diagnosebericht</th>
+<td>Legen Sie fest, ob der Diagnosebericht angezeigt werden soll.<p>Wenn der grafische Zusammenfassungsbericht angezeigt wird, wird er beim Diagrammknoten nach dem Zusammenfassungsbericht gezeigt. Falls der grafische Zusammenfassungsbericht nicht angezeigt wird, wird er beim ersten Diagrammknoten gezeigt.</p><p>Der Stichprobenumfang hat Auswirkungen auf den Diagrammtyp der <b>Datenverteilung</b> im linken Bedienfeld.</p>
+<ul><li>Wenn die Stichprobe eines Faktors &gt;= 30, werden Histogramm + Intervalldiagramme gezeigt.</li>
+<li>Wenn die Stichprobe eines Faktors &lt; 30, werden Punkt- + Intervalldiagramme gezeigt.</li>
+<li>Wenn die Anzahl der Faktoren &gt; 6, werden nur Histogramm oder Punktdiagramme gezeigt, die Intervalldiagramme werden verborgen.</li></ul>
+</td></tr>
+<tr>
+<th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
+<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.</td></tr>
 <tr>
 <th>Diagrammanordnung</th>
 <td>
@@ -168,7 +239,7 @@
 </td></tr>
 <tr>
 <th>Optionale Berichtstabellen</th>
-<td>Legen Sie fest, ob zus&auml;tzliche Tabellen in das Berichtsblatt eingef&uuml;gt werden sollen.<p><b>Notizen</b></p>
+<td>Legen Sie fest, ob zus&auml;tzliche Tabellen in das Berichtsblatt eingef&uuml;gt werden sollen.<p><b>Hinweise</b></p>
 <dl><dd>Notiztabelle</dd></dl>
 <p><b>Eingabedaten</b></p>
 <dl><dd>Tabelle f&uuml;r Eingabedaten</dd></dl>

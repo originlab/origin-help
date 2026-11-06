@@ -1,0 +1,64 @@
+﻿<h1 class="firstHeading">Der Dialog Chi-Quadrat-Test auf Anpassungsg&uuml;te</h1><p class='urlname' style='display: none'>Chi-square-Test-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input_Data_Form"><span class="tocnumber">2</span> <span class="toctext">Form der Eingabedaten</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Significance_Level"><span class="tocnumber">3</span> <span class="toctext">Signifikanzniveau</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Reset_Table"><span class="tocnumber">4</span> <span class="toctext">Tabelle zur&uuml;cksetzen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Table"><span class="tocnumber">5</span> <span class="toctext">Tabelle</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog f&uuml;r den Chi-Quadrat-Test auf Anpassungsg&uuml;te zu &ouml;ffnen:</p>
+<ol><li>W&auml;hlen Sie bei aktivem Arbeitsblatt <b>Statistik: Hypothesentest: Chi-Quadrat-Test auf Anpassungsg&uuml;te</b>.</li></ol>
+<p><br /> <i><b>Siehe auch:</b></i></p>
+<ul><li><a href="../../UserGuide/Category/Chi-square_Goodness-of-Fit_Test_(Pro_Only).html" title="Category:Chi-square Goodness-of-Fit Test (Pro Only)">Einf&uuml;hrung in Chi-Quadrat-Test der Anpassungsg&uuml;te</a></li></ul>
+<p><br /></p>
+<h2><a name="Input_Data_Form"></a><span class="mw-headline">Eingabedatenform</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Roh</th>
+<td>F&uuml;hren Sie den Test mit Hilfe der Rohdatenspalte f&uuml;r <b>Kategorie</b> durch.<p>Wenn Sie diese Option ausw&auml;hlen, kann die Spalte <b>Beobachtete Anzahl</b> in der folgenden Tabelle nicht bearbeitet werden. Diese Option ist f&uuml;r den aus der Arbeitsblattspalte importierten Datensatz verf&uuml;gbar. W&auml;hlen Sie eine Rohdatenspalte f&uuml;r <b>Kategorie</b>. Der <b>beobachtete</b> Wert wird automatisch gez&auml;hlt und in die Tabelle eingegeben. Sie k&ouml;nnen dann die <b>Erwarteten</b> Daten benutzerdefiniert anpassen.</p>
+</td></tr>
+<tr>
+<th>Zusammengefasst</th>
+<td>F&uuml;hren Sie den Test mit Hilfe der zusammengefassten Daten f&uuml;r die <b>beobachtete Anzahl</b> und <b>Erwarteten</b> Daten durch.</td></tr></table>
+<h2><a name="Significance_Level"></a><span class="mw-headline">Signifikanzniveau</span></h2>
+<p>Legen Sie das Signifikanzniveau f&uuml;r den Chi-Quadrat-Test auf Anpassungsg&uuml;te fest.</p>
+<h2><a name="Reset_Table"></a><span class="mw-headline">Tabelle zur&uuml;cksetzen</span></h2>
+<p>L&ouml;schen Sie den gesamten Inhalt in der folgenden Tabelle.</p>
+<h2><a name="Table"></a><span class="mw-headline">Tabelle</span></h2>
+<p>Geben Sie den Datensatz durch diese zwei zwei Methoden in die Tabelle ein:</p>
+<ul><li>Geben Sie die Daten direkt in die Tabelle ein.</li>
+<li>Klicken Sie auf die Schaltfl&auml;che <a  class="image"><img alt="Select Column in Worksheet.png" src="../images/Chi-square_Goodness-of-Fit_Test_Dialog_Box/Select_Column_in_Worksheet.png" width="20"  /></a> im Header, um einen Spaltendatensatz im Arbeitsblatt auszuw&auml;hlen und zu importieren.</li></ul>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Kategorie</th>
+<td>Legen Sie den Namen der getesteten Gruppen (Zeilen) fest.</td></tr>
+<tr>
+<th>Beobachtete Anzahl</th>
+<td>Wenn die <b>Eingabedatenform</b> <b>Zusammengefasst</b> ist, kann diese Spalte bearbeitet werden.<p>Legen Sie die tats&auml;chliche Anzahl des beobachteten Werts f&uuml;r jede Kategorie fest.</p>
+</td></tr>
+<tr>
+<th>Erwartet</th>
+<td>Legen Sie den erwarteten Wert f&uuml;r jede Kategorie fest.<p>Klicken Sie auf die Auswahlliste unter <b>Erwartet</b> im Spaltenheader. Sie k&ouml;nnen den Typ der erwarteten Daten &auml;ndern. Die erwarteten Daten sollte einem der folgenden Typen entsprechen:</p>
+<ul><li><b>Gleicher Anteil (1/k)</b></li></ul>
+<dl><dd>Wenn Sie diese Option ausw&auml;hlen, muss der erwartete Wert nicht eingegeben werden. Er wird automatisch berechnet mit 1 geteilt durch die Anzahl der zu testenden Kategorien (Zeilen).</dd></dl>
+<ul><li><b>Anteil (0-1)</b></li></ul>
+<dl><dd>Die Summe der erwarteten Fraktion muss 1 ein.</dd></dl>
+<ul><li><b>Anzahlen</b></li></ul>
+<dl><dd>Die Gesamtheit der beobachteten Anzahl und der erwarteten Anzahl muss gleich sein.</dd></dl>
+<ul><li><b>Prozentanteil (%)</b></li></ul>
+<dl><dd>Die Summe der erwarteten Prozentanteile muss gleich 100 ein.</dd></dl>
+</td></tr></table>
+
+
+
+
+
+
+
+    

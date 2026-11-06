@@ -11,7 +11,6 @@
 <li class="toclevel-1 tocsection-4"><a href="#Import_Group"><span class="tocnumber">3</span> <span class="toctext">Gruppe Importieren</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Print_Group"><span class="tocnumber">4</span> <span class="toctext">Gruppe Drucken</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Additional_Controls"><span class="tocnumber">5</span> <span class="toctext">Zus&auml;tzliche Bedienelemente</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#First_Day_of_Week"><span class="tocnumber">6</span> <span class="toctext">Erster Wochentag</span></a></li>
 </ul>
 </div>
 
@@ -239,21 +238,9 @@
 <p>Dieses Kontrollk&auml;stchen steuert, ob alle Spalten in allen neuen Arbeitsbl&auml;ttern vom Typ Numerisch oder Text &amp; Numerisch (Standard) sind. Wenn Sie planen, Ihr Origin-Projekt mit einem Kollegen, der <b>Origin 4.1</b> verwendet, zu teilen, sollten Sie dieses Kontrollk&auml;stchen aktivieren. Tun Sie dies nicht, kann es zu einem Datenverlust kommen, wenn dieses Projekt unter Origin 4.1 ge&ouml;ffnet wird.</p>
 </td></tr>
 <tr>
-<th>Symbolleisten-Platzhalter verwenden</th>
-<td>
-<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um einen Symbolleisten-Platzhalter unter der Men&uuml;leiste anzuzeigen. Der Symbolleisten-Platzhalter stellt sicher, dass der Symbolleistenbereich bei einer festen Breite bleibt, wenn das aktive Fenster gewechselt wird. Die H&ouml;he des Symbolleisten-Platzhalters wird durch die maximale H&ouml;he festgelegt, die ben&ouml;tigt wird, um alle ausgew&auml;hlten Symbolleisten f&uuml;r jedes der Fenster innerhalb dieses Projekts anzuzeigen (Um den Symbolleisten-Platzhalter zu verbergen, klicken Sie mit der rechten Maustaste in den Bereich des Symbolleisten-Platzhalters und w&auml;hlen Sie im Kontextmen&uuml; <b>Symbolleisten-Platzhalter verbergen </b>aus).</p>
-</td></tr>
-<tr>
 <th>Langnamen verwenden, wenn verf&uuml;gbar</th>
 <td>
 <p>Wenn dieses Kontrollk&auml;stchen aktiviert ist, zeigt Origin Mappen- und Spaltenlangnamen, wenn diese definiert sind, in der Diagrammliste des Dialogs Diagrammeinstellungen (<b>Grafik: Setup Diagramm</b>), in der Datenliste unten im Men&uuml; <b>Daten</b> und im linken Bedienfeld des Dialogs Details Zeichnung.</p>
-</td></tr>
-<tr>
-<th>Bitmaps in Men&uuml;s zeigen</th>
-<td>
-<p>Dieses Kontrollk&auml;stchen steuert, ob Bitmaps neben den Men&uuml;befehlen angezeigt werden sollen oder nicht. Men&uuml;befehle, die Zugang zu Symbolleistenschaltfl&auml;chen haben, besitzen Bitmaps, die links neben dem Befehl angezeigt werden.</p>
-<table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/The_(Options)_Miscellaneous_Tab/Tip_icon.png" width="57"  border="0" /></td><td><p>Ab <b>Origin 2018b</b> k&ouml;nnen Sie die Gr&ouml;&szlig;e der Men&uuml;symbole f&uuml;r <b>Zeichnen</b> mit Hilfe der LabTalk-Systemvariablen <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a> &auml;ndern. Um zu erfahren, wie Sie den Wert einer Systemvariable &auml;ndern, lesen Sie bitte <a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">Origin mit Hilfe von Systemvariablen benutzerdefiniert anpassen</a>.</p></td></tr></table>
 </td></tr>
 <tr>
 <th>Automatisches Anpassen des Seiten-Kurznamens an den Langnamen</th>
@@ -261,13 +248,40 @@
 <p>Wenn dieses Kontrollk&auml;stchen aktiviert ist, wird Origin automatisch den Kurznamen der Seite wie zum Beispiel eine Arbeitsmappe &auml;ndern, um ihn dem Langnamen anzupassen. Der Langname k&ouml;nnte abgeschnitten und spezifische Zeichen innerhalb des Langnamens entfernt werden, um einen g&uuml;ltigen, &auml;quivalenten Kurznamen zu erstellen.</p>
 </td></tr>
 <tr>
+<th>Symbolleisten-Platzhalter verwenden</th>
+<td>
+<p>Aktivieren Sie dieses Kontrollk&auml;stchen, um einen Symbolleisten-Platzhalter unter der Men&uuml;leiste anzuzeigen. Der Symbolleisten-Platzhalter stellt sicher, dass der Symbolleistenbereich bei einer festen Breite bleibt, wenn das aktive Fenster gewechselt wird. Die H&ouml;he des Symbolleisten-Platzhalters wird durch die maximale H&ouml;he festgelegt, die ben&ouml;tigt wird, um alle ausgew&auml;hlten Symbolleisten f&uuml;r jedes der Fenster innerhalb dieses Projekts anzuzeigen (Um den Symbolleisten-Platzhalter zu verbergen, klicken Sie mit der rechten Maustaste in den Bereich des Symbolleisten-Platzhalters und w&auml;hlen Sie im Kontextmen&uuml; <b>Symbolleisten-Platzhalter verbergen </b>aus).</p>
+</td></tr>
+<tr>
+<th>Bitmaps in Men&uuml;s zeigen</th>
+<td>
+<p>Dieses Kontrollk&auml;stchen steuert, ob Bitmaps neben den Men&uuml;befehlen angezeigt werden sollen oder nicht. Men&uuml;befehle, die Zugang zu Symbolleistenschaltfl&auml;chen haben, besitzen Bitmaps, die links neben dem Befehl angezeigt werden.</p><p><b>Hinweis</b>:</p>
+<ul><li>Ab <b>Origin 2018b</b> k&ouml;nnen Sie die Gr&ouml;&szlig;e der Men&uuml;symbole f&uuml;r <b>Zeichnen</b> mit Hilfe der LabTalk-Systemvariablen <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a> &auml;ndern. Um zu erfahren, wie Sie den Wert einer Systemvariable &auml;ndern, lesen Sie bitte <a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">Origin mit Hilfe von Systemvariablen benutzerdefiniert anpassen</a>.</li></ul>
+</td></tr>
+<tr>
 <th>Minimierbare Men&uuml;s aktivieren</th>
 <td>
 <p>Haupt- und Kontextmen&uuml;s in Origin sind standardm&auml;&szlig;ig minimiert. Verwenden Sie das Kontrollk&auml;stchen, um die Option ein- und auszuschalten. Weitere Informationen zu minimierbaren Men&uuml;s erfahren Sie in der entsprechenden <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_customize_the_collapsible_menu.html">FAQ</a>.</p>
-</td></tr></table>
-<h2><a name="First_Day_of_Week"></a><span class="mw-headline">Erster Wochentag</span></h2>
+</td></tr>
+<tr>
+<th>Erster Wochentag</th>
+<td>
 <p>Legen Sie den ersten Tag einer Woche fest, wobei das Datumsformat <i>yyyy</i>-<b>W</b><i>ww</i>-<i>D</i> verwendet wird.</p>
-<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="490"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="484"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>Aktion der Enter-Taste &auml;ndern beim Bewegen der Auswahl durch Blatt</th>
+<td>
+<p>Wenn Sie die Taste <b>Enter</b> in einer Arbeitsblattzelle dr&uuml;cken, bewegt sich die Auswahl standardm&auml;&szlig;ig zur n&auml;chsten Zelle unter der aktuellen Zelle. Aktivieren Sie dieses Kontrollk&auml;stchen, um die Richtung zu &auml;ndern, in der sich die Auswahl durch Dr&uuml;cken von <b>Enter</b> bewegt.</p>
+<dl><dd><a  class="image"><img alt="Options Override Enter Key Direction.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_Override_Enter_Key_Direction.png" width="154"  /></a></dd></dl>
+<p><b>Kein</b> bedeutet, dass sich die Auswahl nicht bewegt.</p><p><b>Hinweis</b>:</p>
+<ul><li>Sie k&ouml;nnen <b>Shift</b> + <b>Enter</b> dr&uuml;cken, um die Auswahl in die entgegengesetzte Richtung zu bewegen. Wenn sich durch <b>Enter</b> die Auswahl beispielsweise nach unten bewegt, bewegt <b>Shift</b> + <b>Enter</b> sie nach oben.</li>
+<li>Falls Teilspalten (Replikationen) vorhanden sind, wird die Auswahl in einer <a href="../../UserGuide/UserGuide/Data_Table.html" title="UserGuide:Data Table">Datentabelle</a> durch Dr&uuml;cken von <b>Enter</b> standardm&auml;&szlig;ig zur n&auml;chsten Teilspalte auf der rechten Seite bewegt.</li></ul>
+</td></tr></table>
+
+
+
+
 
 
 

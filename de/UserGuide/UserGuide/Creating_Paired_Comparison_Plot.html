@@ -1,0 +1,99 @@
+﻿<h1 class="firstHeading">Diagramm f&uuml;r mehrfache Vergleiche erstellen</h1><p class='urlname' style='display: none'>Create-MCP</p>
+<p>Das Diagramm f&uuml;r mehrfache Vergleiche ist eine Methode der Datenvisualisierung und -analyse, die verwendet wird, um Differenzen, Rangfolgen oder statistische Signifikanz zwischen Gruppe oder Elementpaaren zu zeigen.</p>
+<dl><dd><a  class="image"><img alt="Creating Paired Comparison Plot 01.png" src="../images/Creating_Paired_Comparison_Plot/Creating_Paired_Comparison_Plot_01.png" width="574"  /></a></dd></dl>
+<p>Bei vielen statistischen Werkzeugen k&ouml;nnen Sie nach Durchf&uuml;hren der Analyse zum Berichtsblatt gehen und auf das Symbol <b>Diagramm f&uuml;r mehrfache Vergleiche erstellen</b> <a  class="image"><img alt="Button PCP.png" src="../images/Creating_Paired_Comparison_Plot/Button_PCP.png" width="18"  /></a> klicken, um den Dialog <b>Diagramm f&uuml;r mehrfache Vergleiche</b> zu &ouml;ffnen und das Diagramm f&uuml;r mehrfache Vergleiche zu erstellen.</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 02.png" src="../images/Creating_Paired_Comparison_Plot/750px-Creating_Paired_Comparison_Plot_02.png" width="750"   /></a></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Dialog_Controls"><span class="tocnumber">1</span> <span class="toctext">Bedienelemente der Dialoge</span></a><ul>
+<li class="toclevel-2 tocsection-2"><a href="#Options_tab"><span class="tocnumber">1.1</span> <span class="toctext">Registerkarte Optionen</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Comparisons_to_Display_tab"><span class="tocnumber">1.2</span> <span class="toctext">Registerkarte Anzuzeigende Vergleiche</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Output_tab"><span class="tocnumber">1.3</span> <span class="toctext">Registerkarte Ausgabe</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Supported_in_these_Statistical_Tools"><span class="tocnumber">2</span> <span class="toctext">In diesen statistischen Werkzeugen unterst&uuml;tzt</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Dialog_Controls"></a><span class="mw-headline">Bedienelemente des Dialogs</span></h2>
+<h3><a name="Options_tab"></a><span class="mw-headline">Registerkarte Optionen</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Mittelwertevergleichsmethoden</th>
+<td>W&auml;hlen Sie eine Methode f&uuml;r den Mittelwertevergleich. Origin bietet sieben verschiedene Methoden, um Mittelwerte zu vergleichen. Sie umfassen Tukey, Bonferroni, Dunn-Sidak, Fisher LSD, Scheffe, Holm-Bonferroni und Holm-Sidak. Einzelheiten finden Sie auf <a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html#Selecting_Mean_Comparison_Methods" title="Category:One, Two, and Three Way ANOVA">dieser Seite</a>.</td></tr>
+<tr>
+<th>Diagrammtyp</th>
+<td>W&auml;hlen Sie einen Diagrammtyp f&uuml;r das paarweise Vergleichsdiagramm, um die Gruppen oder Teilgruppen zu zeigen.<ul><li><b>Balken</b></li>
+<li><b>Boxdiagramm</b></li>
+<li><b>Violine</b></li>
+<li><b>Punkt</b></li>
+<li><b>Punkt-Linien</b></li>
+<li><b>Einzelpunkte mit Verbindungslinie</b></li></ul>
+</td></tr>
+<tr>
+<th>Einzelne Punkte zeigen</th>
+<td>Wenn Sie <b>Balken</b> oder <b>Box</b> als <b>Diagrammtyp</b> w&auml;hlen, k&ouml;nnen Sie entscheiden, ob die Einzelwertdiagramme als Balken oder Boxen gezeigt werden. F&uuml;r die anderen Diagrammtypen werden die Einzelwertdiagramme standardm&auml;&szlig;ig gezeigt.</td></tr>
+<tr>
+<th>Fehlerbalken</th>
+<td>F&uuml;r die Diagrammtypen <b>Balken</b>, <b>Box</b>, <b>Punkt</b> und <b>Punkt-Linie</b> k&ouml;nnen Sie w&auml;hlen, ob Fehlerbalken zum Diagramm hinzugef&uuml;gt werden sollen und welcher statistische Wert als Fehlerbalken gezeigt wird.</td></tr>
+<tr>
+<th>Erster Faktor</th>
+<td>Diese Option wird nur im Bericht der zweifachen ANOVA und der zweifachen ANOVA bei wiederholten Messungen mit Wechselwirkungen gezeigt. Nachdem zwei Faktoren als Eingabe ausgew&auml;hlt wurden, k&ouml;nnen Sie festlegen, wie die paarweisen Vergleiche durchgef&uuml;hrt werden sollen: <b>&Auml;u&szlig;ere</b> werden die Elemente &uuml;ber den erste Faktor hinweg verglichen, w&auml;hrend <b>Innere</b> die Elemente innerhalb des ersten Faktors vergleicht.</td></tr>
+<tr>
+<th>Signifikanzmarkierung</th>
+<td>Legen Sie fest, wie die statistische Signifikanz im Diagramm gekennzeichnet wird:<ul><li><b>Sternchen mit Klammer</b>: Sternchen und Klammern werden oberhalb der Balken, die die Gruppen vergleichen, gezeigt. Bei Sternchen folgen Sie folgenden Regeln:<dl><dd>n.s. p ≥ 0,05 ✱ p ≤ 0,05 ✱✱ p ≤ 0,01 ✱✱✱ p ≤ 0,001 ✱✱✱✱ p ≤ 0,0001</dd></dl></li>
+<li><b>p-Wert mit Klammern</b>: Die p-Werte werden direkt auf den Balken gezeigt, die Gruppen vergleichen.</li>
+<li><b>Buchstaben oben</b>: Es werden nur die Buchstaben auf den Balken gezeigt.</li></ul>
+</td></tr>
+<tr>
+<th>Niveau f&uuml;r p-Wert</th>
+<td>Bei gew&auml;hltem <b>Sternchen mit Klammern</b> k&ouml;nnen Sie die Niveaus (Schwellenwerte) f&uuml;r p-Werte w&auml;hlen.</td></tr>
+<tr>
+<th>Verbergen, falls p-Wert gr&ouml;&szlig;er als</th>
+<td>Verbergen Sie die Signifikanzmarkierung der Balken, wenn die p-Werte gr&ouml;&szlig;er als ein Schwellenwert sind.</td></tr>
+<tr>
+<th>Schriftgr&ouml;&szlig;e der Beschriftung</th>
+<td>Legen Sie die Schriftgr&ouml;&szlig;e der Signifikanzbeschriftungen fest.</td></tr>
+<tr>
+<th>Klammerntyp</th>
+<td>W&auml;hlen Sie den Klammertyp der Signifikanzmarkierungen.<ul><li><b>Verl&auml;ngerte Schenkel</b>: Es werden eckige Klammern mit Schenkeln, die bis zur Datenzeichnung reichen, hinzugef&uuml;gt.</li>
+<li><b>Schenkel mit fester L&auml;nge</b>: Es werden eckige Klammern mit Schenkeln einer festen L&auml;nge (15 Punkte) hinzugef&uuml;gt, die nicht bis zur Zeichnung reichen.</li>
+<li><b>Linie</b>: Es werden nur Linien ohne Endkappen gezeigt.</li>
+<li><b>Linie mit Endkappen</b>: Es wird eine Linie mit Endkappen gezeigt.</li></ul>
+</td></tr>
+<tr>
+<th>Liniendicke</th>
+<td>Legen Sie die Liniendicke f&uuml;r die Klammern fest.</td></tr>
+<tr>
+<th>Klammern au&szlig;erhalb des Zeichnungsbereichs zulassen</th>
+<td>Legen Sie fest, ob die Klammern au&szlig;erhalb des Rahmens des Diagrammlayers gezeigt werden soll.</td></tr></table>
+<h3><a name="Comparisons_to_Display_tab"></a><span class="mw-headline">Registerkarte Anzuzeigende Vergleiche</span></h3>
+<p>W&auml;hlen Sie die Vergleichswechselwirkungen, um die Klammern zu zeigen.</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 05.png" src="../images/Creating_Paired_Comparison_Plot/850px-Creating_Paired_Comparison_Plot_05.png" width="850"   /></a></p>
+<h3><a name="Output_tab"></a><span class="mw-headline">Registerkarte Ausgabe</span></h3>
+<p>W&auml;hlen Sie das Arbeitsblatt, in das die Zeichnungsdaten ausgegeben werden sollen. Standardm&auml;&szlig;ig wird ein neues Blatt in der aktuellen Mappe erstellt und verwendet, um die Zeichnungsdaten zu speichern.</p>
+<h2><a name="Supported_in_these_Statistical_Tools"></a><span class="mw-headline">In diesen statistischen Werkzeugen unterst&uuml;tzt</span></h2>
+<ul><li><b>Tests f&uuml;r eine Stichprobe</b><ul><li><a href="../../UserGuide/Category/One-Sample_t-Test.html" title="Category:One-Sample t-Test">t-Test bei einer Stichprobe</a></li>
+<li><a href="../../UserGuide/Category/One-Sample_Wilcoxon_Signed_Rank_Test.html" title="Category:One-Sample Wilcoxon Signed Rank Test">Wilcoxon-Rangtest mit Vorzeichen bei einer Stichprobe</a></li></ul></li>
+<li><b>Tests f&uuml;r zwei Stichproben</b><ul><li><a href="../../UserGuide/Category/Two-Sample_t-Test.html" title="Category:Two-Sample t-Test">t-Test bei zwei Stichproben</a></li>
+<li><a href="../../UserGuide/Category/Pair-Sample_t-Test.html" title="Category:Pair-Sample t-Test">t-Test bei verbundenen Stichproben</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Sign_Test.html" title="Category:Paired-Sample Sign Test">Vorzeichentest bei verbundenen Stichproben</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Wilcoxon_Signed_Rank_Test.html" title="Category:Paired-Sample Wilcoxon Signed Rank Test">Wilcoxon-Rangtest mit Vorzeichen bei verbundenen Stichproben</a></li>
+<li><a href="../../UserGuide/Category/Two-Sample_Kolmogorov-Smirnov_Test.html" title="Category:Two-Sample Kolmogorov-Smirnov Test">Kolmogorov-Smirnov-Test bei zwei Stichproben</a></li>
+<li><a href="../../UserGuide/Category/Mann-Whitney_Test.html" title="Category:Mann-Whitney Test">Mann-Whitney-Test</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="UserGuide:Running Simultaneous Nonparametric Tests">(NPH) Verbundene Stichproben</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="UserGuide:Running Simultaneous Nonparametric Tests">(NPH) Zwei unabh&auml;ngige Stichproben</a></li></ul></li>
+<li><b>Tests f&uuml;r mehrere Stichproben</b><ul><li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="Category:One, Two, and Three Way ANOVA">Einfache ANOVA</a> (falls ein Test auf der Registerkarte Mittelwertevergleich ausgew&auml;hlt ist)</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="Category:Repeated Measure ANOVA (OriginPro Only)">Einfache ANOVA bei wiederholten Messungen</a> (falls ein Test auf der Registerkarte Mittelwertevergleich ausgew&auml;hlt ist)</li>
+<li><a href="../../UserGuide/Category/Kruskal-Wallis_ANOVA.html" title="Category:Kruskal-Wallis (ANOVA)">Kruskal-Wallis-ANOVA</a> (falls Dunns Test ausgew&auml;hlt ist)</li>
+<li><a href="../../UserGuide/Category/Moods_Median_Test.html" title="Category:Moods Median Test">Mood-Median-Test</a> (falls Dunns Test ausgew&auml;hlt ist)</li>
+<li><a href="../../UserGuide/Category/Friedman_ANOVA.html" title="Category:Friedman ANOVA">Friedman-ANOVA</a> (falls Dunns Test oder Wilcoxon-Nemenyi-McDonald-Thompson-Test ausgew&auml;hlt ist)</li>
+<li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="Category:One, Two, and Three Way ANOVA">Zweifache ANOVA</a> (falls ein Test auf der Registerkarte Mittelwertevergleich und eine Wechselwirkung auf der Registerkarte Eingabe ausgew&auml;hlt sind)</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="Category:Repeated Measure ANOVA (OriginPro Only)">Zweifache ANOVA bei wiederholten Messungen</a> (falls ein Test auf der Registerkarte Mittelwertevergleich und eine Wechselwirkung auf der Registerkarte Eingabe ausgew&auml;hlt sind)</li></ul></li></ul>
+
+
+
+
+
+
+
+    

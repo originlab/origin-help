@@ -67,8 +67,9 @@
 <tr>
 <th>Kontingenztabelle</th>
 <td>Dieser Zweig bestimmt, welche Statistiken in der Kontigenztabelle berechnet und ausgegeben werden.<ul><li>Anzahl: Anzahlen, Erwartete Anzahlen</li>
-<li>Prozentanteile: Prozentanteile der Zeilenanzahl, Prozentanteil der Spaltenanzahl, Prozentanteil der Gesamtanteil</li>
-<li>Residuen: Residuen, standardisierte Residuen, angepasste Residuen.</li></ul>
+<li>Prozentanteile: Prozentanteile der Zeilenanzahlen, Prozentanteil der Spaltenanzahlen, Prozentanteil der Gesamtanzahlen</li>
+<li>Residuen: Residuen, Standardisierte Residuen, Korrigierte Residuen</li>
+<li>Chi-Quadrat: Beitrag zum Chi-Quadrat</li></ul>
 <p><b>Hinweis:</b> Um weitere Einzelheiten zu diesen Statistiken zu erfahren, lesen Sie bitte die <a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="Category:Cross Tabulation">Einf&uuml;hrungsseite</a> und die Seite <a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="UserGuide:Algorithm(CrossTabs)">Algorithmus</a>.</p>
 </td></tr>
 <tr>
@@ -117,10 +118,18 @@
 <th>Ausgabe Ergebnisprotokoll</th>
 <td>Mit diesem Kontrollk&auml;stchen wird festgelegt, ob das Ergebnisprotokoll angezeigt wird oder nicht.</td></tr>
 <tr>
+<th>Grafischer Zusammenfassungsbericht</th>
+<td>Erstellen Sie einen grafischen Zusammenfassungsbericht, einschlie&szlig;lich Balken f&uuml;r den p-Wert und Mosaikdiagramm der korrigierten Residuen. Es werden auch zwei Ergebnistabellen an das Diagramm angeh&auml;ngt, um die statistischen Werte zu zeigen.<p>Die Fu&szlig;note nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p><p>Wenn das Diagramm mehrere Layer enth&auml;lt, wird ein Zusammenfassungsdiagramm f&uuml;r jeden Layer hinzuf&uuml;gt, wobei der Struktur des Zweigs der Kontingenztabelle gefolgt wird.</p>
+</td></tr>
+<tr>
+<th>Grafischer Diagnosebericht</th>
+<td>Legen Sie fest, ob der Diagnosebericht angezeigt werden soll, einschlie&szlig;lich <b>Differenz von Erwarteten (%)</b> und <b>Beitrag zu X<sup>2</sup></b>.<p>Wenn der grafische Zusammenfassungsbericht angezeigt wird, wird er beim Diagrammknoten nach dem Zusammenfassungsbericht gezeigt. Falls der grafische Zusammenfassungsbericht nicht angezeigt wird, wird er beim ersten Diagrammknoten gezeigt.</p><p>Wenn das Diagramm mehrere Layer enth&auml;lt, wird ein Diagramm f&uuml;r jeden Layer hinzuf&uuml;gt, wobei der Struktur des Zweigs der Kontingenztabelle gefolgt wird.</p>
+</td></tr>
+<tr>
 <th>Mosaikdiagramm</th>
 <td>Legen Sie fest, ob ein Mosaikdiagramm, bei dem die Fl&auml;che jedes Rechtecks proportional zu den Anteilen der Y-Variable auf jeder Stufe der X-Variable ist, angezeigt werden soll.</td></tr>
 <tr>
-<th>Bericht der Kreuztabelle</th>
+<th>Bericht</th>
 <td>Legen Sie das Blatt f&uuml;r das Ergebnis der Kreuztabelle fest. Der Standardwert ist ein neues Blatt in der Arbeitsmappe der Eingabedaten.</td></tr>
 <tr>
 <th>Zeichnungsdaten</th>

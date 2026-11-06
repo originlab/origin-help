@@ -1,0 +1,37 @@
+﻿<h1 class="firstHeading">AssocThenDissoc</h1><p class='urlname' style='display: none'>AssocThenDissoc-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Derived_Parameters"><span class="tocnumber">5</span> <span class="toctext">Derived Parameters</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Script_Access"><span class="tocnumber">6</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Function_File"><span class="tocnumber">7</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Category"><span class="tocnumber">8</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/AssocThenDissoc/math-092190abbbe29aa5c7956cf8831adecd.png" title="y = NS + \begin{cases} \frac{L B_{\text{max}}}{L + K_{\text{off}} / K_{\text{on}}} \left(1 - e^{-(L K_{\text{on}} + K_{\text{off}}) x}\right) &amp; (x \le \text{Time0}) \\[1.5em] \frac{L B_{\text{max}}}{L + K_{\text{off}} / K_{\text{on}}} \left(1 - e^{-(L K_{\text{on}} + K_{\text{off}}) \text{Time0}}\right) e^{-K_{\text{off}} (x - \text{Time0})} &amp; (x &gt; \text{Time0}) \end{cases}" alt="y = NS + \begin{cases} \frac{L B_{\text{max}}}{L + K_{\text{off}} / K_{\text{on}}} \left(1 - e^{-(L K_{\text{on}} + K_{\text{off}}) x}\right) &amp; (x \le \text{Time0}) \\[1.5em] \frac{L B_{\text{max}}}{L + K_{\text{off}} / K_{\text{on}}} \left(1 - e^{-(L K_{\text{on}} + K_{\text{off}}) \text{Time0}}\right) e^{-K_{\text{off}} (x - \text{Time0})} &amp; (x &gt; \text{Time0}) \end{cases}" class="tex"/> <br /><img src="../images/AssocThenDissoc/math-4c316d7948d16abaf087b7ff6414808b.png" title="\text{where } L = \text{Hotnm} \times 1\text{E}-9" alt="\text{where } L = \text{Hotnm} \times 1\text{E}-9" class="tex"/> &lt;/math&gt;</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>A piecewise model that simulates ligand binding using an exponential rise equation and an exponential decay equation.</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="AssocThenDissoc.png" src="../images/AssocThenDissoc/AssocThenDissoc.png" width="387"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameter</span></h2>
+<p>Number: 6</p><p>Names: Hotnm, Kon, Koff, Bmax, Time0, NS</p><p>Meanings: Hotnm=radioligand concentration in nM, Kon=association rate constant, Koff=dissociation rate constant, Bmax=max binding capacity, Time0=washout time, NS=nonspecific binding</p><p>Lower Bounds: Kon&gt;0, Koff&gt;0</p><p>Upper Bounds: none</p>
+<h2><a name="Derived_Parameters"></a><span class="mw-headline">Derived Parameters</span></h2>
+<p>Kd=Koff/Kon</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_AssocThenDissoc<span style="color: #000000;">(</span>x,Hotnm,Kon,Koff,Bmax,Time0,NS<span style="color: #000000;">)</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>AssocThenDissoc.fdf</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Binding</p>
+
+
+
+
+
+
+    

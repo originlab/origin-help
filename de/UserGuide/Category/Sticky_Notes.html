@@ -1,0 +1,72 @@
+﻿<h1 class="firstHeading">Haftnotizen</h1><p class='urlname' style='display: none'>Sticky-Notes</p>
+<p>Abgesehen von <a href="../../UserGuide/Category/Notes_Window.html" title="Category:Notes Window">Notizfenstern</a> k&ouml;nnen Sie Haftnotizen verwenden, um Ideen, Aufgaben oder Informationen f&uuml;r Origins Unterfenster zu sammeln und zu organisieren.</p><p><a  class="image"><img alt="Sticky Notes 01.png" src="../images/Sticky_Notes/Sticky_Notes_01.png" width="553"  /></a></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Add_a_Stick_Note"><span class="tocnumber">1</span> <span class="toctext">Eine Haftnotiz hinzuf&uuml;gen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Show_or_Hide_the_Notes"><span class="tocnumber">2</span> <span class="toctext">Haftnotizen zeigen oder verbergen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#Sticky_Note_Options"><span class="tocnumber">2.1</span> <span class="toctext">Optionen f&uuml;r Haftnotizen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_on_Sticky_Notes_bar"><span class="tocnumber">3</span> <span class="toctext">Bedienelemente auf der Titelleiste der Haftnotizen</span></a><ul>
+<li class="toclevel-2 tocsection-5"><a href="#Background_Color"><span class="tocnumber">3.1</span> <span class="toctext">Hintergrundfarbe</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Font_Size"><span class="tocnumber">3.2</span> <span class="toctext">Schriftgr&ouml;&szlig;e</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_and_Paste_Sticky_Note"><span class="tocnumber">3.3</span> <span class="toctext">Haftnotizen kopieren und einf&uuml;gen</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Attach_to_Book"><span class="tocnumber">3.4</span> <span class="toctext">An Mappe anh&auml;ngen</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Minimize_or_Delete_the_Note"><span class="tocnumber">3.5</span> <span class="toctext">Haftnotiz minimieren oder l&ouml;schen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#How_Sticky_Notes_Work_with_Other_Tools"><span class="tocnumber">4</span> <span class="toctext">Wie Haftnotizen mit anderen Hilfsmitteln zusammenarbeiten</span></a><ul>
+<li class="toclevel-2 tocsection-11"><a href="#With_Project_Explorer"><span class="tocnumber">4.1</span> <span class="toctext">Mit Projekt Explorer</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#With_Project_Browser"><span class="tocnumber">4.2</span> <span class="toctext">Mit Projektbrowser</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#With_Window_Switcher"><span class="tocnumber">4.3</span> <span class="toctext">Mit Fensterwechsler</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h3><a name="Add_a_Stick_Note"></a><span class="mw-headline">Eine Haftnotiz hinzuf&uuml;gen</span></h3>
+<p>Um eine Haftnotiz zum aktuellen Fenster oder Blatt hinzuzuf&uuml;gen, k&ouml;nnen Sie auf die Schaltfl&auml;che Neue Haftnotiz auf der Titelleiste des Fensters klicken. Sobald eine Haftnotiz vorhanden ist, wird ein roter Punkt auf der Schaltfl&auml;che Neue Haftnotiz gezeigt.</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 05.png" src="../images/Sticky_Notes/700px-Sticky_Notes_05.png" width="700"   /></a></dd></dl>
+<p>Es gibt eine <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">Systemvariable &quot;@PSN&quot;</a>, die verwendet werden kann, um das Symbol der Haftnotiz auf der Titelleiste zu verbergen. Der Standardwert ist 1, was bedeutet, dass das Symbol gezeigt wird.</p><p>Um eine Haftnotiz per LabTalk-Befehl hinzuzuf&uuml;gen, sehen Sie bitte Folgendes:</p>
+<pre class="lt" style="font-family:monospace;">page <span style="color: #000080;">-</span>sn; <span style="color: #008000;">//Add a sticky note to current page</span> del <span style="color: #000080;">-</span>sn; <span style="color: #008000;">// delete all sticky notes in current project.</span></pre>
+<h3><a name="Show_or_Hide_the_Notes"></a><span class="mw-headline">Haftnotizen zeigen oder verbergen</span></h3>
+<p>Per Standard wurde im Men&uuml; <b>Ansicht: Haftnotizen zeigen</b> gew&auml;hlt. Wenn Sie dies erneut w&auml;hlen, werden alle Haftnotizen f&uuml;r das aktuelle Projekt verborgen. Der Punkt auf der Schaltfl&auml;che Neue Haftnotiz wird grau.</p><p>Klicken Sie erneut auf die Schaltfl&auml;che Neue Haftnotiz auf einer beliebigen Titelleiste, um die Haftnotizen im aktuellen Projekt wieder anzuzeigen. Oder Sie k&ouml;nnen die <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">Systemvariable &quot;@SSN&quot;</a> verwenden, um die Haftnotizen zu zeigen oder zu verbergen. Standardm&auml;&szlig;ig ist @SSN auf 1 gesetzt, was bedeutet, dass die Notizen gezeigt werden.</p>
+<h4><a name="Sticky_Note_Options"></a><span class="mw-headline">Optionen f&uuml;r Haftnotizen</span></h4>
+<p>W&auml;hlen Sie im Men&uuml; <b>Einstellungen: Optionen f&uuml;r Haftnotizen</b>, um den Dialog <b>Optionen f&uuml;r Haftnotizen</b> zu &ouml;ffnen:</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 06.png" src="../images/Sticky_Notes/Sticky_Notes_06.png" width="290"  /></a></dd></dl>
+<ul><li><b> Hafutnotizen nur auf aktivem Fenster zeigen</b>: W&auml;hlen Sie diese Option, um die Haftnotizen nur f&uuml;r das aktive Fenster zu zeigen.</li>
+<li><b>Haftnotizen aus Fenster ziehen zulassen</b>: W&auml;hlen Sie dies, um zu erlauben, dass die Haftnotiz aus dem Hauptfenster herausgezogen werden kann.</li></ul>
+<p>Es gibt eine <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">Systemvariable &quot;@SSNI&quot;</a>, die auf 0, 1, 2, 3 f&uuml;r unterschiedliche Kombinationen der zwei Kontrollk&auml;stchen gesetzt werden kann.</p>
+<h3><a name="Controls_on_Sticky_Notes_bar"></a><span class="mw-headline">Bedienelemente auf der Titelleiste der Haftnotizen</span></h3>
+<p>Klicken Sie auf die Schaltfl&auml;che mit dem nach unten zeigenden Pfeil oben links. Sie erhalten das Men&uuml; unten, um die Haftnotiz zu steuern:</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 02.png" src="../images/Sticky_Notes/Sticky_Notes_02.png" width="299"  /></a></dd></dl>
+<h4><a name="Background_Color"></a><span class="mw-headline">Hintergrundfarbe</span></h4>
+<p>Sie k&ouml;nnen eine Farbe f&uuml;r die Notiz w&auml;hlen. Falls Sie eine benutzerdefinierte Farbe m&ouml;chten, k&ouml;nnen Sie die gew&uuml;nschte Farbe unter <b>Benutzerdefinierte Farbe</b> in diesem Men&uuml; w&auml;hlen.</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 03.png" src="../images/Sticky_Notes/Sticky_Notes_03.png" width="491"  /></a></dd></dl>
+<p>W&auml;hlen Sie <b>Als Standard festlegen</b>, um die aktuelle Konfiguration als Standard festzulegen.</p>
+<h4><a name="Font_Size"></a><span class="mw-headline">Schriftgr&ouml;&szlig;e</span></h4>
+<p>Sie k&ouml;nnen die Schriftgr&ouml;&szlig;e f&uuml;r die Haftnotiz &auml;ndern.</p>
+<h4><a name="Copy_and_Paste_Sticky_Note"></a><span class="mw-headline">Haftnotizen kopieren und einf&uuml;gen</span></h4>
+<p>Sie k&ouml;nnen <b>Haftnotiz kopieren</b> w&auml;hlen, um die Haftnotiz zu kopieren, und dann mit der rechten Maustaste auf den Bereich in einem Fenster klicken, um die Haftnotiz in ein anderes Fenster einzuf&uuml;gen.</p>
+<h4><a name="Attach_to_Book"></a><span class="mw-headline">An Mappe anh&auml;ngen</span></h4>
+<p>F&uuml;r die Haftnotiz auf einem Arbeitsmappen-/Matrixfenster k&ouml;nnen Sie <b>An Mappe anh&auml;ngen</b> w&auml;hlen, um diese Haftnotiz auf Mappenebene anzuh&auml;ngen. Per Standard wird die Haftnotiz auf Blattebene angeh&auml;ngt.</p><p>Sobald An Mappe anh&auml;ngen ausgew&auml;hlt ist, gibt es ein Ziel &quot;B&quot; auf der Titelleiste der Haftnotiz.</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 04.png" src="../images/Sticky_Notes/Sticky_Notes_04.png" width="300"  /></a></dd></dl>
+<h4><a name="Minimize_or_Delete_the_Note"></a><span class="mw-headline">Haftnotiz minimieren oder l&ouml;schen</span></h4>
+<p>Sie k&ouml;nnen <b>Minimieren</b> w&auml;hlen, um die Haftnotiz zu minimieren, und <b>L&ouml;schen</b>, um die Haftnotiz zu l&ouml;schen.</p>
+<h3><a name="How_Sticky_Notes_Work_with_Other_Tools"></a><span class="mw-headline">Wie Haftnotizen mit anderen Hilfsmitteln zusammenarbeiten</span></h3>
+<h4><a name="With_Project_Explorer"></a><span class="mw-headline">Mit Projekt Explorer</span></h4>
+<p>Im Projekt Explorer wird auf allen Fenstersymbolen mit Haftnotizen ein roter Punkt angezeigt. Wenn Sie die Maus &uuml;ber das Symbol und den Bereich mit dem Punkt bewegen wird ein Tooltipp angezeigt. Bei anderen Bereichen wird wie immer die Vorschau angezeigt.</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 07.png" src="../images/Sticky_Notes/Sticky_Notes_07.png" width="255"  /></a></dd></dl>
+<h4><a name="With_Project_Browser"></a><span class="mw-headline">Mit Projektbrowser</span></h4>
+<p>In Projektbrowser gibt es eine Spalte zum Zeigen der Haftnotizen f&uuml;r Fenster/Diagramme/Mappen/Bl&auml;tter.</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 08.png" src="../images/Sticky_Notes/700px-Sticky_Notes_08.png" width="700"   /></a></dd></dl>
+<p>Beim Suchen nach Stichw&ouml;rtern werden alle Haftnotizen in die Suche eingeschlossen.</p>
+<h4><a name="With_Window_Switcher"></a><span class="mw-headline">Mit Fensterwechsler</span></h4>
+<p>Wenn Sie die Vorschau aller Fenster mit dem Fensterwechsler anzeigen, wird die erste Haftnotiz des aktuellen Fensters/Blatts gezeigt.</p>
+
+
+
+
+
+
+    

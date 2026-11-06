@@ -26,6 +26,7 @@
 <li class="toclevel-2 tocsection-15"><a href="#Convert_to_Free_Form"><span class="tocnumber">2.7</span> <span class="toctext">In Freiform umwandeln</span></a></li>
 </ul>
 </li>
+<li class="toclevel-1 tocsection-16"><a href="#Import_Prism_Files"><span class="tocnumber">3</span> <span class="toctext">Prism-Dateien importieren</span></a></li>
 </ul>
 </div>
 
@@ -34,7 +35,7 @@
 <p>Origin-Standardarbeitsblatt Keine Struktur Weitere Einzelheiten finden Sie auf <a href="../../UserGuide/UserGuide/Creating_Child_Window.html#By_New_Workbook_dialog" title="UserGuide:Creating Child Window">dieser Seite</a>.</p>
 <h3><a name="XY"></a><span class="mw-headline">XY</span></h3>
 <p>Dieser Tabellentyp folgt der Struktur <i>XYYY...</i>: eine einzelne X-Spalte gepaart mit mehreren Y-Spalten. Er kann eine optionale Spalte <b>Zeilentitel</b> (Textspalte zum Beschriften von Zeilen) und eine Spalte f&uuml;r den <b>X-Fehler</b> enthalten. Jeder <b>Y-Datensatz</b> stellt eine eindeutige Gruppe mit mehreren <b>Replikaten</b> dar.</p>
-<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png" width="503"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png" width="502"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Datenformat</th>
@@ -45,8 +46,9 @@
 <tr>
 <th>Anzahl der Gruppen (Y-Datens&auml;tze)</th>
 <td>W&auml;hlen Sie oder geben Sie die Anzahl der zu vergleichenden Gruppen ein. Jeder Y-Datensatz hat die gleiche Anzahl von replizierten Spalten.<p><b>Hinweis</b>: Sie k&ouml;nnen Datens&auml;tze jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine oder mehrere Datens&auml;tze hinzuzuf&uuml;gen, klicken Sie auf das Symbol eines Tabellentyps <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png" width="16"  /></a> und w&auml;hlen Sie im Men&uuml; <b>Tabelle neu strukturieren</b>. Einzelheiten lesen Sie bitte in <a href="#Restructure_Table">diesem Abschnitt</a>.</li>
-<li>Um einen neuen Y-Datensatz vor einem vorhandenen Datensatz einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
+<ul><li>Um Gruppen und Replikate zu rekonstruieren, klicken Sie auf das Tabellensymbol <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png" width="16"  /></a> und w&auml;hlen Sie im Men&uuml; <b>Tabelle neu strukturieren</b>. Einzelheiten lesen Sie bitte in <a href="#Restructure_Table">diesem Abschnitt</a>.</li>
+<li>Um einen neuen Y-Datensatz hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a> auf der Symbolleiste.</li>
+<li>Um einen neuen Y-Datensatz einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
 <li>Um einen Y-Datensatz zu l&ouml;schen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>L&ouml;schen</b>.</li></ul>
 </td></tr>
 <tr>
@@ -61,8 +63,7 @@
 <tr>
 <th>Werte pro Gruppe replizieren</th>
 <td>W&auml;hlen Sie oder geben Sie die Anzahl der replizierten Teilspalten pro Y-Datensatz ein. Geben Sie 1 f&uuml;r keine Replikationen ein.<p><b>Hinweis</b>: Sie k&ouml;nnen Datens&auml;tze jederzeit nach Erstellen einer Teilspalte hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine Teilspalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>. Es wird eine neue Replikation zu allen Datens&auml;tzen mit dem gleichen <b>Namen</b> hinzugef&uuml;gt.</li>
-<li>Um eine Teilspalte einzuf&uuml;gen, klicken Sie auf die Zelle <b>Name</b> einer Teilspalte, um diese Replikation auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>Einf&uuml;gen</b> auszuw&auml;hlen. Es wird eine neue Replikation zu allen Datens&auml;tzen an der gleichen Position hinzugef&uuml;gt.</li>
+<ul><li>Um eine Teilspalte einzuf&uuml;gen, klicken Sie auf die Zelle <b>Name</b> einer Teilspalte, um diese Replikation auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>Einf&uuml;gen</b> auszuw&auml;hlen. Es wird eine neue Replikation zu allen Datens&auml;tzen an der gleichen Position hinzugef&uuml;gt.</li>
 <li>Um eine vorhandene Teilspalte aus allen Datens&auml;tzen zu l&ouml;schen, klicken Sie auf die Zelle <b>Name</b> einer Teilspalte, um diese Replikation auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>L&ouml;schen</b> auszuw&auml;hlen.</li></ul>
 </td></tr>
 <tr>
@@ -76,8 +77,8 @@
 <table class="simple">
 <tr>
 <th width="20%">Anzahl der Gruppen</th>
-<td>W&auml;hlen Sie oder geben Sie die Anzahl der zu vergleichenden Gruppen ein. Eine Y-Spalte pro Gruppe<p><b>Hinweis</b>: Sie k&ouml;nnen Y-Spalten jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine Y-Spalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>.</li>
+<td>W&auml;hlen Sie oder geben Sie die Anzahl der zu vergleichenden Gruppen ein. Eine Y-Spalte pro Gruppe<p><b>Hinweis</b>: Sie k&ouml;nnen Y-Spalten (Gruppen) jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
+<ul><li>Um eine neue Spalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a> auf der Symbolleiste.</li>
 <li>Um eine neue Spalte vor eine vorhandenen Spalte einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
 <li>Um eine Spalte zu l&ouml;schen, klicken Sie mit der rechten Maustaste auf die Titelleiste der Spalte und w&auml;hlen Sie <b>L&ouml;schen</b>.</li></ul>
 </td></tr>
@@ -96,7 +97,8 @@
 <tr>
 <th width="20%">Anzahl der Gruppen</th>
 <td>W&auml;hlen Sie oder geben Sie die Anzahl der zu vergleichenden Gruppen &uuml;ber zwei (oder drei) kategoriale Dimensionen ein.<p><b>Hinweis</b>: Sie k&ouml;nnen Gruppen jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine oder mehrere Gruppen hinzuzuf&uuml;gen, klicken Sie auf das Symbol eines Tabellentyps <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png" width="16"  /></a> und w&auml;hlen Sie im Men&uuml; <b>Tabelle neu strukturieren</b>. Einzelheiten lesen Sie bitte in <a href="#Restructure_Table">diesem Abschnitt</a>.</li>
+<ul><li>Um Gruppen und Replikate zu rekonstruieren, klicken Sie auf das Tabellensymbol <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png" width="16"  /></a> und w&auml;hlen Sie im Men&uuml; <b>Tabelle neu strukturieren</b>. Einzelheiten lesen Sie bitte in <a href="#Restructure_Table">diesem Abschnitt</a>.</li>
+<li>Um eine neue Gruppe hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a> auf der Symbolleiste.</li>
 <li>Um eine neue Gruppe vor einer vorhandenen Gruppe einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
 <li>Um eine Gruppe zu l&ouml;schen, klicken Sie mit der rechten Maustaste auf die Titelleiste der Gruppe und w&auml;hlen Sie <b>L&ouml;schen</b>.</li></ul>
 </td></tr>
@@ -109,8 +111,7 @@
 <tr>
 <th>Werte pro Gruppe replizieren</th>
 <td>W&auml;hlen Sie oder geben Sie die Anzahl der replizierten Y-Spalten pro Gruppe ein. Geben Sie 1 f&uuml;r keine Replikationen ein.<p><b>Hinweis</b>: Sie k&ouml;nnen eine Y-Spalte jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine Y-Spalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>. Es wird eine neue Replikation zu allen Gruppen mit dem gleichen <b>Namen</b> hinzugef&uuml;gt.</li>
-<li>Um eine Y-Spalte einzuf&uuml;gen, klicken Sie auf die Zelle <b>Name</b> einer Y-Spalte, um diese einzelne Spalte auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>Einf&uuml;gen</b> auszuw&auml;hlen. Es wird eine neue Replikation zu allen Gruppen an der gleichen Position hinzugef&uuml;gt.</li>
+<ul><li>Um eine Y-Spalte einzuf&uuml;gen, klicken Sie auf die Zelle <b>Name</b> einer Y-Spalte, um diese einzelne Spalte auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>Einf&uuml;gen</b> auszuw&auml;hlen. Es wird eine neue Replikation zu allen Gruppen an der gleichen Position hinzugef&uuml;gt.</li>
 <li>Um eine vorhandene Y-Spalte aus allen Gruppen zu l&ouml;schen, klicken Sie auf die Zelle <b>Name</b> einer Y-Spalte, um diese einzelne Spalte auszuw&auml;hlen, mit der rechten Maustaste zu klicken und <b>L&ouml;schen</b> auszuw&auml;hlen.</li></ul>
 </td></tr>
 <tr>
@@ -128,14 +129,14 @@
 <p><br /> Die Kontingenztabellen sind f&uuml;r kategoriale Datenanalysen, wie dem Chi-Quadrat-Test und dem exakten Test nach Fisher, entwickelt worden. <a  class="image"><img alt="Contingency Table Ex.gif" src="../images/Data_Table/Contingency_Table_Ex.gif" width="688"  /></a></p>
 <h3><a name="Survival"></a><span class="mw-headline">Lebensdauer</span></h3>
 <p>Dieser Tabellentyp folgt der Struktur Zeit+ Status: eine X-Spalte f&uuml;r die abgelaufene Zeit, gepaart mit einer oder mehreren Y-Spalten f&uuml;r den Ereignisstatus. Die X-Spalte enth&auml;lt die &quot;abgelaufene Zeit&quot; ab Beginn der Beobachtung bis zum Ereignis oder zur Zensierung. Die Y-Spalten enthalten den &quot;Status&quot;, der angibt, ob ein Ereignis eingetreten ist: typiscerweise ist 0 = Zensiert (kein Ereignis/zur&uuml;ckgezogen), 1 = Ereignis (Tod/Fehlschlag/festgelegtes Ergebnis ist aufgetreten). Eine optionale Spalte f&uuml;r <b>Zeilentitel</b> kann f&uuml;r einzelne Subjektbeschriftungen hinzugef&uuml;gt werden.</p>
-<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png" width="401"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png" width="824"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Anzahl der Gruppen</th>
 <td>W&auml;hlen Sie oder geben Sie die Anzahl der zu vergleichenden Gruppen ein. Eine Y-Spalte pro Gruppe<p><b>Hinweis</b>: Sie k&ouml;nnen Gruppen (Y-Spalten) jederzeit nach Erstellen der Tabelle hinzuf&uuml;gen oder entfernen.</p>
-<ul><li>Um eine Y-Spalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>.</li>
-<li>Um eine neue Spalte vor eine vorhandenen Spalte einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf die Titelleiste des Datensatzes und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
-<li>Um eine Spalte zu l&ouml;schen, klicken Sie mit der rechten Maustaste auf die Titelleiste der Spalte und w&auml;hlen Sie <b>L&ouml;schen</b>.</li></ul>
+<pre>* Um eine neue Spalte hinzuzuf&uuml;gen, klicken Sie auf die Schaltfl&auml;che <b>Neue Spalten anh&auml;ngen</b> <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a> auf der Symbolleiste.</pre>
+<ul><li>Um eine neue Spalte vor eine vorhandenen Spalte einzuf&uuml;gen, klicken Sie mit der rechten Maustaste auf den Datensatz und w&auml;hlen Sie <b>Einf&uuml;gen</b>.</li>
+<li>Um eine Spalte zu l&ouml;schen, klicken Sie mit der rechten Maustaste auf die Spalte und w&auml;hlen Sie <b>L&ouml;schen</b>.</li></ul>
 </td></tr>
 <tr>
 <th>Gruppennamen</th>
@@ -146,13 +147,14 @@
 <tr>
 <th>Abgelaufene Zeit in</th>
 <td>Standardm&auml;&szlig;ig ist die Einheit der &ldquo;Abgelaufenen Zeit&rdquo; (X-Spalte) &ldquo;Tage&rdquo;. Verwenden Sie dieses Bearbeitungsfeld, um die Einheiten, Monate, Jahre, etc. zu &auml;ndern.</td></tr></table>
-<p><br /> Die &Uuml;berlebenstabelle wurde f&uuml;r Lebensdaueranalysen und Untersuchungen der Zuverl&auml;ssigkeit, wie Kaplan-Meier-Sch&auml;tzer und Zuverl&auml;ssigkeits- und Lebensdaueranalyse, entwickelt.</p>
+<p><br /> Eine &Uuml;berlebenstabelle wurde f&uuml;r die Lebensdauer- und die Zuverl&auml;ssigkeitsanalyse entwickelt. F&uuml;r den Kaplan-Meier-Sch&auml;tzer ist ein Schnellzugriff verf&uuml;gbar: Klicken Sie mit links auf das Tabellensymbol <a  class="image"><img alt="Survival Table Icon.png" src="../images/Data_Table/Survival_Table_Icon.png" width="16"  /></a> (oben links) und w&auml;hlen Sie im Men&uuml; <b>Kaplan-Meier-Sch&auml;tzer...</b>.</p>
+<dl><dd><a  class="image"><img alt="Survival Table Ex.gif" src="../images/Data_Table/Survival_Table_Ex.gif" width="664"  /></a></dd></dl>
 <h2><a name="Basic_Manipulates"></a><span class="mw-headline">Einfache Manipulationen</span></h2>
 <p>Klicken Sie auf das Tabellensymbol oben links von der Tabelle. Eine Liste der Men&uuml;s wird angezeigt, die einen schnellen Zugriff auf h&auml;ufig verwendete Operationen bietet:</p>
 <dl><dd><a  class="image"><img alt="Basic Operation Data Table.gif" src="../images/Data_Table/Basic_Operation_Data_Table.gif" width="609"  /></a></dd></dl>
 <p>Verf&uuml;gbare Men&uuml;s variieren je nach Tabellentyp.</p>
 <h3><a name="Summary_Data_.26_Plot_Summary_Data"></a><span class="mw-headline">Zusammenfassungsdaten &amp; Zusammenfassungsdaten zeichnen</span></h3>
-<p>W&auml;hlen Sie das Zeichnen der statistischen Zusammenfassungsdaten entweder als <b>Punkt</b>-, <b>Linien</b>-, <b>Punkt-Linien</b>- oder <b>S&auml;ulen</b>diagramm. Die Y-Werte k&ouml;nnen <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Mittelwert</b>, <b>Median</b> und <b>Geometrischer Mittelwert</b></a> sein mit optionalen Fehlerbalken aus <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Standardabweichung</b>, <b>SEM</b> (Standardfehler des Mittelwerts), <b>95%-KI</b> (oberes 95%-KI des Mittelwerts - unteres 95%-KI des Mittelwerts)</a> oder <b>Bereich</b> (Max-Min).</p>
+<p>W&auml;hlen Sie das Zeichnen der statistischen Zusammenfassungsdaten entweder als <b>Punkt</b>-, <b>Linien</b>-, <b>Punkt-Linien</b>- oder <b>S&auml;ulen</b>diagramm. Y-Werte k&ouml;nne sein: <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Mittelwert</b>, <b>Median</b>, <b>Geometrische Mittelwert</b> und <b>Harmonisches</b></a> mit optionalen Fehlerbalken aus <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Standardabweichung</b>, <b>SEM</b> (Standardfehler des Mittelwerts), <b>95%-KI</b> (Oberes 95% KI des Mittelwerts - Unteres 95% KI des Mittelwerts)</a> oder <b>Bereich</b> (Max.-Min.).</p>
 <dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png" width="290"  /></a></dd></dl>
 <p>Die Zusammenfassungsdaten werden in einem Arbeitsblatt &quot;Summary Stats&quot; (Zusammenfassungsstatistk) ausgegeben. Sie k&ouml;nnen auch w&auml;hlen, die Gesamtanzahl N auszugeben.</p>
 <h3><a name="Normalize"></a><span class="mw-headline">Normalisieren</span></h3>
@@ -196,20 +198,26 @@
 <td>Wandeln Sie die linearen X-Werte f&uuml;r eine sigmoidale Kurvenanpassung auf eine Log-Skalierung um.<p>W&auml;hlen Sie den Logarithmus aus der Auswahlliste <b>Basis des Logarithmus</b>: Log10 (Basis 10), ln (Basis e) und Log2 (Basis 2).</p>
 </td></tr></table>
 <h3><a name="Nonlinear_Fit"></a><span class="mw-headline">Nichtlinearer Fit</span></h3>
-<p>F&uuml;hren Sie eine nichtlineare Kurvenanpassung auf XY-Daten durch. Der <a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="Category:The NLFit Dialog Box">Dialog <b>NLFit</b></a> wird aufgerufen, &uuml;ber den Sie den Anpassungsprozess vollst&auml;ndig steuern k&ouml;nnen.</p>
-<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png" width="434"  /></a></dd></dl>
+<p>F&uuml;hren Sie eine nichtlineare Kurvenanpassung auf XY-Daten durch. Es wird zuerst ein einfacher Dialog ge&ouml;ffnet, auf dem Sie eine Anpassungsfunktion ausw&auml;hlen k&ouml;nnen. Durch Klicken auf <b>OK</b> wird dann der <a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="Category:The NLFit Dialog Box">Dialog <b>NLFit</b></a> aufgerufen, &uuml;ber den Sie den Anpassungsprozess vollst&auml;ndig steuern k&ouml;nnen.</p>
+<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png" width="855"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Funktion ausw&auml;hlen</th>
-<td>Auf <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">dieser Seite</a> finden Sie ausf&uuml;hrliche Informationen zur Anpassungs<b>funktion</b> (obwohl die verf&uuml;gbare <b>Kategorie</b> sich vom Standardmodus unterscheiden kann). Klicken Sie auf die Schaltfl&auml;che <a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png" width="18"  /></a>, um die von Ihnen ben&ouml;tigte Funktion zu suchen.<p>Um Zugriff auf die gesamte Palette der Anpassungsfunktionen zu haben, wechseln Sie zum Standardmodus (<b>Einstellungen: Bedienoberfl&auml;chenmodus: Standard</b>) und starten Sie Origin erneut.</p>
-</td></tr>
+<td>Lesen Sie in <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">dieser Funktionsliste</a> ausf&uuml;hrliche Informationen (<b>Hinweis</b>: Die verf&uuml;gbare <b>Kategorie</b> unterscheidet sich vom Standardmodus). Klicken Sie auf die Schaltfl&auml;che <a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png" width="18"  /></a>, um die von Ihnen ben&ouml;tigte Funktion zu suchen.</td></tr>
 <tr>
 <th>Anpassungsmethode</th>
-<td>Legen Sie fest, ob mit den <b>Rohdaten</b> oder der Zusammenfassungsstatistik angepasst werden soll: <b>Mittelwert + StdAbw.</b> (StdAbw. als Gewichtung verwendet), <b>Mittelwert + SE</b> (SE als Gewichtung verwendet) oder <b>Nur Mittelwert</b>. Falls Zusammenfassungsstatistik ausgew&auml;hlt ist, wird automatisch ein Arbeitsblatt &quot;Summary Stats&quot; erzeugt, das als Eingabedaten verwendet wird.</td></tr>
+<td>Legen Sie fest, ob mit den <b>Rohdaten</b> oder der Zusammenfassungsstatistik angepasst werden soll: <b>Mittelwert + StdAbw.</b> (StdAbw. als Gewichtungsfaktor verwendet), <b>Mittelwert + SE</b> (SE als Gewichtungsfaktor verwendet) oder <b>Nur Mittelwert</b>. Falls Zusammenfassungsstatistik ausgew&auml;hlt ist, wird automatisch ein Arbeitsblatt &quot;Summary Stats&quot; erzeugt und als Eingabedaten verwendet.<p><b>Hinweis</b>: Falls das Hilfsmittel <b>Nichtlineare Kurvenanpassung</b> &uuml;ber ein Zusammenfassungsdiagramm ge&ouml;ffnet wird, wird keine Gewichtung unterst&uuml;tzt, auch wenn die Zeichnung Fehlerbalken enth&auml;lt.</p>
+</td></tr>
 <tr>
 <th>Globaler Fit</th>
-<td>Aktivieren Sie dieses Kontrollk&auml;stchen, um die Parameter der Anpassungsfunktion f&uuml;r alle Datens&auml;tzen (Gruppen) gemeinsam zu nutzen, sodass f&uuml;r alle Datens&auml;tze dieselben Parameterwerte verwendet werden.<p>Deaktivieren Sie diese Option, um jeden Datensatz unabh&auml;ngig anzupassen und separate Ergebnisse f&uuml;r jeden Datensatz zu erhalten (auch wenn sie in einem Bericht kompiliert werden).</p><p>Lesen Sie auf <a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="UserGuide:Globale Anpassung mit gemeinsamen Parametern">dieser Seite</a> die Einzelheiten zur <b>globalen Anpassung</b>.</p>
-</td></tr></table>
+<td>Aktivieren Sie dieses Kontrollk&auml;stchen, um die Parameter der Anpassungsfunktion &uuml;ber alle Datens&auml;tze (Gruppen) gemeinsam zu nutzen, wodurch sich die Parameterwerte f&uuml;r alle Datens&auml;tze ergeben.<p>Deaktivieren Sie diese Option, um jeden Datensatz unabh&auml;ngig anzupassen und separate Ergebnisse f&uuml;r jeden Datensatz zu erhalten (auch wenn sie in einem Bericht kompiliert werden).</p><p>Lesen Sie auf <a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="UserGuide:Globale Anpassung mit gemeinsamen Parametern">dieser Seite</a> die Einzelheiten zur <b>globalen Anpassung</b>.</p>
+</td></tr>
+<tr>
+<th>EC50/IC50-Linien hinzuf&uuml;gen</th>
+<td>Verf&uuml;gbar f&uuml;r bestimmte Funktionen wie <a href="../../UserGuide/UserGuide/Boltzmann.html#Derived_Parameters" title="UserGuide:Boltzmann">Boltzmann</a>, <a href="../../UserGuide/UserGuide/DoseResp.html#Derived_Parameters" title="UserGuide:DoseResp">DoseResp</a>, <a href="../../UserGuide/UserGuide/Hill.html#Derived_Parameters" title="UserGuide:Hill">Hill</a>, <a href="../../UserGuide/UserGuide/Hill1.html#Derived_Parameters" title="UserGuide:Hill1">Hill1</a>, <a href="../../UserGuide/UserGuide/Logistic.html#Derived_Parameters" title="UserGuide:Logistic">Logistic</a>, <a href="../../UserGuide/UserGuide/Logistic5.html#Derived_Parameters" title="UserGuide:Logistic5">Logistic5</a>, <a href="../../UserGuide/UserGuide/MichaelisMenten.html#Derived_Parameters" title="UserGuide:MichaelisMenten">MichaelisMenten</a> etc.</td></tr>
+<tr>
+<th>Ausrei&szlig;er entfernen (Robuste Regression)</th>
+<td>Aktivieren Sie dieses Kontrollk&auml;stchen, um <a href="../../UserGuide/UserGuide/Settings_Tab_Upper_Panel.html#Advanced" title="UserGuide:Settings Tab Upper Panel"><b>Umgang mit Ausrei&szlig;ern</b></a> festzulegen und damit die Ausrei&szlig;er beim Anpassen der Kurve zu entfernen.</td></tr></table>
 <h3><a name="Linear_Fit"></a><span class="mw-headline">Lineare Anpassung</span></h3>
 <p>F&uuml;hren Sie eine lineare Regression f&uuml;r die XY-Daten durch. Jede Gruppe wird unabh&auml;ngig angepasst, und alle Anpassungsergebnisse werden in einem Bericht kompiliert. Der <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html" title="UserGuide:Linear Regression Dialog">Dialog <b>Lineare Anpassung</b></a> wird aufgerufen, &uuml;ber den Sie den Anpassungsprozess vollst&auml;ndig steuern k&ouml;nnen.</p>
 <dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png" width="290"  /></a></dd></dl>
@@ -217,8 +225,7 @@
 <tr>
 <th width="20%">Anpassungsmethode</th>
 <td>Legen Sie fest, ob mit den urspr&uuml;nglichen Daten oder den Zusammenfassungsdaten angepasst werden soll.<ul><li><b>Rohdaten</b> <br />Jede Gruppe wird unabh&auml;ngig angepasst. Replikationen innerhalb jeder Gruppe werden als ein Datensatz zusammengefasst und angepasst.</li>
-<li><b>Mittelwert</b> <br />Ein Arbeitsblatt &bdquo;Summary Stats&quot; wird automatisch erzeugt, um den Mittelwert der Replikationen innerhalb jeder Gruppe zu berechnen. Jede Gruppe wird dann mit Hilfe des Mittelwerts als Eingabe unabh&auml;ngig angepasst.</li>
-<li><b>Mittelwert + StdAbw.</b> <br />Ein Arbeitsblatt &quot;Summary Stats&quot; wird automatisch erzeugt, um den Mittelwert und die Standardabweichung der Replikationen innerhalb jeder Gruppe zu berechnen. Jede Gruppe wird dann mit Hilfe ihres Mittelwerts als Eingabe unabh&auml;ngig angepasst, wobei mit der Inversen der Varianz (1/SD^2) gewichtet wird.</li></ul>
+<li><b>Mittelwert + StdAbw.</b> / <b>Mittelwert</b> <br />Ein Arbeitsblatt &quot;Summary Stats&quot; wird automatisch erzeugt, um den Mittelwert und die Standardabweichung der Replikationen in jeder Gruppe zu berechnen. Jede Gruppe wird dann mit Hilfe des Mittelwerts als Eingabe unabh&auml;ngig angepasst. Falls <b>Mittelwert + StdAbw.</b> Ausgew&auml;hlt ist, wird die inverse Varianz (1/SD^2) als Gewichtung angewendet.</li></ul>
 </td></tr>
 <tr>
 <th>Fester Schnittpunkt mit der Y-Achse</th>
@@ -241,9 +248,15 @@
 </td></tr></table>
 <h3><a name="Restructure_Table"></a><span class="mw-headline">Tabelle neu strukturieren</span></h3>
 <p>Die Datentabelle wird restrukturiert, d. h. Gruppen oder Replikationen werden hinzugef&uuml;gt oder entfernt.</p>
-<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png" width="295"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png" width="238"  /></a></dd></dl>
 <h3><a name="Convert_to_Free_Form"></a><span class="mw-headline">In Freiform umwandeln</span></h3>
 <p>Die aktuelle Datentabelle wird in die typische Form eines <a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html">Origin-Arbeitsblatt</a> umgewandelt.</p>
+<h2><a name="Import_Prism_Files"></a><span class="mw-headline">Prism-Dateien importieren</span></h2>
+<ul><li>Die einfachste Methode ist, eine Prism-Datei (.pzfx, .prism, .prismt, .xml) per Drag&amp;Drop in den Origin-Arbeitsbereich zu ziehen. <br />Origin &uuml;bertr&auml;gt alle Datentabellen und die Analyseergebnisse aus der Prism-Datei in eine Origin-Arbeitsmappe.</li>
+<li><b>Datei: Prism &ouml;ffnen</b>, um die Prism-Dateien in Origin direkt zu &ouml;ffnen. <br />Ein Unterschied zwischen Drag&amp;Drop und &Ouml;ffnen ist, dass Sie beim &Ouml;ffnen die Option haben, auszuw&auml;hlen, welche Tabellen importiert werden sollen. <br /><b>Hinweis</b>: Wenn die gleiche Datei bereits in Prism ge&ouml;ffnet ist, m&uuml;ssen Sie sie in Prism schlie&szlig;en, bevor sie in Origin ge&ouml;ffnet wird.</li>
+<li><b>Daten: Mit Datei verbinden: Prism</b>, um eine Prism-Datei &uuml;ber den Prism-Konnektor zu importieren.</li>
+<li>Wenn Prism immer noch auf Ihrem PC ausgef&uuml;hrt wird, k&ouml;nnen Sie die Daten aus Prism kopieren und direkt in Origin einf&uuml;gen. Das hei&szlig;t, Sie w&auml;hlen eine Tabelle in Prism, kopieren sie, gehen dann zu Origin und zu einem regul&auml;ren (Freiform) Arbeitsblatt und f&uuml;gen die Daten ein. Origin wird die Datenstruktur automatisch erkennen und das Arbeitsblatt in den f&uuml;r die Daten korrekten Tabellentyp konvertieren.</li></ul>
+
 
 
 

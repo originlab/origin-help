@@ -1,31 +1,13 @@
-﻿<h1 class="firstHeading">Algorithms (PSS: One-Proportion Test)</h1>
+﻿<h1 class="firstHeading">Algorithmus (PSS: Test von Anteilen bei einer Stichprobe)</h1><p class='urlname' style='display: none'>PSS-One-Prop-Algorithm</p>
+<p><br /></p>
+<h3><a name="Power"></a><span class="mw-headline">Power</span></h3>
+<p><b>One-sided power</b>:<img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-25b92a494e48af4c7e393db2e960b285.png" title="H_0:p\le p_0" alt="H_0:p\le p_0" class="tex"/></p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-e0180f93d3823b96e88bb0c2c67cefe8.png" title="Power =1-F(\frac{p_0-p_1+z_{\alpha }\sqrt{\frac{(p_0(1-p_0)}{n}}}{\sqrt{\frac{p_1(1-p_1)}{n}}})" alt="Power =1-F(\frac{p_0-p_1+z_{\alpha }\sqrt{\frac{(p_0(1-p_0)}{n}}}{\sqrt{\frac{p_1(1-p_1)}{n}}})" class="tex"/></p><p><b>One-sided power</b>:<img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-d654bb0f7d419bec42335d0c0b87a4d1.png" title="H_0:p\ge p_0" alt="H_0:p\ge p_0" class="tex"/></p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-bc69fc4ee9f1c04a764c1a97844634aa.png" title="Power =F(\frac{p_0-p_1-z_{\alpha }\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})" alt="Power =F(\frac{p_0-p_1-z_{\alpha }\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})" class="tex"/></p><p><b>Two-sided power</b>: <img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-560dc438ad6c362f4eeb5fd615b12535.png" title="H_0: p=p_0\!" alt="H_0: p=p_0\!" class="tex"/></p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-67ac9d41ebdb8842f38b7dd896d44587.png" title="Power =1-F(\frac{p_0-p_1+z_{\frac{\alpha}{2}}\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})+F(\frac{p_0-p_1-z_{\frac{\alpha}{2} }\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})" alt="Power =1-F(\frac{p_0-p_1+z_{\frac{\alpha}{2}}\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})+F(\frac{p_0-p_1-z_{\frac{\alpha}{2} }\sqrt{\frac{(p_0(1-p_0)}{n} }}{\sqrt{\frac{p_1(1-p_1)}{n}}})" class="tex"/></p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"/>:Sample size</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-83878c91171338902e0fe0fb97a8c47a.png" title="p" alt="p" class="tex"/>:The true population proportion</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-300e8f5ec4863b76b9c7e4e76b349545.png" title="p_0" alt="p_0" class="tex"/>:The null proportion</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-03b632315ee5bee654b60a6bd902a249.png" title="p_1" alt="p_1" class="tex"/>:The alternative proportion</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-3abc4a58be38c24030120ec6c3464783.png" title="z_{\alpha }" alt="z_{\alpha }" class="tex"/>: The α-level upper critical value of Normal distribution</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-de1f9c66a18b90d8b99d8e28553e785f.png" title="z_{\frac{\alpha}{2}}" alt="z_{\frac{\alpha}{2}}" class="tex"/>: The α/2-level two-side critical value of Normal distribution</p><p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-800618943025315f869e4e1f09471012.png" title="F" alt="F" class="tex"/>:The cumulative distribution function of the standard normal distribution</p>
+<h3><a name="Sample_Size"></a><span class="mw-headline">Sample Size</span></h3>
+<p>Origin uses an iterative algorithm with the power equation. At each iteration,the power for a trial sample size are evaluated and iteration stops when the power evaluated reaches the values which corresponding to an integer sample size, and which is nearest to, yet greater than, the target value.</p>
 
-  <p class="urlname" style='display: none'>PSS-One-Prop-Algorithm</p>
 
-  <p>&#160;</p>
 
-  <h3><a name="Power"></a><span class="mw-headline">Power</span></h3>
 
-  <p>One-sided power:<img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-1e21701af1e2d7281c39cfb8c8eda800.png" title="H_0:P\le P_0" alt="H_0:P\le P_0" class="tex"></p>
 
-  <p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-f24fddcc59f805a55e109b70be81a0ac.png" title="Power =1-F(\frac{p_0-p_1+z_{\alpha }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" alt="Power =1-F(\frac{p_0-p_1+z_{\alpha }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" class="tex"></p>
 
-  <p>One-sided power:<img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-b93e3d06d1bd7e582e53698910ef402a.png" title="H_0:P\ge P_0" alt="H_0:P\ge P_0" class="tex"></p>
-
-  <p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-19c6ef501d815de4eaa545bd46fe0afe.png" title="Power =F(\frac{p_0-p_1-z_{\alpha }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" alt="Power =F(\frac{p_0-p_1-z_{\alpha }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" class="tex"></p>
-
-  <p>Two-sided power <img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-560dc438ad6c362f4eeb5fd615b12535.png" title="H_0: p=p_0\!" alt="H_0: p=p_0\!" class="tex"></p>
-
-  <p><img src="../images/Algorithms_(PSS_One-Proportion_Test)/math-53e313dff588a3c70ead1aef1cf7fe13.png" title="Power =1-F(\frac{p_0-p_1+z_{\alpha/2 }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})+F(\frac{p_0-p_1-z_{\alpha/2 }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" alt="Power =1-F(\frac{p_0-p_1+z_{\alpha/2 }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})+F(\frac{p_0-p_1-z_{\alpha/2 }\sqrt{(p_0(1-p_0) / n) }}{\sqrt{p_1(1-p_1)/n}})" class="tex"></p>
-
-  <p>n:sample size</p>
-
-  <p>p:the true population proportion</p>
-
-  <p>p<small>0</small>:hypothesized proportion</p>
-
-  <p>F:the cumulative distribution function of the standard normal distribution</p>
-
-  <h3><a name="sample_size"></a><span class="mw-headline">sample size</span></h3>
-
-  <p>Origin uses an iterative algorithm with the power equation. At each iteration,the power for a trial sample size are evaluated and iteration stops when the power evaluated reaches the values which corresponding to an integer sample size, and which is nearest to, yet greater than, the target value.</p>
+    

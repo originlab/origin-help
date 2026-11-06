@@ -1,163 +1,181 @@
-﻿<h1 class="firstHeading">Dialog Test auf Varianzen bei einer Stichprobe</h1>
+﻿<h1 class="firstHeading">Dialog Test auf Varianzen bei einer Stichprobe</h1><p class='urlname' style='display: none'>tTest-OneSample-Var-Dialog</p>
+<p><br /></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Test"><span class="tocnumber">3</span> <span class="toctext">Test</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">Analyse der Trennsch&auml;rfe</span></a><ul>
+<li class="toclevel-2 tocsection-5"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">4.1</span> <span class="toctext">Relevante Mindestdifferenz aufheben</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">4.2</span> <span class="toctext">Relevante Mindestdifferenz festlegen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Plots"><span class="tocnumber">5</span> <span class="toctext">Diagramme</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
 
-  <p class="urlname" style='display: none'>tTest-OneSample-Var-Dialog</p>
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog des Tests auf Varianzen bei einer Stichprobe zu &ouml;ffnen:</p>
+<ol><li>Klicken Sie bei aktivem Arbeitsblatt auf <b>Statistik: Hypothesentest: Test auf Varianzen bei einer Stichprobe</b>.</li></ol>
+<p><i>Siehe auch:</i></p>
+<ul><li><a href="../../UserGuide/Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" title="Category:One-Sample Test for Variance (OriginPro Only)">Einf&uuml;hrung: Test auf Varianzen bei einer Stichprobe</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTestVar).html" title="UserGuide:Algorithm (OneSampletTestVar)">Algorithmen: Test auf Varianzen bei einer Stichprobe</a></li></ul>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<p>Der Test auf Varianzen bei einer Stichprobe unterst&uuml;tzt mit <b>Roh</b>, <b>Zusammengefasste Daten (StdAbw.)</b> und <b>Zusammengefasste Daten (Varianz)</b> drei Eingabedatenformen.</p>
+<table class="dialogcontroltable">
 
-  <table id="toc" class="toc">
-    <tr>
-      <td>
-        <div id="toctitle">
-          <h2>Inhalt</h2>
-        </div>
+<tr>
+<th>Roh</th>
+<td>Geben Sie die Spalte mit Bereichsformat ein.<p>Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></p>
+</td></tr>
+<tr>
+<th>Zusammengefasste Daten (StdAbw.)</th>
+<td>Zusammengefasste Daten sind Standardabweichung und Stichprobenumfang, vorbereitet f&uuml;r Stichproben.<p>Geben Sie die folgenden Zusammengefassten Daten durch Auswahl von Spalten aus dem Arbeitsblatt oder manuelle Eingabe im Dialog ein.</p>
+<ul><li><b>Stichprobenname</b></li></ul>
+<dl><dd>Legen Sie den Namen der Stichprobe fest. Sie k&ouml;nnen eine Spalte als Stichprobenname festlegen oder durch Leerzeichen getrennte Zeichenketten eingeben oder sie leer lassen.</dd></dl>
+<ul><li><b>StdAbw.</b></li></ul>
+<dl><dd>Legen Sie die Standardabweichung der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben. (Die StdAbw. sollte gr&ouml;&szlig;er als 0 sein.)</dd></dl>
+<ul><li><b>Stichprobenumfang</b></li></ul>
+<dl><dd>Legen Sie die Gesamtanzahl der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben. (Der Stichprobenumfang sollte gr&ouml;&szlig;er als 0 sein.)</dd></dl>
+</td></tr>
+<tr>
+<th>Zusammengefasste Daten (Varianz)</th>
+<td>Zusammengefassten Daten ist Varianz und Stichprobenumfang, vorbereitet f&uuml;r Stichproben.<p>Geben Sie die folgenden Zusammengefassten Daten durch Auswahl von Spalten aus dem Arbeitsblatt oder manuelle Eingabe im Dialog ein.</p>
+<ul><li><b>Stichprobenname</b></li></ul>
+<dl><dd>Legen Sie den Namen der Stichprobe fest. Sie k&ouml;nnen eine Spalte als Stichprobenname festlegen oder durch Leerzeichen getrennte Zeichenketten eingeben oder sie leer lassen.</dd></dl>
+<ul><li><b>Varianz</b></li></ul>
+<dl><dd>Legen Sie die Varianz der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben.</dd></dl>
+<ul><li><b>Stichprobenumfang</b></li></ul>
+<dl><dd>Legen Sie die Gesamtanzahl der Daten fest. Sie k&ouml;nnen einen Spaltendatensatz festlegen oder durch Leerzeichen getrennte Zahlen eingeben. (Der Stichprobenumfang sollte gr&ouml;&szlig;er als 0 sein.)</dd></dl>
+</td></tr></table>
+<h2><a name="Test"></a><span class="mw-headline">Test</span></h2>
+<table class="dialogcontroltable">
 
-        <ul>
-          <li class="toclevel-1 tocsection-1"><a href="#Input"><span class="tocnumber">1</span> <span class="toctext">Eingabe</span></a></li>
+<tr>
+<th>Testen auf</th>
+<td>Optionen:<ul><li><b>Varianz</b></li>
+<li><b>Standardabweichung</b> (Standardoption)</li></ul>
+</td></tr>
+<tr>
+<th>Testvarianz</th>
+<td>Falls <b>Varianz</b> in der Auswahlliste <b>Testen auf</b> ausgew&auml;hlt ist, k&ouml;nnen Sie die zu testende hypothetische Varianz festlegen.</td></tr>
+<tr>
+<th>Test-StdAbw.</th>
+<td>Falls <b>Standardabweichung</b> in der Auswahlliste <b>Testen auf</b> ausgew&auml;hlt ist, k&ouml;nnen Sie die zu testende Standardabweichung festlegen.</td></tr>
+<tr>
+<th>Nullhypothese</th>
+<td>Die zu testende Nullhypothese (d.h. Stichprobenvarianz = <i>Testvarianz</i>).</td></tr>
+<tr>
+<th>Alternativhypothese</th>
+<td>Optionen:<dl><dd><b>Varianz &lt;&gt; <i>Testvarianz</i></b> oder <b>StdAbw. &lt;&gt; <i>Test-StdAbw.</i></b><dl><dd>Die Stichprobenvarianz/-standardabweichung unterscheidet sich von der hypothetischen Varianz/Standardabweichung.</dd></dl></dd></dl>
+<dl><dd><b>Varianz &gt; <i>Testvarianz</i></b> oder <b>StdAbw. &gt; <i>Test-StdAbw.</i></b><dl><dd>Die Stichprobenvarianz/-standardabweichung ist gr&ouml;&szlig;er als die hypothetische Varianz/Standardabweichung (einseitiger Test nach oben).</dd></dl></dd></dl>
+<dl><dd><b>Varianz &lt; <i>Testvarianz</i></b> oder <b>StdAbw. &lt; <i>Test-StdAbw.</i></b><dl><dd>Die Stichprobenvarianz/-standardabweichung ist kleiner als die hypothetische Varianz/Standardabweichung (einseitiger Test nach unten).</dd></dl></dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Das Signifikanzniveau des Tests</td></tr>
+<tr>
+<th>Kondenzintervall(e)</th>
+<td>Legen Sie fest, ob die Konfidenzintervalle f&uuml;r den Mittelwert berechnet werden.</td></tr>
+<tr>
+<th>Konfidenzniveau(s) in %</th>
+<td>Legen Sie die Konfidenzniveaus (durch Komma getrennt) fest (%). Diese Option ist nur verf&uuml;gbar, wenn <i>Konfidenzintervall(e)</i> aktiviert ist.</td></tr>
+<tr>
+<th>Testmethode</th>
+<td>W&auml;hlen Sie die Testmethode aus.<ul><li><b>Chi-Quadrat</b></li></ul>
+<dl><dd>Ist nur f&uuml;r die Normalverteilung. Gibt das Ergebnis des Chi-Quadrat-Tests mit <b>Chi-Quadrat</b>, <b>Freiheitsgraden</b> und <b>Wahrsch.&gt;Chi-Quadrat</b> und den Konfidenzintervallen f&uuml;r Varianz/Standardabweichung aus.</dd></dl>
+<ul><li><b>Bonett</b></li></ul>
+<dl><dd>F&uuml;r jegliche stetige Verteilungen. Gibt das Ergebnis des Bonett-Tests mit <b>p-Wert</b> und den Konfidenzintervallen f&uuml;r Varianz/Standardabweichung aus.</dd></dl>
+<dl><dd>Wenn die Eingabedatenform <b>Zusammengefasste Daten (StdAbw.)/(Varianz)</b> ist, wird die <b>Bonett</b>-Option deaktiviert.</dd></dl>
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Trennsch&auml;rfeanalyse</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz aufheben</span></h4>
+<table class="dialogcontroltable">
 
-          <li class="toclevel-1 tocsection-2"><a href="#Chi-Sq_Test_for_Variance"><span class="tocnumber">2</span> <span class="toctext">Chi-Quadrat-Test auf Varianz</span></a></li>
+<tr>
+<th>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die <b>Relevante Mindestdifferenz</b> nicht festgelegt ist, ist diese Option verf&uuml;gbar.<p>Die Differenzen f&uuml;r die festlegten Trennsch&auml;rfen werden ausgegeben. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Differenz(en) f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Trennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Relevante Mindestdifferenz festlegen</span></h4>
+<table class="dialogcontroltable">
 
-          <li class="toclevel-1 tocsection-3"><a href="#Plots"><span class="tocnumber">3</span> <span class="toctext">Diagramme</span></a></li>
+<tr>
+<th>Relevante Mindestdifferenz</th>
+<td>Legen Sie die Mindestdifferenz von der Testvarianz/-standardabweichung und der Zielvarianz/-standardabweichung fest. Sobald Sie einen Wert in dieses Feld eingeben, zeigt das Diagramm der Trennsch&auml;rfeanalyse den Mindeststichprobenumfang, um diese Differenz in verschiedenen Trennsch&auml;rfen zu entdecken.</td></tr>
+<tr>
+<th>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Geben Sie die Stichprobenumf&auml;nge f&uuml;r die festlegten Trennsch&auml;rfen aus. Wenn diese Option ausgew&auml;hlt ist, beeinflusst die festgelegte Trennsch&auml;rfeeinstellung die Trennsch&auml;rfe in der Trennsch&auml;rfekurve. Wenn die Option aktiviert ist, wird der Standardwert der Trennsch&auml;rfe verwendet.</p>
+</td></tr>
+<tr>
+<th>Trennsch&auml;rfe(n)</th>
+<td>Wenn die Option <b>Stichprobenumfang/-umf&auml;nge f&uuml;r festgelegte Trennsch&auml;rfe</b> aktiviert ist, k&ouml;nnen Sie in dieses Bearbeitungsfeld die Zieltrennsch&auml;rfewerte, getrennt durch ein Leerzeichen, eingeben. Standardtrennsch&auml;rfewerte sind <i>60 %, 70 %, 80 % und 90 %</i>.</td></tr>
+<tr>
+<th>Trennsch&auml;rfe basierend auf Testdaten</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe f&uuml;r den Stichprobenumfang der Testdaten. (Wahrscheinlichkeit, die Nullhypothese zur&uuml;ckzuweisen, wenn diese falsch ist)</p>
+</td></tr>
+<tr>
+<th>Hypothetische Trennsch&auml;rfe</th>
+<td>Wenn die Option <b>Relevante Mindestdifferenz</b> festgelegt ist, wird diese Option verf&uuml;gbar.<p>Berechnen Sie die Trennsch&auml;rfe des Tests f&uuml;r verschiedene Stichprobenumf&auml;nge. Wenn diese Option aktiviert ist, wird die entsprechende Kurve zur Trennsch&auml;rfekurve hinzugef&uuml;gt.</p>
+</td></tr>
+<tr>
+<th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
+<td>Wenn <b>Relevante Mindestdifferenz</b> und <b>Hypothetische Trennsch&auml;rfe</b> aktiviert ist, wird diese Option verf&uuml;gbar.<p>Legen Sie den/die hypothetischen Stichprobenumfang/-umf&auml;nge f&uuml;r die Berechnung der Trennsch&auml;rfe fest.</p>
+</td></tr></table>
+<h2><a name="Plots"></a><span class="mw-headline">Diagramme</span></h2>
+<table class="dialogcontroltable">
 
-          <li class="toclevel-1 tocsection-4"><a href="#Outputs"><span class="tocnumber">4</span> <span class="toctext">Ausgabe</span></a></li>
+<tr>
+<th>Histogramm</th>
+<td>Zeichnen Sie ein Histogramm der Stichprobendaten.</td></tr>
+<tr>
+<th>Boxdiagramm</th>
+<td>Zeichnen ein Boxdiagramm der Stichprobendaten.<p><b>Hinweis:</b> Wenn in den Datens&auml;tzen Ausrei&szlig;er erkannt werden, wird eine Fu&szlig;note unter dem Boxdiagramm gezeigt, um Sie darauf hinzuweisen, sie zu untersuchen. Wenn Sie die Ausrei&szlig;er ausschlie&szlig;en m&ouml;chten, k&ouml;nnen Sie auf die dreieckige Schaltfl&auml;che am Ende der Fu&szlig;note klicken, um Ausrei&szlig;er zu markieren und neu zu berechnen.</p>
+</td></tr>
+<tr>
+<th>Diagramme des gleichen Typs in einem Graph anordnen</th>
+<td>Ordnen Sie die Diagramme des gleichen Typs in einer Grafik an. Beachten Sie, dass bei Histogrammen die Layer vertikal angeordnet werden; bei Boxdiagrammen werden sie horizontal angeordnet.</td></tr></table>
+<table class="note">
 
-          <li class="toclevel-1 tocsection-5"><a href="#Results_Log_Output"><span class="tocnumber">5</span> <span class="toctext">Ausgabe Ergebnisprotokoll</span></a></li>
+<tr>
+<td><b>Hinweis:</b> Wenn die Eingabedatenform <b>Zusammengefasste Daten (StdAbw.)/(Varianz)</b> ist, werden die obigen Zeichnungen nicht ausgegeben.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<table class="dialogcontroltable">
 
-          <li class="toclevel-1 tocsection-6"><a href="#Recalculate"><span class="tocnumber">6</span> <span class="toctext">Neu berechnen</span></a></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+<tr>
+<th>Ausgabe Ergebnisprotokoll</th>
+<td>
+<p>Legen Sie die Ergebnisse fest, die im Ergebnisfenster ausgegeben werden.</p>
+</td></tr>
+<tr>
+<th>Grafischer Zusammenfassungsbericht</th>
+<td>Erstellen Sie einen Zusammenfassungsbericht, einschlie&szlig;lich Balken f&uuml;r den p-Wert und die Effektgr&ouml;&szlig;e sowie ein Datenverteilungsdiagramm. Es werden auch die Ergebnistabellen an das Diagramm angeh&auml;ngt, um die statistischen Werte zu zeigen.<p>Die Fu&szlig;note nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p>
+</td></tr>
+<tr>
+<th>Grafischer Bericht der Trennsch&auml;rfeanalyse</th>
+<td>Legen Sie fest, ob der grafische Bericht der Trennsch&auml;rfeanalyse angezeigt werden soll. Die Trennsch&auml;rfekurve zeigt, wie die statistische Trennsch&auml;rfe des Tests sich &auml;ndert, wenn die Differenz zwischen den Anteilen wechselt. Die Trennsch&auml;rfe ist die Wahrscheinlichkeit, dass die Nullhypothese verworfen wird, wenn die wahre Differenz sich von 0 unterscheidet.<p>Es wird eine Fu&szlig;note nach dem Trennsch&auml;rfekurvendiagramm hinzugef&uuml;gt, um die Diagnoseergebnisse der Trennsch&auml;rfeanalyse zu zeigen. Eine Trennsch&auml;rfe von 80 % wird gemeinhin als ausreichend betrachtet.</p>
+</td></tr>
+<tr>
+<th>Zeichnungsdaten ausgeben</th>
+<td>Legen Sie ein Arbeitsblatt f&uuml;r die Ausgabe der gezeichneten Daten fest (Origin erzeugt beim Erstellen von Zeichnungen tabellarische Daten).</td></tr>
+<tr>
+<th>Ergebnisse ausgeben</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr></table>
+<table class="note">
 
-  <h2><span class="mw-headline" id="Input">Eingabe</span></h2>
+<tr>
+<td><b>Hinweis</b>:<ul><li>Wenn die Eingabedatenform <b>Zusammengefasste Daten (StdAbw.)/(Varianz)</b> ist, wird der <b>grafische Zusammenfassungsbericht</b> nicht ausgegeben.</li>
+<li>Wenn mehrere Daten eingegeben werden (sowohl <b>Roh</b> als auch <b>Zusammengefassten Daten</b>), wird der <b>grafische Bericht der Trennsch&auml;rfeanalyse</b> nicht ausgegeben.</li>
+<li>Wenn die Eingabedatenform <b>Roh</b> ist, wird die Tabelle <b>Maskierte Daten</b> und <b>Schlechte Daten (fehlender Wert)</b> im Berichtsblatt angezeigt.</li></ul>
+</td></tr></table>
 
-  <p>Der Eingabedatenbereich</p>
 
-  <h2><span class="mw-headline" id="Chi-Sq_Test_for_Variance">Chi-Quadrat-Test auf Varianz</span></h2>
 
-  <p>Die Chi-Quadrat-Methode wird verwendet, um zu testen, ob die Varianz gleich einem festgelegten Wert ist.</p>
 
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Testvarianz</th>
 
-      <td>Die zu testende hypothetische Varianz</td>
-    </tr>
 
-    <tr>
-      <th>Nullhypothese</th>
 
-      <td>Die zu testende Nullhypothese</td>
-    </tr>
-
-    <tr>
-      <th>Alternativhypothese</th>
-
-      <td>
-        Optionen:
-
-        <dl>
-          <dd><b>Varianz &lt;&gt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"></b></dd>
-        </dl>
-
-        <p>Beidseitiger Test, mit dem bestimmt werden kann, ob die Varianz der Stichprobe sich von einer gegebenen hypothetischen Varianz unterscheidet.</p>
-
-        <dl>
-          <dd><b>Varianz &gt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"></b></dd>
-        </dl>
-
-        <p>Oberer Test, mit dem bestimmt werden kann, ob die Varianz der Stichprobe größer ist als die einer gegebenen hypothetischen Varianz.</p>
-
-        <dl>
-          <dd><b>Varianz &lt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"></b></dd>
-        </dl>
-
-        <p>Unterer Test, mit dem bestimmt werden kann, ob die Varianz der Stichprobe größer ist als die einer gegebenen hypothetischen Varianz.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <th>Signifikanzniveau</th>
-
-      <td>Legt das Signifikanzniveau des Tests fest.</td>
-    </tr>
-
-    <tr>
-      <th>Konfidenzintervall(e)</th>
-
-      <td>Legt fest, ob die Konfidenzintervalle der Stichprobenvarianz berechnet werden sollen.</td>
-    </tr>
-
-    <tr>
-      <th>Konfidenzniveau(s) in %</th>
-
-      <td>Legt die Konfidenzniveaus (getrennt durch Leerzeichen) fest. Diese Option ist nur verfügbar, wenn <i>Konfidenzintervall(e)</i> aktiviert ist.</td>
-    </tr>
-  </table>
-
-  <h2><span class="mw-headline" id="Plots">Diagramme</span></h2>
-
-  <p>Legt fest, welche Diagramme ausgegeben werden.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Histogramm</th>
-
-      <td>Legt fest, ob das Histogramm der Stichprobe gezeichnet wird.</td>
-    </tr>
-
-    <tr>
-      <th>Boxdiagramm</th>
-
-      <td>Entscheidet, ob das Boxdiagramm der Stichprobe gezeichnet wird.</td>
-    </tr>
-
-    <tr>
-      <th>Zeichnungen des gleichen Typs in einem Diagramm anordnen</th>
-
-      <td>Entscheiden Sie, ob die Zeichnungen des gleichen Typs in einerm Diagramm angezeigt werden sollen. Beachten Sie, dass die Layer für Histogramme vertikal angeordnet werden; für Boxdiagramme werden sie horizontal angeordnet.</td>
-    </tr>
-  </table>
-
-  <h2><span class="mw-headline" id="Outputs">Ausgabe</span></h2>
-
-  <p>Passt die Ausgabeergebnisse dieser Analyse benutzerdefiniert an.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Ausgabe der Diagrammdaten</th>
-
-      <td>Legt das Ausgabearbeitsblatt des Diagramms fest.</td>
-    </tr>
-
-    <tr>
-      <th>Ergebnisausgabe</th>
-
-      <td>Legt das Ausgabearbeitsblatt für Testergebnisse fest.</td>
-    </tr>
-  </table>
-
-  <h2><span class="mw-headline" id="Results_Log_Output">Ausgabe Ergebnisprotokoll</span></h2>
-
-  <p>Ist dieses Kontrollkästchen aktiviert, wird das Ergebnis im Ergebnisfenster ausgegeben.</p>
-
-  <h2><span class="mw-headline" id="Recalculate">Neu berechnen</span></h2>
-
-  <p>Legt fest, wie der Wert neu berechnet und aktualisiert wird, wenn sich die Eingangsdaten ändern.</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Kein</th>
-
-      <td>Die Ausgabe wird nicht mit den Quelldaten verbunden, und Änderungen an den Quelldaten führen zu keiner Aktualisierung der Ergebnisspalten.</td>
-    </tr>
-
-    <tr>
-      <th>Auto</th>
-
-      <td>Die Ergebnisse werden automatisch aktualisiert, wenn sich die Quelldaten ändern.</td>
-    </tr>
-
-    <tr>
-      <th>Manuell</th>
-
-      <td>Die Ausgabe wird nicht automatisch aktualisiert, wenn sich die Quelldaten ändern. Der Anwender muss die Aktualisierung selbst veranlassen.</td>
-    </tr>
-  </table>
+    

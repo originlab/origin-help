@@ -1,0 +1,97 @@
+﻿<h1 class="firstHeading">Western Blot</h1><p class='urlname' style='display: none'>Western-Blot</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Support_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Western_Blot_Data_Structure"><span class="tocnumber">2</span> <span class="toctext">Western-Blot-Datenstruktur</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#Western_Blot_with_Raw_Band_Instensity"><span class="tocnumber">2.1</span> <span class="toctext">Western Blot mit roher Bandintensit&auml;t</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Western_Blot_with_Reference.2FTotal_Protein"><span class="tocnumber">2.2</span> <span class="toctext">Western Blot mit Referenzprotein/Gesamtproteinmenge</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Wetern_Blot_Dialog_Box"><span class="tocnumber">3</span> <span class="toctext">Dialog Western Blot</span></a><ul>
+<li class="toclevel-2 tocsection-6"><a href="#Input"><span class="tocnumber">3,1</span> <span class="toctext">Eingabe</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Tests"><span class="tocnumber">3,2</span> <span class="toctext">Tests</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Plots"><span class="tocnumber">3.3</span> <span class="toctext">Zeichnungen</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Support_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p><b>Um Western-Blot-Assays zu analysieren:</b></p>
+<ul>
+<li><b>Mit einer Vorlage</b><ol><li>W&auml;hlen Sie im Men&uuml; <b>Hilfe: Startdialog</b>, um den Dialog <b>Start</b> zu &ouml;ffnen.</li>
+<li>Gehen Sie zur Registerkarte <b>Labor-Assays</b>, erweitern Sie den Zweig <b>Western Blot</b> und w&auml;hlen Sie die gew&uuml;nschte Datenstruktur. Es wird eine Vorlage mit Anleitung ge&ouml;ffnet.</li></li></ol>
+<li><b>Mit Ihrem eigenen Arbeitsblatt</b><ol><li>Geben Sie Ihre Daten in einem Arbeitsblatt ein.</li>
+<li>W&auml;hlen Sie im Men&uuml; <b>Statistik: Labor-Assays: Western Blot</b>, um den Analysedialog zu &ouml;ffnen.</li></ol>
+</li></ul>
+<h2><a name="Western_Blot_Data_Structure"></a><span class="mw-headline">Western-Blot-Datenstruktur</span></h2>
+<h3><a name="Western_Blot_with_Raw_Band_Instensity"></a><span class="mw-headline">Western Blot mit roher der Bandintensit&auml;t</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Raw Band Instensity Data.png" src="../images/Western_Blot/Western_Blot_with_Raw_Band_Instensity_Data.png" width="418"  /></a></dd></dl>
+<p>Die Zielwerte der Intensit&auml;t f&uuml;r verschiedenen zu analysierenden Behandlungen.</p>
+<ul><li>Jede Spalte ist eine Versuchsgruppe wie <b>Kontrolle</b>, <b>BehandlungA</b> oder <b>BehandlungB</b>.</li>
+<li>Jede Zeile ist eine unabh&auml;ngige biologische Replikation. Es sind typischerweise mindestens 3 Replikationen erforderlich. Falls technische Replikationen gemessen wurden, sollten sie gemittelt oder auf andere Weise zu einem Wert pro biologische Stichprobe zusammengefasst werden, bevor sie hier eingegeben werden.</li>
+<li>Dieser Arbeitsablauf verifiziert NICHT, ob die Werte bereits hinsichtlich einer Referenz normalisiert wurden. Falls die Referenznormalisierung erforderlich ist, normalisieren Sie vor dem Import oder verwenden Sie den <a href="#Western_Blot_with_Reference.2FTotal_Protein">Arbeitsablauf &quot;Referenzprotein/Gesamtproteinmenge&quot;</a>.</li>
+<li>Alle Spalten m&uuml;ssen numerische Werte enthalten. Text, leere Zellen oder negative graue Werte werden als fehlend behandelt und aus der Analyse ausgeschlossen.</li></ul>
+<h3><a name="Western_Blot_with_Reference.2FTotal_Protein"></a><span class="mw-headline">Western Blot mit Referenzprotein/Gesamtproteinmenge</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Reference Data.png" src="../images/Western_Blot/Western_Blot_with_Reference_Data.png" width="464"  /></a></dd></dl>
+<p>Die Proteintypen und ihre zu analysierenden Bandintensit&auml;tswerte Alle Ziel- und Referenz-Proteine sind in einer Spalte gestapelt.</p>
+<ul><li>Eine Textspalte <b>Protein</b> enth&auml;lt die Beschriftungen der verschiedenen Proteintypen wie <i>GAPDH</i>, <i>ACTB</i>, <i>BAX</i> und <i>BCL2</i>. Jede Replikattion des Zielproteins muss Zeile f&uuml;r Zeile mit der Replikation des Referenzproteins innerhalb derselben Versuchsgruppe &uuml;bereinstimmen. Die Reihenfolge der Ziel- und Referenzproteine muss in allen Gruppenspalten einheitlich sein. Wenn zum Beispuel die Zeilen 1&ndash;3 <i>BAX</i>- Replikationen, die Zeilen 4&ndash;6 <i>BCL2</i>- und die Zeilen 7&ndash;9 <i>GAPDH</i>-Replikationen sind, dann sollte die erste Zielreplikation in jeder Gruppe mit der ersten <i>GAPDH</i>-Replikation gepaart werden und so weiter.</li>
+<li>Neben <b>Protein</b> enthalten alle numerischen Spalten Ziel- und Referenzintensit&auml;tswerte in verschiedenen Versuchsgruppen wie <b>Kontrolle</b>, <b>BehandlungA</b> oder <b>BehandlungB</b>.</li>
+<li>Jede Zeile ist eine unabh&auml;ngige biologische Replikation. Es sind typischerweise mindestens 3 Replikationen erforderlich. Falls technische Replikationen gemessen wurden, sollten sie gemittelt oder auf andere Weise zu einem Wert pro biologische Stichprobe zusammengefasst werden, bevor sie hier eingegeben werden.</li></ul>
+<h2><a name="Wetern_Blot_Dialog_Box"></a><span class="mw-headline">Dialog Western Blot</span></h2>
+<h3><a name="Input"></a><span class="mw-headline">Eingabe</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Input Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Input_Tab.png" width="747"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="15%">Eingabe</th>
+<td>Die zu analysierenden Bandintensit&auml;tswerte</td></tr>
+<tr>
+<th>Identifizierer</th>
+<td>Beim <a href="#Western_Blot_with_Reference.2FTotal_Protein">Arbeitsablauf &quot;Referenzprotein/Gesamtproteinmenge&quot;</a> w&auml;hlen Sie die Spalte <b>Protein</b> aus, die zur Identifikation dient, ob jede Zeile ein Ziel- oder Referenzprotein ist.</td></tr>
+<tr>
+<th>Transformation</th>
+<td>Transformationen werden vor den statistischen Tests angewendet.<ul><li><b>Nach Referenz normalisieren</b></li></ul>
+<dl><dd>Verf&uuml;gbar f&uuml;r den <a href="#Western_Blot_with_Reference.2FTotal_Protein">Arbeitsablauf &quot;Referenzprotein/Gesamtproteinmenge&quot;</a>. W&auml;hlen Sie eine stabile Ladungsreferenz wie <i>GAPDH</i>, <i>ACTB</i>, <i>TUBA1A</i> oder <i>TUBB GAPDH</i>.</dd>
+<dd>Normalisieren Sie das Zielprotein mit</dd>
+<dd><img src="../images/Western_Blot/math-0cb35ac386f9d33b8d5170c4ff842d05.png" title="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}" alt="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}" class="tex"/> innerhalb der gleichen Versuchsgruppenspalte.</dd></dl>
+<ul><li><b>Relative Expression im Vergleich zur Kontrollgruppe</b></li></ul>
+<dl><dd><b>Kontrolle</b> wird als Basislinie verwendet. Werte werden neu skaliert, sodass der <b>Kontroll</b>mittelwert 1 (100 %) wird und die <b>Behandlungs</b>gruppen aks &Auml;nderungsfaktor relativ zu ihm angegeben werden. Diese Transformation entfernt nicht die biologische Streuung und skaliert nur den Gruppenmittelwert zur Interpretation neu.</dd></dl>
+</td></tr>
+<tr>
+<th>Signifikanzniveau</th>
+<td>Legen Sie den Schwellenwert fest, um die statistische Signifikanz zu bewerten.</td></tr>
+<tr>
+<th>Mehrfache Vergleiche</th>
+<td>&Auml;ndern Sie die Vergleichsmenge.<ul><li><b>Alle paarweise</b></li></ul>
+<dl><dd>Vergleichen Sie die <b>Kontroll</b>- und <b>Behandlung</b>sgruppen miteinander. Die geeignete Post-hoc-Methode auf der Registerkarte &bdquo;Tests&ldquo; sollte je nach Annahmen bez&uuml;glich Normalverteilung und Varianz der Tukey-, Games-Howell- oder Dunn-Test sein.</dd></dl>
+<ul><li><b>Mit Kontrollwert vergleichen</b></li></ul>
+<dl><dd>Vergleichen Sie jede <b>Behandlung</b>sgruppe nur mit der <b>Kontroll</b>gruppe. Dies f&uuml;hrt weniger Tests durch und kann eine h&ouml;here Leistungsf&auml;higkeit f&uuml;r das &Uuml;berpr&uuml;fen vieler <b>Behandlungen</b> haben. Der passende Post-hoc-Ansatz auf der Registerkarte Tests ist typischerweise Dunnetts Test.</dd></dl>
+</td></tr></table>
+<h3><a name="Tests"></a><span class="mw-headline">Tests</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Tests Tab.png" src="../images/Western_Blot/850px-Western_Blot_Dialog_Tests_Tab.png" width="850"   /></a></dd></dl>
+<p><b>Schritt 1: Test auf Normalverteilung</b></p><p>&Uuml;berpr&uuml;fen Sie, ob jede Gruppe einer Normalverteilung folgt oder nicht. Wenn die Anzahl der Replikationen &lt; 5 ist, wird Normalverteilung angenommen und dieser Test &uuml;bersprungen.</p>
+<dl><dd><ul><li><a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Shapiro-Wilk_normality_test" title="UserGuide:Algorithm (Normality)">Shapiro-Wilk</a>: Standard f&uuml;r kleine Stichprobenumf&auml;nge (z. B. 3-10 Replikationen).</li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Anderson-Darling_Test" title="UserGuide:Algorithm (Normality)">Anderson-Darling</a> oder <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#D.27Agostino-K_Squared" title="UserGuide:Algorithm (Normality)">D&apos;Agostino-Pearson K2</a>: N&uuml;tzlich f&uuml;r gr&ouml;&szlig;er Stichproben; kann geringf&uuml;gige Abweichungen als signifikant kennzeichnen.</li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Kolmogorov-Smirnov_normality_test" title="UserGuide:Algorithm (Normality)">Kolmogorov-Smirnov</a>: weniger geeignet f&uuml;r kleine Stichproben oder aneinandergrenzende Graustufenwerte.</li></ul></dd></dl>
+<p><br /> <b>Schritt 2: Test auf gleiche Varianzen (nur parametrischer Zweig)</b></p><p>Wenn alle Gruppen normalverteilt sind, wird der <b>Test auf gleiche Varianzen</b> durchgef&uuml;hrt, um festzustellen, ob die Varianzen aller Gruppen gleich sind. Siehe den <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Homogeneity_of_Variance" title="UserGuide:One Way ANOVA Algorithms">Algorithmus hier</a>.</p>
+<dl><dd><ul><li>Mehrfache Vergleiche nach Bonett</li>
+<li>Brown-Forsythe: Eine sichere Standardwahl bei kleinen Stichprobenumf&auml;ngen, da sie robuster gegen&uuml;ber einer Nicht-Normalverteilung (insbesondere bei Stichprobenumf&auml;ngen &lt; 5) und Ausrei&szlig;ern ist.</li>
+<li>Levene ||</li>
+<li>Levene ()<sup>2</sup></li>
+<li>Bartlett: Kann angemessen sein, wenn die Normalverteilung gut belegt ist, ist jedoch bei kleinen oder verrauschten Stichproben weniger robust.</li></ul></dd></dl>
+<ul>
+<li>Wenn die Varianzen aller Gruppen gleich ist, werden die <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Theory_of_One-Way_ANOVA" title="UserGuide:One Way ANOVA Algorithms"><b>einfache ANOVA</b></a> + der <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Multiple_Means_Comparisons" title="UserGuide:One Way ANOVA Algorithms"><b>Mittelwertevergleich</b></a> durchgef&uuml;hrt.<li>Wenn sie nicht gleich sind, werden die <b>ANOVA nach Welch</b> + <b>Games-Howell</b> durchgef&uuml;hrt.</li>
+</ul>
+<p><br /> <b>Schritt 3: Nichtparametrischer Zweig</b></p><p>Wenn eine oder mehr Gruppen nicht normal verteilt sind, werden die <b>nichtparametrische ANOVA</b> + <b>Dunns Test</b> durchgef&uuml;hrt.</p>
+<dl><dd><ul><li><a href="../../UserGuide/UserGuide/Algorithm_(kwanova).html" title="UserGuide:Algorithm (kwanova)">Kruskal-Wallis</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(median).html" title="UserGuide:Algorithm (median)">Moods Median</a></li></ul></dd></dl>
+<h3><a name="Plots"></a><span class="mw-headline">Zeichnungen</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Plots Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Plots_Tab.png" width="769"  /></a></dd></dl>
+<p>Steuert das Aussehen des Diagramms f&uuml;r mehrfache Vergleiche. Jede &Auml;nderung wird in der Live-Vorschau auf der rechten Seite wiedergegeben.</p>
+
+
+
+
+
+
+    

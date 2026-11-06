@@ -1,145 +1,82 @@
-﻿<h1 class="firstHeading">The (PSS) One-Way ANOVA Dialog Box</h1>
+﻿<h1 class="firstHeading">Dialog Einfache ANOVA</h1><p class='urlname' style='display: none'>PSS-ANOVA-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">Ausgabe Ergebnisprotokoll</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Calculate"><span class="tocnumber">3</span> <span class="toctext">Berechnen</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Test_Specification"><span class="tocnumber">4</span> <span class="toctext">Testspezifikationen</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Options"><span class="tocnumber">5</span> <span class="toctext">Optionen</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Output_Results"><span class="tocnumber">6</span> <span class="toctext">Ergebnisausgabe</span></a></li>
+</ul>
+</div>
 
-  <p class='urlname' style='display: none'>PSS-ANOVA-Dialog</p>
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<ul><li><a href="../../UserGuide/Category/(PSS)_One-Way_ANOVA.html" title="Category:(PSS) One-Way ANOVA">Einf&uuml;hrung: Einfache ANOVA</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm_(PSS_ANOVA1).html" title="UserGuide:Algorithm (PSS ANOVA1)">Algorithmen: Einfache ANOVA</a></li>
+<li><a class="external text" href="../../Tutorial/Tutorial/Power_and_Sample_Size.html#.28PSS.29One-Way_ANOVA">Tutorial: Einfache ANOVA</a></li></ul>
+<h2><a name="Results_Log_Output"></a><span class="mw-headline">Ausgabe Ergebnisprotokoll</span></h2>
+<p>Aktivieren Sie das Kontrollk&auml;stchen, um die Ergebnisse im Ergebnisprotokoll auszugeben.</p>
+<h2><a name="Calculate"></a><span class="mw-headline">Berechnen</span></h2>
+<table class="dialogcontroltable">
 
-  <div id="toc" class="toc">
-    <div id="toctitle">
-      <h2>Contents</h2>
-    </div>
+<tr>
+<th>Trennsch&auml;rfe</th>
+<td>Die Trennsch&auml;rfe f&uuml;r den festgelegten Stichprobenumfang wird berechnet.</td></tr>
+<tr>
+<th>Stichprobenumfang</th>
+<td>Der Stichprobenumfang f&uuml;r eine vorgeschlagene Trennsch&auml;rfe wird berechnet.</td></tr></table>
+<h2><a name="Test_Specification"></a><span class="mw-headline">Testspezifikationen</span></h2>
+<table class="dialogcontroltable">
 
-    <ul>
-      <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<tr>
+<th># der Behandlungen</th>
+<td>Die Anzahl der Behandlungen (Gruppen)</td></tr>
+<tr>
+<th>Differenz der Gruppenmittelwerte festlegen mit</th>
+<td>W&auml;hlen Sie aus, welcher Wert verwendet werden sollte, um die Differenz der Gruppenmittelwerte festzulegen.</td></tr>
+<tr>
+<th>CSS des Mittelwerts</th>
+<td>Korrigierte Quadratsumme der Mittelwerte Unterst&uuml;tzt die Eingabe von mehreren Werten getrennt durch Leerzeichen.</td></tr>
+<tr>
+<th>Maximale Differenz zwischen Mittelwerten</th>
+<td>Die Differenz zwischen dem kleinsten Gruppenmittelwert und dem gr&ouml;&szlig;ten Gruppenmittelwert Unterst&uuml;tzt die Eingabe von mehreren Werten getrennt durch Leerzeichen.</td></tr>
+<tr>
+<th>Standardabweichung</th>
+<td>Quadratwurzel des MSE (Mittlerer quadratischer Fehler)</td></tr>
+<tr>
+<th>Alpha</th>
+<td>Wahrscheinlichkeit der Zur&uuml;ckweisung der Nullhypothese, wenn es wahr ist</td></tr>
+<tr>
+<th>Hypothetische Trennsch&auml;rfe(n)</th>
+<td>Legen Sie eine mit Leerzeichen getrennte Liste der hypothetischen Trennsch&auml;rfe(n) fest. Nur verf&uuml;gbar, wenn ein Stichprobenumfang berechnet wird.</td></tr>
+<tr>
+<th>Hypothetische/r Stichprobenumfang/-umf&auml;nge</th>
+<td>Legen Sie eine durch Leerzeichen getrennte Liste der hypothetischen Stichprobenumf&auml;nge fest. Nur verf&uuml;gbar, wenn eine Trennsch&auml;rfe berechnet wird.</td></tr></table>
+<h2><a name="Options"></a><span class="mw-headline">Optionen</span></h2>
+<p>Die zu verwendenden Bedienelemente, wenn zus&auml;tzliche Werte f&uuml;r Trennsch&auml;rfe und Stichprobenumfang durch den Arbeitsblattdatensatz zur Verf&uuml;gung stehen:</p><p>Beim Berechnen der Trennsch&auml;rfe (<b>Berechnen</b> = <b>Trennsch&auml;rfe</b>):</p>
+<table class="dialogcontroltable">
 
-      <li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">Results Log Output</span></a></li>
+<tr>
+<th>Weitere Hypothetische Stichprobenumf&auml;nge</th>
+<td>Aktivieren Sie diese Option, um die Eingabeelemente <b>Spalte der Hypothetischen Stichprobenumf&auml;nge</b> zu aktivieren.</td></tr>
+<tr>
+<th>Spalte der Hypothetischen Stichprobenumf&auml;nge</th>
+<td>Legen Sie die Spalte der Werte f&uuml;r den Stichprobenumfang fest. Nur verf&uuml;gbar, wenn <b>Weitere Hypothetische Stichprobenumf&auml;nge</b> aktiviert ist.</td></tr></table>
+<p>Beim Berechnen des Stichprobenumfangs (<b>Berechnen</b> = <b>Stichprobenumfang</b>):</p>
+<table class="dialogcontroltable">
 
-      <li class="toclevel-1 tocsection-3"><a href="#Calculate"><span class="tocnumber">3</span> <span class="toctext">Calculate</span></a></li>
+<tr>
+<th>Weitere Hypothetische Trennsch&auml;rfen</th>
+<td>Aktivieren Sie diese Option, um die Eingabeelemente <b>Spalte der Hypothetischen Stichprobenumf&auml;nge</b> zu aktivieren.</td></tr>
+<tr>
+<th>Spalte Hypothetische Trennsch&auml;rfe(n)</th>
+<td>Legen Sie die Spalte f&uuml;r die Trennsch&auml;rfewerte fest. Nur verf&uuml;gbar, wenn <b>Weitere Hypothetische Trennsch&auml;rfe(n)</b> aktiviert ist.</td></tr></table>
+<h2><a name="Output_Results"></a><span class="mw-headline">Ergebnisse ausgeben</span></h2>
+<p>Bestimmen Sie, wo das auszugebende Berichtsblatt erstellt wird. Weitere Einzelheiten finden Sie unter: <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="UserGuide:Analysis Report Sheets and Columns">Analyseberichtsbl&auml;tter</a>.</p>
 
-      <li class="toclevel-1 tocsection-4"><a href="#Test_Specification"><span class="tocnumber">4</span> <span class="toctext">Test Specification</span></a></li>
 
-      <li class="toclevel-1 tocsection-5"><a href="#Options"><span class="tocnumber">5</span> <span class="toctext">Options</span></a></li>
 
-      <li class="toclevel-1 tocsection-6"><a href="#Output_Results"><span class="tocnumber">6</span> <span class="toctext">Output Results</span></a></li>
-    </ul>
-  </div>
 
-  <h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
 
-  <ul>
-    <li><a href="../../UserGuide/Category/(PSS)_One-Way_ANOVA.html" title="Category:(PSS) One-Way ANOVA">Introduction to (PSS) One-Way ANOVA</a></li>
 
-    <li><a href="../../UserGuide/UserGuide/Algorithm_(PSS_ANOVA1).html" title="UserGuide:Algorithm (PSS ANOVA1)">Algorithms: (PSS) One-Way ANOVA</a></li>
-
-    <li><a class="external text" href="../../Tutorial/Tutorial/Power_and_Sample_Size.html#.28PSS.29One-Way_ANOVA">Tutorial on (PSS) One-Way ANOVA</a></li>
-  </ul>
-
-  <h2><a name="Results_Log_Output"></a><span class="mw-headline">Results Log Output</span></h2>
-
-  <p>Select check box to output results to the Results Log.</p>
-
-  <h2><a name="Calculate"></a><span class="mw-headline">Calculate</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>Power</th>
-
-      <td>Compute power for specified sample size,</td>
-    </tr>
-
-    <tr>
-      <th>Sample Size</th>
-
-      <td>Compute sample size for proposed power.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Test_Specification"></a><span class="mw-headline">Test Specification</span></h2>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th># of Treatments</th>
-
-      <td>The number of treatments (groups).</td>
-    </tr>
-
-    <tr>
-      <th>Specify Group Means Difference by</th>
-
-      <td>Select which value should be used to specify the group means difference.</td>
-    </tr>
-
-    <tr>
-      <th>CSS of Means</th>
-
-      <td>Corrected sum of squares of means.</td>
-    </tr>
-
-    <tr>
-      <th>Maximum Difference between Means</th>
-
-      <td>The difference between the smallest group mean and the largest group mean.</td>
-    </tr>
-
-    <tr>
-      <th>Standard Deviation</th>
-
-      <td>Square root of MSE (Mean Squared Error).</td>
-    </tr>
-
-    <tr>
-      <th>Alpha</th>
-
-      <td>Probability of rejecting the null hypothesis when it is true.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Power(s)</th>
-
-      <td>Specify space-separated list of hypothetical power(s). Only available when sample size is calculated.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Sample Size(s)</th>
-
-      <td>Specify space-separated list of hypothetical sample size (sample size of each group). Only available when power is calculated.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Options"></a><span class="mw-headline">Options</span></h2>
-
-  <p>Controls to be used when supplying additional power or sample size values by worksheet dataset:</p>
-
-  <p>When calculating power (<b>Calculate</b> = <b>Power</b>):</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>More Hypothetical Sample Size(s)</th>
-
-      <td>Select to activate the <b>Hypothetical Sample Size(s) Column</b> input controls.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Sample Size(s) Column</th>
-
-      <td>Specify column of sample size values. Available when <b>More Hypothetical Sample Size(s)...</b> is selected.</td>
-    </tr>
-  </table>
-
-  <p>When calculating sample size (<b>Calculate</b> = <b>Sample Size</b>):</p>
-
-  <table class="dialogcontroltable">
-    <tr>
-      <th>More Hypothetical Power(s)</th>
-
-      <td>Select to activate the <b>Hypothetical Power(s) Column</b> input controls.</td>
-    </tr>
-
-    <tr>
-      <th>Hypothetical Power(s) Column</th>
-
-      <td>Specify column of power values. Available when <b>More Hypothetical Power(s)...</b> is selected.</td>
-    </tr>
-  </table>
-
-  <h2><a name="Output_Results"></a><span class="mw-headline">Output Results</span></h2>
-
-  <p>Determine where to create the output report worksheet. For more information, see <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html" title="UserGuide:Analysis Report Sheets and Columns">Analysis Report Sheets</a>.</p>
+    

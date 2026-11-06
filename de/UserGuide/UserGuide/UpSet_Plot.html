@@ -1,0 +1,106 @@
+﻿<h1 class="firstHeading">UpSet-Diagramm</h1><p class='urlname' style='display: none'>UpSet-Plot</p><a  class="image"><img alt="UpSet Plot 01.png" src="../images/UpSet_Plot/750px-UpSet_Plot_01.png" width="750"   /></a><div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Datenanforderungen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Diagramm erstellen</span></a><ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_plot_upset_Dialog_Box"><span class="tocnumber">2.1</span> <span class="toctext">Der Dialog plot_upset</span></a><ul>
+<li class="toclevel-3 tocsection-4"><a href="#General_tab"><span class="tocnumber">2.1.1</span> <span class="toctext">Registerkarte Allgemein</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Sort_and_Filter_tab"><span class="tocnumber">2.1.2</span> <span class="toctext">Registerkarte Sortieren und Filtern</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Additional_Plots_tab"><span class="tocnumber">2.1.3</span> <span class="toctext">Registerkarte Zus&auml;tzliche Zeichnungen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Vorlage</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Hinweise</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">Versionsinformationen</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
+<p>W&auml;hlen Sie eine Spalte, die zu einer abgegrenzten Menge geh&ouml;rt, oder zwei oder mehrere kategoriale oder bin&auml;re Spalten, um ein UpSet-Diagramm zu erstellen.</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
+<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <b>Zeichnen &gt; Kategorial: UpSet-Diagramm</b>, um den Dialog <b>plot_upset</b> zu &ouml;ffnen.</p>
+<h3><a name="The_plot_upset_Dialog_Box"></a><span class="mw-headline">The plot_upset Dialog Box</span></h3>
+<p><a  class="image"><img alt="UpSet Plot 02.png" src="../images/UpSet_Plot/800px-UpSet_Plot_02.png" width="800"   /></a></p>
+<h4><a name="General_tab"></a><span class="mw-headline">Registerkarte Allgemein</span></h4>
+<p><a  class="image"><img alt="UpSet Plot 03.png" src="../images/UpSet_Plot/800px-UpSet_Plot_03.png" width="800"   /></a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Eingabedatentyp</th>
+<td>W&auml;hlen Sie den Typ der Eingabedaten aus, um das UpSet-Diagramm zu zeichnen:<ul><li><b>Roh (Abgegrenzt)</b>: Speichert die Beziehungen von mehreren Mengen in einer einzelnen Spalte mit Trennzeichen. Wenn dieser Typ ausgew&auml;hlt ist, wird die Option <b>Trennzeichen</b> angezeigt, damit Sie das Trennzeichen zum Trennen der Mengen w&auml;hlen k&ouml;nnen.</li>
+<li><b>Roh (Kategorial)</b>: Speichert die Beziehungen von mehreren Mengen in mehreren vordefinierten kategorialen Spalten. Jede Spalte stellt ein eindeutiges Attribut dar und jeder Kategoriewert wird als eine Menge behandelt.</li>
+<li><b>Roh (Bin&auml;r)</b>: Stellt die Beziehungen von mehreren Mengen als bin&auml;re Werte dar und speichert die bin&auml;ren Werte in verschiedene Spalten f&uuml;r verschiedene Mengen.</li>
+<li><b>Zusammengefasst</b>: Fasst die bin&auml;ren Werte der Beziehungen zusammen und speichert die aggregierten Anzahlsdaten in einer Spalte.</li></ul>
+</td></tr>
+<tr>
+<th>Eingabedaten</th>
+<td>W&auml;hlen Sie die Eingabedaten entsprechend des von Ihnen gew&auml;hlten Datentyps aus.</td></tr>
+<tr>
+<th>Trennzeichen</th>
+<td>Wenn Sie <b>Roh (Abgegrenzt)</b> f&uuml;r <b>Eingabedatentyp</b> w&auml;hlen, k&ouml;nnen Sie ein Trennzeichen ausw&auml;hlen, um die Datens&auml;tze zu trennen.</td></tr>
+<tr>
+<th>&Uuml;berschneidung</th>
+<td>Legen Sie fest, wie die &Uuml;berschneidungsdaten aggregiert und ob die Daten in Teilmengen unterteilt werden sollen.<ul><li><b>Aggregation</b>: W&auml;hlen Sie einen statistischen Wert zum Aggregieren der Daten. Wenn <b>Anzahl</b> nicht gew&auml;hlt ist, m&uuml;ssen Sie eine andere zusammenzufassende Spalte w&auml;hlen.</li>
+<li><b>Aggregieren nach</b>: W&auml;hlen Sie eine Datenspalte, um die aggregierten statistischen Werte zu berechnen.</li>
+<li><b>Gruppe</b>: W&auml;hlen Sie eine kategoriale Spalte, um die aggregierten &Uuml;berschneidungsdaten in Teilmengen zu unterteilen.</li>
+<li><b>Stapeln</b>: W&auml;hlen Sie, wie die in Teilmengendaten im S&auml;ulendiagramm der &Uuml;berschneidung dargestellt werden sollen.</li></ul>
+</td></tr>
+<tr>
+<th>Layout</th>
+<td>Legen Sie fest, wie die S&auml;ulen-/Balkendiagrammen und das Punktdiagramm anzuordnen sind.</td></tr>
+<tr>
+<th>Vorlage</th>
+<td>Per Standard wurde die integrierte Vorlage ausgew&auml;hlt. Sie k&ouml;nnen Auto deaktivieren, um eine benutzerdefinierte Vorlage zu w&auml;hlen.</td></tr>
+<tr>
+<th>&Uuml;berschneidungszusammenfassung ausgeben</th>
+<td>Legen Sie fest, ob die Daten der &Uuml;berschneidungszusammenfassung in einem neuen Blatt ausgegeben werden sollen.</td></tr>
+<tr>
+<th>Daten ausgeben</th>
+<td>Legen Sie fest, wo die Ausgabedaten ausgegeben werden.</td></tr></table>
+<h4><a name="Sort_and_Filter_tab"></a><span class="mw-headline">Registerkarte Sortieren und Filtern</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>&Uuml;berschneidungen sortieren nach</th>
+<td>Legen Sie fest, wie die &Uuml;berschneidungen sortiert werden. <b>Auto</b> ist per Standard ausgew&auml;hlt. Wenn Auto deaktiviert ist, k&ouml;nnen Sie w&auml;hlen, wie die &Uuml;berschneidungen geordnet werden, aufsteigend oder absteigend.</td></tr>
+<tr>
+<th>Mengen sortieren nach</th>
+<td>Legen Sie fest, wie die Mengen sortiert werden sollen. <b>Auto</b> ist per Standard ausgew&auml;hlt. Wenn Auto deaktiviert ist, k&ouml;nnen Sie w&auml;hlen, wie die Mengen geordnet werden, aufsteigend oder absteigend.</td></tr>
+<tr>
+<th>Leere &Uuml;berschneidungen verbergen</th>
+<td>Verbergen Sie die Kombinationen mit einer Anzahl von Null in Ihren aggregierten Daten.<p>Hier bezieht sich eine leere &Uuml;berschneidung auf eine &Uuml;berschneidung ohne zugeh&ouml;rige Daten. Eine &Uuml;berschneidung mit zugeh&ouml;rigen Daten kann jedoch auch einen Wert von 0 haben, zum Beispiel wenn die Aggregationsmethode Mittelwert oder Summe ist.</p><p>Wenn <b>Eingabedatentyp</b> = <b>Zusammengefasst</b> ist, wird der Balken, bei dem der Wert 0 ist, nicht verborgen, der Balken, bei dem der Wert fehlt, dagegen schon.</p>
+</td></tr>
+<tr>
+<th>Keine Mengen&uuml;berschneidungen verbergen</th>
+<td>Legen Sie fest, wie die Elemente, die zu keiner der angezeigten Mengen geh&ouml;ren (Grad 0) gezeigt werden.</td></tr>
+<tr>
+<th>Erweitert</th>
+<td>Sie k&ouml;nnen die Optionen <b>Wert</b>, <b>Grad</b> oder/und <b>Obere N</b> verwenden, um die &Uuml;berschneidungen zu filtern.</td></tr></table>
+<h4><a name="Additional_Plots_tab"></a><span class="mw-headline">Registerkarte Zus&auml;tzliche Zeichnung</span></h4>
+<p>Diese Registerkarte wird verwendet, um zus&auml;tzliche Felder zum UpSet-Diagramm hinzuzuf&uuml;gen - f&uuml;r Attributdiagramme basierend auf Metadaten der Elemente (wie Histogramme, Boxdiagramme oder Punktdiagramme).</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Anzahl der zus&auml;tzlichen Zeichnungen</th>
+<td>Sie k&ouml;nnen w&auml;hlen, wie viele zus&auml;tzliche Zeichnungen Sie hinzuf&uuml;gen m&ouml;chten. Maximum ist 2.</td></tr>
+<tr>
+<th>Zus&auml;tzliche Zeichnung 1/2</th>
+<td>W&auml;hlen Sie die Zeichnungsdaten f&uuml;r zus&auml;tzliche Zeichnungen und w&auml;hlen Sie den gew&uuml;nschten Diagrammtyp.</td></tr></table>
+<h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
+<p>UpSetPlot.OTPU (installiert im Origin-Programmordner)</p>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
+<p>Ein UpSet-Diagramm ist eine Visualisierungsmethode, die verwendet wird, um Daten, die mehr als drei Schnittmengen betreffen, anzuzeigen. Ein UpSet-Diagramm visualisiert &Uuml;berschneidungen mit Hilfe einer Matrix: Die Zeilen entsprechen den einzelnen Mengen und die Spalten den &Uuml;berschneidungen zwischen ihnen (oder umgekehrt), w&auml;hrend die Mengengr&ouml;&szlig;en und &Uuml;berschneidungen von den Balkendiagrammen dargestellt werden.</p>
+<h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
+<table class="tbl">
+
+<tr style="vertical-align: top;">
+<td><b>Mindestversion:</b> Origin 2027</td></tr></table>
+
+
+
+
+
+
+
+    

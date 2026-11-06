@@ -1,0 +1,34 @@
+﻿<h1 class="firstHeading">BiphasicConcentration</h1><p class='urlname' style='display: none'>BiphasicConcentration-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Script_Access"><span class="tocnumber">5</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Function_File"><span class="tocnumber">6</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Category"><span class="tocnumber">7</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/BiphasicConcentration/math-eebe6e580d4fa49540bae2f97f3c381b.png" title="y = Bt+\frac{(Tp-Bt)\cdot p}{1+(\frac{EC501}{x})^{s1}}+\frac{(Tp-Bt)(1-p)}{1+(\frac{EC502}{x})^{s2}}" alt="y = Bt+\frac{(Tp-Bt)\cdot p}{1+(\frac{EC501}{x})^{s1}}+\frac{(Tp-Bt)(1-p)}{1+(\frac{EC502}{x})^{s2}}" class="tex"/></p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>Fit the sum of two stimulatory dose response curves or two inhibitory dose response curve.</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="BiphasicConcentration.png" src="../images/BiphasicConcentration/BiphasicConcentration.png" width="525"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameter</span></h2>
+<p>Number: 7</p><p>Names: Bt, Tp, EC501, EC502, s1, s2, p</p><p>Meanings: Bt= plateau at left end of curve, Tp=plateau at right end of curve, EC501=concentration at half-maximal, EC502=concentration at half-maximal, s1=Hill slope, s2=Hill slope, p=proportion of maximal response</p><p>Lower Bounds: p&gt;0</p><p>Upper Bounds: p&lt;1</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_BiphasicConcentration<span style="color: #000000;">(</span>x,Bt,Tp,EC501,EC502,s1,s2,p<span style="color: #000000;">)</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>BiphasicConcentration.fdf</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Dose Response</p>
+
+
+
+
+
+
+    

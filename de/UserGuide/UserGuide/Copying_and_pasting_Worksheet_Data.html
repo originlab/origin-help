@@ -22,37 +22,40 @@
 
 <h2><a name="Copy_and_paste_worksheet_values_with_the_context_menus"></a><span class="mw-headline">Arbeitsblattwerte mit Kontextmen&uuml;s kopieren und einf&uuml;gen</span></h2>
 <h3><a name="Copy_worksheet_values"></a><span class="mw-headline">Arbeitsblattwerte kopieren</span></h3>
-<p>Markieren Sie die Arbeitsblattspalte(n), klicken Sie mit der rechten Maustaste, w&auml;hlen Sie <b>Kopieren</b> und w&auml;hlen Sie aus Folgendem:</p>
+<p>Markieren Sie die Arbeitsblattspalte(n), klicken Sie mit der rechten Maustaste, w&auml;hlen Sie <b>Kopieren</b> und dann eines der folgenden Untermen&uuml;s:</p>
 <table class="simple">
 
 <tr>
 <th align="left" width="190">Kopieren</th>
-<td>Daten mit der Anzeigegenauigkeit kopieren</td></tr>
+<td>Daten werden mit Anzeigepr&auml;zision kopiert.</td></tr>
 <tr>
 <th align="left">Werte kopieren (volle Pr&auml;zision)</th>
-<td>Daten mit voller Genauigkeit kopieren</td></tr>
+<td>Daten werden mit voller Pr&auml;zision kopiert.</td></tr>
 <tr>
 <th align="left">Kopieren (einschlie&szlig;lich Beschriftungszeilen)</th>
-<td>Mit Beschriftungen und Daten (mit Anzeigegenauigkeit) der Quellspalte(n) kopieren</td></tr>
+<td>Nur die Daten (mit Anzeigepr&auml;zision) und die Beschriftungszeile Langname werden kopiert.<ul><li>Falls Einheiten existieren, k&ouml;nnen auch Einheiten zusammen mit dem Langnamen in einer Zeile im Format <i>Langname</i> (<i>Einheiten</i>) kopiert werden.</li>
+<li>Falls Langnamen die gleichen oder leer sind, werden die Kommentare kopiert. Falls Langnamen und Kommentare die gleichen oder leer sind, wird die erste benutzerdefinierte Parameterzeile kopiert.</li>
+<li>Um alle Beschriftungszeilen und Daten zu kopieren, setzen Sie <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">die Systemvariable @PLO</a> = 0.</li></ul>
+</td></tr>
 <tr>
 <th align="left">Kopieren (Formel)</th>
-<td>Nur die Formel der Quellspalte(n) kopieren</td></tr>
+<td>Es wird nur die Formel der ausgew&auml;hlten Spalte(n) kopiert.</td></tr>
 <tr>
 <th align="left">Kopieren (Beschriftungszeilen)</th>
-<td>Nur die Beschriftungszeilen der Quellspalte(n) kopieren</td></tr>
+<td>Es werden nur die Beschriftungszeilen der ausgew&auml;hlten Spalte(n) kopiert.</td></tr>
 <tr>
 <th align="left">Kopieren (Formel und Beschriftungszeilen)</th>
-<td>Nur Formel und Beschriftungszeilen kopieren</td></tr>
+<td>Es werden nur die Formel und Beschriftungszeilen kopiert.</td></tr>
 <tr>
 <th align="left" width="190">Transponierte kopieren</th>
 <td>Der ausgew&auml;hlte Zellblock wird w&auml;hrend des Kopierens transponiert.</td></tr>
 <tr>
 <th align="left">Alle kopieren</th>
-<td>Formel, Beschriftungen und Daten (mit voller Genauigkeit) der Quellspalte(n) kopieren</td></tr></table>
-<p><br /> Weitere Informationen finden Sie in <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html"><b>FAQ-482 Wie kann ich Daten mit maximaler Pr&auml;zision kopieren?</b></a>.</p>
+<td>Es werden Formeln, Beschriftungen und Daten (mit voller Pr&auml;zision) der ausgew&auml;hlten Spalte(n) kopiert.</td></tr></table>
+<p><br /> Weitere Informationen finden Sie in <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html">FAQ-482 Wie kann ich Daten mit maximaler Pr&auml;zision kopieren?</a>.</p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><ul><li>Das Kopieren und Einf&uuml;gen von mehreren Arbeitsblattzellen wurde f&uuml;r Origin 2019b leicht ver&auml;ndert, so dass es MS Excel mehr &auml;hnelte: Das Kopieren einer Zelle und Einf&uuml;gen in <i>m</i> Zellen f&uuml;llt <i>m</i> Zellen. Weiterhin f&uuml;llt das Kopieren von <i>n</i> Zellen und das Einf&uuml;gen in <i>n*m</i> Zellen alle Zellen durch Wiederholen der kopierten Abfolge von <i>n</i> Zellen. Die LabTalk-Systemvariable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C"><b>@CPNB</b></a> wurde hinzugef&uuml;gt, um zwischen dem alten und dem neuen Verhalten zu wechseln. Eine Anleitung, wie Sie den Wert einer Systemvariablen &auml;ndern, finden Sie in <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">dieser FAQ</a>.</li>
-<li>Seit Origin 2024b kann der Maskierungsstatus (die Position der maskierten Daten) durch einen Rechtsklick im Men&uuml; <b>Kopieren: Maskierungsstatus kopieren</b> kopiert werden.</li></ul>
+<li>Seit Origin 2024b kann der Maskierungsstatus (die Position der maskierten Daten) &uuml;ber das Kontextmen&uuml; <b>Kopieren: Maskierungsstatus kopieren</b> kopiert werden.</li></ul>
 </td></tr></table>
 <h3><a name="Paste_Worksheet_values"></a><span class="mw-headline">Arbeitsblattwerte einf&uuml;gen</span></h3>
 <p>Wenn Sie einige Arbeitsblattwerte kopieren, bietet Origin mehrere Optionen, um Arbeitsblattzelle(n) in ein neues Ziel einzuf&uuml;gen.</p><p>Markieren Sie die erste Zelle des Einf&uuml;geziels, klicken Sie mit der rechten Maustaste auf sie und w&auml;hlen Sie eine der folgenden Men&uuml;optionen je nach dem jeweiligen Zweck.</p>

@@ -1,0 +1,97 @@
+﻿<h1 class="firstHeading">Der Dialog Test auf gleiche Varianzen</h1><p class='urlname' style='display: none'>Equal-Var-Test-Dialog</p>
+<p><br /></p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Inhalt</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Hilfreiche Informationen</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Neuberechnen</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Eingabe</span></a><ul>
+<li class="toclevel-2 tocsection-4"><a href="#Significance_Level"><span class="tocnumber">3.1</span> <span class="toctext">Signifikanzniveau</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Assume_Normal_Distribution"><span class="tocnumber">3.2</span> <span class="toctext">Normalverteilung annehmen</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">4</span> <span class="toctext">Zeichnungen</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Ausgabe</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Hilfreiche Informationen</span></h2>
+<p>Um den Dialog Test auf gleiche Varianzen zu &ouml;ffnen:</p>
+<ol><li>W&auml;hlen Sie bei aktivem Arbeitsblatt <b>Statistik: Hypothesentest: Test auf gleiche Varianzen</b>.</li></ol>
+<p><br /> <i><b>Siehe auch:</b></i></p>
+<ul><li><a href="../../UserGuide/Category/Equal_Variance_Test_(OriginPro_Only).html" title="Category:Equal Variance Test (OriginPro Only)">Test auf gleiche Varianzen (nur Pro)</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">Neuberechnen</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Neuberechnen</th>
+<td>
+<p>Bedienelemente zur Neuberechnung der Analyseergebnisse</p>
+<ul><li><b>Kein</b></li>
+<li><b>Auto</b></li>
+<li><b>Manuell</b></li></ul>
+<p>Weitere Informationen finden Sie unter <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Analyseergebnisse neu berechnen</a>.</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">Eingabe</span></h2>
+<p>Der <b>Test auf gleiche Varianzen</b> unterst&uuml;tzt Indiziert und Roh als Eingabedatenform.</p><p>Hilfe zum Festlegen von Bereichen finden Sie hier: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Eingabedaten festlegen</a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Indexdaten</th>
+<td>Die Eingabedaten bestehen aus einer Stichprobendatenspalte und einer oder mehr Gruppierungsspalten. Die Faktorvariable und Antwortdaten werden in separaten Spalten gespeichert.<ul><li><b>Daten</b></li></ul>
+<dl><dd>Die Stichprobendatenspalte</dd></dl>
+<ul><li><b>Gruppe nach</b></li></ul>
+<dl><dd>Die Gruppierungsspalte</dd></dl>
+</td></tr>
+<tr>
+<th>Rohdaten</th>
+<td>Die Eingabedaten bestehen aus mindestens zwei Stichprobendatenspalten. Jede Spalte enth&auml;lt Antwortdaten von einer Stufe der Faktorvariablen.<ul><li><b>Stichprobe</b></li></ul>
+<dl><dd>Legen Sie Spalten als den Stichprobendatensatz fest. (Mindestens 2 Spalten.)</dd></dl>
+</td></tr></table>
+<h3><a name="Significance_Level"></a><span class="mw-headline">Signifikanzniveau</span></h3>
+<p>Legen Sie das Signifikanzniveau f&uuml;r den Test auf gleiche Varianzen fest.</p>
+<h3><a name="Assume_Normal_Distribution"></a><span class="mw-headline">Normalverteilung annehmen</span></h3>
+<ul><li>Falls diese Option deaktiviert ist, werden die Methoden <b>Mehrfache Vergleiche nach Bonett</b>, <b>Brown-Forsythe</b>, <b>Levene (Quadrierte Abweichungen) und Levene (Absolute Abweichungen)</b> im Test verwendet und der p-Wert f&uuml;r sie ausgegeben. Das Diagramm <i><b>Vergleichsintervalle f&uuml;r StdAbw.</b></i> gibt den grafischen Zusammenfassungsbericht aus.</li></ul>
+<ul><li>Falls diese Option aktiviert ist, wird der <b>F-Test</b> f&uuml;r die Daten mit zwei Gruppen oder die <b>Bartlett</b>-Methode f&uuml;r die Daten mit drei oder mehr Gruppen verwendet und der p-Wert ausgegeben. Das Diagramm <i><b>95% Bonferroni-Konfidenzintervalle f&uuml;r StdAbw.</b></i> wird im grafischen Zusammenfassungsbericht ausgegeben, und das <b>Wahrscheinlichkeitsdiagramm mit Normalverteilung</b> wird im Zweig <b>Diagnosec</b> gezeigt.</li></ul>
+<h2><a name="Plots"></a><span class="mw-headline">Zeichnungen</span></h2>
+<p>Das ausgew&auml;hlte Diagramm wird nach dem Zweig <b>Diagnose</b> gezeigt, falls <b>Grafischer Diagnosebericht</b> auf der Registerkarte <b>Ausgabe</b> ausgew&auml;hlt ist.</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Intervalle der mehrfachen Vergleiche nach Bonett f&uuml;r StdAbw.</th>
+<td>Wenn <b>Normalverteilung annehmen</b> auf der Registerkarte <b>Eingabe</b> deaktiviert ist, ist diese Option verf&uuml;gbar.<p>Intervalle der mehrfachen Vergleiche nach Bonett f&uuml;r StdAbw. erstellen</p>
+</td></tr>
+<tr>
+<th>Boxdiagramm</th>
+<td>Erstellen Sie ein Boxdiagramm.</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Ausgabe</span></h2>
+<p>Hilfe zum Festlegen der Bereiche finden Sie unter: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Ergebnisse ausgeben</a></p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Grafischer Zusammenfassungsbericht</th>
+<td>Erstellen Sie einen Zusammenfassungsbericht, einschlie&szlig;lich Balken f&uuml;r den p-Wert und die Effektgr&ouml;&szlig;e sowie ein Datenverteilungsdiagramm. Es werden auch die Ergebnistabellen an das Diagramm angeh&auml;ngt, um die statistischen Werte zu zeigen.<p>Die Fu&szlig;note nach dem Zusammenfassungsdiagramm diagnostiziert diese statistischen Ergebnisse.</p>
+</td></tr>
+<tr>
+<th>Grafischer Diagnosebericht</th>
+<td>Legen Sie fest, ob der grafische Diagnosebericht angezeigt werden soll.<p>Das <b>Verlaufsdiagramm</b> zum Erkennen von Ausrei&szlig;ern und das <b>Einzelwertdiagramm</b> f&uuml;r die Verteilung werden in diesem Bericht gezeigt.</p><p>Wenn <b>Normalverteilung annehmen</b> (auf der Registerkarte <b>Eingabe</b>) ausgew&auml;hlt ist, wird das <b>Wahrscheinlichkeitsdiagramm mit Normalverteilung</b> im Zweig Diagnose gezeigt.</p>
+</td></tr>
+<tr>
+<th>Zeichnungsdaten</th>
+<td>Legen Sie das Arbeitsblatt f&uuml;r die Ausgabe der Zeichnungsdatens&auml;tze fest.</td></tr>
+<tr>
+<th>Ergebnis</th>
+<td>Legen Sie das Ausgabearbeitsblatt f&uuml;r die Testergebnisse fest.</td></tr></table>
+<p><br /></p>
+<table class="note">
+
+<tr>
+<td><b>Hinweis</b>:<ul><li>Die Tabellen <b>maskierten Daten</b> und <b>schlechte Daten (fehlender Wert)</b> werden im Berichtsblatt gezeigt.</li></ul>
+</td></tr></table>
+
+
+
+
+
+
+
+    

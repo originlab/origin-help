@@ -14,7 +14,7 @@
 <h2><a name="Data_Requirements"></a><span class="mw-headline">Datenanforderungen</span></h2>
 <p>W&auml;hlen Sie mindestens eine Spalte aus, um ein empirisches CDF-Diagramm und/oder ein theoretisches CDF-Diagramm zu erstellen.</p><p>W&auml;hlen Sie mehrere Daten- und Gruppenspalten aus, um die kumulative Verteilung von verschiedenen Daten/Gruppen zu vergleichen.</p>
 <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Diagramm erstellen</span></h2>
-<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <b>Zeichnen &gt; Statistisch: CDF-Diagramm</b>, um den Dialog <b>plot_cdf</b> zu &ouml;ffnen.</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png" width="500"  /></a></p>
+<p>W&auml;hlen Sie die gew&uuml;nschten Daten aus.</p><p>W&auml;hlen Sie im Men&uuml; <b>Zeichnen &gt; Statistisch: CDF-Diagramm</b>, um den Dialog <b>plot_cdf</b> zu &ouml;ffnen.</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png" width="509"  /></a></p>
 <h3><a name="Dialog_Controls"></a><span class="mw-headline">Bedienelemente des Dialogs</span></h3>
 <table class="dialogcontroltable">
 
@@ -29,8 +29,11 @@
 <td>Legen Sie fest, wie die Zeichnungen angeordnet werden sollen.<ul><li><b>Mehrere Datens&auml;tze</b> und <b>Mehrere Gruppen</b>: Verwenden Sie diese zwei Optionen, um die Zeichnungen auf diese vier Arten anzuordnen:<ul><li><b>Alle &uuml;berlagern</b>: Sowohl Mehrere Datens&auml;tze als auch Mehrere Gruppen w&auml;hlen Auf gleicher Grafik &uuml;berlagern.</li>
 <li><b>Gruppen &uuml;berlagern, Variablen in verschiedenen Layern</b>: Mehrere Datens&auml;tze=Separate Layer, Mehrere Gruppen=Auf gleicher Grafik &uuml;berlagern</li>
 <li><b>Variablen &uuml;berlagern, Gruppen in verschiedenen Layern</b>: Mehrere Gruppen=Separate Layer, Mehrere Daten=Auf gleicher Grafik &uuml;berlagern</li>
-<li><b>Verschiedene Layer</b>: Sowohl Mehrere Datens&auml;tze und Mehrere Gruppen w&auml;hlen Separate Layer.</li></ul></li></ul>
-<ul><li><b>Felder teilen nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um die Grafiken in mehrere Layer aufzuteilen.<dl><dd><b>Hinweis:</b> Wenn Mehrere Daten und Mehrere Gruppen beide auf Separate Layer gesetzt wurden, sollte die Layerreihenfolge im Ergebnisblatt der Hierarchie von &quot;nach Eingabedaten&quot; →&quot;Felder teilen nach&quot; → &quot;nach Gruppen&ldquo; folgen.</dd></dl></li>
+<li><b>Verschiedene Layer</b>: Sowohl Mehrere Datens&auml;tze und Mehrere Gruppen w&auml;hlen Separate Layer.</li></ul></li>
+<li><b>Horizontale Felder nach</b>: Sobald dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontale Felder</a> zu aktivieren, die f&uuml;r jeden Gruppierungswert separat ein CDF-Diagramm zeigen.<dl><dd>Wenn <b>Vertikale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
+<li><b>Vertiale Felder nach</b>: Sobald dieses Kontrollk&auml;stchen aktiviert wurde, k&ouml;nnen Sie eine andere Gruppierungsspalte ausw&auml;hlen, um <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertiale Felder</a> zu aktivieren, die f&uuml;r jeden Gruppierungswert separat ein CDF-Diagramm zeigen.<dl><dd>Wenn <b>Horizontale Felder nach</b> nicht aktiviert ist, wird <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Felder umbrechen</a> aktiviert und Hilfsstriche und Beschriftungen werden standardm&auml;&szlig;ig auf abwechselnden Seiten gezeigt.</dd>
+<dd>Wenn mehrere Spalten ausgew&auml;hlt sind, wird oberhalb nur eine Beschriftungszeile f&uuml;r die Feldinfos gezeigt. Die Zeichenkette des Feldbanners umfasst alle Faktoren und ist durch Komma getrennt.</dd></dl></li>
 <li><b>Seiten teilen nach</b>: Wenn dieses Kontrollk&auml;stchen aktiviert ist, k&ouml;nnen Sie (eine) andere Gruppierungsspalte(n) ausw&auml;hlen, um die Eingabedaten zu teilen und CDF-Diagramme auf verschiedenen Diagrammseiten zu erstellen. Jede Seite zeichnet nur die Spalten innerhalb der f&uuml;r die Seite relevanten Gruppe. Die seitenrelevanten Gruppeninformationen werden im Layertitel gezeigt, getrennt durch Komma, falls es mehrere Faktoren gibt. Das Berichtsdiagrammblatt f&uuml;hrt alle Seiten auf.</li></ul>
 </td></tr>
 <tr>
@@ -50,14 +53,14 @@
 <th><b>Ausgabe in</b></th>
 <td>Legen Sie fest, wo die Diagramme ausgegeben werden sollen, als separate Diagrammfenster oder eingebettet in ein Berichtsblatt.</td></tr>
 <tr>
-<th><b>Ausgabezeichnungsdaten</b></th>
+<th><b>Zeichnungsdaten ausgeben</b></th>
 <td>Legen Sie fest, in welchem Blatt die Zeichnungsdaten ausgegeben werden.</td></tr>
 <tr>
 <th><b>Diagramme ausgeben</b></th>
 <td>Legen Sie fest, in welches Blatt die Ergebnisdiagramme ausgegeben werden.</td></tr></table>
 <h2><a name="Template"></a><span class="mw-headline">Vorlage</span></h2>
 <p>CDF.otpu (installiert im Origin-Programmordner)</p>
-<h2><a name="Notes"></a><span class="mw-headline">Notizen</span></h2>
+<h2><a name="Notes"></a><span class="mw-headline">Hinweise</span></h2>
 <p>Das CDF-Diagramm - voll ausgeschrieben das kumulative Verteilungsfunktionsdiagramm - wird verwendet, um die Verteilung von Beispieldaten zu untersuchen. Es zeigt die empirische und/oder theoretische kumulative Verteilungsfunktion der Daten. Sie k&ouml;nnen entscheiden, wie mehrere Quelldaten und ihre Gruppen angeordnet werden. Die Verteilungsinformationswerte (<i>mu</i>, <i>sigma</i> und <i>N</i>) f&uuml;r die jeweilige Gruppe der verschiedenen Daten wird automatisch in das/die Ergebnisdiagramm/e ausgegeben.</p>
 <h2><a name="Version_Information"></a><span class="mw-headline">Versionsinformationen</span></h2>
 <table class="tbl">

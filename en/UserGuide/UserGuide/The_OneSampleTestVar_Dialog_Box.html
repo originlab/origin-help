@@ -1,67 +1,87 @@
-<h1 class="firstHeading">17.3.5.1 The One Sample Test for Variance Dialog Box</h1><p class='urlname' style='display: none'>tTest-OneSample-Var-Dialog</p>
+<h1 class="firstHeading">17.3.5.1 The One-Sample Variance Test Dialog Box</h1><p class='urlname' style='display: none'>tTest-OneSample-Var-Dialog</p>
+<p><br />
+</p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">Results Log Output</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Recalculate"><span class="tocnumber">3</span> <span class="toctext">Recalculate</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Input"><span class="tocnumber">4</span> <span class="toctext">Input</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Chi-Square_Test_for_Variance"><span class="tocnumber">5</span> <span class="toctext">Chi-Square Test for Variance</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Plots</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Test"><span class="tocnumber">3</span> <span class="toctext">Test</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">Power Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">4.1</span> <span class="toctext">Unset Minimal Difference of Interest</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">4.2</span> <span class="toctext">Set Minimal Difference of Interest</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Plots"><span class="tocnumber">5</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">Output</span></a></li>
 </ul>
 </div>
 
 <h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
 <p>To open the One-Sample Test for Variance dialog box:
 </p>
-<ol><li> With the worksheet active, click <b>Statistics: Hypothesis Testing: One-Sample Test for Variance...</b></li></ol>
+<ol><li> With the worksheet active, click <b>Statistics: Hypothesis Testing: One-Sample Variance Test...</b></li></ol>
 <p><i>See Also:</i>
 </p>
-<ul><li> <a href="../../UserGuide/Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" title="Category:One-Sample Test for Variance (OriginPro Only)">Introduction: One-Sample Test for Variance</a></li>
-<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTestVar).html" title="UserGuide:Algorithm (OneSampletTestVar)"> Algorithms: One-Sample Test for Variance</a></li></ul>
-<h2><a name="Results_Log_Output"></a><span class="mw-headline">Results Log Output</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>Results Log Output</b>
-</th>
-<td>
-<p>Select to output results to the Results Log.
-</p>
-</td></tr></table>
-<h2><a name="Recalculate"></a><span class="mw-headline">Recalculate</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>Recalculate</b>
-</th>
-<td>
-<p>Controls recalculation of analysis results
-</p>
-<ul><li><b>None</b> </li>
-<li><b>Auto</b> </li>
-<li><b>Manual</b>  </li></ul>
-<p>For more information, see: <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Recalculating Analysis Results</a>
-</p>
-</td></tr></table>
+<ul><li> <a href="../../UserGuide/Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" title="Category:One-Sample Test for Variance (OriginPro Only)">Introduction: One-Sample Variance Test</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTestVar).html" title="UserGuide:Algorithm (OneSampletTestVar)"> Algorithms: One-Sample Variance Test</a></li></ul>
 <h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<p>One-Sample Variance Test supports <b>Raw</b>, <b>Summarized Data(SD)</b> and <b>Summarized Data(Variance)</b> three input data form.
+</p>
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Input</b>
+<th>Raw
 </th>
-<td>
-<p>Enter your input data.
-</p><p>For help with range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Specifying Your Input Data</a>
+<td>Enter column with range format.
+<p>For help with range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Specifying Your Input Data</a>
 </p>
+</td></tr>
+<tr>
+<th>Summarized Data (SD)
+</th>
+<td>Summarized Data is standard derivation and sample size prepared for samples.
+<p>Enter following Summarized Data by selecting columns from worksheet or entering into the dialog box manually.
+</p>
+<ul><li> <b>Sample Name</b></li></ul>
+<dl><dd>Specify name of the samples. You can specify a column as sample name, or enter space separated strings, or  leave it empty.</dd></dl>
+<ul><li> <b>SD</b></li></ul>
+<dl><dd>Specify the standard derivation  of the data.  You can specify a column dataset, or enter space separated number. (SD should be greater than 0.)</dd></dl>
+<ul><li> <b>Sample Size</b></li></ul>
+<dl><dd>Specify the total number of data. You can specify a column dataset, or enter space separated number. (Sample size should be greater than 0.)</dd></dl>
+</td></tr>
+<tr>
+<th>Summarized Data (Variance)
+</th>
+<td>Summarized Data is Variance and sample size prepared for samples.
+<p>Enter following Summarized Data by selecting columns from worksheet or entering into the dialog box manually.
+</p>
+<ul><li> <b>Sample Name</b></li></ul>
+<dl><dd>Specify name of the samples. You can specify a column as sample name, or enter space separated strings, or  leave it empty.</dd></dl>
+<ul><li> <b>Variance</b></li></ul>
+<dl><dd>Specify the Variance of the data.  You can specify a column dataset, or enter space separated number. </dd></dl>
+<ul><li> <b>Sample Size</b></li></ul>
+<dl><dd>Specify the total number of data. You can specify a column dataset, or enter space separated number. (Sample size should be greater than 0.)</dd></dl>
 </td></tr></table>
-<h2><a name="Chi-Square_Test_for_Variance"></a><span class="mw-headline">Chi-Square Test for Variance</span></h2>
+<h2><a name="Test"></a><span class="mw-headline">Test</span></h2>
 <table class="dialogcontroltable">
 
+<tr>
+<th>Test for
+</th>
+<td>Options:
+<ul><li> <b>Variance</b></li>
+<li> <b>Standard Deviation</b> (Default option)</li></ul>
+</td></tr>
 <tr>
 <th>Test Variance
 </th>
-<td>The hypothetical variance to be tested.
+<td>If select <b>Variance</b> in <b>Test for</b> drop-down list, you can specify the hypothetical variance to be tested.
+</td></tr>
+<tr>
+<th>Test SD
+</th>
+<td>If select <b>Standard Deviation</b> in <b>Test for</b> drop-down list, you can specify the hypothetical SD to be tested.
 </td></tr>
 <tr>
 <th>Null Hypothesis
@@ -72,15 +92,12 @@
 <th>Alternate Hypothesis
 </th>
 <td>Options:
-<dl><dd><b>Variance &lt;&gt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png?v=0" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>The sample variance differs from the hypothetical variance.
-</p>
-<dl><dd><b>Variance &gt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png?v=0" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>The sample variance is larger than the hypothetical variance (upper-tailed test).
-</p>
-<dl><dd><b>Variance &lt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png?v=0" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>The sample variance is less than the hypothetical variance (lower-tailed test).
-</p>
+<dl><dd><b>Variance &lt;&gt; <i>Test Variance</i></b> or  <b>SD &lt;&gt; <i>Test SD</i></b>
+<dl><dd>The sample variance/SD differs from the hypothetical variance/SD.</dd></dl></dd></dl>
+<dl><dd><b>Variance &gt; <i>Test Variance</i></b> or  <b>SD &gt; <i>Test SD</i></b>
+<dl><dd>The sample variance/SD is larger than the hypothetical variance/SD (upper-tailed test).</dd></dl></dd></dl>
+<dl><dd><b>Variance &lt; <i>Test Variance</i></b> or  <b>SD &lt; <i>Test SD</i></b>
+<dl><dd>The sample variance/SD is less than the hypothetical variance/SD (lower-tailed test).</dd></dl></dd></dl>
 </td></tr>
 <tr>
 <th>Significance Level
@@ -96,6 +113,73 @@
 <th>Confidence Level(s) in&#160;%
 </th>
 <td>Specify space-separated confidence levels (%). This option is only available when <i>Confidence Interval(s)</i> is selected.
+</td></tr>
+<tr>
+<th>Test Method
+</th>
+<td>Select test method
+<ul><li> <b>Chi-Square</b> </li></ul>
+<dl><dd>It is only for the normal distribution. It will output the Chi-Square test result with <b>Chi-Square</b>, <b>DF</b> and <b>Prob&gt;Chi-Square</b>, and the Confidence Intervals for Variance/Standard Deviation .</dd></dl>
+<ul><li> <b>Bonett</b></li></ul>
+<dl><dd>If is for any continuous distribution. It will output the Bonett test result with <b>P-Value</b>, and the Confidence Intervals for Variance/Standard Deviation.</dd></dl>
+<dl><dd>When input data form is <b>Summarized Data(SD)/(Variance)</b>, <b>Bonett</b> option is disable.</dd></dl>
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Unset Minimal Difference of Interest</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Difference(s) for Specified Power
+</th>
+<td> When <b>Minimal Difference of Interest</b> is not set, this option is available.
+<p>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. 
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Difference(s) for Specified Power</b> option, you can enter the power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Set Minimal Difference of Interest</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Minimal Difference of Interest
+</th>
+<td>Specify the minimum difference from the test variance/SD and the target variance/SD. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
+</td></tr>
+<tr>
+<th>Sample Size(s) for Specified Power
+</th>
+<td>When check the <b>Minimal Difference of Interest</b> option, this option is available.
+<p>Output the Sample Sizes for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. If it is selected, it will use the default power levels.
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Sample Size(s) for Specified Power</b> option, you can enter the target power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr>
+<tr>
+<th>Power Based on Test Data
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power for the sample size of the test data.  (the probability of rejecting the null hypothesis when it is false).
+</p>
+</td></tr>
+<tr>
+<th>Hypothetical Power
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power of the test at various sample sizes. When check this option, it will add corresponding curve to power curve.
+</p>
+</td></tr>
+<tr>
+<th>Hypothetical Sample Size(s)
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b> and <b>Hypothetical Power</b> is checked, this option is available.
+<p>Specify hypothetical sample size(s) for power computation.
+</p>
 </td></tr></table>
 <h2><a name="Plots"></a><span class="mw-headline">Plots</span></h2>
 <table class="dialogcontroltable">
@@ -109,15 +193,43 @@
 <th>Box Chart
 </th>
 <td>Plot a box chart of sample data.
+<p><b>Note:</b> When outlier(s) detected in the datasets, a footnote will show under the Box chart to note you to review their case. If you want to exclude the outliers, you can click the triangle button at the end of the footnote to mark outliers and recalculate.
+</p>
 </td></tr>
 <tr>
 <th>Arrange Plots of Same Type in One Graph
 </th>
 <td>Put the plots of same type in one graph. Note that for histograms, the layers will be arranged vertically; for box charts, layers will be arranged horizontally.
 </td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b> When input data form is <b>Summarized Data(SD)/(Variance)</b>, it will not output above plots.
+</td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
 <table class="dialogcontroltable">
 
+<tr>
+<th>Results Log Output
+</th>
+<td>
+<p>Select to output results to the Results Log.
+</p>
+</td></tr>
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Create a summary graph report, including P value bar, effect size bar and data distribution graph. The result tables will also been attached to the graph to show the statistical values.
+<p>The footnote after the summary graph will diagnose these statistical results.
+</p>
+</td></tr>
+<tr>
+<th>Graphical Power Analysis Report
+</th>
+<td>Specify whether to display the graphical Power Analysis report. The power curve shows how the statistical power of the test changes as the difference in proportions varies. Power is the probability of rejecting the null hypothesis when the true difference differs from 0.
+<p>A footnote will be added after the power curve graph to show you the diagnosis results of power analysis. A power value of 80% is usually considered sufficient.
+</p>
+</td></tr>
 <tr>
 <th>Output Plot Data
 </th>
@@ -127,6 +239,14 @@
 <th>Output Results
 </th>
 <td>Specify the worksheet for output of test results.
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> When input data form is <b>Summarized Data(SD)/(Variance)</b>, <b>Graphical Summary</b> report will not be output.</li>
+<li> When input multiple data (both <b>Raw</b> and <b>Summarized Data</b>), <b>Graphical Power Analysis</b> report will not be output.</li>
+<li> When input data form is <b>Raw</b>, <b>Masked Data</b> and <b>Bad Data(missing value)</b> table will be in the report sheet.</li></ul>
 </td></tr></table>
 
 

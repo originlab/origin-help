@@ -4,7 +4,7 @@ Besides using <a href="../../UserGuide/UserGuide/Theme_Organizer.html" title="Us
 </p><p><span class='headerInParagraph'>To open the '''Graph Options''' dialog, </span>
 </p>
 <ul><li> Choose <b>Preferences: Graph Options</b> on main menu.</li></ul>
-<p><a  class="image"><img alt="Graph Options dialog 01.png" src="../images/Graph_Options_dialog/750px-Graph_Options_dialog_01.png?v=99470" width="750"   /></a>
+<p><a  class="image"><img alt="Graph Options dialog 01.png" src="../images/Graph_Options_dialog/750px-Graph_Options_dialog_01.png?v=100706" width="750"   /></a>
 </p><p><b>Note:</b> By default, some default settings have been pre-shipped with a global system theme.  You can see some options showing as <b>Auto</b>. Once a setting has been changed in Graph Options dialog, it will have higher priority than the system default theme, and will be applied to system built-in templates, but not for user templates.
 </p>
 <table class="noborder"><tr>
@@ -50,18 +50,20 @@ Besides using <a href="../../UserGuide/UserGuide/Theme_Organizer.html" title="Us
 <li class="toclevel-3 tocsection-20"><a href="#Position"><span class="tocnumber">1.4.1</span> <span class="toctext">Position</span></a></li>
 <li class="toclevel-3 tocsection-21"><a href="#Show_Legend_Only_for_Multiple_Entries"><span class="tocnumber">1.4.2</span> <span class="toctext">Show Legend Only for Multiple Entries</span></a></li>
 <li class="toclevel-3 tocsection-22"><a href="#Show_Legend_Outside_of_Layer_for_Single_Block"><span class="tocnumber">1.4.3</span> <span class="toctext">Show Legend Outside of Layer for Single Block</span></a></li>
-<li class="toclevel-3 tocsection-23"><a href="#Direction"><span class="tocnumber">1.4.4</span> <span class="toctext">Direction</span></a></li>
-<li class="toclevel-3 tocsection-24"><a href="#Show_Frame"><span class="tocnumber">1.4.5</span> <span class="toctext">Show Frame</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Wrap_Text_if_Legend_Width_Exceed.28.25.29"><span class="tocnumber">1.4.4</span> <span class="toctext">Wrap Text if Legend Width Exceed(%)</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Direction"><span class="tocnumber">1.4.5</span> <span class="toctext">Direction</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Show_Frame"><span class="tocnumber">1.4.6</span> <span class="toctext">Show Frame</span></a></li>
 </ul>
 </li>
-<li class="toclevel-2 tocsection-25"><a href="#Graph_Name"><span class="tocnumber">1.5</span> <span class="toctext">Graph Name</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Graph_Name"><span class="tocnumber">1.5</span> <span class="toctext">Graph Name</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Plot"><span class="tocnumber">1.6</span> <span class="toctext">Plot</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-26"><a href="#Save_and_Load_Settings_Buttons"><span class="tocnumber">2</span> <span class="toctext">Save and Load Settings Buttons</span></a></li>
-<li class="toclevel-1 tocsection-27"><a href="#Buttons_at_Bottom"><span class="tocnumber">3</span> <span class="toctext">Buttons at Bottom</span></a>
+<li class="toclevel-1 tocsection-28"><a href="#Save_and_Load_Settings_Buttons"><span class="tocnumber">2</span> <span class="toctext">Save and Load Settings Buttons</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Buttons_at_Bottom"><span class="tocnumber">3</span> <span class="toctext">Buttons at Bottom</span></a>
 <ul>
-<li class="toclevel-2 tocsection-28"><a href="#Apply_to"><span class="tocnumber">3.1</span> <span class="toctext">Apply to</span></a></li>
-<li class="toclevel-2 tocsection-29"><a href="#Reset"><span class="tocnumber">3.2</span> <span class="toctext">Reset</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Apply_to"><span class="tocnumber">3.1</span> <span class="toctext">Apply to</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Reset"><span class="tocnumber">3.2</span> <span class="toctext">Reset</span></a></li>
 </ul>
 </li>
 </ul>
@@ -133,6 +135,9 @@ Please note, <br />
 <h4><a name="Show_Legend_Outside_of_Layer_for_Single_Block"></a><span class="mw-headline">Show Legend Outside of Layer for Single Block</span></h4>
 <p>Specify whether show the legend outside of the layer for each graph layer. Uncheck this check box will show legend within the layer frame at specified position.
 </p>
+<h4><a name="Wrap_Text_if_Legend_Width_Exceed.28.25.29"></a><span class="mw-headline">Wrap Text if Legend Width Exceed(%)</span></h4>
+<p>If text length exceeds the specified width, text is wrapped automatically to fit the legend width. The unit is the percentage of layer frame width.
+</p>
 <h4><a name="Direction"></a><span class="mw-headline">Direction</span></h4>
 <p>Specify how to arrange the legend entries, horizontally or vertically.
 </p>
@@ -144,6 +149,9 @@ Please note, <br />
 </p><p><a  class="image"><img alt="Graph Options dialog GraphName.png" src="../images/Graph_Options_dialog/800px-Graph_Options_dialog_GraphName.png?v=99514" width="800"   /></a>
 </p><p><b>Note:</b> When you create a graph from predefined graph template and there are <a href="../../UserGuide/UserGuide/Template_Files.html#Saving_a_customized_window_as_a_template" title="UserGuide:Template Files">preset graph short name and preset graph long name</a> in the template, the template setting should have higher priority and the changes you made in Graph Name tab will not be applied.
 </p><p>You can refer to <a class="external text" href="../../LabTalk/LabTalk/Text_Label_Options.html">this page</a> for more customizations of the graph long name and page title.
+</p>
+<h3><a name="Plot"></a><span class="mw-headline">Plot</span></h3>
+<p>You can use the options in this tab to globally set the <b>Symbol Size</b>, <b>Line Width</b> and <b>Pattern Border Width</b> for the plots.
 </p>
 <h2><a name="Save_and_Load_Settings_Buttons"></a><span class="mw-headline">Save and Load Settings Buttons</span></h2>
 <p>At the top-right corner of dialog, there are two buttons: <b>Save Settings as</b> button <a  class="image"><img alt="Button Save Settings as.png" src="../images/Graph_Options_dialog/Button_Save_Settings_as.png?v=98353" width="16"  /></a> and <b>Load Settings</b> button <a  class="image"><img alt="Button Load Settings.png" src="../images/Graph_Options_dialog/Button_Load_Settings.png?v=98356" width="14"  /></a>

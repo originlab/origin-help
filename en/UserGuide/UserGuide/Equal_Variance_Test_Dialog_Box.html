@@ -1,0 +1,130 @@
+<h1 class="firstHeading">17.3.7.1 Equal Variance Test Dialog Box</h1><p class='urlname' style='display: none'>Equal-Var-Test-Dialog</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Recalculate</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Input</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Significance_Level"><span class="tocnumber">3.1</span> <span class="toctext">Significance Level</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Assume_Normal_Distribution"><span class="tocnumber">3.2</span> <span class="toctext">Assume Normal Distribution</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">4</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">Output</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
+<p>To open the Equal Variance Test Dialog:
+</p>
+<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Equal Variance Test</b></li></ol>
+<p><br />
+<i><b>See Also:</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Equal_Variance_Test_(OriginPro_Only).html" title="Category:Equal Variance Test (OriginPro Only)">Equal Variance Test (Pro Only)</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">Recalculate</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Recalculate
+</th>
+<td>
+<p>Controls recalculation of analysis results
+</p>
+<ul><li><b>None</b> </li>
+<li><b>Auto</b> </li>
+<li><b>Manual</b>  </li></ul>
+<p>For more information, see: <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Recalculating Analysis Results</a>
+</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<p><b>Equal Variance Test </b> supports Indexed and Raw two input data form.
+</p><p>For help with range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Specifying Your Input Data</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Indexed Data
+</th>
+<td>The input data consists of one sample data column and one or more grouping column.  Factor variable and response data are stored in separate columns.
+<ul><li><b>Data</b></li></ul>
+<dl><dd>The sample data column.</dd></dl>
+<ul><li><b>Group By</b></li></ul>
+<dl><dd>The grouping column.</dd></dl>
+</td></tr>
+<tr>
+<th>Raw Data
+</th>
+<td> The input data consists of at least two sample data columns. Each column contains response data from a level of factor variable.
+<ul><li> <b>Sample</b></li></ul>
+<dl><dd> Specify columns as the sample dataset. (at least 2 columns.)</dd></dl>
+</td></tr></table>
+<h3><a name="Significance_Level"></a><span class="mw-headline">Significance Level</span></h3>
+<p>Set the significance level for Equal Variance Test
+</p>
+<h3><a name="Assume_Normal_Distribution"></a><span class="mw-headline">Assume Normal Distribution</span></h3>
+<ul><li> If uncheck this option, it will use the <b>Bonnet Multiple comparisons</b>, <b>Brown-Forsythe</b>, <b>Levene (Squared Deviations) and Levene (Absolute Deviations)</b> methods in the test, and output the  P-value for them. The <i><b>Comparison Intervals for SD</b></i> graph will be output the Graphical Summary Report.</li></ul>
+<ul><li> If check this option, it will use the <b>F test</b> for the data with two groups, or <b>Bartlett</b> method for the data with three or more groups, and output the  P-value. The <i><b>95% Bonferroni Confidence Intervals for SD</b></i> graph will be output the Graphical Summary Report, and the <b>Normal Probability Plot</b> will be shown in the <b>Diagnostic</b>  branch.</li></ul>
+<h2><a name="Plots"></a><span class="mw-headline">Plots</span></h2>
+<p>The selected graph will be shown after <b>Diagnostic</b> branch, if <b>Graphical Diagnostic Report</b> is selected in the <b>Output</b> tab.
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Bonett Multiple Comparison Intervals for SD
+</th>
+<td>When <b>Assume Normal Distribution</b> in the <b>Input</b> tab is uncheck, this option available.
+<p>Create a Bonett Multiple Comparison Intervals for SD 
+</p>
+</td></tr>
+<tr>
+<th>Box Chart
+</th>
+<td>Create a box chart.
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
+<p>For help with the range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Output Results</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Create a summary graph report, including P value bar, effect size bar and data distribution graph. The result tables will also been attached to the graph to show the statistical values.
+<p>The footnote after the summary graph will diagnose these statistical results.
+</p>
+</td></tr>
+<tr>
+<th>Graphical Diagnostic Report
+</th>
+<td>Specify whether to display the graphical diagnostic report.
+<p>The <b>Run Chart</b> for the Outlier Detect and <b>Individual Value Plot</b> for the Distribution are shown in this report.
+</p><p>If <b>Assume Normal Distribution</b> (in the <b>Input</b> tab ) is selected, the <b>Normal Probability Plot</b> will be shown in the Diagnostic branch.
+</p>
+</td></tr>
+<tr>
+<th>Plot Data
+</th>
+<td>Specify the worksheet for output the plot datasets.
+</td></tr>
+<tr>
+<th>Result
+</th>
+<td>Specify the worksheet for output of test results
+</td></tr></table>
+<p><br />
+</p>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> The <b>Masked Data</b> and <b>Bad Data(missing value)</b> table will be in the report sheet.</li></ul>
+</td></tr></table>
+
+
+
+
+
+

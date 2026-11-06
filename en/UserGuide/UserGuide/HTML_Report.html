@@ -60,11 +60,11 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </p>
 <table class="simple">
 <tr>
-<th style="width: 10%">type
+<th style="width: 8%">type
 </th>
-<th style="width: 30%">notation
+<th style="width: 25%">notation
 </th>
-<th style="width: 30%">Description
+<th style="width: 37%">Description
 </th>
 <th style="width: 20%">Examples
 </th></tr>
@@ -92,6 +92,8 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 <td> range of the cell
 </td>
 <td> Insert a worksheet cell content as a string. <br />The syntax is <i>[book_name]sheet_name!column_name[row-index]</i>.
+<p>Note that if the linked cell contains embedded image, graph or graph object like arrow, the syntax will be rendered to show the image directly.
+</p>
 </td>
 <td> {{cell://[book1]1!B[3]}}
 </td></tr>
@@ -151,7 +153,7 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/HTML_Report/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ol><li> You can use <b>Copy</b> and  <b>Paste Link</b> to insert Origin objects. When Note window is in text mode,  you can <b>Copy</b> the Origin object and then in the Note window to insert syntax code by <b>Paste Link</b>.</li>
-<li> When the Notes window is switched to Render mode, if a graph is inserted in the Note, an image file (.png) of the graph is generated and replace the image tag with the png path. When graph is updated, the Notes window is updated accordingly.</li></ol>
+<li> When the Notes window is switched to Render mode, if a graph or image (including embedded graph/image) is inserted in the Note, an image file (.png) of the graph is generated and replace the image tag with the png path. When graph is updated, the Notes window is updated accordingly.</li></ol>
 </td></tr></table>
 <p><br />
 </p>

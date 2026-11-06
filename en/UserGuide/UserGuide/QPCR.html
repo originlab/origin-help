@@ -1,0 +1,136 @@
+<h1 class="firstHeading">29.4.1 QPCR</h1><p class='urlname' style='display: none'>QPCR</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Support_Information"><span class="tocnumber">1</span> <span class="toctext">Support Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#qPCR_Data_Structure"><span class="tocnumber">2</span> <span class="toctext">qPCR Data Structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#qPCR_with_.CE.94Ct_value"><span class="tocnumber">2.1</span> <span class="toctext">qPCR with ΔCt value</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#qPCR_with_Reference_Gene"><span class="tocnumber">2.2</span> <span class="toctext">qPCR with Reference Gene</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#qPCR_with_Reference_Gene_and_Technical_Replicates"><span class="tocnumber">2.3</span> <span class="toctext">qPCR with Reference Gene and Technical Replicates</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#The_qPCR_Dialog_Box"><span class="tocnumber">3</span> <span class="toctext">The qPCR Dialog Box</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Input"><span class="tocnumber">3.1</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Tests"><span class="tocnumber">3.2</span> <span class="toctext">Tests</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Plots"><span class="tocnumber">3.3</span> <span class="toctext">Plots</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Support_Information"></a><span class="mw-headline">Support Information</span></h2>
+<p><b>To Analyze qPCR Assays</b>
+</p>
+<ul><li> <b>Using a template</b> </li></ul>
+<dl><dd><ul><li> Select menu <b>Help: Startup Dialog</b> to open the <b>Startup</b> dialog</li>
+<li> Go to the <b>Lab Assays</b> tab, expand the <b>qPCR</b> branch, and choose the desired data structure. A template will open with guidance.</li></ul></dd></dl>
+<ul><li> <b>Using your own worksheet</b></li></ul>
+<dl><dd><ul><li> Enter your data in a worksheet,</li>
+<li> Select menu <b>Statistics: Lab Assays: qPCR</b> to open the analysis dialog</li></ul></dd></dl>
+<h2><a name="qPCR_Data_Structure"></a><span class="mw-headline">qPCR Data Structure</span></h2>
+<h3><a name="qPCR_with_.CE.94Ct_value"></a><span class="mw-headline">qPCR with ΔCt value</span></h3>
+<p>Analyze qPCR data and calculate relative gene expression (fold change) using ΔCt values.
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Ct value.png" src="../images/QPCR/450px-QPCR_with_Ct_value.png?v=100720" width="450"   /></a></dd></dl>
+<h3><a name="qPCR_with_Reference_Gene"></a><span class="mw-headline">qPCR with Reference Gene</span></h3>
+<p>Analyze qPCR data and calculate relative gene expression (fold change) using target and reference gene Ct values.
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Reference Gene.png" src="../images/QPCR/550px-QPCR_with_Reference_Gene.png?v=100723" width="550"   /></a></dd></dl>
+<h3><a name="qPCR_with_Reference_Gene_and_Technical_Replicates"></a><span class="mw-headline">qPCR with Reference Gene and Technical Replicates</span></h3>
+<p>Analyze qPCR data and calculate relative gene expression (fold change) using target and reference gene Ct values, with technical replicates.
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Reference Genes Technical Replicates.png" src="../images/QPCR/800px-QPCR_with_Reference_Genes_Technical_Replicates.png?v=100728" width="800"   /></a></dd></dl>
+<h2><a name="The_qPCR_Dialog_Box"></a><span class="mw-headline">The qPCR Dialog Box</span></h2>
+<h3><a name="Input"></a><span class="mw-headline">Input</span></h3>
+<p><a  class="image"><img alt="QPCR Input.png" src="../images/QPCR/600px-QPCR_Input.png?v=100741" width="600"   /></a>
+</p>
+<table class="simple">
+
+<tr>
+<th>Data
+</th>
+<td>The ΔCt values to be analyzed
+</td></tr>
+<tr>
+<th>Identifier
+</th>
+<td>Available for the <a href="#qPCR_with_Reference_Gene">"reference gene"</a> and <a href="#qPCR_with_Reference_Gene_and_Technical_Replicates">"reference Gene &amp; technical replicates"</a> workflow.
+<p>Select one gene as reference.
+</p>
+</td></tr>
+<tr>
+<th>Normalize by Reference
+</th>
+<td>Available for the <a href="#qPCR_with_Reference_Gene">"reference gene"</a> and <a href="#qPCR_with_Reference_Gene_and_Technical_Replicates">"reference Gene &amp; technical replicates"</a> workflow.
+<p>The housekeeping gene(s) used to correct for differences in sample amount and RNA quality. Each sample's ΔCt is computed against the geometric mean of the references selected
+</p>
+</td></tr>
+<tr>
+<th>Express Relative to Control
+</th>
+<td>Select a control/reference group which serves as the baseline (fold change = 1). All other groups will be expressed relative to this group.
+</td></tr>
+<tr>
+<th>Fold Change Method
+</th>
+<td>
+<ul><li> <b>Classical Livak 2^−ΔΔCt Method</b>
+<dl><dd> Fold Change = 2<sup>−ΔΔCt</sup></dd></dl></li>
+<li> <b>2^−ΔCt Method (Biological Replicates)</b>
+<dl><dd> Fold Change = 2<sup>−ΔCt </sup>(Treatment) / Mean(2<sup>−ΔCt </sup>(Control))</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>Significance Level
+</th>
+<td>Set the threshold to judge statistical significance, e.g., 0.05. Results with p &lt; the threshold are considered statistically significant.
+</td></tr>
+<tr>
+<th>Multiple Comparisons
+</th>
+<td>Choose the comparison set.
+<ul><li> <b>All Pairwise</b>
+<dl><dd> Every group is compared against every other group</dd></dl></li>
+<li> <b>Compare with Control</b>
+<dl><dd> Compare each <b>Treatment</b> group only against the <b>Control</b> group.</dd></dl></li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<h3><a name="Tests"></a><span class="mw-headline">Tests</span></h3>
+<p><a  class="image"><img alt="QPCR Test.png" src="../images/QPCR/800px-QPCR_Test.png?v=100742" width="800"   /></a>
+</p><p>This tab controls which statistical test the analysis applies to your fold-change data. Instead of a single dropdown, it shows a decision-tree flowchart: the software runs a sequence of assumption checks on your data and automatically selects the appropriate test.
+</p><p><b>Step 1: Normality Test</b>
+</p><p>Checks whether the expression values within each group follow a normal distribution.Select from the options below
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Shapiro-Wilk_normality_test" title="UserGuide:Algorithm (Normality)">Shapiro-Wilk</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Anderson-Darling_Test" title="UserGuide:Algorithm (Normality)">Anderson-Darling</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#D.27Agostino-K_Squared" title="UserGuide:Algorithm (Normality)">D'Agostino-Pearson K2</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Kolmogorov-Smirnov_normality_test" title="UserGuide:Algorithm (Normality)">Kolmogorov-Smirnov</a></li></ul></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/QPCR/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li> <b>All normal</b> -&gt; proceed to the variance check (parametric branch).</li>
+<li> <b>Not all normal</b> -&gt; jump straight to the nonparametric branch.</li></ul>
+</td></tr></table>
+<p><br />
+<b>Step 2: Equal Variance Test (parametric branch only)</b>
+</p><p>Tests whether the groups have equal variances (homoscedasticity). Select from the options below
+</p>
+<dl><dd><ul><li> Bonnet Multiple Comparison</li>
+<li> Brown-Forsythe</li>
+<li> Levene ||</li>
+<li> Levene ()<sup>2</sup></li>
+<li> Bartlett</li></ul></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/QPCR/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li> <b>Equal</b> -&gt;  standard <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Theory_of_One-Way_ANOVA" title="UserGuide:One Way ANOVA Algorithms"><b>One-Way ANOVA</b></a>, followed by the <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Multiple_Means_Comparisons" title="UserGuide:One Way ANOVA Algorithms"><b>Means Comparison</b></a> method you choose from the dropdown (<b>Tukey</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b>Scheffe</b>, <b>Holm-Bonferroni</b>, <b>Holm-Sidak</b>)</li>
+<li> <b>Not equal</b> -&gt; <b>Welch ANOVA</b> (doesn't assume equal variances), paired automatically with <b>Games-Howell</b> for the pairwise comparisons.</li></ul>
+</td></tr></table>
+<p><br />
+<b>Step 3: Nonparametric branch</b>
+</p><p>Select a method below to compare group median via ranks. Followed by <b>Dunn's Test</b> for multiple comparisons
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(kwanova).html" title="UserGuide:Algorithm (kwanova)">Kruskal-Wallis</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(median).html" title="UserGuide:Algorithm (median)">Mood's Median</a></li></ul></dd></dl>
+<h3><a name="Plots"></a><span class="mw-headline">Plots</span></h3>
+<dl><dd><a  class="image"><img alt="QPCR Plot.png" src="../images/QPCR/800px-QPCR_Plot.png?v=100771" width="800"   /></a></dd></dl>
+<p>Controls the appearance of the mulitple comparison plot. Every change is reflected in the live preview panel on the right.
+</p>
+

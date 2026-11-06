@@ -33,6 +33,7 @@
         <page title="HTML and Markdown Report" file="UserGuide/HTML_Report.html" url="Origin-Help/HTML-Report" src="UserGuide:HTML_Report"/>
         <page title="Origin Rich Text" file="UserGuide/Origin_Rich_Text.html" url="Origin-Help/Origin-Rich-Text" src="UserGuide:Origin_Rich_Text"/>
       </page>
+      <page title="Sticky Notes" file="Category/Sticky_Notes.html" url="Origin-Help/Sticky-Notes" src="Category:Sticky_Notes"/>
       <page title="Hotkeys" file="Category/Hotkeys.html" url="Origin-Help/Hotkeys" src="Category:Hotkeys">
         <page title="Hotkeys/Accelerator Keys/Keyboard Shortcuts in Origin" file="UserGuide/Hot_Keys_in_Origin.html" url="Origin-Help/HotKey-in-Origin" src="UserGuide:Hot_Keys_in_Origin"/>
         <page title="Custom Chorded Keys" file="UserGuide/Custom_Chorded_Keys.html" url="Origin-Help/Custom-Chorded-Keys" src="UserGuide:Custom_Chorded_Keys"/>
@@ -41,6 +42,7 @@
       <page title="Origin Limitations" file="UserGuide/Origin_Limitations.html" url="Origin-Help/Origin-Limitation" src="UserGuide:Origin_Limitations"/>
       <page title="Dark Mode" file="UserGuide/Dark_Mode.html" url="Origin-Help/Dark-Mode" src="UserGuide:Dark_Mode"/>
       <page title="Origin GUI Modes" file="UserGuide/Origin_GUI_Modes.html" url="Origin-Help/GUI-Modes" src="UserGuide:Origin_GUI_Modes"/>
+      <page title="Compact Mode" file="UserGuide/Compact_Mode.html" url="Origin-Help/Compact-Mode" src="UserGuide:Compact_Mode"/>
     </page>
     <page title="The Origin Project File" file="Category/The_Origin_Project_File.html" url="Origin-Help/Origin-Project-File" src="Category:The_Origin_Project_File">
       <page title="Using Windows File Explorer to Preview Your Projects" file="UserGuide/Using_Windows_File_Explorer_to_Preview_Your_Projects.html" url="Origin-Help/Windows-File-Explorer-Preview" src="UserGuide:Using_Windows_File_Explorer_to_Preview_Your_Projects"/>
@@ -785,6 +787,7 @@
         <page title="Bland-Altman Plots" file="UserGuide/Bland_Altman_Plots.html" url="Origin-Help/Bland-Altman-Plots" src="UserGuide:Bland_Altman_Plots"/>
         <page title="Marginal Plot" file="UserGuide/Marginal_Plot.html" url="Origin-Help/Marginal-Plot" src="UserGuide:Marginal_Plot"/>
         <page title="Creating Dot Plot" file="UserGuide/Creating_Dot_Plot.html" url="Origin-Help/Create-Dot-Plot" src="UserGuide:Creating_Dot_Plot"/>
+        <page title="Creating Multiple Comparisons Plot" file="UserGuide/Creating_Paired_Comparison_Plot.html" url="Origin-Help/Create-MCP" src="UserGuide:Creating_Paired_Comparison_Plot"/>
       </page>
       <page title="Hypothesis Testing" file="Category/Hypothesis_Testing.html" url="Origin-Help/Hypothesis-Testing" src="Category:Hypothesis_Testing">
         <page title="One-Sample T-Test" file="Category/One-Sample_t-Test.html" url="Origin-Help/tTest-OneSample" src="Category:One-Sample_t-Test">
@@ -803,13 +806,16 @@
           <page title="The Two Sample T-Test on Rows Dialog Box" file="UserGuide/Two_Sample_t-test_on_Rows_Dialog_Box.html" url="Origin-Help/tTest-TwoSample-on-Rows-Dialog" src="UserGuide:Two_Sample_t-test_on_Rows_Dialog_Box"/>
           <page title="The Pair-Sample T-Test on Rows Dialog Box" file="UserGuide/Paired_Sample_t-test_on_Rows_Dialog_Box.html" url="Origin-Help/tTest-PairSample-on-Rows-Dialog" src="UserGuide:Paired_Sample_t-test_on_Rows_Dialog_Box"/>
         </page>
-        <page title="One-Sample Test for Variance (Pro Only)" file="Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" url="Origin-Help/tTest-OneSample-Var" src="Category:One-Sample_Test_for_Variance_(OriginPro_Only)">
-          <page title="The One Sample Test for Variance Dialog Box" file="UserGuide/The_OneSampleTestVar_Dialog_Box.html" url="Origin-Help/tTest-OneSample-Var-Dialog" src="UserGuide:The_OneSampleTestVar_Dialog_Box"/>
-          <page title="Algorithms (One Sample Test for Variance)" file="UserGuide/Algorithm_(OneSampletTestVar).html" url="Origin-Help/tTest-OneSample-Var-Algorithm" src="UserGuide:Algorithm_(OneSampletTestVar)"/>
+        <page title="One-Sample Variance Test (Pro Only)" file="Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" url="Origin-Help/tTest-OneSample-Var" src="Category:One-Sample_Test_for_Variance_(OriginPro_Only)">
+          <page title="The One-Sample Variance Test Dialog Box" file="UserGuide/The_OneSampleTestVar_Dialog_Box.html" url="Origin-Help/tTest-OneSample-Var-Dialog" src="UserGuide:The_OneSampleTestVar_Dialog_Box"/>
+          <page title="Algorithms (One-Sample Variance Test)" file="UserGuide/Algorithm_(OneSampletTestVar).html" url="Origin-Help/tTest-OneSample-Var-Algorithm" src="UserGuide:Algorithm_(OneSampletTestVar)"/>
         </page>
-        <page title="Two Sample Test for Variances (Pro Only)" file="Category/Two_Sample_Test_for_Variances_(OriginPro_Only).html" url="Origin-Help/tTest-TwoSample-Var" src="Category:Two_Sample_Test_for_Variances_(OriginPro_Only)">
-          <page title="The Two Sample Test for Variance Dialog Box" file="UserGuide/The_TwoSampleTestVar_Dialog_Box.html" url="Origin-Help/tTest-TwoSample-Var-Dialog" src="UserGuide:The_TwoSampleTestVar_Dialog_Box"/>
-          <page title="Algorithms (Two Sample Test for Variance)" file="UserGuide/Algorithm_(TwoSampleTestVar).html" url="Origin-Help/tTest-TwoSample-Var-Algorithm" src="UserGuide:Algorithm_(TwoSampleTestVar)"/>
+        <page title="Two-Sample Variance Test (Pro Only)" file="Category/Two_Sample_Test_for_Variances_(OriginPro_Only).html" url="Origin-Help/tTest-TwoSample-Var" src="Category:Two_Sample_Test_for_Variances_(OriginPro_Only)">
+          <page title="The Two-Sample Variance Test Dialog Box" file="UserGuide/The_TwoSampleTestVar_Dialog_Box.html" url="Origin-Help/tTest-TwoSample-Var-Dialog" src="UserGuide:The_TwoSampleTestVar_Dialog_Box"/>
+          <page title="Algorithms (Two-Sample Variance Test)" file="UserGuide/Algorithm_(TwoSampleTestVar).html" url="Origin-Help/tTest-TwoSample-Var-Algorithm" src="UserGuide:Algorithm_(TwoSampleTestVar)"/>
+        </page>
+        <page title="Equal Variance Test (Pro Only)" file="Category/Equal_Variance_Test_(OriginPro_Only).html" url="Origin-Help/Equal-Var-Test" src="Category:Equal_Variance_Test_(OriginPro_Only)">
+          <page title="Equal Variance Test Dialog Box" file="UserGuide/Equal_Variance_Test_Dialog_Box.html" url="Origin-Help/Equal-Var-Test-Dialog" src="UserGuide:Equal_Variance_Test_Dialog_Box"/>
         </page>
         <page title="One-Sample Proportion Test (Pro Only)" file="Category/One_Sample_Proportion_Test(Pro_Only).html" url="Origin-Help/One-Sample-Prop-Test" src="Category:One_Sample_Proportion_Test(Pro_Only)">
           <page title="The One-Sample Proportion Test Dialog Box" file="UserGuide/The_One_Sample_Proportion_Dialog_Box.html" url="Origin-Help/One-Prop-Dialog" src="UserGuide:The_One_Sample_Proportion_Dialog_Box"/>
@@ -827,6 +833,9 @@
         </page>
         <page title="Two-Sample Poisson Rate (Pro Only)" file="Category/Two_Sample_Poisson_Rate_(Pro_Only).html" url="Origin-Help/Two-Sample-Poisson-Rate" src="Category:Two_Sample_Poisson_Rate_(Pro_Only)">
           <page title="Two-Sample Poisson Rate Test Dialog Box" file="UserGuide/Two_Sample_Poisson_Rate_Dialog_Box.html" url="Origin-Help/Two-Poisson-Rate-Dialog" src="UserGuide:Two_Sample_Poisson_Rate_Dialog_Box"/>
+        </page>
+        <page title="Chi-square Goodness-of-Fit Test (Pro Only)" file="Category/Chi-square_Goodness-of-Fit_Test_(Pro_Only).html" url="Origin-Help/Chi-square-Test" src="Category:Chi-square_Goodness-of-Fit_Test_(Pro_Only)">
+          <page title="Chi-square Goodness-of-Fit Dialog Box" file="UserGuide/Chi-square_Goodness-of-Fit_Test_Dialog_Box.html" url="Origin-Help/Chi-square-Test-Dialog" src="UserGuide:Chi-square_Goodness-of-Fit_Test_Dialog_Box"/>
         </page>
       </page>
       <page title="ANOVA" file="Category/ANOVA.html" url="Origin-Help/ANOVA" src="Category:ANOVA">
@@ -927,7 +936,9 @@
           <page title="References (Discriminant Analysis)" file="UserGuide/Reference(Discriminant_Analysis).html" url="Origin-Help/DiscAnalysis-Ref" src="UserGuide:Reference(Discriminant_Analysis)"/>
         </page>
       </page>
-      <page title="Machine Learning (Pro Only)" file="Category/Machine_Learning.html" url="Origin-Help/Machine-Learning" src="Category:Machine_Learning"/>
+      <page title="Machine Learning (Pro Only)" file="Category/Machine_Learning.html" url="Origin-Help/Machine-Learning" src="Category:Machine_Learning">
+        <page title="Predictive Modeling Advisor Dialog Box" file="UserGuide/Predictive_Modeling_Advisor_Dialog_Box.html" url="Origin-Help/Pre-Modeling-Advisor" src="UserGuide:Predictive_Modeling_Advisor_Dialog_Box"/>
+      </page>
       <page title="Power and Sample Size (Pro Only)" file="Category/Power_and_Sample_Size_(OriginPro_Only).html" url="Origin-Help/Power-Sample-Size" src="Category:Power_and_Sample_Size_(OriginPro_Only)">
         <page title="(PSS) One-Sample T-Test" file="Category/(PSS)_One-Sample_t-Test.html" url="Origin-Help/PSS-OneSampleTTest" src="Category:(PSS)_One-Sample_t-Test">
           <page title="The (PSS) One-Sample T-Test Dialog Box" file="UserGuide/The_PSS_tTest1_Dialog_Box.html" url="Origin-Help/PSS-tTest1-Dialog" src="UserGuide:The_PSS_tTest1_Dialog_Box"/>
@@ -945,21 +956,21 @@
           <page title="The (PSS) One-Way ANOVA Dialog Box" file="UserGuide/The_PSS_ANOVA1_Dialog_Box.html" url="Origin-Help/PSS-ANOVA-Dialog" src="UserGuide:The_PSS_ANOVA1_Dialog_Box"/>
           <page title="Algorithm ((PSS) One-Way ANOVA)" file="UserGuide/Algorithm_(PSS_ANOVA1).html" url="Origin-Help/PSS-ANOVA-Algorithm" src="UserGuide:Algorithm_(PSS_ANOVA1)"/>
         </page>
-        <page title="(PSS) One-Proportion Test" file="Category/(PSS)_One-Proportion_Test.html" url="Origin-Help/PSS-OneProportionTest" src="Category:(PSS)_One-Proportion_Test">
-          <page title="The (PSS) One-Proportion Test Dialog Box" file="UserGuide/The_One-Proportion_Test_Dialog_Box.html" url="Origin-Help/PSS-One-Prop-Dialog" src="UserGuide:The_One-Proportion_Test_Dialog_Box"/>
-          <page title="Algorithms (PSS: One-Proportion Test)" file="UserGuide/Algorithms_(PSS_One-Proportion_Test).html" url="Origin-Help/PSS-One-Prop-Algorithm" src="UserGuide:Algorithms_(PSS_One-Proportion_Test)"/>
+        <page title="(PSS) One-Sample Proportion Test" file="Category/(PSS)_One-Proportion_Test.html" url="Origin-Help/PSS-OneProportionTest" src="Category:(PSS)_One-Proportion_Test">
+          <page title="The (PSS) One-Sample Proportion Test Dialog Box" file="UserGuide/The_One-Proportion_Test_Dialog_Box.html" url="Origin-Help/PSS-One-Prop-Dialog" src="UserGuide:The_One-Proportion_Test_Dialog_Box"/>
+          <page title="Algorithms (PSS: One-Sample Proportion Test)" file="UserGuide/Algorithms_(PSS_One-Proportion_Test).html" url="Origin-Help/PSS-One-Prop-Algorithm" src="UserGuide:Algorithms_(PSS_One-Proportion_Test)"/>
         </page>
-        <page title="(PSS) Two-Proportion Test" file="Category/(PSS)_Two-Proportion_Test.html" url="Origin-Help/PSS-TwoProportionTest" src="Category:(PSS)_Two-Proportion_Test">
-          <page title="The (PSS) Two-Proportion Test Dialog Box" file="UserGuide/The_Two-Proportion_Test_Dialog_Box.html" url="Origin-Help/PSS-Two-Prop-Dialog" src="UserGuide:The_Two-Proportion_Test_Dialog_Box"/>
-          <page title="Algorithm (PSS: Two-Proportion Test)" file="UserGuide/Algorithms(PSS_Two-Proportion_Test).html" url="Origin-Help/PSS-Two-Prop-Algorithm" src="UserGuide:Algorithms(PSS_Two-Proportion_Test)"/>
+        <page title="(PSS) Two-Sample Proportion Test" file="Category/(PSS)_Two-Proportion_Test.html" url="Origin-Help/PSS-TwoProportionTest" src="Category:(PSS)_Two-Proportion_Test">
+          <page title="The (PSS) Two-Sample Proportion Test Dialog Box" file="UserGuide/The_Two-Proportion_Test_Dialog_Box.html" url="Origin-Help/PSS-Two-Prop-Dialog" src="UserGuide:The_Two-Proportion_Test_Dialog_Box"/>
+          <page title="Algorithm (PSS: Two-Sample Proportion Test)" file="UserGuide/Algorithms(PSS_Two-Proportion_Test).html" url="Origin-Help/PSS-Two-Prop-Algorithm" src="UserGuide:Algorithms(PSS_Two-Proportion_Test)"/>
         </page>
-        <page title="(PSS) One-Variance Test" file="Category/(PSS)_One-Variance_Test.html" url="Origin-Help/PSS-OneVarianceTest" src="Category:(PSS)_One-Variance_Test">
-          <page title="The (PSS) One-Variance Test Dialog Box" file="UserGuide/The_One-Variance_Test_Dialog_Box.html" url="Origin-Help/PSS-One-Var-Dialog" src="UserGuide:The_One-Variance_Test_Dialog_Box"/>
-          <page title="Algorithms (PSS: One-Variance Test)" file="UserGuide/Algorithms(PSS_One-Variance_Test).html" url="Origin-Help/PSS-One-Var-Algorithm" src="UserGuide:Algorithms(PSS_One-Variance_Test)"/>
+        <page title="(PSS) One-Sample Variance Test" file="Category/(PSS)_One-Variance_Test.html" url="Origin-Help/PSS-OneVarianceTest" src="Category:(PSS)_One-Variance_Test">
+          <page title="The (PSS) One-Sample Variance Test Dialog Box" file="UserGuide/The_One-Variance_Test_Dialog_Box.html" url="Origin-Help/PSS-One-Var-Dialog" src="UserGuide:The_One-Variance_Test_Dialog_Box"/>
+          <page title="Algorithms (PSS: One-Sample Variance Test)" file="UserGuide/Algorithms(PSS_One-Variance_Test).html" url="Origin-Help/PSS-One-Var-Algorithm" src="UserGuide:Algorithms(PSS_One-Variance_Test)"/>
         </page>
-        <page title="(PSS) Two-Variance Test" file="Category/(PSS)_Two-Variance_Test.html" url="Origin-Help/PSS-TwoVarianceTest" src="Category:(PSS)_Two-Variance_Test">
-          <page title="The (PSS) Two-Variance Test Dialog Box" file="UserGuide/The_Two-Variance_Test_Dialog_Box.html" url="Origin-Help/PSS-Two-Var-Dialog" src="UserGuide:The_Two-Variance_Test_Dialog_Box"/>
-          <page title="Algorithms (PSS: Two-Variance Test)" file="UserGuide/Algorithms(PSS_Two_Variances_Test).html" url="Origin-Help/PSS-Two-Var-Algorithm" src="UserGuide:Algorithms(PSS_Two_Variances_Test)"/>
+        <page title="(PSS) Two-Sample Variance Test" file="Category/(PSS)_Two-Variance_Test.html" url="Origin-Help/PSS-TwoVarianceTest" src="Category:(PSS)_Two-Variance_Test">
+          <page title="The (PSS) Two-Sample Variance Test Dialog Box" file="UserGuide/The_Two-Variance_Test_Dialog_Box.html" url="Origin-Help/PSS-Two-Var-Dialog" src="UserGuide:The_Two-Variance_Test_Dialog_Box"/>
+          <page title="Algorithms (PSS: Two-Sample Variance Test)" file="UserGuide/Algorithms(PSS_Two_Variances_Test).html" url="Origin-Help/PSS-Two-Var-Algorithm" src="UserGuide:Algorithms(PSS_Two_Variances_Test)"/>
         </page>
         <page title="Sample Size for Estimation" file="Category/Sample_Size_for_Estimation.html" url="Origin-Help/Sample-Size-Estimation" src="Category:Sample_Size_for_Estimation">
           <page title="Sample Size for Estimation Dialog Box" file="UserGuide/Sample_Size_for_Estimation_Dialog.html" url="Origin-Help/Sample-Size-Estimation-Dialog" src="UserGuide:Sample_Size_for_Estimation_Dialog"/>
@@ -1353,6 +1364,10 @@
       <page title="Data Table" file="UserGuide/Data_Table.html" url="Origin-Help/Data-Table" src="UserGuide:Data_Table"/>
       <page title="Statistics and Analysis in Data Table" file="UserGuide/Statistics_and_Analysis_in_Data_Table.html" url="Origin-Help/Data-Table-Stats-Analysis" src="UserGuide:Statistics_and_Analysis_in_Data_Table"/>
       <page title="Plotting in Data Table" file="UserGuide/Plotting_in_Data_Table.html" url="Origin-Help/Data-Table-Plotting" src="UserGuide:Plotting_in_Data_Table"/>
+      <page title="Lab Assays" file="Category/Lab_Assays.html" url="Origin-Help/Lab-Assays" src="Category:Lab_Assays">
+        <page title="QPCR" file="UserGuide/QPCR.html" url="Origin-Help/QPCR" src="UserGuide:QPCR"/>
+        <page title="Western Blot" file="UserGuide/Western_Blot.html" url="Origin-Help/Western-Blot" src="UserGuide:Western_Blot"/>
+      </page>
     </page>
     <page title="Appendix 1 - Toolbars and Buttons" file="Category/Appendix_1_-_Toolbars.html" url="Origin-Help/Toolbar" src="Category:Appendix_1_-_Toolbars">
       <page title="Origin Toolbars" file="Category/Origin_Toolbars.html" url="Origin-Help/Origin-Toolbar-List" src="Category:Origin_Toolbars">
@@ -1414,6 +1429,7 @@
         <page title="Error Band Graph" file="UserGuide/Error_Band_Graph.html" url="Origin-Help/Error-Band-Graph" src="UserGuide:Error_Band_Graph"/>
         <page title="Density Dots" file="UserGuide/Density_Dots.html" url="Origin-Help/Density_Dots" src="UserGuide:Density_Dots"/>
         <page title="Color Dots" file="UserGuide/Color_Dots.html" url="Origin-Help/Color-Dots" src="UserGuide:Color_Dots"/>
+        <page title="Binned Scatter" file="UserGuide/Binned_Scatter.html" url="Origin-Help/Binned-Scatter" src="UserGuide:Binned_Scatter"/>
       </page>
       <page title="2D Line Symbol Graphs" file="Category/2D_Line_Symbol_Graphs.html" url="Origin-Help/2DLineSym-Graph" src="Category:2D_Line_Symbol_Graphs">
         <page title="Line+Symbol Graph" file="UserGuide/Line_Symbol_Graph.html" url="Origin-Help/LineSym-Graph" src="UserGuide:Line_Symbol_Graph"/>
@@ -1524,6 +1540,8 @@
         <page title="Chord Diagram/Chord Diagram with Ratio Layout" file="UserGuide/Chord_Diagram.html" url="Origin-Help/Chord-Diagram" src="UserGuide:Chord_Diagram"/>
         <page title="Hierarchical Edge Bundling Diagram" file="UserGuide/Hierarchical_Edge_Bundling.html" url="Origin-Help/Hierarchical-Edge-Bundling" src="UserGuide:Hierarchical_Edge_Bundling"/>
         <page title="Marginal Box Charts" file="UserGuide/Marginal_Boxes_Graph.html" url="Origin-Help/Marginal-Boxes-Charts" src="UserGuide:Marginal_Boxes_Graph"/>
+        <page title="Paired Comparison Plot" file="UserGuide/Paired_Comparison_Plot.html" url="Origin-Help/Paired -Comparison-Plot" src="UserGuide:Paired_Comparison_Plot"/>
+        <page title="UpSet Plot" file="UserGuide/UpSet_Plot.html" url="Origin-Help/UpSet-Plot" src="UserGuide:UpSet_Plot"/>
         <page title="Marginal Histograms Graph" file="UserGuide/Marginal_Histograms_Graph.html" url="Origin-Help/Marginal-Histograms-Graph" src="UserGuide:Marginal_Histograms_Graph"/>
         <page title="Marginal Plots" file="UserGuide/Marginal.html" url="Origin-Help/Marginal" src="UserGuide:Marginal"/>
         <page title="Ridgeline Chart" file="UserGuide/Ridgeline_Chart.html" url="Origin-Help/Ridgeline" src="UserGuide:Ridgeline_Chart"/>
@@ -1658,6 +1676,7 @@
         <page title="Ternary Contour" file="UserGuide/Ternary_Contour.html" url="Origin-Help/Ternary-Contour" src="UserGuide:Ternary_Contour"/>
         <page title="Overlaid Contour Plot" file="UserGuide/Overlaid_Contour_Plot.html" url="Origin-Help/Overlaid-Contour-Plot" src="UserGuide:Overlaid_Contour_Plot"/>
         <page title="Ternary Overlaid Contour Plot" file="UserGuide/Ternary_Overlaid_Contour_Plot.html" url="Origin-Help/Ternary-Overlaid-Contour-Plot" src="UserGuide:Ternary_Overlaid_Contour_Plot"/>
+        <page title="Hexbin Plot" file="UserGuide/Hexbin_Plot.html" url="Origin-Help/Hexbin-Plot" src="UserGuide:Hexbin_Plot"/>
       </page>
       <page title="Image and Profiles" file="Category/Images.html" url="Origin-Help/Image-Graph" src="Category:Images">
         <page title="Contour Profiles" file="UserGuide/Profile2.html" url="Origin-Help/Contour-Profile" src="UserGuide:Profile2"/>
@@ -1668,8 +1687,14 @@
     </page>
     <page title="Appendix 3 - Built-in Functions" file="Category/Appendix_3_-_Built-in_Functions.html" url="Origin-Help/Built-in-Functions" src="Category:Appendix_3_-_Built-in_Functions">
       <page title="Curve Fitting Functions" file="Category/Curve_Fitting_Functions.html" url="Origin-Help/Curve-Fitting-Function" src="Category:Curve_Fitting_Functions">
+        <page title="AbsoluteIC50" file="UserGuide/AbsoluteIC50.html" url="Origin-Help/AbsoluteIC50-FitFunc" src="UserGuide:AbsoluteIC50"/>
         <page title="Allometric1" file="UserGuide/Allometric1.html" url="Origin-Help/Allometric1-FitFunc" src="UserGuide:Allometric1"/>
         <page title="Allometric2" file="UserGuide/Allometric2.html" url="Origin-Help/Allometric2-FitFunc" src="UserGuide:Allometric2"/>
+        <page title="AllostericModulator" file="UserGuide/AllostericModulator.html" url="Origin-Help/AllostericModulator-FitFunc" src="UserGuide:AllostericModulator"/>
+        <page title="AllostericShift" file="UserGuide/AllostericShift.html" url="Origin-Help/AllostericShift-FitFunc" src="UserGuide:AllostericShift"/>
+        <page title="AllostericShiftLog" file="UserGuide/AllostericShiftLog.html" url="Origin-Help/AllostericShiftLog-FitFunc" src="UserGuide:AllostericShiftLog"/>
+        <page title="Assoc1conc" file="UserGuide/Assoc1conc.html" url="Origin-Help/Assoc1conc-FitFunc" src="UserGuide:Assoc1conc"/>
+        <page title="AssocThenDissoc" file="UserGuide/AssocThenDissoc.html" url="Origin-Help/AssocThenDissoc-FitFunc" src="UserGuide:AssocThenDissoc"/>
         <page title="Asym2Sig" file="UserGuide/Asym2Sig.html" url="Origin-Help/Asym2Sig-FitFunc" src="UserGuide:Asym2Sig"/>
         <page title="Asymptotic1" file="UserGuide/Asymptotic1.html" url="Origin-Help/Asymptotic1-FitFunc" src="UserGuide:Asymptotic1"/>
         <page title="Belehradek" file="UserGuide/Belehradek.html" url="Origin-Help/Belehradek-FitFunc" src="UserGuide:Belehradek"/>
@@ -1677,11 +1702,13 @@
         <page title="BellShaped" file="UserGuide/BellShaped.html" url="Origin-Help/BellShaped-FitFunc" src="UserGuide:BellShaped"/>
         <page title="BET" file="UserGuide/BET.html" url="Origin-Help/BET-FitFunc" src="UserGuide:BET"/>
         <page title="Beta" file="UserGuide/Beta.html" url="Origin-Help/Beta-FitFunc" src="UserGuide:Beta"/>
+        <page title="BetaGrowthDecay" file="UserGuide/BetaGrowthDecay.html" url="Origin-Help/BetaGrowthDecay-FitFunc" src="UserGuide:BetaGrowthDecay"/>
         <page title="BETMod" file="UserGuide/BETMod.html" url="Origin-Help/BETMod-FitFunc" src="UserGuide:BETMod"/>
         <page title="BiDoseResp" file="UserGuide/BiDoseResp.html" url="Origin-Help/BiDoseResp-FitFunc" src="UserGuide:BiDoseResp"/>
         <page title="BiHill" file="UserGuide/BiHill.html" url="Origin-Help/BiHill-FitFunc" src="UserGuide:BiHill"/>
         <page title="Bingham" file="UserGuide/Bingham.html" url="Origin-Help/Bingham-FitFunc" src="UserGuide:Bingham"/>
         <page title="Biphasic" file="UserGuide/Biphasic.html" url="Origin-Help/Biphasic-FitFunc" src="UserGuide:Biphasic"/>
+        <page title="BiphasicConcentration" file="UserGuide/BiphasicConcentration.html" url="Origin-Help/BiphasicConcentration-FitFunc" src="UserGuide:BiphasicConcentration"/>
         <page title="BlNeld" file="UserGuide/BlNeld.html" url="Origin-Help/BlNeld-FitFunc" src="UserGuide:BlNeld"/>
         <page title="BlNeldSmp" file="UserGuide/BlNeldSmp.html" url="Origin-Help/BlNeldSmp-FitFunc" src="UserGuide:BlNeldSmp"/>
         <page title="BoltzIV" file="UserGuide/BoltzIV.html" url="Origin-Help/BoltzIV-FitFunc" src="UserGuide:BoltzIV"/>
@@ -1696,6 +1723,7 @@
         <page title="CCE" file="UserGuide/CCE.html" url="Origin-Help/CCE-FitFunc" src="UserGuide:CCE"/>
         <page title="Chapman" file="UserGuide/Chapman.html" url="Origin-Help/Chapman-FitFunc" src="UserGuide:Chapman"/>
         <page title="ChemDena" file="UserGuide/ChemDena.html" url="Origin-Help/ChemDena-FitFunc" src="UserGuide:ChemDena"/>
+        <page title="CompetitiveBinding" file="UserGuide/CompetitiveBinding.html" url="Origin-Help/CompetitiveBinding-FitFunc" src="UserGuide:CompetitiveBinding"/>
         <page title="CompetitiveFull" file="UserGuide/CompetitiveFull.html" url="Origin-Help/CompetitiveFull-FitFunc" src="UserGuide:CompetitiveFull"/>
         <page title="CompetitiveFull2" file="UserGuide/CompetitiveFull2.html" url="Origin-Help/CompetitiveFull2-FitFunc" src="UserGuide:CompetitiveFull2"/>
         <page title="CompetitiveInhibition" file="UserGuide/CompetitiveInhibition.html" url="Origin-Help/CompetitiveInhibition-FitFunc" src="UserGuide:CompetitiveInhibition"/>
@@ -1708,9 +1736,15 @@
         <page title="Cubic" file="UserGuide/Cubic.html" url="Origin-Help/Cubic-FitFunc" src="UserGuide:Cubic"/>
         <page title="Dhyperbl" file="UserGuide/Dhyperbl.html" url="Origin-Help/Dhyperbl-FitFunc" src="UserGuide:Dhyperbl"/>
         <page title="DoseResp" file="UserGuide/DoseResp.html" url="Origin-Help/DoseResp-FitFunc" src="UserGuide:DoseResp"/>
+        <page title="DoseResp5P" file="UserGuide/DoseResp5P.html" url="Origin-Help/DoseResp5P-FitFunc" src="UserGuide:DoseResp5P"/>
+        <page title="DoseRespAbsIC50" file="UserGuide/DoseRespAbsIC50.html" url="Origin-Help/DoseRespAbsIC50-FitFunc" src="UserGuide:DoseRespAbsIC50"/>
+        <page title="DoseRespEC" file="UserGuide/DoseRespEC.html" url="Origin-Help/DoseRespEC-FitFunc" src="UserGuide:DoseRespEC"/>
+        <page title="DoseRespShift" file="UserGuide/DoseRespShift.html" url="Origin-Help/DoseRespShift-FitFunc" src="UserGuide:DoseRespShift"/>
         <page title="DoubleBoltzmann" file="UserGuide/DoubleBoltzmann.html" url="Origin-Help/DoubleBoltzmann-FitFunc" src="UserGuide:DoubleBoltzmann"/>
         <page title="DoubleExp" file="UserGuide/DoubleExp.html" url="Origin-Help/DoubleExp-FitFunc" src="UserGuide:DoubleExp"/>
         <page title="DoubleExpOffset" file="UserGuide/DoubleExpOffset.html" url="Origin-Help/DoubleExpOffset-FitFunc" src="UserGuide:DoubleExpOffset"/>
+        <page title="EC50Shift" file="UserGuide/EC50Shift.html" url="Origin-Help/EC50Shift-FitFunc" src="UserGuide:EC50Shift"/>
+        <page title="ECanything" file="UserGuide/ECanything.html" url="Origin-Help/ECanything-FitFunc" src="UserGuide:ECanything"/>
         <page title="ECS" file="UserGuide/ECS.html" url="Origin-Help/ECS-FitFunc" src="UserGuide:ECS"/>
         <page title="Exp1P1" file="UserGuide/Exp1P1.html" url="Origin-Help/Exp1P1-FitFunc" src="UserGuide:Exp1P1"/>
         <page title="Exp1p2" file="UserGuide/Exp1p2.html" url="Origin-Help/Exp1p2-FitFunc" src="UserGuide:Exp1p2"/>
@@ -1736,6 +1770,7 @@
         <page title="ExpDecay1" file="UserGuide/ExpDecay1.html" url="Origin-Help/ExpDecay1-FitFunc" src="UserGuide:ExpDecay1"/>
         <page title="ExpDecay2" file="UserGuide/ExpDecay2.html" url="Origin-Help/ExpDecay2-FitFunc" src="UserGuide:ExpDecay2"/>
         <page title="ExpDecay3" file="UserGuide/ExpDecay3.html" url="Origin-Help/ExpDecay3-FitFunc" src="UserGuide:ExpDecay3"/>
+        <page title="ExpDecayDelay1" file="UserGuide/ExpDecayDelay1.html" url="Origin-Help/ExpDecayDelay1-FitFunc" src="UserGuide:ExpDecayDelay1"/>
         <page title="ExpGro1" file="UserGuide/ExpGro1.html" url="Origin-Help/ExpGro1-FitFunc" src="UserGuide:ExpGro1"/>
         <page title="ExpGro2" file="UserGuide/ExpGro2.html" url="Origin-Help/ExpGro2-FitFunc" src="UserGuide:ExpGro2"/>
         <page title="ExpGro3" file="UserGuide/ExpGro3.html" url="Origin-Help/ExpGro3-FitFunc" src="UserGuide:ExpGro3"/>
@@ -1751,6 +1786,8 @@
         <page title="FirstOrder" file="UserGuide/FirstOrder.html" url="Origin-Help/FirstOrder-FitFunc" src="UserGuide:FirstOrder"/>
         <page title="FirstOrderOffset" file="UserGuide/FirstOrderOffset.html" url="Origin-Help/FirstOrderOffset-FitFunc" src="UserGuide:FirstOrderOffset"/>
         <page title="FreundlichEXT" file="UserGuide/FreundlichEXT.html" url="Origin-Help/FreundlichEXT-FitFunc" src="UserGuide:FreundlichEXT"/>
+        <page title="GaddumSchildShift" file="UserGuide/GaddumSchildShift.html" url="Origin-Help/GaddumSchildShift-FitFunc" src="UserGuide:GaddumSchildShift"/>
+        <page title="GaddumSchildShiftLog" file="UserGuide/GaddumSchildShiftLog.html" url="Origin-Help/GaddumSchildShiftLog-FitFunc" src="UserGuide:GaddumSchildShiftLog"/>
         <page title="GammaCDF" file="UserGuide/GammaCDF.html" url="Origin-Help/Gamma-FitFunc" src="UserGuide:GammaCDF"/>
         <page title="Gauss" file="UserGuide/Gauss.html" url="Origin-Help/Gauss-FitFunc" src="UserGuide:Gauss"/>
         <page title="GaussAmp" file="UserGuide/GaussAmp.html" url="Origin-Help/GaussAmp-FitFunc" src="UserGuide:GaussAmp"/>
@@ -1760,6 +1797,7 @@
         <page title="GCAS" file="UserGuide/GCAS.html" url="Origin-Help/GCAS-FitFunc" src="UserGuide:GCAS"/>
         <page title="Giddings" file="UserGuide/Giddings.html" url="Origin-Help/Giddings-FitFunc" src="UserGuide:Giddings"/>
         <page title="Goldman" file="UserGuide/Goldman.html" url="Origin-Help/Goldman-FitFunc" src="UserGuide:Goldman"/>
+        <page title="GompertzGrowth" file="UserGuide/GompertzGrowth.html" url="Origin-Help/GompertzGrowth-FitFunc" src="UserGuide:GompertzGrowth"/>
         <page title="Gumbel" file="UserGuide/Gumbel.html" url="Origin-Help/Gumbel-FitFunc" src="UserGuide:Gumbel"/>
         <page title="Gunary" file="UserGuide/Gunary.html" url="Origin-Help/Gunary-FitFunc" src="UserGuide:Gunary"/>
         <page title="Helix" file="UserGuide/Helix.html" url="Origin-Help/Helix-FitFunc" src="UserGuide:Helix"/>
@@ -1781,6 +1819,9 @@
         <page title="Laplace" file="UserGuide/Laplace.html" url="Origin-Help/Laplace-FitFunc" src="UserGuide:Laplace"/>
         <page title="Line" file="UserGuide/Line.html" url="Origin-Help/Line-FitFunc" src="UserGuide:Line"/>
         <page title="Line3" file="UserGuide/Line3.html" url="Origin-Help/Line3-FitFunc" src="UserGuide:Line3"/>
+        <page title="LinearQuadDeath" file="UserGuide/LinearQuadDeath.html" url="Origin-Help/LinearQuadDeath-FitFunc" src="UserGuide:LinearQuadDeath"/>
+        <page title="LinearQuadSurv" file="UserGuide/LinearQuadSurv.html" url="Origin-Help/LinearQuadSurv-FitFunc" src="UserGuide:LinearQuadSurv"/>
+        <page title="LineCross" file="UserGuide/LineCross.html" url="Origin-Help/LineCross-FitFunc" src="UserGuide:LineCross"/>
         <page title="LineExp" file="UserGuide/LineExp.html" url="Origin-Help/LineExp-FitFunc" src="UserGuide:LineExp"/>
         <page title="LineMod" file="UserGuide/LineMod.html" url="Origin-Help/LineMod-FitFunc" src="UserGuide:LineMod"/>
         <page title="Log2P1" file="UserGuide/Log2P1.html" url="Origin-Help/Log2P1-FitFunc" src="UserGuide:Log2P1"/>
@@ -1789,6 +1830,8 @@
         <page title="Logarithm" file="UserGuide/Logarithm.html" url="Origin-Help/Logarithm-FitFunc" src="UserGuide:Logarithm"/>
         <page title="Logistic" file="UserGuide/Logistic.html" url="Origin-Help/Logistic-FitFunc" src="UserGuide:Logistic"/>
         <page title="Logistic5" file="UserGuide/Logistic5.html" url="Origin-Help/Logistic5-FitFunc" src="UserGuide:Logistic5"/>
+        <page title="LogisticGrowth" file="UserGuide/LogisticGrowth.html" url="Origin-Help/LogisticGrowth-FitFunc" src="UserGuide:LogisticGrowth"/>
+        <page title="LogisticRichard5" file="UserGuide/LogisticRichard5.html" url="Origin-Help/LogisticRichard5-FitFunc" src="UserGuide:LogisticRichard5"/>
         <page title="Logistpk" file="UserGuide/Logistipk.html" url="Origin-Help/Logistipk-FitFunc" src="UserGuide:Logistipk"/>
         <page title="LogNormal" file="UserGuide/LogNormal.html" url="Origin-Help/LogNormal-FitFunc" src="UserGuide:LogNormal"/>
         <page title="LognormalCDF" file="UserGuide/LognormalCDF.html" url="Origin-Help/LognormalCDF-FitFunc" src="UserGuide:LognormalCDF"/>
@@ -1817,8 +1860,17 @@
         <page title="Nonessencial" file="UserGuide/Nonessencial.html" url="Origin-Help/Nonessencial-FitFunc" src="UserGuide:Nonessencial"/>
         <page title="Nonessencial2" file="UserGuide/Nonessencial2.html" url="Origin-Help/Nonessencial2-FitFunc" src="UserGuide:Nonessencial2"/>
         <page title="NormalCDF" file="UserGuide/NormalCDF.html" url="Origin-Help/NormalCDF-FitFunc" src="UserGuide:NormalCDF"/>
+        <page title="OneSiteAlloModShift" file="UserGuide/OneSiteAlloModShift.html" url="Origin-Help/OneSiteAlloModShift-FitFunc" src="UserGuide:OneSiteAlloModShift"/>
         <page title="OneSiteBind" file="UserGuide/OneSiteBind.html" url="Origin-Help/OneSiteBind-FitFunc" src="UserGuide:OneSiteBind"/>
+        <page title="OneSiteBindHS" file="UserGuide/OneSiteBindHS.html" url="Origin-Help/OneSiteBindHS-FitFunc" src="UserGuide:OneSiteBindHS"/>
         <page title="OneSiteComp" file="UserGuide/OneSiteComp.html" url="Origin-Help/OneSiteComp-FitFunc" src="UserGuide:OneSiteComp"/>
+        <page title="OneSiteCompFitKi" file="UserGuide/OneSiteCompFitKi.html" url="Origin-Help/OneSiteCompFitKi-FitFunc" src="UserGuide:OneSiteCompFitKi"/>
+        <page title="OneSiteHomologous" file="UserGuide/OneSiteHomologous.html" url="Origin-Help/OneSiteHomologous-FitFunc" src="UserGuide:OneSiteHomologous"/>
+        <page title="OneSiteLigandDepletion" file="UserGuide/OneSiteLigandDepletion.html" url="Origin-Help/OneSiteLigandDepletion-FitFunc" src="UserGuide:OneSiteLigandDepletion"/>
+        <page title="OneSiteTotal" file="UserGuide/OneSiteTotal.html" url="Origin-Help/OneSiteTotal-FitFunc" src="UserGuide:OneSiteTotal"/>
+        <page title="OneSiteTotalDepletion" file="UserGuide/OneSiteTotalDepletion.html" url="Origin-Help/OneSiteTotalDepletion-FitFunc" src="UserGuide:OneSiteTotalDepletion"/>
+        <page title="OperationalDepletion" file="UserGuide/OperationalDepletion.html" url="Origin-Help/OperationalDepletion-FitFunc" src="UserGuide:OperationalDepletion"/>
+        <page title="OperationalDepletionLog" file="UserGuide/OperationalDepletionLog.html" url="Origin-Help/OperationalDepletionLog-FitFunc" src="UserGuide:OperationalDepletionLog"/>
         <page title="OrderedBiBiSequential" file="UserGuide/OrderedBiBiSequential.html" url="Origin-Help/OrderedBiBiSequential-FitFunc" src="UserGuide:OrderedBiBiSequential"/>
         <page title="OrderedBiBiSequential2" file="UserGuide/OrderedBiBiSequential2.html" url="Origin-Help/OrderedBiBiSequential2-FitFunc" src="UserGuide:OrderedBiBiSequential2"/>
         <page title="Parabola" file="UserGuide/Parabola.html" url="Origin-Help/Parabola-FitFunc" src="UserGuide:Parabola"/>
@@ -1847,6 +1899,7 @@
         <page title="PsdVoigt2" file="UserGuide/PsdVoigt2.html" url="Origin-Help/PsdVoigt2-FitFunc" src="UserGuide:PsdVoigt2"/>
         <page title="Pulse" file="UserGuide/Pulse.html" url="Origin-Help/Pulse-FitFunc" src="UserGuide:Pulse"/>
         <page title="PWL2" file="UserGuide/PWL2.html" url="Origin-Help/PWL2" src="UserGuide:PWL2"/>
+        <page title="PWL2Hinge" file="UserGuide/PWL2Hinge.html" url="Origin-Help/PWL2Hinge-FitFunc" src="UserGuide:PWL2Hinge"/>
         <page title="PWL3" file="UserGuide/PWL3.html" url="Origin-Help/PWL3" src="UserGuide:PWL3"/>
         <page title="RandomBiBiSequential" file="UserGuide/RandomBiBiSequential.html" url="Origin-Help/RandomBiBiSequential-FitFunc" src="UserGuide:RandomBiBiSequential"/>
         <page title="RandomBiBiSequential2" file="UserGuide/RandomBiBiSequential2.html" url="Origin-Help/RandomBiBiSequential2-FitFunc" src="UserGuide:RandomBiBiSequential2"/>
@@ -1866,6 +1919,7 @@
         <page title="SchulzFlory" file="UserGuide/SchulzFlory.html" url="Origin-Help/SchulzFlory-FitFunc" src="UserGuide:SchulzFlory"/>
         <page title="SGompertz" file="UserGuide/SGompertz.html" url="Origin-Help/SGompertz-FitFunc" src="UserGuide:SGompertz"/>
         <page title="Shah" file="UserGuide/Shah.html" url="Origin-Help/Shah-FitFunc" src="UserGuide:Shah"/>
+        <page title="Sinc" file="UserGuide/Sinc.html" url="Origin-Help/Sinc-FitFunc" src="UserGuide:Sinc"/>
         <page title="Sine" file="UserGuide/Sine.html" url="Origin-Help/Sine-FitFunc" src="UserGuide:Sine"/>
         <page title="SineDamp" file="UserGuide/SineDamp.html" url="Origin-Help/SineDamp-FitFunc" src="UserGuide:SineDamp"/>
         <page title="SineSqr" file="UserGuide/SineSqr.html" url="Origin-Help/SineSqr-FitFunc" src="UserGuide:SineSqr"/>
@@ -1891,8 +1945,11 @@
         <page title="SWeibull1" file="UserGuide/SWeibull1.html" url="Origin-Help/SWeibull1-FitFunc" src="UserGuide:SWeibull1"/>
         <page title="SWeibull2" file="UserGuide/SWeibull2.html" url="Origin-Help/SWeibull2-FitFunc" src="UserGuide:SWeibull2"/>
         <page title="ThermDena" file="UserGuide/ThermDena.html" url="Origin-Help/ThermDena-FitFunc" src="UserGuide:ThermDena"/>
+        <page title="TightInhib" file="UserGuide/TightInhib.html" url="Origin-Help/TightInhib-FitFunc" src="UserGuide:TightInhib"/>
         <page title="TwoSiteBind" file="UserGuide/TwoSiteBind.html" url="Origin-Help/TwoSiteBind-FitFunc" src="UserGuide:TwoSiteBind"/>
         <page title="TwoSiteComp" file="UserGuide/TwoSiteComp.html" url="Origin-Help/TwoSiteComp-FitFunc" src="UserGuide:TwoSiteComp"/>
+        <page title="TwoSiteCompFitKi" file="UserGuide/TwoSiteCompFitKi.html" url="Origin-Help/TwoSiteCompFitKi-FitFunc" src="UserGuide:TwoSiteCompFitKi"/>
+        <page title="TwoSiteTotal" file="UserGuide/TwoSiteTotal.html" url="Origin-Help/TwoSiteTotal-FitFunc" src="UserGuide:TwoSiteTotal"/>
         <page title="UncompetitiveFull" file="UserGuide/UncompetitiveFull.html" url="Origin-Help/UncompetitiveFull-FitFunc" src="UserGuide:UncompetitiveFull"/>
         <page title="UncompetitiveFull2" file="UserGuide/UncompetitiveFull2.html" url="Origin-Help/UncompetitiveFull2-FitFunc" src="UserGuide:UncompetitiveFull2"/>
         <page title="UncompetitiveInhibition" file="UserGuide/UncompetitiveInhibition.html" url="Origin-Help/UncompetitiveInhibition-FitFunc" src="UserGuide:UncompetitiveInhibition"/>

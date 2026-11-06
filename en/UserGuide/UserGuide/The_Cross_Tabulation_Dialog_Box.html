@@ -90,8 +90,9 @@
 </th>
 <td>This branch determines which statistics to calculate and output in the Contingency Table.
 <ul><li>Counts: Counts, Expected Counts.</li>
-<li>Percentages: Percentages of Row Counts,Percentages of Column Counts,Percentages of Total Counts.</li>
-<li>Residuals:Residuals,Standardized Residuals,Adjusted Residuals.</li></ul>
+<li>Percentages: Percentages of Row Counts, Percentages of Column Counts, Percentages of Total Counts.</li>
+<li>Residuals: Residuals, Standardized Residuals, Adjusted Residuals.</li>
+<li>Chi-Square: Contribution to Chi-Square</li></ul>
 <p><b>Note:</b> To learn more details for these statistics, see the the <a href="../../UserGuide/Category/Cross_Tabulation.html#Selecting_Marginal_and_Cell_Statistics_For_Contingency_Table" title="Category:Cross Tabulation">introduction page</a> and the <a href="../../UserGuide/UserGuide/Algorithm(CrossTabs).html#Cross_Tabulation" title="UserGuide:Algorithm(CrossTabs)">algorithm</a> page
 </p>
 </td></tr>
@@ -163,12 +164,28 @@
 <td>Specify whether to display the Result Log.
 </td></tr>
 <tr>
+<th>Graphical Summary Report
+</th>
+<td>Create a summary graph report, including P value bar, and Adjusted Residual Mosaic Plot. Two result tables will also been attached to the graph to show the statistical values.
+<p>The footnote after the summary graph will diagnose these statistical results.
+</p><p>If the graph contains multiple layers, add a summary graph for each layer, following the structure of the Contingency Table node.
+</p>
+</td></tr>
+<tr>
+<th>Graph Diagnostic Report
+</th>
+<td>Specify whether to display diagnostic report including <b>Difference from Expected (%)</b> and <b>Contribution to X<sup>2</sup> </b>two parts.
+<p>If the Graphical Summary Report display, it will show at the at the graph node after summary report. If Graphical Summary Report does not display, it will show at the first graph node.
+</p><p>If the graph contains multiple layers, add a graph for each layer, following the structure of the Contingency Table node.
+</p>
+</td></tr>
+<tr>
 <th>Mosaic Plot
 </th>
 <td>Specify whether to display Mosaic Plot whose area of each rectangle is proportional to the proportions of the Y variable in each level of the X variable.
 </td></tr>
 <tr>
-<th>Corsstab Report
+<th>Report
 </th>
 <td>Specify the sheet for the crosstab result. The default value is a new sheet in the workbook of input data.
 </td></tr>

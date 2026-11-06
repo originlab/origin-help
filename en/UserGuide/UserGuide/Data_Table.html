@@ -32,6 +32,7 @@
 <li class="toclevel-2 tocsection-15"><a href="#Convert_to_Free_Form"><span class="tocnumber">2.7</span> <span class="toctext">Convert to Free Form</span></a></li>
 </ul>
 </li>
+<li class="toclevel-1 tocsection-16"><a href="#Import_Prism_Files"><span class="tocnumber">3</span> <span class="toctext">Import Prism Files</span></a></li>
 </ul>
 </div>
 
@@ -42,15 +43,17 @@
 <h3><a name="XY"></a><span class="mw-headline">XY</span></h3>
 <p>This table type follows the <i>XYYY...</i> structure: one single X column paired with multiple Y columns. It can include an optional <b>Row Title</b> column (Text column for labeling rows) and an <b>X Error</b> column. Each <b>Y Dataset</b> represents a distinct group with multiple <b>Replicates</b>.
 </p>
-<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png?v=99288" width="503"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png?v=100131" width="502"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Data Format
 </th>
 <td>Select the table data format:
 <ul><li><b>Raw Data</b></li>
-<li><b>Summary (Mean)</b></li>
-<li><b>Summary (Meadian)</b></li></ul>
+<li><b>Summary (Mean)</b> <br />Specify how to arrange the summary table from the <b>Statistics</b> drop-donw list: "Mean, SD, N", "Mean, SEM, N", "Mean,&#160;%CV, N", "Mean, SD", "Mean, SEM", "Mean,&#160;%CV", "Mean, +- Error", "Mean, Upper/Lower Limits". </li>
+<li><b>Summary (Meadian)</b> <br />Specify how to arrange the summary table from the <b>Statistics</b> drop-donw list: "Median, +- Error", "Median, Upper/Lower Limits". </li></ul>
+<p><a  class="image"><img alt="XY Table Raw Summary Data Format.png" src="../images/Data_Table/700px-XY_Table_Raw_Summary_Data_Format.png?v=100904" width="700"   /></a>
+</p>
 </td></tr>
 <tr>
 <th>Number of Groups (Y Datasets)
@@ -59,7 +62,8 @@
 <p><b>Note</b>: You can add or remove datasets anytime after creating the table. 
 </p>
 <ul><li>To reconstruct groups and replicates, click on table icon <a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png?v=99645" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
-<li>To insert a new Y dataset before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
+<li>To add a new Y dataset, click <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a> on the Standard toolbar.</li>
+<li>To insert a new Y dataset, right click on the dataset title bar and select <b>Insert</b>.</li>
 <li>To delete a Y dataset, right click on the dataset title bar and select <b>Delete</b>.</li></ul>
 </td></tr>
 <tr>
@@ -83,8 +87,7 @@
 <td>Select or enter the number of replicate sub-columns per Y dataset. Enter 1 for no replicates.
 <p><b>Note:</b> You can add or remove a sub-column anytime after creating the table. 
 </p>
-<ul><li>To add a sub-column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>. New replicate is added to all datasets with the same <b>Name</b>. </li>
-<li>To insert a sub-column, click the <b>Name</b> cell of a sub-column to select that replicate, right click and select <b>Insert</b>. New replicate is added to all datasets in the same position. </li>
+<ul><li>To insert a sub-column, click the <b>Name</b> cell of a sub-column to select that replicate, right click and select <b>Insert</b>. New replicate is added to all datasets in the same position. </li>
 <li>To delete an existing sub-column from all datasets, click the <b>Name</b> cell of a sub-column to select that replicate, right click and select <b>Delete</b>.</li></ul>
 </td></tr>
 <tr>
@@ -105,9 +108,9 @@ XY tables are widely used in experiment data such as dose-response or inhibition
 <th width="20%">Number of Groups
 </th>
 <td>Select or enter the number of groups to compare. One Y column per group.
-<p><b>Note</b>: You can add or remove Y columns anytime after creating the table. 
+<p><b>Note</b>: You can add or remove Y columns (groups) anytime after creating the table. 
 </p>
-<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>.  </li>
+<ul><li>To add a new column, click <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a> on the Standard toolbar. </li>
 <li>To insert a new column before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
 <li>To delete a column, right click on the column title bar and select <b>Delete</b>.</li></ul>
 </td></tr>
@@ -139,6 +142,7 @@ Column tables are mainly used for One Way ANOVA raw data and other analyses comp
 <p><b>Note</b>: You can add or remove groups anytime after creating the table. 
 </p>
 <ul><li>To reconstruct groups and replicates, click on table icon <a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png?v=99651" width="16"  /></a> and select <b>Restructure Table</b> menu. See <a href="#Restructure_Table">this section</a> for details.</li>
+<li>To add a new group, click the <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a> on the Standard toolbar.</li>
 <li>To insert a new group before an existing one, right click on the dataset title bar and select <b>Insert</b>.</li>
 <li>To delete a group, right click on the group title bar and select <b>Delete</b>.</li></ul>
 </td></tr>
@@ -158,8 +162,7 @@ Column tables are mainly used for One Way ANOVA raw data and other analyses comp
 <td>Select or enter the number of replicate Y columns per group. Enter 1 for no replicates.
 <p><b>Note:</b> You can add or remove a Ycolumn anytime after creating the table. 
 </p>
-<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>. New replicate is added to all groups with the same <b>Name</b>. </li>
-<li>To insert a Y column, click the <b>Name</b> cell of a Y column to select that single column, right click and select <b>Insert</b>. New replicate is added to all groups in the same position. </li>
+<ul><li>To insert a Y column, click the <b>Name</b> cell of a Y column to select that single column, right click and select <b>Insert</b>. New replicate is added to all groups in the same position. </li>
 <li>To delete an existing Y column from all groups, click the <b>Name</b> cell of a Y column to select that single column, right click and select <b>Delete</b>.</li></ul>
 </td></tr>
 <tr>
@@ -196,8 +199,9 @@ Contingency tables are designed for categorical data analysis such as chi-square
 <td>Select or enter the number of groups for comparison. One Y column per group.
 <p><b>Note</b>: You can add or remove groups (Y columns) anytime after creating the table. 
 </p>
-<ul><li>To add a Y column, click <b>Add New Columns</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a>.  </li>
-<li>To insert a new column before an existing one, right click the dataset and select <b>Insert</b>.</li>
+<pre>*To add a new column, click the <b>Add New Column</b> button <a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png?v=99295" width="16"  /></a> on the Standard toolbar.
+</pre>
+<ul><li>To insert a new column before an existing one, right click the dataset and select <b>Insert</b>.</li>
 <li>To delete a column, right click the column and select <b>Delete</b>.</li></ul>
 </td></tr>
 <tr>
@@ -226,9 +230,9 @@ Survival table is designed for survival analysis and reliability studies. For Ka
 <p>Available menus vary by table typs.
 </p>
 <h3><a name="Summary_Data_.26_Plot_Summary_Data"></a><span class="mw-headline">Summary Data &amp; Plot Summary Data</span></h3>
-<p>Choose to plot statistics summary data with <b>Scatter</b>, <b>Line</b>, <b>Line + Scatter</b>, or <b>Column</b> charts. Y values can be <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Mean</b>, <b>Median</b> and <b>Geometric Mean</b></a>, with optional error bars from <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Standard Deviation</b>, <b>SEM</b> (SE of Mean), <b>95% CI</b> (Upper 95% CI of Mean - Lower 95% CI of Mean)</a>, or <b>Range</b> (Max-Min).
+<p>Choose to plot statistics summary data with <b>Scatter</b>, <b>Line</b>, <b>Line + Scatter</b>, or <b>Column</b> charts. Y values can be <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Mean</b>, <b>Median</b>, <b>Geometric Mean</b> and <b>Harmonic Mean</b></a>, with optional error bars from <a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="UserGuide:The DescStats Dialog Box"><b>Standard Deviation</b>, <b>SEM</b> (SE of Mean), <b>95% CI</b> (Upper 95% CI of Mean - Lower 95% CI of Mean)</a>, or <b>Range</b> (Max-Min).
 </p>
-<dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png?v=99399" width="290"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png?v=100561" width="290"  /></a></dd></dl>
 <p>The summary data is output to a "Summary Stats" worksheet. You can also choose to output the total number N.
 </p>
 <h3><a name="Normalize"></a><span class="mw-headline">Normalize</span></h3>
@@ -291,9 +295,9 @@ Survival table is designed for survival analysis and reliability studies. For Ka
 </p>
 </td></tr></table>
 <h3><a name="Nonlinear_Fit"></a><span class="mw-headline">Nonlinear Fit</span></h3>
-<p>Perform nonlinear curve fitting on XY data. A simple dialog will first open, allowing you to select a fitting function. Clicking <b>OK</b> will then open the <a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="Category:The NLFit Dialog Box"><b>Nonlinear Curve Fit</b> dialog</a>, giving you full control over the fitting process.
+<p>Perform nonlinear curve fitting on XY data. A simple dialog opens first, allowing you to select a fitting function. Clicking <b>OK</b> to open the <a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="Category:The NLFit Dialog Box"><b>Nonlinear Curve Fit</b> dialog</a>, giving you full control over the fitting process.
 </p>
-<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png?v=100003" width="760"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png?v=100519" width="855"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Select Function
@@ -303,28 +307,39 @@ Survival table is designed for survival analysis and reliability studies. For Ka
 <tr>
 <th>Fitting Method
 </th>
-<td>Specify whether to fit using <b>Raw Data</b> or summary statistics: <b>Mean + SD</b> (SD used as weight), <b>Mean + SE</b> (SE used as weight), or <b>Mean only</b>. If summary statistics is selected, a "Summary Stats" worksheet is auto-generated to use as input data.
+<td>For <b>Raw Data</b> table, specify whether to fit using raw data or summary statistics: <b>Mean + SD</b> (SD used as the weighting factor), <b>Mean + SE</b> (SE used as the weighting factor), or <b>Mean only</b>. If summary statistics is selected, a "Summary Stats" worksheet is automatically generated and used as input data.
+<p><b>Note</b>: if the <b>Nonlinear Curve Fit</b> tool is opened from a summary graph, no weighting is supported even if the plot has error bars.
+</p>
 </td></tr>
 <tr>
 <th>Global Fit
 </th>
-<td>Check this checkbox to share parameters in the fitting function among all datasets (groups), yielding the same parameter values for all datasets.
-<p>Uncheck to fit each dataset independently and yield separate results for each dataset (although they will be compiled into a single report).
+<td>Select this checkbox to share parameters in the fitting function across all datasets (groups), resulting in the same parameter values for all datasets.
+<p>Clear it to fit each dataset independently and yield separate results for each dataset (while they are compiled into a single report).
 </p><p>Refer to <a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="UserGuide:Global fitting with parameter sharing">this page</a> for details about <b>Global Fit</b>.
 </p>
+</td></tr>
+<tr>
+<th>Add EC50/IC50 Lines
+</th>
+<td>Available for certain functions such as <a href="../../UserGuide/UserGuide/Boltzmann.html#Derived_Parameters" title="UserGuide:Boltzmann">Boltzmann</a>, <a href="../../UserGuide/UserGuide/DoseResp.html#Derived_Parameters" title="UserGuide:DoseResp">DoseResp</a>, <a href="../../UserGuide/UserGuide/Hill.html#Derived_Parameters" title="UserGuide:Hill">Hill</a>, <a href="../../UserGuide/UserGuide/Hill1.html#Derived_Parameters" title="UserGuide:Hill1">Hill1</a>, <a href="../../UserGuide/UserGuide/Logistic.html#Derived_Parameters" title="UserGuide:Logistic">Logistic</a>, <a href="../../UserGuide/UserGuide/Logistic5.html#Derived_Parameters" title="UserGuide:Logistic5">Logistic5</a>, <a href="../../UserGuide/UserGuide/MichaelisMenten.html#Derived_Parameters" title="UserGuide:MichaelisMenten">MichaelisMenten</a>, etc.
+</td></tr>
+<tr>
+<th>Remove Outliers (Robust Regression)
+</th>
+<td>Select this checkbox to set <a href="../../UserGuide/UserGuide/Settings_Tab_Upper_Panel.html#Advanced" title="UserGuide:Settings Tab Upper Panel"><b>Outlier Handling </b></a> to remove the outliers when fitting the curve.
 </td></tr></table>
 <h3><a name="Linear_Fit"></a><span class="mw-headline">Linear Fit</span></h3>
 <p>Perform linear regression on XY data. Each group is fitted independently, and all fitting results are compiled into a single report. The <a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html" title="UserGuide:Linear Regression Dialog"><b>Linear Fit</b> dialog</a> will open, giving you full control over the fitting process.
 </p>
-<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png?v=99417" width="290"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png?v=100143" width="290"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">Fitting Method
 </th>
 <td>Specify whether to fit with original data or summary data.
 <ul><li> <b>Raw Data</b> <br />Each group is fitted independently. Replicates within each group are concatenated and fitted as one dataset.</li>
-<li> <b>Mean</b> <br />A "Summary Stats" worksheet is auto-generated to calculate the mean of replicates within each group. Each group is then fitted independently using mean as input.</li>
-<li> <b>Mean + SD</b> <br />A "Summary Stats" worksheet is auto-generated to calculate the mean and standard deviation of replicates within each group. Each group is then fitted independently using its mean as input, with the inverse of the variance (1/SD^2) as weight.</li></ul>
+<li> <b>Mean + SD</b> / <b>Mean</b> <br />A "Summary Stats" worksheet is automatically generated to calculate the Mean and Standard Deviation (SD) of replicates in each group. Each group is then fitted independently using the Mean as input. If <b>Mean + SD</b> is selected, the inverse variance (1/SD^2) is applied as the weight.</li></ul>
 </td></tr>
 <tr>
 <th>Fix Intercept
@@ -366,6 +381,12 @@ Survival table is designed for survival analysis and reliability studies. For Ka
 <h3><a name="Convert_to_Free_Form"></a><span class="mw-headline">Convert to Free Form</span></h3>
 <p>Convert current data table into typical <a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html">Origin worksheet</a> form.
 </p>
+<h2><a name="Import_Prism_Files"></a><span class="mw-headline">Import Prism Files</span></h2>
+<ul><li> The easiest way is to drag-and-drop a Prism file (.pzfx, .prism, .prismt, .xml) into the Origin workspace. <br />Origin will bring all of the data tables and the analysis results from that Prism file into one Origin workbook.</li>
+<li> <b>File: Open Prism</b> to open the Prism files in Origin directly. <br />One difference between drag-and-drop and opening is that when opening, you will have the option to choose which tables to import. <br /><b>Note</b>: If the same file is already open in Prism, you will need to close it in Prism before opening it in Origin.</li>
+<li> <b>Data: Connect to File: Prism</b> to import a Prism file via Prism Connector.</li>
+<li> If you still have Prism running on your PC, you can also copy-paste the data from Prism to Origin directly. That is, select a table inside Prism, copy it, then come over to Origin, go to a regular (free-form) worksheet, and paste the data. Origin will automatically detect the data structure and convert that worksheet into the correct table type for the data.</li></ul>
+
 
 
 

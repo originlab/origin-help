@@ -27,56 +27,59 @@ Origin provides several options to copy worksheet data from the source worksheet
 
 <h2><a name="Copy_and_paste_worksheet_values_with_the_context_menus"></a><span class="mw-headline">Copy and paste worksheet values with the context menus</span></h2>
 <h3><a name="Copy_worksheet_values"></a><span class="mw-headline">Copy worksheet values</span></h3>
-<p>Select worksheet column(s), right click, select <b>Copy</b> and choose from the following:
+<p>Select the worksheet column(s), right-click, choose <b>Copy</b>, and then select one of the following submenus:
 </p>
 <table class="simple">
 
 <tr>
 <th align="left" width="190"> Copy
 </th>
-<td>copy data with the display precision
+<td>Copy data with the display precision.
 </td></tr>
 <tr>
 <th align="left">Copy Values (full precision)
 </th>
-<td>copy data with the full precision
+<td>Copy data with the full precision.
 </td></tr>
 <tr>
 <th align="left">Copy (including label rows)
 </th>
-<td>copy both the labels and data(with display precision) of the source column(s)
+<td>Copy both the data (with the display precision) and the Long Name label row only.
+<ul><li>If Units exist, Units are also copied with the Long Name on one line in the format <i>Long Name</i> (<i>Units</i>). </li>
+<li>If Long Names are the same or empty, Comments will be copied. If both Long Names and Comments are the same or empty, the first User-defined Parameter row will be copied.</li>
+<li>To copy all label rows and data, set <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">the system variable @PLO</a> = 0.</li></ul>
 </td></tr>
 <tr>
 <th align="left">Copy (formula)
 </th>
-<td>copy the formula of the source column(s) only
+<td>Copy the formula of the selected column(s) only.
 </td></tr>
 <tr>
 <th align="left">Copy (label rows)
 </th>
-<td>copy the label rows of the source column(s) only
+<td>Copy the label rows of the selected column(s) only.
 </td></tr>
 <tr>
 <th align="left">Copy (formula and label rows)
 </th>
-<td>copy the formula and label rows only
+<td>Copy the formula and label rows only.
 </td></tr>
 <tr>
 <th align="left" width="190">Copy Transposed
 </th>
-<td>transpose the selected cells block while copying
+<td>Transpose the selected cells block while copying.
 </td></tr>
 <tr>
 <th align="left">Copy All
 </th>
-<td>copy formula, labels and data(with full precision) of the source column(s)
+<td>Copy formulas, labels, and data (with full precision) of the selected column(s).
 </td></tr></table>
 <p><br />
-For more information, see <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html"><b>FAQ-482: How do I copy data with maximum precision?</b></a>.
+For more information, see <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html">FAQ-482: How do I copy data with maximum precision?</a>.
 </p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><ul><li> Copying and pasting of multiple worksheet cells was changed slightly for Origin 2019b, to be more MS Excel-like: Copying one cell and pasting to <i>m</i> cells, fills <i>m</i> cells. Further, copying <i>n</i> cells and pasting to <i>n*m</i> cells, fills all cells by repeating the copied sequence of <i>n</i> cells. The LabTalk system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C"><b>@CPNB</b></a> was added to switch between old and new behaviors. For information on changing the value of a system variable, see <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">this FAQ</a>.</li>
-<li> From Origin 2024b, mask stauts (the masked data points' location) can be copied by right-clicking menu <b>Copy: Copy Mask Status</b>.</li></ul>
+<li> From Origin 2024b, mask status (the masked data points' location) can be copied by right-clicking menu <b>Copy: Copy Mask Status</b>.</li></ul>
 </td></tr></table>
 <h3><a name="Paste_Worksheet_values"></a><span class="mw-headline">Paste Worksheet values</span></h3>
 <p>If you have copy some worksheet values, Origin provides several options to paste worksheet cell(s) to a new destination. 

@@ -27,7 +27,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Recalculate</b>
+<th>Recalculate
 </th>
 <td>
 <p>Controls recalculation of analysis results
@@ -45,7 +45,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Indexed</b>
+<th>Indexed
 </th>
 <td>
 <p>In this mode, one column contains levels of the factor variable and the corresponding response data are in another column.<br />
@@ -59,7 +59,7 @@
 <dl><dd>Specify the subject column.</dd></dl></dd></dl>
 </td></tr>
 <tr>
-<th><b>Raw</b>
+<th>Raw
 </th>
 <td>
 <p>In this mode, response data from each level of the factor variable are stored in a separate column.
@@ -82,6 +82,7 @@
 </p>
 <h3><a name="Significance_Level"></a><span class="mw-headline">Significance Level</span></h3>
 <p>Specify the significance level for one way repeated measures ANOVA.
+</p><p><br />
 </p>
 <h2><a name="Means_Comparison"></a><span class="mw-headline">Means Comparison</span></h2>
 <p>Methods for post-hoc pairwise means comparison.
@@ -94,13 +95,35 @@
 <td>Specify the significance level for pairwise means comparison.
 </td></tr>
 <tr>
+<th>Compare
+</th>
+<td>
+<ul><li> <b>All Pair of Means</b></li></ul>
+<dl><dd>Compare every group to every other groups.</dd></dl>
+<ul><li> <b>Each Mean with a Control</b></li></ul>
+<dl><dd>Selects one specific group as the reference standard (Control Level), and all other groups compares strictly against that this specific group. The unspecified groups are not compared to one another. </dd></dl>
+</td></tr>
+<tr>
+<th>Control Level
+</th>
+<td>Specify the control level when compare means. This option is available when the <b>Each Mean with a Control</b> is selected in <b>Compare</b>.
+<p>For example, there are three levels (groups) <i><b>A</b></i>, <i><b>B</b></i> and <i><b>C</b></i> in the sample, and specify the control level to <i><b>A</b></i>, then <i><b>B</b></i> and <i><b>C</b></i> will compare with <i><b>A</b></i> respectively, but <i><b>B</b></i> and <i><b>C</b></i> will not be compared with each other.
+</p><p><br />
+</p>
+</td></tr>
+<tr>
 <th> Tukey
 </th>
 <td rowspan="8">
 <p>Different methods for pairwise means comparison.
+</p><p>When <b>Equal Variance Assumed</b> is selected in the <b>Input</b> tab, it supplies these methods for pairwise means comparison.
+</p><p>If select <b>All Pair of Means</b> in <b>Compare</b>, it will supply <b>Tukey</b> method.  If select <b>Each Mean with a Control</b> in <b>Compare</b>, it will supply <b>Dunnett</b> method.  Other method are supplied in both option.
 (For more information see <a href="../../UserGuide/UserGuide/Algorithms_(Repeated_Measures_ANOVA).html" title="UserGuide:Algorithms (Repeated Measures ANOVA)">Algorithms</a>).
 </p>
 </td></tr>
+<tr>
+<th>Dunnett
+</th></tr>
 <tr>
 <th>Bonferroni
 </th></tr>
@@ -112,9 +135,6 @@
 </th></tr>
 <tr>
 <th>Scheffe
-</th></tr>
-<tr>
-<th>Dunnett
 </th></tr>
 <tr>
 <th>Holm-Bonferroni

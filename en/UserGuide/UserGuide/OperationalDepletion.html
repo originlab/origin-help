@@ -1,0 +1,47 @@
+<h1 class="firstHeading">32.1.183 OperationalDepletion</h1><p class='urlname' style='display: none'>OperationalDepletion-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Derived_Parameters"><span class="tocnumber">5</span> <span class="toctext">Derived Parameters</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Script_Access"><span class="tocnumber">6</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Function_File"><span class="tocnumber">7</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Category"><span class="tocnumber">8</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/OperationalDepletion/math-41b71afa0727b2e7b517c3c9fcaa749b.png?v=0" title=" y=B+\frac{E_m-B}{1+(op)^n}" alt=" y=B+\frac{E_m-B}{1+(op)^n}" class="tex"/>
+<br /><br /><img src="../images/OperationalDepletion/math-b77b6eeb71d79f45118ba3fa3a83e378.png?v=0" title="where \ op = \frac{K_a+x}{T_{au}\cdot  x}" alt="where \ op = \frac{K_a+x}{T_{au}\cdot  x}" class="tex"/>
+</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>Operational model for receptor depletion when X is concentration or dose.
+</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="OperationalDepletion.png" src="../images/OperationalDepletion/OperationalDepletion.png?v=100769" width="544"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameters</span></h2>
+<p>Number:  5
+</p><p>Names:Em, B, Ka, Tau, n
+</p><p>Meanings:  Em=maximum possible system response,  B=response without agonist,  Ka=agonist-receptor dissociation constant,  Tau=dissociation constant,  n=transducer ratio
+</p><p>Lower Bounds:  none  
+</p><p>Upper Bounds:  none
+</p>
+<h2><a name="Derived_Parameters"></a><span class="mw-headline">Derived Parameters</span></h2>
+<p>logTau=log(Tau)
+</p><p>logKa=log(Ka)
+</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_OperationalDepletion<span style="color: #000000;">&#40;</span>x,Em,B,Ka,Tau,n<span style="color: #000000;">&#41;</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>OperationalDepletion.fdf
+</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Dose Response
+</p>
+
+
+
+
+

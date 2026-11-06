@@ -1,0 +1,83 @@
+<h1 class="firstHeading">17.3.13.1 Chi-square Goodness-of-Fit Dialog Box</h1><p class='urlname' style='display: none'>Chi-square-Test-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input_Data_Form"><span class="tocnumber">2</span> <span class="toctext">Input Data Form</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Significance_Level"><span class="tocnumber">3</span> <span class="toctext">Significance Level</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Reset_Table"><span class="tocnumber">4</span> <span class="toctext">Reset Table</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Table"><span class="tocnumber">5</span> <span class="toctext">Table</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
+<p>To open the Chi-square Goodness-of-Fit Test Dialog:
+</p>
+<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Chi-square Goodness-of-Fit Test </b></li></ol>
+<p><br />
+<i><b>See Also:</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Chi-square_Goodness-of-Fit_Test_(Pro_Only).html" title="Category:Chi-square Goodness-of-Fit Test (Pro Only)">Introduction to Chi-square Goodness-of-Fit Test</a></li></ul>
+<p><br />
+</p>
+<h2><a name="Input_Data_Form"></a><span class="mw-headline">Input Data Form</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Raw
+</th>
+<td>Perform the test using raw data column for <b>Category</b>
+<p>When you select this option, the <b>Observed Count</b> column in the following table is unable to be edited. And this option is available for the dataset imported from worksheet column. 
+Select a raw data column for <b>Category</b>, then the <b>Observed</b> value will be counted auto and filled in the table. Then you can customize the <b>Expected</b> data.
+</p>
+</td></tr>
+<tr>
+<th>Summarized
+</th>
+<td>Perform the test using summarized data for the <b>Observed Count</b> and <b>Expected</b>.
+</td></tr></table>
+<h2><a name="Significance_Level"></a><span class="mw-headline">Significance Level</span></h2>
+<p>Set the significance level for Chi-square Goodness-of-Fit Test
+</p>
+<h2><a name="Reset_Table"></a><span class="mw-headline">Reset Table</span></h2>
+<p>Clear all content in the following table.
+</p>
+<h2><a name="Table"></a><span class="mw-headline">Table</span></h2>
+<p>Input dataset in the table by these two methods:
+</p>
+<ul><li> Enter the data in the table directly.</li>
+<li> Click the <a  class="image"><img alt="Select Column in Worksheet.png" src="../images/Chi-square_Goodness-of-Fit_Test_Dialog_Box/Select_Column_in_Worksheet.png?v=100448" width="20"  /></a> button in the header to select and import a column dataset in the Worksheet.</li></ul>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Category
+</th>
+<td>Specify the name of the tested groups(rows).
+</td></tr>
+<tr>
+<th>Observed Count
+</th>
+<td>When <b>Input Data Form</b> is <b>Summarized</b>, this column is able to be edited.
+<p>Specify the actual number of the observed value for each category.
+</p>
+</td></tr>
+<tr>
+<th>Expected
+</th>
+<td>Specify the expected value for each category.
+<p>Click the drop-down list under the <b>Expected</b> in the column header, it can change the the types of the expected. The expected data should be one of the following types:
+</p>
+<ul><li> <b>Equal Proportion (1/k)</b></li></ul>
+<dl><dd>When select this option the expected value not need to be entered. It will auto calculated by 1 divided by the number of categories(rows) to be tested.</dd></dl>
+<ul><li><b>Proportion (0-1)</b></li></ul>
+<dl><dd> The sum of expected fraction must be 1.</dd></dl>
+<ul><li> <b>Counts</b></li></ul>
+<dl><dd>The total of the observed count and the expected count must be equal.</dd></dl>
+<ul><li> <b>Percentage (%)</b></li></ul>
+<dl><dd> The sum of expected percentages must equal 100.</dd></dl>
+</td></tr></table>
+
+
+
+
+
+

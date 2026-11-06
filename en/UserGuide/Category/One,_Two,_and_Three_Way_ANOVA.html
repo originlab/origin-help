@@ -79,8 +79,7 @@ In addition to the analysis of variance, Origin also supports various methods fo
 </p>
 <h3><a name="Selecting_Mean_Comparison_Methods"></a><span class="mw-headline">Selecting Mean Comparison Methods</span></h3>
 <p>Multiple comparison procedures are commonly used in an ANOVA after obtaining a significant omnibus test result. The significant ANOVA result suggests that the global null hypothesis, H0, is rejected. The H0 hypothesis states that the means are the same across the groups being compared. We can use multiple comparison to determine which means are different.
-</p><p>Origin provides eight different methods for means comparison. They are <b>Tukey</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b> Scheffe</b>, <b>Holm-Bonferroni</b>, and
-<b>Holm-Sidak</b>. 
+</p><p>Origin provides seven different methods for means comparison. They are <b>Tukey</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b> Scheffe</b>, <b>Holm-Bonferroni</b> and <b>Holm-Sidak</b>. 
 </p>
 <table class="simple">
 
@@ -119,6 +118,9 @@ In addition to the analysis of variance, Origin also supports various methods fo
 </th>
 <td>The method is more powerful than Holm test. However, it can not be used to compute a set of confidence intervals.
 </td></tr></table>
+<p><br />
+When comparing mode change to compare each mean with a control (reference standard), Origin will supply <b>Dunnett</b> method for this mode. This is a commonly used multiple comparison statistical method, and specifically designed for pairwise comparisons between multiple treatment groups and a single control group.
+</p>
 <h3><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h3>
 <p>The power analysis procedure calculates the actual power for the sample data, which let you know the&#160;% chance of detecting a difference. It also helps you to calculate the hypothetical power if additional sample sizes are specified
 </p>

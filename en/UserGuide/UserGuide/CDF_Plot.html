@@ -1,4 +1,4 @@
-<h1 class="firstHeading">31.9.39 CDF Plot</h1><p class='urlname' style='display: none'>CDF-Plot</p><a  class="image"><img alt="CDF Plot 01.png" src="../images/CDF_Plot/650px-CDF_Plot_01.png?v=98495" width="650"   /></a>
+<h1 class="firstHeading">31.9.41 CDF Plot</h1><p class='urlname' style='display: none'>CDF-Plot</p><a  class="image"><img alt="CDF Plot 01.png" src="../images/CDF_Plot/650px-CDF_Plot_01.png?v=98495" width="650"   /></a>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
@@ -20,7 +20,7 @@
 <h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
 <p>Select required data.
 </p><p>From the menu, select <b>Plot &gt; Statistical: CDF Plot</b> to open the <b>plot_cdf</b> dialog. 
-</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png?v=99496" width="500"  /></a>
+</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png?v=100263" width="509"  /></a>
 </p>
 <h3><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h3>
 <table class="dialogcontroltable">
@@ -43,9 +43,13 @@
 <ul><li><b>Overlay All</b>: Both Multple Data and Multiple Group select Overlap on Same Graph.</li>
 <li><b>Overlay Groups, Variables in Different Layers</b>: Multple Data=Separate Layer, Multiple Groups=Overlap on Same Graph</li>
 <li><b>Overlay Variables, Groups in Different Layers</b>: Multiple Groups=Separate Layer, Multple Data=Overlap on Same Graph</li>
-<li><b>Different Layers</b>: Both Multple Data and Multiple Groups select Separate Layer</li></ul></li></ul>
-<ul><li> <b>Split Panels by</b>: Once this check box has been checked, you can select another grouping column to separate the graphs into multiple layers. 
-<dl><dd><b>Note:</b> If Multiple Data and Multiple Groups both are set to Separate Layers, the layer order in result sheet should follow the hierarchy of "by Input Data" →"Split Panels by" → "by Groups"</dd></dl></li>
+<li><b>Different Layers</b>: Both Multple Data and Multiple Groups select Separate Layer</li></ul></li>
+<li> <b>Horizontal Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">horizontal panels</a> which show a CDF plot for each grouping value seperately. 
+<dl><dd>If <b>Vertical Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
+<li> <b>Vertical Panels by</b>: Once this check box has been checked, you can select another grouping column to enable <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="UserGuide:The (Plot Details) Panel Tab">vertical panels</a> which show a CDF plot for each grouping value seperately. 
+<dl><dd>If <b>Horizontal Panels by</b> is not checked, <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="UserGuide:The (Plot Details) Panel Tab">Wrap Panels</a> will be enabled, ticks and labels will be shown on alternate sides by default.</dd>
+<dd>When there are multiple columns selected, only one panel info label row will be shown on top, panel banner string will include all factors and separated by comma.</dd></dl></li>
 <li> <b>Split Pages by</b>: Once this check box has been checked, you can select other grouping column(s) to split the input data and created CDF plots in different graph pages. Each page only plots the columns within the same page related group. Page related group info will be shown in layer title, separated by comma if there are multiple factors. Report graph sheet will list all pages. </li></ul>
 </td></tr>
 <tr>

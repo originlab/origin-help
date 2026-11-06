@@ -13,7 +13,6 @@
 <li class="toclevel-1 tocsection-4"><a href="#Import_Group"><span class="tocnumber">3</span> <span class="toctext">Import Group</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Print_Group"><span class="tocnumber">4</span> <span class="toctext">Print Group</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Additional_Controls"><span class="tocnumber">5</span> <span class="toctext">Additional Controls</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#First_Day_of_Week"><span class="tocnumber">6</span> <span class="toctext">First Day of Week</span></a></li>
 </ul>
 </div>
 
@@ -307,28 +306,11 @@
 </p>
 </td></tr>
 <tr>
-<th>Use Toolbar Spacer
-</th>
-<td>
-<p>Select this check box to display a toolbar spacer below the menu bar. The toolbar spacer ensures that the toolbar area remains at a fixed width when changing the active window. The height of the toolbar spacer is determined by the maximum height required to display all the selected toolbars for any of the windows in the project (To hide the toolbar spacer, right-click in the toolbar spacer region and select <b>Hide Toolbar Spacer</b> from the shortcut menu). 
-</p>
-</td></tr>
-<tr>
 <th>Use Long Names When Available
 </th>
 <td>
 <p>If this check box is selected, Origin will display the book and column long names, if defined, in the plot list of the Plot Setup dialog (<b>Graph: Plot Setup</b>); in the data list at the bottom of the <b>Data</b> menu; and in the left-panel of the Plot Details dialog box.
 </p>
-</td></tr>
-<tr>
-<th>Display Bitmaps in Menus
-</th>
-<td>
-<p>This check box controls whether or not bitmaps display next to menu commands. Menu commands that have toolbar button access have bitmaps that display to the left of the command.
-</p>
-<table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/The_(Options)_Miscellaneous_Tab/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>Beginning with <b>Origin 2018b</b>, you can modify the size of the <b>Plot</b> menu icons using the LabTalk system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a>. To find out how to change the value of a system variable, see <a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">Customizing Origin Using System Variables</a>.
-</p></td></tr></table>
 </td></tr>
 <tr>
 <th>Auto Update Page Short Name to Follow Long Name
@@ -338,15 +320,52 @@
 </p>
 </td></tr>
 <tr>
+<th>Use Toolbar Spacer
+</th>
+<td>
+<p>Select this check box to display a toolbar spacer below the menu bar. The toolbar spacer ensures that the toolbar area remains at a fixed width when changing the active window. The height of the toolbar spacer is determined by the maximum height required to display all the selected toolbars for any of the windows in the project (To hide the toolbar spacer, right-click in the toolbar spacer region and select <b>Hide Toolbar Spacer</b> from the shortcut menu). 
+</p>
+</td></tr>
+<tr>
+<th>Display Bitmaps in Menus
+</th>
+<td>
+<p>This check box controls whether or not bitmaps display next to menu commands. Menu commands that have toolbar button access have bitmaps that display to the left of the command.
+</p><p><b>Note</b>:
+</p>
+<ul><li>Beginning with <b>Origin 2018b</b>, you can modify the size of the <b>Plot</b> menu icons using the LabTalk system variable <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a>. To find out how to change the value of a system variable, see <a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">Customizing Origin Using System Variables</a>.</li></ul>
+</td></tr>
+<tr>
 <th>Enable Collapsible Menus
 </th>
 <td>
 <p>Main and context menus in Origin are collapsed by default. Use the check box to turn it on/off. To learn more about collapsible menu, please refer to the <a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_customize_the_collapsible_menu.html">FAQ item</a>
 </p>
-</td></tr></table>
-<h2><a name="First_Day_of_Week"></a><span class="mw-headline">First Day of Week</span></h2>
+</td></tr>
+<tr>
+<th>First Day of Week
+</th>
+<td>
 <p>Specify the first day of a week, which is used in Date format displaying <i>yyyy</i>-<b>W</b><i>ww</i>-<i>D</i>.
 </p>
-<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png?v=97660" width="490"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png?v=100189" width="484"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>Override Enter key action in sheet move selection
+</th>
+<td>
+<p>By default, when you press <b>Enter</b> key in a worksheet cell, the selection moves to the next cell below the current one. Select this checkbox to override the direction that pressing <b>Enter</b> moves the selection.
+</p>
+<dl><dd><a  class="image"><img alt="Options Override Enter Key Direction.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_Override_Enter_Key_Direction.png?v=100187" width="154"  /></a></dd></dl>
+<p><b>None</b> means the selection will not move.
+</p><p><b>Note</b>: 
+</p>
+<ul><li> You can press <b>Shift</b> + <b>Enter</b> to move the selection in the opposite direction. For example, if <b>Enter</b> moves the selection down, <b>Shift</b> + <b>Enter</b> will move it up. </li>
+<li> In a <a href="../../UserGuide/UserGuide/Data_Table.html" title="UserGuide:Data Table">Data Table</a>, if subcolumns (replicates) exist, press <b>Enter</b> moves the selection by default to the next subcolumn on the right. </li></ul>
+</td></tr></table>
+
+
+
+
 
 

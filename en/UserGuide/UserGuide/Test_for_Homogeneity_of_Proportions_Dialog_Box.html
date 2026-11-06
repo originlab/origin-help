@@ -1,42 +1,58 @@
-<h1 class="firstHeading">17.3.9.1 Test for Homogeneity of Proportions Dialog Box</h1><p class='urlname' style='display: none'>Test-Homogeneity-Prop-Dialog</p>
+<h1 class="firstHeading">17.3.10.1 Test for Homogeneity of Proportions Dialog Box</h1><p class='urlname' style='display: none'>Test-Homogeneity-Prop-Dialog</p>
+<p><br />
+</p>
 <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">Supporting Information</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">Input</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Statistics"><span class="tocnumber">3</span> <span class="toctext">Statistics</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Pairwise_Comparison"><span class="tocnumber">4</span> <span class="toctext">Pairwise Comparison</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Power Analysis</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Plots</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Recalculate</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Statistics"><span class="tocnumber">4</span> <span class="toctext">Statistics</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Pairwise_Comparison"><span class="tocnumber">5</span> <span class="toctext">Pairwise Comparison</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Power Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">6.1</span> <span class="toctext">Unset Minimal Difference of Interest</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">6.2</span> <span class="toctext">Set Minimal Difference of Interest</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Plots"><span class="tocnumber">7</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Output"><span class="tocnumber">8</span> <span class="toctext">Output</span></a></li>
 </ul>
 </div>
 
 <h2><a name="Supporting_Information"></a><span class="mw-headline">Supporting Information</span></h2>
-<p>To open the Two-Sample Poisson Rate Test Dialog:
+<p>To open the Test for Homogeneity of Proportions Dialog:
 </p>
-<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Two-Sample Poisson Rate Test...</b></li></ol>
+<ol><li> With a worksheet active, select <b>Statistics: Hypothesis Testing: Test for Homogeneity of Proportions</b></li></ol>
 <p><br />
 <i><b>See Also:</b></i>
 </p>
 <ul><li> <a href="../../UserGuide/Category/Test_for_Homogeneity_of_Proportions_(Pro_Only).html" title="Category:Test for Homogeneity of Proportions (Pro Only)">Introduction to Test for Homogeneity of Proportions</a></li></ul>
 <p><br />
 </p>
-<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<h2><a name="Recalculate"></a><span class="mw-headline">Recalculate</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Data Form
+<th>Recalculate
 </th>
 <td>
-<ul><li> <b>Summarized</b></li></ul>
-<dl><dd> Perform the test using summary statistics that you enter into the dialog box manually.</dd></dl>
-<ul><li> <b>Raw</b></li></ul>
-<dl><dd> Perform the test using a dataset in a column.</dd></dl>
-</td></tr>
+<p>Controls recalculation of analysis results
+</p>
+<ul><li><b>None</b> </li>
+<li><b>Auto</b> </li>
+<li><b>Manual</b>  </li></ul>
+<p>For more information, see: <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">Recalculating Analysis Results</a>
+</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<p><b>Test for Homogeneity of Proportions</b> supports Summarized and Raw two input data form.
+</p>
+<table class="dialogcontroltable">
+
 <tr>
-<th>Input Data (Summarized)
+<th>Summarized
 </th>
-<td>
+<td>Perform the test using summary statistics that you enter into the dialog box manually.
 <ul><li> <b>Sample Name</b></li></ul>
 <dl><dd> Specify name of the samples. You can specify a column as sample name, or enter space separated strings.</dd></dl>
 <ul><li> <b>Sample Size</b></li></ul>
@@ -45,9 +61,9 @@
 <dl><dd> Specify the value for number of events. You can specify a column dataset, or enter space separated value. (At least 3 samples.)</dd></dl>
 </td></tr>
 <tr>
-<th>Input Data (Raw)
+<th>Raw
 </th>
-<td>
+<td>Perform the test using a dataset in a column.
 <ul><li><b>Sample</b></li></ul>
 <dl><dd>Specify columns as the sample dataset. (at least 3 columns.)</dd></dl>
 <ul><li><b>Event</b></li></ul>
@@ -117,37 +133,61 @@
 <td>Showed difference of mean value with letters. Same letter means no significant difference, while different letter mean significant difference between two groups.
 </td></tr></table>
 <h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Unset Minimal Difference of Interest</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Minimal Difference of Interest
-</th>
-<td>Specify the minimum difference from the Test Mean you are interested in. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
-</td></tr>
-<tr>
 <th>Difference(s) for Specified Power
 </th>
-<td>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. If it is selected, it will use the default power levels.
+<td> When <b>Minimal Difference of Interest</b> is not set, this option is available.
+<p>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. 
+</p>
 </td></tr>
 <tr>
 <th>Power Level(s)
 </th>
-<td>When check the <b>Difference(s) for Specified Power</b> option, in this edit box enter the power levels separated by space.
+<td>When check the <b>Difference(s) for Specified Power</b> option, you can enter the power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Set Minimal Difference of Interest</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Minimal Difference of Interest (MDI)
+</th>
+<td>Specify the minimum difference you are interested in. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
 </td></tr>
 <tr>
-<th>Actual Power
+<th>Sample Size(s) for Specified Power
 </th>
-<td>When Specify the <b>Minimal Difference of Interest</b>, this option is available. Compute the power of the test (the probability of rejecting the null hypothesis when it is false).
+<td>When check the <b>Minimal Difference of Interest</b> option, this option is available.
+<p>Output the Sample Sizes for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. If it is selected, it will use the default power levels.
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Sample Size(s) for Specified Power</b> option, you can enter the target power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr>
+<tr>
+<th>Power Based on Test Data
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power of the test (the probability of rejecting the null hypothesis when it is false).
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Power
 </th>
-<td>When Specify the <b>Minimal Difference of Interest</b>, this option is available. Compute the power of the test at various sample sizes. When check this option, it will add corresponding curve to power curve.
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power of the test at various sample sizes. When check this option, it will add corresponding curve to power curve.
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Sample Size(s)
 </th>
-<td>Only available when <b>Hypothetical Power</b> is checked. Specify hypothetical sample size(s) for power computation.
+<td>When specify the <b>Minimal Difference of Interest</b> and <b>Hypothetical Power</b> is checked, this option is available.
+<p>Specify hypothetical sample size(s) for power computation.
+</p>
 </td></tr></table>
 <h2><a name="Plots"></a><span class="mw-headline">Plots</span></h2>
 <table class="dialogcontroltable">
@@ -189,6 +229,12 @@
 <th>Result
 </th>
 <td>Specify the worksheet for output of test results
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> When input data form is <b>Raw</b>, <b>Masked Data</b> and <b>Bad Data(missing value)</b> table will be in the report sheet.</li></ul>
 </td></tr></table>
 
 

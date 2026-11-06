@@ -1,0 +1,139 @@
+<h1 class="firstHeading">17.2.13 Creating Multiple Comparisons Plot</h1><p class='urlname' style='display: none'>Create-MCP</p>
+<p>Multiple Comparisons plot is a data visualization and analysis method used to show differences, rankings, or statistical significance between groups or pairs of items.
+</p>
+<dl><dd><a  class="image"><img alt="Creating Paired Comparison Plot 01.png" src="../images/Creating_Paired_Comparison_Plot/Creating_Paired_Comparison_Plot_01.png?v=100517" width="574"  /></a></dd></dl>
+<p>In many statistical tools, after performing the analysis, you can go to the report sheet, click the <b>Create Multiple Comparisons Plot</b> icon <a  class="image"><img alt="Button PCP.png" src="../images/Creating_Paired_Comparison_Plot/Button_PCP.png?v=100480" width="18"  /></a> to open the <b>Multiple Comparisons Plot</b> dialog and create the Multiple Comparisons plot.
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 02.png" src="../images/Creating_Paired_Comparison_Plot/750px-Creating_Paired_Comparison_Plot_02.png?v=100585" width="750"   /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Dialog_Controls"><span class="tocnumber">1</span> <span class="toctext">Dialog Controls</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Options_tab"><span class="tocnumber">1.1</span> <span class="toctext">Options tab</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Comparisons_to_Display_tab"><span class="tocnumber">1.2</span> <span class="toctext">Comparisons to Display tab</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Output_tab"><span class="tocnumber">1.3</span> <span class="toctext">Output tab</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Supported_in_these_Statistical_Tools"><span class="tocnumber">2</span> <span class="toctext">Supported in these Statistical Tools</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Creating_Significant_Plot"><span class="tocnumber">3</span> <span class="toctext">Creating Significant Plot</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Dialog_Controls"></a><span class="mw-headline">Dialog Controls</span></h2>
+<h3><a name="Options_tab"></a><span class="mw-headline">Options tab</span></h3>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Mean Comparison Methods
+</th>
+<td>Choose a method to compare the means. Origin provides eight different methods for means comparison, such as for <a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html#Selecting_Mean_Comparison_Methods" title="Category:One, Two, and Three Way ANOVA">ANOVA</a>, they are Tukey, Bonferroni, Dunn-Sidak, Fisher LSD, Scheffe, Holm-Bonferroni, and Holm-Sidak.
+<p><b>Note:</b> For multiple conparison plot from the results of <a href="../../UserGuide/UserGuide/The_ANOVATwoWayRM_Dialog_Box.html" title="UserGuide:The ANOVATwoWayRM Dialog Box">Two-way RM ANOVA</a>, Origin does not currently support the method <b>Dunnet</b>.
+</p>
+</td></tr>
+<tr>
+<th>Plot Type
+</th>
+<td>Choose a plot type for Paired Comparison plot to show the groups or subgroups.
+<ul><li> <b>Bar</b></li>
+<li> <b>Box</b></li>
+<li> <b>Violin</b> </li>
+<li> <b>Mean Symbol</b></li>
+<li> <b>Mean Symbols Connected</b></li>
+<li> <b>Individual Points</b></li>
+<li> <b>Individual Points with Connect Line</b></li></ul>
+</td></tr>
+<tr>
+<th>Show Individual Points
+</th>
+<td>When you choose <b>Bar</b> or <b>Box</b> as <b>Plot Type</b>, you can decide whether show the individual plots on the bars or boxes. For other plot types, the individual plots will be shown by default.
+</td></tr>
+<tr>
+<th>Error Bar
+</th>
+<td>For the plot type <b>Bar</b>, <b>Box</b>, <b>Scatter</b> and <b>Scatter and Line</b>, you can choose whether to add error bars on the graph and which statistical value to show as error bars.
+</td></tr>
+<tr>
+<th>First Factor
+</th>
+<td>This option only shows with two way ANOVA and two way RM ANOVA report with interactions. With two factors have been selected as Input, you can choose how to construct the pairwise comparisons:<b>Outer</b> compares items across the first factor, while <b>Inner</b> compares items within the first factor.
+</td></tr>
+<tr>
+<th>Significance Mark
+</th>
+<td>Specify how to indicate statistical significance on the plot:
+<ul><li><b>Asterisk with Bracket</b>: Show the asterisks and brackets above bars comparing groups. For asterisks, they follow the rule below:
+<dl><dd> n.s.  p≥0.05    ✱  p≤0.05    ✱✱  p≤0.01    ✱✱✱  p≤0.001    ✱✱✱✱  p≤0.0001</dd></dl></li>
+<li><b>P-Value with Bracket</b>: Show P-values directly on the bars comparing groups.</li>
+<li><b>Letters on Top</b>: Just show the letters on the bars.</li></ul>
+</td></tr>
+<tr>
+<th>Level for P-value
+</th>
+<td>For <b>Asterisk with Bracket</b> chosen, you can choose the levels(threshold values) for P-values.
+</td></tr>
+<tr>
+<th>Hide If P-value Greater Than
+</th>
+<td>Hide the significance mark of bars if P-values greater than a threshold value.
+</td></tr>
+<tr>
+<th>Label font size
+</th>
+<td>Specify the font size of significance labels.
+</td></tr>
+<tr>
+<th>Bracket Type
+</th>
+<td>Choose the barcket type of significance marks.
+<ul><li><b>Extended Legs</b>: Add square barckets with legs extending to data plot.</li>
+<li><b>Fixed-Length Legs</b>: Add square barckets with legs of a fixed length (15 points) that do not extend to the plot.</li>
+<li><b>Line</b>: Only show lines without caps.</li>
+<li><b>Capped Line</b>:Show capped line.</li></ul>
+</td></tr>
+<tr>
+<th>Line Thickness
+</th>
+<td>Specify the line thickness for brackets.
+</td></tr>
+<tr>
+<th>Allow Brackets Outside Plot Area
+</th>
+<td>Specify whether to show the brackets outside the graph layer frame.
+</td></tr></table>
+<h3><a name="Comparisons_to_Display_tab"></a><span class="mw-headline">Comparisons to Display tab</span></h3>
+<p>Choose the comparison interactions to show the brackets.
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 05.png" src="../images/Creating_Paired_Comparison_Plot/850px-Creating_Paired_Comparison_Plot_05.png?v=100590" width="850"   /></a>
+</p>
+<h3><a name="Output_tab"></a><span class="mw-headline">Output tab</span></h3>
+<p>Choose the worksheet to output plot data. By default, a new sheet in current book will be created and used to store the plot data. 
+</p><p>You can click the green icon and choose the corresponding menu item to switch between the plot data worksheet and the results graph window.
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 07.png" src="../images/Creating_Paired_Comparison_Plot/800px-Creating_Paired_Comparison_Plot_07.png?v=100714" width="800"   /></a>
+</p>
+<h2><a name="Supported_in_these_Statistical_Tools"></a><span class="mw-headline">Supported in these Statistical Tools</span></h2>
+<ul><li><b>Tests for two samples</b>
+<ul><li><a href="../../UserGuide/Category/Two-Sample_t-Test.html" title="Category:Two-Sample t-Test">Two-Sample T-Test</a></li>
+<li><a href="../../UserGuide/Category/Pair-Sample_t-Test.html" title="Category:Pair-Sample t-Test">Pair-Sample T-Test</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Sign_Test.html" title="Category:Paired-Sample Sign Test">Paired-Sample Sign Test</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Wilcoxon_Signed_Rank_Test.html" title="Category:Paired-Sample Wilcoxon Signed Rank Test">Paired-Sample Wilcoxon Signed Rank Test</a></li>
+<li><a href="../../UserGuide/Category/Two-Sample_Kolmogorov-Smirnov_Test.html" title="Category:Two-Sample Kolmogorov-Smirnov Test">Two-Sample Kolmogorov-Smirnov Test</a></li>
+<li><a href="../../UserGuide/Category/Mann-Whitney_Test.html" title="Category:Mann-Whitney Test">Mann-Whitney Test</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="UserGuide:Running Simultaneous Nonparametric Tests">(NPH) Paired Samples</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="UserGuide:Running Simultaneous Nonparametric Tests">(NPH) Two Independent Samples</a></li></ul></li>
+<li><b>Tests for multiple samples</b>
+<ul><li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="Category:One, Two, and Three Way ANOVA">One-Way ANOVA</a>(if any test in Means Comparison tab is selected)</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="Category:Repeated Measure ANOVA (OriginPro Only)">One-way Repeated Measures ANOVA</a>(if any test in Means Comparison tab is selected)</li>
+<li><a href="../../UserGuide/Category/Kruskal-Wallis_ANOVA.html" title="Category:Kruskal-Wallis ANOVA">Kruskal-Wallis ANOVA</a>(if Dunn't Test is selected)</li>
+<li><a href="../../UserGuide/Category/Moods_Median_Test.html" title="Category:Moods Median Test">Moods Median Test</a>(if Dunn't Test is selected)</li>
+<li><a href="../../UserGuide/Category/Friedman_ANOVA.html" title="Category:Friedman ANOVA">Friedman ANOVA</a>(if Dunn't Test or Wilcoxon-Nemenyi-McDonald-Thompson Test is selected)</li>
+<li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="Category:One, Two, and Three Way ANOVA">Two-Way ANOVA</a>(if any test in Means Comparison tab and Interaction in Input tab are selected)</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="Category:Repeated Measure ANOVA (OriginPro Only)">Two-way Repeated Measures ANOVA</a>(if any test in Means Comparison tab and Interaction in Input tab are selected)</li></ul></li></ul>
+<h2><a name="Creating_Significant_Plot"></a><span class="mw-headline">Creating Significant Plot</span></h2>
+<p>For <a href="../../UserGuide/Category/One-Sample_t-Test.html" title="Category:One-Sample t-Test">One-Sample T-Test</a> and <a href="../../UserGuide/Category/One-Sample_Wilcoxon_Signed_Rank_Test.html" title="Category:One-Sample Wilcoxon Signed Rank Test">One-Sample Wilcoxon Signed Rank Test</a>, clicking the <b>Create Significant Plot</b> icon <a  class="image"><img alt="Button PCP.png" src="../images/Creating_Paired_Comparison_Plot/Button_PCP.png?v=100480" width="18"  /></a> will open the <b>Significant Plot</b> dialog to create a Significant plot which is a variant of multiple comparison plot.
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 06.png" src="../images/Creating_Paired_Comparison_Plot/700px-Creating_Paired_Comparison_Plot_06.png?v=100700" width="700"   /></a>
+</p><p>All these controls in this dialog are same as those in the <a href="#Options_tab">Options tab of Multiple Comparisons Plot dialog</a>.
+</p>
+
+
+
+
+

@@ -10,8 +10,8 @@
 <li class="toclevel-1 tocsection-4"><a href="#Copy_Paste_Columns_as_Mirrors"><span class="tocnumber">2</span> <span class="toctext">Copy Paste Columns as Mirrors</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Mirror_to_Whole_Sheet.2FBook"><span class="tocnumber">3</span> <span class="toctext">Mirror to Whole Sheet/Book</span></a>
 <ul>
-<li class="toclevel-2 tocsection-6"><a href="#Copy_Whole_Sheet_as_Mirrors"><span class="tocnumber">3.1</span> <span class="toctext">Copy Whole Sheet as Mirrors</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Duplicate_Whole_Book_as_Mirror"><span class="tocnumber">3.2</span> <span class="toctext">Duplicate Whole Book as Mirror</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_the_Whole_Sheet_as_Mirrors"><span class="tocnumber">3.1</span> <span class="toctext">Copy the Whole Sheet as Mirrors</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_the_Whole_Book_as_Mirror"><span class="tocnumber">3.2</span> <span class="toctext">Copy the Whole Book as Mirror</span></a></li>
 </ul>
 </li>
 <li class="toclevel-1 tocsection-8"><a href="#Batch_Create_Mirror_Columns_from_Similar_Sheets"><span class="tocnumber">4</span> <span class="toctext">Batch Create Mirror Columns from Similar Sheets</span></a></li>
@@ -114,17 +114,23 @@ are supported.
 <ol><li> Highlight the source column(s), right click and select <b>Copy: Copy</b> from the context menu.</li>
 <li> Go to the destination column, right click and select <b>Paste as Mirror Column(s)...</b>
 <dl><dd><a  class="image"><img alt="Paste as Mirror Columns Context Menu.png" src="../images/Mirror_Column/Paste_as_Mirror_Columns_Context_Menu.png?v=99002" width="396"  /></a></dd></dl></li></ol>
+<dl><dd><b>Note</b>: When you save a workbook with mirror columns, the mirrors are converted to static values unless their source columns are also in the same workbook.</dd></dl>
 <h2><a name="Mirror_to_Whole_Sheet.2FBook"></a><span class="mw-headline">Mirror to Whole Sheet/Book</span></h2>
-<h3><a name="Copy_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">Copy Whole Sheet as Mirrors</span></h3>
-<p><span class='headerInParagraph'>To creat mirror for a worksheet:</span>
+<h3><a name="Copy_the_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">Copy the Whole Sheet as Mirrors</span></h3>
+<p><span class='headerInParagraph'>To create a mirror for a worksheet:</span>
 </p>
 <ol><li> Righ click on the source worksheet tab and select <b>Mirror to New Book</b> from the context menu.</li></ol>
-<p><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/870px-Mirror_to_New_Book.png?v=99204" width="870"   /></a>
-</p>
-<h3><a name="Duplicate_Whole_Book_as_Mirror"></a><span class="mw-headline">Duplicate Whole Book as Mirror</span></h3>
-<p><span class='headerInParagraph'>To creat mirror for a workbook:</span>
+<dl><dd><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/Mirror_to_New_Book.png?v=100213" width="870"  /></a></dd></dl>
+<ul><li> The mirror sheet has the same name as the source sheet, with an idicator &#128279; in the front.</li>
+<li> The mirror sheet is protected, i.e., it is read-only.</li>
+<li> Find the source sheet in the <b>F(x)</b>, or by hovering over the mirror sheet tab.</li>
+<li> When you save a workbook with mirror sheets (as a <i>.ogwu</i> file), the mirrors are converted to static values unless their source worksheets are also in the same workbook.</li></ul>
+<h3><a name="Copy_the_Whole_Book_as_Mirror"></a><span class="mw-headline">Copy the Whole Book as Mirror</span></h3>
+<p><span class='headerInParagraph'>To create a mirror for a workbook:</span>
 </p>
 <ol><li> Click on the <b>Mirror to New Book</b> button <a  class="image"><img alt="Button Mirror to New Book.png" src="../images/Mirror_Column/Button_Mirror_to_New_Book.png?v=99672" width="15"  /></a> on the <b>Standard</b> toolbar.</li></ol>
+<p><b>Note</b>: When you save a mirror workbook as a <i>.ogwu</i> file, the mirrors are converted to static values.
+</p>
 <h2><a name="Batch_Create_Mirror_Columns_from_Similar_Sheets"></a><span class="mw-headline">Batch Create Mirror Columns from Similar Sheets</span></h2>
 <p><b>Create Mirror Columns from Similar Sheets</b> tool auto-scans all the candidate columns and mirrors them in a single operation. Simply choose a source column as a reference, and set up matching rules (including the search scope and column matching restrictions), this tool will then search across similar-structure worksheets to find the matching columns, and batch-create mirror columns into one destination worksheet.
 </p><p>It is a handy tool when your expermental data is scattered across multiple books and you need to collect the interested datasets into one place for processing, plotting or side-by-side comparison.

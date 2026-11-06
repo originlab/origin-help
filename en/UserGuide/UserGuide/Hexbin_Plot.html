@@ -1,0 +1,51 @@
+<h1 class="firstHeading">31.18.15 Hexbin Plot</h1><p class='urlname' style='display: none'>Hexbin-Plot</p>
+<dl><dd><a  class="image"><img alt="Hexbin Plot 1.png" src="../images/Hexbin_Plot/Hexbin_Plot_1.png?v=100422" width="728"  /></a></dd></dl>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Requirements"><span class="tocnumber">1</span> <span class="toctext">Data Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_the_Graph"><span class="tocnumber">2</span> <span class="toctext">Creating the Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Special_Controls_for_Hexbin"><span class="tocnumber">2.1</span> <span class="toctext">Special Controls for Hexbin</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Prefer_Regular_Hexagons"><span class="tocnumber">2.1.1</span> <span class="toctext">Prefer Regular Hexagons</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Template"><span class="tocnumber">3</span> <span class="toctext">Template</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Data_Requirements"></a><span class="mw-headline">Data Requirements</span></h2>
+<p>Select XY/XYZ columns/virtual matrix (a block of worksheet cells)/matrix to plot hexbin plot.
+</p>
+<h2><a name="Creating_the_Graph"></a><span class="mw-headline">Creating the Graph</span></h2>
+<p>Select required data.
+</p><p>From the menu, choose <span class="menu">Plot &gt; Contour, Heatmap: Hexbin</span> open the <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxy.html">plot_heatmapxy</a> or <a class="external text" href="../../XFunction/X-Function/Plot_heatmapxyz.html">plot_heatmapxyz</a> or <a class="external text" href="../../XFunction/X-Function/Plotvm.html">plotvm</a> dialog. 
+</p><p>Please note, when the input data is matrix sheet, no dialog will be opened and the Hexbin plot will be created directly.
+</p><p><a  class="image"><img alt="Hexbin Plot 02.png" src="../images/Hexbin_Plot/850px-Hexbin_Plot_02.png?v=100566" width="850"   /></a>
+</p>
+<h3><a name="Special_Controls_for_Hexbin"></a><span class="mw-headline">Special Controls for Hexbin</span></h3>
+<h4><a name="Prefer_Regular_Hexagons"></a><span class="mw-headline">Prefer Regular Hexagons</span></h4>
+<p>This option is checked by default and only works for the square layer frames(1:1 aspect ratio); if the aspect ratio of the layer frame changes, you will need to calculate the values ​​yourself using the formula provided below:
+</p>
+<ul><li> x number of bins = ( sqrt(3) * y number of bins ) * (layer width/ layer height)</li>
+<li> y number of bins = ( x number of bins / sqrt(3) ) * (layer height/ layer width)</li></ul>
+<p><br />
+There are two radio boxes: <b>Derive Y from X</b> and <b>Derive X from Y</b>
+</p>
+<ul><li> Enable the radio-button group when <b>Prefer Regular Hexagons</b> is selected; otherwise, disable it. Select <b>Derive Y from X</b> by default.</li>
+<li> When <b>Derive Y from X</b> has been selected: Keep the X binning and derive the Y binning: new_ny = int(round(nx / sqrt(3))); Disable the Y binning options, including Min Center, Max Center, Bin Spacing, and Number of Bins.</li>
+<li> When <b>Derive X from Y</b> has been selected: Keep the Y binning and derive the X binning:  new_nx = int(round(ny * sqrt(3))); Disable the X binning options, including Min Center, Max Center, Bin Spacing, and Number of Bins.</li></ul>
+<h2><a name="Template"></a><span class="mw-headline">Template</span></h2>
+<p>Hexbin.OTPU (installed to the Origin program folder).
+</p>
+<h2><a name="Notes"></a><span class="mw-headline">Notes</span></h2>
+<p>A hexbin plot, a variation of <a href="../../UserGuide/UserGuide/Heat_Map.html" title="UserGuide:Heat Map">heatmap</a>, is a type of two-dimensional histogram where the bins are hexagonal and the color represents the number of data points within each bin.
+</p>
+
+
+
+
+

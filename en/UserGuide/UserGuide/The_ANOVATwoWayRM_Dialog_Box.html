@@ -29,7 +29,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Recalculate</b>
+<th>Recalculate
 </th>
 <td>
 <p>Controls recalculation of analysis results
@@ -47,7 +47,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Indexed</b>
+<th>Indexed
 </th>
 <td>
 <p>In this mode, one column contains subjects, one column contains the corresponding factors data. The other two columns contain factor variables data.
@@ -64,9 +64,8 @@
 <dl><dd><b>Subject</b>
 <dl><dd>Specify the subject column.</dd></dl></dd></dl>
 </td></tr>
-
 <tr>
-<th><b>Raw</b>
+<th>Raw
 </th>
 <td>
 <p>In this mode, response data from each level of the factor variable are stored in separate columns.
@@ -135,6 +134,17 @@
 <th>Significance Level
 </th>
 <td>Specify the significance level for pairwise multiple mean comparison.
+</td></tr>
+<tr>
+<th>Interaction Comparison Type
+</th>
+<td>Support three interaction comparison types in two-way repeated measures ANOVA
+<ul><li> <b>Compare Factor B within Each Factor A</b></li></ul>
+<dl><dd>Fixes each level of Factor A and compares the levels of Factor B pairwise within those subsets.</dd></dl>
+<ul><li> <b>Compare Factor A within Each Factor B</b></li></ul>
+<dl><dd>Fixes each level of Factor B and compares the levels of Factor A pairwise within those subsets.</dd></dl>
+<ul><li> <b>Compare Each Factor within the Other Factor</b></li></ul>
+<dl><dd>It includes <b>Compare Factor B within Each Factor A</b> and <b>Compare Factor A within Each Factor B</b>. This is a more comprehensive comparison that incorporates both A-within-B and B-within-A comparisons.</dd></dl>
 </td></tr>
 <tr>
 <th> Tukey

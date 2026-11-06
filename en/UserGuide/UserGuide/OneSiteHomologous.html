@@ -1,0 +1,49 @@
+<h1 class="firstHeading">32.1.179 OneSiteHomologous</h1><p class='urlname' style='display: none'>OneSiteHomologous-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Derived_Parameters"><span class="tocnumber">5</span> <span class="toctext">Derived Parameters</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Script_Access"><span class="tocnumber">6</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Function_File"><span class="tocnumber">7</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Category"><span class="tocnumber">8</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/OneSiteHomologous/math-3d01abde6c0b4d34330824838bf95142.png?v=0" title="Bottom = NS \cdot HotnM" alt="Bottom = NS \cdot HotnM" class="tex"/>
+</p><p><br /><img src="../images/OneSiteHomologous/math-31e1101ecf2cc24b799aa7660f71521e.png?v=0" title="KdNM = 10^{logKD + 9}" alt="KdNM = 10^{logKD + 9}" class="tex"/>
+</p><p><br /><img src="../images/OneSiteHomologous/math-576b8124225e3ed80100249b1b2c1e69.png?v=0" title="ColdNM = 10^{x + 9}" alt="ColdNM = 10^{x + 9}" class="tex"/>
+</p><p><br /><img src="../images/OneSiteHomologous/math-82705cb287099d19e199fe3acbbf04b3.png?v=0" title="y = Bottom + \frac{Bmax \cdot HotnM}{HotnM + ColdNM + KdNM}" alt="y = Bottom + \frac{Bmax \cdot HotnM}{HotnM + ColdNM + KdNM}" class="tex"/>
+</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>One site homologous binding model with identical hot and cold ligand affinities.
+</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="OneSiteHomologous.png" src="../images/OneSiteHomologous/OneSiteHomologous.png?v=100874" width="487"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameters</span></h2>
+<p>Number:  4
+</p><p>Names:  logKd, Bmax, NS, HotnM
+</p><p>Meanings:   logKd=log10 Kd, Bmax=maximum receptor binding, NS=nonspecific binding fraction, HotnM=Hot ligand 
+</p><p>Lower Bounds:   none 
+</p><p>Upper Bounds:  none
+</p>
+<h2><a name="Derived_Parameters"></a><span class="mw-headline">Derived Parameters</span></h2>
+<p>Kd=10^(logKd)
+</p><p>Bottom=NS*HotnM
+</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_OneSiteHomologous<span style="color: #000000;">&#40;</span>x,logKd,Bmax,NS,HotnM<span style="color: #000000;">&#41;</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>OneSiteHomologous.fdf
+</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Binding
+</p>
+
+
+
+
+

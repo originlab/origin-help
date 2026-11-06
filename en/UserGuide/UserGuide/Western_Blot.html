@@ -1,0 +1,122 @@
+<h1 class="firstHeading">29.4.2 Western Blot</h1><p class='urlname' style='display: none'>Western-Blot</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Support_Information"><span class="tocnumber">1</span> <span class="toctext">Support Information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Western_Blot_Data_Structure"><span class="tocnumber">2</span> <span class="toctext">Western Blot Data Structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Western_Blot_with_Raw_Band_Instensity"><span class="tocnumber">2.1</span> <span class="toctext">Western Blot with Raw Band Instensity</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Western_Blot_with_Reference.2FTotal_Protein"><span class="tocnumber">2.2</span> <span class="toctext">Western Blot with Reference/Total Protein</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Wetern_Blot_Dialog_Box"><span class="tocnumber">3</span> <span class="toctext">Wetern Blot Dialog Box</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Input"><span class="tocnumber">3.1</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Tests"><span class="tocnumber">3.2</span> <span class="toctext">Tests</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Plots"><span class="tocnumber">3.3</span> <span class="toctext">Plots</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Support_Information"></a><span class="mw-headline">Support Information</span></h2>
+<p><b>To Analyze Western Blot Assays</b>
+</p>
+<ul>
+<li> <b>Using a template</b> 
+<ol><li> Select menu <b>Help: Startup Dialog</b> to open the <b>Startup</b> dialog</li>
+<li> Go to the <b>Lab Assays</b> tab, expand the <b>Western Blot</b> branch, and choose the desired data structure. A template will open with guidance.</li></li></ol>
+<li> <b>Using your own worksheet</b>
+<ol><li> Enter your data in a worksheet,</li>
+<li> Select menu <b>Statistics: Lab Assays: Western Blot</b> to open the analysis dialog</li></ol>
+</li></ul>
+<h2><a name="Western_Blot_Data_Structure"></a><span class="mw-headline">Western Blot Data Structure</span></h2>
+<h3><a name="Western_Blot_with_Raw_Band_Instensity"></a><span class="mw-headline">Western Blot with Raw Band Instensity</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Raw Band Instensity Data.png" src="../images/Western_Blot/Western_Blot_with_Raw_Band_Instensity_Data.png?v=100829" width="418"  /></a></dd></dl>
+<p>The target intensity values for different treatments to be analyzed. 
+</p>
+<ul><li> Each column is one experimental group, such as <b>Control</b>, <b>TreatmentA</b>, or <b>TreatmentB</b>. </li>
+<li> Each row is one independent biological replicate. At least 3 replicates are typically required. If technical replicates were measured, they should be averaged or otherwise summarized to one value per biological sample before entered here. </li>
+<li> This workflow does NOT verify whether the values have already been normalized to a reference. If reference normalization is required, normalize before import, or use the <a href="#Western_Blot_with_Reference.2FTotal_Protein">"Reference/Total Protein" workflow</a>. </li>
+<li> All columns must contain numeric values. Text, empty cells, or negative gray values are handled as missing and excluded from analysis.</li></ul>
+<h3><a name="Western_Blot_with_Reference.2FTotal_Protein"></a><span class="mw-headline">Western Blot with Reference/Total Protein</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Reference Data.png" src="../images/Western_Blot/Western_Blot_with_Reference_Data.png?v=100830" width="464"  /></a></dd></dl>
+<p>The protein types and their band intensity values to be analyzed. All target and reference proteins are stacked in one column.
+</p>
+<ul><li> A text column <b>Protein</b> contains the labels of different protein types, such as <i>GAPDH</i>, <i>ACTB</i>, <i>BAX</i>, and <i>BCL2</i>. Each target protein replicate must correspond row-by-row to the reference protein replicate within the same experimental group. The row order of target and reference proteins must be consistent across all group columns. For example, if rows 1–3 are <i>BAX</i> replicates, rows 4–6 <i>BCL2</i>, and rows 7–9 <i>GAPDH</i>, then the first target replicate in each group should pair with the first <i>GAPDH</i> replicate, and so on.</li>
+<li> Beside <b>Protein</b>, all numeric columns contain target and reference intensity values in different experimental groups, such as <b>Control</b>, <b>TreatmentA</b>, or <b>TreatmentB</b>. </li>
+<li> Each row is one independent biological replicate. At least 3 replicates are typically required. If technical replicates were measured, they should be averaged or otherwise summarized to one value per biological sample before entered here. </li></ul>
+<h2><a name="Wetern_Blot_Dialog_Box"></a><span class="mw-headline">Wetern Blot Dialog Box</span></h2>
+<h3><a name="Input"></a><span class="mw-headline">Input</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Input Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Input_Tab.png?v=100831" width="747"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="15%">Input
+</th>
+<td>The band intensity values to be analyzed.
+</td></tr>
+<tr>
+<th>Identifier
+</th>
+<td>For the <a href="#Western_Blot_with_Reference.2FTotal_Protein">"Reference/Total Protein" workflow</a>, select the <b>Protein</b> column, which identifies whether each row is a target or reference protein.
+</td></tr>
+<tr>
+<th>Transform
+</th>
+<td>Transformations are applied before statistical tests.
+<ul><li> <b>Normalize by Reference</b></li></ul>
+<dl><dd>Available for <a href="#Western_Blot_with_Reference.2FTotal_Protein">"eference/Total Protein" workflow</a>. Choose a stable loading reference such as <i>GAPDH</i>, <i>ACTB</i>,  <i>TUBA1A</i>, or <i>TUBB GAPDH</i>. </dd>
+<dd>Normalize the target protein by </dd>
+<dd><img src="../images/Western_Blot/math-0cb35ac386f9d33b8d5170c4ff842d05.png?v=0" title="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}&#10;" alt="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}&#10;" class="tex"/> within the same experimental group column.</dd></dl>
+<ul><li> <b>Express Relative to Control</b></li></ul>
+<dl><dd><b>Control</b> is used as baseline. Values are rescaled so that the <b>Control</b> mean becomes 1 (100%), and <b>Treatment</b> groups are expressed as fold change relative to it. This transformation does not remove biological variation and it only rescales the group mean for interpretation.</dd></dl>
+</td></tr>
+<tr>
+<th>Significance Level
+</th>
+<td>Set the threshold to judge statistical significance.
+</td></tr>
+<tr>
+<th>Multiple Comparisons
+</th>
+<td>Choose the comparison set.
+<ul><li> <b>All Pairwise</b></li></ul>
+<dl><dd>Compare <b>Control</b> and <b>Treatment</b> groups with each other. The appropriate post hoc method on the Tests tab should be Tukey, Games-Howell, or Dunn’s test, depending on normality and variance assumptions.</dd></dl>
+<ul><li> <b>Compare with Control</b></li></ul>
+<dl><dd>Compare each <b>Treatment</b> group only against the <b>Control</b> group. This performs fewer tests and may have higher power for screening many <b>Treatment</b>s. The appropriate post hoc approach on the Tests tab is typically Dunnett’s tests.</dd></dl>
+</td></tr></table>
+<h3><a name="Tests"></a><span class="mw-headline">Tests</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Tests Tab.png" src="../images/Western_Blot/850px-Western_Blot_Dialog_Tests_Tab.png?v=100857" width="850"   /></a></dd></dl>
+<p><b>Step 1: Normality Test</b> 
+</p><p>Verify each group follows a Normal distribution or not. If number of replicates &lt; 5, normality is assumed and this test is skipped. 
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Shapiro-Wilk_normality_test" title="UserGuide:Algorithm (Normality)">Shapiro-Wilk</a>: default to small sample size (e.ge. 3 - 10 replicates).</li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Anderson-Darling_Test" title="UserGuide:Algorithm (Normality)">Anderson-Darling</a> or <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#D.27Agostino-K_Squared" title="UserGuide:Algorithm (Normality)">D'Agostino-Pearson K2</a>: useful for larger samples; may flag slight deviations as significant.</li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Kolmogorov-Smirnov_normality_test" title="UserGuide:Algorithm (Normality)">Kolmogorov-Smirnov</a>: less preferred fro small samples or tied gray-scale values.</li></ul></dd></dl>
+<p><br />
+<b>Step 2: Equal Variance Test (parametric branch only)</b>
+</p><p>If all groups are normal, <b>Equal Variance Test</b> is performed to test whether all groups' variances are equal. See <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Homogeneity_of_Variance" title="UserGuide:One Way ANOVA Algorithms">algorithm here</a>.
+</p>
+<dl><dd><ul><li> Bonett Multiple Comparison</li>
+<li> Brown-Forsythe: a safe default to small sample size because it is more robust against non-normality (especially when sample size &lt; 5) and outliers.</li>
+<li> Levene ||</li>
+<li> Levene ()<sup>2</sup></li>
+<li> Bartlett: may be appropriate when normality is well supported, but less robust in small or noisy samples.</li></ul></dd></dl>
+<ul>
+<li> If all groups' variances are equal, <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Theory_of_One-Way_ANOVA" title="UserGuide:One Way ANOVA Algorithms"><b>One-Way ANOVA</b></a> + <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Multiple_Means_Comparisons" title="UserGuide:One Way ANOVA Algorithms"><b>Means Comparison</b></a> is performed.
+<li> If not equal, <b>Welch ANOVA</b> + <b>Games-Howell</b> is performed.</li>
+</ul>
+<p><br />
+<b>Step 3: Nonparametric branch</b>
+</p><p>If one or more groups are not normally distributed, <b>Nonparametric ANOVA</b> + <b>Dunn's Test</b> is performed.
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(kwanova).html" title="UserGuide:Algorithm (kwanova)">Kruskal-Wallis</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(median).html" title="UserGuide:Algorithm (median)">Mood's Median</a></li></ul></dd></dl>
+<h3><a name="Plots"></a><span class="mw-headline">Plots</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Plots Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Plots_Tab.png?v=100838" width="769"  /></a></dd></dl>
+<p>Controls the appearance of the mulitple comparison plot. Every change is reflected in the live preview panel on the right.
+</p>
+
+
+
+
+

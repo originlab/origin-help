@@ -1,0 +1,95 @@
+<h1 class="firstHeading">2.4 Sticky Notes</h1><p class='urlname' style='display: none'>Sticky-Notes</p>
+<p>Besides <a href="../../UserGuide/Category/Notes_Window.html" title="Category:Notes Window">Notes windows</a>, you can use Sticky Notes to collect and organize ideas, tasks, or piece of information at a time for Origin's child windows.
+</p><p><a  class="image"><img alt="Sticky Notes 01.png" src="../images/Sticky_Notes/Sticky_Notes_01.png?v=100022" width="553"  /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Add_a_Stick_Note"><span class="tocnumber">1</span> <span class="toctext">Add a Stick Note</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Show_or_Hide_the_Notes"><span class="tocnumber">2</span> <span class="toctext">Show or Hide the Notes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Sticky_Note_Options"><span class="tocnumber">2.1</span> <span class="toctext">Sticky Note Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_on_Sticky_Notes_bar"><span class="tocnumber">3</span> <span class="toctext">Controls on Sticky Notes bar</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Background_Color"><span class="tocnumber">3.1</span> <span class="toctext">Background Color</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Font_Size"><span class="tocnumber">3.2</span> <span class="toctext">Font Size</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_and_Paste_Sticky_Note"><span class="tocnumber">3.3</span> <span class="toctext">Copy and Paste Sticky Note</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Attach_to_Book"><span class="tocnumber">3.4</span> <span class="toctext">Attach to Book</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Minimize_or_Delete_the_Note"><span class="tocnumber">3.5</span> <span class="toctext">Minimize or Delete the Note</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#How_Sticky_Notes_Work_with_Other_Tools"><span class="tocnumber">4</span> <span class="toctext">How Sticky Notes Work with Other Tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#With_Project_Explorer"><span class="tocnumber">4.1</span> <span class="toctext">With Project Explorer</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#With_Project_Browser"><span class="tocnumber">4.2</span> <span class="toctext">With Project Browser</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#With_Window_Switcher"><span class="tocnumber">4.3</span> <span class="toctext">With Window Switcher</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h3><a name="Add_a_Stick_Note"></a><span class="mw-headline">Add a Stick Note</span></h3>
+<p>To add a note onto current window or sheet, you can click the New Sticky Note button on the window title bar; Once a stciky note existed, a red dot will show on the New Sticky Note button.
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 05.png" src="../images/Sticky_Notes/700px-Sticky_Notes_05.png?v=100034" width="700"   /></a></dd></dl>
+<p>There is a <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">system variable "@PSN"</a> which can be used to hide the sticky note icon on title bar. By default, it is set to 1 which means showing the icon.
+</p><p>To add a sticky note by LabTalk comand, please check below:
+</p>
+<pre class="lt" style="font-family:monospace;">page <span style="color: #000080;">-</span>sn;  <span style="color: #008000;">//Add a sticky note to current page</span>
+del <span style="color: #000080;">-</span>sn;  <span style="color: #008000;">// delete all sticky notes in current project.</span></pre>
+<h3><a name="Show_or_Hide_the_Notes"></a><span class="mw-headline">Show or Hide the Notes</span></h3>
+<p>By default, the menu <b>View: Show Sticky Notes </b> has been chosen. You can select it again to hide all sticky notes for current project; and the dot on the New Sticky Note buttons will turn to gray.
+</p><p>Click the New Sticky Note button on any window title bar again to show the notes back in current project. Or, you can use the <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">system variable "@SSN"</a> to show and hide the notes. By default, @SSN is set to 1 which means showing the notes.
+</p>
+<h4><a name="Sticky_Note_Options"></a><span class="mw-headline">Sticky Note Options</span></h4>
+<p>Select the menu <b>Preferences: Sticky Note Options</b> to open the <b>Sticky Note Options</b> dialog:
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 06.png" src="../images/Sticky_Notes/Sticky_Notes_06.png?v=100041" width="290"  /></a></dd></dl>
+<ul><li> <b>Show notes on active window only</b>: Choose this to show the sticky note for active window only.</li>
+<li> <b>Allow dragging notes outside a window</b>:  Choose this to allow dragging the note outside its parent window.</li></ul>
+<p>There is a <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">system variable "@SSNI"</a> which can be set to 0, 1, 2, 3 for different combination of there two check boxes.
+</p>
+<h3><a name="Controls_on_Sticky_Notes_bar"></a><span class="mw-headline">Controls on Sticky Notes bar</span></h3>
+<p>Click on the down-arrow button at the top-left area, you will get the menu below to control the note:
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 02.png" src="../images/Sticky_Notes/Sticky_Notes_02.png?v=100024" width="299"  /></a></dd></dl>
+<h4><a name="Background_Color"></a><span class="mw-headline">Background Color</span></h4>
+<p>You can choose a color for the note, and if you want a custom color you can choose <b>Custom Color</b> from this menu to choose a desired color. 
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 03.png" src="../images/Sticky_Notes/Sticky_Notes_03.png?v=100028" width="491"  /></a></dd></dl>
+<p>Choosing <b>Set Default Color</b> to set the current color as default.
+</p>
+<h4><a name="Font_Size"></a><span class="mw-headline">Font Size</span></h4>
+<p>You can change the font size for the note.
+</p>
+<h4><a name="Copy_and_Paste_Sticky_Note"></a><span class="mw-headline">Copy and Paste Sticky Note</span></h4>
+<p>You can choose <b>Copy Sticky Note</b> to copy the note and then right-click on the area in a window to paste the note to another window.
+</p>
+<h4><a name="Attach_to_Book"></a><span class="mw-headline">Attach to Book</span></h4>
+<p>For the sticky note on a workbook/Matrix window, you can choose <b>Attach to Book</b> to attach this note to book level. By default, the note is attached to the sheet level.
+</p><p>Once Attack to Book is selectted, there would be a target "B" at the titlte bar of the sticky note.
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 04.png" src="../images/Sticky_Notes/Sticky_Notes_04.png?v=100032" width="300"  /></a></dd></dl>
+<h4><a name="Minimize_or_Delete_the_Note"></a><span class="mw-headline">Minimize or Delete the Note</span></h4>
+<p>You can choose <b>Minimize</b> to minimize the note; and choose <b>Delete</b> to delete the note.
+</p>
+<h3><a name="How_Sticky_Notes_Work_with_Other_Tools"></a><span class="mw-headline">How Sticky Notes Work with Other Tools</span></h3>
+<h4><a name="With_Project_Explorer"></a><span class="mw-headline">With Project Explorer</span></h4>
+<p>In Project Explorer, all windows with sticky notes will show a red dot on the window icon. Hovering over the icon and dot area displays a tooltip; hovering over other areas shows the preview as usual.
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 07.png" src="../images/Sticky_Notes/Sticky_Notes_07.png?v=100048" width="255"  /></a></dd></dl>
+<h4><a name="With_Project_Browser"></a><span class="mw-headline">With Project Browser</span></h4>
+<p>In Project Browser, there is a column to show the sticky notes for windows/graphs/books/sheets.
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 08.png" src="../images/Sticky_Notes/700px-Sticky_Notes_08.png?v=100051" width="700"   /></a></dd></dl>
+<p>When searching for keywords, all notes are included in the search scope.
+</p>
+<h4><a name="With_Window_Switcher"></a><span class="mw-headline">With Window Switcher</span></h4>
+<p>When you preview all windows with Window Switcher, the first sticky note of current window/sheet will show.
+</p>
+
+
+
+
+

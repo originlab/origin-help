@@ -56,8 +56,10 @@
 <ul><li><a href="../../UserGuide/Category/Theory_of_Nonlinear_Curve_Fitting.html#Levenberg-Marquardt_.28L-M.29_Algorithm" title="Category:Theory of Nonlinear Curve Fitting"><b>Levenberg Marquardt</b></a> 
 <dl><dd>The default for non linear curve fit.</dd></dl></li>
 <li><a href="../../UserGuide/Category/Theory_of_Nonlinear_Curve_Fitting.html#Orthogonal_Distance_Regression_.28ODR.29_Algorithm" title="Category:Theory of Nonlinear Curve Fitting"><b>Orthogonal Distance Regression</b></a> (Pro)
-<dl><dd>The default for nonlinear implicit curve fit.</dd></dl></li></ul>
-<p>For the difference between these two algorithms, please refer to <a href="../../UserGuide/Category/Theory_of_Nonlinear_Curve_Fitting.html#Comparison_between_ODR_and_L-M" title="Category:Theory of Nonlinear Curve Fitting">the comparison between ODR and L-M</a>.
+<dl><dd>The default for nonlinear implicit curve fit.</dd></dl></li>
+<li>Robust Regression
+<dl><dd>This Iteration Algorithm is to minimize or eliminate the distorting effects of outliers, bad data points, or extreme noise on the fit. It monitors the residuals of each data point and automatically down-weights or discards outliers so they exert minimal influence on the final model.</dd></dl></li></ul>
+<p>For the difference between the <b>Levenberg Marquardt</b> and <b>Orthogonal Distance Regression (Pro)</b> algorithms, please refer to <a href="../../UserGuide/Category/Theory_of_Nonlinear_Curve_Fitting.html#Comparison_between_ODR_and_L-M" title="Category:Theory of Nonlinear Curve Fitting">the comparison between ODR and L-M</a>.
 </p>
 </td></tr>
 <tr>
@@ -215,7 +217,9 @@
 <dd><b>Prediction Bands</b>
 <dl><dd>Add prediction bands to the fitted curve plot as two lines with filled area in between. You can turn the area fill off or customize the fill pattern on the <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Line_Tab.html#Fill_Area_Under_Curve" title="UserGuide:The (Plot Details) Line Tab"><b>Line</b> tab</a> of <b>Plot Details</b> dialog.</dd></dl></dd>
 <dd><b>Confidence Level for Curves (%)</b>
-<dl><dd>Enter a confidence level for confidence bands and prediction bands.</dd></dl></dd></dl>
+<dl><dd>Enter a confidence level for confidence bands and prediction bands.</dd></dl></dd>
+<dd><b>Add EC50/IC50 Lines</b>
+<dl><dd>Available for certain functions such as <a href="../../UserGuide/UserGuide/Boltzmann.html#Derived_Parameters" title="UserGuide:Boltzmann">Boltzmann</a>, <a href="../../UserGuide/UserGuide/DoseResp.html#Derived_Parameters" title="UserGuide:DoseResp">DoseResp</a>, <a href="../../UserGuide/UserGuide/Hill.html#Derived_Parameters" title="UserGuide:Hill">Hill</a>, <a href="../../UserGuide/UserGuide/Hill1.html#Derived_Parameters" title="UserGuide:Hill1">Hill1</a>, <a href="../../UserGuide/UserGuide/Logistic.html#Derived_Parameters" title="UserGuide:Logistic">Logistic</a>, <a href="../../UserGuide/UserGuide/Logistic5.html#Derived_Parameters" title="UserGuide:Logistic5">Logistic5</a>, <a href="../../UserGuide/UserGuide/MichaelisMenten.html#Derived_Parameters" title="UserGuide:MichaelisMenten">MichaelisMenten</a>, etc.</dd></dl></dd></dl>
 </td></tr>
 <tr>
 <th>Residual Plots
@@ -252,14 +256,14 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Find X from Y</b>
+<th>Find X from Y
 </th>
 <td>Generate a <b>Find X From Y</b> table.
 <dl><dd><b>Number of X Columns</b></dd>
 <dd> Specify the number of <b>X</b> columns.</dd></dl>
 </td></tr>
 <tr>
-<th><b>Find Y from X</b>
+<th>'Find Y from X
 </th>
 <td>Generate a <b>Find Y From X</b> table.
 <dl><dd><b>Number of Y Columns</b>
@@ -276,7 +280,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Find Z from XY</b>
+<th>Find Z from XY
 </th>
 <td>Use the checkbox to specify whether to generate a <b>Find Z from XY</b> table.
 <dl><dd><b>Number of Z Columns</b></dd>
@@ -448,6 +452,10 @@
 <dl><dd> The residual standard deviation, or square root of mean square error.</dd></dl></dd>
 <dd><b>Number of Iterations</b>
 <dl><dd> The number of iterations required for the fit to run to completion.</dd></dl></dd>
+<dd><b>Robust Residual Sum of Squares </b>
+<dl><dd>   It is the sum of squared residuals after robust weighting.  When select <b>Robust Regression</b> as <b>Iteration Algorithm</b> in the <b>Function Selection</b> page, this section is available.</dd></dl></dd>
+<dd><b>Robust Standard Deviation of Residuals </b>
+<dl><dd> It robustly estimates the dispersion of residuals. When select <b>Robust Regression</b> as <b>Iteration Algorithm</b> in the <b>Function Selection</b> page, this section is available.</dd></dl></dd>
 <dd><b>Fit Status</b>
 <dl><dd> Any fit status error code that is generated. You can see <a class="external text" href="../../QuickHelp/QuickHelp/What_does_the_NLFit_error_code_mean_and_what_can_I_do.html">this Quick Help topic</a> for details.</dd></dl></dd>
 <dd><b>Number of Replicas</b>
@@ -472,6 +480,26 @@
 <p>Options for output of residuals.
 See: <a href="../../UserGuide/UserGuide/Graphic_Residual_Analysis.html" title="UserGuide:Graphic Residual Analysis">Graphic Residual Analysis</a>
 </p>
+</td></tr>
+<tr>
+<th>Outliers (Pro)
+</th>
+<td>When select <b>Levenberg Marquardt</b> or <b>Orthogonal Distance Regression (Pro)</b> as <b>Iteration Algorithm</b> in the <b>Function Selection</b> page, this section is available.
+<dl><dd><b>Outlier Handling</b>
+<dl><dd><ul><li> <b>None</b></li></ul>
+<dl><dd> The outliers are not handled during the fitting process.</dd></dl>
+<ul><li> <b>Remove (Robust Regression)</b></li></ul>
+<dl><dd> Remove the outliers when fitting the curve</dd></dl>
+<ul><li> <b>Report Only (Robust Regression)</b></li></ul>
+<dl><dd> Just generate the <b>Outliers</b> table in the result sheet, but the outliers are not handled during the fitting process.</dd></dl></dd></dl></dd></dl>
+<p><br />
+</p>
+<dl><dd><b>Outlier Threshold (%)</b>
+<dl><dd>Customize the threshold for the outliers. By default, it is 1.</dd></dl></dd></dl>
+<dl><dd><b>Highlight Outliers in Fitted Curves Plot</b>
+<dl><dd>Control whether highlight the outliers in Fitted Curves Plot of result sheet.</dd></dl></dd></dl>
+<dl><dd><b>Generate Outlier-Removed Dataset</b>
+<dl><dd>Check this option to generate <b>Outlier-Removed X</b> and  <b>Outlier-Removed Y</b> dataset in the result sheet for fitted curve dataset.</dd></dl></dd></dl>
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
 <p>Use the <b>Output Results To</b> branch to control results output.

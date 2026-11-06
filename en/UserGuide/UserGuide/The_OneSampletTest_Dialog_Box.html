@@ -7,9 +7,14 @@
 <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">Recalculate</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Input</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">t-Test for Mean</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Power Analysis</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Plots</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">Power Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">5.1</span> <span class="toctext">Unset Minimal Difference of Interest</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">5.2</span> <span class="toctext">Set Minimal Difference of Interest</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
 </ul>
 </div>
 
@@ -26,7 +31,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Recalculate</b>
+<th>Recalculate
 </th>
 <td>
 <p>Controls recalculation of analysis results
@@ -38,25 +43,31 @@
 </p>
 </td></tr></table>
 <h2><a name="Input"></a><span class="mw-headline">Input</span></h2>
+<p>One-Sample t-Test supports <b>Raw</b> and <b>Summarized Data</b> two input data form.
+</p>
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Input Data Form</b>
+<th>Raw
 </th>
-<td>
-<p><b>Summarized Data</b>
+<td>Perform the test using a column/columns with range format. Each column contains response data from a level of factor variable.
+<p>For help with range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Specifying Your Input Data</a>
 </p>
-<dl><dd>Enter value of mean, standard deviation and sample size data for sample(s), in the form as "<i>mean</i> <i>SD</i> <i>N</i>" (space separated numbers)</dd></dl>
-<p><b>Raw Data</b>
-</p>
-<dl><dd>Enter column with range format. For help with range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">Specifying Your Input Data</a></dd></dl>
 </td></tr>
 <tr>
-<th><b>Input</b>
+<th>Summarized Data
 </th>
-<td>
-<p>Enter the input data.
+<td>Summarized Data is mean, standard derivation and sample size prepared for samples.  And it supports multiple Summarized Data.
+<p>Enter following Summarized Data by selecting columns from worksheet or entering into the dialog box manually.
 </p>
+<ul><li> <b>Sample Name</b></li></ul>
+<dl><dd>Specify name of the samples. You can specify a column as sample name, or enter space separated strings, or  leave it empty.</dd></dl>
+<ul><li> <b>Mean</b></li></ul>
+<dl><dd>Specify the mean of the data.  You can specify the a column dataset, or enter space separated number. </dd></dl>
+<ul><li> <b>SD</b></li></ul>
+<dl><dd>Specify the standard derivation  of the data.  You can specify a column dataset, or enter space separated number. (SD should be greater than 0.)</dd></dl>
+<ul><li> <b>Sample Size</b></li></ul>
+<dl><dd>Specify the total number of data. You can specify a column dataset, or enter space separated number. (Sample size should be greater than 0.)</dd></dl>
 </td></tr></table>
 <h2><a name="t-Test_for_Mean"></a><span class="mw-headline">t-Test for Mean</span></h2>
 <table class="dialogcontroltable">
@@ -111,40 +122,81 @@
 <td>Specify space-separated confidence levels, (1-<img src="../images/The_OneSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png?v=0" title="\sigma" alt="\sigma" class="tex"/>)%. Available when <i>Confidence Interval(s)</i> is selected.
 </td></tr></table>
 <h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Unset Minimal Difference of Interest</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Minimal Difference of Interest
+<th>Difference(s) for Specified Power
 </th>
-<td>Specify the minimum difference from the test mean you are interested in. Once you enter a value in this box, the Power Anlysis graph will show the minimum sample size to detect this difference in the different powers.
+<td> When <b>Minimal Difference of Interest</b> is not set, this option is available.
+<p>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. 
+</p>
 </td></tr>
 <tr>
-<th>Actual Power
+<th>Power Level(s)
 </th>
-<td>Compute the power of the test (the probability of rejecting the null hypothesis when it is false).
+<td>When check the <b>Difference(s) for Specified Power</b> option, you can enter the power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Set Minimal Difference of Interest</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Minimal Difference of Interest (MDI)
+</th>
+<td>Specify the minimum difference from the test mean that you are interested in. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
 </td></tr>
 <tr>
-<th>Significance Level
+<th>Sample Size(s) for Specified Power
 </th>
-<td>Only available when <i>Hypothetical Power</i> and/or <i>Actual Power</i> are checked. This is the significance level (alpha value) for power computation.
+<td>When specify the <b>Minimal Difference of Interest</b> option, this option is available.
+<p>Output the Sample Sizes for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. 
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Sample Size(s) for Specified Power</b> option, you can enter the target power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr>
+<tr>
+<th>Power Based on Test Data
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power for the sample size of the test data. (the probability of rejecting the null hypothesis when it is false).
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Power
 </th>
-<td>Compute the power of the test at various sample sizes.
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power of the test at the specified sample sizes. When check this option, you can specify hypothetical sample size(s) in the below box, and it will add corresponding curve to power curve.
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Sample Size(s)
 </th>
-<td>Only available when <i>Hypothetical Power</i> is checked. Specify hypothetical sample size(s) for power computation.
+<td>When specify the <b>Minimal Difference of Interest</b> and <b>Hypothetical Power</b> is checked, this option is available.
+<p>Specify hypothetical sample size(s) for power computation.
+</p>
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b> When input multiple data (both <b>Raw</b> and <b>Summarized Data</b>), <b>Power Analysis</b> report will not be output.
 </td></tr></table>
 <h2><a name="Plots"></a><span class="mw-headline">Plots</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
+<th>Probability Plot
+</th>
+<td>Plot a probability plot.
+</td></tr>
+<tr>
 <th>Box Chart
 </th>
 <td>Plot a box chart.
+<p><b>Note:</b> When outlier(s) detected in the datasets, a footnote will show under the Box chart to note you to review their case. If you want to exclude the outliers, you can click the triangle button at the end of the footnote to mark outliers and recalculate.
+</p>
 </td></tr>
 <tr>
 <th>Histogram
@@ -155,6 +207,11 @@
 <th>Arrange Plots of Same Type in One Graph
 </th>
 <td>Note that for histograms, the layers will be arranged vertically. For box charts, layers will be arranged horizontally.
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b> When input data form is <b>Summarized Data</b>, it will not output above plots.
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
 <p>For help with the range controls, see: <a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">Output Results</a>
@@ -171,16 +228,17 @@
 <tr>
 <th>Graphical Summary Report
 </th>
-<td>Create a summary graph report, including P value bar, effect size bar and data distribution graph. Three result tables will also been attached to the graph to show the statistical values.
+<td>Create a summary graph report, including P value bar, effect size bar and data distribution graph. The result tables will also been attached to the graph to show the statistical values.
 <p>The footnote after the summary graph will diagnose these statistical results.
 </p>
 </td></tr>
 <tr>
 <th>Graphical Power Analysis Report
 </th>
-<td>Create a graphical power analysis report with power curve(s).
-<p>If no value has been set for <b>Minimal Difference of Interest</b> editbox, only the power curve of current sample size will be output; and the power at 60%, 70%, 80% and 90% will be tagged to show the difference at these power values. If a difference value has been set for <b>Minimal Difference of Interest</b> editbox, five power curves will be output: power curves at around 60%, 70%, 80% and 90% and current sample size; and the sample size to detect the minimal difference will be listed.
-</p><p>A footnote will be added after the power curve graph to show you the diagnosis results of power analysis. A power value of 80% is usually considered sufficient.
+<td>Create a graphical power analysis report with power curve(s).  The output table and power curves are according to the setting in the <b>Power Analysis</b> tab.
+<ul><li>If no value has been set for <b>Minimal Difference of Interest</b> editbox, only the power curve of current sample size will be output; and the power at 60%, 70%, 80% and 90% (default value) will be tagged to show the difference at these power values. </li></ul>
+<ul><li>If a difference value has been set for <b>Minimal Difference of Interest</b> editbox, the power curves will be output: power curves at around 60%, 70%, 80% and 90% (default value) and current sample size; and the sample size to detect the minimal difference will be listed.</li></ul>
+<p>A footnote will be added after the power curve graph to show you the diagnosis results of power analysis. A power value of 80% is usually considered sufficient.
 </p>
 </td></tr>
 <tr>
@@ -194,6 +252,14 @@
 <th>Output Results
 </th>
 <td>Specify the worksheet for output of test results.
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> When input data form is <b>Summarized Data</b>, <b>Graphical Summary</b> report will not be output.</li>
+<li> When input multiple data (both <b>Raw</b> and <b>Summarized Data</b>), <b>Graphical Power Analysis</b> report will not be output.</li>
+<li> When input data form is <b>Raw</b>, <b>Masked Data</b> and <b>Bad Data(missing value)</b> table will be in the report sheet.</li></ul>
 </td></tr></table>
 
 

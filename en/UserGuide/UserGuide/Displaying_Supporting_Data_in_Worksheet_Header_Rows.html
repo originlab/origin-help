@@ -92,14 +92,26 @@ Also, be sure to see <a class="external text" href="../../GettingStarted/OriginL
 <p>Note: If Rich Text isn't checked, greek letters, special characters and LaTeX can only show as escape sequences in worksheet, e.g. \g( ) for Greek text, \q( ) for LaTeX, etc. though they will show fine in graph such as axis title, legend, etc.
 </p>
 <h2><a name="Copy_and_Paste_Column_Label_Rows"></a><span class="mw-headline">Copy and Paste Column Label Rows</span></h2>
-<p>To copy all column label row(s), right click the column Label Row to copy (Edit: Copy or Ctrl+C) and then go to destination to paste (Edit: Paste or Ctrl+V). Paste Transpose, Paste-link are also supported.
-</p><p>To copy selected column(s) label row metadata together with column(s) data,  right-click column(s) and choose <b>Copy (including label rows)</b>. Non-contiguous selections and worksheet subrange selections are supported.
-</p>
-<ul><li> To paste only label row values, right-click on the cell in the upper-left corner of the label row area and <b>Paste</b> (Origin will not add User Parameter rows).<br /></li>
-<li> To paste only data row values, right-click on the cell in the upper-left corner of the data area and <b>Paste</b> (Origin will add data rows, as needed).<br /></li>
-<li> To paste both label and data values, select the left-most column by clicking on the column heading and <b>Paste</b>. Both metadata and data will be pasted to the worksheet. Columns, data rows and User Parameter rows will be added, as needed.</li></ul>
-<p>To copy selected column(s) label row metadata only,  right-click column(s) and choose <b>Copy (formula)</b>, <b>Copy (label rows)</b> or <b>Copy (formula and label rows)</b>.
-</p>
+<ul>
+<li>To copy all column label row(s), 
+<ol><li> Right-click the desired column label row(s) and choose <b>Edit: Copy</b> (Ctrl+C). </li>
+<li> Go to the destination and choose <b>Edit: Paste</b> (Ctrl+V). <b>Note:</b> <b>Paste Transpose</b> and <b>Paste Link</b> are also supported.</li></ol>
+<li>To copy columns Long Name together with data, 
+<ol><li> Right-click the desired columns and choose <b>Copy: Copy (including label rows)</b>. </li></ol>
+<dl><dd><b>Note:</b> 
+<ul><li>Non-contiguous selections and worksheet subrange selections are supported.</li>
+<li>If Units exist, Units are also copied together with the Long Name on one line in the format <i>Long Name</i> (<i>Units</i>).&#160;:*If Long Names are the same or empty, Comments will be copied. If Long Names and Comments are the same or empty, the first User-defined Parameter row will be copied.</li></ul></dd></dl>
+<li>To copy all label rows together with column data, 
+<ol>
+<li> Set <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">the system variable @PLO</a> = 0. 
+<li> Right-click the desired columns and choose <b>Copy: Copy (including label rows)</b>. 
+<ul><li>To paste only label row, right-click on the upper-left cell in the label row area and choose <b>Paste</b>. Note that Origin will not add User Parameter rows automatically.<br /></li>
+<li> To paste only data values, right-click on the upper-left cell in the data area and choose <b>Paste</b>. Data rows are auto-added as needed.<br /></li>
+<li> To paste both labels and data, select the leftmost column by clicking the column heading and choose <b>Paste</b>. Columns, data rows and User Parameter rows will be added as needed.</li></ul>
+</ol></li>
+<li>To copy metadata in column label rows only, 
+<ol><li> Right-click the column(s) and choose <b>Copy (formula)</b>, <b>Copy (label rows)</b> or <b>Copy (formula and label rows)</b>.</li></ol>
+</ul>
 <h2><a name="Define_Named_Range_in_Label_Row_Cell"></a><span class="mw-headline">Define Named Range in Label Row Cell</span></h2>
 <p>You can define any column label row cell as a <a href="../../UserGuide/UserGuide/Named_Range.html#Using_Named_Range_in_Label_Rows" title="UserGuide:Named Range">named range</a> for use in such things as <a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="UserGuide:Quick Start SetColumnValues">column formulas</a> or <a href="../../UserGuide/UserGuide/Reference_Lines.html#Details_dialog_for_Reference_Lines" title="UserGuide:Reference Lines">reference lines</a>.
 </p>
@@ -138,6 +150,11 @@ Also, be sure to see <a class="external text" href="../../GettingStarted/OriginL
 <h3><a name="Comments"></a><span class="mw-headline">Comments</span></h3>
 <p>Each worksheet column can have one or more lines of <b>Comments</b>.  Multiple comment lines can be typed into the Comments cell by pressing CTRL + ENTER at the end of each line.  If you are importing files in which you've pre-defined multiple lines of comments, these are preserved and placed in the Comments cell. 
 </p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>You can copy built-in label row(s), e.g., Long Name, Units, Comment, etc. to multiple worksheets by <b>Apply Column Label Rows to</b> mini toolbar button <a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png?v=94915" width="21"  /></a>. See details <a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#Define_a_Formula_when_you_Add_User_Parameters" title="UserGuide:Displaying Supporting Data in Worksheet Header Rows">here</a>.
+</p>
+<dl><dd><a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Apply_User_Parameters_to_Other_Sheets.png?v=94920" width="417"  /></a></dd></dl>
+</td></tr></table>
 <h3><a name="F.28x.29"></a><span class="mw-headline">F(x)</span></h3>
 <p>The <b>F(x)=</b> header row displays either:
 </p>
@@ -316,27 +333,27 @@ Note that each sparkline is an <b>editable embedded graph</b> which can be opene
 <li> You can apply formatting to Date and Time data <i>only</i> if the string stored in the user-defined parameter row is in numeric form (i.e. a <a href="../../UserGuide/UserGuide/Dates_and_Times_in_Origin.html" title="UserGuide:Dates and Times in Origin">Julian Date value</a> as used internally by Origin). Formatting such numeric strings will also allow you to use these column label row values for calculation purposes such as in a <a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="UserGuide:Using Formulae to Set Cell Values">worksheet cell formula</a> (e.g. =value(wcol(j)[D1]$)).</li>
 <li> The user should always remember that despite whatever formatting options are applied, column label row data are still <i>string</i> data -- <i>not</i> numeric data.</li></ul>
 <h3><a name="Define_a_Formula_when_you_Add_User_Parameters"></a><span class="mw-headline">Define a Formula when you Add User Parameters</span></h3>
-<p>You can add a user-parameter row to the worksheet expressly for the purpose of calculating some column statistic, such as mean or standard deviation.
+<p>You can add a user-parameter row to a worksheet to calculating some column statistics, such as the mean or standard deviation.
 </p>
 <ol><li> Right-click on the column label row headings and choose <b>Add User Parameters</b> from the shortcut menu.</li>
-<li> In the <b>Add User Parameters</b> dialog that opens, enter a name for your user-defined row, then click the flyout menu to pick from a list of <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">common statistics</a>. The statistic will be calculated for each data-containing column in the worksheet (note that Text column and Categorical column will be skipped).
-<dl><dd><a  class="image"><img alt="User parameter define formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/User_parameter_define_formula.png?v=98829" width="756"  /></a></dd></dl>
+<li> In the <b>Add User Parameters</b> dialog that opens, enter a name for the user-defined row, then click the flyout menu to select a statistic from a list of <a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">common statistical functions</a>. The statistic will be calculated for each data-containing column in the worksheet. <b>Note</b>: Text column and Categorical columns will be skipped.
+<dl><dd><a  class="image"><img alt="User parameter define formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/User_parameter_define_formula.png?v=100219" width="783"  /></a></dd></dl>
 <ul><li>You can select <b>More...</b> to open the <b>Custom Formual</b> dialog, edit your user-defined formula and <b>Save</b> it. The user-defined formula will then appear in the <a  class="image"><img alt="Triangle button.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Triangle_button.png?v=41681" width="15"  /></a> list for re-use.</li></ul>
-<dl><dd><a  class="image"><img alt="Custom Formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Custom_Formula.png?v=98827" width="494"  /></a></dd></dl></li>
-<li> To make changes to a User Parameter row <b>Name</b> or <b>Formula</b>, right-click on the User Parameter row heading and choose <b>Edit</b> from the shortcut menu.</li></ol>
+<dl><dd><a  class="image"><img alt="Custom Formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Custom_Formula.png?v=100218" width="609"  /></a></dd></dl></li>
+<li> To changes the <b>Name</b> or <b>Formula</b> of a User Parameter row, right-click the User Parameter row heading and choose <b>Edit</b> from the shortcut menu.</li></ol>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>The above procedure automatically extends your formula across all worksheet columns. However, you can also extend a label row formula to all cells to the right of the formula-containing cell by hovering in the lower-right corner of the formula cell and double-clicking on the "<b>+</b>" icon.
+	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png?v=9614" width="57"  border="0" /></td><td><p>The above procedure automatically extends your formula across all worksheet columns. However, you can also extend a label row formula for all cells to the right by hovering over the lower-right corner of the formula cell and then double-clicking the "<b>+</b>" icon.
 <p><a  class="image"><img alt="Column label row extend formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_extend_formula.png?v=82829" width="740"  /></a>
 </p>
 </p></td></tr></table>
 <p><span class='headerInParagraph'>If you want to apply a user-parameter row to other worksheets, especially those defined by formula,</span>
 </p>
 <ol><li> Select the user-parameter row you want to copy. </li>
-<li> In the mini toolbar that pops up, select <b>Apply User Parameters to</b> button <a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png?v=94915" width="21"  /></a>. In the fly-out menu, select the target worksheets:</li></ol>
-<dl><dd><ul><li><b>Sheets in Current Book</b>: All sheets in current workbook. Hidden sheets will be included while embedded sheets will not.</li>
-<li><b>Sheets in Current Folder</b>: All sheets in current folder. Sheets in subfolders will not be included. Hidden sheets will be included, while embedded sheets will not.</li>
+<li> In the mini toolbar that pops up, select <b>Apply Column Label Rows to</b> button <a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png?v=94915" width="21"  /></a>. In the fly-out menu, select the target worksheets:</li></ol>
+<dl><dd><ul><li><b>Sheets in Current Book</b>: All sheets in the current workbook. Hidden sheets will be included while embedded sheets will not.</li>
+<li><b>Sheets in Current Folder</b>: All sheets in the current folder. Sheets in subfolders will not be included. Hidden sheets will be included, while embedded sheets will not.</li>
 <li><b>Sheets in Current Folder (Open)</b>: All the opened (not hidden) sheets in current folder. Sheets in subfolders will not be included. </li>
-<li><b>Sheets in Current Folder (Recursive)</b>: All sheets in current folder. The subfolders will be recursively included.</li>
+<li><b>Sheets in Current Folder (Recursive)</b>: All sheets in the current folder. Subfolders will be included recursively.</li>
 <li><b>Sheets in Project</b>: All sheets in the project. Hidden sheets will be included while embedded sheets will not.</li></ul>
 <dl><dd><a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Apply_User_Parameters_to_Other_Sheets.png?v=94920" width="417"  /></a></dd></dl></dd></dl>
 <h2><a name="Explanation_of_Context_Menus_for_Column_Label_Rows"></a><span class="mw-headline">Explanation of Context Menus for Column Label Rows</span></h2>

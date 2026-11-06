@@ -1,0 +1,51 @@
+<h1 class="firstHeading">32.1.37 CompetitiveBinding</h1><p class='urlname' style='display: none'>CompetitiveBinding-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Script_Access"><span class="tocnumber">5</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Function_File"><span class="tocnumber">6</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Category"><span class="tocnumber">7</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/CompetitiveBinding/math-51f0cf4d82cca39ccd515159eff0b55a.png?v=0" title="y = Q \left( \frac{K_4 \text{Diff}}{K_F K_S} + (K_4 - K_F) \frac{e^{-K_F x}}{K_F} - (K_4 - K_S) \frac{e^{-K_S x}}{K_S} \right) " alt="y = Q \left( \frac{K_4 \text{Diff}}{K_F K_S} + (K_4 - K_F) \frac{e^{-K_F x}}{K_F} - (K_4 - K_S) \frac{e^{-K_S x}}{K_S} \right) " class="tex"/>
+<br /><br /><img src="../images/CompetitiveBinding/math-719b874921c72c02239ae679671cce85.png?v=0" title=" \text{where } K_A = K_2 + K_1 L \times 1\text{E}-9, \quad K_B = K_4 + K_3 I \times 1\text{E}-9, " alt=" \text{where } K_A = K_2 + K_1 L \times 1\text{E}-9, \quad K_B = K_4 + K_3 I \times 1\text{E}-9, " class="tex"/>
+<br /><br /><img src="../images/CompetitiveBinding/math-0170b80edf7a9e95fc3dccd6c73c6410.png?v=0" title=" \quad S = \sqrt{(4\text{E}-18) \times K_1 K_3 L I + (K_A - K_B)^2}," alt=" \quad S = \sqrt{(4\text{E}-18) \times K_1 K_3 L I + (K_A - K_B)^2}," class="tex"/>
+<br /><br /><img src="../images/CompetitiveBinding/math-fa498727a4acb4e3e835ad0de3776d93.png?v=0" title=" K_F = 0.5 K_A + 0.5 K_B + 0.5 S,  \quad K_S = 0.5 K_A + 0.5 K_B - 0.5 S," alt=" K_F = 0.5 K_A + 0.5 K_B + 0.5 S,  \quad K_S = 0.5 K_A + 0.5 K_B - 0.5 S," class="tex"/>
+<br /><br /><img src="../images/CompetitiveBinding/math-69ae38bc43ccc9e993080211c431c246.png?v=0" title=" \quad \text{Diff} = K_F - K_S, \quad Q = \frac{K_1 L B_{\text{max}}}{\text{Diff}} \times 1\text{E}-9" alt=" \quad \text{Diff} = K_F - K_S, \quad Q = \frac{K_1 L B_{\text{max}}}{\text{Diff}} \times 1\text{E}-9" class="tex"/>
+</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>Evaluate a multi-curve model (Motulsky-Mahan) to predict hot ligand binding over time in the presence of varying cold competitor concentrations.
+</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="CompetitiveBinding.png" src="../images/CompetitiveBinding/CompetitiveBinding.png?v=100840" width="372"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameters</span></h2>
+<p>Number:  6
+</p><p>Names:  K1, L, K2, K3, I, K4, Bmax
+</p><p>Meanings:   K1=association rate constant of hot ligand,
+L=radioligand concentration of hot ligand in nM,
+K2=dissociation rate constant of hot competitor,
+K3=association rate constant of cold competitor,
+I=radioligand concentration of cold competitor in nM,
+K4=dissociation rate constant of cold competitor,
+Bmax=max binding capacity
+</p><p>Lower Bounds:   K4&gt;0, Bmax&gt;0
+</p><p>Upper Bounds:  none
+</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_CompetitiveBinding<span style="color: #000000;">&#40;</span>x,K1,L,K2,K3,I,K4,Bmax<span style="color: #000000;">&#41;</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>CompetitiveBinding.fdf
+</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Binding
+</p>
+
+
+
+
+

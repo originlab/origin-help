@@ -9,14 +9,21 @@
 <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">Input</span></a>
 <ul>
 <li class="toclevel-2 tocsection-4"><a href="#Descriptive_Statistics"><span class="tocnumber">3.1</span> <span class="toctext">Descriptive Statistics</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Significance_Level"><span class="tocnumber">3.2</span> <span class="toctext">Significance Level</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Effect_Size"><span class="tocnumber">3.2</span> <span class="toctext">Effect Size</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Significance_Level"><span class="tocnumber">3.3</span> <span class="toctext">Significance Level</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Equal_Variance_Assumed"><span class="tocnumber">3.4</span> <span class="toctext">Equal Variance Assumed</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-6"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">Means Comparison</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">Tests for Equal Variance</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Power Analysis</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">Plots</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">Means Comparison</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">Tests for Equal Variance</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">Power Analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">6.1</span> <span class="toctext">Unset Minimal Difference of Interest</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">6.2</span> <span class="toctext">Set Minimal Difference of Interest</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">Plots</span></a></li>
 </ul>
 </div>
 
@@ -29,7 +36,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>Recalculate</b>
+<th>Recalculate
 </th>
 <td>
 <p>Controls recalculation of analysis results
@@ -80,9 +87,19 @@
 <h3><a name="Descriptive_Statistics"></a><span class="mw-headline">Descriptive Statistics</span></h3>
 <p>Check to include descriptive statistics results in the output report.
 </p>
+<h3><a name="Effect_Size"></a><span class="mw-headline">Effect Size</span></h3>
+<p>Specify whether to output the <b>Effect Size</b> table in the report sheet. In the report table, it will output the Effect Size metrics for One Way ANOVA: <b>Eta-squared</b>, <b>Cohen's f</b> and <b>Omega-squared</b>. They are all standardized effect size statistics used in ANOVA to quantify the magnitude of group differences.
+</p><p><b>Eta-squared</b> and <b>Omega-squared</b> are variance-explained metrics, and <b>Cohen's f</b> is standardized mean difference metric.
+</p>
 <h3><a name="Significance_Level"></a><span class="mw-headline">Significance Level</span></h3>
 <p>Set the significance level for one-way ANOVA.
 </p>
+<h3><a name="Equal_Variance_Assumed"></a><span class="mw-headline">Equal Variance Assumed</span></h3>
+<p>This option is checked by default. It will effect the methods supplied in the <b>Mean Comparison</b> tab.
+</p><p>While standard ANOVA assumes that all comparison groups have equal variance, <b>Welch's ANOVA</b> is an alternative to the standard One-Way ANOVA, for situations where the assumption of homogeneity of variances is violated. It uses weighted group variances to adjust the degrees of freedom, keeping the Type I error rate stable even when variances and sample sizes differ significantly across groups.
+</p>
+<ul><li> When this option is selected, it will output the <b>Overall ANOVA</b> report table. And it supplies  <b>Tukey</b>, <b>Dunnett</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b>Scheffe</b>, <b>Holm-Bonferroni</b> and <b>Holm-Sidak</b> mean comparison methods. </li></ul>
+<ul><li> When this option is unselected, it will output the <b>Welch's Test</b> report table. And it supplies <b>Games-Howell</b> mean comparison method. Also, for the <b>Summary Graph</b> of the result sheet, the P value is based on p of <b>Welch's ANOVA</b>, and <b>Comparison Intervals of Mean</b> is based on <b>Games-Howell</b> method.</li></ul>
 <h2><a name="Means_Comparison"></a><span class="mw-headline">Means Comparison</span></h2>
 <p>Choose methods of post-hoc pairwise comparisons: 
 </p>
@@ -94,13 +111,34 @@
 <td>Specify the significance level for pairwise means comparison.
 </td></tr>
 <tr>
+<th>Compare
+</th>
+<td>
+<ul><li> <b>All Pair of Means</b></li></ul>
+<dl><dd>Compare every group to every other groups.</dd></dl>
+<ul><li> <b>Each Mean with a Control</b></li></ul>
+<dl><dd>Selects one specific group as the reference standard (Control Level), and all other groups compares strictly against that this specific group. The unspecified groups are not compared to one another. </dd></dl>
+</td></tr>
+<tr>
+<th>Control Level
+</th>
+<td>Specify the control level when compare means. This option is available when the <b>Each Mean with a Control</b> is selected in <b>Compare</b>.
+<p>For example, there are three levels (groups) <i><b>A</b></i>, <i><b>B</b></i> and <i><b>C</b></i> in the sample, and specify the control level to <i><b>A</b></i>, then <i><b>B</b></i> and <i><b>C</b></i> will compare with <i><b>A</b></i> respectively, but <i><b>B</b></i> and <i><b>C</b></i> will not be compared with each other.
+</p>
+</td></tr>
+<tr>
 <th>Tukey
 </th>
 <td rowspan="8">
-<p>Different methods for pairwise means comparison.
-(For more information see <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithms</a>).
+<p>Different methods for means comparison.
+</p><p>When <b>Equal Variance Assumed</b> is selected in the <b>Input</b> tab, it supplies these methods for pairwise means comparison.
+</p><p>If select <b>All Pair of Means</b> in <b>Compare</b>, it will supply <b>Tukey</b> method.  If select <b>Each Mean with a Control</b> in <b>Compare</b>, it will supply <b>Dunnett</b> method.  Other method are supplied in both option.
+</p><p>(For more information see <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithms</a>).
 </p>
 </td></tr>
+<tr>
+<th>Dunnett
+</th></tr>
 <tr>
 <th>Bonferroni
 </th></tr>
@@ -114,14 +152,18 @@
 <th>Scheffe
 </th></tr>
 <tr>
-<th>Dunnett
-</th></tr>
-<tr>
 <th>Holm-Bonferroni
 </th></tr>
 <tr>
 <th>Holm-Sidak
 </th></tr>
+<tr>
+<th>Game-Howell
+</th>
+<td>When <b>Equal Variance Assumed</b> is un-checked in the <b>Input</b> tab, it supplies <b>Game-Howell</b> methods for pairwise means comparison.
+<p>(For more information see <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="UserGuide:One Way ANOVA Algorithms">Algorithms</a>).
+</p>
+</td></tr>
 <tr>
 <th>Grouping Letters Table
 </th>
@@ -155,31 +197,98 @@
 <h2><a name="Power_Analysis"></a><span class="mw-headline">Power Analysis</span></h2>
 <p>Choose to perform <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Power_Analysis" title="UserGuide:One Way ANOVA Algorithms">power analysis</a>:
 </p>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">Unset Minimal Difference of Interest</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>Actual Power
+<th>Difference(s) for Specified Power
 </th>
-<td>Specify whether to perform actual power test.
+<td> When <b>Minimal Difference of Interest</b> is not set, this option is available.
+<p>Output the differences for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. 
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Difference(s) for Specified Power</b> option, you can enter the power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">Set Minimal Difference of Interest</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>Minimal Difference of Interest
+</th>
+<td>Specify the minimum difference you are interested in. Once you enter a value in this box, the Power Analysis graph will show the minimum sample size to detect this difference in the different powers.
+</td></tr>
+<tr>
+<th>Sample Size(s) for Specified Power
+</th>
+<td>When check the <b>Minimal Difference of Interest</b> option, this option is available.
+<p>Output the Sample Sizes for the specified power levels. When this option is selected, the specified power levels setting will affect the power level in power curve. If it is selected, it will use the default power levels.
+</p>
+</td></tr>
+<tr>
+<th>Power Level(s)
+</th>
+<td>When check the <b>Sample Size(s) for Specified Power</b> option, you can enter the target power levels separated by space in this edit box. Default power levels are <i>60%, 70%, 80% and 90%</i>.
+</td></tr>
+<tr>
+<th>Power Based on Test Data
+</th>
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power for the sample size of the test data.  (the probability of rejecting the null hypothesis when it is false).
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Power
 </th>
-<td>Specify whether to perform hypothetical power test.
-</td></tr>
-<tr>
-<th>Significance Level
-</th>
-<td>Specify the significance level for hypothetical power test.
+<td>When specify the <b>Minimal Difference of Interest</b>, this option is available.
+<p>Compute the power of the test at various sample sizes. When check this option, it will add corresponding curve to power curve.
+</p>
 </td></tr>
 <tr>
 <th>Hypothetical Sample Size(s)
 </th>
-<td>Specify the hypothetical sample size, using space to separate each entry.
+<td>When specify the <b>Minimal Difference of Interest</b> and <b>Hypothetical Power</b> is checked, this option is available.
+<p>Specify hypothetical sample size(s) for power computation.
+</p>
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">Output</span></h2>
 <table class="dialogcontroltable">
 
+<tr>
+<th>Graphical Summary Report
+</th>
+<td>Specify whether to display the graphical summary report
+</td></tr>
+<tr>
+<th>Mean Comparison Method used in Report
+</th>
+<td> When <b>Graphical Summary Report</b> is checked  and <b>Equal Variance Assumed</b>(in <b>Input</b> tab) is checked, this option is available. Select the method for comparison intervals of mean.
+<ul><li>Tukey / Dunnett</li>
+<li>Bonferroni</li>
+<li>Dunn-Sidak</li>
+<li>Fisher's LSD</li>
+<li>Scheffe</li></ul>
+<p>When <b>Graphical Summary Report</b> is checked, this option is not shown. The method for comparison intervals of mean is <b>Games-Howell</b>.
+</p>
+</td></tr>
+<tr>
+<th>Graph Diagnostic Report
+</th>
+<td>Specify whether to display diagnostic report.
+<p>If the Graphical Summary Report display, it will show at the at the graph node after summary report. If Graphical Summary Report does not display, it will show at the first graph node.
+</p><p>The sample size effects the plots type of <b>Distribution of Data</b> in the left panel.
+</p>
+<ul><li> If the sample of one factor &gt;= 30, it will show Histogram + Interval plots.</li>
+<li> If the sample of one factor &lt; 30, it will show Dots + Interval plots.</li>
+<li> If the number of factor &gt; 6, only Histogram or Dots plots will be shown, the Interval plots will be hided.</li></ul>
+</td></tr>
+<tr>
+<th>Graphical Power Analysis Report
+</th>
+<td>Specify whether to display the graphical Power Analysis report. The power curve shows how the statistical power of the test changes as the difference in proportions varies. Power is the probability of rejecting the null hypothesis when the true difference differs from 0.
+</td></tr>
 <tr>
 <th>Graph Arrangement
 </th>

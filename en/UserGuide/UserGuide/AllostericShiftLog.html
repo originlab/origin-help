@@ -1,0 +1,47 @@
+<h1 class="firstHeading">32.1.6 AllostericShiftLog</h1><p class='urlname' style='display: none'>AllostericShiftLog-FitFunc</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Brief_Description"><span class="tocnumber">2</span> <span class="toctext">Brief Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sample_Curve"><span class="tocnumber">3</span> <span class="toctext">Sample Curve</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Derived_Parameters"><span class="tocnumber">5</span> <span class="toctext">Derived Parameters</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Script_Access"><span class="tocnumber">6</span> <span class="toctext">Script Access</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Function_File"><span class="tocnumber">7</span> <span class="toctext">Function File</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Category"><span class="tocnumber">8</span> <span class="toctext">Category</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Function"></a><span class="mw-headline">Function</span></h2>
+<p><img src="../images/AllostericShiftLog/math-dc1a05c760d45eb5b8ae2c90ce99ac49.png?v=0" title="y =A_1+\frac{A_2 - A_1}{10^{p(\text{LogEC}-x)+1}} " alt="y =A_1+\frac{A_2 - A_1}{10^{p(\text{LogEC}-x)+1}} " class="tex"/>
+<br /><br /><img src="../images/AllostericShiftLog/math-9b8febb4b677b41705e621dd1607813e.png?v=0" title="\text{where LogEC = LogEC50} + \text{log}10 \left( \frac{B/K_b + 1}{alpha \cdot B/K_b + 1}\right)," alt="\text{where LogEC = LogEC50} + \text{log}10 \left( \frac{B/K_b + 1}{alpha \cdot B/K_b + 1}\right)," class="tex"/>
+<br /><br /><img src="../images/AllostericShiftLog/math-e134c8e9b5e9fbf7ed7ada48987e8dfd.png?v=0" title="K_b = 10^{\text{LogKb}}, \text{and } alpha = 10^{\text{Logalpha}} " alt="K_b = 10^{\text{LogKb}}, \text{and } alpha = 10^{\text{Logalpha}} " class="tex"/>
+</p>
+<h2><a name="Brief_Description"></a><span class="mw-headline">Brief Description</span></h2>
+<p>Allosteric EC50 shift function with log(X)
+</p>
+<h2><a name="Sample_Curve"></a><span class="mw-headline">Sample Curve</span></h2>
+<dl><dd><a  class="image"><img alt="AllostericShiftLog.png" src="../images/AllostericShiftLog/AllostericShiftLog.png?v=100811" width="696"  /></a></dd></dl>
+<h2><a name="Parameters"></a><span class="mw-headline">Parameters</span></h2>
+<p>Number:  7
+</p><p>Names:  LogEC50, LogKb, Logalpha, B, A1, A2, p
+</p><p>Meanings:  LogEC50= Logarithm of concentration of agonist at half max response without modulator., LogKb=Logarithm of equilibrium dissociation constant, Logalpha=Logarithm of ternary complex constant, B=Concentration of modulator, A1=Bottom asymptote, A2=Top asymptote, p=Hill slope
+</p><p>Lower Bounds:   none 
+</p><p>Upper Bounds:  none
+</p>
+<h2><a name="Derived_Parameters"></a><span class="mw-headline">Derived Parameters</span></h2>
+<p>Kb=10^LogKb
+</p>
+<h2><a name="Script_Access"></a><span class="mw-headline">Script Access</span></h2>
+<pre class="lt" style="font-family:monospace;">nlf_AllostericShiftLog<span style="color: #000000;">&#40;</span>x,LogEC50,LogKb,Logalpha,B,A1,A2,p<span style="color: #000000;">&#41;</span></pre>
+<h2><a name="Function_File"></a><span class="mw-headline">Function File</span></h2>
+<p>AllostericShiftLog.fdf
+</p>
+<h2><a name="Category"></a><span class="mw-headline">Category</span></h2>
+<p>Dose Response
+</p>
+
+
+
+
+

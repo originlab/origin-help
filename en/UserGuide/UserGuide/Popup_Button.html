@@ -97,12 +97,8 @@ To hide the Mini Toolbars, you can uncheck the <b>View：Mini Toolbars</b> menu.
 <li class="toclevel-1 tocsection-61"><a href="#Image_Page"><span class="tocnumber">10</span> <span class="toctext">Image Page</span></a></li>
 <li class="toclevel-1 tocsection-62"><a href="#Data_Highlighter"><span class="tocnumber">11</span> <span class="toctext">Data Highlighter</span></a></li>
 <li class="toclevel-1 tocsection-63"><a href="#Project_Explorer"><span class="tocnumber">12</span> <span class="toctext">Project Explorer</span></a></li>
-<li class="toclevel-1 tocsection-64"><a href="#Report_Sheet"><span class="tocnumber">13</span> <span class="toctext">Report Sheet</span></a>
-<ul>
-<li class="toclevel-2 tocsection-65"><a href="#Graph_in_the_Report_Sheet"><span class="tocnumber">13.1</span> <span class="toctext">Graph in the Report Sheet</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-66"><a href="#Buttons_that_Increment"><span class="tocnumber">14</span> <span class="toctext">Buttons that Increment</span></a></li>
+<li class="toclevel-1 tocsection-64"><a href="#Report_Sheet"><span class="tocnumber">13</span> <span class="toctext">Report Sheet</span></a></li>
+<li class="toclevel-1 tocsection-65"><a href="#Buttons_that_Increment"><span class="tocnumber">14</span> <span class="toctext">Buttons that Increment</span></a></li>
 </ul>
 </div>
 
@@ -3920,7 +3916,7 @@ Besides the basic buttons for <a href="#Text_Object">Text Object</a> or <a href=
 </td></tr></table>
 <h3><a name="Single_Row"></a><span class="mw-headline">Single Row</span></h3>
 <p>Click the row header to select the row. The mini toolbar below will appear:<br />
-<a  class="image"><img alt="Popup Single Row.png" src="../images/Popup_Button/Popup_Single_Row.png?v=92523" width="176"  /></a>
+<a  class="image"><img alt="Popup Single Row.png" src="../images/Popup_Button/Popup_Single_Row.png?v=100332" width="176"  /></a>
 </p>
 <table class="simple">
 
@@ -4132,11 +4128,15 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 <tr>
 <td> <a  class="image"><img alt="Popup Insert Latex.png" src="../images/Popup_Button/Popup_Insert_Latex.png?v=94309" width="20"  /></a>
 </td>
-<td> Insert Latex Equation.
+<td> Insert Latex Equation. Available when a label cell is selected.
 </td>
-<td> <a  class="image"><img alt="Popup copy as image.png" src="../images/Popup_Button/Popup_copy_as_image.png?v=87416" width="24"  /></a>
+<td> <a  class="image"><img alt="Popup Convert to LaTex.png" src="../images/Popup_Button/Popup_Convert_to_LaTex.png?v=100077" width="20"  /></a>
 </td>
-<td> Copy As Image
+<td> When a column label cell is selected, use this button to convert the syntax in the cell to LabTex, i.e., enclose the cell content with <code>\q()</code>.
+<p><b>Note</b>: 
+</p>
+<ul><li>Content enclosed by <code>$...$</code> is recognized and auto-replaced by <code>\q(...)</code>;</li>
+<li>Make sure Rech Text is enable to show the LabTex syntax.</li></ul>
 </td></tr>
 <tr>
 <td> <a  class="image"><img alt="Popup Freeze Panes.png" src="../images/Popup_Button/Popup_Freeze_Panes.png?v=92909" width="24"  /></a>
@@ -4163,17 +4163,41 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 </td>
 <td> Convert cell formula or cell link to plane value
 </td>
+<td> <a  class="image"><img alt="Popup copy as image.png" src="../images/Popup_Button/Popup_copy_as_image.png?v=87416" width="24"  /></a>
+</td>
+<td> Copy As Image
+</td></tr>
+<tr>
 <td> <a  class="image"><img alt="Popup Clear Worksheet.png" src="../images/Popup_Button/Popup_Clear_Worksheet.png?v=85102" width="24"  /></a>
 </td>
 <td> Select from sub-menu to clear formats (bold, fill color, etc.), contents, inserted notes, or all above in the worksheet.
 <dl><dd><a  class="image"><img alt="Popup Clear List.png" src="../images/Popup_Button/Popup_Clear_List.png?v=95084" width="148"  /></a></dd></dl>
+</td>
+<td>
+</td>
+<td>
 </td></tr></table>
 <h3><a name="Multiple_Cells_.2FRange"></a><span class="mw-headline">Multiple Cells /Range</span></h3>
-<p>Highlight multiple cells in a column: 
-</p><p><a  class="image"><img alt="Popup Multiple Cells in a Column.png" src="../images/Popup_Button/Popup_Multiple_Cells_in_a_Column.png?v=98837" width="200"  /></a>
-</p><p>Highlight multiple cells in mutiple columns: 
-</p><p><a  class="image"><img alt="Popup Multiple Cells.png" src="../images/Popup_Button/Popup_Multiple_Cells.png?v=98838" width="176"  /></a>
-</p>
+<table class="noborder" width="600">
+
+<tr>
+<td width="50%">Highlight multiple cells in a column:
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Popup Multiple Cells in a Column.png" src="../images/Popup_Button/Popup_Multiple_Cells_in_a_Column.png?v=98837" width="200"  /></a>
+</td></tr>
+<tr>
+<td>Highlight multiple cells in mutiple columns:
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Popup Multiple Cells.png" src="../images/Popup_Button/Popup_Multiple_Cells.png?v=98838" width="176"  /></a>
+</td></tr>
+<tr>
+<td>Highlight multiple cells in a column label row:
+</td></tr>
+<tr>
+<td><a  class="image"><img alt="Popup Multiple Cells in label row.png" src="../images/Popup_Button/Popup_Multiple_Cells_in_label_row.png?v=100080" width="152"  /></a>
+</td></tr></table>
 <table class="simple">
 
 <tr>
@@ -4195,15 +4219,6 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 <td> Clear rows before selected cell. Available when the selected cell is not in the first row.
 </td></tr>
 <tr>
-<td> <a  class="image"><img alt="Popup Dynamic Merge.png" src="../images/Popup_Button/Popup_Dynamic_Merge.png?v=98596" width="17"  /></a>
-</td>
-<td> Dynamically merge selected cells
-</td>
-<td>
-</td>
-<td>
-</td></tr>
-<tr>
 <td> <a  class="image"><img alt="Popup Freeze Panes.png" src="../images/Popup_Button/Popup_Freeze_Panes.png?v=92909" width="24"  /></a>
 </td>
 <td> Freeze Panes
@@ -4213,19 +4228,53 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 <td> Unfreeze panes
 </td></tr>
 <tr>
+<td> <a  class="image"><img alt="Popup Dynamic Merge.png" src="../images/Popup_Button/Popup_Dynamic_Merge.png?v=98596" width="17"  /></a>
+</td>
+<td> Dynamically merge selected cells
+</td>
 <td> <a  class="image"><img alt="Popup Convert Cell Formula to Value.png" src="../images/Popup_Button/Popup_Convert_Cell_Formula_to_Value.png?v=98303" width="24"  /></a>
 </td>
 <td> Convert cell formula or cell link to plane value
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Popup Define Name.png" src="../images/Popup_Button/Popup_Define_Name.png?v=89589" width="24"  /></a>
 </td>
+<td> Define named range
+</td>
+<td> <a  class="image"><img alt="Popup Insert Note.png" src="../images/Popup_Button/Popup_Insert_Note.png?v=90463" width="24"  /></a>
+</td>
+<td> Insert Note
+<p><b>Note</b>: 
+Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Origin_Rich_Text.html" title="UserGuide:Origin Rich Text">Origin Rich Text</a> syntax, and shows as Render Mode.
+</p>
+</td></tr>
+<tr>
+<td> <a  class="image"><img alt="Popup Insert Latex.png" src="../images/Popup_Button/Popup_Insert_Latex.png?v=94309" width="20"  /></a>
+</td>
+<td> Insert Latex Equation. available when multiple column label cells are selected.
+</td>
+<td> <a  class="image"><img alt="Popup Convert to LaTex.png" src="../images/Popup_Button/Popup_Convert_to_LaTex.png?v=100077" width="20"  /></a>
+</td>
+<td> When column label cells are selected, use this button to convert the syntax in the cell to LabTex, i.e., enclose the cell content with <code>\q()</code>.
+<p><b>Note</b>: 
+</p>
+<ul><li>Content enclosed by <code>$...$</code> is recognized and auto-replaced by <code>\q(...)</code>;</li>
+<li>Make sure Rech Text is enable to show the LabTex syntax.</li></ul>
+</td></tr>
+<tr>
 <td> <a  class="image"><img alt="Popup Clear Worksheet.png" src="../images/Popup_Button/Popup_Clear_Worksheet.png?v=85102" width="24"  /></a>
 </td>
 <td> Select from sub-menu to clear formats (bold, fill color, etc.), contents, inserted notes, or all above in the worksheet.
 <dl><dd><a  class="image"><img alt="Popup Clear List.png" src="../images/Popup_Button/Popup_Clear_List.png?v=95084" width="148"  /></a></dd></dl>
+</td>
+<td>
+</td>
+<td>
 </td></tr></table>
 <h3><a name="Label_Row"></a><span class="mw-headline">Label Row</span></h3>
 <p>When a column label row is selected:<br />
 </p>
-<dl><dd><a  class="image"><img alt="Popup Label Row.png" src="../images/Popup_Button/Popup_Label_Row.png?v=98843" width="152"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Popup Label Row.png" src="../images/Popup_Button/Popup_Label_Row.png?v=100681" width="176"  /></a></dd></dl>
 <p>When label row = Long Name is selected:
 </p>
 <dl><dd><a  class="image"><img alt="Popup Label Row LN.png" src="../images/Popup_Button/Popup_Label_Row_LN.png?v=98841" width="176"  /></a></dd></dl>
@@ -4261,7 +4310,7 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 </td>
 <td> <a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Popup_Button/Popup_Apply_User_Parameters_to.png?v=94915" width="21"  /></a>
 </td>
-<td> Apply selected User Parameters row (including formual if any) to other sheets.
+<td> Apply selected column label rows (including User Parameters row and formual if any) to other sheets.
 <p><a  class="image"><img alt="Apply User Parameters to Sheets.png" src="../images/Popup_Button/Apply_User_Parameters_to_Sheets.png?v=94916" width="271"  /></a>
 </p>
 </td></tr>
@@ -4616,22 +4665,28 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 <p><br />
 </p>
 <h2><a name="Report_Sheet"></a><span class="mw-headline">Report Sheet</span></h2>
-<ul><li> Move the cursor to the edge or the title of the report sheet, click the edge or blank area outside the report sheet when the cursor turns to <a  class="image"><img alt="Page cursor.png" src="../images/Popup_Button/Page_cursor.png?v=87020" width="33"  /></a>. The mini toolbar below will appear:</li></ul>
-<p><br /><a  class="image"><img alt="Popup Report Sheet.png" src="../images/Popup_Button/Popup_Report_Sheet.png?v=99789" width="104"  /></a>
-</p>
-<ul><li> Click on the cell of report table with numeric data. The mini toolbar below will appear:</li></ul>
-<p><br /><a  class="image"><img alt="Popup Report Sheet For Cell.png" src="../images/Popup_Button/Popup_Report_Sheet_For_Cell.png?v=99791" width="200"  /></a>
-</p>
+<ul><li> Click the edge of the report sheet, or the report sheet title (the root branch), or any blank area in the report when the cursor turns to <a  class="image"><img alt="Page cursor.png" src="../images/Popup_Button/Page_cursor.png?v=87020" width="33"  /></a>, the following mini toolbar appears:</li></ul>
+<dl><dd><a  class="image"><img alt="Popup Report Sheet.png" src="../images/Popup_Button/Popup_Report_Sheet.png?v=100614" width="152"  /></a></dd></dl>
+<ul><li> Click any cell in the numeric data, the following mini toolbar appears:</li></ul>
+<dl><dd><a  class="image"><img alt="Popup Report Sheet For Cell.png" src="../images/Popup_Button/Popup_Report_Sheet_For_Cell.png?v=100619" width="224"  /></a></dd></dl>
+<ul><li> Click the embedded graph in the report sheet, the following mini toolbar appears:</li></ul>
+<dl><dd><a  class="image"><img alt="Popup Report Sheet For Embedded Graph.png" src="../images/Popup_Button/Popup_Report_Sheet_For_Embedded_Graph.png?v=100620" width="128"  /></a></dd></dl>
 <table class="simple">
 
 <tr>
 <td style="width: 10%"> <a  class="image"><img alt="Popup Send to Word.png" src="../images/Popup_Button/Popup_Send_to_Word.png?v=97920" width="24"  /></a>
 </td>
-<td style="width: 40%">  Send All Open Branches to Word
+<td style="width: 40%"> Send to Word
+<ul><li> When you click this button from the sheet-level toolbar, it send all open branches in the current report to Word;</li>
+<li> When you click this button from the cell-level toolbar, it sends the current table to Word;</li>
+<li> When you click this button from the graph branch-level toolbar, it sends the selected graph to Word.</li></ul>
 </td>
 <td style="width: 10%"> <a  class="image"><img alt="Popup Send to PowerPoint.png" src="../images/Popup_Button/Popup_Send_to_PowerPoint.png?v=97919" width="24"  /></a>
 </td>
-<td style="width: 40%"> Send All Graphs to PowerPoint
+<td style="width: 40%"> Send to PowerPoint
+<ul><li> When you click this button from the sheet-level toolbar, it send all open embedded graphs in the current report to PPT;</li>
+<li> When you click this button from the cell-level toolbar, it sends the current table to PPT;</li>
+<li> When you click this button from the graph branch-level toolbar, it sends the selected graph to PPT.</li></ul>
 </td></tr>
 <tr>
 <td> <a  class="image"><img alt="Popup Duplicate Operation for Special Sheets.png" src="../images/Popup_Button/Popup_Duplicate_Operation_for_Special_Sheets.png?v=99031" width="24"  /></a>
@@ -4649,69 +4704,71 @@ Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Or
 </p>
 </td></tr>
 <tr>
+<td> <a  class="image"><img alt="Popup Copy All Open Tables HTML.png" src="../images/Popup_Button/Popup_Copy_All_Open_Tables_HTML.png?v=100616" width="24"  /></a>
+</td>
+<td> Copy All Open Tables (HTML)
+<p>Copy all open tables excluding graphs, and paste them as HTML table(s) into an Excel/Word page. To prevent a table from being included by the copy operation, collapse the table.
+</p>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
 <td> <a  class="image"><img alt="Popup Create Copy as New Sheet.png" src="../images/Popup_Button/Popup_Create_Copy_as_New_Sheet.png?v=99796" width="24"  /></a>
 </td>
 <td>Create Copy as New Sheet
 <ul><li> If the table only with a column result value, it will copy the table to a new sheet directly. </li>
 <li> If there are two or more columns result value, it will open the <b>Copy Table to New Sheet</b> dialog that will list all columns label of this table. You can select which columns will be copied.</li></ul>
 </td>
+<td><a  class="image"><img alt="Popup Send to Layout.png" src="../images/Popup_Button/Popup_Send_to_Layout.png?v=99795" width="24"  /></a>
+</td>
+<td>Send the current table to a Layout window.
+</td></tr>
+<tr>
 <td> <a  class="image"><img alt="Popup table digits.png" src="../images/Popup_Button/Popup_table_digits.png?v=91670" width="24"  /></a>
 </td>
 <td> Open Digits Dialog
 <p><a  class="image"><img alt="Popup Digits in Report dialog.png" src="../images/Popup_Button/Popup_Digits_in_Report_dialog.png?v=99798" width="285"  /></a>
 </p>
+</td>
+<td><a  class="image"><img alt="Popup Open Column Digits Dialog.png" src="../images/Popup_Button/Popup_Open_Column_Digits_Dialog.png?v=100621" width="18"  /></a>
+</td>
+<td>Change the digits of the current column in the table.
+<p><a  class="image"><img alt="Digits in Column Dialog.png" src="../images/Popup_Button/Digits_in_Column_Dialog.png?v=100622" width="228"  /></a>
+</p>
 </td></tr>
 <tr>
-<td><a  class="image"><img alt="Popup Send to Layout.png" src="../images/Popup_Button/Popup_Send_to_Layout.png?v=99795" width="24"  /></a>
-</td>
-<td>Send to Layout
-</td>
 <td><a  class="image"><img alt="Popup Define Name.png" src="../images/Popup_Button/Popup_Define_Name.png?v=89589" width="24"  /></a>
 </td>
 <td>Define Name
-</td></tr>
-<tr>
+</td>
 <td> <a  class="image"><img alt="Popup Insert Note.png" src="../images/Popup_Button/Popup_Insert_Note.png?v=90463" width="24"  /></a>
 </td>
 <td> Insert Note
 <p><b>Note</b>: 
 Note inserted into worksheet cell supports <a href="../../UserGuide/UserGuide/Origin_Rich_Text.html" title="UserGuide:Origin Rich Text">Origin Rich Text</a> syntax, and shows as Render Mode.
 </p>
-</td>
-<td>
-</td>
-<td>
-</td></tr></table>
-<h3><a name="Graph_in_the_Report_Sheet"></a><span class="mw-headline">Graph in the Report Sheet</span></h3>
-<p>Click the graph in the report sheet to pop up this mini toolbar:
-<br /><a  class="image"><img alt="Popup Report Sheet Graph.png" src="../images/Popup_Button/Popup_Report_Sheet_Graph.png?v=97914" width="152"  /></a>
-</p>
-<table class="simple">
-
+</td></tr>
 <tr>
-<td style="width: 10%"> <a  class="image"><img alt="Popup Open Graph for Editing.png" src="../images/Popup_Button/Popup_Open_Graph_for_Editing.png?v=97915" width="24"  /></a>
+<td><a  class="image"><img alt="Popup Open Graph for Editing.png" src="../images/Popup_Button/Popup_Open_Graph_for_Editing.png?v=97915" width="24"  /></a>
 </td>
-<td style="width: 40%"> Open Graph for Editing
+<td>Open current embedded graph in a separate window for editing.
 </td>
-<td style="width: 10%"> <a  class="image"><img alt="Popup Change Graph Size.png" src="../images/Popup_Button/Popup_Change_Graph_Size.png?v=97916" width="24"  /></a>
+<td><a  class="image"><img alt="Popup Change Graph Size.png" src="../images/Popup_Button/Popup_Change_Graph_Size.png?v=97916" width="24"  /></a>
 </td>
-<td style="width: 40%"> Change Graph Size and Arrangement
-<p>Click this button you can change graph size and arrangement in this report sheet.
-<br /><a  class="image"><img alt="Graph Size and Arrangement dialog.png" src="../images/Popup_Button/330px-Graph_Size_and_Arrangement_dialog.png?v=98289" width="330"   /></a>
+<td>Change graph size and arrangement in this report sheet.
+<p><br /><a  class="image"><img alt="Graph Size and Arrangement dialog.png" src="../images/Popup_Button/330px-Graph_Size_and_Arrangement_dialog.png?v=98289" width="330"   /></a>
 </p>
 </td></tr>
 <tr>
-<td> <a  class="image"><img alt="Popup Send to PowerPoint.png" src="../images/Popup_Button/Popup_Send_to_PowerPoint.png?v=97919" width="24"  /></a>
+<td> <a  class="image"><img alt="Popup Show Graphs of This Report in Browser Graph.png" src="../images/Popup_Button/Popup_Show_Graphs_of_This_Report_in_Browser_Graph.png?v=100625" width="20"  /></a>
 </td>
-<td> Send to PowerPoint
-<p>Send the selected graph to PowerPoint
-</p>
+<td> Show graphs of the current report sheet in the <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html#Navigating_Graphs_in_a_Report_Sheet" title="UserGuide:Analysis Report Sheets and Columns">Report Graph Browser</a>.
 </td>
-<td> <a  class="image"><img alt="Popup Send to Word.png" src="../images/Popup_Button/Popup_Send_to_Word.png?v=97920" width="24"  /></a>
+<td> <a  class="image"><img alt="Popup Show Graphs of This Branch in Browser Graph.png" src="../images/Popup_Button/Popup_Show_Graphs_of_This_Branch_in_Browser_Graph.png?v=100624" width="20"  /></a>
 </td>
-<td> Send to Word
-<p>Send the selected graph to Word
-</p>
+<td> Show graphs of the current branch in the <a href="../../UserGuide/UserGuide/Analysis_Report_Sheets_and_Columns.html#Navigating_Graphs_in_a_Report_Sheet" title="UserGuide:Analysis Report Sheets and Columns">Report Graph Browser</a>.
 </td></tr>
 <tr>
 <td> <a  class="image"><img alt="Popup Print.png" src="../images/Popup_Button/Popup_Print.png?v=97917" width="24"  /></a>

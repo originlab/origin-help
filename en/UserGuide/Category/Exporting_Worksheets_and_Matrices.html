@@ -120,18 +120,29 @@ Origin worksheet data can be exported as the following five formats: <b>ASCII</b
 </p></td></tr></table>
 <h2><a name="Exporting_worksheet.2Fworkbook_as_Excel_file"></a><span class="mw-headline">Exporting worksheet/workbook as Excel file</span></h2>
 <p>To export current workbook or specified worksheet(s) as an Excel file:
-Y* selecting <b>File: Export: Excel...</b> menu from the activated workbook and then checking <b>Show Options Dialog</b> box
-</p><p>Or
 </p>
-<ul><li> running <code>expXLS -d;</code></li></ul>
-<p>The <a class="external text" href="../../XFunction/X-Function/ExpXLS.html"><b>expXLS</b> dialog</a> as below will be opened:
+<ul><li> select <b>File: Export: Excel...</b> menu from the activated workbook</li></ul>
+<p>Or
+</p>
+<ul><li> running <pre class="lt" style="font-family:monospace;">expXLS <span style="color: #000080;">-</span>d;</pre></li></ul>
+<p>The <a class="external text" href="../../XFunction/X-Function/ExpXLS.html"><b>expXLS</b> dialog</a> will be opened:
 </p>
 <dl><dd><a  class="image"><img alt="ExportExcelfromWKS.png" src="../images/Exporting_Worksheets_and_Matrices/ExportExcelfromWKS.png?v=94413" width="531"  /></a></dd></dl>
 <ul><li> Exported file name and path support substitution notation. Select from <b>File Name</b> and <b>File Path</b> drop-down list for frequently-used file name like <code>&lt;long name&gt;</code> and path like <code>&lt;Project Folder&gt;&lt;PE Path&gt;</code>. It is useful for batch exporting.</li>
 <li> Use <b>Export Sheets</b> to specify <b>Whole Book</b> or <b>Active Sheet Only</b>.</li>
 <li> When exporting the whole book, exclude selected sheets by right-clicking on the sheet tab and choosing <b>Exclude from Excel Export</b>. Analysis report sheets are automatically skipped.</li>
-<li> To export worksheet formatting, check the <b>Export Cell Formats</b> box. Note that not all of Origin's format settings can be interpreted by Excel (e.g. significant digits, column designations) but such things as font/font size, cell fill color and decimal digits, should be kept. </li></ul>
+<li> To export worksheet formatting, check the <b>Export Cell Formats</b> box. Note that not all of Origin's format settings can be interpreted by Excel (e.g. significant digits, column designations) but such things as font/font size, cell fill color and decimal digits, can be preserved. </li></ul>
 <dl><dd><a  class="image"><img alt="OH export excel keep format color fill.png" src="../images/Exporting_Worksheets_and_Matrices/OH_export_excel_keep_format_color_fill.png?v=93022" width="666"  /></a></dd></dl>
+<p><br /><br />
+<span class='headerInParagraph'>Especially, if you want to export ALL workbooks in a folder with a single click,</span>
+</p>
+<ul><li> Right-click the target folder (not root folder) and select <b>Export to Excel Files</b> from the context menu.</li></ul>
+<dl><dd><a  class="image"><img alt="Export to Excel Files.png" src="../images/Exporting_Worksheets_and_Matrices/Export_to_Excel_Files.png?v=100087" width="566"  /></a></dd></dl>
+<ul><li> The export <b>Path</b> supports substitution notation. The default path <code>&lt;Project Folder&gt;&lt;PE Path&gt;</code> uses the folder structure shown in Project Explorer. Select from the drop-down list for a frequently-used path.</li>
+<li> Workbook Long Names will be used as Excel file names. Note that if duplicate names exist, the later exported file will overwrite the previous one.</li>
+<li> Workbooks located in sub-folders will not be exported.</li>
+<li> To exclude worksheet(s) from exporting, right-click on the target sheet tab and choose <b>Exclude from Excel Export</b>. Analysis report sheets are skipped automatically.</li>
+<li> To export worksheet formatting, check <b>Export Cell Formats</b>. Note that not all Origin format settings can be interpreted by Excel (e.g. significant digits and column designations). However, formatting such as fonts, font sizes, cell fill colors and decimal digits, can be preserved.</li></ul>
 <h2><a name="Exporting_worksheet.2Fworkbook_as_an_SQLite_file"></a><span class="mw-headline">Exporting worksheet/workbook as an SQLite file</span></h2>
 <p>To export one sheet or all sheets in the workbook, as an SQLite file:
 </p>

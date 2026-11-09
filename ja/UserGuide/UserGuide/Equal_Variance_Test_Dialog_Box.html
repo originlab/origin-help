@@ -1,0 +1,132 @@
+﻿<h1 class="firstHeading">等分散検定ダイアログ</h1><p class='urlname' style='display: none'>Equal-Var-Test-Dialog</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">入力</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Significance_Level"><span class="tocnumber">3.1</span> <span class="toctext">有意水準</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Assume_Normal_Distribution"><span class="tocnumber">3.2</span> <span class="toctext">正規分布を仮定</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">4</span> <span class="toctext">プロット</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">5</span> <span class="toctext">出力</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p>等分散検定ダイアログボックスを開くには、
+</p>
+<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：等分散検定</b>を選択します。</li></ol>
+<p><br />
+<i><b>関連情報：</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Equal_Variance_Test_(OriginPro_Only).html" title="カテゴリ:等分散検定 (Proのみ)">等分散検定 (Proのみ)</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>再計算
+</th>
+<td>
+<p>分析結果の再計算の設定を変更します。
+</p>
+<ul><li><b>なし</b> </li>
+<li><b>自動</b> </li>
+<li><b>手動</b>  </li></ul>
+<p>詳細情報は、 <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">分析結果の再計算</a>をご覧下さい。
+</p>
+</td></tr></table>
+<h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
+<p><b>等分散検定</b>はインデックスデータと素データの2つの入力データ形式をサポートしています。
+</p><p>範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>インデックスデータ
+</th>
+<td>入力データは、1つの標本データ列と1つ以上のグループ化列で構成されます。  因子変数と応答データは別々の列に格納されます。
+<ul><li><b>データ</b></li></ul>
+<dl><dd>標本データ列。</dd></dl>
+<ul><li><b>グループ</b></li></ul>
+<dl><dd>グループ列を選択します。</dd></dl>
+</td></tr>
+<tr>
+<th>素データ
+</th>
+<td> 入力データは、2つ以上の標本データ列で構成されます。各列には、因子変数の各水準に対応する応答データが含まれます。
+<ul><li> <b>サンプル</b></li></ul>
+<dl><dd> サンプルデータセットとして列を指定します。（少なくとも2列）。</dd></dl>
+</td></tr></table>
+<h3><a name="Significance_Level"></a><span class="mw-headline">有意水準</span></h3>
+<p>等分散検定の有意水準を設定します。
+</p>
+<h3><a name="Assume_Normal_Distribution"></a><span class="mw-headline">正規分布を仮定</span></h3>
+<ul><li> このオプションを選択しない場合、検定には<b>Bonett多重比較</b>、<b>Brown-Forsythe</b>、<b>Levene（偏差平方）、Levene（絶対偏差）</b>の各手法が使用され、それぞれのP値が出力されます。グラフィカル概要レポートには、<i><b>SDの比較区間</b></i>グラフが出力されます。</li></ul>
+<ul><li> このオプションを選択した場合、2グループのデータには<b>F検定</b>、3グループ以上のデータには<b>Bartlett</b>法が使用され、P値が出力されます。グラフィカルサマリレポートには、<i><b>SDの95% Bonferroni信頼区間</b></i>グラフが出力され、<b>診断</b>ブランチには<b>正規確率プロット</b>が表示されます。</li></ul>
+<h2><a name="Plots"></a><span class="mw-headline">プロット</span></h2>
+<p><b>出力</b>タブで<b>グラフィカル診断レポート</b>を選択した場合、選択したグラフが<b>診断</b>ブランチに表示されます。
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>標準偏差のBonettの多重比較区間
+</th>
+<td><b>入力</b>タブの<b>正規分布を仮定</b>が選択されていない場合、このオプションを使用できます。
+<p>標準偏差のBonettの多重比較区間を作成します。 
+</p>
+</td></tr>
+<tr>
+<th>ボックスチャート
+</th>
+<td>ボックスチャートを作成します。
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
+<p>範囲制御についてはこちらを参照してください：<a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">出力結果</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>グラフィカル要約レポート
+</th>
+<td>サマリーグラフを作成します。内容には P値バー、効果量バー、データの分布グラフが含まれます。また、統計値を示す結果表がグラフに添付されます。
+<p>サマリーグラフの脚注として、これらの統計結果の診断が表示されます。
+</p>
+</td></tr>
+<tr>
+<th>グラフィカル診断レポート
+</th>
+<td>グラフィカル診断レポートを表示するかどうかを指定します。
+<p>このレポートには、外れ値検出用の<b>ランチャート</b>と、分布を確認するための<b>個別値プロット</b>が表示されます。
+</p><p><b>入力</b>タブの<b>正規分布を仮定</b>を選択した場合、診断ブランチに<b>正規確率プロット</b>が表示されます。
+</p>
+</td></tr>
+<tr>
+<th>プロットデータ
+</th>
+<td>プロットデータセットを出力するワークシートを指定します。
+</td></tr>
+<tr>
+<th>結果
+</th>
+<td>結果を出力するワークシートを指定します。
+</td></tr></table>
+<p><br />
+</p>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> <b>マスクされたデータ</b>と<b>不正データ（欠損値）</b>表がレポートシートに表示されます。</li></ul>
+</td></tr></table>
+
+
+
+
+
+
+
+    

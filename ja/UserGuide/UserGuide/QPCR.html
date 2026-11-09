@@ -1,0 +1,140 @@
+﻿<h1 class="firstHeading">QPCR</h1><p class='urlname' style='display: none'>QPCR</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Support_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#qPCR_Data_Structure"><span class="tocnumber">2</span> <span class="toctext">qPCRデータ構造</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#qPCR_with_.CE.94Ct_value"><span class="tocnumber">2.1</span> <span class="toctext">ΔCt値のqPCR</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#qPCR_with_Reference_Gene"><span class="tocnumber">2.2</span> <span class="toctext">参照遺伝子のqPCR</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#qPCR_with_Reference_Gene_and_Technical_Replicates"><span class="tocnumber">2.3</span> <span class="toctext">参照遺伝子およびテクニカルレプリケートのqPCR</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#The_qPCR_Dialog_Box"><span class="tocnumber">3</span> <span class="toctext">qPCRダイアログボックス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Input"><span class="tocnumber">3.1</span> <span class="toctext">入力</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Tests"><span class="tocnumber">3.2</span> <span class="toctext">検定</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Plots"><span class="tocnumber">3.3</span> <span class="toctext">プロット</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><a name="Support_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p><b>qPCRアッセイを分析する</b>
+</p>
+<ul><li> <b>テンプレートを使用</b> </li></ul>
+<dl><dd><ul><li> メニューの<b>ヘルプ: スタートアップダイアログ</b>を選択し、<b>スタートアップ</b>ダイアログを開きます。</li>
+<li> <b>ラボアッセイ</b>タブに行き、<b>qPCR</b>ブランチを広げ、希望するデータ構造を選択します。テンプレートが案内とともに開きます。</li></ul></dd></dl>
+<ul><li> <b>自身のワークシートを使用</b></li></ul>
+<dl><dd><ul><li> ワークシートにデータを入力します。</li>
+<li> メニューから<b>統計：ラボアッセイ：qPCR</b>を選択し、分析ダイアログを開きます。</li></ul></dd></dl>
+<h2><a name="qPCR_Data_Structure"></a><span class="mw-headline">qPCRデータ構造</span></h2>
+<h3><a name="qPCR_with_.CE.94Ct_value"></a><span class="mw-headline">ΔCt値のqPCR</span></h3>
+<p>ΔCt値を使用して、qPCRデータを解析し、相対遺伝子発現量（fold change）を計算します。
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Ct value.png" src="../images/QPCR/450px-QPCR_with_Ct_value.png" width="450"   /></a></dd></dl>
+<h3><a name="qPCR_with_Reference_Gene"></a><span class="mw-headline">参照遺伝子のqPCR</span></h3>
+<p>ターゲット遺伝子と参照遺伝子のCt値を使用して、qPCRデータを解析し、相対遺伝子発現量（fold change）を計算します。
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Reference Gene.png" src="../images/QPCR/550px-QPCR_with_Reference_Gene.png" width="550"   /></a></dd></dl>
+<h3><a name="qPCR_with_Reference_Gene_and_Technical_Replicates"></a><span class="mw-headline">参照遺伝子およびテクニカルレプリケートのqPCR</span></h3>
+<p>テクニカルレプリケートを含むターゲット遺伝子と参照遺伝子のCt値を使用して、qPCRデータを解析し、相対遺伝子発現量（fold change）を計算します。
+</p>
+<dl><dd><a  class="image"><img alt="QPCR with Reference Genes Technical Replicates.png" src="../images/QPCR/800px-QPCR_with_Reference_Genes_Technical_Replicates.png" width="800"   /></a></dd></dl>
+<h2><a name="The_qPCR_Dialog_Box"></a><span class="mw-headline">qPCRダイアログボックス</span></h2>
+<h3><a name="Input"></a><span class="mw-headline">入力</span></h3>
+<p><a  class="image"><img alt="QPCR Input.png" src="../images/QPCR/600px-QPCR_Input.png" width="600"   /></a>
+</p>
+<table class="simple">
+
+<tr>
+<th>データ
+</th>
+<td>分析対象となるΔCt値
+</td></tr>
+<tr>
+<th>識別子
+</th>
+<td>「<a href="#qPCR_with_Reference_Gene">参照遺伝子</a>」および「<a href="#qPCR_with_Reference_Gene_and_Technical_Replicates">参照遺伝子およびテクニカルレプリケート</a>」のワークフローで使用できます。
+<p>参照遺伝子として1つの遺伝子を選択します。
+</p>
+</td></tr>
+<tr>
+<th>参照で正規化
+</th>
+<td>「<a href="#qPCR_with_Reference_Gene">参照遺伝子</a>」および「<a href="#qPCR_with_Reference_Gene_and_Technical_Replicates">参照遺伝子およびテクニカルレプリケート</a>」のワークフローで使用できます。
+<p>ハウスキーピング遺伝子は、サンプル量やRNA品質の違いを補正するために使用されます。各サンプルのΔCtは、選択した参照遺伝子の幾何平均を基準に計算されます。
+</p>
+</td></tr>
+<tr>
+<th>対照グループに対する相対発現量
+</th>
+<td>基準となる対照／参照グループ（fold change = 1）を選択します。その他のすべてのグループは、このグループに対する相対値として表されます。
+</td></tr>
+<tr>
+<th>Fold Change法
+</th>
+<td>
+<ul><li> <b>従来の Livak 2^-ΔCt法</b>
+<dl><dd> Fold Change = 2<sup>−ΔΔCt</sup></dd></dl></li>
+<li> <b>2^-ΔCt 法 (生物学的反復)</b>
+<dl><dd> Fold Change = 2<sup>−ΔCt </sup>(Treatment) / Mean(2<sup>−ΔCt </sup>(Control))</dd></dl></li></ul>
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td>統計的有意性を判定するためのしきい値（例：0.05）を設定します。p値がしきい値未満（p &lt; しきい値）の結果は、統計的に有意とみなされます。
+</td></tr>
+<tr>
+<th>多重比較
+</th>
+<td>比較対象のセットを選択します。
+<ul><li> <b>すべてのペア比較</b>
+<dl><dd> すべてのグループが、他のすべてのグループと比較されます。</dd></dl></li>
+<li> <b>対照と比較</b>
+<dl><dd> 各<b>処理</b>グループは、<b>対照</b>グループとのみ比較します。</dd></dl></li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<h3><a name="Tests"></a><span class="mw-headline">検定</span></h3>
+<p><a  class="image"><img alt="QPCR Test.png" src="../images/QPCR/800px-QPCR_Test.png" width="800"   /></a>
+</p><p>このタブでは、fold-changeデータに対してどのような統計学的検定を適用するかを制御します。
+単一のドロップダウンメニューではなく、決定木形式のフローチャートが表示されます。ソフトウェアがデータに対して一連の前提条件チェックを行い、適切な検定を自動的に選択する仕組みになっています。
+</p><p><b>Step 1: 正規性の検定</b>
+</p><p>各グループ内の発現値が正規分布に従っているかどうかを確認します。以下の選択肢から選びます。
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Shapiro-Wilk_normality_test" title="ユーザガイド:アルゴリズム(正規性)">Shapiro-Wilk</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Anderson-Darling_Test" title="ユーザガイド:アルゴリズム(正規性)">Anderson-Darling</a> </li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#D.27Agostino-K_Squared" title="ユーザガイド:アルゴリズム(正規性)">D&apos;Agostino-Pearson K2</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Kolmogorov-Smirnov_normality_test" title="ユーザガイド:アルゴリズム(正規性)">Kolmogorov-Smirnov</a></li></ul></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/QPCR/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> <b>すべてのデータが正規分布に従う場合</b> -&gt; 等分散性検定に進みます（パラメトリックブランチ）。</li>
+<li> <b>すべてのデータが正規分布に従うわけではない場合</b> -&gt; ノンパラメトリックのブランチに直接進みます。</li></ul>
+</td></tr></table>
+<p><br />
+<b>Step 2: 等分散検定 (パラメトリックブランチのみ)</b>
+</p><p>各グループの分散が等しいかどうか（等分散性）を検定します。
+以下の選択肢から選びます。
+</p>
+<dl><dd><ul><li> Bonnet多重比較</li>
+<li> Brown-Forsythe</li>
+<li> Levene | |</li>
+<li> Levene ()<sup>2</sup></li>
+<li> バートレット</li></ul></dd></dl>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/QPCR/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> <b>等分散の場合</b> -&gt; 通常の<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Theory_of_One-Way_ANOVA" title="ユーザガイド:一元配置分散分析アルゴリズム"><b>一元配置ANOVA</b></a>を実行し、その後、ドロップダウンリストから選択した<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Multiple_Means_Comparisons" title="ユーザガイド:一元配置分散分析アルゴリズム"><b>平均値比較法</b></a>（<b>Tukey</b>、<b>Bonferroni</b>、<b>Dunn-Sidak</b>、<b>Fisher LSD</b>、<b>Scheffe</b>、<b>Holm-Bonferroni</b>、<b>Holm-Sidak</b>）を適用します。</li>
+<li> <b>等分散でない場合</b> -&gt; 等分散性を仮定しない<b>WelchのANOVA</b>を実行し、グループ間のペアワイズ比較には<b>Games-Howell</b>法が自動的に適用されます。</li></ul>
+</td></tr></table>
+<p><br />
+<b>Step 3: ノンパラメトリック ブランチ</b>
+</p><p>順位を用いてグループ間の中央値を比較する方法を以下から選択してください。その後、多重比較として<b>Dunn検定</b>を行います。
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(kwanova).html" title="ユーザガイド:アルゴリズム(kwanova)">Kruskal-Wallis</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(median).html" title="ユーザガイド:アルゴリズム(median)">Moodのメディアン</a></li></ul></dd></dl>
+<h3><a name="Plots"></a><span class="mw-headline">プロット</span></h3>
+<dl><dd><a  class="image"><img alt="QPCR Plot.png" src="../images/QPCR/800px-QPCR_Plot.png" width="800"   /></a></dd></dl>
+<p>多重比較プロットの見た目を設定します。変更内容はすべて、右側のライブプレビューパネルに即座に反映されます。
+</p>
+
+
+    

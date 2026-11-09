@@ -3,7 +3,7 @@
 Originのワークシートは、データ行の上にあるヘッダ行でメタデータを表示できます。これらのヘッダ行に含まれるメタデータは、グラフ作成やデータ分析操作で利用できます。 
 デフォルトでOriginの起動時に表示されるワークブックテンプレートは、行ヘッダに<b><a href="../../UserGuide/UserGuide/Worksheet_Column_and_Cell_Range_Naming_Conventions.html#Origin_worksheet_column_naming_conventions" title="ユーザーガイド:ワークシート列とセル範囲の命名規則">ロングネーム</a></b>、<b>単位</b>、<b>コメント</b>、<b>F(x)</b> のみを表示しています。インポート時に、サンプリング間隔、スパークラインなどの追加のヘッダ行を表示させることができます。 
 </p>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows.png" width="524"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows.png" width="496"  /></a></dd></dl>
 <p>またユーザは、<b>手動</b>でユーザ定義もしく組み込みのパラメータの行を追加することができます。これは情報のみとなることに留意してください。ユーザ定義または組み込みのパラメータでは、行をフォーマットできます。例えば、指定した小数点以下の桁を表示した数値として設定したり、日付や時刻として設定したりできます。 
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
@@ -52,12 +52,10 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 </li>
 </ul>
 </div>
-
 <p><br />
 また、<a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html#Simple_Utilities_for_Filling_Columns_with_Data">列にデータを埋める簡単な方法</a>を確認してください。
 </p>
 <table class="note">
-
 <tr>
 <td><b>Note:</b> このページで紹介している機能は、ユーザが作成するLabTalkスクリプトで利用可能です。  詳細は、<a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">列ラベル行に表示される情報</a>を参照してください。
 </td></tr></table>
@@ -67,18 +65,13 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 </p>
 <ol>
 <li>ミニツールバーの使用列ラベル行のミニツールバーは、最近のバージョンで導入されました。行ラベルの1つまたは複数の行ヘッダをシングルクリックすると、ミニツールバーが表示されます。選択した行を、非表示、上に移動、下に移動、<b>P</b>ボタンをクリックしてユーザ定義のパラメータ行を追加、といったことができます。
-
 <li>コンテキストメニューを使用します。列ラベルの1つまたは複数の行ヘッダを右クリックして、表示/非表示にしたり、ロングネームや単位として設定したり、ユーザ定義パラメータなどを追加したりできます。 
-<dl><dd> <a  class="image"><img alt="Column label row minitoolbar.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_minitoolbar.png" width="265"  /></a></dd></dl>
-
+<dl><dd> <a  class="image"><img alt="Column label row minitoolbar.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_minitoolbar.png" width="220"  /></a></dd></dl>
 <li><b>列ラベル行</b>ダイアログの使用任意の列ラベルの行ヘッダを右クリックし、コンテキストメニューから<b>列ラベル行を編集...</b>を選択します。ヘッダ行の表示/非表示、、削除、ドラッグしてラベル行の順序を変更、<b>ユーザ定義</b>パラメータの作成、名前の変更、削除を行います。
-<dl><dd><a  class="image"><img alt="Edit column label rows5.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Edit_column_label_rows5.png" width="691"  /></a></dd></dl>
-
+<dl><dd><a  class="image"><img alt="Edit column label rows5.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Edit_column_label_rows5.png" width="732"  /></a></dd></dl>
 <li>表示：コンテキストメニュー を使用します。(a) ワークシートのタイトルバー、または (b) ワークシート列の右側(ワークブックウィンドウの内側)の空のスペースを右クリックして、 ショートカットメニューから<b>表示</b> を選択して、行ヘッダの非表示を行うことができます。
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-02.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-02.png" width="676"  /></a></dd></dl>
-
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-02.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-02.png" width="708"  /></a></dd></dl>
 <table class="note">
-
 <tr>
 <td><b>Note:</b> Origin 2026bからは、表示する項目をクリックして選択しても、このコンテキストメニューは閉じません。このフライアウトメニューの複数の項目を同時にチェックまたはチェック解除することができます。メニューの外側をクリックすると閉じます。
 </td></tr></table>
@@ -92,14 +85,26 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <p>Note：リッチテキストがチェックされていない場合、ギリシャ文字、特殊文字、LaTeX はワークシート内でエスケープシーケンスとしてのみ表示されます。ギリシャ語テキストの場合は \g( )、LaTeX の場合は \q( ) などですが、軸タイトルや凡例などグラフでは問題なく表示されます。
 </p>
 <h2><a name="Copy_and_Paste_Column_Label_Rows"></a><span class="mw-headline">列ラベル行のコピーと貼り付け</span></h2>
-<p>全ての列ラベル行をコピーする場合は、コピーする列ラベル行を右クリックし (編集：コピーまたは Ctrl+C)、貼り付け先に移動します (編集：貼り付けまたは Ctrl+V)。転置して貼り付け、リンク貼り付けも行えます。
-</p><p>選択したデータとともに列ラベル行メタデータをコピーするには、右クリックして<b>コピー（ラベル行を含む）</b>を選択します。非連続な列選択とワークシートのサブレンジ選択がサポートされています。
-</p>
-<ul><li> ラベル行の部分だけを貼り付けたい場合には、貼り付けるラベル行範囲の左上のセルで右クリックし、 <b>貼り付け</b> を選択します。（ユーザパラメータの行は追加されません）<br /></li>
-<li> データ行の部分だけを貼り付けたい場合には、貼り付けるデータ範囲内の左上のセルで右クリックし、 <b>貼り付け</b> を選択します。（必要に応じて、行が追加されます）<br /></li>
-<li> ラベルとデータ値両方を貼り付けるには、一番左の列の列ヘッダをクリックして選択し、<b>貼り付け</b>ます。メタデータとデータの両方がワークシートに貼り付けられます。列、データ行、ユーザパラメータ行は必要に応じて追加されます。</li></ul>
-<p>選択した列のラベル行メタデータのみをコピーするには、列を右クリックし、<b>コピー (式)</b>、<b>コピー (ラベル行)</b>、<b>コピー (式とラベル行)</b> を選択します。
-</p>
+<ul>
+<li>全ての列ラベル行をコピーする場合は、 
+<ol><li> コピーする列ラベル行を右クリックし<b>編集：コピー</b>（Ctrl+C）を選択します。 </li>
+<li> 貼り付け先に移動して<b>編集：貼り付け</b>（Ctrl+V）を選択します。<b>Note:</b> <b>転置して貼り付け</b>、<b>リンク貼り付け</b>も行えます。</li></ol>
+<li>列のロングネームをデータとともにコピーするには、 
+<ol><li> 目的の列を右クリックして、<b>コピー: コピー(ラベル行を含める)</b>を選択します。 </li></ol>
+<dl><dd><b>Note:</b> 
+<ul><li>非連続な列選択とワークシートのサブレンジ選択がサポートされています。</li>
+<li>単位が存在する場合、 ロングネームと単位が<i> ロングネーム</i>（<i>単位</i>） の形式で1行にまとめてコピーされます。ロングネームが同じ、または空の場合は、コメントがコピーされます。ロングネームとコメントの両方が同じ、または空の場合は、最初のユーザ定義パラメータ行がコピーされます。</li></ul></dd></dl>
+<li>すべてのラベル行を列データとともにコピーするには、 
+<ol>
+<li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">システム変数@PLO</a> = 0を設定します。 
+<li> 目的の列を右クリックして、<b>コピー: コピー(ラベル行を含める)</b>を選択します。 
+<ul><li>ラベル行のみを貼り付けるには、ラベル行領域の左上のセルを右クリックし、<b>貼り付け</b>を選択します。Originはユーザーパラメータ行を自動的に追加しないので、注意してください。<br /></li>
+<li> データ値のみを貼り付ける場合、データ領域の左上のセルを右クリックし、<b>貼り付け</b>を選択します。データ行は必要に応じて自動的に追加されます。<br /></li>
+<li> ラベルとデータ値両方を貼り付けるには、一番左の列の列ヘッダをクリックして選択し、<b>貼り付け</b>ます。列、データ行、ユーザパラメータ行は必要に応じて追加されます。</li></ul>
+</ol></li>
+<li>列ラベル行のメタデータのみをコピーするには、 
+<ol><li> 列を右クリックして、<b>コピー(式)</b>、<b>コピー(ラベル行)</b>、または<b>コピー(式とラベル行)</b>を選択します。</li></ol>
+</ul>
 <h2><a name="Define_Named_Range_in_Label_Row_Cell"></a><span class="mw-headline">ラベル行セルで名前付き範囲を定義</span></h2>
 <p><a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">列の式</a>や<a href="../../UserGuide/UserGuide/Reference_Lines.html#Details_dialog_for_Reference_Lines" title="ユーザガイド：参照線">参照線</a>などで使用する<a href="../../UserGuide/UserGuide/Named_Range.html#Using_Named_Range_in_Label_Rows" title="UserGuide:名前付き範囲">名前付き範囲</a>として、任意の列ラベル行のセルを定義できます。
 </p>
@@ -113,7 +118,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <ul><li> ノートでは<a href="../../UserGuide/UserGuide/Origin_Rich_Text.html" title="ユーザガイド：Originリッチテキスト"><b>Originリッチテキスト</b></a>とハイパーリンク、表、LaTeX数式や画像といったものを含む形式をサポートしています。 </li>
 <li> ノートコンテンツはツールバーの<b>書式</b>の各ボタンや<b>段落スタイル</b>を使って編集できます。</li>
 <li> 一度セルノートが追加されたあと、ユーザは再度セルを選択して、<b>ノートウィンドウで開く</b>ボタンや<a class="external text" href="../../GettingStarted/OriginLab/Publishing_and_Export.html#Adding_Content_to_Your_Notes">追加と要素のフォーマット</a>をクリックできます。</li></ul>
-<dl><dd><dl><dd><a  class="image"><img alt="UG open in notes window.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/UG_open_in_notes_window.png" width="226"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="UG open in notes window.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/UG_open_in_notes_window.png" width="209"  /></a></dd></dl></dd></dl>
 <ul><li> ポップアップノートはノートのあるセルの右上の角にカーソルをホバーしたときに表示されます。</li>
 <li> ポップアップノートは単純なテキストを表示することに最も適しています。要素が混在する複雑なメモは、ポップアップ表示ではなく、ノートウィンドウで直接編集して表示するのが最適です。 </li>
 <li> <b>列リストビュー</b>では、列ラベル行のセルノートもサポートします。</li></ul>
@@ -127,7 +132,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 </p><p>ワークシート列の<b>ロングネーム</b>についての情報は、<a href="../../UserGuide/UserGuide/Worksheet_Column_and_Cell_Range_Naming_Conventions.html#Origin_worksheet_column_naming_conventions" title="ユーザーガイド:ワークシート列とセル範囲の命名規則">Originワークシート列の命名規則</a> をご覧下さい。
 </p><p>Originは、この情報を使ってグラフに注釈を付けることができます。  例えば、<b>ロングネーム</b> と <b>単位</b> が指定されていると、自動的に2Dグラフの <b>X</b> および <b>Y</b> 軸のラベルとして使われます。
 </p>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-3.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-3.png" width="659"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-3.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-3.png" width="694"  /></a></dd></dl>
 <h3><a name="Units"></a><span class="mw-headline">単位</span></h3>
 <p><b>単位</b>行は、ワークシートデータ列の単位を保存します。単位行ではリッチテキストがデフォルトで有効です。
 </p><p>別の利用法としては、<a class="external text" href="../../GettingStarted/OriginLab/Customizing_Graphs.html#Graph_Legends">グラフの凡例</a>の中にロングネームと単位を使用することもできます。
@@ -138,11 +143,16 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <h3><a name="Comments"></a><span class="mw-headline">コメント</span></h3>
 <p>各ワークシート列には、1つ以上の<b>コメント</b>行を持たせることができます。  各行の行末でCTRL + ENTERキーを押して改行すると、コメント行に複数行入力できます。  事前に複数行を定義したファイルをインポートする場合、これらはコメント行に保持されます。 
 </p>
+<table class="noborder"><tr>
+	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png" width="57"  border="0" /></td><td><p><b>列ラベル行の適用先</b>ミニツールバーボタン<a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png" width="21"  /></a>を使用すると、ロングネーム、単位、コメントなどの組み込み列ラベル行を複数のワークシートにコピーできます。詳細は、<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#Define_a_Formula_when_you_Add_User_Parameters" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ">こちら</a>をご覧下さい
+</p>
+<dl><dd><a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Apply_User_Parameters_to_Other_Sheets.png" width="471"  /></a></dd></dl>
+</td></tr></table>
 <h3><a name="F.28x.29"></a><span class="mw-headline">F(x)</span></h3>
 <p><b>F(x)=</b>ヘッダ行には、次のものが表示されます。
 </p>
 <ul><li> <b>列の数式</b>これは、列に値を入力するために通常使用される数式です。</li>
-<li> 式のテキストこれは、セルに直接入力するか、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Options_Menu" title="ユーザガイド:メニューとダイアログのオプション"><b>式のテキスト</b> ダイアログボックス</a>に入力して列式の代わりに表示できる代替テキストです。たとえば、セルに長い数式を表示するのが実用的でない場合は、数式テキストの表示を有効にし、列の数式の目的を示す意味のあるインジケータを表示します。</li></ul>
+<li> 式のテキストこれは、セルに直接入力するか、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Options_Menu" title="ユーザガイド:メニューオプションとダイアログ操作"><b>式のテキスト</b> ダイアログボックス</a>に入力して列式の代わりに表示できる代替テキストです。たとえば、セルに長い数式を表示するのが実用的でない場合は、数式テキストの表示を有効にし、列の数式の目的を示す意味のあるインジケータを表示します。</li></ul>
 <p><br />
 セルへの直接入力はオン（初期設定）とオフを切り替えられます。<b>F(x)=</b> への直接入力をオフにするには、
 </p>
@@ -150,7 +160,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <li> <b>オプション</b> メニューをクリックします。</li>
 <li> <b>式セルを直接編集</b> のチェックを外します。</li></ol>
 <p><br />
-列の式の作成についての詳細は、<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">値の設定：クイックスタート</a> または <a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Options_Menu" title="ユーザガイド:メニューとダイアログのオプション">値の設定：オプションメニュー</a> をご覧ください。
+列の式の作成についての詳細は、<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">値の設定：クイックスタート</a> または <a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Options_Menu" title="ユーザガイド:メニューオプションとダイアログ操作">値の設定：オプションメニュー</a> をご覧ください。
 </p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png" width="57"  border="0" /></td><td><ul><li><b>F(x)=</b>行の表示/非表示切り替えには「CTRL + SHIFT + U」のショートカットが便利です。対応するショートカットキーを使って、この行の表示/非表示を切り替えることが出来ます。詳しくは <a href="#Hide.2FShow_Column_Label_Rows">このセクション</a> をご覧ください。 </li>
@@ -177,38 +187,36 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <p>直接編集が有効になっている場合、<b>F(x)</b>セルを右クリックし、次のいずれかを使用してセルに情報を入力します。
 </p>
 <table class="dialogcontroltable">
-
 <tr>
 <th>コピー/貼り付け
 </th>
 <td>
-<p>列の式をクリップボードにコピー、またはクリップボードから張り付けます。<b>Note:</b> （<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Before_Formula_Scripts" title="ユーザガイド:メニューとダイアログのオプション">値の設定） <b>実行前の処理スクリプト</b>ボックス</a> の内容は含まれません。
+<p>列の式をクリップボードにコピー、またはクリップボードから張り付けます。<b>Note:</b> （<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Before_Formula_Scripts" title="ユーザガイド:メニューオプションとダイアログ操作">値の設定） <b>実行前の処理スクリプト</b>ボックス</a> の内容は含まれません。
 </p>
 </td></tr>
 <tr>
 <th>ロード/名前を付けて保存
 </th>
 <td>
-<p>事前保存した列式をロード、または現在の列式を保存します。<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Before_Formula_Scripts" title="ユーザガイド:メニューとダイアログのオプション">（値の設定）<b>実行前の処理スクリプト</b></a>と<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html#The_Python_Function_Tab" title="ユーザーガイド：クイックスタート 列の設定"><b>Python関数</b></a>タブの内容は含まれます。
+<p>事前保存した列式をロード、または現在の列式を保存します。<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html#Before_Formula_Scripts" title="ユーザガイド:メニューオプションとダイアログ操作">（値の設定）<b>実行前の処理スクリプト</b></a>と<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html#The_Python_Function_Tab" title="ユーザーガイド：クイックスタート 列の設定"><b>Python関数</b></a>タブの内容は含まれます。
 </p>
 </td></tr>
 <tr>
 <th>ダイアログを開く
 </th>
 <td>
-<p>詳細オプションの利用のために、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html" title="ユーザガイド:メニューとダイアログのオプション"><b><b>値の設定</b></b>ダイアログ</a>を開きます。
+<p>詳細オプションの利用のために、<a href="../../UserGuide/UserGuide/Menu_Options_and_Dialog_Controls.html" title="ユーザガイド:メニューオプションとダイアログ操作"><b><b>値の設定</b></b>ダイアログ</a>を開きます。
 </p>
 </td></tr></table>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png" width="57"  border="0" /></td><td><p>セルを選択し、メインメニューから<b>列：ユーザー式入力</b>を選択して、列ラベル行の<b><a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ"><b>F(x)=</b> セル</a></b>に数式を直接ロードすることもできます。
+	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png" width="57"  border="0" /></td><td><p>列ラベル行<a href="../../UserGuide/UserGuide/Displaying_Supporting_Data_in_Worksheet_Header_Rows.html#F.28x.29.3D" title="ユーザガイド：ワークシートヘッダ行に表示するサポートデータ"><b>F(x)=</b>セル</a>に直接数式をロードするには、セルを選択し、メインメニューから<b>列:ユーザー式入力</b>を選択します。
 </p></td></tr></table>
 <h4><a name="F.28x.29.3D_shortcut_menu_commands_for_Python_function_calls"></a><span class="mw-headline">F(x)= ショートカットメニューコマンドでPython関数を呼び出す</span></h4>
 <p>列の数式でPython関数を呼び出す際、追加で<b>Pythonファイルを開く</b>ショートカットメニューコマンドが表示されます。
 </p>
-<ul><li> <b>F(x)=</b> セルの数式は <b>py.</b>で始まります。</li>
-<li> Python関数は外部ファイルに保存されます。デフォルトでは、<i>labtalk.py</i> と命名され、<a href="../../UserGuide/UserGuide/The_User_Files_Folder.html" title="ユーザガイド：ユーザファイルフォルダ"><b>ユーザファイルフォルダ</b></a>に保存されます。現在の作業ディレクトリと作業ファイルについては、LabTalk<a class="external text" href="../../LabTalk/LabTalk/Python_(object).html"><b>Pythonオブジェクト</b></a>のドキュメントを参照してください。</li></ul>
+<ul><li> <b>F(x)=</b>セルの数式は <b>py.</b>で始まります。</li>
+<li> Python関数は外部ファイルに保存されます。デフォルトでは、<i>labtalk.py</i> と命名され、<a href="../../UserGuide/UserGuide/The_User_Files_Folder.html" title="ユーザガイド：ユーザファイルフォルダ"><b>ユーザファイルフォルダ</b></a>に保存されます。現在の作業ディレクトリと作業ファイルについては、LabTalk <a class="external text" href="../../LabTalk/LabTalk/Python_(object).html"><b>Pythonオブジェクト</b></a>のドキュメントを参照してください。</li></ul>
 <table class="dialogcontroltable">
-
 <tr>
 <th>Pythonファイルを開く
 </th>
@@ -221,12 +229,12 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 </p>
 <dl><dd><dl><dd><a  class="image"><img alt="Python status bar path.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Python_status_bar_path.png" width="457"  /></a></dd></dl></dd></dl>
 </td></tr></table>
-<h3><a name="Categories"></a><span class="mw-headline">カテゴリー</span></h3>
+<h3><a name="Categories"></a><span class="mw-headline">カテゴリ</span></h3>
 <p><b>カテゴリー</b> 列ラベル行はカテゴリーデータを含むワークシート列が設定されているときに表示されます。（列を選択して右クリックし、<b>カテゴリーとして設定</b> を選択します）セルの内容は、(a) データが並べ替えされているかどうか（＜自動＞が選ばれているか） (b) カテゴリーのリストがスペースで分けられていることを表示します。
 </p>
 <ul><li> このセルをダブルクリックすると、<b>カテゴリー</b> ダイアログボックスから、この列でのカテゴリー表示を設定できます。(<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>列のプロパティ</b>から、<b>カテゴリー</b>タブ</a>を開いても同じ操作が可能です。)</li>
 <li> このセルを右クリックすると、幾つかのキーカテゴリータブを操作が重複した、「カテゴリー」ショートカットメニューが開きます。</li></ul>
-<dl><dd><a  class="image"><img alt="Categories-list.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Categories-list.png" width="184"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Categories-list.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Categories-list.png" width="256"  /></a></dd></dl>
 <dl><dd><ol><li> カテゴリーとして列を設定またはクリア</li>
 <li> カテゴリーのコピー（カテゴリーとして列を設定するのを含む）</li>
 <li> カテゴリーのペースト（カテゴリーとして列を設定することを含む）</li>
@@ -239,7 +247,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <h3><a name="Sampling_Interval"></a><span class="mw-headline">サンプリング間隔</span></h3>
 <p>ファイルサイズやデータファイル--特に等間隔で収集されたデータ--を少なくするために、独立変数(X列)を除外することができます。  この場合、<b>サンプリング間隔</b>の行がサンプリング間隔(X)を表示します。  OriginワークスペースにWAVファイルをドラッグ&amp;ドロップして、簡単なデモを見ることができます。
 </p>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-4.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-4.png" width="380"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-4.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-4.png" width="315"  /></a></dd></dl>
 <h3><a name="Sparklines"></a><span class="mw-headline">スパークライン</span></h3>
 <p><a class="external text" href="../../QuickHelp/QuickHelp/What_is_a_Sparkline_and_how_do_I_customize_it.html">スパークライン</a>はワークシートのY列に含まれる一連のデータセットの傾向を素早く表示します。 
 </p><p><br />
@@ -251,7 +259,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <p><br />
 各スパークラインは<b>編集可能な埋め込まれたグラフ</b>であり、これはワークシートデータの各列の上部にあるスパークラインオブジェクトをダブルクリックして開くことができます。  グラフに編集を行うと、完全な表示ではありませんが、埋め込みオブジェクトに保存されます。スパークラインをホバーすると拡大されたスパークラインが表示されます。 
 </p>
-<dl><dd><dl><dd><a  class="image"><img alt="Sparklines popup.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Sparklines_popup.png" width="689"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="Sparklines popup.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Sparklines_popup.png" width="946"  /></a></dd></dl></dd></dl>
 <table class="noborder">
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Alert_icon.png" width="57"  border="0" /></td><td><p>スパークラインが大量にあると、Origin の動作が遅くなる可能性があります。プロジェクトの動作が遅い原因がスパークラインの表示である可能性がある場合、システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S"><b>@SPK</b></a>を使用してスパークラインの作成を止め、プロジェクト内の既存のスパークラインを非表示にできます。また、<a class="external text" href="../../LabTalk/LabTalk/Delete_(command).html#-spk.3B_Delete_all_project_sparklines"><b>delete -spk</b></a>で現在のプロジェクトからスパークラインを削減可能です。
@@ -280,9 +288,9 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <li> いずれかのラベル行ヘッダを右クリックし、<b>挿入：ユーザパラメータ</b>を選択して、選択した行の前に挿入します。
 <li> ラベル行ヘッダを右クリックしてコンテキストメニューで<b>列ラベル行を編集</b>を選択すると、<b><b>列ラベルの行</b></b>ダイアログが開きます。 
 <ul><li>ダイアログで右クリックして行の追加やダブルクリックで名前を変更します。 </li></ul>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-6.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-6.png" width="429"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-6.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-6.png" width="443"  /></a></dd></dl>
 <ul><li>順序を入れ替えるには、左側の空のグリッドセルをドラッグします。</li></ul>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-7.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-7.png" width="362"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows-7.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows-7.png" width="391"  /></a></dd></dl>
 <ul><li>文字列は、その列ラベル行を参照するために使用される文字を一覧します。列ラベル行へのアクセス方法の詳細については、<a class="external text" href="../../LabTalk/LabTalk/Column_Label_Row_Characters.html">このLabTalkドキュメント</a>を参照ください。</li>
 <li>複数の行を選択して（連続する行を選択するには<b>Ctrl</b> + クリック、不連続な行を選択するには<b>Ctrl</b> + <b>Shift</b> + クリック）、一度に削除することができます。なお、元々あるラベル行は削除できません。そのため、選択した中に元々あるラベルが含まれている場合、それらの行はスキップされます。 </li></ul>
 <li> ワークシートをアクティブにして、<b>フォーマット：ワークシート表示<b>属性</b></b>を選択します。<b>表示</b>タブで、<b><b>列ラベル行の編集</b></b>ボタンをクリックします。
@@ -316,41 +324,41 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <li> ユーザ定義パラメータ行に格納された文字列が数値として表示されている場合に<i>限り</i>、日付と時間データのフォーマットを適用することができます。(例えば、Originでは<a href="../../UserGuide/UserGuide/Dates_and_Times_in_Origin.html" title="ユーザガイド:Originでの日付と時刻の扱いについて">ユリウス通日</a>が利用されています。)このように数値列のフォーマットを利用して、<a href="../../UserGuide/UserGuide/Using_Formulae_to_Set_Cell_Values.html" title="ユーザガイド：数式を使用してセル値を設定する">ワークシートセルの式</a>のように列ラベル行で計算処理を行うことができます。 (例えば、=value(wcol(j)[D1]$))</li>
 <li> 列ラベル行のデータは、どのフォーマットオプションが利用されていても、必ず<i>文字列</i>データであり、<i>数値</i>データではありません。</li></ul>
 <h3><a name="Define_a_Formula_when_you_Add_User_Parameters"></a><span class="mw-headline">ユーザ定義パラメータ追加時の数式を定義</span></h3>
-<p>平均や標準偏差などの列統計を計算するために、ワークシートにユーザーパラメータ行を明示的に追加できます。
+<p>平均や標準偏差などの列統計を計算するために、ワークシートにユーザーパラメータ行を追加できます。
 </p>
 <ol><li> 列ラベル行のヘッダを右クリックして、ショートカットメニューから<b>ユーザパラメータの追加</b>を選択します。</li>
-<li> <b>ユーザパラメータの追加</b>ダイアログで、作成するユーザ定義行の名前を入力し、フライアウトメニューから<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">共通の統計値</a>のリストをクリックします。統計値は、ワークシートのデータを含む列ごとに計算されます (テキスト列とカテゴリ列はスキップ)。
-<dl><dd><a  class="image"><img alt="User parameter define formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/User_parameter_define_formula.png" width="756"  /></a></dd></dl>
+<li> <b>ユーザパラメータの追加</b>ダイアログで、作成するユーザ定義行の名前を入力し、フライアウトメニューから<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Statistical_Functions">共通の統計値</a>のリストをクリックします。統計値はワークシートのデータが入力された列ごとに計算されます。<b>Note</b>: テキスト列とカテゴリ列はスキップされます。
+<dl><dd><a  class="image"><img alt="User parameter define formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/User_parameter_define_formula.png" width="641"  /></a></dd></dl>
 <ul><li><b>詳細...</b>を選択して<b>カスタム数式</b>ダイアログを開き、ユーザ定義式を編集して<b>保存</b>できます。ユーザ定義式は<a  class="image"><img alt="Triangle button.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Triangle_button.png" width="15"  /></a>リストに表示され、再利用可能です。</li></ul>
-<dl><dd><a  class="image"><img alt="Custom Formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Custom_Formula.png" width="494"  /></a></dd></dl></li>
+<dl><dd><a  class="image"><img alt="Custom Formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Custom_Formula.png" width="480"  /></a></dd></dl></li>
 <li> ユーザパラメータ行の<b>名前</b>または<b>数式</b>を変更するには、ユーザパラメータ行のヘッダを右クリックして、ショートカットメニューから<b>編集</b>を選択します。</li></ol>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Tip_icon.png" width="57"  border="0" /></td><td><p>上記の手順では、すべてのワークシート列に数式が自動的に拡張されます。ただし、セルの下部右隅にマウスオーバーして、&quot;<b>+</b>&rdquo;アイコンをダブルクリックして、ラベル行数式を数式を含むセルの右側にあるすべてのセルに拡張することもできます。
-<p><a  class="image"><img alt="Column label row extend formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_extend_formula.png" width="740"  /></a>
+<p><a  class="image"><img alt="Column label row extend formula.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Column_label_row_extend_formula.png" width="784"  /></a>
 </p>
 </p></td></tr></table>
 <p><span class='headerInParagraph'>ユーザパラメータ行を他のワークシート、特に数式で定義されたワークシートに適用する場合は、</span>
 </p>
 <ol><li> コピーするユーザパラメータ行を選択します。 </li>
-<li> ポップアップするミニツールバーで、<b>ユーザパラメータの適用先</b>ボタン<a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png" width="21"  /></a>を選択します。フライアウトメニューで、目的のワークシートを選択します。</li></ol>
+<li> ポップアップするミニツールバーで、<b>列ラベル行の適用先</b>ボタン<a  class="image"><img alt="Popup Apply User Parameters to.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Apply_User_Parameters_to.png" width="21"  /></a>を選択します。フライアウトメニューで、目的のワークシートを選択します。</li></ol>
 <dl><dd><ul><li><b>現在のブックのシート</b>: 現在のブック内の全てのシート。非表示のシートは含まれますが、埋め込まれているシートは含まれません。</li>
 <li><b>現在のフォルダのシート</b>: 現在のフォルダ内の全てのシート。サブフォルダのシートは含まれません。非表示のシートは含まれますが、埋め込まれているシートは含まれません。</li>
 <li><b>現在のフォルダのシート(オープンのもの)</b>: 現在のフォルダ内の開いている(非表示ではない)すべてのシートサブフォルダのシートは含まれません。 </li>
 <li><b>現在のフォルダのシート(再帰的)</b>: 現在のフォルダ内の全てのシート。サブフォルダは再帰的に含まれます。</li>
 <li><b>プロジェクト中のシート</b>: プロジェクト内の全てのシート非表示のシートは含まれますが、埋め込まれているシートは含まれません。</li></ul>
-<dl><dd><a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Apply_User_Parameters_to_Other_Sheets.png" width="417"  /></a></dd></dl></dd></dl>
+<dl><dd><a  class="image"><img alt="Apply User Parameters to Other Sheets.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Apply_User_Parameters_to_Other_Sheets.png" width="471"  /></a></dd></dl></dd></dl>
 <h2><a name="Explanation_of_Context_Menus_for_Column_Label_Rows"></a><span class="mw-headline">列ラベル行のコンテクストメニューの説明</span></h2>
 <p>以下の説明は、列ラベル行の各コンテクストメニューについてです。 
 </p>
 <h3><a name="Insert_User_Parameters"></a><span class="mw-headline">ユーザパラメータの挿入</span></h3>
 <p>右クリックしたメニューから、<b>挿入：ユーザパラメータ</b> を選択し、現在の列ラベル行にパラメーターまたはユーザパラメーターを挿入します。
-</p><p><a  class="image"><img alt="Insert User Para 01.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Insert_User_Para_01.png" width="338"  /></a>
+</p><p><a  class="image"><img alt="Insert User Para 01.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Insert_User_Para_01.png" width="349"  /></a>
 </p><p>このダイアログは<a href="#Define_a_Formula_when_you_Add_User_Parameters">「ユーザパラメータの追加」ダイアログ</a>と同じです。
 </p>
 <h3><a name="Hide.2FShow_Column_Label_Rows"></a><span class="mw-headline">列ラベル行の表示/非表示</span></h3>
 <p>行を非表示にするには、列ラベル行の上で右クリックし、<b>非表示</b> または<b>削除と非表示</b> を選択します。<b>削除と非表示</b> を選ぶと、現在のラベル行にある情報は消去され、行全体も隠されます。 
 </p>
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 09.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_09.png" width="276"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 09.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_09.png" width="302"  /></a></dd></dl>
 <p>隠された列ラベル行を表示するには、<b>表示</b> ショートカットメニューまたは、<b>列ラベル行</b> ダイアログに移動します。詳細は<a href="#Displaying_supporting_information_in_column_label_rows">このセクション</a> をご参照下さい。
 </p>
 <h3><a name="Rename_Row_Label"></a><span class="mw-headline">行ラベルの名前を変更</span></h3>
@@ -370,7 +378,7 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <p><i>または</i>、
 </p>
 <ol><li>列ラベル行をクリックし、ミニツールバーから<a  class="image"><img alt="Popup Move Row Up.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Move_Row_Up.png" width="24"  /></a>または<a  class="image"><img alt="Popup Move Row Down.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Move_Row_Down.png" width="24"  /></a>ボタンをクリックします。</li></ol>
-<p><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 10.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_10.png" width="857"  /></a>
+<p><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 10.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_10.png" width="773"  /></a>
 </p>
 <h3><a name="Set_Other_Rows_as_Label_Rows"></a><span class="mw-headline">他の行をラベル行としてセット</span></h3>
 <p>1つ以上の行(列ラベル行またはデータ行)を3つの標準列ヘッダ(ロングネーム、ショートネーム、単位)、システムパラメータ、ユーザ定義パラメータに設定したい場合、右クリックして<b>ロングネーム/ショートネーム/単位/コメント/パラメータ/ユーザパラメータに設定</b>をコンテキストメニューから選びます。
@@ -379,14 +387,13 @@ Originのワークシートは、データ行の上にあるヘッダ行でメ�
 <p><span class='headerInParagraph'>列ロングネームまたはコメントに1行以上を追加するには以下の操作を行います。</span>
 </p>
 <ol><li>1つ以上の行(列ラベル行または行番号)を右クリックして、<b>コメント/ロングネームの追加</b>をコンテキストメニューから選択します。
-<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 08.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_08.png" width="481"  /></a></dd></dl></li></ol>
+<dl><dd><a  class="image"><img alt="Displaying Supporting Data in Worksheet Header Rows 08.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Displaying_Supporting_Data_in_Worksheet_Header_Rows_08.png" width="534"  /></a></dd></dl></li></ol>
 <h3><a name="Set_As_Categorical"></a><span class="mw-headline">カテゴリーとして設定</span></h3>
 <ul><li> 列ラベル行を右クリックし、<b>カテゴリーとして設定</b>を選択します。<br />または、列ラベル行を選択し、表示されるミニツールバーから<b>カテゴリ</b>ボタン<a  class="image"><img alt="Popup Categorical.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Popup_Categorical.png" width="24"  /></a>をクリックします。<br />これにより、選択したラベル行がカテゴリデータを含むようにされます。 </li>
 <li> 使用可能なラベル行には、<b>ロングネーム</b>, <b>単位</b>, <b>コメント</b>, <b>パラメータ</b>, <b>ユーザパラメータ</b>が含まれます。</li>
 <li> 列ラベル行をカテゴリとして設定したら、それを右クリックして<b>カテゴリー</b>を選択できます。<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Categories_Tab.html" title="ユーザガイド: (列プロパティ) カテゴリタブ"><b>カテゴリー</b>ダイアログ</a>が開き、カテゴリーを編集できるようになります。</li>
 <li> この機能は、列を複数のプロットグループまたはレイヤにプロットする場合、および同じラベル行を持つ列について、異なるグループ/レイヤ間で同じプロットプロパティ (色、シンボル形状、サイズなど) を共有したい場合に役に立ちます。この場合、この列ラベル行をカテゴリとして設定し、プロットの色/形状/サイズ...をこのラベル行にマップできます。</li></ul>
 <dl><dd><a  class="image"><img alt="Set Column Label Row As Categorical.png" src="../images/Displaying_Supporting_Data_in_Worksheet_Header_Rows/Set_Column_Label_Row_As_Categorical.png" width="744"  /></a></dd></dl>
-
 
 
     

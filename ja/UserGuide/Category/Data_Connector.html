@@ -23,14 +23,13 @@
 <li class="toclevel-1 tocsection-11"><a href="#Other_Manipulation"><span class="tocnumber">7</span> <span class="toctext">その他の操作</span></a></li>
 </ul>
 </div>
-
 <h2><a name="Data_Integrity"></a><span class="mw-headline">データの整合性</span></h2>
 <p>データコネクタは、従来のインポート機能よりも高度なデータ保護が可能です。
 </p>
 <ul><li> デフォルトでは、データコネクタを含むブックではデータは編集できません。これにより、偶発的な変更や削除から保護できます。</li>
-<li> テキスト／CSV・Excelコネクタによりインポートされたデータは、ソート可能ですが（列を選択して、<b>ワークシート: ソート（ワークシート）</b>）、編集はできません。<br />Text/CSVとExcel以外のコネクタでインポートされたデータは、デフォルトでソートできません（編集もソートも不可）。 </li>
-<li> コネクタによりインポートされたデータの編集、ソートの設定は、インポート実行前に <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#H.2CI.2CJ.2CK">LabTalkシステム変数<b>@IPDC</b></a>の値を操作することで変更できます。</li>
-<li> 接続されたデータの後処理は、ワークシートに<a href="#Run_Script_After_Import">スクリプトを埋め込む</a>ことで設定できます。  後処理により、接続されたデータから編集保護を削除する必要性がなくなり、データの保護に役立ちます。</li></ul>
+<li> テキスト/CSVまたはExcelコネクタを使用してインポートしたデータは、デフォルトでソート可能ですが（列を選択して、<b>ワークシート: ソート（ワークシート）</b>）、それ以外の場合は編集できません。<br />Text/CSVとExcel以外のコネクタでインポートされたデータは、デフォルトでソートできません（編集もソートも不可）。 </li>
+<li> コネクタ経由でデータをインポートする前に、<a class="external text" href="../../QuickHelp/QuickHelp/How_to_allow_changing_data_when_data_connector_is_used.html"><b>環境設定：オプション</b>ダイアログ</a>を使用して、コネクタインポートデータの編集およびソート動作の両方を変更できます。</li>
+<li> 接続されたデータのルーチン後処理は、ワークシートに<a href="#Run_Script_After_Import">スクリプトを埋め込む</a>ことで設定できます。  後処理により、接続されたデータから編集保護を削除する必要性がなくなり、データの保護に役立ちます。</li></ul>
 <table class="noborder">
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Data_Connector/Alert_icon.png" width="57"  border="0" /></td><td><p>「データ保護」によって、インポートされたデータを変換する目的で（たとえば、<a href="../../UserGuide/UserGuide/Quick_Start_SetColumnValues.html" title="ユーザーガイド：クイックスタート 列の設定">値の設定</a>などを使って）ワークシートの最後に列を追加するといった操作ができなくなるということではありません。「データ保護」は、元のデータを変更することを防ぐのみです。
@@ -42,11 +41,11 @@
 <h2><a name="Adding_a_Connector_to_the_Sheet"></a><span class="mw-headline">シートにコネクタを追加</span></h2>
 <p>ワークシートまたは行列にコネクタを追加すると、シシートの左上にコネクタオブジェクトが追加されます。このオブジェクトは、データソースへの接続を管理するために使用する情報が保存されています。 
 </p><p><br />
-<i><b>アクティブなワークシートや行列にコネクタを追加するには、次のいずれかの操作を行います。</b></i>
+<span class='headerInParagraph'>アクティブなワークシートや行列にコネクタを追加するには、次のいずれかの操作を行います。</span>
 </p>
-<ul><li> <b>データ</b>: <b>ファイルに接続</b>、<b>Webに接続</b>、<b>データベースに接続</b>のいずれかを選択します。</li>
+<ul><li> <b>データ</b>: <b>ファイルに接続</b>、<b>クラウドに接続</b>、<b>Webに接続</b>、<b>データベースに接続</b>のいずれかを選択します。</li>
 <li> アプリギャラリーの<b>コネクタ</b>タブをクリックし、コネクタを選択します。</li>
-<li> Originワークシートまたは行列上に<a href="../../UserGuide/Category/Importing_Data_by_Drag_and_Drop.html" title="カテゴリ：ドラッグアンドドロップによるデータのインポート">コネクタがサポートされているファイルをドラッグアンドドロップします。</a></li></ul>
+<li> Originワークシートまたは行列上に<a href="../../UserGuide/Category/Importing_Data_by_Drag_and_Drop.html" title="カテゴリ：ドラッグアンドドロップによるデータのインポート">コネクタがサポートされているファイルをドラッグアンドドロップします</a>。</li></ul>
 <p><br />
 <i><b>接続状態によって表示されるアイコンが異なります。</b></i>
 </p>
@@ -95,7 +94,7 @@
 コネクタを追加したら、シートのコネクタアイコンをクリックして接続を管理できます。
 </p>
 <h3><a name="Connector_menu:"></a><span class="mw-headline">コネクタメニュー：</span></h3>
-<dl><dd><dl><dd><a  class="image"><img alt="Data connector contextmenu.png" src="../images/Data_Connector/Data_connector_contextmenu.png" width="448"  /></a></dd></dl></dd></dl>
+<dl><dd><dl><dd><a  class="image"><img alt="Data connector contextmenu.png" src="../images/Data_Connector/Data_connector_contextmenu.png" width="316"  /></a></dd></dl></dd></dl>
 <dl><dd><table class="simple">
 <tr>
 <th style="width: 25%"> データソース
@@ -103,22 +102,16 @@
 <td> ダイアログが開き、データソース選択と変更が可能です。
 <p>データソースがディスクファイルの場合、<b>データソースファイルパス</b>ダイアログが開きます。
 </p>
-<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/400px-Dadta_connector_file_path.png" width="400"   /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Dadta connector file path.png" src="../images/Data_Connector/Dadta_connector_file_path.png" width="670"  /></a></dd></dl>
 <p>選択して参照し、データソースパスを以下のいずれかの方法で保存します。
 </p>
-<dl><dd><ul><li>絶対パス</li>
-<li>プロジェクトの保存フォルダへの相対パス。現在のプロジェクトが保存済みである必要があります。</li>
-<li>共通データパスコンテキストメニューで設定した<b>共通データパス</b>からの相対パス</li></ul></dd></dl>
-</td></tr>
-<tr>
-<th> インポートオプション/<br />選択（オプション）
-</th>
-<td> ダイアログを再度開いてインポート設定を調整するか、インポートするブランチを選択します。
-</td></tr>
-<tr>
-<th> オプション
-</th>
-<td> <a href="../../UserGuide/UserGuide/Connecting_to_Web.html#HTML_Connector_Options" title="ユーザガイド: Webに接続"><b>HTML表コネクタ</b>(<b>ファイル/Webに接続</b></a>)と <a href="../../UserGuide/UserGuide/Connecting_to_File.html#NetCDF" title="ユーザガイド: ファイルに接続"><b>NetCDFコネクタ</b></a>でのみ利用可能です。インポート設定を変更するダイアログを開きます。
+<ul>
+<li><b>絶対パス</b>
+<li><b>プロジェクトパスからの相対パス</b>現在のプロジェクトが保存済みである必要があります。
+<li><b>共通データパスからの相対パス</b>詳細については、下記の<b>共通データパス</b>メニューを参照してください。
+</ul>
+<p><b>オプションダイアログを表示</b>をオンにすると、ソースファイルを変更すると、<a href="../../UserGuide/UserGuide/Connecting_to_File.html" title="ユーザガイド: ファイルに接続"><b>インポートオプション</b>ダイアログ</a>が開きます。
+</p>
 </td></tr>
 <tr>
 <th> インポート後に実行するスクリプト
@@ -128,9 +121,9 @@
 <tr>
 <th> インポート<br />全てのブックをインポート
 </th>
-<td> ソースデータを以下のようにインポートします。
-<ul><li> アクティブなデータコネクタシート（<b>インポート</b>）</li>
-<li> プロジェクトファイル内のすべてのデータコネクタシート（<b>全てのブックをインポート</b>）</li></ul>
+<td>
+<ul><li> <b>インポート</b>: アクティブなデータ接続シートへのインポート/再インポート</li>
+<li> <b>全てのブックをインポート</b>: プロジェクトファイル内のすべてのデータ接続シートをインポート/再インポート </li></ul>
 </td></tr>
 <tr>
 <th> 自動更新<br />定期的に更新を一時停止
@@ -142,17 +135,17 @@
 <tr>
 <th> インポートしたデータのロック解除
 </th>
-<td> チェックをつけるとインポートしたデータの編集が可能です。コネクタアイコンをクリックし、<b>インポート</b>を選択してデータを再インポートすると、ロックが解除された状態が維持されます。編集保護を復元するには、<b>インポートオプション.../選択（オプション）...</b>を選択してデータを再インポートします。
+<td> インポートされたデータの編集を有効にするには、これをチェックします。コネクタアイコンをクリックし、<b>インポート</b>を選択してデータを再インポートすると、ロックが解除された状態が維持されます。編集保護を復元するには、<b>インポートオプション.../選択（オプション）...</b>を選択してデータを再インポートします。
 </td></tr>
 <tr>
 <th> インポート後のアクションをリセット
 </th>
-<td> インポート後のデータに対して何らかの操作、たとえば一部の列を削除するなど下場合、データを再インポートする前に、このメニューを選択してアクションをリセットする必要があります。
+<td> インポート後に、インポートしたデータに対して操作を行った場合（例：インポートした列を削除した場合）、再インポート前にこのメニューをオンにすると元の設定にリセットできます。オンにしない場合、インポート後に行った操作は保持されます。
 </td></tr>
 <tr>
 <th> シートを接続しない
 </th>
-<td> ワークシート/行列とデータソース間の接続を解除します。また、編集保護も解除します。  コネクタアイコンは残るので、後でデータを再接続してインポートすることができます。
+<td> ワークシート/行列とデータソース間の接続を解除します。また、編集保護も解除します。  コネクタアイコンは残るので、後でデータを再接続してインポートすることができます（その時点で、編集保護が復元されます）。
 </td></tr>
 <tr>
 <th> データコネクタを削除<br />すべてのブックからコネクタを削除
@@ -160,12 +153,11 @@
 <td> 以下のデータコネクタを削除します。
 <ul><li> アクティブブックの全シート（<b>データコネクタを削除</b>）</li>
 <li> プロジェクトファイルの全ブック（<b>すべてのブックからコネクタを削除</b>） </li></ul>
-<p>全シートから編集保護を削除します。さらに、<b>保存時にインポートデータを除外</b>チェックマークも外します。
+<p>全てのシートの編集保護も解除されます。また、<b>保存時にインポートデータを除外</b>のチェックも解除されます。
 </p>
 </td></tr>
-
 <tr>
-<th> 保存時にインポートデータを除外<sup>&dagger;</sup>
+<th> 保存時にインポートデータを除外
 </th>
 <td> チェックを付けるとインポートしたデータを消去しますが、ワークブックやプロジェクトを保存するときは接続を維持するので、プロジェクトサイズを小さくすることができ、必要に応じてデータを簡単に再インポートできます。インポートされたデータからグラフがプロットされている場合は、インポートされたデータが消去された後にグラフにダウンロードボタンが表示されます。
 <table class="noborder">
@@ -178,45 +170,62 @@
 <tr>
 <th> 共通データパス
 </th>
-<td> <b>データソース</b>メニューでソースファイルにすばやくアクセスするために使用できる共通データパスを設定します。このパスは、プロジェクト内のすべてのブック間で共有され、プロジェクトとともに保存されます。
-<p><b>共通データパス</b>として親フォルダを設定するのが一般的です。グループメンバーがアクセスする共有フォルダに<b>共通データパス</b>を設定してから、プロジェクトを共有すると、その利点はさらに明白になります。
-</p>
+<td> <b>データソース</b>メニューでソースファイルにすばやくアクセスするための共通データパスを設定します。このパスは、プロジェクト内のすべてのブック間で共有され、プロジェクトとともに保存されます。
+<dl><dd><a  class="image"><img alt="Common Data Path.png" src="../images/Data_Connector/Common_Data_Path.png" width="710"  /></a></dd></dl>
+<ul><li>通常、<b>共通データパス</b>として親フォルダを設定します。グループメンバーがアクセスする共有フォルダに<b>共通データパス</b>を設定してから、プロジェクトを共有すると、とても便利です。</li>
+<li><b>プロジェクトパスからの相対パス</b>を選択した場合、<b>PEフォルダをサブフォルダ名として使用する</b>（構文<code>&lt;PE Folder&gt;</code> ）をオンにすると、現在のフォルダおよびそのサブフォルダのパスをプロジェクトパスに動的に追加できます。生成されたパスが<b>共通データパス</b>として使用されます。<b>フォルダを複製</b>メニューと<b>共通データパス</b>を組み合わせて、まったく同じフォルダ構成からデータファイルを一括インポートする例については、<a href="../../UserGuide/UserGuide/Project_Explorer.html#Duplicate_Folder" title="ユーザガイド：プロジェクトエクスプローラ">こちら</a>を参照してください。</li></ul>
 </td></tr>
 <tr>
 <th> ファイルのチェック一時停止
 </th>
-<td> 数回チェックした後、ソースファイルが存在しないことが判明した場合、それ以上チェックせず、このメニューの<b>ファイルのチェック一時停止</b>にチェックがつきます。アイドルチェックを再開するには、このメニューのチェックを外す必要があります。
+<td> 数回チェックした後、ソースファイルが存在しないことが判明した場合、それ以上チェックせず、このメニューにチェックがつきます。アイドルチェックを再開するには、このメニューのチェックを外す必要があります。
 </td></tr>
 <tr>
-<th> 他のファイルでシートを複製
+<th> ファイルを追加して複製
 </th>
-<td> インポート設定 (<b>インポート後に実行するスクリプト</b>を含む) や解析操作などを含めて現在のワークシートを複製し、ポップアップダイアログで選択した新しいファイルをインポートします。
-<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png" width="566"  /></a>
-</p><p><a href="#Other_sub-menus_under_Data_menu:">次のセクション</a>の<b>クローンインポート</b>も参照してください。
+<td> アクティブシートをテンプレートとして使用し、新しいファイルをインポートします。テンプレートには、インポート設定（<b>インポート後に実行するスクリプト</b>も含む）および解析操作が含まれます。複製されたブックでは、解析ツールの<b>再計算</b>モードに関係なく、解析の再計算が自動的に実行されます。
+<p><a  class="image"><img alt="Duplicate Sheet with More Files.png" src="../images/Data_Connector/Duplicate_Sheet_with_More_Files.png" width="762"  /></a>
+</p><p>新しいデータファイルを指定するには
 </p>
+<ul>
+<li><b>ソース</b>=<b>指定したフォルダ内のファイル</b>
+<br />&nbsp;&nbsp;&nbsp; <b>フォルダ</b>を指定すると、そのパス内のすべてのファイルがインポートされます。
+<li><b>ソース</b>=<b>指定したファイル</b> 
+<br />&nbsp;&nbsp;&nbsp; <b>ファイル名</b>横にある<b>...</b>ボタンをクリックしてファイルを選択します。
+</ul>
+<p><b>複製先</b>を選択
+</p>
+<ul>
+<li><b>新規シート</b>
+<br />&nbsp;&nbsp;&nbsp;各新規ファイルは、アクティブなブックの新規シートにインポートされます。
+<li><b>ブック全体を新規ブックとして作成</b>
+<br />&nbsp;&nbsp;&nbsp;新しいファイルは新しいブックにインポートされます。アクティブなブックに複数のシートが含まれているが、インポートシートが1つだけの場合、ブック全体が1つのユニットとして扱われ、すべてのシートが新しいブックに複製されます。<a href="#Other_sub-menus_under_Data_menu:">次のセクション</a>の<b>クローンインポート</b>も参照してください。</li>
+</ul>
 </td></tr></table></dd></dl>
 <h3><a name="Other_sub-menus_under_Data_menu:"></a><span class="mw-headline">データメニューのほかのサブメニュー</span></h3>
 <dl><dd><table class="simple">
 <tr>
 <th style="width: 20%"> 複数ファイルに接続
 </th>
-<td>現在、一部のコネクタタイプは、一度に複数のファイルのインポートをサポートしています。たとえば、ワークブックの場合はCSVおよびExcelコネクタ、行列の場合はMatlab、MetroPro、およびWDFコネクタです。<br />ダイアログの詳細は、<a class="external text" href="../../XFunction/X-Function/Files2dc.html">このドキュメント</a>をご参照ください。
+<td>現在、一部のコネクタタイプは、一度に複数のファイルのインポートをサポートしています。たとえば、ワークブックの場合はCSVおよびExcelコネクタ、行列の場合はMatlab、MetroPro、およびWDFコネクタです。<br />ダイアログの詳細は<a class="external text" href="../../XFunction/X-Function/Files2dc.html">このドキュメント</a>を参照してください。
 </td></tr>
 <tr>
 <th> クローンインポート
 </th>
-<td> <b>データ: ファイルからインポート</b>メニューでインポートされたデータで利用できます。<b>データ: ファイルからインポート</b>メニューでインポートした後、アクティブワークブックをテンプレートとして使って、現在のワークブックの複製に新しいファイルをインポートするのが<b>クローンインポート</b>です。現在のワークブックに解析処理が含まれている場合、解析ツールの<b>再計算</b>モードに関係なく、複製の再計算が自動で実行されます。現在のワークブックに<i>N</i> 個のインポートシートがある場合、<b>クローンインポート</b>では<i>N</i> 個のデータファイルを選択順にグループ化し、それに応じて同じグループを1つのブックにインポートします。
+<td> データファイルをインポートした後、アクティブワークブックをテンプレートとして使って、現在のワークブックの複製に新しいファイルをインポートするのが<b>クローンインポート</b>です。現在のワークブックに解析処理が含まれている場合、解析ツールの<b>再計算</b>モードに関係なく、複製の再計算が自動で実行されます。現在のワークブックに<i>N</i> 個のインポートシートがある場合、<b>クローンインポート</b>では<i>N</i> 個のデータファイルを選択順にグループ化し、それに応じて同じグループを1つのブックにインポートします。
 <table class="noborder">
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Data_Connector/Tutorial_icon.png" width="57"  border="0" />
 	</td>
 	<td><p>たとえば、<b>ヘルプ: ラーニングセンター</b>の<b>解析サンプル</b>タブでサンプル = <i>バッチ処理 - クローンインポート</i> を開きます。ワークブックをアクティブにして、データ: クローンインポートメニューをクリックし、ほかのデータを選択します。アクティブワークブックが新しいデータでクローン作成されるのがわかります。  
 </p></td></tr></table>
+<p><b>Note:</b> <b>クローンインポート</b>は<b>データ: ファイルからインポート</b>メニューでインポートされたデータで利用できます。 
+</p>
 </td></tr></table></dd></dl>
 <h2><a name="Refresh_imported_data"></a><span class="mw-headline">インポートされたデータの更新</span></h2>
 <p>コネクタアイコン <a  class="image"><img alt="Dadta connector icon connect.png" src="../images/Data_Connector/Dadta_connector_icon_connect.png" width="16"  /></a> / <a  class="image"><img alt="Button database connector icon.png" src="../images/Data_Connector/Button_database_connector_icon.png" width="16"  /></a> （データベースコネクタ）をクリックし、<b>自動更新...</b>を選択します：
 </p>
-<dl><dd><a  class="image"><img alt="Auto Refresh Settings.png" src="../images/Data_Connector/Auto_Refresh_Settings.png" width="428"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Auto Refresh Settings.png" src="../images/Data_Connector/Auto_Refresh_Settings.png" width="469"  /></a></dd></dl>
 <p>データコネクタは、ソースからのデータの再インポートをサポート： 
 </p>
 <ul>
@@ -228,18 +237,18 @@
 </ul>
 <p>「定期的に更新」を有効にすると、コネクタアイコンが<a  class="image"><img alt="Data connector icon timer.png" src="../images/Data_Connector/Data_connector_icon_timer.png" width="16"  /></a>になります。  アイコン上にマウスを置くとツールチップがポップアップ表示され、更新間隔や次の更新までの残り時間などの自動更新情報が表示されます。
 </p>
-<dl><dd><a  class="image"><img alt="Auto Refresh Tooltips.png" src="../images/Data_Connector/Auto_Refresh_Tooltips.png" width="396"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Auto Refresh Tooltips.png" src="../images/Data_Connector/Auto_Refresh_Tooltips.png" width="300"  /></a></dd></dl>
 <p>次の再インポートまでのカウントダウンがステータスバーの右隅に表示されます。ステータスバーを右クリックし、<b>テーマ</b>項目のチェックをオフ/オンすることでカウントダウンを非表示/表示することができます。
 </p>
 <dl><dd><a  class="image"><img alt="Status Bar Countdown.png" src="../images/Data_Connector/Status_Bar_Countdown.png" width="647"  /></a></dd></dl>
 <h2><a name="Excluding_or_Saving_Imported_Data"></a><span class="mw-headline">インポートデータの除外と保存</span></h2>
-<p>デフォルトでは、インポートファイルからのデータサイズが<i>500kB</i> より小さい場合、プロジェクトに保存され、それより大きい場合は保存されません。
+<p>デフォルトでは、インポートファイルからのデータサイズが<i>500kB</i> より小さい場合はプロジェクトに保存され、それより大きい場合は保存されません。
 </p><p><br />
 <i><b>次のLabTalkシステム変数を使って、データ除外のデフォルト設定を変更できます。</b></i>
 </p>
-<dl><dd><ul><li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DNS</b></a>: ファイルサイズにかかわらずデータを除外するかどうかを設定できます。</li>
+<dl><dd><ul><li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#D"><b>@DNS</b></a>: データを除外するかどうかを設定できます。</li>
 <li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#F.2CG"><b>@FSE</b></a>: プロジェクト保存時に除外するデータサイズのしきい値をキロバイトで設定できます。</li>
-<li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#F.2CG"><b>@FSEW</b></a>: 保存時にWeb、JSON、Origin、MATLABデータを除外するためのOriginワークシートのセル数x 100でしきい値サイズを設定できます。 </li></ul></dd></dl>
+<li> <a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#F.2CG"><b>@FSEW</b></a>: 保存時にWeb、JSON、Origin、MATLABデータを除外するためのOriginワークシートのセル数x 100の単位でしきい値サイズを設定できます。 </li></ul></dd></dl>
 <p><br />
 <i><b>現在のウィンドウに対し、手動でデータ除外の設定を上書きする方法</b></i>
 </p><p>インポートファイルサイズまたは、@FSE、 @DNS、@FSEWの設定にかかわらず、次の方法でプロジェクトにデータを保存できます。
@@ -253,7 +262,7 @@
 <p><span class='headerInParagraph'>インポート後に実行するsukriダイアログを開き、</span>
 </p>
 <ul><li> インポート後、コネクタアイコン<a  class="image"><img alt="Dadta connector icon connect.png" src="../images/Data_Connector/Dadta_connector_icon_connect.png" width="16"  /></a>をクリックして<b>インポート後に実行するスクリプト</b>を選択します。 </li></ul>
-<dl><dd><a  class="image"><img alt="Post Import Scripts Dialog.png" src="../images/Data_Connector/Post_Import_Scripts_Dialog.png" width="756"  /></a></dd>
+<dl><dd><a  class="image"><img alt="Post Import Scripts Dialog.png" src="../images/Data_Connector/Post_Import_Scripts_Dialog.png" width="810"  /></a></dd>
 <dd><b>OKでインポート</b>はデフォルトでオンになっており、<b>OK</b>ボタンをクリックした後にデータを再インポートしてスクリプトを実行します。</dd></dl>
 <table class="noborder">
 	<tr>
@@ -263,7 +272,7 @@
 </p>
 <pre class="lt" style="font-family:monospace;">wks.<span style="color: #000080;">userparam</span><span style="color: #000000;">(</span><span style="color: #000080;">++</span>Mean<span style="color: #000000;">)</span>;
 loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</span>,wks.<span style="color: #000080;">dc</span>.<span style="color: #000080;">c2</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span> wcol<span style="color: #000000;">(</span>i<span style="color: #000000;">)</span><span style="color: #000000;">[</span>Mean<span style="color: #000000;">]</span><span style="color: #000080;">$</span><span style="color: #000080;">=</span><span style="color: #ff00ff;">&quot;=Mean(this)&quot;</span>;<span style="color: #000000;">}</span></pre>
-<dl><dd><a  class="image"><img alt="Post Import Script Example 1.png" src="../images/Data_Connector/Post_Import_Script_Example_1.png" width="641"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Post Import Script Example 1.png" src="../images/Data_Connector/Post_Import_Script_Example_1.png" width="630"  /></a></dd></dl>
 <p>そして、（ドラッグして）ナビゲーションパネルにある複数の表を選択し、<b>アクティブシートを複製して接続</b>のコンテクストメニューを使ってアクティブシートの設定を利用し、12か月の表全てをインポートします。
 <a  class="image"><img alt="Post Import Script Example 2.png" src="../images/Data_Connector/Post_Import_Script_Example_2.png" width="600"  /></a>
 </p></td></tr></table>
@@ -272,16 +281,16 @@ loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</spa
 <h3><a name="Embed_LabTalk_script_using_Worksheet_Properties_dialog"></a><span class="mw-headline">ワークシートプロパティダイアログを使用した組み込みLabTalkスクリプト</span></h3>
 <p>ワークシートの<a href="../../UserGuide/UserGuide/Script_tab_of_Worksheet_Properties.html" title="ユーザガイド:ワークシートプロパティのスクリプトタブ">プロパティダイアログボックス</a>（<b>ワークシート：ワークシート・スクリプト</b>）を使用してLabTalkスクリプトを組み込むこともできます。 
 </p>
-<ol><li> データをインポートする前に、ワークブックをアクティブ化し、<b>ワークシート：ワークシート・スクリプト</b>を選択します。</li>
-<li> <b>スクリプト</b>ボックスにスクリプトを入力し、<b>スクリプト実行条件</b>の<b>インポート後</b>にチェックを入れます。スクリプトが実行されるまで、接続されたデータは編集をロックされません。</li></ol>
+<ol><li> データをインポートする前に、ワークブックをアクティブにして、<b>ワークシート：ワークシート・スクリプト</b>を選択します。</li>
+<li> <b>スクリプト</b>ボックスにスクリプトを入力し、<b>スクリプト実行条件</b>の<b>インポート後</b>にチェックを入れます。接続されたデータは、スクリプトが実行されるまで編集をロックされません。</li></ol>
 <table class="noborder">
 	<tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Data_Connector/Tutorial_icon.png" width="57"  border="0" />
 	</td>
 	<td><p>以下の例は、<b>wdeldup</b> X-ファンクションを呼び出して、他の列の関連する値を平均することにより、参照列（列1）の重複する値を削除する方法を示しています。 
 </p>
-<dl><dd><dl><dd><a  class="image"><img alt="DC run script after import.png" src="../images/Data_Connector/DC_run_script_after_import.png" width="345"  /></a></dd></dl></dd></dl>
-<p>他の例は<a class="external text" href="http://blog.originlab.com/worksheet-script-after-data-connector-to-modify-data" target="_blank">このOriginLabのブログ記事</a>で参照してください。
+<dl><dd><dl><dd><a  class="image"><img alt="DC run script after import.png" src="../images/Data_Connector/DC_run_script_after_import.png" width="428"  /></a></dd></dl></dd></dl>
+<p>他の例は、<a class="external text" href="http://blog.originlab.com/worksheet-script-after-data-connector-to-modify-data" target="_blank">こちらのOriginLabのブログ</a>を参照ください。
 </p></td></tr></table>
 <p><br />
 <i><b>他の事項：</b></i>
@@ -290,21 +299,20 @@ loop<span style="color: #000000;">(</span>i,<span style="color: #0000dd;">2</spa
 <li> ワークブックと埋め込みスクリプトは、同様のデータを処理するための<a href="../../UserGuide/UserGuide/Template_Files.html#Saving_a_customized_window_as_a_template" title="UserGuide:テンプレートファイル">テンプレートファイル</a>として保存できます。</li>
 <li> 接続されたデータの後処理の概要については、<a class="external text" href="http://blog.originlab.com/worksheet-script-after-data-connector-to-modify-data" target="_blank">このOriginLabのブログ記事</a>を参照してください。</li></ul>
 <h2><a name="Other_Manipulation"></a><span class="mw-headline">その他の操作</span></h2>
-<p><b>複数ファイルに接続</b>の他、現在データコネクタは一度に1つのファイル/表をインポートできます。同じWebページの複数の表、または同じパスの複数のファイルをインポートする場合は、<b>ワークシートに追加</b>メニューを使用して同じブックにすばやくインポートできます。
+<p><b>複数ファイルに接続</b>をサポートするコネクタの他、ほとんどのコネクタは一度に1つのファイル/表をインポートできます。同じWebページの複数の表、または同じパスの複数のファイルをインポートする場合は、<b>ワークシートに追加</b>メニューを使用して同じブックにすばやくインポートできます。
 </p><p><i><b>複数のファイル/表を1つのブックにインポートする</b></i>
 </p>
 <ol><li>データコネクタによってファイル/表をインポートします。</li>
 <li>ワークシートタブで右クリックして、<b>追加</b>を選びます。</li></ol>
 <dl><dd>データコネクタを持つ新しいワークシートが追加されます。データソースにはブック内のデータソースがあらかじめ入力されていますが、接続されていません。これを変更して新しい表をインポートできます。</dd></dl>
-<p>各ワークブックは異なるデータソースを持つことができますが、コネクタタイプ（テキスト／CSV、JSON、またはOPJUなど）は1つだけです。つまり、ブック中の各ワークシートは、そのコネクタタイプでサポートされているデータソースをそれぞれ持つことができます。
+<p>各ワークブックは異なるデータソースを持つことができますが、コネクタタイプ（テキスト/CSV、JSON、OPJUなど）は1つだけです。つまり、ブック中の各ワークシートは、そのコネクタタイプでサポートされているデータソースをそれぞれ持つことができます。
 </p><p><br />
-<i><b>デフォルトメニューにないデータタイプをインポート</b></i>
+<i><b>デフォルトメニューにないデータ型をインポート</b></i>
 </p>
 <ol>
 <li> <b>データ: ファイル/Webに接続: 新規追加</b>を選択します。 
 <li>これにより、<b>アプリセンター</b>で利用可能な<b>データコネクタ</b>が表示されます。使用したいファイルタイプを探し、ダウンロードします。ダウンロードすると、<b>データ</b>メニューに自動的に追加され、使用できるようになります  。このアプリは、アプリギャラリーの<b>コネクタ</b>タブにも表示されます。 
 </ol>
-
 
 
     

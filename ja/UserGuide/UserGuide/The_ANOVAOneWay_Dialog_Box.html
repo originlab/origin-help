@@ -9,14 +9,21 @@
 <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">入力</span></a>
 <ul>
 <li class="toclevel-2 tocsection-4"><a href="#Descriptive_Statistics"><span class="tocnumber">3.1</span> <span class="toctext">記述統計</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Significance_Level"><span class="tocnumber">3.2</span> <span class="toctext">有意水準</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Effect_Size"><span class="tocnumber">3.2</span> <span class="toctext">効果量</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Significance_Level"><span class="tocnumber">3.3</span> <span class="toctext">有意水準</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Equal_Variance_Assumed"><span class="tocnumber">3.4</span> <span class="toctext">等分散を仮定</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-6"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">平均比較</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">等分散性の検定</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">検出力解析</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">プロット</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Means_Comparison"><span class="tocnumber">4</span> <span class="toctext">平均比較</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Tests_for_Equal_Variance"><span class="tocnumber">5</span> <span class="toctext">等分散性の検定</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Power_Analysis"><span class="tocnumber">6</span> <span class="toctext">検出力解析</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">6.1</span> <span class="toctext">最小関心差を設定しない場合</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">6.2</span> <span class="toctext">最小関心差を設定する場合</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Plots"><span class="tocnumber">8</span> <span class="toctext">プロット</span></a></li>
 </ul>
 </div>
 
@@ -29,7 +36,7 @@
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>再計算</b>
+<th>再計算
 </th>
 <td>
 <p>分析結果の再計算の設定を変更します。
@@ -41,7 +48,7 @@
 </p>
 </td></tr></table>
 <h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
-<p>入力データの形式として、<b><b>インデックス</b></b>または<b><b>素データ値</b></b>を指定します。
+<p>ドロップダウンリストで<b>素データ</b>または<b>インデックス</b>に設定します。
 </p>
 <table class="dialogcontroltable">
 
@@ -80,9 +87,19 @@
 <h3><a name="Descriptive_Statistics"></a><span class="mw-headline">記述統計</span></h3>
 <p>出力レポートに記述統計の結果を含めるかどうかを選択します。
 </p>
+<h3><a name="Effect_Size"></a><span class="mw-headline">効果量</span></h3>
+<p>レポートシートに<b>効果量</b>を出力するかどうかを指定します。レポートテーブルには、一元配置ANOVAの効果量指標として、<b>イータ二乗</b>、<b>コーエンのf</b>、<b>オメガ二乗</b>が出力されます。これらはすべて、ANOVAにおけるグループ間の差の大きさを定量化するために使用される標準化された効果量統計量です。
+</p><p><b>イータ二乗</b>と<b>オメガ二乗</b>は分散説明率を表す指標で、<b>コーエンのf</b>は標準化された平均差の指標です。
+</p>
 <h3><a name="Significance_Level"></a><span class="mw-headline">有意水準</span></h3>
 <p>一元配置分散分析の有意水準を指定します。
 </p>
+<h3><a name="Equal_Variance_Assumed"></a><span class="mw-headline">等分散を仮定</span></h3>
+<p>このチェックボックスはデフォルトで選択されています。これは、<b>平均比較</b>タブで提供されるメソッドに影響します。
+</p><p>標準的なANOVAでは、比較するすべてのグループの分散が等しいことを仮定します。一方、<b>WelchのANOVA</b>は、等分散性の仮定が満たされない場合に使用できる、標準的な一元配置ANOVAの代替手法です。グループごとの分散を重み付けして自由度を調整することで、グループ間で分散や標本サイズが大きく異なる場合でも、第1種の過誤率を安定して維持します。
+</p>
+<ul><li> このオプションを選択した場合、<b>全般ANOVA</b>レポートテーブルが出力されます。また、平均比較法として、<b>Tukey</b>、<b>Dunnet</b>、<b>Bonferroni</b>、<b>Dunn-Sidak</b>、<b>Fisher LSD</b>、<b>Scheffe</b>、<b>Holm-Bonferroni</b>、<b>Holm-Sidak</b>を使用できます。 </li></ul>
+<ul><li> このオプションが選択されていない場合、<b>Welchの検定</b>レポートテーブルが出力されます。また、平均比較法として<b>Games-Howell</b>を使用できます。さらに、結果シートの<b>サマリグラフ</b>では、P値は<b>WelchのANOVA</b>のP値に基づき、<b>平均の比較区</b>間は<b>Games-Howell</b>法に基づいています。</li></ul>
 <h2><a name="Means_Comparison"></a><span class="mw-headline">平均比較</span></h2>
 <p>後処理のペアワイズ平均比較の方法を選択します： 
 </p>
@@ -94,13 +111,34 @@
 <td>ペアワイズ平均比較の有意水準を指定します。
 </td></tr>
 <tr>
+<th>比較
+</th>
+<td>
+<ul><li> <b>すべての平均の組み合わせ</b></li></ul>
+<dl><dd>すべてのグループを、他のすべてのグループと比較します。</dd></dl>
+<ul><li> <b>各平均と対照</b></li></ul>
+<dl><dd>特定の1グループを基準（対照水準）として選択し、その他のすべてのグループをこのグループと比較します。対照以外のグループ同士は比較しません。 </dd></dl>
+</td></tr>
+<tr>
+<th>対照水準
+</th>
+<td>平均比較を行う際の対照水準を指定します。このオプションは、<b>比較</b>で<b>各平均を対照</b>を選択した場合に使用できます。
+<p>たとえば、標本に<i><b>A</b></i>, <i><b>B</b></i>, <i><b>C</b></i> の3つの水準（グループ）があり、対照水準として <i><b>A</b></i> を指定した場合、<i><b>B</b></i> と <i><b>C</b></i> はそれぞれ <i><b>A</b></i> と比較されますが、<i><b>B</b></i> と <i><b>C</b></i> は互いに比較されません。
+</p>
+</td></tr>
+<tr>
 <th>Tukey
 </th>
 <td rowspan="8">
-<p>ペアワイズ平均比較のための異なる方法です。
-（詳細は<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a>を参照してください）
+<p>平均比較に使用する方法を指定します。
+</p><p><b>入力</b>タブで<b>等分散を仮定</b>を選択した場合、ペアごとの平均比較に以下の方法を使用できます。
+</p><p><b>比較</b>で<b>すべての平均の組み合わせ</b>を選択した場合は、<b>Tukey</b>法を使用できます。  <b>各平均と対照</b>を<b>比較</b>で選択した場合は、<b>Dunnett</b>法を使用できます。  その他の方法は、どちらの比較方法でも使用できます。
+</p><p>（詳細は<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a>を参照してください）
 </p>
 </td></tr>
+<tr>
+<th>Dunnett
+</th></tr>
 <tr>
 <th>Bonferroni
 </th></tr>
@@ -114,18 +152,22 @@
 <th>Scheffe
 </th></tr>
 <tr>
-<th>Dunnett
-</th></tr>
-<tr>
 <th>Holm-Bonferroni
 </th></tr>
 <tr>
 <th>Holm-Sidak
 </th></tr>
 <tr>
-<th>グループ文字表
+<th>Game-Howell
 </th>
-<td>文字による平均値の差を示した。同じ文字は有意差がないことを意味し、異なる文字は2つのグループ間の有意差を意味します。
+<td><b>入力</b>タブで<b>等分散を仮定</b>を選択していない場合、ペアごとの平均比較に<b>Games-Howell</b>法を使用できます。
+<p>（詳細は<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a>を参照してください）
+</p>
+</td></tr>
+<tr>
+<th>グループ化文字表
+</th>
+<td>平均値の差を文字で示します。同じ文字は有意差がないことを示し、異なる文字は2つのグループ間に有意差があることを示します。
 </td></tr></table>
 <h2><a name="Tests_for_Equal_Variance"></a><span class="mw-headline">等分散性の検定</span></h2>
 <p>分散の均等性を検定するための方法を選択します。
@@ -138,7 +180,7 @@
 <td>等分散性の検定における有意水準を指定します。
 </td></tr>
 <tr>
-<th>Levene | |
+<th>
 </th>
 <td rowspan="3">
 <p>等分散性を検定するための異なる方法の一つです。
@@ -146,40 +188,107 @@
 </p>
 </td></tr>
 <tr>
-<th>Levene ()^2
+<th>
 </th></tr>
 <tr>
 <th>Brown-Forsythe
 </th></tr>
 </table>
 <h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
-<p><a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Power_Analysis" title="ユーザガイド:一元配置分散分析アルゴリズム">検出力解析</a>の実行を選択します。
+<p><a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Power_Analysis" title="ユーザガイド:一元配置分散分析アルゴリズム">検出力解析</a>を実行する場合選択します。
 </p>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定しない場合</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>実際の検出力
+<th>指定した検出力に対する差
 </th>
-<td>実際の検出力テストを実行するかどうかを指定します。
+<td> <b>最小関心差</b>が設定されていない場合、このオプションを使用できます。
+<p>指定した検出力レベルに対応する差を出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。 
+</p>
+</td></tr>
+<tr>
+<th>検出力レベル
+</th>
+<td><b>指定した検出力に対する差</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定する場合</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>関心のある最小差
+</th>
+<td>関心のある最小の差を指定します。このボックスに値を入力すると、検出力分析グラフには、異なる検出力でこの差を検出するために必要な最小標本サイズが表示されます。
+</td></tr>
+<tr>
+<th>指定された検出力のサンプルサイズ
+</th>
+<td><b>関心のある最小差</b>にチェックを付けた場合に使用できます。
+<p>指定した検出力レベルに対応する標本サイズを出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。選択しない場合は、デフォルトの検出力レベルが使用されます。
+</p>
+</td></tr>
+<tr>
+<th>検出力レベル
+</th>
+<td><b>指定した検出力に対する標本サイズ</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr>
+<tr>
+<th>検定データに基づく検出力
+</th>
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>検定データのサンプルサイズでの検出力を計算します。  （帰無仮説が偽であるときに帰無仮説を棄却する確率）
+</p>
 </td></tr>
 <tr>
 <th>仮説の検出力
 </th>
-<td>仮説の検出力テストを実行するかどうかを指定します。
-</td></tr>
-<tr>
-<th>有意水準
-</th>
-<td>仮定の検出力テストの有意水準を指定します。
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>サンプルサイズを変化させた場合の検出力を計算します。このオプションにチェックを付けると、対応する曲線が検出力曲線に追加されます。
+</p>
 </td></tr>
 <tr>
 <th>仮説のサンプルサイズ
 </th>
-<td>仮定のサンプルサイズを指定します。各エントリをスペースで区切って入力します。
+<td><b>関心のある最小差</b>を指定し、<b>仮説の検出力</b>をオンにした場合、このオプションを使用できます。
+<p>検出力計算のための仮想サンプルサイズを指定します。
+</p>
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
 <table class="dialogcontroltable">
 
+<tr>
+<th>グラフィカル要約レポート
+</th>
+<td>グラフィカル要約レポートを表示するかどうかを指定します。
+</td></tr>
+<tr>
+<th>レポートで使用した平均比較法
+</th>
+<td> <b>グラフィカル要約レポート</b>にチェックを付け、<b>入力</b>タブで<b>等分散を仮定</b>にチェックを付けた場合、このオプションを使用できます。平均の比較間隔の方法を選択します。
+<ul><li>Tukey / Dunnett</li>
+<li>Bonferroni</li>
+<li>Dunn-Sidak</li>
+<li>FisherのLSD</li>
+<li>Scheffe</li></ul>
+<p><b>グラフィカル要約レポート</b>がチェックされている場合、このオプションは表示されません。平均の比較間隔の方法は<b>Games-Howell</b>です。
+</p>
+</td></tr>
+<tr>
+<th>グラフィカル診断レポート
+</th>
+<td>診断レポートを表示するかどうかを指定します。
+<p>グラフィカル要約レポートが表示されている場合、レポートの後のグラフノードに表示されます。グラフィカル要約レポートが表示されない場合は最初のグラフノードに表示されます。
+</p><p>標本サイズは、左パネルの<b>データの分布</b>に表示されるプロットタイプに影響します。
+</p>
+<ul><li> 1つの因子の標本サイズが30以上の場合、ヒストグラム + 区間プロットが表示されます。</li>
+<li> 1つの因子の標本サイズが30未満の場合、ドット + 区間プロットが表示されます。</li>
+<li> 因子の数が6を超える場合、ヒストグラムまたはドットプロットのみが表示され、区間プロットは非表示になります。</li></ul>
+</td></tr>
+<tr>
+<th>グラフィカル検出力解析レポート
+</th>
+<td>検出力解析レポートをグラフィカルに表示するかどうかを指定します。検出力曲線は、比率の差の変化に応じて検定の統計的検出力がどのように変化するかを示します。検出力とは、真の差が0と異なる場合に帰無仮説を棄却する確率です。
+</td></tr>
 <tr>
 <th>グラフ配置
 </th>
@@ -198,14 +307,14 @@
 <p><b>ブック</b>
 </p>
 <dl><dd>目的のワークブックを指定します。出力ブックは<b><b>ブック名</b></b>にあります。</dd></dl>
-<dl><dd><ul><li>&lt;<b>なし</b>&gt;: レポートワークシート表を出力しません（<b><b>ブック名</b></b>ボックスは空で読み取り専用です）。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>なし</b>&gt;: レポートワークシートのテーブルを出力しません（<b>ブック名</b>ボックスは空白で、読み取り専用になります）。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>自動</b>&gt;: 初期入力データ選択の場所（入力データ範囲は異なるブックからのものである場合もあります）。入力データがOriginワークブックにない場合、Originは自動的に適合するOriginワークブックを選択します(通常は新しいワークブックを作成)。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>ソース</b>&gt;: ソースデータのワークブックです。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>新規</b>&gt;: 新しいワークブックです。</li></ul></dd></dl>
 <dl><dd><ul><li><b>&lt;既存のもの&gt;</b>:指定した既存のワークブック</li></ul></dd></dl>
 <p><b>シート</b>
 </p>
-<dl><dd>出力先ワークシートです（常に&lt;<b>新規</b>&gt;で名前は<b>SheetName</b>）。</dd></dl>
+<dl><dd>コピー先のワークシート（常に<b>&lt;新規&gt;</b>、名前は<b>SheetName</b>）。</dd></dl>
 <p><b>結果ログ</b>
 </p>
 <dl><dd>結果ログにレポートを出力するかどうかを指定します。</dd></dl>
@@ -221,18 +330,18 @@
 <tr>
 <th>プロットデータ
 </th>
-<td>プロットのデータの出力先を指定します（プロットするには、下の<b><b>プロット</b></b>オプションを選択する必要があります。）。
+<td>プロットデータの出力先を指定します（下記の<b>プロット</b>オプションを選択した場合）。
 <p><b>ブック</b>
 </p>
 <dl><dd>プロットデータを出力するワークブックを指定します。</dd></dl>
-<dl><dd><ul><li>&lt;<b>自動</b>&gt;: <b><b>ブック名</b></b>を&lt;<b>なし</b>&gt;にしていなければ、レポート表ブックの設定に従います。</li></ul></dd></dl>
+<dl><dd><ul><li>&lt;<b>自動</b>&gt;: <b>ブック</b> = &lt;<b>なし</b>&gt; に設定している場合を除き、レポートテーブルのブック設定に従います。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>ソース</b>&gt;: ソースデータのワークブックです。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>レポート</b>&gt;: レポートワークブックです。</li></ul></dd></dl>
 <dl><dd><ul><li>&lt;<b>新規</b>&gt;: 新しいワークブックです。</li></ul></dd></dl>
 <dl><dd><ul><li><b>&lt;既存のもの&gt;</b>:指定した既存のワークブック</li></ul></dd></dl>
 <p><b>シート</b>
 </p>
-<dl><dd>出力先ワークシートです（常に&lt;<b>新規</b>&gt;で名前は<b>SheetName</b>）。</dd></dl>
+<dl><dd>コピー先のワークシート（常に<b>&lt;新規&gt;</b>、名前は<b>SheetName</b>）。</dd></dl>
 </td></tr>
 <tr>
 <th>オプショナルなレポートテーブル

@@ -1,35 +1,40 @@
-﻿<h1 class="firstheading">1群のt検定ダイアログボックス</h1><p class='urlname' style='display: none'>tTest-OneSample-Dialog</p>
+﻿<h1 class="firstHeading">1群のt検定ダイアログボックス</h1><p class='urlname' style='display: none'>tTest-OneSample-Dialog</p>
 <p><br />
 </p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Input"><span class="tocnumber">3</span> <span class="toctext">入力</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#t-Test_for_Mean"><span class="tocnumber">4</span> <span class="toctext">平均のt検定</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">検出力解析</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">プロット</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Power_Analysis"><span class="tocnumber">5</span> <span class="toctext">検出力解析</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">5.1</span> <span class="toctext">最小関心差を設定しない場合</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">5.2</span> <span class="toctext">最小関心差を設定する場合</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">プロット</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
 </ul>
 </div>
 
 <h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
 <p>1群のt検定ダイアログボックスを開くには、
 </p>
-<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：t検定（1群）...</b>をクリックします。</li></ol>
+<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：1群のt検定</b>をクリックします。</li></ol>
 <p><i>関連情報：</i>
 </p>
-<ul><li> <a href="../../UserGuide/Category/One-Sample_t-Test.html" title="カテゴリー：1群のt検定">はじめに：1群のt検定</a></li>
-<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="ユーザガイド：アルゴリズム (1群のt検定)">アルゴリズム：1群のt検定</a></li>
-<li> <a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">チュートリアル：仮説検定</a></li></ul>
+<ul><li> <a href="../../UserGuide/Category/One-Sample_t-Test.html" title="カテゴリー:1群のt検定">はじめに：1群のt検定</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="ユーザガイド:アルゴリズム(OneSampletTest)">アルゴリズム：1群のt検定</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/Hypothesis_Tests.html">チュートリアル:仮説検定</a></li></ul>
 <h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>再計算</b>
+<th>再計算
 </th>
 <td>
-<p>分析結果の再計算を制御します。
+<p>分析結果の再計算の設定を変更します。
 </p>
 <ul><li><b>なし</b> </li>
 <li><b>自動</b> </li>
@@ -38,55 +43,61 @@
 </p>
 </td></tr></table>
 <h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
+<p>1群のt検定は、<b>素データ</b>と<b>要約データ</b>の2つの入力データ形式に対応しています。
+</p>
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>入力データ形式</b>
+<th>素データ値
 </th>
-<td>
-<p><b>要約データ</b>
+<td>範囲形式の列を使用して検定を実行します。各列には、因子変数の各水準に対応する応答データが含まれます。
+<p>範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。
 </p>
-<dl><dd>標本の平均値、標準偏差、サンプルサイズを、&quot;<i>mean</i> <i>SD</i> <i>N</i>&quot; という形式（数字の間には、スペースを挿入）で入力します。</dd></dl>
-<p><b>素データ</b>
-</p>
-<dl><dd>範囲を選択して、列を入力します。範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。</dd></dl>
 </td></tr>
 <tr>
-<th><b>入力</b>
+<th>要約データ
 </th>
-<td>
-<p>データを入力します。
+<td>要約データは、サンプルに用意された平均値、標準偏差、四分位、サンプルサイズです。  複数の要約データをサポートしています。
+<p>ワークシートの列を選択するか、手動でダイアログボックスに要約データを入力します。
 </p>
+<ul><li> <b>サンプル名</b></li></ul>
+<dl><dd>サンプルの名前を指定します。列をサンプル名として指定するか、スペースで区切った文字列を入力します。あるいは、空のままにします。</dd></dl>
+<ul><li> <b>平均</b></li></ul>
+<dl><dd>データの平均を指定します。  列データセットを指定するか、スペース区切りの値を入力します。 </dd></dl>
+<ul><li> <b>SD</b></li></ul>
+<dl><dd>データの標準導出を指定します。  列データセットを指定するか、スペース区切りの値を入力します。（SDは0より大きい必要があります。）</dd></dl>
+<ul><li> <b>サンプルサイズ</b></li></ul>
+<dl><dd>データの総数を指定します。列データセットを指定するか、スペース区切りの値を入力します。（サンプルサイズは0より大きい必要があります。）</dd></dl>
 </td></tr></table>
-<h2><a name="t-Test_for_Mean"></a><span class="mw-headline">平均のt検定</span></h2>
+<h2><a name="t-Test_for_Mean"></a><span class="mw-headline">平均の t 検定</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
 <th>検定する平均
 </th>
-<td>検定される仮説の平均値を入力すると帰無仮説と対立仮説の項目が更新されます。
+<td>検定する仮説上の平均値です。値を入力すると、帰無仮説と対立仮説がそれに応じて調整されます。
 </td></tr>
 <tr>
 <th>帰無仮説
 </th>
-<td>検定される帰無仮説
-<p>(平均 = 検定される平均)
+<td>検定する帰無仮説です。
+<p>（平均=検定の平均）
 </p>
 </td></tr>
 <tr>
 <th>対立仮説
 </th>
-<td>対立仮説
-<p><b>オプション</b>：
-</p><p><b>平均 &lt;&gt;検定される平均</b> 
+<td>対立仮説です。
+<p>オプション：
+</p><p><b>平均 &lt;&gt; 検定平均</b> 
 </p>
-<dl><dd>両側の検定を使用。標本平均が仮説の平均と異なるか検定します。 </dd></dl>
-<p><b>平均 &gt;検定される平均</b>
+<dl><dd>両側検定に使用します。標本平均が仮定した平均と異なるかどうかを検定します。 </dd></dl>
+<p><b>平均 &gt; 検定平均</b>
 </p>
-<dl><dd>上側の片側検定を使用。標本平均が仮説の平均より大きいか検定します。 </dd></dl>
-<p><b>平均 &lt;検定される平均</b> 
+<dl><dd>上側検定に使用します。標本平均が仮定した平均より大きいかどうかを検定します。 </dd></dl>
+<p><b>平均 &lt; 検定平均</b> 
 </p>
-<dl><dd>下側の片側検定を使用。標本平均が仮説の平均より小さいか検定します。 </dd></dl>
+<dl><dd>下側検定に使用します。標本平均が仮定した平均より小さいかどうかを検定します。 </dd></dl>
 </td></tr>
 <tr>
 <th>有意水準
@@ -94,81 +105,161 @@
 <td>有意水準を指定します。
 </td></tr>
 <tr>
+<th>効果量
+</th>
+<td>効果量 Cohen&rsquo;s d を計算します。これは実際の平均と検定平均の差の大きさを示します。
+</td></tr>
+<tr>
 <th>信頼区間
 </th>
 <td>平均の信頼区間を計算します。
-<p>計算の詳細は、<a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="ユーザガイド：アルゴリズム (1群のt検定)">アルゴリズム（1群のt検定）</a>を確認してください。
+<p>計算の詳細については<a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTest).html" title="ユーザガイド:アルゴリズム(OneSampletTest)">アルゴリズム（One-Sample T-Test）</a>を参照してください。
 </p>
 </td></tr>
 <tr>
 <th>%単位での信頼水準
 </th>
-<td>信頼水準をスペース区切りで指定します。 (1-<img src="../images/The_OneSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex"/>)%で表わされます。<i>信頼区間</i>が選択されたときに有効です。
+<td>信頼水準 (1 - <img src="../images/The_OneSampletTest_Dialog_Box/math-a2ab7d71a0f07f388ff823293c147d21.png" title="\sigma" alt="\sigma" class="tex"/>)% をスペース区切りで指定します。<i>信頼区間</i>が選択されている場合にのみ使用できます。
 </td></tr></table>
 <h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定しない場合</span></h4>
 <table class="dialogcontroltable">
 
 <tr>
-<th>実際の検出力
+<th>指定した検出力に対する差
 </th>
-<td>検定の検出力を計算します（偽の時に帰無仮説を棄却する確率）。
+<td> <b>最小関心差</b>が設定されていない場合、このオプションを使用できます。
+<p>指定した検出力レベルに対応する差を出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。 
+</p>
 </td></tr>
 <tr>
-<th>有意水準
+<th>検出力レベル
 </th>
-<td><i>仮説検出力</i>と/または<i>実際の検出力</i>にチェックが付いている場合にのみ利用できます。これは検出力の計算用の有意水準(またはアルファ値)です。
+<td><b>指定した検出力に対する差</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定する場合</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>関心のある最小差(MDI)
+</th>
+<td>検定する平均からの最小差を指定します。ここに値を入力すると、検出力解析のグラフに、この差を検出するために必要なサンプルサイズが異なる検出力ごとに表示されます。
+</td></tr>
+<tr>
+<th>指定された検出力のサンプルサイズ
+</th>
+<td><b>関心のある最小差</b>にチェックを付けた場合に使用できます。
+<p>指定した検出力レベルに対応する標本サイズを出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。 
+</p>
+</td></tr>
+<tr>
+<th>検出力レベル
+</th>
+<td><b>指定した検出力に対する標本サイズ</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr>
+<tr>
+<th>検定データに基づく検出力
+</th>
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>検定データのサンプルサイズでの検出力を計算します。（帰無仮説が偽であるときに帰無仮説を棄却する確率）
+</p>
 </td></tr>
 <tr>
 <th>仮説の検出力
 </th>
-<td>様々なサンプルサイズにおける検定の検出力を計算します。
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>指定したサンプルサイズでの検出力を計算します。このオプションにチェックを入れると、下のボックスに仮説のサンプルサイズを指定することができ、対応する曲線が検出力曲線に追加されます。
+</p>
 </td></tr>
 <tr>
-<th>仮説標本サイズ
+<th>仮説のサンプルサイズ
 </th>
-<td><i>仮説の検出力</i> にチェックが付いている場合のみ利用できます。検出力計算のための仮説の標本サイズを指定します。
+<td><b>関心のある最小差</b>を指定し、<b>仮説の検出力</b>をオンにした場合、このオプションを使用できます。
+<p>検出力計算のための仮想サンプルサイズを指定します。
+</p>
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b> 複数のデータ（<b>素データ</b>と<b>要約データの</b>両方）を入力した場合、<b>検出力解析</b>レポートは出力されません。
 </td></tr></table>
 <h2><a name="Plots"></a><span class="mw-headline">プロット</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
+<th>確率プロット
+</th>
+<td>確率プロットを出力します。
+</td></tr>
+<tr>
 <th>ボックスチャート
 </th>
-<td>ボックスチャートを作図します。
+<td>ボックスチャートをプロットします。
+<p><b>Note:</b>データセットに外れ値が検出されると、ボックスチャートの下に脚注として、そのケースを確認するためのメモが表示されます。外れ値を除外したい場合は、脚注の最後にある三角形のボタンをクリックして外れ値をマークし、再計算できます。
+</p>
 </td></tr>
 <tr>
 <th>ヒストグラム
 </th>
-<td>ヒストグラムを作図します。
+<td>ヒストグラムをプロットします。
 </td></tr>
 <tr>
-<th>1つのグラフ中に同じタイプのプロットを配置
+<th>グラフ中に同じ形式のプロットを配列
 </th>
-<td>ヒストグラムの場合、レイヤは垂直に配置されます。ボックスチャートの場合、レイヤは水平に配置されます。
+<td>ヒストグラムの場合レイヤは縦に並びます。ボックスチャートの場合、レイヤは横に並びます。
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b>入力データ形式が<b>要約データ</b>の場合、プロットは利用できません。
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
-<p><a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">出力結果</a>についてはこちらを確認してください：
+<p>範囲制御についてはこちらを参照してください：<a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">出力結果</a>
 </p>
 <table class="dialogcontroltable">
 
 <tr>
-<th><b>結果ログの出力</b>
+<th>結果ログの出力
 </th>
 <td>
-<p>結果を結果ログに出力するにはチェックします。
+<p>選択すると結果を結果ログに出力します。
 </p>
 </td></tr>
 <tr>
-<th>プロットデータの出力
+<th>グラフィカル要約レポート
 </th>
-<td>プロットされたデータを出力するワークシートを指定します（Originはプロットが作成された時に表形式データを生成します）。 <br />
-<p>これは、<b>インプットデータ</b>が素データであるときにのみ、有効です。
+<td>サマリーグラフを作成します。内容には P値バー、効果量バー、データの分布グラフが含まれます。また、統計値を示す結果表がグラフに添付されます。
+<p>サマリーグラフの脚注として、これらの統計結果の診断が表示されます。
 </p>
 </td></tr>
 <tr>
-<th>結果の出力
+<th>グラフィカル検出力解析レポート
 </th>
-<td>検定結果を出力するワークシートを指定します。
+<td>検出力曲線を含むグラフィカルな検出力分析レポートを作成します。  出力テーブルと検出力曲線は、<b>検出力解析</b>タブの設定に従います。
+<ul><li><b>関心のある最小差</b>に値が設定されていない場合、現在のサンプルサイズの検出力曲線のみが出力され、60%、70%、80%、90%（デフォルト値）の検出力における差が表示されます。 </li></ul>
+<ul><li><b>関心のある最小差</b>に値が設定されている場合、60%、70%、80%、90%（デフォルト値）と現在のサンプルサイズの検出力曲線が出力され、最小差を検出するために必要なサンプルサイズが一覧表示されます。</li></ul>
+<p>検出力曲線グラフの後に検出力解析の診断結果を示す脚注を追加で表示します。検出力の値 80% は一般的に十分と見なされます。
+</p>
+</td></tr>
+<tr>
+<th>プロットデータ出力
+</th>
+<td>プロットデータの出力用ワークシートを指定します (Originはプロットの作成時に表形式のデータを生成します)。 <br />
+<p>これは、<b>入力データ形式</b>が素データであるときにのみ有効です。
+</p>
+</td></tr>
+<tr>
+<th>結果出力
+</th>
+<td>結果を出力するワークシートを指定します。
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> 入力データ形式が<b>要約データ</b>の場合、<b>グラフィカル要約</b>オプションは使用できません。</li>
+<li> 複数のデータ（<b>素データ</b>と<b>要約データの</b>両方）を入力した場合、<b>グラフィカル検出力解析レポート</b>は出力されません。</li>
+<li> 入力データ形式が素データの場合、<b>マスクされたデータ</b>と<b>不正データ（欠損値）</b>表がレポートシートに表示されます。</li></ul>
 </td></tr></table>
 
 

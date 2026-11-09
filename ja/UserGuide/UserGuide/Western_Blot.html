@@ -1,0 +1,122 @@
+﻿<h1 class="firstHeading">ウェスタンブロット</h1><p class='urlname' style='display: none'>Western-Blot</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Support_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Western_Blot_Data_Structure"><span class="tocnumber">2</span> <span class="toctext">ウェスタンブロットのデータ構造</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Western_Blot_with_Raw_Band_Instensity"><span class="tocnumber">2.1</span> <span class="toctext">生のバンド強度のウェスタンブロット</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Western_Blot_with_Reference.2FTotal_Protein"><span class="tocnumber">2.2</span> <span class="toctext">参照/総タンパク質のウェスタンブロット</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Wetern_Blot_Dialog_Box"><span class="tocnumber">3</span> <span class="toctext">ウェスタンブロットダイアログボックス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Input"><span class="tocnumber">3.1</span> <span class="toctext">入力</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Tests"><span class="tocnumber">3.2</span> <span class="toctext">検定</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Plots"><span class="tocnumber">3.3</span> <span class="toctext">プロット</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><a name="Support_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p><b>ウェスタンブロットアッセイを分析する</b>
+</p>
+<ul>
+<li> <b>テンプレートを使用</b> 
+<ol><li> メニューの<b>ヘルプ: スタートアップダイアログ</b>を選択し、<b>スタートアップ</b>ダイアログを開きます。</li>
+<li> <b>ラボアッセイ</b>タブに行き、<b>ウェスタンブロット</b>ブランチを広げ、希望するデータ構造を選択します。テンプレートが案内とともに開きます。</li></li></ol>
+<li> <b>自身のワークシートを使用</b>
+<ol><li> ワークシートにデータを入力します。</li>
+<li> メニューから<b>統計：ラボアッセイ：ウェスタンブロット</b>を選択し、分析ダイアログを開きます。</li></ol>
+</li></ul>
+<h2><a name="Western_Blot_Data_Structure"></a><span class="mw-headline">ウェスタンブロットのデータ構造</span></h2>
+<h3><a name="Western_Blot_with_Raw_Band_Instensity"></a><span class="mw-headline">生のバンド強度のウェスタンブロット</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Raw Band Instensity Data.png" src="../images/Western_Blot/Western_Blot_with_Raw_Band_Instensity_Data.png" width="357"  /></a></dd></dl>
+<p>分析対象となる、各処理条件のターゲットバンド強度値を指定します。 
+</p>
+<ul><li> 各列は、<b>Control</b>、<b>TreatmentA</b>、<b>TreatmentB</b>などの1つの実験グループを表します。 </li>
+<li> 各行は、独立した1つの生物学的反復を表します。通常、少なくとも3つの反復が必要です。テクニカルレプリケートを測定した場合は、ここに入力する前に平均値を計算するなどして、生物学的サンプルごとに1つの値にまとめてください。 </li>
+<li> このワークフローでは、値がすでに参照タンパク質に対して正規化されているかどうかは確認されません。参照タンパク質による正規化が必要な場合は、インポート前に正規化するか、<a href="#Western_Blot_with_Reference.2FTotal_Protein">「参照/総タンパク質」ワークフロー</a>を使用してください。 </li>
+<li> すべての列には数値を入力する必要があります。テキスト、空白セル、負のグレー値は欠損値として扱われ、解析から除外されます。</li></ul>
+<h3><a name="Western_Blot_with_Reference.2FTotal_Protein"></a><span class="mw-headline">参照/総タンパク質のウェスタンブロット</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot with Reference Data.png" src="../images/Western_Blot/Western_Blot_with_Reference_Data.png" width="464"  /></a></dd></dl>
+<p>解析対象となるタンパク質の種類と、それぞれのバンド強度値を指定します。すべてのターゲットタンパク質と参照タンパク質は、1つの列に縦方向にまとめて配置します。
+</p>
+<ul><li> テキスト列「<b>Protein</b>」には、<i>GAPDH</i>、<i>ACTB</i>、<i>BAX</i>、<i>BCL2</i>など、異なるタンパク質の種類を示すラベルを入力します。各ターゲットタンパク質の反復測定値は、同じ実験グループ内の参照タンパク質の反復測定値と、行ごとに対応している必要があります。ターゲットタンパク質と参照タンパク質の行の順序は、すべてのグループ列で統一する必要があります。例えば、1～3行目が<i>BAX</i>の反復測定値、4～6行目が<i>BCL2</i>、7～9行目が<i>GAPDH</i>の場合、各グループのターゲットタンパク質の1番目の反復測定値は、<i>GAPDH</i>の1番目の反復測定値と対応させ、以降も同様に対応させます。</li>
+<li> 「<b>Protein</b>」列以外のすべての数値列には、<b>Control</b>、<b>TreatmentA</b>、<b>TreatmentB</b>など、異なる実験グループにおけるターゲットタンパク質と参照タンパク質のバンド強度値を入力します。 </li>
+<li> 各行は、独立した1つの生物学的反復を表します。通常、少なくとも3つの反復が必要です。テクニカルレプリケートを測定した場合は、ここに入力する前に平均値を計算するなどして、生物学的サンプルごとに1つの値にまとめてください。 </li></ul>
+<h2><a name="Wetern_Blot_Dialog_Box"></a><span class="mw-headline">ウェスタンブロットダイアログボックス</span></h2>
+<h3><a name="Input"></a><span class="mw-headline">入力</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Input Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Input_Tab.png" width="747"  /></a></dd></dl>
+<table class="simple">
+<tr>
+<th width="15%">入力
+</th>
+<td>分析対象となるバンド強度値
+</td></tr>
+<tr>
+<th>識別子
+</th>
+<td><a href="#Western_Blot_with_Reference.2FTotal_Protein">「参照/総タンパク質」ワークフロー</a>では、各行がターゲットタンパク質か参照タンパク質かを識別する「<b>Protein</b>」列を選択します。
+</td></tr>
+<tr>
+<th>変換
+</th>
+<td>変換は、統計検定の実行前に適用されます。
+<ul><li> <b>参照で正規化</b></li></ul>
+<dl><dd><a href="#Western_Blot_with_Reference.2FTotal_Protein">「参照/総タンパク質」ワークフロー</a>で使用可能です。<i>GAPDH</i>、<i>ACTB</i>、<i>TUBA1A</i>、<i>TUBB</i>など、安定したローディングコントロールとなる参照タンパク質を選択します。 </dd>
+<dd>以下によりターゲットタンパク質を正規化します。 </dd>
+<dd>同じ実験グループ列内の<img src="../images/Western_Blot/math-0cb35ac386f9d33b8d5170c4ff842d05.png" title="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}
+" alt="Normalized\ value=\frac{Target\ intensity\ of\ that\ replicate}{Reference\ intensity\ of\ the\ same\ replicate}
+" class="tex"/></dd></dl>
+<ul><li> <b>対照グループに対する相対発現量</b></li></ul>
+<dl><dd><b>対照グループ</b>を基準として用います。<b>対照</b>グループの平均値が1（100%）になるように値を再スケーリングし、<b>処理</b>グループの値を対照グループに対するfold changeとして表します。この変換によって生物学的変動が除去されるわけではなく、結果を解釈しやすくするためにグループの平均値を再スケーリングするだけです。</dd></dl>
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td>統計的有意性を判定するためのしきい値を設定します。
+</td></tr>
+<tr>
+<th>多重比較
+</th>
+<td>比較対象のセットを選択します。
+<ul><li> <b>すべてのペア比較</b></li></ul>
+<dl><dd><b>対照</b>グループと<b>処理</b>グループを相互に比較します。正規性と等分散性の仮定に応じて、「検定」タブで適切な事後比較法（Tukey法、Games-Howell法、Dunn検定）を選択してください。</dd></dl>
+<ul><li> <b>対照と比較</b></li></ul>
+<dl><dd>各<b>処理</b>グループは、<b>対照</b>グループとのみ比較します。これにより検定の回数が少なくなり、多数の<b>処理グループ</b>をスクリーニングする際に、より高い検出力が得られる可能性があります。「検定」タブでは、通常、Dunnett検定が適切な事後比較法となります。</dd></dl>
+</td></tr></table>
+<h3><a name="Tests"></a><span class="mw-headline">検定</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Tests Tab.png" src="../images/Western_Blot/850px-Western_Blot_Dialog_Tests_Tab.png" width="850"   /></a></dd></dl>
+<p><b>Step 1: 正規性の検定</b> 
+</p><p>各グループのデータが正規分布に従うかどうかを検証します。反復数が5未満の場合は、正規性を仮定し、この検定をスキップします。 
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Shapiro-Wilk_normality_test" title="ユーザガイド:アルゴリズム(正規性)">Shapiro-Wilk検定</a>：少ない標本の場合にデフォルトで使用します。（例：反復数3～10）</li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Anderson-Darling_Test" title="ユーザガイド:アルゴリズム(正規性)">Anderson-Darling</a>または<a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#D.27Agostino-K_Squared" title="ユーザガイド:アルゴリズム(正規性)">D&apos;Agostino-Pearson K2</a>：標本サイズが大きい場合に有用ですが、わずかな分布のずれでも統計的に有意と判定されることがあります。</li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(Normality).html#Kolmogorov-Smirnov_normality_test" title="ユーザガイド:アルゴリズム(正規性)">Kolmogorov-Smirnov</a>：少ない標本や、同じグレースケール値が複数存在するデータには、あまり推奨されません。</li></ul></dd></dl>
+<p><br />
+<b>Step 2: 等分散検定 (パラメトリックブランチのみ)</b>
+</p><p>すべてのグループが正規分布に従う場合は、<b>等分散性検定</b>を実行し、すべてのグループの分散が等しいかどうかを検証します。<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Homogeneity_of_Variance" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズムについては、こちら</a>を参照してください。
+</p>
+<dl><dd><ul><li> Bonett多重比較</li>
+<li> Brown-Forsythe：非正規性（特に標本サイズが5未満の場合）や外れ値に対して頑健であるため、少ない標本の場合の安全なデフォルトとして推奨されます。</li>
+<li> Levene | |</li>
+<li> Levene ()<sup>2</sup></li>
+<li> Bartlett：正規性が十分に確認されている場合に適していますが、標本サイズが小さい場合やノイズの多いデータでは頑健性が低くなります。</li></ul></dd></dl>
+<ul>
+<li> すべてのグループの分散が等しい場合は、<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Theory_of_One-Way_ANOVA" title="ユーザガイド:一元配置分散分析アルゴリズム"><b>一元配置ANOVA</b></a>と<a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html#Multiple_Means_Comparisons" title="ユーザガイド:一元配置分散分析アルゴリズム"><b>平均比較</b></a>を実行します。
+<li> 分散が等しくない場合は、<b>WelchのANOVA</b>と<b>Games-Howell</b>を実行します。</li>
+</ul>
+<p><br />
+<b>Step 3: ノンパラメトリック ブランチ</b>
+</p><p>1つ以上のグループが正規分布に従わない場合は、<b>ノンパラメトリックANOVA</b>と<b>Dunn検定</b>を実行します。
+</p>
+<dl><dd><ul><li> <a href="../../UserGuide/UserGuide/Algorithm_(kwanova).html" title="ユーザガイド:アルゴリズム(kwanova)">Kruskal-Wallis</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(median).html" title="ユーザガイド:アルゴリズム(median)">Moodのメディアン</a></li></ul></dd></dl>
+<h3><a name="Plots"></a><span class="mw-headline">プロット</span></h3>
+<dl><dd><a  class="image"><img alt="Western Blot Dialog Plots Tab.png" src="../images/Western_Blot/Western_Blot_Dialog_Plots_Tab.png" width="769"  /></a></dd></dl>
+<p>多重比較プロットの見た目を設定します。変更内容はすべて、右側のライブプレビューパネルに即座に反映されます。
+</p>
+
+
+
+    

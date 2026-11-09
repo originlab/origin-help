@@ -1,0 +1,85 @@
+﻿<h1 class="firstHeading">カイ二乗適合度検定ダイアログボックス</h1><p class='urlname' style='display: none'>Chi-square-Test-Dialog</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input_Data_Form"><span class="tocnumber">2</span> <span class="toctext">入力データ形式</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Significance_Level"><span class="tocnumber">3</span> <span class="toctext">有意水準</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Reset_Table"><span class="tocnumber">4</span> <span class="toctext">表をリセット</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Table"><span class="tocnumber">5</span> <span class="toctext">表</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p>カイ二乗適合度検定ダイアログを開くには：
+</p>
+<ol><li> ワークシートをアクティブにして、<b>統計：仮説検定：カイ二乗適合度検定を選択します。 </b></li></ol>
+<p><br />
+<i><b>関連情報：</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/Chi-square_Goodness-of-Fit_Test_(Pro_Only).html" title="カテゴリ:カイ二乗適合度検定（Proのみ）">カイ二乗適合度検定のイントロダクション</a></li></ul>
+<p><br />
+</p>
+<h2><a name="Input_Data_Form"></a><span class="mw-headline">入力データ形式</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>素データ値
+</th>
+<td><b>カテゴリ</b>の生データ列を使用して検定を実行します。
+<p>このオプションを選択すると、下の表の<b>観測数</b>列は編集できません。このオプションは、ワークシート列からインポートしたデータセットで使用できます。 
+<b>カテゴリ</b>に素データ列を指定すると、<b>観測値</b>が自動的にカウントされて表に入力されます。その後、<b>期待値</b>データを指定できます。
+</p>
+</td></tr>
+<tr>
+<th>要約データ
+</th>
+<td><b>観測数</b>および<b>期待値</b>の要約データを使用して検定を実行します。
+</td></tr></table>
+<h2><a name="Significance_Level"></a><span class="mw-headline">有意水準</span></h2>
+<p>カイ二乗適合度検定の湯いい水準を設定します。
+</p>
+<h2><a name="Reset_Table"></a><span class="mw-headline">表をリセット</span></h2>
+<p>次の表の内容をすべてクリアします。
+</p>
+<h2><a name="Table"></a><span class="mw-headline">表</span></h2>
+<p>次の2つの方法でテーブルにデータセットを入力します。
+</p>
+<ul><li> テーブルにデータを直接入力します。</li>
+<li> ヘッダーのボタン<a  class="image"><img alt="Select Column in Worksheet.png" src="../images/Chi-square_Goodness-of-Fit_Test_Dialog_Box/Select_Column_in_Worksheet.png" width="20"  /></a>をクリックして、ワークシートの列データセットを選択してインポートします。</li></ul>
+<table class="dialogcontroltable">
+
+<tr>
+<th>カテゴリ
+</th>
+<td>検定するグループ(行)の名前を指定します。
+</td></tr>
+<tr>
+<th>観測数
+</th>
+<td><b>入力データフ形式</b>を <b>要約データ</b>にすると、この列を編集できます。
+<p>各カテゴリの観測値の実際の数を指定します。
+</p>
+</td></tr>
+<tr>
+<th>期待
+</th>
+<td>各カテゴリの期待値を指定します。
+<p>列ヘッダの<b>期待値</b>の下にあるドロップダウンリストをクリックすると、期待値のタイプを変更できます。期待データは、以下のいずれかのタイプで指定します。
+</p>
+<ul><li> <b>等比率 (1/k)</b></li></ul>
+<dl><dd>このオプションを選択した場合、期待値を入力する必要はありません。検定するカテゴリ数（行数）で1を割った値が自動的に計算されます。</dd></dl>
+<ul><li><b>比率 (0-1)</b></li></ul>
+<dl><dd> 期待比率の合計は1である必要があります。</dd></dl>
+<ul><li> <b>度数</b></li></ul>
+<dl><dd>観測度数と期待度数の合計は一致する必要があります。</dd></dl>
+<ul><li> <b>パーセント (%)</b></li></ul>
+<dl><dd> 期待パーセントの合計は100である必要があります。</dd></dl>
+</td></tr></table>
+
+
+
+
+
+
+
+    

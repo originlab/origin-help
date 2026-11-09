@@ -1,0 +1,134 @@
+﻿<h1 class="firstHeading">多重比較プロットを作成</h1><p class='urlname' style='display: none'>Create-MCP</p>
+<p>多重比較プロットは、グループ間または項目のペア間の差、順位、統計的有意性を示すためのデータ可視化・分析方法です。
+</p>
+<dl><dd><a  class="image"><img alt="Creating Paired Comparison Plot 01.png" src="../images/Creating_Paired_Comparison_Plot/Creating_Paired_Comparison_Plot_01.png" width="574"  /></a></dd></dl>
+<p>多くの統計ツールでは、分析の実行後にレポートシートを開き、<b>多重比較プロットを作成</b>アイコン <a  class="image"><img alt="Button PCP.png" src="../images/Creating_Paired_Comparison_Plot/Button_PCP.png" width="18"  /></a> をクリックすると、<b>多重比較プロット</b>ダイアログが開き、多重比較プロットを作成できます。
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 02.png" src="../images/Creating_Paired_Comparison_Plot/750px-Creating_Paired_Comparison_Plot_02.png" width="743"   /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Dialog_Controls"><span class="tocnumber">1</span> <span class="toctext">ダイアログの設定</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Options_tab"><span class="tocnumber">1.1</span><span class="toctext">オプションタブ</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Comparisons_to_Display_tab"><span class="tocnumber">1.2</span> <span class="toctext">表示する比較タブ</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Output_tab"><span class="tocnumber">1.3</span> <span class="toctext">出力タブ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Supported_in_these_Statistical_Tools"><span class="tocnumber">2</span> <span class="toctext">サポートしている統計ツール</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Creating_Significant_Plot"><span class="tocnumber">3</span> <span class="toctext">有意差プロットを作成</span></a></li>
+</ul>
+</div>
+<h2><a name="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h2>
+<h3><a name="Options_tab"></a><span class="mw-headline">オプションタブ</span></h3>
+<table class="dialogcontroltable">
+<tr>
+<th>平均値比較方法
+</th>
+<td>平均を比較する方法を選択します。Originでは、平均比較の方法として様々な手法を提供しています。たとえばANOVAでは、Tukey、Bonferroni、Dunn-Sidak、Fisher LSD、Scheff&eacute;、Holm-Bonferroni、Holm-Sidakがあります。
+<p><b>Note:</b> <a href="../../UserGuide/UserGuide/The_ANOVATwoWayRM_Dialog_Box.html" title="ユーザガイド:二元配置ANOVA（繰り返し測定）ダイアログボックス">二元配置反復測定の分散分析</a>の結果から多重比較プロットを作成する場合、現在Originでは<b>Dunnett</b>法をサポートしていません。
+</p>
+</td></tr>
+<tr>
+<th>プロットタイプ
+</th>
+<td>グループまたはサブグループを表示する一対比較プロットのプロットタイプを選択します。
+<ul><li> <b>棒</b></li>
+<li> <b>ボックス</b></li>
+<li> <b>バイオリン</b> </li>
+<li> <b>平均シンボル</b></li>
+<li> <b>兵kンシンボル接続</b></li>
+<li> <b>個別データ点</b></li>
+<li> <b>接続線付き個別データ点</b></li></ul>
+</td></tr>
+<tr>
+<th>個々のデータ点を表示
+</th>
+<td><b>プロットタイプ</b>として<b>棒</b>または<b>ボックス</b>を選択すると、個々のデータを棒またはボックスと一緒に表示するかどうか設定できます。他のプロットタイプでは、個々のプロットがデフォルトで表示されます。
+</td></tr>
+<tr>
+<th>エラーバー
+</th>
+<td>プロットタイプが<b>棒</b>、<b>ボックス</b>、<b>散布図</b>、<b>散布図と折れ線</b>の場合、グラフにエラーバーを追加するかどうか、およびエラーバーとして表示する統計値を選択できます。
+</td></tr>
+<tr>
+<th>第1因子
+</th>
+<td>このオプションは、二元配置分散分析および二元配置分散分析（繰り返し測定）レポートでのみ表示されます。入力として2つの因子が選択されている場合、一対比較の構成方法を選択できます。<b>外部</b>では第1因子をまたいで項目を比較し、<b>内部</b>では第1因子内の項目を比較します。
+</td></tr>
+<tr>
+<th>有意差を表す記号
+</th>
+<td>グラフ上で統計的有意差をどのように表示するか指定します。
+<ul><li><b>アスタリスクブラケット</b>: グループを比較するバーの上にアスタリスクと括弧を表示します。アスタリスクの場合、以下のルールに従います。
+<dl><dd> n.s.  p≥0.05    ✱  p≤0.05    ✱✱  p≤0.01    ✱✱✱  p≤0.001    ✱✱✱✱  p≤0.0001</dd></dl></li>
+<li><b>ブラケット付きP値</b>: グループを比較する棒グラフ上にP値を直接表示します。</li>
+<li><b>文字を上に表示</b>: バー上に文字を表示すします。</li></ul>
+</td></tr>
+<tr>
+<th>P値の水準
+</th>
+<td><b>アスタリスクブラケット</b>を選択した場合、P値の水準（しきい値）を選択できます。
+</td></tr>
+<tr>
+<th>P値が次より大きい場合は非表示
+</th>
+<td>P値がしきい値より大きい場合、有意差マークを非表示にします。
+</td></tr>
+<tr>
+<th>ラベルのフォントサイズ
+</th>
+<td>有意差ラベルのフォントサイズを指定します。
+</td></tr>
+<tr>
+<th>括弧の種類
+</th>
+<td>有意差マークのブラケットタイプを選択します。
+<ul><li><b>延長脚</b>: データプロットまで脚を延長した角型ブラケットを追加します。</li>
+<li><b>固定長の脚</b>: プロットまで延長せず、固定長（15ポイント）の脚を持つ角型ブラケットを追加します。</li>
+<li><b>線</b>: 端のない線のみを表示します。</li>
+<li><b>キャップ付き線</b>: キャップ付きの線を表示します。</li></ul>
+</td></tr>
+<tr>
+<th>線の太さ
+</th>
+<td>ブラケットの線の太さを指定します。
+</td></tr>
+<tr>
+<th>プロット領域外へのブラケット表示を許可
+</th>
+<td>グラフレイヤの枠外にブラケットを表示するかどうかを指定します。
+</td></tr></table>
+<h3><a name="Comparisons_to_Display_tab"></a><span class="mw-headline">表示する比較タブ</span></h3>
+<p>ブラケットを表示する比較の交互作用を選択します。
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 05.png" src="../images/Creating_Paired_Comparison_Plot/850px-Creating_Paired_Comparison_Plot_05.png" width="850"   /></a>
+</p>
+<h3><a name="Output_tab"></a><span class="mw-headline">出力タブ</span></h3>
+<p>プロットデータを出力するワークシートを指定します。デフォルトでは、現在のブックに新しいシートが作成され、プロットデータが保存されます。
+</p>
+<h2><a name="Supported_in_these_Statistical_Tools"></a><span class="mw-headline">サポートしている統計ツール</span></h2>
+<ul><li><b>2標本の検定</b>
+<ul><li><a href="../../UserGuide/Category/Two-Sample_t-Test.html" title="カテゴリー:2群のt検定">2群のt検定</a></li>
+<li><a href="../../UserGuide/Category/Pair-Sample_t-Test.html" title="カテゴリー:対応のあるt検定">対応のあるt検定</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Sign_Test.html" title="カテゴリー:対サンプルの符号検定">対サンプルの符号検定</a></li>
+<li><a href="../../UserGuide/Category/Paired-Sample_Wilcoxon_Signed_Rank_Test.html" title="カテゴリ:対応のあるデータのWilcoxon符号順位検定">対応のあるデータWilcoxon符号順位検定</a></li>
+<li><a href="../../UserGuide/Category/Two-Sample_Kolmogorov-Smirnov_Test.html" title="カテゴリ:2群Kolmogorov-Smirnov検定">2群Kolmogorov-Smirnov検定</a></li>
+<li><a href="../../UserGuide/Category/Mann-Whitney_Test.html" title="カテゴリ:Mann-Whitney検定">Mann-Whitney検定</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="ユーザーガイド:ノンパラメトリック検定を同時に実行">(NPH)対データ</a></li>
+<li><a href="../../UserGuide/UserGuide/Running_Simultaneous_Nonparametric_Tests.html" title="ユーザーガイド:ノンパラメトリック検定を同時に実行">(NPH) 2独立集団</a></li></ul></li>
+<li><b>複数標本の検定</b>
+<ul><li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="カテゴリ:一元、二元、三元配置の分散分析">一元配置分散分析（One-Way ANOVA）</a>（平均比較タブでいずれかの検定が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="カテゴリ：繰り返し測定の分散分析（OriginProのみ）">一元配置分散分析（繰り返し測定）</a>（平均比較タブでいずれかの検定が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/Kruskal-Wallis_ANOVA.html" title="カテゴリ:Kruskal-Wallis分散分析">Kruskal-WallisのANOVA</a>（Dunn&apos;t 検定が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/Moods_Median_Test.html" title="カテゴリ:Moodのメディアン検定">Moodsのメディアン検定</a>（Dunn&apos;t 検定が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/Friedman_ANOVA.html" title="カテゴリ:FriedmanのANOVA">FriedmanのANOVA</a>（Dunn&apos;t 検定またはWilcoxon-Nemenyi-McDonald-Thompson検定が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/One,_Two,_and_Three_Way_ANOVA.html" title="カテゴリ:一元、二元、三元配置の分散分析">二元配置分散分析（Two-Way ANOVA）</a>（平均比較タブでいずれかの検定が選択されており、入力タブで交互作用が選択されている場合）</li>
+<li><a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="カテゴリ：繰り返し測定の分散分析（OriginProのみ）">二元配置分散分析（繰り返し測定）</a>（平均比較タブでいずれかの検定が選択されており、入力タブで交互作用が選択されている場合）</li></ul></li></ul>
+<h2><a name="Creating_Significant_Plot"></a><span class="mw-headline">有意差プロットを作成</span></h2>
+<p><a href="../../UserGuide/Category/One-Sample_t-Test.html" title="カテゴリー:1群のt検定">1群のt検定</a>および<a href="../../UserGuide/Category/One-Sample_Wilcoxon_Signed_Rank_Test.html" title="1群のWilcoxon符号順位検定">1群のWilcoxon符号付順位検定</a>では、<b>有意差プロットを作成</b>アイコン<a  class="image"><img alt="Button PCP.png" src="../images/Creating_Paired_Comparison_Plot/Button_PCP.png" width="18"  /></a>をクリックすると、<b>有意差プロット</b>ダイアログが開き、多重比較プロットの一種である有意差プロットを作成できます。
+</p><p><a  class="image"><img alt="Creating Paired Comparison Plot 06.png" src="../images/Creating_Paired_Comparison_Plot/700px-Creating_Paired_Comparison_Plot_06.png" width="700"   /></a>
+</p><p>このダイアログのすべてのコントロールは、<a href="#Options_tab">多重比較プロットダイアログのオプションタブ</a>にあるコントロールと同じです。
+</p>
+
+
+
+    

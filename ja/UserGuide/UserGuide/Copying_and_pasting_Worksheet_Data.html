@@ -44,35 +44,38 @@ Originでは、元のワークシート列から他のワークシートにデ�
 <tr>
 <th align="left">コピー（ラベル行含む）
 </th>
-<td>元の列のラベルとデータ（表示精度）をコピー
+<td>元の列のラベルとデータ（表示精度）をコピー。
+<ul><li>単位が存在する場合、 ロングネームと単位が<i> ロングネーム</i>（<i>単位</i>） の形式で1行にまとめてコピーされます。 </li>
+<li>ロングネームが同じ、または空の場合は、コメントがコピーされます。ロングネームとコメントの両方が同じ、または空の場合は、最初のユーザ定義パラメータ行がコピーされます。</li>
+<li>すべてのラベル行とデータをコピーするには、<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">システム変数 @PLO = 0</a> を設定します。</li></ul>
 </td></tr>
 <tr>
 <th align="left">コピー(式)
 </th>
-<td>元の列の式のみコピー
+<td>選択した列の式のみをコピー
 </td></tr>
 <tr>
 <th align="left">コピー（ラベル行）
 </th>
-<td>元の列のラベル行のみコピー
+<td>選択した列のラベル行のみをコピー
 </td></tr>
 <tr>
 <th align="left">コピー（式とラベル行)
 </th>
-<td>式とラベル行をコピー
+<td>式とラベル行のみをコピー
 </td></tr>
 <tr>
 <th align="left" width="190">転置してコピー
 </th>
-<td>コピー時に選択したセルのブロックを転置
+<td>選択したセル範囲を転置してコピー
 </td></tr>
 <tr>
 <th align="left">すべてコピー
 </th>
-<td>元の列の式、ラベル、データ（フル精度）をコピー
+<td>選択した列の式、ラベル、およびデータをコピー。データは全精度でコピーされます。
 </td></tr></table>
 <p><br />
-詳細は、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html"><b>FAQ-482:最大の精度でデータをコピーするにはどうしたら良いですか?</b></a>を参照してください。
+詳細は、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_copy_data_with_maximum_precision.html">FAQ-482:最大の精度でデータをコピーするにはどうしたら良いですか?</a>を参照してください。
 </p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><ul><li> Origin 2019bでは、複数のワークシートセルのコピーと貼り付けがMS Excelと同様の動作をするように変更されました。1つのセルをコピーして<i>m</i>個のセルに貼り付けると、<i>m</i>個のセルに貼りつきます。さらに、<i>n</i>個のセルをコピーして<i>n*m</i>個のセルに貼り付けると、コピーした<i>n</i>個のセルの内容を繰り返してセルに値を入力します。新旧の動作を切り替える場合、LabTalkシステム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#C"><b>@CPNB</b></a>を使用できます。システム変数の値を変更する方法については、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_permanently_change_the_value_of_a_system_variable.html">このFAQ</a>を参照してください。</li>
@@ -102,7 +105,7 @@ Originでは、元のワークシート列から他のワークシートにデ�
 <tr>
 <th align="left">貼り付け（空白を削除）
 </th>
-<td>クリップボードに保持されたデータを分割せずにワークシートのセルに貼り付けます。詳細は<b><a class="external text" href="../../QuickHelp/QuickHelp/Paste_into_Origin_keep_spaces.html">こちらのFAQ</a></b>を参照してください。
+<td>クリップボードの内容を複数のセルに分割せずにワークシートセルへ貼り付けます。詳細は<a class="external text" href="../../QuickHelp/QuickHelp/Paste_into_Origin_keep_spaces.html"><b>こちらのFAQ</b></a>を参照してください。
 <p>貼り付け時に余分なスペースが削除されますが、単語間のスペースが1つ保持されることに注意してください。
 </p>
 </td></tr>
@@ -124,16 +127,16 @@ Originでは、元のワークシート列から他のワークシートにデ�
 <li> MS Excelやメモ帳など、Originの外部にある値(テキストと数値)をコピーし、コピー先の列の最初のセルを選択して<b>貼り付け</b>すると、Originはコピーされた値のラベル行を自動的にに検出し、テキストをラベル行に、残りの数値をデータ領域に配置します。<br /><b>貼り付け（ラベル検出なし）</b>を選択すると、自動検出がオフになり、コピーされたすべての値がデータ領域に配置されます。 </li></ul>
 </td></tr></table>
 <h2><a name="Copy_worksheet_values_by_X-Functions"></a><span class="mw-headline">Xファンクションでワークシートの値をコピー</span></h2>
-<p>上記の直接コピーする方法以外にも、Xファンクションを利用してワークシートの値をコピー・ペーストを実行することもできます。
+<p>上記のような簡単なコピーのほかに、ワークシートの値をコピーして別のワークシートに貼り付けるのに役立つ強力で柔軟なXファンクションがあります。
 </p>
 <h3><a name="Copy_worksheet_columns_by_the_X-Function_.22colcopy.22"></a><span class="mw-headline">Xファンクション&quot;colcopy&quot;によるワークシート列のコピー</span></h3>
 <p><a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>というXファンクションがあります。これは、<a href="../../UserGuide/UserGuide/The_(Column_Properties)_Properties_Tab.html#Format" title="ユーザガイド：(列プロパティ) 「プロパティ」タブ">列データフォーマット</a>やラベルのコピーが行え、元の列に対してフィルタが使用されているときの非表示列をコピーするかどうか設定できます。
-</p><p><a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>ダイアログを開くには、メインメニューから<b><b>ワークシート：列をコピー...</b></b>を選択します。
+</p><p><a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>ダイアログを開くには、<b>ワークシート: 列のコピー...</b>メインメニューを選択します。
 </p><p><i>または</i> 
-</p><p>列を右クリックし、ショートカットメニューから<b><b>列をコピー...</b></b>を選択します。
+</p><p>選択した列上で右クリックし、ショートカットメニューから<b><b>列をコピー...</b></b>を選択します。
 </p>
 <table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>フィルタが適用されると、右クリックの<b><b>コピー</b></b>メニューはデフォルトで非表示の列を無視します。全ての行をコピーするために、デフォルトの設定を変更するには、システム変数@iHR=1にします。詳細は<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">システム変数の一覧</a>を確認してください。
+	<td style="vertical-align:top" width="60"><img src="../images/Copying_and_pasting_Worksheet_Data/Tip_icon.png" width="57"  border="0" /></td><td><p>フィルタが適用されている場合、右クリックの<b>コピー</b>メニューはデフォルトで非表示の行を無視します。全ての行をコピーするために、デフォルトの設定を変更するには、システム変数@iHR=1にします。詳細は<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html">システム変数の一覧</a>を確認してください。
 </p></td></tr></table>
 <h3><a name="Copy_worksheet_cells_by_the_X-Function_.22Wcopy.22_or_.22Wrcopy.22"></a><span class="mw-headline">Xファンクション&quot;Wcopy&quot;または&quot;Wrcopy&quot;によるワークシートセルのコピー</span></h3>
 <p>上記のXファンクション<a class="external text" href="../../XFunction/X-Function/Colcopy.html">colcopy</a>の他に、Originには、ワークシートのセル(特に選択したデータ行やセルの指定ブロック)内のデータをコピーして、新規または既存のワークシートに貼り付けるための2つのXファンクション<a class="external text" href="../../XFunction/X-Function/Wcopy.html">Wcopy</a> および <a class="external text" href="../../XFunction/X-Function/Wrcopy.html">Wrcopy</a>があります。

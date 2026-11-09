@@ -1,19 +1,29 @@
-﻿<h1 class="firstheading">アルゴリズム(PSS: 2母集団の検定)<br /></h1>
-<h3><span class="mw-headline" id="Power">検出力</span></h3>
-<p>片側検出力：<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-e7498f0843b3288c7d46b2c80ccca98b.png" title="H_0:P_1\ge P_2" alt="H_0:P_1\ge P_2" class="tex" border="0" /></p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-745a1fbbf4e6fcffd3c22fe8ed948893.png" title="Power =F(\frac{-(p_2-p_1)-z_{\alpha }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" alt="Power =F(\frac{-(p_2-p_1)-z_{\alpha }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" class="tex" border="0" /></p>
-<p>片側検出力：<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-4861da6bba30bf8a4f3cd992b974a58e.png" title="H_0:P_1\le P_2" alt="H_0:P_1\le P_2" class="tex" border="0" /></p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-d1d9bd11eb0302a83fdb2e2525ac9253.png" title="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" alt="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" class="tex" border="0" /></p>
-<p>両側検出力 <img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-4eac934b016e115b457219debaf8a029.png" title="H_0: p_1=p_2\!" alt="H_0: p_1=p_2\!" class="tex" width="87" height="14" border="0" /></p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-17c9dc226287e3e0a79c7845584bac9b.png" title="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha/2 }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})+F(\frac{-(p_2-p_1)-z_{\alpha /2}\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" alt="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha/2 }\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})+F(\frac{-(p_2-p_1)-z_{\alpha /2}\sqrt{(2p_c(1-p_c) / n) }}{\sqrt{p_2(1-p_2)/n+p_2(1-p_2)/n}})" class="tex" border="0" /></p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-7b8b965ad4bca0e41ab51de7b31363a1.png" alt="" style="border: none;" border="0" />: 各グループのサンプルサイズ</p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-03b632315ee5bee654b60a6bd902a249.png" alt="" style="border: none;" border="0" />: 母比率1</p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-6fe97b358b528edc477ba63d50b652af.png" alt="" style="border: none;" border="0" />: 母比率2</p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-ec738db1e32d6ab4a497832ff0d7f313.png" title="pc=(p1 + p2)/2\!" alt="pc=(p1 + p2)/2\!" class="tex" border="0" /></p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-3abc4a58be38c24030120ec6c3464783.png" alt="" style="border: none;" border="0" />: 正規分布の<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-7b7f9dbfea05c83784f8b85149852f08.png" alt="" style="border: none;" border="0" />レベルの上側棄却限界値</p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-1cf3a44a9e37199f38d0e49c787182c9.png" alt="" style="border: none;" border="0" />: 正規分布の<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-d10e63f9fadfc68af5748d918bc9915d.png" alt="" style="border: none;" border="0" />レベルの両側棄却限界値</p>
-<p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-800618943025315f869e4e1f09471012.png" alt="" style="border: none;" border="0" /> は標準正規分布の累積分布関数を表しています。</p>
-<h3><span class="mw-headline" id="sample_size">サンプルサイズ</span></h3>
-<p>Originは、検出力等価で反復アルゴリズムを使用しています。各反復において、トライアルサンプルサイズのためのパワーが評価され、評価されたパワーが整数サンプルサイズに対応する値、および、目標値よりも大きい、最も近い到達したときに反復は停止されます。</p>
+﻿<h1 class="firstHeading">アルゴリズム((PSS)2標本比率検定)</h1><p class='urlname' style='display: none'>PSS-Two-Prop-Algorithm}}
+<urlname>PSS-Two-Prop-Algorithm</p>
+<p><br />
+</p>
+<h3><a name="Power"></a><span class="mw-headline">検出力</span></h3>
+<p><b>片側検出力</b>:<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-e7498f0843b3288c7d46b2c80ccca98b.png" title="H_0:p_1\ge p_2" alt="H_0:p_1\ge p_2" class="tex"/>
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-745a1fbbf4e6fcffd3c22fe8ed948893.png" title="Power =F(\frac{-(p_2-p_1)-z_{\alpha }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" alt="Power =F(\frac{-(p_2-p_1)-z_{\alpha }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" class="tex"/>
+</p><p><b>片側検出力</b>:<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-4861da6bba30bf8a4f3cd992b974a58e.png" title="H_0:p_1\le p_2" alt="H_0:p_1\le p_2" class="tex"/>
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-d1d9bd11eb0302a83fdb2e2525ac9253.png" title="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" alt="Power =1-F(\frac{-(p_2-p_1)+z_{\alpha }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" class="tex"/>
+</p><p><b>両側検出力:</b> <img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-4eac934b016e115b457219debaf8a029.png" title="H_0: p_1=p_2\!" alt="H_0: p_1=p_2\!" class="tex"/> 
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-17c9dc226287e3e0a79c7845584bac9b.png" title="Power =1-F(\frac{-(p_2-p_1)+z_{\frac{\alpha}{2} }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})+F(\frac{-(p_2-p_1)-z_{\frac{\alpha}{2}}\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" alt="Power =1-F(\frac{-(p_2-p_1)+z_{\frac{\alpha}{2} }\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})+F(\frac{-(p_2-p_1)-z_{\frac{\alpha}{2}}\sqrt{\frac{(2p_c(1-p_c)}{n} }}{\sqrt{\frac{p_2(1-p_2)}{n}+\frac{p_1(1-p_1)}{n}}})" class="tex"/>
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-7b8b965ad4bca0e41ab51de7b31363a1.png" title="n" alt="n" class="tex"/>: 各グループのサンプルサイズ
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-03b632315ee5bee654b60a6bd902a249.png" title="p_1" alt="p_1" class="tex"/>: 第1母集団の比率
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-6fe97b358b528edc477ba63d50b652af.png" title="p_2" alt="p_2" class="tex"/>: 第2母集団の比率
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-ec738db1e32d6ab4a497832ff0d7f313.png" title="p_c =\frac{p_{1}+p_{2}}{2}" alt="p_c =\frac{p_{1}+p_{2}}{2}" class="tex"/>
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-3abc4a58be38c24030120ec6c3464783.png" title="z_{\alpha }" alt="z_{\alpha }" class="tex"/>: 正規分布の<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/> 水準の上側臨界値
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-1cf3a44a9e37199f38d0e49c787182c9.png" title="z_{\frac{\alpha}{2} }" alt="z_{\frac{\alpha}{2} }" class="tex"/>: 正規分布の<img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-d10e63f9fadfc68af5748d918bc9915d.png" title="\frac{\alpha}{2}" alt="\frac{\alpha}{2}" class="tex"/> 水準の両側臨界値
+</p><p><img src="../images/Algorithms(PSS_Two-Proportion_Test)/math-800618943025315f869e4e1f09471012.png" title="F" alt="F" class="tex"/>: 標準正規分布の累積分布関数
+</p>
+<h3><a name="Sample_Size"></a><span class="mw-headline">サンプルサイズ</span></h3>
+<p>Origin は、検出力の式を使用した反復アルゴリズムを使用します。各反復で試行標本サイズに対する検出力を評価し、整数の標本サイズに対応する検出力のうち、目標値より大きく、かつ目標値に最も近い値に達した時点で反復を終了します。
+</p>
 
 
+
+
+
+
+    

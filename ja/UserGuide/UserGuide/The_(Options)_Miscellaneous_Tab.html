@@ -1,5 +1,7 @@
 ﻿<h1 class="firstHeading">(オプション) 「その他のオプション」タブ</h1><p class='urlname' style='display: none'>Options-Dialog-Misc-Tab</p>
-<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png" width="622"  /></a></dd></dl>
+<p><br />
+</p>
+<dl><dd><a  class="image"><img alt="Miscellaneous tab.png" src="../images/The_(Options)_Miscellaneous_Tab/Miscellaneous_tab.png" width="743"  /></a></dd></dl>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Proxy_Group"><span class="tocnumber">1</span> <span class="toctext">プロキシグループ</span></a></li>
@@ -11,13 +13,10 @@
 <li class="toclevel-1 tocsection-4"><a href="#Import_Group"><span class="tocnumber">3</span> <span class="toctext">インポートグループ</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Print_Group"><span class="tocnumber">4</span> <span class="toctext">印刷グループ</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Additional_Controls"><span class="tocnumber">5</span> <span class="toctext">追加のコントロール</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#First_Day_of_Week"><span class="tocnumber">6</span> <span class="toctext">週の最初の日</span></a></li>
 </ul>
 </div>
-
 <h2><a name="Proxy_Group"></a><span class="mw-headline">プロキシグループ</span></h2>
 <table class="dialogcontroltable">
-
 <tr>
 <th>直接接続
 </th>
@@ -246,7 +245,6 @@
 </td></tr></table>
 <h2><a name="Import_Group"></a><span class="mw-headline">インポートグループ</span></h2>
 <table class="dialogcontroltable">
-
 <tr>
 <th>複数ASCIIインポートのワークシート用標準テンプレート
 </th>
@@ -255,23 +253,19 @@
 </p>
 </td></tr>
 <tr>
-<th>複数ASCIIインポートの作図用標準XY属性
+<th>データコネクタ
 </th>
 <td>
-<p>このコンボボックスは、<b>複数ASCIIのインポート</b>ダイアログボックスの下側のパネルで、<b>列のXY属性列</b>のリストのデフォルトの設定を制御します(このダイアログボックスは、グラフをアクティブにして、<b>標準</b>ツールバーの<a  class="image"><img alt="Button Import Multiple ASCII.png" src="../images/The_(Options)_Miscellaneous_Tab/Button_Import_Multiple_ASCII.png" width="23"  /></a>ボタンをクリックすると開きます。)。この値は、グラフに直接データをインポートするときのデフォルトのXY属性を指定します。
+<p>このコンボリストは、インポート処理中およびインポート後のデータコネクタの動作を制御します。
 </p>
-<dl><dd><ul><li><b>XY1</b> </li></ul>
-<dl><dd>Originは、すべての列をインポートします。最初の列をX値とし、残りずべての列をY値として扱います。この場合、「1」は最後の文字「Y」が残りすべての列に対して適用されるということを示しています。 </dd></dl>
-<ul><li><b>DXY1</b> </li></ul>
-<dl><dd>Originは、データの最初の列を無属性にし、XY1のルールに従ってファイルの残りをインポートします。 </dd></dl>
-<ul><li><b>XY</b> </li></ul>
-<dl><dd>Originは、最初の列をX値、2列目をY値として扱います。 </dd></dl>
-<ul><li><b>XY2</b> </li></ul>
-<dl><dd>Originは、すべての列をインポートします。しかし、この場合、Originは、最初の列をX1、2列目をY1、3列目をX2、4列目をY2のように扱います。この場合、「2」は最後の2文字「X」「Y」が残りすべての列に対して順に適用されるということを示しています。 </dd></dl>
-<ul><li><b>XYE</b> </li></ul>
-<dl><dd>Originは、最初の列をX値、2列目をY値、3列目をYエラー値として扱います。 </dd></dl>
-<ul><li><b>XYZ</b> </li></ul>
-<dl><dd>Originは、最初の列をX値、2列目をY値、3列目をZ値として扱います。  </dd></dl></dd></dl>
+<dl><dd><ul><li><b>インポートデータをロック</b> </li></ul>
+<dl><dd>インポートされたデータがロックされており、ソートまたは編集できません。</dd></dl>
+<ul><li><b>データの並べ替えを許可</b> </li></ul>
+<dl><dd>インポートされたデータはソートできますが、編集はできません。</dd></dl>
+<ul><li><b>インポート後にデータのロックを解除</b> </li></ul>
+<dl><dd>インポートされたデータは完全にロック解除され、自由に編集および並べ替えが可能です。</dd></dl>
+<ul><li><b>インポート後にコネクタを削除</b> </li></ul>
+<dl><dd>インポートが完了すると、データコネクタが削除されます。</dd></dl></dd></dl>
 </td></tr>
 <tr>
 <th>保存時にインポートデータを除外
@@ -282,7 +276,6 @@
 </td></tr></table>
 <h2><a name="Print_Group"></a><span class="mw-headline">印刷グループ</span></h2>
 <table class="dialogcontroltable">
-
 <tr>
 <th>Xの縮尺倍率
 </th>
@@ -300,19 +293,11 @@
 </td></tr></table>
 <h2><a name="Additional_Controls"></a><span class="mw-headline">追加のコントロール</span></h2>
 <table class="dialogcontroltable">
-
 <tr>
 <th>列データ型として数値型を基本とする
 </th>
 <td>
 <p>このチェックボックスは、すべての新しいワークシートのすべての列を「数値」または「文字と数値」(デフォルト)にします。通常このオプションを指定しなければならない必然性はあまりないかもしれませんが、もし後で、<b>Origin 4.1</b>でそのデータの処理をすることが考えられる場合には、このチェックボックスにチェックをする必要があります。それをしないと、プロジェクトがOriginのバージョン4.1で開けられた時、そのデータが失われる可能性があります。 
-</p>
-</td></tr>
-<tr>
-<th>ツールバー･スペーサの利用
-</th>
-<td>
-<p>このチェックボックスを選択すると、メニュバーの下にツールバースペーサを表示することができます。アクティブなウィンドウを変更した際でも、ツールバー用の領域サイズを固定することができます。ツールバースペーサの高さは、プロジェクト中のウィンドウそれぞれにあわせて選択されたツールバー全てを表示できる、最大の高さに設定されます。（一旦表示されたツールバースペーサを隠すには、ツールバースペーサ内でマウスの右クリックし、ショートカットメニューから<b>スペーサを隠す</b>を選択します。） 
 </p>
 </td></tr>
 <tr>
@@ -323,16 +308,6 @@
 </p>
 </td></tr>
 <tr>
-<th>アイコンをメニューに表示
-</th>
-<td>
-<p>このチェックボックスは、メニューコマンドの隣にビットマップアイコンを表示するかどうかを制御します。ツールバーボタンになっているメニューコマンドにはコマンドの左側にビットマップアイコンを表示します。
-</p>
-<table class="noborder"><tr>
-	<td style="vertical-align:top" width="60"><img src="../images/The_(Options)_Miscellaneous_Tab/Tip_icon.png" width="57"  border="0" /></td><td><p><b>Origin 2018b</b>から、システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a>を使用して、<b>作図</b>メニューアイコンのサイズを変更できます。システム変数の値を変更する方法については、<a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">システム変数を使ってOriginを設定</a>を参照してください。
-</p></td></tr></table>
-</td></tr>
-<tr>
 <th>自動更新でページショートネームをロングネームに倣う
 </th>
 <td>
@@ -340,16 +315,50 @@
 </p>
 </td></tr>
 <tr>
+<th>ツールバー･スペーサの利用
+</th>
+<td>
+<p>このチェックボックスを選択すると、メニュバーの下にツールバースペーサを表示することができます。アクティブなウィンドウを変更した際でも、ツールバー用の領域サイズを固定することができます。ツールバースペーサの高さは、プロジェクト中のウィンドウそれぞれにあわせて選択されたツールバー全てを表示できる、最大の高さに設定されます。（一旦表示されたツールバースペーサを隠すには、ツールバースペーサ内でマウスの右クリックし、ショートカットメニューから<b>スペーサを隠す</b>を選択します。） 
+</p>
+</td></tr>
+<tr>
+<th>アイコンをメニューに表示
+</th>
+<td>
+<p>このチェックボックスは、メニューコマンドの隣にビットマップアイコンを表示するかどうかを制御します。ツールバーボタンになっているメニューコマンドにはコマンドの左側にビットマップアイコンを表示します。
+</p><p><b>Note</b>:
+</p>
+<ul><li><b>Origin 2018b</b>から、システム変数<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ"><b>@PPS</b></a>を使用して、<b>作図</b>メニューアイコンのサイズを変更できます。システム変数の値を変更する方法については、<a class="external text" href="../../UserGuide/UserGuide/Customizing_Origin_using_System_Variables.html">システム変数を使ってOriginを設定</a>を参照してください。</li></ul>
+</td></tr>
+<tr>
 <th>メニューの折りたたみの利用
 </th>
 <td>
 <p>Originのメインメニューとコンテキストメニューは、デフォルトで折りたたまれて表示されます。このチェックボックスで折りたたみをオン/オフできます。メニューの折りたたみついての詳細は、<a class="external text" href="../../QuickHelp/QuickHelp/How_do_I_customize_the_collapsible_menu.html">このFAQ</a>をご参照ください。
 </p>
-</td></tr></table>
-<h2><a name="First_Day_of_Week"></a><span class="mw-headline">週の最初の日</span></h2>
+</td></tr>
+<tr>
+<th>週の最初の日
+</th>
+<td>
 <p><i>yyyy</i>-<b>W</b><i>ww</i>-<i>D</i>形式で日付を表示する際に使用される週の開始日を指定します。
 </p>
-<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="490"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Options First Day of Week.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_First_Day_of_Week.png" width="427"  /></a></dd></dl>
+</td></tr>
+<tr>
+<th>シートでのEnterキー動作を上書きして選択を移動
+</th>
+<td>
+<p>デフォルトでは、ワークシートのセルで <b>Enter</b> キーを押すと、選択範囲は現在のセルの1つ下のセルに移動します。このチェックボックスをオンにすると、<b>Enter</b> キーを押したときの選択範囲の移動方向を変更できます。
+</p>
+<dl><dd><a  class="image"><img alt="Enterキーを上書きするオプションDirection.png" src="../images/The_(Options)_Miscellaneous_Tab/Options_Override_Enter_Key_Direction.png" width="156"  /></a></dd></dl>
+<p><b>なし</b> は、選択範囲を移動しないことを意味します。
+</p><p><b>Note</b>: 
+</p>
+<ul><li> <b>Shift</b> + <b>Enter</b>を押すと、選択範囲を反対方向に移動できます。たとえば、<b>Enter</b> で選択範囲が下に移動する場合、<b>Shift</b> + <b>Enter</b>では上に移動します。 </li>
+<li> <a href="../../UserGuide/UserGuide/Data_Table.html" title="ユーザガイド:データテーブル">データテーブル</a>にサブ列（反復）がある場合、<b>Enter</b> キーを押すと、デフォルトでは選択範囲が右隣のサブ列に移動します。 </li></ul>
+</td></tr></table>
+
 
 
 

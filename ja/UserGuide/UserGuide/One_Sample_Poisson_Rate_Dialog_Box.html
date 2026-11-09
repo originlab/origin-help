@@ -1,0 +1,167 @@
+﻿<h1 class="firstHeading">1標本ポアソン率検定ダイアログボックス</h1><p class='urlname' style='display: none'>One-Poisson-Rate-Dialog</p>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recalculate"><span class="tocnumber">2</span> <span class="toctext">再計算</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Input_Data"><span class="tocnumber">3</span> <span class="toctext">入力データ</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Poisson_Rate_Test"><span class="tocnumber">4</span> <span class="toctext">ポアソン率検定</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Test_Method"><span class="tocnumber">5</span> <span class="toctext">検定方法</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">出力</span></a></li>
+</ul>
+</div>
+
+<h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
+<p>1標本ポアソン率検定ダイアログを開くには、
+</p>
+<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：1標本ポアソン率検定...</b>を選択します。</li></ol>
+<p><br />
+<i><b>関連情報：</b></i>
+</p>
+<ul><li> <a href="../../UserGuide/Category/One_Sample_Poisson_Rate_(Pro_Only).html" title="カテゴリ:1標本ポアソン率検定 (Pro のみ)">1標本ポアソン率検定のイントロダクション</a></li></ul>
+<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>再計算
+</th>
+<td>
+<p>分析結果の再計算の設定を変更します。
+</p>
+<ul><li><b>なし</b> </li>
+<li><b>自動</b> </li>
+<li><b>手動</b>  </li></ul>
+<p>詳細情報は、 <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">分析結果の再計算</a>をご覧下さい。
+</p>
+</td></tr></table>
+<h2><a name="Input_Data"></a><span class="mw-headline">入力データ</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>入力データ形式
+</th>
+<td>
+<ul><li> <b>要約</b></li></ul>
+<dl><dd> ワークシート内の実際のサンプルデータではなく、集計統計量を使用して検定を実行します。これらの値は、ダイアログボックスに手動で入力できます。</dd></dl>
+<ul><li> <b>素データ値</b></li></ul>
+<dl><dd> 列のデータセットを使用して検定を実行します。</dd></dl>
+</td></tr>
+
+<tr>
+<th>入力データ
+<p>(<i>要約</i>)
+</p>
+</th>
+<td>
+<ul><li> <b>サンプルサイズ</b></li></ul>
+<dl><dd> 観測値の合計数です。</dd></dl>
+<ul><li> <b>総発生数</b></li></ul>
+<dl><dd> 標本でイベントが発生した回数です。</dd></dl>
+</td></tr>
+<tr>
+<th>入力データ
+<p>(<i>素データ値</i> )
+</p>
+</th>
+<td>
+<ul><li> <b>サンプル</b></li></ul>
+<dl><dd> サンプルデータセットとして列を指定します。</dd></dl>
+<ul><li> <b>頻度</b></li></ul>
+<dl><dd> これはオプションです。標本列の値が出現した回数を集計した度数列です。</dd></dl>
+</td></tr>
+<tr>
+<th>曝露
+</th>
+<td>カウントデータの観測期間を指定します。たとえば、時間、面積、体積、項目数などです。  デフォルトでは、1に設定されています。
+</td></tr></table>
+<h2><a name="Poisson_Rate_Test"></a><span class="mw-headline">ポアソン率検定</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>検定率
+</th>
+<td>検定する仮説上の率です。
+</td></tr>
+<tr>
+<th>帰無仮説
+</th>
+<td>検定される帰無仮説（率 = <i>検定率</i>）。
+</td></tr>
+<tr>
+<th>対立仮説
+</th>
+<td>オプション：
+<dl><dd><b>率 &lt;&gt; <i>検定率</i></b> </dd></dl>
+<dl><dd>標本率 =<i> 検定率</i> であるかどうかを調べる両側ポアソン率検定です。 </dd></dl>
+<dl><dd><b>率 &gt; <i>検定率</i></b> </dd></dl>
+<dl><dd>標本率が <i>検定率</i>より大きいかどうかを調べる上側片側ポアソン率検定です。 </dd></dl>
+<dl><dd><b>率 &lt; <i>検定率</i></b> </dd></dl>
+<dl><dd>標本率が仮定率より小さいかどうかを調べる下側片側ポアソン率検定です。 </dd></dl>
+</td></tr>
+<tr>
+<th>有意水準
+</th>
+<td>検定の有意水準。
+</td></tr>
+<tr>
+<th>信頼区間
+</th>
+<td>真の（母集団）率の信頼区間を計算します。
+</td></tr>
+<tr>
+<th>%単位での信頼水準
+</th>
+<td>信頼区間を計算する信頼水準を指定します。このオプションは<b>信頼区間</b>が選択されている場合にのみ利用可能です。
+</td></tr></table>
+<h2><a name="Test_Method"></a><span class="mw-headline">検定方法</span></h2>
+<p>Originでは、1標本ポアソン率検定の p 値および信頼区間の計算に、次の2つの方法を使用します。 
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>正確
+</th>
+<td>正確法を使用する場合、サンプルサイズに関する要件はありません。小さいサンプルや低頻度イベントに適しています。
+</td></tr>
+<tr>
+<th>正規近似
+</th>
+<td>正規近似は常に計算されます。近似の精度は、サンプルサイズが大きくなるほど向上する傾向があります。
+</td></tr></table>
+<h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
+<p>範囲制御についてはこちらを参照してください：<a class="external text" href="../../UserGuide/UserGuide/Output_Results.html">出力結果</a>
+</p>
+<table class="dialogcontroltable">
+
+<tr>
+<th>グラフィカル要約レポート
+</th>
+<td>グラフィカル要約レポートを作成します。また、統計値を示す3つの結果表がグラフに添付されます。
+<p>サマリーグラフの脚注として、これらの統計結果の診断が表示されます。
+</p>
+</td></tr>
+<tr>
+<th>結果出力
+</th>
+<td>結果を出力するワークシートを指定します。
+</td></tr>
+<tr>
+<th>プロットデータ出力
+</th>
+<td>プロットデータの出力用ワークシートを指定します (Originはプロットの作成時に表形式のデータを生成します)。
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> 入力データ形式が素データの場合、<b>マスクされたデータ</b>と<b>良くないデータ（欠損値）</b>表がレポートシートに表示されます。</li></ul>
+</td></tr></table>
+
+
+
+
+
+
+
+    

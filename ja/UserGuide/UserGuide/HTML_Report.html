@@ -52,17 +52,17 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </p>
 <dl><dd><dl><dd><a  class="image"><img alt="HTML Add Menu.png" src="../images/HTML_Report/HTML_Add_Menu.png" width="412"  /></a></dd></dl></dd></dl>
 <ul><li> <b>メモ：リンクを追加</b> メニューを使用する。</li>
-<li> 次の構文を使用して、オブジェクトを手動で挿入します。</li></ul>
+<li> 文字列変数を手動で挿入するには、次の構文を使用します。</li></ul>
 <pre class="lt" style="font-family:monospace;"><span style="color: #000000;">{</span><span style="color: #000000;">{</span>type<span style="color: #000000;">:</span><span style="color: #008000;">//notation}}</span></pre>
 <p>次のリンクタイプがサポートされています。
 </p>
 <table class="simple">
 <tr>
-<th style="width: 10%">タイプ
+<th style="width: 8%">タイプ
 </th>
-<th style="width: 30%">表記
+<th style="width: 25%">表記
 </th>
-<th style="width: 30%">説明
+<th style="width: 37%">説明
 </th>
 <th style="width: 20%">サンプル
 </th></tr>
@@ -90,6 +90,8 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 <td> セルの範囲
 </td>
 <td> ワークシートのセルの内容を文字列として挿入します。<br />構文は<i>[book_name]sheet_name!column_name[row-index]</i>です。
+<p>リンクされたセルに画像、グラフ、または矢印のようなグラフオブジェクトが埋め込まれている場合、構文は画像を直接表示するようにレンダリングされます。
+</p>
 </td>
 <td> {{cell://[book1]1!B[3]}}
 </td></tr>
@@ -98,11 +100,11 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </td>
 <td> テーブルの範囲
 </td>
-<td> HTMLテーブルとして（レポートシートから）ワークシート、表、セルを挿入します。<br />シンタックスは <br /> <i>[book_name]sheet_name!</i>　です。 <br /> または<br /><i>[book_name]sheet_name!table_name</i>です。
+<td> HTMLテーブルとして（レポートシートから）ワークシート、表、セルを挿入します。<br />構文は <br /> <i>[book_name]sheet_name!</i> です。 <br /> または <br /><i>[book_name]sheet_name!table_name</i> です。
 </td>
 <td>
 <p>{{table://[Book1]Sheet1!}} 
-<br />{{table://[Book2]FitLinear1!Parameters}}
+<br /> {{table://[Book2]FitLinear1!Parameters}}
 <br /> {{cell://[HiddenPeaks]FitPeaks1!Parameters.Footnote}}
 </p>
 </td></tr>
@@ -111,7 +113,7 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </td>
 <td> 文字列のLabTalkスクリプト
 </td>
-<td> 文字列を挿入するには、<a class="external text" href="../../LabTalk/LabTalk/String_registers.html">Labtalk 文字列レジスタ</a>の例があります。
+<td> 文字列を挿入するには、例えば <a class="external text" href="../../LabTalk/LabTalk/String_registers.html">Labtalk 文字列レジスタ</a> があります。
 </td>
 <td>
 <p>{{str://mystring$}} 
@@ -130,12 +132,26 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 <p>{{var://system.path.program$}}  <font color="green">（プログラムフォルダパスを表示）</font>
 <br />{{var://[Book1]!page.info.SYSTEM.IMPORT.FILENAME$}}  <font color="green">（インポートされたファイル名を表示）</font>
 </p>
+</td></tr>
+<tr>
+<td> file
+</td>
+<td> ファイルパス
+</td>
+<td> ファイルを挿入
+</td>
+<td>
+<p>{{file://%@JSamples\Image Processing and Analysis\bamboo.jpg}}  
+<br />
+{{file://%(System.path.Projectattachedfilespath$)Before.png}}  
+<font color="red">MarkdownとHTMLはOrigin 2025のLT変数で定義されたファイルフォルダを解析できます</font>
+</p>
 </td></tr></table>
 <p><br />
 </p>
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/HTML_Report/Tip_icon.png" width="57"  border="0" /></td><td><ol><li> <b>コピー</b>および<b>リンクの貼り付け</b>を使用して、Originオブジェクトを挿入できます。ノートウィンドウがテキストモードのときは、Originオブジェクトを<b>コピー</b>してからノートウィンドウで<b>リンクの貼り付け</b>でシンタックスを挿入できます。</li>
-<li> ノートウィンドウがレンダリングモードに切り替わると、ノートにグラフが挿入されたときにグラフの画像ファイル(.png)が生成され、画像タグがpngパスに置き換えられます。グラフが更新されると、それに応じてノートウィンドウも更新されます。</li></ol>
+<li> ノートウィンドウがレンダリングモードに切り替わると、ノートにグラフや画像（埋め込みグラフ/画像も含む）が挿入されたときにグラフの画像ファイル(.png)が生成され、画像タグがpngパスに置き換えられます。グラフが更新されると、それに応じてノートウィンドウも更新されます。</li></ol>
 </td></tr></table>
 <p><br />
 </p>
@@ -144,7 +160,7 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 </p><p>プレースホルダがリストされたワークブックを開くには
 </p>
 <ul><li> メニューから<b>メモ: プレースホルダーを編集</b>を選択します。</li>
-<li> メニューの<b>HTML: プレースホルダーを編集...</b>を選択します。</li></ul>
+<li> ノートウィンドウのタイトルを右クリックして<b>プレースホルダーを編集</b>を選択します。</li></ul>
 <p><br />
 ワークブックの最初の列は<b>プレースホルダー</b>の名前で、2番目の列のセルはリンクの内容を示しています。セルに変数とグラフを挿入し、次の構文を使用してノートウィンドウにプレースホルダを挿入します。
 </p>
@@ -153,7 +169,7 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 <span class='headerInParagraph'>プレースホルダワークシートにリンクを追加するには</span>
 </p>
 <ul><li> <b>コピー</b>と <b>リンクの貼り付け</b>でこのワークシートの2列目のセルにOriginオブジェクト、文字列、および変数のリンクを追加できます。</li></ul>
-<p>または
+<p>または、
 </p>
 <ul><li> 2番目の列のセルを右クリックし、<b>グラフを挿入...</b>または<b>変数の挿入...</b>でリンクを挿入します。</li></ul>
 <h2><a name="Insert_LaTeX_equation"></a><span class="mw-headline">LaTeX式を挿入</span></h2>
@@ -287,7 +303,7 @@ note.<span style="color: #000080;">syntax</span><span style="color: #000080;">=<
 <span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>File.<span style="color: #000080;">Name</span><span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>Fitting.<span style="color: #000080;">Equation</span><span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">|</span>
 
 <span style="color: #000080;">**</span>Fitted Parameters <span style="color: #000080;">&amp;</span> Statistics<span style="color: #000000;">:</span><span style="color: #000080;">**</span>
-<span style="color: #000080;">|</span>Intercept<span style="color: #000080;">|</span>Slope<span style="color: #000080;">|</span>Degrees of Freedom<span style="color: #000080;">|</span>R<span style="color: #000080;">-</span>Square <span style="color: #000000;">(</span>COD<span style="color: #000000;">)</span><span style="color: #000080;">|</span>Adj. <span style="color: #000080;">R</span><span style="color: #000080;">-</span>Square<span style="color: #000080;">|</span>
+<span style="color: #000080;">|</span>Intercept<span style="color: #000080;">|</span>Slope<span style="color: #000080;">|</span>Degrees of Freedom<span style="color: #000080;">|</span>R<span style="color: #000080;">-</span>Square <span style="color: #000000;">(</span>COD<span style="color: #000000;">)</span><span style="color: #000080;">|</span>Adj.<span style="color: #000080;">R</span><span style="color: #000080;">-</span>Square<span style="color: #000080;">|</span>
 <span style="color: #000080;">|</span><span style="color: #000080;">--</span><span style="color: #000080;">|</span><span style="color: #000080;">--</span><span style="color: #000080;">|</span><span style="color: #000080;">--</span><span style="color: #000080;">|</span><span style="color: #000080;">--</span><span style="color: #000080;">|</span><span style="color: #000080;">--</span><span style="color: #000080;">|</span>
 <span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>Intercept<span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">&amp;</span>#<span style="color: #0000dd;">177</span>;<span style="color: #000000;">{</span><span style="color: #000000;">{</span>Intercept.<span style="color: #000080;">Error</span><span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>Slope<span style="color: #000000;">}</span><span style="color: #000000;">}</span> <span style="color: #000080;">&amp;</span>#<span style="color: #0000dd;">177</span>; <span style="color: #000000;">{</span><span style="color: #000000;">{</span>Slope.<span style="color: #000080;">Error</span><span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>DOF<span style="color: #000000;">}</span><span style="color: #000000;">}</span> <span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>R<span style="color: #000080;">-</span>Square<span style="color: #000000;">}</span><span style="color: #000000;">}</span><span style="color: #000080;">|</span><span style="color: #000000;">{</span><span style="color: #000000;">{</span>Adj.<span style="color: #000080;">R</span><span style="color: #000080;">-</span>Square<span style="color: #000000;">}</span><span style="color: #000000;">}</span>
 <span style="color: #000080;">&lt;</span>img alt<span style="color: #000080;">=</span><span style="color: #ff00ff;">&quot;{{FittedCurve}}&quot;</span> width<span style="color: #000080;">=</span><span style="color: #0000dd;">350</span><span style="color: #000080;">&gt;</span></pre>

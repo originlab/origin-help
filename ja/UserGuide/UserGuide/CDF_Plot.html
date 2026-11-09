@@ -12,7 +12,6 @@
 <li class="toclevel-1 tocsection-6"><a href="#Version_Information"><span class="tocnumber">5</span> <span class="toctext">バージョン情報</span></a></li>
 </ul>
 </div>
-
 <h2><a name="Data_Requirements"></a><span class="mw-headline">要求されるデータ</span></h2>
 <p>経験的CDFプロットおよび／または理論的CDFプロットを作成するには、少なくとも1列を選択してください。 
 </p><p>複数のデータとグループ列を選択して、異なるデータ/グループの累積分布を比較します。 
@@ -20,11 +19,10 @@
 <h2><a name="Creating_the_Graph"></a><span class="mw-headline">グラフ作成</span></h2>
 <p>データを選択します。
 </p><p>メニューから、<b>プロット &gt; 統計：CDFプロット</b>を選択して、<b>plot_cdf</b>ダイアログを開きます。 
-</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png" width="500"  /></a>
+</p><p><a  class="image"><img alt="CDF Plot 02.png" src="../images/CDF_Plot/CDF_Plot_02.png" width="499"  /></a>
 </p>
 <h3><a name="Dialog_Controls"></a><span class="mw-headline">ダイアログの設定</span></h3>
 <table class="dialogcontroltable">
-
 <tr>
 <th><b>データ範囲</b>
 </th>
@@ -43,9 +41,13 @@
 <ul><li><b>すべて重ね合わせる</b>: 複数データと複数グループの両方で、同じグラフ上でオーバーラップを選択します。</li>
 <li><b>重ね合わせグループ、別レイヤの変数</b>：複数データ=別のレイヤ、複数グループ=同じグラフ上でオーバーラップします</li>
 <li><b>重ね合わせ変数、別レイヤグループ</b>：複数グループ=個別レイヤ、複数データ=同じグラフ上でのオーバーラップ</li>
-<li><b>別レイヤ</b>：複数データと複数グループの両方が個別のレイヤを選択</li></ul></li></ul>
-<ul><li> <b>ページの分割</b>：このチェックボックスをにチェックをつけると、別のグループ化列を選択して、グラフを複数レイヤに分割できます。 
-<dl><dd><b>Note:</b> 複数データと複数グループの両方が別レイヤに設定されている場合、結果シートのレイヤの順序は、「入力データによる」→「パネルの分割」→「グループによる」の階層に従います。</dd></dl></li>
+<li><b>別レイヤ</b>：複数データと複数グループの両方が個別のレイヤを選択</li></ul></li>
+<li> <b>水平パネルの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">横方向にパネルを分割</a>できます。各グループ値に対して、個別のグループ化ボックスチャートが表示されます。 
+<dl><dd><b>垂直パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
+<li> <b>垂直パネルに分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Horizontal_Panel.2FVertical_Panel" title="ユーザガイド:(作図の詳細) 「区分」タブ">縦方向にパネルを分割</a>できます。各グループ値に対して、個別のCDFプロットが表示されます。 
+<dl><dd><b>水平パネルに分割</b>にチェックが付いていない場合、<a href="../../UserGuide/UserGuide/The_(Plot_Details)_Panel_Tab.html#Wrap_Panel_if_Columns.2FRows_Exceed" title="ユーザガイド:(作図の詳細) 「区分」タブ">区分の折り返し</a>が有効で目盛やラベルは、左右交互に表示されるのが初期設定です。</dd>
+<dd>複数の列でグループ化している場合でも、パネル情報ラベルは1行のみが上部に表示されます。パネルのバナー文字列としてすべての因子（グループ値）がカンマ区切りで表示されます。</dd></dl></li>
 <li> <b>ページの分割</b>：このチェックボックスをオンにすると、別のグループ化列を指定して、入力データを分割し、異なるグラフページにCDFプロットを作成できます。各ページには、同じページ関連グループに属する列だけがプロットされます。ページに関連するグループ情報は、レイヤータイトルにカンマ区切りで表示されます（複数因子がある場合）。レポート用のグラフシートには、すべてのページが一覧表示されます。 </li></ul>
 </td></tr>
 <tr>
@@ -86,15 +88,11 @@
 </p>
 <h2><a name="Version_Information"></a><span class="mw-headline">バージョン情報</span></h2>
 <table class="tbl">
-
 <tr style="vertical-align: top;">
 <td><b>利用可能なバージョン</b>: Origin 2025b以降
 </td>
 <td><b>最終更新</b>: Origin 2026
 </td></tr></table>
-
-
-
 
 
 

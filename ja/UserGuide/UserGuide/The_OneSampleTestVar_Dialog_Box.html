@@ -1,91 +1,108 @@
-﻿<h1 class="firstheading">1群の分散検定ダイアログボックス</h1><p class='urlname' style='display: none'>tTest-OneSample-Var-Dialog</p>
+﻿<h1 class="firstHeading">1標本分散検定ダイアログボックス</h1><p class='urlname' style='display: none'>tTest-OneSample-Var-Dialog</p>
+<p><br />
+</p>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span> <span class="toctext">サポート情報</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Results_Log_Output"><span class="tocnumber">2</span> <span class="toctext">結果ログの出力</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Recalculate"><span class="tocnumber">3</span> <span class="toctext">再計算</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Input"><span class="tocnumber">4</span> <span class="toctext">入力</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Chi-Square_Test_for_Variance"><span class="tocnumber">5</span> <span class="toctext">分散のカイ二乗検定</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Plots"><span class="tocnumber">6</span> <span class="toctext">プロット</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Output"><span class="tocnumber">7</span> <span class="toctext">出力</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Supporting_Information"><span class="tocnumber">1</span><span class="toctext">サポート情報</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Input"><span class="tocnumber">2</span> <span class="toctext">入力</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Test"><span class="tocnumber">3</span> <span class="toctext">検定</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Power_Analysis"><span class="tocnumber">4</span> <span class="toctext">検出力解析</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Unset_Minimal_Difference_of_Interest"><span class="tocnumber">4.1</span> <span class="toctext">最小関心差を設定しない場合</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Set_Minimal_Difference_of_Interest"><span class="tocnumber">4.2</span> <span class="toctext">最小関心差を設定する場合</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Plots"><span class="tocnumber">5</span> <span class="toctext">プロット</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">6</span> <span class="toctext">出力</span></a></li>
 </ul>
 </div>
 
 <h2><a name="Supporting_Information"></a><span class="mw-headline">サポート情報</span></h2>
-<p>1群の分散検定ダイアログボックスを開くには、
+<p>1標本分散検定ダイアログボックスを開くには、
 </p>
-<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：1群の分散検定...</b>をクリックします。</li></ol>
+<ol><li> ワークシートがアクティブな状態で、<b>統計：仮説検定：1標本分散検定</b>をクリックします。</li></ol>
 <p><i>関連情報：</i>
 </p>
-<ul><li> <a href="../../UserGuide/Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" title="カテゴリー：1群の分散検定 (Proのみ)">はじめに：1群の分散検定</a></li>
-<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTestVar).html" title="ユーザガイド：アルゴリズム 1群の分散検定)"> アルゴリズム（1群の分散検定）</a></li></ul>
-<h2><a name="Results_Log_Output"></a><span class="mw-headline">結果ログの出力</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>結果ログの出力</b>
-</th>
-<td>
-<p>結果を結果ログに出力するにはチェックします。
-</p>
-</td></tr></table>
-<h2><a name="Recalculate"></a><span class="mw-headline">再計算</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>再計算</b>
-</th>
-<td>
-<p>分析結果の再計算を制御します。
-</p>
-<ul><li><b>なし</b> </li>
-<li><b>自動</b> </li>
-<li><b>手動</b>  </li></ul>
-<p>詳細情報は、 <a class="external text" href="../../UserGuide/UserGuide/Recalculating_Analysis_Results.html">分析結果の再計算</a>をご覧下さい。
-</p>
-</td></tr></table>
+<ul><li> <a href="../../UserGuide/Category/One-Sample_Test_for_Variance_(OriginPro_Only).html" title="カテゴリ:1標本分散検定(OriginProのみ)">はじめに：1標本分散検定</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithm_(OneSampletTestVar).html" title="ユーザガイド:アルゴリズム(OneSampletTestVar)"> アルゴリズム：1標本分散検定</a></li></ul>
 <h2><a name="Input"></a><span class="mw-headline">入力</span></h2>
-<table class="dialogcontroltable">
-
-<tr>
-<th><b>入力</b>
-</th>
-<td>
-<p>入力データを指定します。
-</p><p>範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。
+<p>1標本分散検定は、<b>素データ</b>と<b>要約データ(SD)</b>、<b>要約データ(分散)</b>の2つの入力データ形式に対応しています。
 </p>
-</td></tr></table>
-<h2><a name="Chi-Square_Test_for_Variance"></a><span class="mw-headline">分散のカイ二乗検定</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
-<th>分散検定
+<th>素データ値
 </th>
-<td>検定される仮説の分散
+<td>列を範囲形式指定します。
+<p>範囲の設定に関する詳細は、<a class="external text" href="../../UserGuide/UserGuide/Specifying_Your_Input_Data.html">入力データを指定する</a>をご覧ください。
+</p>
+</td></tr>
+<tr>
+<th>要約データ (SD)
+</th>
+<td>要約データは、サンプルに用意された標準偏差、サンプルサイズです。
+<p>ワークシートの列を選択するか、手動でダイアログボックスに要約データを入力します。
+</p>
+<ul><li> <b>サンプル名</b></li></ul>
+<dl><dd>サンプルの名前を指定します。列をサンプル名として指定するか、スペースで区切った文字列を入力します。あるいは、空のままにします。</dd></dl>
+<ul><li> <b>SD</b></li></ul>
+<dl><dd>データの標準導出を指定します。  列データセットを指定するか、スペース区切りの値を入力します。（SDは0より大きい必要があります。）</dd></dl>
+<ul><li> <b>サンプルサイズ</b></li></ul>
+<dl><dd>データの総数を指定します。列データセットを指定するか、スペース区切りの値を入力します。（サンプルサイズは0より大きい必要があります。）</dd></dl>
+</td></tr>
+<tr>
+<th>要約データ(分散)
+</th>
+<td>要約データは、サンプルに用意された分散、サンプルサイズです。
+<p>ワークシートの列を選択するか、手動でダイアログボックスに要約データを入力します。
+</p>
+<ul><li> <b>サンプル名</b></li></ul>
+<dl><dd>サンプルの名前を指定します。列をサンプル名として指定するか、スペースで区切った文字列を入力します。あるいは、空のままにします。</dd></dl>
+<ul><li> <b>分散</b></li></ul>
+<dl><dd>データの分散を指定します。  列データセットを指定するか、スペース区切りの値を入力します。 </dd></dl>
+<ul><li> <b>サンプルサイズ</b></li></ul>
+<dl><dd>データの総数を指定します。列データセットを指定するか、スペース区切りの値を入力します。（サンプルサイズは0より大きい必要があります。）</dd></dl>
+</td></tr></table>
+<h2><a name="Test"></a><span class="mw-headline">検定</span></h2>
+<table class="dialogcontroltable">
+
+<tr>
+<th>検定対象
+</th>
+<td>オプション：
+<ul><li> <b>分散</b></li>
+<li> <b>標準偏差</b>（デフォルトオプション）</li></ul>
+</td></tr>
+<tr>
+<th>検定の分散
+</th>
+<td><b>検定対象</b>ドロップダウンリストで<b>分散</b>を選択すると、検定する仮説分散を指定できます。
+</td></tr>
+<tr>
+<th>検定SD
+</th>
+<td><b>検定対象</b>ドロップダウンリストで<b>標準偏差</b>を選択すると、検定する仮説SDを指定できます。
 </td></tr>
 <tr>
 <th>帰無仮説
 </th>
-<td>検定される帰無仮説(標本分散 = <i>検定分散</i> )
+<td>検定される帰無仮説（標本分散 = <i>検定分散</i>）。
 </td></tr>
 <tr>
 <th>対立仮説
 </th>
-<td><b>オプション</b>：
-<dl><dd><b>分散 &lt;&gt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>標本の分散は仮説の分散と異なります。
-</p>
-<dl><dd><b>分散 &gt;  <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>標本の分散は、仮説の分散より大きいです(上側片側検定)。
-</p>
-<dl><dd><b>分散 &lt; <img src="../images/The_OneSampleTestVar_Dialog_Box/math-3ae7322233f9d299e726f0b29bc8c5d4.png" title="\boldsymbol{\sigma}0" alt="\boldsymbol{\sigma}0" class="tex"/></b></dd></dl>
-<p>標本の分散は、仮説の分散より小さいです(下側片側検定)。
-</p>
+<td>オプション：
+<dl><dd><b>分散 &lt;&gt; <i>検定分散</i></b> または <b>SD &lt;&gt; <i>検定SD</i></b>
+<dl><dd>標本分散/SDが仮定した分散/SDと異なります。</dd></dl></dd></dl>
+<dl><dd><b>分散 &gt; <i>検定分散</i></b> または <b>SD &gt; <i>検定SD</i></b>
+<dl><dd>標本分散/SDが仮定した分散/SDより大きい（上側検定）。</dd></dl></dd></dl>
+<dl><dd><b>分散 &lt; <i>検定分散</i></b> または <b>SD &lt; <i>検定SD</i></b>
+<dl><dd>標本分散/SDが仮定した分散/SDより小さい（下側検定）。</dd></dl></dd></dl>
 </td></tr>
 <tr>
 <th>有意水準
 </th>
-<td>検定の有意水準を指定します。
+<td>検定の有意水準。
 </td></tr>
 <tr>
 <th>信頼区間
@@ -95,7 +112,74 @@
 <tr>
 <th>%単位での信頼水準
 </th>
-<td>信頼水準をスペース区切りで指定します(%)。このオプションは、<i>信頼区間</i>にチェックが付いている時のみ利用できます。
+<td>スペース区切りで信頼水準（%）を指定します。このオプションは<i>信頼区間</i>が選択されている場合にのみ利用可能です。
+</td></tr>
+<tr>
+<th>検定方法
+</th>
+<td>検定方法を選択します。
+<ul><li> <b>カイ二乗</b> </li></ul>
+<dl><dd>正規分布の場合にのみ使用できます。<b>カイ二乗</b>、<b>自由度（DF）</b>、<b>確率&gt;カイ二乗</b>を含むカイ二乗検定の結果と、分散/標準偏差の信頼区間を出力します。</dd></dl>
+<ul><li> <b>Bonett</b></li></ul>
+<dl><dd>任意の連続分布に使用できます。<b>p値</b>を含むBonett検定の結果と、分散/標準偏差の信頼区間を出力します。</dd></dl>
+<dl><dd>入力データ形式が<b>要約データ（SD）/（分散）</b>の場合、<b>Bonett</b>オプションは使用できません。</dd></dl>
+</td></tr></table>
+<h2><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h2>
+<h4><a name="Unset_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定しない場合</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>指定した検出力に対する差
+</th>
+<td> <b>最小関心差</b>が設定されていない場合、このオプションを使用できます。
+<p>指定した検出力レベルに対応する差を出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。 
+</p>
+</td></tr>
+<tr>
+<th>検出力レベル
+</th>
+<td><b>指定した検出力に対する差</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr></table>
+<h4><a name="Set_Minimal_Difference_of_Interest"></a><span class="mw-headline">最小関心差を設定する場合</span></h4>
+<table class="dialogcontroltable">
+
+<tr>
+<th>関心のある最小差
+</th>
+<td>検定分散/SDと目標分散/SDの間の最小差を指定します。このボックスに値を入力すると、検出力分析グラフには、異なる検出力でこの差を検出するために必要な最小標本サイズが表示されます。
+</td></tr>
+<tr>
+<th>指定された検出力のサンプルサイズ
+</th>
+<td><b>関心のある最小差</b>にチェックを付けた場合に使用できます。
+<p>指定した検出力レベルに対応する標本サイズを出力します。このオプションを選択すると、指定した検出力レベルの設定が、検出力曲線内の検出力レベルに反映されます。選択しない場合は、デフォルトの検出力レベルが使用されます。
+</p>
+</td></tr>
+<tr>
+<th>検出力レベル
+</th>
+<td><b>指定した検出力に対する標本サイズ</b>オプションをオンにした場合、この編集ボックスに検出力水準をスペース区切りで入力できます。デフォルトの検出力水準は <i>60%、70%、80%、90%</i> です。
+</td></tr>
+<tr>
+<th>検定データに基づく検出力
+</th>
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>検定データのサンプルサイズでの検出力を計算します。  （帰無仮説が偽であるときに帰無仮説を棄却する確率）
+</p>
+</td></tr>
+<tr>
+<th>仮説の検出力
+</th>
+<td><b>関心のある最小差</b>を指定した場合に使用できます。
+<p>サンプルサイズを変化させた場合の検出力を計算します。このオプションにチェックを付けると、対応する曲線が検出力曲線に追加されます。
+</p>
+</td></tr>
+<tr>
+<th>仮説のサンプルサイズ
+</th>
+<td><b>関心のある最小差</b>を指定し、<b>仮説の検出力</b>をオンにした場合、このオプションを使用できます。
+<p>検出力計算のための仮想サンプルサイズを指定します。
+</p>
 </td></tr></table>
 <h2><a name="Plots"></a><span class="mw-headline">プロット</span></h2>
 <table class="dialogcontroltable">
@@ -103,30 +187,66 @@
 <tr>
 <th>ヒストグラム
 </th>
-<td>標本のヒストグラムをプロットするかどうかを指定します。
+<td>サンプルデータのヒストグラムをプロットします。
 </td></tr>
 <tr>
 <th>ボックスチャート
 </th>
-<td>標本のボックスチャートをプロットするかどうかを指定します。
+<td>サンプルデータのボックスチャートをプロットします。
+<p><b>Note:</b>データセットに外れ値が検出されると、ボックスチャートの下に脚注として、そのケースを確認するためのメモが表示されます。外れ値を除外したい場合は、脚注の最後にある三角形のボタンをクリックして外れ値をマークし、再計算できます。
+</p>
 </td></tr>
 <tr>
-<th>1つのグラフ中に同じタイプのプロットを配置する
+<th>グラフ中に同じ形式のプロットを配列
 </th>
-<td>同じタイプのプロットを同一グラフ内に表示するかどうか指定します。ヒストグラムではレイヤは垂直に並べられます。ボックスチャートでは水平に並べられます。
+<td>同じタイプのプロットを同一グラフ内に配列するかどうか指定します。ヒストグラムの場合、レイヤは垂直に配置されます。ボックスチャートの場合、レイヤは水平に配置されます。
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note:</b>入力データ形式が<b>要約データ(SD)/(Variance)</b>の場合、プロットは利用できません。
 </td></tr></table>
 <h2><a name="Output"></a><span class="mw-headline">出力</span></h2>
 <table class="dialogcontroltable">
 
 <tr>
-<th>プロットデータの出力
+<th>結果ログの出力
 </th>
-<td>プロットされたデータを出力するワークシートを指定します（Originはプロットが作成された時に表形式データを生成します）。
+<td>
+<p>選択すると結果を結果ログに出力します。
+</p>
 </td></tr>
 <tr>
-<th>結果の出力
+<th>グラフィカル要約レポート
 </th>
-<td>検定結果を出力するワークシートを指定します。
+<td>サマリーグラフを作成します。内容には P値バー、効果量バー、データの分布グラフが含まれます。また、統計値を示す結果表がグラフに添付されます。
+<p>サマリーグラフの脚注として、これらの統計結果の診断が表示されます。
+</p>
+</td></tr>
+<tr>
+<th>グラフィカル検出力解析レポート
+</th>
+<td>検出力解析レポートをグラフィカルに表示するかどうかを指定します。検出力曲線は、比率の差の変化に応じて検定の統計的検出力がどのように変化するかを示します。検出力とは、真の差が0と異なる場合に帰無仮説を棄却する確率です。
+<p>検出力曲線グラフの後に検出力解析の診断結果を示す脚注を追加で表示します。検出力の値 80% は一般的に十分と見なされます。
+</p>
+</td></tr>
+<tr>
+<th>プロットデータ出力
+</th>
+<td>プロットデータの出力用ワークシートを指定します (Originはプロットの作成時に表形式のデータを生成します)。
+</td></tr>
+<tr>
+<th>結果出力
+</th>
+<td>結果を出力するワークシートを指定します。
+</td></tr></table>
+<table class="note">
+
+<tr>
+<td><b>Note</b>:
+<ul><li> 入力データ形式が<b>要約データ（SD）/（分散）</b>の場合、<b>グラフィカル要約</b>オプションは使用できません。</li>
+<li> 複数のデータ（<b>素データ</b>と<b>要約データの</b>両方）を入力した場合、<b>グラフィカル検出力解析レポート</b>は出力されません。</li>
+<li> 入力データ形式が素データの場合、<b>マスクされたデータ</b>と<b>不正データ（欠損値）</b>表がレポートシートに表示されます。</li></ul>
 </td></tr></table>
 
 

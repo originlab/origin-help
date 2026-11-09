@@ -32,6 +32,7 @@
 <li class="toclevel-2 tocsection-15"><a href="#Convert_to_Free_Form"><span class="tocnumber">2.7</span> <span class="toctext">自由形式に変換</span></a></li>
 </ul>
 </li>
+<li class="toclevel-1 tocsection-16"><a href="#Import_Prism_Files"><span class="tocnumber">3</span> <span class="toctext">Prismファイルをインポート</span></a></li>
 </ul>
 </div>
 <h2><a name="Table_Types"></a><span class="mw-headline">テーブルの種類</span></h2>
@@ -41,7 +42,7 @@
 <h3><a name="XY"></a><span class="mw-headline">XY</span></h3>
 <p>このテーブルタイプは、<i>XYYY...</i> 構造に従います。つまり、1つの X 列に複数の Y 列が対応する形式です。オプションで<b>行タイトル</b>列(行にラベルを付けるためのテキスト列)と<b>Xエラー</b>列を含めることができます。各<b>Yデータセットは、</b>複数の<b>反復列</b>を持つ個別のグループを表します。
 </p>
-<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png" width="379"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table XY dialog.png" src="../images/Data_Table/New_Data_Table_XY_dialog.png" width="503"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">データ形式
@@ -57,8 +58,9 @@
 <td>比較するグループの数を選択または入力します。各Yデータセットには、同じ数の複製列があります。
 <p><b>Note</b>: テーブルの作成後いつでもデータセットを追加または削除できます。 
 </p>
-<ul><li>1つまたは複数のデータセットを追加するには、テーブルタイプアイコン<a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
-<li>既存のデータセットの前に新しいYデータセットを挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
+<ul><li>グループと反復を再構成するには、テーブルのアイコン<a  class="image"><img alt="XY Table icon.png" src="../images/Data_Table/XY_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
+<li>新しいYデータセットを追加するには、標準ツールバーの<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。</li>
+<li>新しいYデータセットを挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
 <li>Yデータセットを削除するには、データセットのタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
 <tr>
@@ -82,8 +84,7 @@
 <td>各Yデータセットに含める複製サブ列の数を選択または入力します。反復がない場合は 1 を入力します。
 <p><b>Note:</b>テーブルを作成した後でもいつでもサブ列を追加または削除できます。 
 </p>
-<ul><li>サブ列を追加するには、<b>列を追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。同じ<b>名前</b>を持つすべてのデータセットに、新しい複製が追加されます。 </li>
-<li>サブ列を挿入するには、サブ列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのデータセットに新しい複製が追加されます。 </li>
+<ul><li>サブ列を挿入するには、サブ列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのデータセットに新しい複製が追加されます。 </li>
 <li>すべてのデータセットから既存のサブ列を削除するには、サブ列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
 <tr>
@@ -104,9 +105,9 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <th width="20%">グループ数
 </th>
 <td>比較するグループの数を選択または入力します。1つのグループにつき1つのY列が作成されます。
-<p><b>Note</b>: テーブルの作成後いつでもY列を追加または削除できます。 
+<p><b>Note</b>: テーブルの作成後いつでもY列（グループ）を追加または削除できます。 
 </p>
-<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。  </li>
+<ul><li>新しい列を追加するには、標準ツールバーの<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。 </li>
 <li>既存のデータセットの前に新しいY列を挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
 <li>列を削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
@@ -137,7 +138,8 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <td>2つ（または3つ）のカテゴリ次元で比較するグループの数を選択または入力します。
 <p><b>Note</b>: テーブルの作成後いつでもグループを追加または削除できます。 
 </p>
-<ul><li>1つまたは複数のグループを追加するには、テーブルタイプアイコン<a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
+<ul><li>グループと反復を再構成するには、テーブルのアイコン<a  class="image"><img alt="Groupped Table icon.png" src="../images/Data_Table/Groupped_Table_icon.png" width="16"  /></a>をクリックして<b>テーブルを再構成</b>メニューを選択します。詳細は<a href="#Restructure_Table">以下のセクション</a>を参照ください。</li>
+<li>新しいグループを追加するには、標準ツールバーの<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。</li>
 <li>既存のグループの前に新しいグループを挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
 <li>グループを削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
@@ -157,8 +159,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <td>グループごとの複製Y列の数を選択または入力します。反復がない場合は 1 を入力します。
 <p><b>Note:</b>テーブルを作成した後でも、いつでもY列を追加または削除できます。 
 </p>
-<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。新しい複製が同じ<b>名前</b>のすべてのグループに追加されます。 </li>
-<li>Y列を挿入するには、Y列の<b>名前</b>セルをクリックしてその単一列を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのグループに新しい複製が追加されます。 </li>
+<ul><li>Y列を挿入するには、Y列の<b>名前</b>セルをクリックしてその単一列を選択し、右クリックして<b>挿入</b>を選択します。同じ位置にあるすべてのグループに新しい複製が追加されます。 </li>
 <li>すべてのグループから既存のY列を削除するには、Y列の<b>名前</b>セルをクリックしてその複製を選択し、右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
 <tr>
@@ -173,7 +174,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <h3><a name="Contingency"></a><span class="mw-headline">分割表</span></h3>
 <p>このテーブルタイプは、二元分割表の構造に従います。1つのテキスト列に行カテゴリのラベルを入力し、それに続く複数の数値列に度数を入力します。最初のテキスト列には、1つ目のカテゴリ変数のラベルが含まれます。後続の数値列には、2つ目のカテゴリ変数の各水準に対応する整数の度数が含まれます。 
 </p>
-<dl><dd><a  class="image"><img alt="New Data Table Contingency dialog.png" src="../images/Data_Table/New_Data_Table_Contingency_dialog.png" width="701"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table Contingency dialog.png" src="../images/Data_Table/New_Data_Table_Contingency_dialog.png" width="742"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">列カテゴリ
@@ -187,7 +188,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <h3><a name="Survival"></a><span class="mw-headline">生存</span></h3>
 <p>このテーブルタイプは、時間 + ステータス構造に従います。つまり、経過時間用の1つの X 列に、イベントステータス用の1つ以上の Y 列が対応します。X 列には、観察開始からイベント発生または打ち切りまでの経過時間（Elapsed Time）が含まれます。Y 列には、イベントが発生したかどうかを示す ステータス が含まれます。通常、0 = 打ち切り（イベントなし／脱落）、1 = イベント（死亡／故障／指定した結果の発生）を表します。オプションで、個々の被験者ラベル用の<b>行タイトル</b>列を追加できます。
 </p>
-<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png" width="438"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="New Data Table Survival dialog.png" src="../images/Data_Table/New_Data_Table_Survival_dialog.png" width="917"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">グループ数
@@ -195,9 +196,10 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <td>比較するグループの数を選択または入力します。1つのグループにつき1つのY列が作成されます。
 <p><b>Note</b>: テーブルの作成後いつでもグループ（Y列）を追加または削除できます。 
 </p>
-<ul><li>Y列を追加するには、<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。  </li>
-<li>既存のデータセットの前に新しいY列を挿入するには、データセットのタイトルバーを右クリックして<b>挿入</b>を選択します。</li>
-<li>列を削除するには、列のタイトルバーを右クリックして<b>削除</b>を選択します。</li></ul>
+<pre>*新しい列を追加するには、標準ツールバーの<b>列の追加</b>ボタン<a  class="image"><img alt="Button Add New Columns.png" src="../images/Data_Table/Button_Add_New_Columns.png" width="16"  /></a>をクリックします。
+</pre>
+<ul><li>既存のデータセットの前に新しいY列を挿入するには、データセットのを右クリックして<b>挿入</b>を選択します。</li>
+<li>列を削除するには、列を右クリックして<b>削除</b>を選択します。</li></ul>
 </td></tr>
 <tr>
 <th>グループ名
@@ -215,8 +217,9 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <td>デフォルトでは、経過時間（X 列）の単位は 日 です。この編集ボックスを使用して、単位を月、年などに変更できます。
 </td></tr></table>
 <p><br />
-生存テーブルはKaplan-Meier 推定や信頼性・生存時間解析など、生存時間解析および信頼性研究用に設計されています。
+生存表は生存分析と信頼性研究のために設計されています。Kaplan-Meier推定は、テーブルアイコン<a  class="image"><img alt="Survival Table Icon.png" src="../images/Data_Table/Survival_Table_Icon.png" width="16"  /></a>(左上隅)を左クリックし、<b>Kaplan-Meier推定...</b>メニューを選択すると素早くアクセスできます。
 </p>
+<dl><dd><a  class="image"><img alt="Survival Table Ex.gif" src="../images/Data_Table/Survival_Table_Ex.gif" width="664"  /></a></dd></dl>
 <h2><a name="Basic_Manipulates"></a><span class="mw-headline">基本の操作</span></h2>
 <p>テーブル左上のテーブルアイコンをクリックすると、よく使用する操作にすばやくアクセスできるメニュー一覧がポップアップ表示されます。
 </p>
@@ -224,7 +227,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <p>使用可能なメニューはテーブルタイプによって異なります。
 </p>
 <h3><a name="Summary_Data_.26_Plot_Summary_Data"></a><span class="mw-headline">要約データ &amp; 要約データをプロット</span></h3>
-<p><b>散布図</b>、<b>折れ線</b>、<b>線+シンボル</b>または<b>縦棒</b>グラフで要約統計データをプロットできます。Y値には、<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>平均値</b>、<b>中央値</b>、<b>幾何平均</b></a>を使用できます。オプションで<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>標準偏差</b>、<b>SEM</b>（平均の標準誤差）、<b>95% CI</b>（平均の上側95%信頼区間 - 平均の下側95%信頼区間）</a>、または<b>範囲</b>（最大値 - 最小値）のエラーバーを追加できます。
+<p><b>散布図</b>、<b>折れ線</b>、<b>線+シンボル</b>または<b>縦棒</b>グラフで要約統計データをプロットできます。Y値には、<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>平均値</b>、<b>中央値</b>、<b>幾何平均</b>、<b>調和平均</b></a>を使用できます。オプションで<a href="../../UserGuide/UserGuide/The_DescStats_Dialog_Box.html#Quantities" title="ユーザガイド:記述統計ダイアログボックス"><b>標準偏差</b>、<b>SEM</b>（平均の標準誤差）、<b>95% CI</b>（平均の上側95%信頼区間 - 平均の下側95%信頼区間）</a>、または<b>範囲</b>（最大値 - 最小値）のエラーバーを追加できます。
 </p>
 <dl><dd><a  class="image"><img alt="Plot Summary Data.png" src="../images/Data_Table/Plot_Summary_Data.png" width="330"  /></a></dd></dl>
 <p>集計データは、Summary Statsワークシートに出力されます。総数Nを出力することもできます。
@@ -232,7 +235,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <h3><a name="Normalize"></a><span class="mw-headline">正規化</span></h3>
 <p>データを共通の相対スケール（0% ～ 100%、または 0.0 ～ 1.0）に再スケールし、グループ間またはサブ列間で比較できるようにします。
 </p>
-<dl><dd><a  class="image"><img alt="Normalize Data Table.png" src="../images/Data_Table/Normalize_Data_Table.png" width="432"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Normalize Data Table.png" src="../images/Data_Table/Normalize_Data_Table.png" width="467"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">サブ列
@@ -265,7 +268,7 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <h3><a name="Transform_X"></a><span class="mw-headline">Xを変換</span></h3>
 <p>用量反応解析のために、濃度値（X データ）を変換します。これは通常、シグモイド用量反応曲線フィットを行う前に必要な前処理です。
 </p>
-<dl><dd><a  class="image"><img alt="Transform X data table.png" src="../images/Data_Table/Transform_X_data_table.png" width="330"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Transform X data table.png" src="../images/Data_Table/Transform_X_data_table.png" width="348"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="25%">X=0を別の値に置換
@@ -289,21 +292,21 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 </p>
 </td></tr></table>
 <h3><a name="Nonlinear_Fit"></a><span class="mw-headline">非線形フィット</span></h3>
-<p>XYデータで非線形曲線フィットを実行します。<a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="カテゴリ:非線形曲線フィットダイアログボックス"><b>非線形回帰</b>ダイアログ</a>が開き、フィット処理を実行できます。
+<p>XYデータで非線形曲線フィットを実行します。最初にシンプルなダイアログが開き、フィット関数を選択できます。<b>OK</b>をクリックすると<a href="../../UserGuide/Category/The_NLFit_Dialog_Box.html" title="カテゴリ:非線形曲線フィットダイアログボックス"><b>非線形曲線フィット</b>ダイアログ</a>が開き、フィット処理を実行できます。
 </p>
-<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png" width="395"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Nonlinear Fit Data Table.png" src="../images/Data_Table/Nonlinear_Fit_Data_Table.png" width="781"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">関数を選択
 </th>
-<td>フィット<b>関数</b>の詳細については、<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">このページ</a>を参照してください（ただし、利用可能な<b>カテゴリ</b>はデフォルトモードとは異なる場合があります）。<a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png" width="18"  /></a>ボタンをクリックして、必要な機能を検索できます。
-<p>フィット関数をすべて利用するには、デフォルトモード（<b>環境設定: GUIモード: デフォルト</b>）に切り替えて、Origin を再起動してください。 
-</p>
+<td>詳細については、<a class="external text" href="../../LabTalk/Script/LabTalk-Supported_Functions.html#Fitting_Functions">この関数リスト</a>を参照ください（<b>Note</b>:利用可能な<b>カテゴリ</b>はデフォルトモードとは異なります）。<a  class="image"><img alt="Button Search Fitting Function.png" src="../images/Data_Table/Button_Search_Fitting_Function.png" width="18"  /></a>ボタンをクリックして、必要な機能を検索できます。
 </td></tr>
 <tr>
 <th>フィット方法
 </th>
 <td>素データまたは要約統計量のどちらを使用してフィットするかを指定します。選択肢は、<b>素データ</b>、<b>平均 + SD</b>（SD を重みとして使用）、<b>平均 + SE</b>（SE を重みとして使用）、<b>平均のみ</b>です。集計統計量を選択した場合、入力データとして使用する「サマリー統計」ワークシートが自動生成されます。
+<p><b>Note</b>: サマリーグラフから<b>非線形曲線フィット</b>ツールを開いた場合、プロットにエラーバーがあっても重み付けはサポートされません。
+</p>
 </td></tr>
 <tr>
 <th>グローバルフィット
@@ -312,19 +315,28 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <p>オフにすると、各データセットを個別にフィットし、データセットごとに個別の結果を求めます（ただし、結果は1つのレポートにまとめられます）。
 </p><p><b>グローバルフィット</b>の詳細については、<a href="../../UserGuide/UserGuide/Global_fitting_with_parameter_sharing.html" title="ユーザガイド：パラメータ共有でのグローバルフィット">このページ</a>を参照してください。
 </p>
+</td></tr>
+<tr>
+<th>EC50/IC50線の追加
+</th>
+<td><a href="../../UserGuide/UserGuide/Boltzmann.html#Derived_Parameters" title="UserGuide:Boltzmann">Boltzmann</a>, <a href="../../UserGuide/UserGuide/DoseResp.html#Derived_Parameters" title="UserGuide:DoseResp">DoseResp</a>, <a href="../../UserGuide/UserGuide/Hill.html#Derived_Parameters" title="UserGuide:Hill">Hill</a>, <a href="../../UserGuide/UserGuide/Hill1.html#Derived_Parameters" title="ユーザガイド:Hill1">Hill1</a>, <a href="../../UserGuide/UserGuide/Logistic.html#Derived_Parameters" title="UserGuide:Logistic">Logistic</a>, <a href="../../UserGuide/UserGuide/Logistic5.html#Derived_Parameters" title="ユーザガイド:Logistic5">Logistic5</a>, <a href="../../UserGuide/UserGuide/MichaelisMenten.html#Derived_Parameters" title="UserGuide:MichaelisMenten">MichaelisMenten</a>などの関数で利用可能です。
+</td></tr>
+<tr>
+<th>外れ値を除去（ロバスト回帰）
+</th>
+<td>曲線をフィッティングするときに<a href="../../UserGuide/UserGuide/Settings_Tab_Upper_Panel.html#Advanced" title="ユーザガイド:『設定』タブ (上側パネル)"><b>外れ値を除去</b></a>するように設定するには、このチェックボックスを選択します。
 </td></tr></table>
 <h3><a name="Linear_Fit"></a><span class="mw-headline">線形フィット</span></h3>
 <p>XYデータに対して線形回帰を実行します。各グループは個別にフィットされ、すべてのフィット結果が1つのレポートにまとめられます。<a href="../../UserGuide/UserGuide/Linear_Regression_Dialog.html" title="ユーザガイド：線形回帰のダイアログ"><b>線形回帰</b>ダイアログ</a>が開き、フィット処理を実行できます。
 </p>
-<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png" width="330"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Linear Fit Data Table.png" src="../images/Data_Table/Linear_Fit_Data_Table.png" width="290"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="20%">フィット方法
 </th>
 <td>素データと要約データのどちらを使用してフィットするかを指定します。
 <ul><li> <b>素データ：</b><br />各グループを個別にフィットします。各グループ内の反復データは連結され、1つのデータセットとしてフィットされます。</li>
-<li> <b>平均：</b><br />各グループ内の反復データの平均を計算するSummary Statsワークシートが自動生成されます。各グループは平均を入力として個別にフィットされます。</li>
-<li> <b>平均+ SD：</b><br />各グループ内の反復データの平均標準偏差を計算するSummary Statsワークシートが自動生成されます。各グループは、その平均値を入力として使用し、分散の逆数 (1/SD^2) を重みとして、個別にフィットされます。</li></ul>
+<li> <b>平均+ SD：</b><br />各グループ内の反復データの平均と標準偏差 (SD)を計算するSummary Statsワークシートが自動生成されます。各グループは平均を入力として個別にフィットされます。<b>Mean + SD</b>が選択されている場合、逆分散(1/SD^2)が重みとして適用されます。</li></ul>
 </td></tr>
 <tr>
 <th>切片固定
@@ -362,10 +374,16 @@ XY テーブルは、用量反応試験や阻害試験など、1つの測定変�
 <h3><a name="Restructure_Table"></a><span class="mw-headline">テーブルを再構成</span></h3>
 <p>データテーブルを再構築します（グループまたは複製の追加または削除など）。
 </p>
-<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png" width="295"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Add Groups Data Table.png" src="../images/Data_Table/Add_Groups_Data_Table.png" width="238"  /></a></dd></dl>
 <h3><a name="Convert_to_Free_Form"></a><span class="mw-headline">フリーフォームに変換</span></h3>
 <p>現在のデータテーブルを、標準のOrigin<a class="external text" href="../../GettingStarted/OriginLab/Workbooks_Worksheets_Columns.html">ワークシート</a>フォームに変換します。
 </p>
+<h2><a name="Import_Prism_Files"></a><span class="mw-headline">Prismファイルをインポート</span></h2>
+<ul><li> 最も簡単な方法は、Prismファイル(.pzfx、.prism、.prismt、.xml)をOriginワークスペースにドラッグアンドドロップすることです。<br />Originは、Prismファイルのすべてのデータテーブルと分析結果を1つのOriginワークブックに取り込みます。</li>
+<li> <b>ファイル: Prismを開く</b>からファイルをOriginで直接開きます。<br />ドラッグアンドドロップと直接開くことの違いの1つは、開くときにインポートするテーブルを選択できることです。<br /><b>Note</b>：同じファイルがPrismで既に開かれている場合は、Originで開く前にPrismで閉じる必要があります。</li>
+<li> <b>データ：ファイルに接続：Prism</b>からPrismコネクタを介してPrismファイルをインポートします。</li>
+<li> PCでPrismを実行している場合は、PrismからOriginに直接データをコピー&amp;ペーストすることもできます。つまり、Prism内のテーブルを選択してコピーし、Originに移動し、通常の(自由形式の)ワークシートに移動してデータを貼り付けられます。Originは自動的にデータ構造を検出し、そのワークシートをデータの正しいテーブルタイプに変換します。</li></ul>
+
 
 
 

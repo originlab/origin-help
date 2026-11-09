@@ -1,190 +1,177 @@
-﻿<h1 class="firstheading">一元、二元、三元配置の分散分析</h1>
-<p class="urlname" style="display: none;">ANOVA-CRD</p>
+﻿<h1 class="firstHeading">一元、二元、三元配置の分散分析</h1><p class='urlname' style='display: none'>ANOVA-CRD</p>
 <table class="noborder">
-<tr>
-<td width="35"><img src="../images/One,_Two,_and_Three_Way_ANOVA/Video_Image.png" alt="" width="33" height="33" border="0" /></td>
-<td>
-<p>関連する動画はこちら： 関連する動画はこちら:<a class="external text" target="_blank" href="http://www.originlab.com/index.aspx?go=Support&amp;ss=chm&amp;pid=1577">Analysis of Variance (ANOVA)</a></p>
-</td>
-</tr>
-</table>
-<table id="toc" class="toc">
-<tr>
-<td>
-<div id="toctitle">
-<h2>目次</h2>
-</div>
-<ol>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">イントロダクション</span></a></li>
+                <tr>
+                <td width="35"><img src="../images/One,_Two,_and_Three_Way_ANOVA/Video_Image.png" width="33"  /></td>
+                <td><p>関連する動画はこちら：<a class="external text" href="http://www.originlab.com/index.aspx?go=Support&amp;ss=chm&amp;pid=1577" target="_blank">分散分析(ANOVA)</a>
+</p></td>
+                </tr>
+                </table>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">はじめに</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Assumptions"><span class="tocnumber">2</span> <span class="toctext">仮定</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Processing_Procedure"><span class="tocnumber">3</span> <span class="toctext">手順の流れ</span></a>
-<ol>
+<ul>
 <li class="toclevel-2 tocsection-4"><a href="#Preparing_Analysis_Data"><span class="tocnumber">3.1</span> <span class="toctext">分析データの準備</span></a></li>
 <li class="toclevel-2 tocsection-5"><a href="#Verifying_Assumptions"><span class="tocnumber">3.2</span> <span class="toctext">仮定の検証</span></a></li>
 <li class="toclevel-2 tocsection-6"><a href="#Selecting_Mean_Comparison_Methods"><span class="tocnumber">3.3</span> <span class="toctext">平均比較手法の選択</span></a></li>
 <li class="toclevel-2 tocsection-7"><a href="#Power_Analysis"><span class="tocnumber">3.4</span> <span class="toctext">検出力解析</span></a></li>
-</ol>
+</ul>
 </li>
 <li class="toclevel-1 tocsection-8"><a href="#Handling_Missing_Values"><span class="tocnumber">4</span> <span class="toctext">欠損値の扱い</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Performing_ANOVA"><span class="tocnumber">5</span> <span class="toctext">分散分析を実行</span></a></li>
-</ol>
+<li class="toclevel-1 tocsection-9"><a href="#Performing_ANOVA"><span class="tocnumber">5</span> <span class="toctext">ANOVAを実行</span></a></li>
+</ul>
+</div>
+
+<table class="noborder">
+
+<tr style="vertical-align: top;">
+<td> <a  class="image"><img alt="ANOVA graphs 1.png" src="../images/One,_Two,_and_Three_Way_ANOVA/280px-ANOVA_graphs_1.png" width="280"   /></a>
 </td>
-</tr>
-</table>
-<p><br /></p>
-<h2><a name="Introduction" id="Introduction"></a><span class="mw-headline">イントロダクション</span></h2>
-<p>要因分散分析は、実験の無作為配置を考慮します。</p>
-<p>Originは以下の要因分散分析をサポートしています。</p>
+<td> <a  class="image"><img alt="ANOVA graphs 2.png" src="../images/One,_Two,_and_Three_Way_ANOVA/300px-ANOVA_graphs_2.png" width="300"   /></a>
+</td></tr></table>
+<h2><a name="Introduction"></a><span class="mw-headline">はじめに</span></h2>
+<p>因子ANOVAモデルでは、実験に対する完全無作為化計画を想定します。
+</p><p>Originでは、以下の因子ANOVAモデルをサポートしています。
+
+</p>
 <table class="simple">
 <tr>
-<th>デザイン</th>
-<th>詳細</th>
-</tr>
+<th>計画
+</th>
+<th>詳細
+</th></tr>
 <tr>
-<td><b style="font-weight: bold;">一元配置</b></td>
-<td>1つのっ要因で3つまたはそれ以上のレベルを比較します。</td>
-</tr>
+<td><b>一元配置</b>
+</td>
+<td>1つの因子内の3つ以上の水準を比較します。
+</td></tr>
 <tr>
-<td><b style="font-weight: bold;">二元配置</b></td>
-<td>2つの要因の複数れ別の影響を比較し、2変数間の相互作用の影響を分析するために使用されます。</td>
-</tr>
+<td><b>二元配置</b>
+</td>
+<td>2つの因子の複数水準の効果を比較し、2因子の主効果および交互作用を分析します。
+</td></tr>
 <tr>
-<td><b style="font-weight: bold;">三元配置(Proのみ)</b></td>
-<td>連続する従属変数の3つの独立変数の相互作用効果を検定します(つまり、三元の相互作用があります)。</td>
-</tr>
-</table>
+<td><b>三元配置（Proのみ）</b>
+</td>
+<td>3つの独立変数が連続従属変数に及ぼす交互作用効果、つまり三次交互作用が存在するかどうかを検定します。
+</td></tr></table>
 <p><br />
-分散分析に加え、Originには、平均比較、実際または仮説の検出力分析の様々な手法があります。</p>
-<h2><a name="Assumptions" id="Assumptions"></a><span class="mw-headline">仮定</span></h2>
-<p>ANOVAモデルには次の仮定があります。</p>
-<ul>
-<li>独立性
-<dl>
-<dd>サンプルの症例はそれぞれ独立である必要があります。そうでない場合、ANOVAモデルではなく、<a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="カテゴリー：繰り返しのある二元配置分散分析 (OriginProのみ)">繰り返しのあるANOVA</a>等を使用します。</dd>
-</dl>
-</li>
-</ul>
-<ul>
-<li>正規性
-<dl>
-<dd>グループの各組み合わせのデータ値は、正規分布からのものである必要があります。<a href="../../UserGuide/Category/Normality_Test.html" title="カテゴリー：正規性検定">正規性検定</a> を使い、これを確認できます。しかし、通常正規の仮定を置くことは”致命的”ではありません。正規性の仮定ができなくても、サンプルサイズが大きければANOVAを使用できます。</dd>
-</dl>
-</li>
-</ul>
-<ul>
-<li>等分散性
-<dl>
-<dd>グループ間の分散は等しい必要があります。<a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html#Test_for_Equal_Variance.2FHomogeneity_Tests" title="ユーザガイド：ANOVAの結果の解釈">等分散性の検定(Leveneの検定)</a>を使用して確認できます。この仮定を満たさない場合、外れ値の削除やデータ変換などの方法を考えます。しかし、等分散性の仮定成り立たない場合でもANOVAはロバストです。グループサイズが等しくない場合でも検討を続けられます。</dd>
-</dl>
-</li>
-</ul>
-<h2><a name="Processing_Procedure" id="Processing_Procedure"></a><span class="mw-headline">手順の流れ</span></h2>
-<h3><a name="Preparing_Analysis_Data" id="Preparing_Analysis_Data"></a><span class="mw-headline">分析データの準備</span></h3>
-<ul>
-<li>連続データ
-<dl>
-<dd>従属変数のデータは連続している必要があります。</dd>
-</dl>
-</li>
-<li>独立した乱数サンプル(外れ値なし)
-<dl>
-<dd>各観測値がお互いに独立していることが必要になってきます。つまり、繰り返しの観測やマッチペアデータ(お互いに関連しあうデータ)がない状態です。さらに、ANOVAモデルは外れ値を含んだとき、結果が大きく変わってきてしまいます。外れ値を観察するには、<a href="../../UserGuide/UserGuide/Creating_Box_Charts.html" title="ユーザガイド：ボックスチャートの作成">ボックスチャート</a>を作図するか、外れ値の検定(<a href="../../UserGuide/UserGuide/The_Grubbs_Test_Dialog_Box.html" title="ユーザガイド:Grubbs検定ダイアログ">Grubbの検定</a>や<a href="../../UserGuide/UserGuide/The_Dixons_Q-Test_Dialog_Box.html" title="Grubbs検定ダイアログボックス">DixonのQ検定</a>)を使用して外れ値を探し、データから除外します。</dd>
-</dl>
-</li>
-</ul>
-<h3><a name="Verifying_Assumptions" id="Verifying_Assumptions"></a><span class="mw-headline">仮定の検証</span></h3>
-<p><a href="../../UserGuide/Category/Normality_Test.html" title="カテゴリー：正規性検定">正規性の検定</a>および<a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html#Test_for_Equal_Variance.2FHomogeneity_Tests" title="ユーザガイド：ANOVAの結果の解釈">等分散性の検定(Leveneの検定)</a>が仮定の検証に使用できます。詳しくは<a href="#Assumptions">仮定</a>をご覧ください。</p>
-<h3><a name="Selecting_Mean_Comparison_Methods" id="Selecting_Mean_Comparison_Methods"></a><span class="mw-headline">平均比較手法の選択</span></h3>
-<p>分散分析では、有効なオムニバスの検定結果を得てから複数の比較手法が使われています。有意なANOVAの結果は、グローバルな帰無仮説H0が棄却されることを示します。H0は、平均が比較されるグループ間で等しいという仮説になります。どの平均が異なっていたのかを見極めるのに複数比較を行います。</p>
-<p>Originは平均比較を行う手法を8つ準備しています。それらは、<b>Tukey</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b>Scheffe</b>, <b>Dunnett</b>, <b>Holm-Bonferroni</b>, <b>Holm-Sidak</b>です。</p>
+分散分析に加えて、Originではさまざまな平均比較法、および実際の検出力と仮定した検出力の分析もサポートしています。
+</p>
+<h2><a name="Assumptions"></a><span class="mw-headline">仮定</span></h2>
+<p>ANOVAモデルには以下の仮定があります。 
+</p>
+<ul><li> 独立性
+<dl><dd> 各標本は互いに独立している必要があります。独立していない場合は、<a href="../../UserGuide/Category/Repeated_Measure_ANOVA_(OriginPro_Only).html" title="カテゴリ：繰り返し測定の分散分析（OriginProのみ）">繰り返し測定ANOVA</a>など、別のANOVAモデルを使用する必要があります。</dd></dl></li></ul>
+<ul><li> 正規性 
+<dl><dd> 各グループの組み合わせにおけるデータ値は、正規分布に従う必要があります。これは<a href="../../UserGuide/Category/Normality_Test.html" title="カテゴリ: 正規性の検定">正規性検定</a>を使用して確認できます。ただし、正規性の仮定は通常、必ずしも決定的な条件ではありません。正規性検定を満たさない場合でも、標本サイズが十分に大きければANOVA分析を続行できる場合があります。 </dd></dl></li></ul>
+<ul><li> 等分散性
+<dl><dd> グループ間の分散は等しい必要があります。これは<a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html#Test_for_Equal_Variance.2FHomogeneity_Tests" title="ユーザーガイド:ANOVAの結果の解釈">等分散検定（Levene検定）</a>を使用して確認できます。この仮定が満たされない場合は、外れ値の除去やデータ変換など、いくつかの対応方法があります。ただし、ANOVAはこの仮定からの逸脱に対してロバストです。グループサイズが等しい場合は、分析を続行できる場合があります。</dd></dl></li></ul>
+<h2><a name="Processing_Procedure"></a><span class="mw-headline">手順の流れ</span></h2>
+<h3><a name="Preparing_Analysis_Data"></a><span class="mw-headline">分析データの準備</span></h3>
+<ul><li>連続データ
+<dl><dd> 従属変数のデータは連続データである必要があります。</dd></dl></li>
+<li> 独立した無作為標本（外れ値なし）
+<dl><dd> 各標本は互いに独立している必要があります。つまり、反復測定データや対応のあるデータであってはなりません。また、ANOVAモデルは外れ値の影響を受けやすいです。<a href="../../UserGuide/UserGuide/Creating_Box_Charts.html" title="ユーザガイド：ボックスチャートの作成">ボックスプロット</a>や外れ値検定（<a href="../../UserGuide/UserGuide/The_Grubbs_Test_Dialog_Box.html" title="ユーザガイド：Grubbs検定ダイアログボックス">Grubbs検定</a>、<a href="../../UserGuide/UserGuide/The_Dixons_Q-Test_Dialog_Box.html" title="ユーザガイド：DixonのQ検定ダイアログボックス">DixonのQ検定</a>）を使用して外れ値を検出し、データから除外できます。</dd></dl></li></ul>
+<h3><a name="Verifying_Assumptions"></a><span class="mw-headline">仮定の検証</span></h3>
+<p><a href="../../UserGuide/Category/Normality_Test.html" title="カテゴリ: 正規性の検定">正規性検定</a>および<a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html#Test_for_Equal_Variance.2FHomogeneity_Tests" title="ユーザーガイド:ANOVAの結果の解釈">等分散検定（Levene検定）</a>を使用して、仮定を検証できます。詳細については、<a href="#Assumptions">仮定</a>を参照してください。
+</p>
+<h3><a name="Selecting_Mean_Comparison_Methods"></a><span class="mw-headline">平均比較手法の選択</span></h3>
+<p>多重比較は、ANOVAで全体検定の結果が有意となった後によく使用されます。ANOVAの結果が有意である場合、全体の帰無仮説H0が棄却されることを示します。H0は、比較するグループ間で平均が等しいという仮説です。多重比較を使用することで、どの平均が異なるかを特定できます。
+</p><p>Originでは、平均比較のために以下の7つの方法を提供しています。<b>Tukey</b>, <b>Bonferroni</b>, <b>Dunn-Sidak</b>, <b>Fisher LSD</b>, <b> Scheffe</b>, <b>Holm-Bonferroni</b>, <b>Holm-Sidak</b> 
+</p>
+<table class="simple">
+
+<tr>
+<th>Tukey
+</th>
+<td>Tukey法は全体の第I種過誤を制御します。標本サイズが等しい場合、全体の信頼水準は<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-378df00d12056b404d7d02aef9d8650b.png" title="1-\alpha" alt="1-\alpha" class="tex"/>となり、第I種過誤の確率は正確に<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/>です。標本サイズが等しくない場合、第I種過誤の確率は<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex"/>未満になります。
+</td></tr>
+<tr>
+<th>Bonferroni
+</th>
+<td>Bonferroni 法は、全体の第 I 種過誤を制御する方法で、Tukey よりも保守的です。この方法は、すべてのペアワイズ比較検定で一般的に使用されます。
+</td></tr>
+<tr>
+<th>FisherのLSD
+</th>
+<td>FisherのLSD検定は全体の第I種過誤を制御しません。そのため、全体のF検定が有意で、比較数が少ない場合にのみ使用する必要があります。
+</td></tr>
+<tr>
+<th>Scheff&eacute;
+</th>
+<td>比較数が少ない場合、Scheff&eacute;法は非常に保守的で、Bonferroni法よりもさらに保守的です。一方、Scheff&eacute;法は複雑な多重比較では検出力が高いため、複雑な多重比較に使用されます。
+</td></tr>
+<tr>
+<th>Dunn-Sidak
+</th>
+<td>Dunnett 検定法よりも検出力の高い方法で、特に比較数が多い場合に有効です。
+</td></tr>
+<tr>
+<th>Holm-Bonferroni
+</th>
+<td>この方法は Bonferroni 法よりも保守性が低く、検出力が高い方法です。そのため、Bonferroni-Holm 法では帰無仮説を棄却できる可能性が高くなります。
+</td></tr>
+<tr>
+<th>Holm-Sidak
+</th>
+<td>この方法は Holm 検定よりも検出力が高い方法です。ただし、一連の信頼区間の計算には使用できません。
+</td></tr></table>
+<p><br />
+比較モードを「各平均を対照」に変更した場合、Originではこのモードに対して<b>Dunnett</b>法を使用できます。これは一般的な多重比較法で、複数の処理群と1つの対照群とのペアごとの比較のために特に設計されています。
+</p>
+<h3><a name="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h3>
+<p>検出力解析では、標本データに対する実際の検出力を計算し、差を検出できる確率（%）を確認できます。また、追加の標本サイズを指定した場合の仮定した検出力を計算することもできます。
+</p>
+<h2><a name="Handling_Missing_Values"></a><span class="mw-headline">欠損値の扱い</span></h2>
+<p>データ範囲内の欠損値は、分析から除外されます。
+</p><p>Origin 2015から、グループ範囲内の欠損値と対応するデータ値は分析から除外されます。これ以前のバージョンでは、グループ範囲内の欠損値は、一つのグループとして扱われます。
+</p>
+<h2><a name="Performing_ANOVA"></a><span class="mw-headline">ANOVAを実行</span></h2>
 <table class="simple">
 <tr>
-<th>Tukey</th>
-<td>Tukey法は全てのタイプIのエラーを制御します。Tukeyが使用されると、全ての信頼係数は<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-378df00d12056b404d7d02aef9d8650b.png" title="1-\alpha" alt="1-\alpha" class="tex" border="0" />でサンプルサイズと等しく、つまり、タイプIのエラーのリスクはちょうど<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex" border="0" />になります。サンプルサイズが等しくない場合、タイプIのエラーのリスクは<img src="../images/One,_Two,_and_Three_Way_ANOVA/math-7b7f9dbfea05c83784f8b85149852f08.png" title="\alpha" alt="\alpha" class="tex" border="0" />より低くなります。</td>
-</tr>
+<th>特徴
+</th>
+<th>メニュー項目
+</th></tr>
 <tr>
-<th>Bonferroni</th>
-<td>Bonferroni 法は全てのタイプIのエラーを制御し、Tukeyと比べて保守的です。この手法は、一般にペアワイズ比較検定に使用されます。</td>
-</tr>
+<td><b>一元配置</b>
+</td>
+<td><b>統計: ANOVA：一元配置</b>
+</td></tr>
 <tr>
-<th>Fisher's LSD</th>
-<td>Fisher's LSD検定は、全てのタイプIのエラーを制御しません。そのため、この検定は、全体F検定が有意で、対象内の比較数値が小さい場合のみ使用してください。</td>
-</tr>
+<td><b>二元配置</b>
+</td>
+<td><b>統計：ANOVA：二元配置</b>
+</td></tr>
 <tr>
-<th>Scheffé</th>
-<td>比較数が小さい場合、Schefféはとても保守的(Bonferroni以上)です。Schefféは多くの比較と複数の比較がある場合、より強力な手法になります。複雑な複数比較が行われるときに使用します。</td>
-</tr>
-<tr>
-<th>Dunn-Sidak</th>
-<td>比較する数が大きい場合、Dunnett検定よりも強力です。</td>
-</tr>
-<tr>
-<th>Holm-Bonferroni</th>
-<td>この手法は、Bonferroni手法よりも保守的ではなくより強力です。そのため、Bonferroni-Holm法では、帰無仮説を棄却する可能性が高くなります。</td>
-</tr>
-<tr>
-<th>Holm-Sidak</th>
-<td>Holm検定よりも強力な手法です。しかし、信頼区間を算出することはできません。</td>
-</tr>
-</table>
-<h3><a name="Power_Analysis" id="Power_Analysis"></a><span class="mw-headline">検出力解析</span></h3>
-<p>検出力解析は、サンプルデータの実際の検出力の計算を行い、差を検出する可能性を知ることができます。追加のサンプルサイズが指定された場合に、仮定の検出力を計算する手助けになります。</p>
-<h2><a name="Handling_Missing_Values" id="Handling_Missing_Values"></a><span class="mw-headline">欠損値の扱い</span></h2>
-<p>データ範囲内の欠損値は、分析には含まれません。</p>
-<p>Origin 2015から、グループ範囲内の欠損値と対応するデータ値は分析から除外されます。これ以前のバージョンでは、グループ範囲内の欠損値は、一つのグループとして扱われます。</p>
-<h2><a name="Performing_ANOVA" id="Performing_ANOVA"></a><span class="mw-headline">分散分析を実行</span></h2>
-<table class="simple">
-<tr>
-<th>特徴</th>
-<th>メニュー項目</th>
-</tr>
-<tr>
-<td><b style="font-weight: bold;">一元配置</b></td>
-<td><b style="font-weight: bold;">統計グラフ：ANOVA：一元配置の分散分析</b></td>
-</tr>
-<tr>
-<td><b style="font-weight: bold;">二元配置</b></td>
-<td><b style="font-weight: bold;">統計グラフ：ANOVA：二元配置の分散分析</b></td>
-</tr>
-<tr>
-<td><b style="font-weight: bold;">三元配置(Proのみ)</b></td>
-<td><b style="font-weight: bold;">統計グラフ：ANOVA：三元配置の分散分析</b></td>
-</tr>
-</table>
-<p><br /></p>
+<td><b>三元配置（Proのみ）</b>
+</td>
+<td><b>統計：ANOVA：三元配置</b>
+</td></tr></table>
+<p><br />
+</p>
 <table class="topiclist">
+
 <tr>
 <td>
-<p><i style="font-style: italic;"><b style="font-weight: bold;">このセクションで説明している項目</b></i></p>
-<ul>
-<li><b style="font-weight: bold;">一元配置の分散分析</b>
-<ul>
-<li><a href="../../UserGuide/UserGuide/The_ANOVAOneWay_Dialog_Box.html" title="ユーザガイド:ANOVAOneWayダイアログボックス">一元配置分散分析 ダイアログボックス</a></li>
-<li><a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置ANOVA アルゴリズム">アルゴリズム</a></li>
-<li><a class="external text" href="../../Tutorial/Tutorial/One_Way_ANOVA.html">チュートリアル</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><b style="font-weight: bold;">二元配置の分散分析</b>
-<ul>
-<li><a href="../../UserGuide/UserGuide/The_ANOVATwoWay_Dialog_Box.html" title="ユーザガイド:ANOVATwoWayダイアログボックス">二元配置分散分析 ダイアログボックス</a></li>
-<li><a href="../../UserGuide/UserGuide/Algorithms_(ANOVATwoWay).html" title="ユーザガイド:アルゴリズム (ANOVATwoWay)">アルゴリズム</a></li>
-<li><a class="external text" href="../../Tutorial/Tutorial/Two_Way_ANOVA.html">チュートリアル</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><b style="font-weight: bold;">三元配置の分散分析(Proのみ)</b>
-<ul>
-<li><a href="../../UserGuide/UserGuide/The_Three_Way_ANOVA_Dialog_Box.html" title="ユーザガイド：三元配置の分散分析ダイアログボックス">三元配置分散分析ダイアログボックス</a></li>
-<li><a href="../../UserGuide/UserGuide/Algorithm(Three_Way_ANOVA).html" title="ユーザガイド：アルゴリズム(三元配置分散分析)">アルゴリズム</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html" title="ユーザガイド：ANOVAの結果の解釈">結果の解釈</a></li>
-</ul>
-</td>
-</tr>
-</table>
+<p><i><b>このセクションで説明している項目：</b></i> 
+</p>
+<ul><li> <b>一元配置分散分析</b>
+<ul><li> <a href="../../UserGuide/UserGuide/The_ANOVAOneWay_Dialog_Box.html" title="ユーザガイド:ANOVAOneWayダイアログボックス">一元配置分散分析ダイアログボックス</a></li>
+<li> <a href="../../UserGuide/UserGuide/One_Way_ANOVA_Algorithms.html" title="ユーザガイド:一元配置分散分析アルゴリズム">アルゴリズム</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/One_Way_ANOVA.html">チュートリアル</a></li></ul></li></ul>
+<ul><li><b>二元配置分散分析</b>
+<ul><li> <a href="../../UserGuide/UserGuide/The_ANOVATwoWay_Dialog_Box.html" title="ユーザガイド:二元配置分散分析ダイアログボックス">二元配置分散分析ダイアログボックス</a></li>
+<li> <a href="../../UserGuide/UserGuide/Algorithms_(ANOVATwoWay).html" title="ユーザガイド:アルゴリズム (ANOVATwoWay)">アルゴリズム</a></li>
+<li> <a class="external text" href="../../Tutorial/Tutorial/Two_Way_ANOVA.html">チュートリアル</a></li></ul></li></ul>
+<ul><li><b>三元配置分散分析（Proのみ）</b>
+<ul><li><a href="../../UserGuide/UserGuide/The_Three_Way_ANOVA_Dialog_Box.html" title="ユーザガイド:三元配置分散分析ダイアログボックス">三元配置分散分析ダイアログボックス</a></li>
+<li><a href="../../UserGuide/UserGuide/Algorithm(Three_Way_ANOVA).html" title="ユーザガイド:アルゴリズム(三元配置分散分析)">アルゴリズム</a></li></ul></li></ul>
+<ul><li><a href="../../UserGuide/UserGuide/Interpreting_Results_of_ANOVA.html" title="ユーザーガイド:ANOVAの結果の解釈">結果の解釈</a></li></ul>
+</td></tr></table>
+
+
+
+    

@@ -8,12 +8,16 @@
 </ul>
 </li>
 <li class="toclevel-1 tocsection-4"><a href="#Copy_Paste_Columns_as_Mirrors"><span class="tocnumber">2</span> <span class="toctext">ミラー列としてコピー/貼り付け</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Copy_Paste_Whole_Sheet_as_Mirrors"><span class="tocnumber">3</span> <span class="toctext">シート全体をミラーとしてコピー/貼り付け</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Batch_Create_Mirror_Columns_from_Similar_Sheets"><span class="tocnumber">4</span> <span class="toctext">類似シートからミラー列を一括作成</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Convert_column_formula_to_Mirror_Column"><span class="tocnumber">5</span> <span class="toctext">列式をミラー列に変換</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Mirror_to_Whole_Sheet.2FBook"><span class="tocnumber">3</span> <span class="toctext">シート/ブック全体にミラー</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Copy_the_Whole_Sheet_as_Mirrors"><span class="tocnumber">3.1</span> <span class="toctext">シート全体をミラーとしてコピー</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_the_Whole_Book_as_Mirror"><span class="tocnumber">3.2</span> <span class="toctext">ブック全体をミラーとしてコピー</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Batch_Create_Mirror_Columns_from_Similar_Sheets"><span class="tocnumber">4</span> <span class="toctext">類似シートからミラー列を一括作成</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Convert_column_formula_to_Mirror_Column"><span class="tocnumber">5</span> <span class="toctext">列式をミラー列に変換</span></a></li>
 </ul>
 </div>
-
 <h2><a name="What.27s_Mirror_Column.3F"></a><span class="mw-headline">ミラー列とは？</span></h2>
 <p>「ミラー列」はOrigin2026bから導入されました。その名の通り、ミラー列は別の列を鏡のように参照する列であり、ソース列に対する変更（データの追加、削除、変更、マスクなど）が即座にミラー列にも反映されます。これは<a href="../../UserGuide/UserGuide/Copying_and_pasting_Worksheet_Data.html#Paste_Worksheet_values" title="ユーザガイド:ワークシートデータのコピーと貼り付け"><b>リンク貼り付け</b></a>に似ていますが、大規模データでもメモリ負荷を抑えられるため、より高速かつ効率的にデータ同期を行うことができます。また、このワークフローを効率化するためのツールやメニューも統合されています。
 </p><p><i><b>Note:</b></i>
@@ -21,7 +25,7 @@
 <ul>
 <li>ミラー列は、ソースの依存関係を「透過して参照」するわけではなく、単にソースに表示されている内容をそのまま反映します（実際の鏡と同様です）。<br />
 ソース列に他の列を参照する列式（またはセル式）が含まれている場合でも、ミラー列はソースをそのまま反映します。つまり、ミラー内の式はソースと同じ列を参照します。例えば、下のスクリーンショットでは、Book2のcol(A)がBook1のcol(C)をミラーしており、[Book1]1!col(C)が同じシート内のcol(A)とcol(B)の合計で計算されています。このとき、ミラー（Book2）に表示される式はソース（Book1）と同じく<code>=A1+B1</code>となりますが、ミラー内の<code>A1</code> および <code>B1</code>はBook2ではなく、Book1（ソース）のcol(A)およびcol(B)を参照します。
-<dl><dd><a  class="image"><img alt="Mirror Souce with Formula.png" src="../images/Mirror_Column/Mirror_Souce_with_Formula.png" width="560"  /></a> </li></dd></dl>
+<dl><dd><a  class="image"><img alt="Mirror Souce with Formula.png" src="../images/Mirror_Column/Mirror_Souce_with_Formula.png" width="629"  /></a> </li></dd></dl>
 <li>ソース列にサンプリング間隔が設定されている場合、ミラー列も同じ間隔を共有します。
 </li></ul>
 <p><br />
@@ -32,7 +36,7 @@
 <ul>
 <li>ソース列の左上に<a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>アイコンが表示されます。 
 <li><a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>アイコンをクリックすると、コンテキストメニューが開きます。
-<dl><dd><a  class="image"><img alt="Source context menu.png" src="../images/Mirror_Column/Source_context_menu.png" width="676"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Source context menu.png" src="../images/Mirror_Column/Source_context_menu.png" width="556"  /></a></dd></dl>
 <table class="simple" style="width: 90%">
 <tr>
 <th width="30%">すべてのミラーを削除/<br />シート内のすべてのミラーを削除/<br />ブック内のすべてのミラーを削除
@@ -46,7 +50,7 @@
 <table class="noborder"><tr>
 	<td style="vertical-align:top" width="60"><img src="../images/Mirror_Column/Tip_icon.png" width="57"  border="0" /></td><td><p><a  class="image"><img alt="Mirror souce icon.png" src="../images/Mirror_Column/Mirror_souce_icon.png" width="13"  /></a>アイコンにマウスオーバーすると、ミラー列のリストがポップアップ表示されます。
 </p>
-<dl><dd><a  class="image"><img alt="Source popup mirror list.png" src="../images/Mirror_Column/Source_popup_mirror_list.png" width="280"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Source popup mirror list.png" src="../images/Mirror_Column/Source_popup_mirror_list.png" width="244"  /></a></dd></dl>
 </td></tr></table>
 </td></tr></table>
 <p><br /><b>注意</b>: ソース列を削除すると、そのミラー列とのリンクは解除され、ミラー列は通常の数値/テキスト列に変わります。
@@ -57,7 +61,7 @@
 <ul>
 <li>ミラー列は、薄い緑色のヘッダーと、左上に表示される<a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png" width="13"  /></a>アイコンによって識別できます。 
 <li><a  class="image"><img alt="Mirror icon.png" src="../images/Mirror_Column/Mirror_icon.png" width="13"  /></a>アイコンをクリックすると、メニューが表示されます。
-<dl><dd><a  class="image"><img alt="Mirror context menu.png" src="../images/Mirror_Column/Mirror_context_menu.png" width="746"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Mirror context menu.png" src="../images/Mirror_Column/Mirror_context_menu.png" width="727"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="28.5%">ソース
@@ -109,25 +113,37 @@
 <ol><li> ソース列を選択し、右クリックしてコンテキストメニューから<b>コピー：コピー</b>を選択します。</li>
 <li> 貼り付け先の列に移動し、右クリックして<b>ミラー列として貼り付け...</b>を選択します。
 <dl><dd><a  class="image"><img alt="Paste as Mirror Columns Context Menu.png" src="../images/Mirror_Column/Paste_as_Mirror_Columns_Context_Menu.png" width="396"  /></a></dd></dl></li></ol>
-<h2><a name="Copy_Paste_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">シート全体をミラーとしてコピー/貼り付け</span></h2>
+<dl><dd><b>Note</b>: ミラー列を含むワークブックを保存すると、参照元の列も同じワークブック内にある場合を除き、ミラー列は静的な値に変換されます。</dd></dl>
+<h2><a name="Mirror_to_Whole_Sheet.2FBook"></a><span class="mw-headline">シート/ブック全体にミラー</span></h2>
+<h3><a name="Copy_the_Whole_Sheet_as_Mirrors"></a><span class="mw-headline">シート全体をミラーとしてコピー</span></h3>
 <p><span class='headerInParagraph'>ワークシートのミラーを作成するには</span>
 </p>
 <ol><li> ソースとなるワークシートのタブを右クリックし、コンテキストメニューから<b>新しいブックにミラー</b>を選択します。</li></ol>
-<p><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/870px-Mirror_to_New_Book.png" width="870"   /></a>
+<dl><dd><a  class="image"><img alt="Mirror to New Book.png" src="../images/Mirror_Column/Mirror_to_New_Book.png" width="922"  /></a></dd></dl>
+<ul><li> ミラーシートには元のシートと同じ名前が付けられ、先頭に🔗インジケータが表示されます。</li>
+<li> ミラーシートは保護されており、読み取り専用です。</li>
+<li> 元のシートは<b> F(x)</b> で確認するか、ミラーシートのタブにマウスポインタを合わせることで確認できます。</li>
+<li> ミラー列を含むワークブックを保存すると(<i>.ogwu</i>ファイルとして)、参照元のワークシートも同じワークブック内にある場合を除き、ミラー列は静的な値に変換されます。</li></ul>
+<h3><a name="Copy_the_Whole_Book_as_Mirror"></a><span class="mw-headline">ブック全体をミラーとしてコピー</span></h3>
+<p><span class='headerInParagraph'>ワークブックのミラーを作成するには</span>
+</p>
+<ol><li> <b><b>標準</b></b>ツールバーの<b>新規ブックにミラー</b>ボタン<a  class="image"><img alt="Button Mirror to New Book.png" src="../images/Mirror_Column/Button_Mirror_to_New_Book.png" width="15"  /></a>をクリックします。</li></ol>
+<p><b>Note</b>: ミラーワークブックを<i>.ogwu</i>ファイルとして保存する場合、ミラーは静的な値に変換されます。
 </p>
 <h2><a name="Batch_Create_Mirror_Columns_from_Similar_Sheets"></a><span class="mw-headline">類似シートからミラー列を一括作成</span></h2>
-<p>列を1つずつミラーとして貼り付ける方法に加えて、<b>類似シートからミラー列を作成</b>ツールを使用すると、対象となる列を自動でスキャンし、1回の操作でミラー列を作成できます。基準となるソース列を選択し、一致条件（検索範囲や列の一致条件など）を設定するだけで、Originがプロジェクト内の複数のワークシートを検索し、一致する列を見つけて、1つの指定ワークシートにミラー列として一括作成します。
+<p><b>類似シートからミラー列を一括作成</b>は、すべての候補列を自動的にスキャンし、1回の操作でそれらをミラー化します。参照として元列を選択し、一致ルール（検索範囲や列一致の制限を含む）を設定するだけで、このツールは類似構造のワークシート全体を検索して一致する列を見つけ、1つの出力先ワークシートにミラー列を一括作成します。
 </p><p>この機能は、実験データが複数のブックに分散している場合に、必要なデータを1か所に集めて処理・作図・横並び比較を行う際に便利です。
 </p><p><span class='headerInParagraph'>類似シートからミラー列を作成するには</span>
 </p>
 <ol><li> メニュー<b>ワークシート: 類似シートからミラー列を作成</b>を選択</li></ol>
-<dl><dd><a  class="image"><img alt="Create Mirror Columns from Similar Sheets Dialog.png" src="../images/Mirror_Column/Create_Mirror_Columns_from_Similar_Sheets_Dialog.png" width="514"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Create Mirror Columns from Similar Sheets Dialog.png" src="../images/Mirror_Column/Create_Mirror_Columns_from_Similar_Sheets_Dialog.png" width="493"  /></a></dd></dl>
 <table class="simple">
 <tr>
-<th width="25%">ソース列
+<th width="23%">ソース列
 </th>
 <td>
-<p>ソース列を1つ選択します。この列を参照として使用します。条件に一致する列がすべてソースとして収集され、それぞれからミラー列が作成されます。
+<p>ソース列を1つ選択します。この列をベースとして、類似の列がすべてソースとして収集され、それぞれからミラー列が作成されます。 
+</p><p><b>他のソース列</b>および<b>列の一致条件</b>ブランチで「類似」列を定義する方法を指定します。
 </p>
 </td></tr>
 <tr>
@@ -146,18 +162,18 @@
 <ul><li><b>なし</b>
 <dl><dd>X列をコピーしません。</dd></dl></li>
 <li><b>共通X列</b>
-<dl><dd><b>ソース列</b>のX列をコピーし、すべてのミラー列に共通のXとして使用します。出力構造はXYYY...です。 </dd></dl></li>
+<dl><dd><b>ソース列</b>のX列をコピーし、すべてのミラー列に共通のXとして使用します。出力構造は<i>XYYY...</i>です。 </dd></dl></li>
 <li><b>各シートから</b>
-<dl><dd>各シートのX列をそれぞれコピーし、各ミラー列に対応させます。出力構造はXYXYXY...です。</dd></dl></li></ul>
+<dl><dd>各シートのX列をそれぞれコピーし、各ミラー列に対応させます。出力構造は<i>XYXYXY...</i>です。</dd></dl></li></ul>
 </td></tr>
 <tr>
 <th>他のソース列
 </th>
 <td>
-<p>他の「類似列」をソース列としてどのように検索・取得するかを設定します。
+<p>他の「類似」列をソース列としてどのように検索・取得するかを設定します。
 </p>
 <ul><li><b>類似シートから</b>
-<dl><dd>ソースシートと同じ列数を持つワークシートを対象とします。<b>列の一致条件</b>で指定した条件を満たす列のみが収集され、ミラーのソースとして使用されます。</dd></dl></li>
+<dl><dd>ソースシートと同じ列数およびフォーマットを持つワークシートを対象とします。<b>列の一致条件</b>で指定した条件を満たす列のみがミラーのソースとして使用されます。</dd></dl></li>
 <li><b>類似シートの検索先</b>
 <dl><dd>検索範囲を指定します:<b>アクティブブック</b>/<b>アクティブフォルダ</b>(オープンまたは再帰)/<b>プロジェクト</b></dd></dl></li></ul>
 </td></tr>
@@ -165,12 +181,12 @@
 <th>列の一致条件
 </th>
 <td>
-<p><b>他のソース列</b>を、基準となる<b>ソース列</b>とどのように一致させるかを指定します。
+<p>他のソース列を、基準となる<b>ソース列</b>とどのように一致させるかを指定します。
 </p>
 <ul><li><b>列ラベルが一致していること</b> 
-<dl><dd>列の<b>ロングネーム</b>または<b>コメント</b>で一致させます。<b>なし</b>を選択すると、列インデックスで一致させます。</dd></dl></li>
+<dl><dd>列の<b>ロングネーム</b>または<b>コメント</b>で一致させる必要があります。<b>なし</b>を選択すると、列インデックスで一致させます。</dd></dl></li>
 <li><b>単位一致</b></li>
-<li><b>列属性一致</b></li></ul>
+<li><b><a href="../../UserGuide/UserGuide/Set_Column_Designation.html" title="ユーザーガイド：列属性の設定">列属性</a>一致</b></li></ul>
 <p>設定後、<b>ミラーする列の合計</b>が下部に表示され、確認できます。
 </p>
 </td></tr>
@@ -203,7 +219,7 @@
 <span class='headerInParagraph'>リンク列をミラー列に変換するには</span>
 </p>
 <ol><li> メニュー<b>ワークシート: ミラー列に変換...</b>を選択</li></ol>
-<dl><dd><a  class="image"><img alt="Convert to Mirror Columns Dialog.png" src="../images/Mirror_Column/Convert_to_Mirror_Columns_Dialog.png" width="400"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="Convert to Mirror Columns Dialog.png" src="../images/Mirror_Column/Convert_to_Mirror_Columns_Dialog.png" width="363"  /></a></dd></dl>
 <table class="simple">
 <tr>
 <th width="25%">列の数式/<br />列のコピー出力
@@ -233,7 +249,6 @@
 <td>変換された列の一覧をどこに出力するかを指定します。
 <dl><dd>なし/メッセージログ/メモウィンドウ/メモ帳</dd></dl>
 </td></tr></table>
-
 
 
     

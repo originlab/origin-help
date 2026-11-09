@@ -1,7 +1,7 @@
 ﻿<h1 class="firstHeading">ワークシートと行列のエクスポート</h1><p class='urlname' style='display: none'>Export-Wks-Mat</p>
 <p><br />
-Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<b>NI TDM (TDM, TDMS)</b>, <b>Sound (WAV)</b>, <b>ESRI シェープファイル (SHP)</b>形式でエクスポートできます。また、Originのワークシートは、1ページのPDFファイルまたは複数ページのPDFファイル、画像ファイルとしてエクスポートできます。
-</p><p>行列データは、<b>ASCII</b>と<b>画像</b>の2つの形式でエクスポートできます。
+Originのワークシートデータは、次の <b>ASCII</b>(<b>Text/CSV</b>)、<b>Excel</b>、<b>NI TDM (TDM, TDMS)</b>, <b>Sound (WAV)</b>, <b>ESRI シェープファイル (SHP)</b>形式でエクスポートできます。また、Originのワークシートは、1ページのPDFファイルまたは複数ページのPDFファイル、画像ファイルとしてエクスポートできます。
+</p><p>行列データは、<b>ASCII</b> (<b>Text/CSV</b>)と<b>画像</b>の2つの形式でエクスポートできます。
 </p>
 <table class="simple" width="50%">
 <tr>
@@ -14,7 +14,7 @@ Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<
 <tr>
 <td rowspan="9">ワークシート
 </td>
-<td> ASCII
+<td> Text/CSV
 </td>
 <td><a class="external text" href="../../XFunction/X-Function/ExpASC.html">expASC</a>
 </td></tr>
@@ -79,7 +79,7 @@ Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<
 </td></tr></table>
 <div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Exporting_worksheet_data_as_ASCII_file"><span class="tocnumber">1</span> <span class="toctext">ワークシートデータをASCIIファイルとしてエクスポート</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Exporting_worksheet_data_as_Text.2FCSV_file"><span class="tocnumber">1</span> <span class="toctext">ワークシートデータをText/CSVファイルとしてエクスポート</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Exporting_worksheet.2Fworkbook_as_Excel_file"><span class="tocnumber">2</span> <span class="toctext">ワークシート/ワークブックをExcelファイルとしてエクスポート</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Exporting_worksheet.2Fworkbook_as_an_SQLite_file"><span class="tocnumber">3</span> <span class="toctext">ワークシート/ワークブックをSQLiteファイルとしてエクスポート</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Exporting_worksheet_data_as_National_Instruments_TDM_file"><span class="tocnumber">4</span><span class="toctext">ワークシートデータをNational Instruments TDMファイルとしてエクスポート</span></a></li>
@@ -93,13 +93,13 @@ Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<
 <li class="toclevel-1 tocsection-12"><a href="#Exporting_matrix_object_as_image_file"><span class="tocnumber">12</span> <span class="toctext">行列オブジェクトを画像ファイルとしてエクスポート</span></a></li>
 </ul>
 </div>
-<h2><a name="Exporting_worksheet_data_as_ASCII_file"></a><span class="mw-headline">ワークシートデータをASCIIファイルとしてエクスポート</span></h2>
-<p>ASCIIエクスポートはデータのみのワークシートで行うことができます。レポートシート、埋め込みグラフやリンクグラフ(スパークラインを含む)を持つワークシートなど、埋め込まれた情報が含まれる複雑な文書は、ASCIIファイルに完全にエクスポートすることができません。エクスポートするワークシートデータに埋め込みの画像やグラフがある場合、これらの画像やグラフはエクスポート時に無視されます。 
-</p><p><i><b>ワークシートデータをASCIIファイルとしてエクスポートする</b></i>
+<h2><a name="Exporting_worksheet_data_as_Text.2FCSV_file"></a><span class="mw-headline">ワークシートデータをText/CSVファイルとしてエクスポート</span></h2>
+<p>Text/CSVエクスポートはデータのみのワークシートで行うことができます。レポートシート、埋め込みグラフやリンクグラフ(スパークラインを含む)を持つワークシートなど、埋め込まれた情報が含まれる複雑な文書は、Text/CSVファイルに完全にエクスポートすることができません。エクスポートするワークシートデータに埋め込みの画像やグラフがある場合、これらの画像やグラフはエクスポート時に無視されます。 
+</p><p><i><b>ワークシートデータをText/CSVファイルとしてエクスポートする</b></i>
 </p>
-<ol><li>ワークシートをアクティブにし、Originのメインメニューから<b>ファイル：エクスポート: ASCII</b> を選択し、 <a class="external text" href="../../XFunction/X-Function/ExpASC.html"><b>expASC</b></a> ダイアログを開きます。</li>
+<ol><li>ワークシートをアクティブにし、Originのメインメニューから<b>ファイル：エクスポート: Text/CSV...</b> を選択し、 <a class="external text" href="../../XFunction/X-Function/ExpASC.html"><b>expASC</b></a> ダイアログを開きます。</li>
 <li>ダイアログボックスでファイルタイプ、パス、区切り文字、ヘッダなどのオプションを指定し、 <b>OK</b>をクリックします。</li></ol>
-<p>ワークシートをASCIIファイルにエクスポートする主なオプション
+<p>ワークシートをText/CSVファイルにエクスポートする主なオプション
 </p>
 <ul><li>DAT, TXT, CSVファイルタイプのサポート。  CSVが選択されている場合、セルの内容を保護するため、必要に応じて引用符が挿入されます。</li>
 <li>選択したデータのみエクスポート をサポートします。  選択範囲は非連続の場合もあります。</li>
@@ -116,18 +116,30 @@ Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<
 	<td style="vertical-align:top" width="60"><img src="../images/Exporting_Worksheets_and_Matrices/Tip_icon.png" width="57"  border="0" /></td><td><p><b>expASC</b>ダイアログの<b>ファイルパス</b>ドロップダウンには、データエクスポート用の<i>&lt;プロジェクトフォルダ&gt; &lt;PEのパス&gt;</i>オプションがあります。ただし、現在、ダイアログボックスは入力として1つのワークシートのみしか受け取らないため、<a class="external text" href="../../LabTalk/LabTalk/Export.html#Export_all_worksheets_in_all_workbooks_in_all_folders_as_text_files">これにはスクリプトの記述が必要です</a>。
 </p></td></tr></table>
 <h2><a name="Exporting_worksheet.2Fworkbook_as_Excel_file"></a><span class="mw-headline">ワークシート/ワークブックをExcelファイルとしてエクスポート</span></h2>
-<p>現在のワークブックまたは特定のワークシートをExcelファイルにエクスポートする場合、次のようにします。アクティブワークブックから<b>ファイル：エクスポート：Excel</b>メニューを選択し、<b>オプションダイアログを開く</b>にチェックを入れます。
-</p><p>または
+<p>現在のワークブックまたは特定のワークシートをExcelファイルにエクスポートするには、
 </p>
-<ul><li> <code>expXLS -d;</code>を実行</li></ul>
-<p>以下のような<a class="external text" href="../../XFunction/X-Function/ExpXLS.html"><b>expXLS</b>ダイアログ</a>が開きます。
+<ul><li> アクティブワークブックから、<b>ファイル：エクスポート：Excel</b>メニューを選択</li></ul>
+<p>または
+</p>
+<ul><li> このコマンドを実行します <pre class="lt" style="font-family:monospace;">expXLS <span style="color: #000080;">-</span>d;</pre></li></ul>
+<p><a class="external text" href="../../XFunction/X-Function/ExpXLS.html"><b>expXLS</b>ダイアログ</a>が開きます。
 </p>
 <dl><dd><a  class="image"><img alt="ExportExcelfromWKS.png" src="../images/Exporting_Worksheets_and_Matrices/ExportExcelfromWKS.png" width="563"  /></a></dd></dl>
 <ul><li> エクスポートされるファイル名は置換表記をサポートしています。<b>ファイル名</b>と<b>ファイルパス</b>を<code>&lt;long name&gt;</code>のようなよく使うファイル名や<code>&lt;Project Folder&gt;&lt;PE Path&gt;</code>のようなよく使うファイルパスをドロップダウンリストから選択します。これらはバッチエクスポートで便利です。</li>
 <li> <b>シートのエクスポート</b>を使用して、<b>全てのブック</b>または<b>アクティブなシートのみ</b>を指定します。</li>
 <li> 全てのブックをエクスポートする場合は、シートタブを右クリックし、<b>Excelエクスポートから除外する</b>を選択して、選択したシートを除外します。解析レポートシートは自動的にスキップされます。</li>
 <li> ワークシートのフォーマットをエクスポートするには、<b>セルフォーマットをエクスポート</b>ボックスをオンにします。Originのフォーマット設定のすべてがExcelで認識できるわけではありませんが (有効数字、列指定など)、フォント/フォントサイズ、セルの塗りつぶしの色、10進数などは保持されます。 </li></ul>
-<dl><dd><a  class="image"><img alt="OH export excel keep format color fill.png" src="../images/Exporting_Worksheets_and_Matrices/OH_export_excel_keep_format_color_fill.png" width="666"  /></a></dd></dl>
+<dl><dd><a  class="image"><img alt="OH export excel keep format color fill.png" src="../images/Exporting_Worksheets_and_Matrices/OH_export_excel_keep_format_color_fill.png" width="665"  /></a></dd></dl>
+<p><br /><br />
+<span class='headerInParagraph'>特に、シングルクリックでフォルダ内のすべてのワークブックをエクスポートしたい場合、</span>
+</p>
+<ul><li> 目的のフォルダ（ルートフォルダではない）を右クリックし、コンテキストメニューから<b>Excelファイルにエクスポート</b>を選択します。</li></ul>
+<dl><dd><a  class="image"><img alt="Export to Excel Files.png" src="../images/Exporting_Worksheets_and_Matrices/Export_to_Excel_Files.png" width="514"  /></a></dd></dl>
+<ul><li> エクスポート<b>パス</b>は置換表記をサポートしています。デフォルトのパス<code>&lt;Project Folder&gt;&lt;PE Path&gt;</code> は、プロジェクトエクスプローラに表示されているフォルダ構造を使用します。よく使うファイルパスはドロップダウンリストから選択します。</li>
+<li> ワークブックのロングネームはExcelファイル名として使用されます。重複した名前が存在する場合、後にエクスポートされたファイルは前のファイルを上書きすることに注意してください。</li>
+<li> サブフォルダにあるワークブックはエクスポートされません。</li>
+<li> エクスポートからワークシートを除外するには、目的のシートタブを右クリックし、<b>Excelエクスポートから除外する</b>を選択します。分析レポートシートは自動的にスキップされます。</li>
+<li> ワークシートのフォーマットをエクスポートするには、<b>セルフォーマットをエクスポート</b>を有効にします。Originのフォーマット設定のすべてがExcelで認識できるわけではありません (有効数字、列指定など)。ただし、フォント、フォントサイズ、セルの塗りつぶし色、小数桁数などの書式設定は保持できます。</li></ul>
 <h2><a name="Exporting_worksheet.2Fworkbook_as_an_SQLite_file"></a><span class="mw-headline">ワークシートデータをSQLiteファイルとしてエクスポート</span></h2>
 <p>ワークブックの1つのシートもしくは全てのシートをSQLiteファイルとしてエクスポートするには
 </p>
@@ -200,14 +212,14 @@ Originのワークシートデータは、次の <b>ASCII</b>、<b>Excel</b>、<
 <th width="20%">単一XY座標
 </th>
 <td>3列以上が必要です。最初の2列がXY位置、3番目の列がインデックス（倍精度の場合は整数に変換され、昇順でなければなりません）です。残りの列が存在する場合はメタデータとなります。
-<p><a  class="image"><img alt="ExpSHP SingleXY.png" src="../images/Exporting_Worksheets_and_Matrices/ExpSHP_SingleXY.png" width="414"  /></a>
+<p><a  class="image"><img alt="ExpSHP SingleXY.png" src="../images/Exporting_Worksheets_and_Matrices/ExpSHP_SingleXY.png" width="425"  /></a>
 </p>
 </td></tr>
 <tr>
 <th>複数XY座標
 </th>
 <td>XY座標は複数の列のペアとして置かれます。ワークシート内の列の数が奇数の場合、列の各ペアはXYペアとしてエクスポートされ、最後の列は無視されます。メタデータはラベル行にあります。
-<p><a  class="image"><img alt="ExpSHP MultiXY.png" src="../images/Exporting_Worksheets_and_Matrices/ExpSHP_MultiXY.png" width="421"  /></a>
+<p><a  class="image"><img alt="ExpSHP MultiXY.png" src="../images/Exporting_Worksheets_and_Matrices/ExpSHP_MultiXY.png" width="437"  /></a>
 </p>
 </td></tr></table>
 <li><b><b>OK</b></b>ボタンをクリックします。

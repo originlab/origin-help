@@ -1,0 +1,97 @@
+﻿<h1 class="firstHeading">付箋</h1><p class='urlname' style='display: none'>Sticky-Notes</p>
+<p><a href="../../UserGuide/Category/Notes_Window.html" title="カテゴリ:ノートウィンドウ">ノートウィンドウ</a>の他に、付箋を使ってアイデア、タスク、Originの子ウィンドウの情報を一度に集めて整理することができます。
+</p><p><a  class="image"><img alt="Sticky Notes 01.png" src="../images/Sticky_Notes/Sticky_Notes_01.png" width="553"  /></a>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Add_a_Stick_Note"><span class="tocnumber">1</span> <span class="toctext">付箋を追加する</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Show_or_Hide_the_Notes"><span class="tocnumber">2</span> <span class="toctext">メモの表示/非表示</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Sticky_Note_Options"><span class="tocnumber">2.1</span> <span class="toctext">付箋のオプション</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Controls_on_Sticky_Notes_bar"><span class="tocnumber">3</span> <span class="toctext">付箋バーの設定</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Background_Color"><span class="tocnumber">3.1</span> <span class="toctext">背景の色</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Font_Size"><span class="tocnumber">3.2</span> <span class="toctext">フォントサイズ</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Copy_and_Paste_Sticky_Note"><span class="tocnumber">3.3</span> <span class="toctext">付箋のコピー/貼り付け</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Attach_to_Book"><span class="tocnumber">3.4</span> <span class="toctext">ブックに貼り付ける</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Minimize_or_Delete_the_Note"><span class="tocnumber">3.5</span> <span class="toctext">メモを最小化または削除する</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#How_Sticky_Notes_Work_with_Other_Tools"><span class="tocnumber">4</span> <span class="toctext">付箋を他のツールと連携させる方法</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#With_Project_Explorer"><span class="tocnumber">4.1</span> <span class="toctext">プロジェクトエクスプローラ</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#With_Project_Browser"><span class="tocnumber">4.2</span> <span class="toctext">プロジェクトブラウザ</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#With_Window_Switcher"><span class="tocnumber">4.3</span> <span class="toctext">ウィンドウスイッチャー</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h3><a name="Add_a_Stick_Note"></a><span class="mw-headline">付箋を追加する</span></h3>
+<p>現在のウィンドウまたはシートにメモを追加するには、ウィンドウのタイトルバーにある新しい付箋ボタンをクリックします。付箋が存在すると、新しい付箋ボタンに赤い点が表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 05.png" src="../images/Sticky_Notes/700px-Sticky_Notes_05.png" width="700"   /></a></dd></dl>
+<p><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#P.2CQ">システム変数&quot;@PSN&quot;</a>があり、タイトルバーの付箋アイコンを非表示にすることができます。デフォルトでは、アイコンを表示することを意味する1に設定されています。
+</p><p>LabTalkコマンドによって付箋を追加するには、以下を確認してください。
+</p>
+<pre class="lt" style="font-family:monospace;">page <span style="color: #000080;">-</span>sn;  <span style="color: #008000;">//現在のページに付箋を追加する</span>
+del <span style="color: #000080;">-</span>sn;  <span style="color: #008000;">// 現在のプロジェクト内の付箋をすべて削除する</span></pre>
+<h3><a name="Show_or_Hide_the_Notes"></a><span class="mw-headline">メモの表示/非表示</span></h3>
+<p>デフォルトでは、メニューの<b>表示：付箋を表示</b>が選択されています。もう一度選択すると、現在のプロジェクトの付箋をすべて非表示にすることができ、「新しい付箋」ボタンのドットがグレーに変わります。
+</p><p>ウィンドウのタイトルバーにある新しい付箋ボタンをもう一度クリックすると、現在のプロジェクトでのメモの表示を戻します。もしくは、<a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">システム変数 @SSN</a>を使ってメモの表示/非表示を切り替えます。デフォルトでは、@SSNは1に設定されており、これはメモを表示する設定です。
+</p>
+<h4><a name="Sticky_Note_Options"></a><span class="mw-headline">付箋のオプション</span></h4>
+<p>メニューの<b>環境設定：付箋オプション</b>を選択して、<b>付箋オプション</b>ダイアログを開きます。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 06.png" src="../images/Sticky_Notes/Sticky_Notes_06.png" width="290"  /></a></dd></dl>
+<ul><li> <b>アクティブなウィンドウでのみノートを表示</b>：アクティブなウィンドウのみに付箋を表示する場合に選択します。</li>
+<li> <b>ウィンドウ外でのノートのドラッグを許可</b>：親ウィンドウ外でノートをドラッグできるようにします。</li></ul>
+<p><a class="external text" href="../../LabTalk/LabTalk/System_Variable_List.html#S">システム変数&quot;@SSNI&quot;</a>があり、2つのチェックボックスの異なる組み合わせに対して0, 1, 2, 3に設定できます。
+</p>
+<h3><a name="Controls_on_Sticky_Notes_bar"></a><span class="mw-headline">付箋バーの設定</span></h3>
+<p>左上の領域にある下向き矢印ボタンをクリックすると、以下のメニューが表示され、メモの設定を変更できます。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 02.png" src="../images/Sticky_Notes/Sticky_Notes_02.png" width="299"  /></a></dd></dl>
+<h4><a name="Background_Color"></a><span class="mw-headline">背景の色</span></h4>
+<p>メモの色を選択でき、カスタム色が必要な場合は、このメニューから<b>カスタム色</b>を選択して目的の色を選択することができます。 
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 03.png" src="../images/Sticky_Notes/Sticky_Notes_03.png" width="491"  /></a></dd></dl>
+<p><b>デフォルト色として設定</b>を選ぶと、現在の設定をデフォルトとして設定します。
+</p>
+<h4><a name="Font_Size"></a><span class="mw-headline">フォントサイズ</span></h4>
+<p>メモのフォントサイズを変更できます。
+</p>
+<h4><a name="Copy_and_Paste_Sticky_Note"></a><span class="mw-headline">付箋のコピー/貼り付け</span></h4>
+<p><b>付箋をコピー</b>を選択してメモをコピーし、ウィンドウ内の領域を右クリックして別のウィンドウにメモを貼り付けます。
+</p>
+<h4><a name="Attach_to_Book"></a><span class="mw-headline">ブックに貼り付ける</span></h4>
+<p>ワークブック/行列ウィンドウの付箋については、<b>ブックに貼り付け</b>を選択して、このメモをブックレベルに貼り付けます。デフォルトでは、ノートはシートレベルに貼り付けられます。
+</p><p>「ブックに貼り付け」が選択されると、付箋のタイトバーにターゲット「B」が存在しています。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 04.png" src="../images/Sticky_Notes/Sticky_Notes_04.png" width="300"  /></a></dd></dl>
+<h4><a name="Minimize_or_Delete_the_Note"></a><span class="mw-headline">メモを最小化または削除する</span></h4>
+<p><b>最小化</b>を選択してメモを最小化し、<b>削除</b>を選択してメモを削除します。
+</p>
+<h3><a name="How_Sticky_Notes_Work_with_Other_Tools"></a><span class="mw-headline">付箋を他のツールと連携させる方法</span></h3>
+<h4><a name="With_Project_Explorer"></a><span class="mw-headline">プロジェクトエクスプローラ</span></h4>
+<p>プロジェクトエクスプローラで、付箋が付いているすべてのウィンドウに、ウィンドウアイコンに赤いドットが表示されます。アイコンとドットの領域にカーソルを合わせるとツールチップが表示され、他の領域にカーソルを合わせると通常どおりプレビューが表示されます。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 07.png" src="../images/Sticky_Notes/Sticky_Notes_07.png" width="255"  /></a></dd></dl>
+<h4><a name="With_Project_Browser"></a><span class="mw-headline">プロジェクトブラウザ</span></h4>
+<p>プロジェクトブラウザには、ウィンドウ/グラフ/ブック/シートの付箋を表示する列があります。
+</p>
+<dl><dd><a  class="image"><img alt="Sticky Notes 08.png" src="../images/Sticky_Notes/700px-Sticky_Notes_08.png" width="700"   /></a></dd></dl>
+<p>キーワードを検索する場合、すべてのメモが検索範囲に含まれます。
+</p>
+<h4><a name="With_Window_Switcher"></a><span class="mw-headline">ウィンドウスイッチャー</span></h4>
+<p>ウィンドウスイッチャーですべてのウィンドウをプレビューすると、現在のウィンドウ/シートの最初の付箋が表示されます。
+</p>
+
+
+
+
+
+
+    

@@ -18,7 +18,7 @@ This tab is used to calculate the centroid points for subsets, add connection li
 <li class="toclevel-2 tocsection-6"><a href="#Label_Form"><span class="tocnumber">2.1</span> <span class="toctext">Label Form</span></a></li>
 </ul>
 </li>
-<li class="toclevel-1 tocsection-7"><a href="#Show_Ellipse"><span class="tocnumber">3</span> <span class="toctext">Show Ellipse</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Show_Ellipse.2FConvex_Hull_for_Subset"><span class="tocnumber">3</span> <span class="toctext">Show Ellipse/Convex Hull for Subset</span></a></li>
 </ul>
 </div>
 
@@ -43,15 +43,15 @@ This tab is used to calculate the centroid points for subsets, add connection li
 </p><p>You can customize the <b>Font</b> and the <b>Position</b> of the labels.
 </p><p>And, you can use <b>Numeric Display Format</b> to customize the display of the labels.
 </p>
-<h3><a name="Show_Ellipse"></a><span class="mw-headline">Show Ellipse</span></h3>
-<p>Specify whether show ellipses for the centroid points. Three types of ellipse are supported here:
+<h3><a name="Show_Ellipse.2FConvex_Hull_for_Subset"></a><span class="mw-headline">Show Ellipse/Convex Hull for Subset</span></h3>
+<p>Specify whether show ellipses or convex hull for the centroid points. If the datasets are grouped into subsets on <a href="../../UserGuide/UserGuide/The_(Plot_Details)_Subset_Tab.html" title="UserGuide:The (Plot Details) Subset Tab">Subset tab</a>, checking this checkbox will show one ellipse or convex hell for each subset. Four types are supported here:
 </p>
 <ul><li><b>Convex Hull</b>: draw a concave hull around the data points</li>
 <li><b>Confidence Level(Mean)</b>: same as <a href="../../UserGuide/UserGuide/Linear_Regression_Results.html#Confidence_Ellipses" title="UserGuide:Linear Regression Results">confidence ellipse</a> of mean for linear regression, just like what the <a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=365" target="_blank">2D Confidence Ellipse</a> app does.</li>
 <li><b>Confidence Level(Prediction)</b>: same as <a href="../../UserGuide/UserGuide/Linear_Regression_Results.html#Confidence_Ellipses" title="UserGuide:Linear Regression Results">confidence ellipse</a> of prediction for linear regression, just like what the <a class="external text" href="https://www.originlab.com/fileExchange/details.aspx?fid=365" target="_blank">2D Confidence Ellipse</a> app does.</li>
 <li><b>Euclidean Distance</b>: draw a circle with the radius equal to the number set after <b>Ellipse</b>. It is the most common distance measure, is the geometric distance in multidimensional space. </li></ul>
 <p>You can specify the confidence level for the ellipses, from 0~100. Or, enter the radius value for Euclidean Distance.
-</p><p>And, you can customize the line style and the Fill Color of the ellipses.
+</p><p>And, you can customize the line style and the Fill Color of the ellipses/convex hull.
 </p>
 
 
